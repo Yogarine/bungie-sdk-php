@@ -5,6 +5,7 @@
 /nbproject
 
 /.travis.yml
+/composer.lock
 /phpunit.xml.dist
 
 .phpunit.result.cache
