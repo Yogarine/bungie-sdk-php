@@ -1,0 +1,12 @@
+/vendor
+/.idea
+/.vscode
+/.vagrant
+/nbproject
+
+/.travis.yml
+/phpunit.xml.dist
+
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
