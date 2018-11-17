@@ -28,8 +28,8 @@ $apiInstance = new Bungie\Api\PreviewApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$groupId = 789; // int | Group ID of the clan whose leaderboards you wish to fetch.
-$modes = "modes_example"; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+$groupId = 56; // int | Group ID of the clan whose leaderboards you wish to fetch.
+$modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 
 try {
     $result = $apiInstance->destiny2GetClanAggregateStats($groupId, $modes);
@@ -58,7 +58,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -79,10 +79,10 @@ $apiInstance = new Bungie\Api\PreviewApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$groupId = 789; // int | Group ID of the clan whose leaderboards you wish to fetch.
+$groupId = 56; // int | Group ID of the clan whose leaderboards you wish to fetch.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
-$modes = "modes_example"; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
-$statid = "statid_example"; // string | ID of stat to return rather than returning all Leaderboard stats.
+$modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+$statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
 
 try {
     $result = $apiInstance->destiny2GetClanLeaderboards($groupId, $maxtop, $modes, $statid);
@@ -113,7 +113,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -134,11 +134,11 @@ $apiInstance = new Bungie\Api\PreviewApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$destinyMembershipId = 789; // int | The Destiny membershipId of the user to retrieve.
+$destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
 $membershipType = 56; // int | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
-$modes = "modes_example"; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
-$statid = "statid_example"; // string | ID of stat to return rather than returning all Leaderboard stats.
+$modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+$statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
 
 try {
     $result = $apiInstance->destiny2GetLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
@@ -170,7 +170,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -191,12 +191,12 @@ $apiInstance = new Bungie\Api\PreviewApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$characterId = 789; // int | The specific character to build the leaderboard around for the provided Destiny Membership.
-$destinyMembershipId = 789; // int | The Destiny membershipId of the user to retrieve.
+$characterId = 56; // int | The specific character to build the leaderboard around for the provided Destiny Membership.
+$destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
 $membershipType = 56; // int | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
-$modes = "modes_example"; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
-$statid = "statid_example"; // string | ID of stat to return rather than returning all Leaderboard stats.
+$modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+$statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
 
 try {
     $result = $apiInstance->destiny2GetLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
@@ -229,7 +229,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -278,7 +278,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

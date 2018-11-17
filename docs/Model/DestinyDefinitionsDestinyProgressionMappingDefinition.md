@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**displayProperties** | **object** | Infrequently defined in practice. Defer to the individual progressions&#39; display properties. | [optional] 
+**displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) | Infrequently defined in practice. Defer to the individual progressions&#39; display properties. | [optional] 
 **displayUnits** | **string** | The localized unit of measurement for progression across the progressions defined in this mapping. Unfortunately, this is very infrequently defined. Defer to the individual progressions&#39; display units. | [optional] 
 **hash** | **int** | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. | [optional] 
 **index** | **int** | The index of the entity as it was found in the investment tables. | [optional] 

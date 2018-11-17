@@ -61,7 +61,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -86,7 +86,7 @@ $page = 56; // int | Zero based page.
 $partnershipType = 56; // int | The type of partnership for which the status should be returned.
 $sort = 56; // int | The sort mode.
 $modeHash = 56; // int | The hash of the Activity Mode for which streams should be retrieved. Don't pass it in or pass 0 to not filter by mode.
-$streamLocale = "streamLocale_example"; // string | The locale for streams you'd like to see. Don't pass this to fall back on your BNet locale. Pass 'ALL' to not filter by locale.
+$streamLocale = 'streamLocale_example'; // string | The locale for streams you'd like to see. Don't pass this to fall back on your BNet locale. Pass 'ALL' to not filter by locale.
 
 try {
     $result = $apiInstance->communityContentGetCommunityLiveStatuses($page, $partnershipType, $sort, $modeHash, $streamLocale);
@@ -118,7 +118,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -171,7 +171,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -224,7 +224,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -248,7 +248,7 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
 $page = 56; // int | Zero based page.
 $partnershipType = 56; // int | The type of partnership for which the status should be returned.
 $sort = 56; // int | The sort mode.
-$streamLocale = "streamLocale_example"; // string | The locale for streams you'd like to see. Don't pass this to fall back on your BNet locale. Pass 'ALL' to not filter by locale.
+$streamLocale = 'streamLocale_example'; // string | The locale for streams you'd like to see. Don't pass this to fall back on your BNet locale. Pass 'ALL' to not filter by locale.
 
 try {
     $result = $apiInstance->communityContentGetFeaturedCommunityLiveStatuses($page, $partnershipType, $sort, $streamLocale);
@@ -279,7 +279,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -300,7 +300,7 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$membershipId = 789; // int | The membershipId related to that type.
+$membershipId = 56; // int | The membershipId related to that type.
 $membershipType = 56; // int | The type of account for which info will be extracted.
 $partnershipType = 56; // int | The type of partnership for which info will be extracted.
 
@@ -332,7 +332,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

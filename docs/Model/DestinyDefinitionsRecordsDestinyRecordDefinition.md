@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **displayProperties** | [**\Bungie\Model\DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) |  | [optional] 
-**scope** | **object** | Indicates whether this Record&#39;s state is determined on a per-character or on an account-wide basis. | [optional] 
+**scope** | [**DestinyDestinyScope**](DestinyDestinyScope.md) | Indicates whether this Record&#39;s state is determined on a per-character or on an account-wide basis. | [optional] 
 **presentationInfo** | [**\Bungie\Model\DestinyDefinitionsPresentationDestinyPresentationChildBlock**](DestinyDefinitionsPresentationDestinyPresentationChildBlock.md) |  | [optional] 
 **loreHash** | **int** |  | [optional] 
 **objectiveHashes** | **int[]** |  | [optional] 

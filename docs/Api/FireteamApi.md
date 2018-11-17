@@ -32,7 +32,7 @@ $apiInstance = new Bungie\Api\FireteamApi(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | The group id of the clan.
+$groupId = 56; // int | The group id of the clan.
 
 try {
     $result = $apiInstance->fireteamGetActivePrivateClanFireteamCount($groupId);
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -87,12 +87,12 @@ $apiInstance = new Bungie\Api\FireteamApi(
 );
 $activityType = 56; // int | The activity type to filter by.
 $dateRange = 56; // int | The date range to grab available fireteams.
-$groupId = 789; // int | The group id of the clan.
+$groupId = 56; // int | The group id of the clan.
 $page = 56; // int | Zero based page
 $platform = 56; // int | The platform filter.
 $publicOnly = 56; // int | Determines public/private filtering.
 $slotFilter = 56; // int | Filters based on available slots
-$langFilter = "langFilter_example"; // string | An optional language filter.
+$langFilter = 'langFilter_example'; // string | An optional language filter.
 
 try {
     $result = $apiInstance->fireteamGetAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter);
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -152,8 +152,8 @@ $apiInstance = new Bungie\Api\FireteamApi(
     new GuzzleHttp\Client(),
     $config
 );
-$fireteamId = 789; // int | The unique id of the fireteam.
-$groupId = 789; // int | The group id of the clan.
+$fireteamId = 56; // int | The unique id of the fireteam.
+$groupId = 56; // int | The group id of the clan.
 
 try {
     $result = $apiInstance->fireteamGetClanFireteam($fireteamId, $groupId);
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -207,12 +207,12 @@ $apiInstance = new Bungie\Api\FireteamApi(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true).
-$includeClosed = true; // bool | If true, return fireteams that have been closed.
+$groupId = 56; // int | The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true).
+$includeClosed = True; // bool | If true, return fireteams that have been closed.
 $page = 56; // int | Deprecated parameter, ignored.
 $platform = 56; // int | The platform filter.
-$groupFilter = true; // bool | If true, filter by clan. Otherwise, ignore the clan and show all of the user's fireteams.
-$langFilter = "langFilter_example"; // string | An optional language filter.
+$groupFilter = True; // bool | If true, filter by clan. Otherwise, ignore the clan and show all of the user's fireteams.
+$langFilter = 'langFilter_example'; // string | An optional language filter.
 
 try {
     $result = $apiInstance->fireteamGetMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter);
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -275,7 +275,7 @@ $dateRange = 56; // int | The date range to grab available fireteams.
 $page = 56; // int | Zero based page
 $platform = 56; // int | The platform filter.
 $slotFilter = 56; // int | Filters based on available slots
-$langFilter = "langFilter_example"; // string | An optional language filter.
+$langFilter = 'langFilter_example'; // string | An optional language filter.
 
 try {
     $result = $apiInstance->fireteamSearchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter);
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

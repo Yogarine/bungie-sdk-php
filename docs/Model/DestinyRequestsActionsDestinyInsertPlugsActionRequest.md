@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **actionToken** | **string** | Action token provided by the AwaGetActionToken API call. | [optional] 
 **itemInstanceId** | **int** | The instance ID of the item having a plug inserted. Only instanced items can have sockets. | [optional] 
-**plug** | **object** | The plugs being inserted. | [optional] 
+**plug** | [**DestinyRequestsActionsDestinyInsertPlugsRequestEntry**](DestinyRequestsActionsDestinyInsertPlugsRequestEntry.md) | The plugs being inserted. | [optional] 
 **characterId** | **int** |  | [optional] 
 **membershipType** | [**\Bungie\Model\BungieMembershipType**](BungieMembershipType.md) |  | [optional] 
 

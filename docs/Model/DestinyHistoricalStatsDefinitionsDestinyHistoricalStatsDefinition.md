@@ -4,14 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **statId** | **string** | Unique programmer friendly ID for this stat | [optional] 
-**group** | **object** | Statistic group | [optional] 
+**group** | [**DestinyHistoricalStatsDefinitionsDestinyStatsGroupType**](DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.md) | Statistic group | [optional] 
 **periodTypes** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType[]**](DestinyHistoricalStatsDefinitionsPeriodType.md) | Time periods the statistic covers | [optional] 
 **modes** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType[]**](DestinyHistoricalStatsDefinitionsDestinyActivityModeType.md) | Game modes where this statistic can be reported. | [optional] 
-**category** | **object** | Category for the stat. | [optional] 
+**category** | [**DestinyHistoricalStatsDefinitionsDestinyStatsCategoryType**](DestinyHistoricalStatsDefinitionsDestinyStatsCategoryType.md) | Category for the stat. | [optional] 
 **statName** | **string** | Display name | [optional] 
 **statNameAbbr** | **string** | Display name abbreviated | [optional] 
 **statDescription** | **string** | Description of a stat if applicable. | [optional] 
-**unitType** | **object** | Unit, if any, for the statistic | [optional] 
+**unitType** | [**DestinyHistoricalStatsDefinitionsUnitType**](DestinyHistoricalStatsDefinitionsUnitType.md) | Unit, if any, for the statistic | [optional] 
 **iconImage** | **string** | Optional URI to an icon for the statistic | [optional] 
 **mergeMethod** | **int** | Optional icon for the statistic | [optional] 
 **unitLabel** | **string** | Localized Unit Name for the stat. | [optional] 

@@ -59,8 +59,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$founderIdNew = 789; // int | The new founder for this group. Must already be a group admin.
-$groupId = 789; // int | The target group id.
+$founderIdNew = 56; // int | The new founder for this group. Must already be a group admin.
+$groupId = 56; // int | The target group id.
 $membershipType = 56; // int | Membership type of the provided founderIdNew.
 
 try {
@@ -91,7 +91,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -116,7 +116,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | Group ID of the group to edit.
+$groupId = 56; // int | Group ID of the group to edit.
 
 try {
     $result = $apiInstance->groupV2AddOptionalConversation($groupId);
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -169,7 +169,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | ID of the group.
+$groupId = 56; // int | ID of the group.
 
 try {
     $result = $apiInstance->groupV2ApproveAllPending($groupId);
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -222,8 +222,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | ID of the group.
-$membershipId = 789; // int | The membership id being approved.
+$groupId = 56; // int | ID of the group.
+$membershipId = 56; // int | The membership id being approved.
 $membershipType = 56; // int | Membership type of the supplied membership ID.
 
 try {
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -279,7 +279,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | ID of the group.
+$groupId = 56; // int | ID of the group.
 
 try {
     $result = $apiInstance->groupV2ApprovePendingForList($groupId);
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -332,8 +332,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | Group ID that has the member to ban.
-$membershipId = 789; // int | Membership ID of the member to ban from the group.
+$groupId = 56; // int | Group ID that has the member to ban.
+$membershipId = 56; // int | Membership ID of the member to ban from the group.
 $membershipType = 56; // int | Membership type of the provided membership ID.
 
 try {
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -413,7 +413,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -438,7 +438,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | ID of the group.
+$groupId = 56; // int | ID of the group.
 
 try {
     $result = $apiInstance->groupV2DenyAllPending($groupId);
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -491,7 +491,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | ID of the group.
+$groupId = 56; // int | ID of the group.
 
 try {
     $result = $apiInstance->groupV2DenyPendingForList($groupId);
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -544,7 +544,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | Group ID of the group to edit.
+$groupId = 56; // int | Group ID of the group to edit.
 
 try {
     $result = $apiInstance->groupV2EditClanBanner($groupId);
@@ -572,7 +572,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -597,7 +597,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | Group ID of the group to edit.
+$groupId = 56; // int | Group ID of the group to edit.
 
 try {
     $result = $apiInstance->groupV2EditFounderOptions($groupId);
@@ -625,7 +625,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -650,7 +650,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | Group ID of the group to edit.
+$groupId = 56; // int | Group ID of the group to edit.
 
 try {
     $result = $apiInstance->groupV2EditGroup($groupId);
@@ -678,7 +678,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -703,8 +703,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | ID of the group to which the member belongs.
-$membershipId = 789; // int | Membership ID to modify.
+$groupId = 56; // int | ID of the group to which the member belongs.
+$membershipId = 56; // int | Membership ID to modify.
 $membershipType = 56; // int | Membership type of the provide membership ID.
 $memberType = 56; // int | New membertype for the specified member.
 
@@ -737,7 +737,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -762,8 +762,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$conversationId = 789; // int | Conversation Id of the channel being edited.
-$groupId = 789; // int | Group ID of the group to edit.
+$conversationId = 56; // int | Conversation Id of the channel being edited.
+$groupId = 56; // int | Group ID of the group to edit.
 
 try {
     $result = $apiInstance->groupV2EditOptionalConversation($conversationId, $groupId);
@@ -792,7 +792,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -814,7 +814,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client()
 );
 $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed size of 50 items per page.
-$groupId = 789; // int | The ID of the group.
+$groupId = 56; // int | The ID of the group.
 
 try {
     $result = $apiInstance->groupV2GetAdminsAndFounderOfGroup($currentpage, $groupId);
@@ -843,7 +843,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -888,7 +888,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -933,7 +933,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -959,7 +959,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed size of 50 entries.
-$groupId = 789; // int | Group ID whose banned members you are fetching
+$groupId = 56; // int | Group ID whose banned members you are fetching
 
 try {
     $result = $apiInstance->groupV2GetBannedMembersOfGroup($currentpage, $groupId);
@@ -988,7 +988,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1009,7 +1009,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$groupId = 789; // int | Requested group's id.
+$groupId = 56; // int | Requested group's id.
 
 try {
     $result = $apiInstance->groupV2GetGroup($groupId);
@@ -1037,7 +1037,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1058,7 +1058,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$groupName = "groupName_example"; // string | Exact name of the group to find.
+$groupName = 'groupName_example'; // string | Exact name of the group to find.
 $groupType = 56; // int | Type of group to find.
 
 try {
@@ -1088,7 +1088,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1109,7 +1109,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$groupId = 789; // int | Requested group's id.
+$groupId = 56; // int | Requested group's id.
 
 try {
     $result = $apiInstance->groupV2GetGroupOptionalConversations($groupId);
@@ -1137,7 +1137,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1160,7 +1160,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $filter = 56; // int | Filter apply to list of joined groups.
 $groupType = 56; // int | Type of group the supplied member founded.
-$membershipId = 789; // int | Membership ID to for which to find founded groups.
+$membershipId = 56; // int | Membership ID to for which to find founded groups.
 $membershipType = 56; // int | Membership type of the supplied membership ID.
 
 try {
@@ -1192,7 +1192,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1218,7 +1218,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed size of 50 items per page.
-$groupId = 789; // int | ID of the group.
+$groupId = 56; // int | ID of the group.
 
 try {
     $result = $apiInstance->groupV2GetInvitedIndividuals($currentpage, $groupId);
@@ -1247,7 +1247,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1269,9 +1269,9 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client()
 );
 $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed size of 50 items per page.
-$groupId = 789; // int | The ID of the group.
+$groupId = 56; // int | The ID of the group.
 $memberType = 56; // int | Filter out other member types. Use None for all members.
-$nameSearch = "nameSearch_example"; // string | The name fragment upon which a search should be executed for members with matching display or unique names.
+$nameSearch = 'nameSearch_example'; // string | The name fragment upon which a search should be executed for members with matching display or unique names.
 
 try {
     $result = $apiInstance->groupV2GetMembersOfGroup($currentpage, $groupId, $memberType, $nameSearch);
@@ -1302,7 +1302,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1328,7 +1328,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed size of 50 items per page.
-$groupId = 789; // int | ID of the group.
+$groupId = 56; // int | ID of the group.
 
 try {
     $result = $apiInstance->groupV2GetPendingMemberships($currentpage, $groupId);
@@ -1357,7 +1357,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1380,7 +1380,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $filter = 56; // int | Filter apply to list of potential joined groups.
 $groupType = 56; // int | Type of group the supplied member applied.
-$membershipId = 789; // int | Membership ID to for which to find applied groups.
+$membershipId = 56; // int | Membership ID to for which to find applied groups.
 $membershipType = 56; // int | Membership type of the supplied membership ID.
 
 try {
@@ -1412,7 +1412,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1467,7 +1467,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1520,7 +1520,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1565,7 +1565,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1590,8 +1590,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | ID of the group you would like to join.
-$membershipId = 789; // int | Membership id of the account being invited.
+$groupId = 56; // int | ID of the group you would like to join.
+$membershipId = 56; // int | Membership id of the account being invited.
 $membershipType = 56; // int | MembershipType of the account being invited.
 
 try {
@@ -1622,7 +1622,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1647,8 +1647,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | ID of the group you would like to join.
-$membershipId = 789; // int | Membership id of the account being cancelled.
+$groupId = 56; // int | ID of the group you would like to join.
+$membershipId = 56; // int | Membership id of the account being cancelled.
 $membershipType = 56; // int | MembershipType of the account being cancelled.
 
 try {
@@ -1679,7 +1679,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1704,8 +1704,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | Group ID to kick the user from.
-$membershipId = 789; // int | Membership ID to kick.
+$groupId = 56; // int | Group ID to kick the user from.
+$membershipId = 56; // int | Membership ID to kick.
 $membershipType = 56; // int | Membership type of the provided membership ID.
 
 try {
@@ -1736,7 +1736,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1761,7 +1761,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | ID of the group you would like to join.
+$groupId = 56; // int | ID of the group you would like to join.
 $membershipType = 56; // int | MembershipType of the account to use when joining.
 
 try {
@@ -1791,7 +1791,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1816,7 +1816,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | ID of the group.
+$groupId = 56; // int | ID of the group.
 $membershipType = 56; // int | MembershipType of the account to leave.
 
 try {
@@ -1846,7 +1846,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1871,7 +1871,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$allowInvites = true; // bool | True to allow invites of this user to clans, false otherwise.
+$allowInvites = True; // bool | True to allow invites of this user to clans, false otherwise.
 $mType = 56; // int | The Destiny membership type of linked account we are manipulating.
 
 try {
@@ -1901,7 +1901,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1926,8 +1926,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupId = 789; // int | 
-$membershipId = 789; // int | Membership ID of the member to unban from the group
+$groupId = 56; // int | 
+$membershipId = 56; // int | Membership ID of the member to unban from the group
 $membershipType = 56; // int | Membership type of the provided membership ID.
 
 try {
@@ -1958,7 +1958,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lockedDescription** | **string** | If the flyout is locked, this is the reason why. | [optional] 
-**displayProperties** | **object** | The title and other common properties of the flyout. | [optional] 
+**displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) | The title and other common properties of the flyout. | [optional] 
 **buckets** | [**\Bungie\Model\DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition[]**](DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition.md) | A list of inventory buckets and other metadata to show on the screen. | [optional] 
 **flyoutId** | **int** | An identifier for the flyout, in case anything else needs to refer to them. | [optional] 
 **suppressNewness** | **bool** | If this is true, don&#39;t show any of the glistening \&quot;this is a new item\&quot; UI elements, like we show on the inventory items themselves in in-game UI. | [optional] 

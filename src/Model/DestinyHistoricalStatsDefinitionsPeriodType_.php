@@ -199,11 +199,7 @@ class DestinyHistoricalStatsDefinitionsPeriodType_ implements ModelInterface, Ar
      */
     public function valid()
     {
-        if (!parent::valid()) {
-            return false;
-        }
-
-        return true;
+        return count($this->listInvalidProperties()) === 0;
     }
 
     /**

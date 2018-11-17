@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **tierTypeHash** | **int** | The hash identifier for the Tier Type of the item, use to look up its DestinyItemTierTypeDefinition if you need to show localized data for the item&#39;s tier. | [optional] 
 **isInstanceItem** | **bool** | If TRUE, this item is instanced. Otherwise, it is a generic item that merely has a quantity in a stack (like Glimmer). | [optional] 
 **tierTypeName** | **string** | The localized name of the tier type, which is a useful shortcut so you don&#39;t have to look up the definition every time. However, it&#39;s mostly a holdover from days before we had a DestinyItemTierTypeDefinition to refer to. | [optional] 
-**tierType** | **object** | The enumeration matching the tier type of the item to known values, again for convenience sake. | [optional] 
+**tierType** | [**DestinyTierType**](DestinyTierType.md) | The enumeration matching the tier type of the item to known values, again for convenience sake. | [optional] 
 **expirationTooltip** | **string** | The tooltip message to show, if any, when the item expires. | [optional] 
 **expiredInActivityMessage** | **string** | If the item expires while playing in an activity, we show a different message. | [optional] 
 **expiredInOrbitMessage** | **string** | If the item expires in orbit, we show a... more different message. (\&quot;Consummate V&#39;s, consummate!\&quot;) | [optional] 

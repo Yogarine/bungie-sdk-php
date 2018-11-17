@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **displayProperties** | [**\Bungie\Model\DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) |  | [optional] 
 **image** | **string** | A custom image someone made just for the milestone. Isn&#39;t that special? | [optional] 
-**milestoneType** | **object** | An enumeration listing one of the possible types of milestones. Check out the DestinyMilestoneType enum for more info! | [optional] 
+**milestoneType** | [**DestinyDefinitionsMilestonesDestinyMilestoneType**](DestinyDefinitionsMilestonesDestinyMilestoneType.md) | An enumeration listing one of the possible types of milestones. Check out the DestinyMilestoneType enum for more info! | [optional] 
 **recruitable** | **bool** | If True, then the Milestone has been integrated with BNet&#39;s recruiting feature. | [optional] 
 **friendlyName** | **string** | If the milestone has a friendly identifier for association with other features - such as Recruiting - that identifier can be found here. This is \&quot;friendly\&quot; in that it looks better in a URL than whatever the identifier for the Milestone actually is. | [optional] 
 **showInExplorer** | **bool** | If TRUE, this entry should be returned in the list of milestones for the \&quot;Explore Destiny\&quot; (i.e. new BNet homepage) features of Bungie.net (as long as the underlying event is active) Note that this is a property specifically used by BNet and the companion app for the \&quot;Live Events\&quot; feature of the front page/welcome view: it&#39;s not a reflection of what you see in-game. | [optional] 

@@ -50,7 +50,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -71,7 +71,7 @@ $apiInstance = new Bungie\Api\TrendingApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$categoryId = "categoryId_example"; // string | The ID of the category for whom you want additional results.
+$categoryId = 'categoryId_example'; // string | The ID of the category for whom you want additional results.
 $pageNumber = 56; // int | The page # of results to return.
 
 try {
@@ -101,7 +101,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -122,7 +122,7 @@ $apiInstance = new Bungie\Api\TrendingApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$identifier = "identifier_example"; // string | The identifier for the entity to be returned.
+$identifier = 'identifier_example'; // string | The identifier for the entity to be returned.
 $trendingEntryType = 56; // int | The type of entity to be returned.
 
 try {
@@ -152,7 +152,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

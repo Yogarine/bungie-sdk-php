@@ -28,9 +28,9 @@ $apiInstance = new Bungie\Api\ContentApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = 789; // int | 
-$locale = "locale_example"; // string | 
-$head = true; // bool | false
+$id = 56; // int | 
+$locale = 'locale_example'; // string | 
+$head = True; // bool | false
 
 try {
     $result = $apiInstance->contentGetContentById($id, $locale, $head);
@@ -60,7 +60,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -81,10 +81,10 @@ $apiInstance = new Bungie\Api\ContentApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$locale = "locale_example"; // string | 
-$tag = "tag_example"; // string | 
-$type = "type_example"; // string | 
-$head = true; // bool | Not used.
+$locale = 'locale_example'; // string | 
+$tag = 'tag_example'; // string | 
+$type = 'type_example'; // string | 
+$head = True; // bool | Not used.
 
 try {
     $result = $apiInstance->contentGetContentByTagAndType($locale, $tag, $type, $head);
@@ -115,7 +115,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -136,7 +136,7 @@ $apiInstance = new Bungie\Api\ContentApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$type = "type_example"; // string | 
+$type = 'type_example'; // string | 
 
 try {
     $result = $apiInstance->contentGetContentType($type);
@@ -164,7 +164,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -185,11 +185,11 @@ $apiInstance = new Bungie\Api\ContentApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$locale = "locale_example"; // string | 
-$tag = "tag_example"; // string | 
-$type = "type_example"; // string | 
+$locale = 'locale_example'; // string | 
+$tag = 'tag_example'; // string | 
+$type = 'type_example'; // string | 
 $currentpage = 56; // int | Page number for the search results starting with page 1.
-$head = true; // bool | Not used.
+$head = True; // bool | Not used.
 $itemsperpage = 56; // int | Not used.
 
 try {
@@ -223,7 +223,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -244,13 +244,13 @@ $apiInstance = new Bungie\Api\ContentApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$locale = "locale_example"; // string | 
-$ctype = "ctype_example"; // string | Content type tag: Help, News, etc. Supply multiple ctypes separated by space.
+$locale = 'locale_example'; // string | 
+$ctype = 'ctype_example'; // string | Content type tag: Help, News, etc. Supply multiple ctypes separated by space.
 $currentpage = 56; // int | Page number for the search results, starting with page 1.
-$head = true; // bool | Not used.
-$searchtext = "searchtext_example"; // string | Word or phrase for the search.
-$source = "source_example"; // string | For analytics, hint at the part of the app that triggered the search. Optional.
-$tag = "tag_example"; // string | Tag used on the content to be searched.
+$head = True; // bool | Not used.
+$searchtext = 'searchtext_example'; // string | Word or phrase for the search.
+$source = 'source_example'; // string | For analytics, hint at the part of the app that triggered the search. Optional.
+$tag = 'tag_example'; // string | Tag used on the content to be searched.
 
 try {
     $result = $apiInstance->contentSearchContentWithText($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag);
@@ -284,7 +284,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

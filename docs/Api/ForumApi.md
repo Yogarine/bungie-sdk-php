@@ -41,7 +41,7 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client(),
     $config
 );
-$topicId = 789; // int | The post id of the recruitment topic to approve.
+$topicId = 56; // int | The post id of the recruitment topic to approve.
 
 try {
     $result = $apiInstance->forumApproveFireteamThread($topicId);
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -94,7 +94,7 @@ $categoryFilter = 56; // int | The category filter.
 $page = 56; // int | Zero base page
 $quickDate = 56; // int | The date filter.
 $sort = 56; // int | The sort mode.
-$locales = "locales_example"; // string | Comma seperated list of locales posts must match to return in the result list. Default 'en'
+$locales = 'locales_example'; // string | Comma seperated list of locales posts must match to return in the result list. Default 'en'
 
 try {
     $result = $apiInstance->forumGetCoreTopicsPaged($categoryFilter, $page, $quickDate, $sort, $locales);
@@ -126,7 +126,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -147,7 +147,7 @@ $apiInstance = new Bungie\Api\ForumApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$partialtag = "partialtag_example"; // string | The partial tag input to generate suggestions from.
+$partialtag = 'partialtag_example'; // string | The partial tag input to generate suggestions from.
 
 try {
     $result = $apiInstance->forumGetForumTagSuggestions($partialtag);
@@ -175,7 +175,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -196,7 +196,7 @@ $apiInstance = new Bungie\Api\ForumApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$topicId = 789; // int | The post id of the topic that has the poll.
+$topicId = 56; // int | The post id of the topic that has the poll.
 
 try {
     $result = $apiInstance->forumGetPoll($topicId);
@@ -224,7 +224,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -245,8 +245,8 @@ $apiInstance = new Bungie\Api\ForumApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$childPostId = 789; // int | 
-$showbanned = "showbanned_example"; // string | If this value is not null or empty, banned posts are requested to be returned
+$childPostId = 56; // int | 
+$showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
     $result = $apiInstance->forumGetPostAndParent($childPostId, $showbanned);
@@ -275,7 +275,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -296,8 +296,8 @@ $apiInstance = new Bungie\Api\ForumApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$childPostId = 789; // int | 
-$showbanned = "showbanned_example"; // string | If this value is not null or empty, banned posts are requested to be returned
+$childPostId = 56; // int | 
+$showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
     $result = $apiInstance->forumGetPostAndParentAwaitingApproval($childPostId, $showbanned);
@@ -326,7 +326,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -347,14 +347,14 @@ $apiInstance = new Bungie\Api\ForumApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$getParentPost = true; // bool | 
+$getParentPost = True; // bool | 
 $page = 56; // int | 
 $pageSize = 56; // int | 
-$parentPostId = 789; // int | 
+$parentPostId = 56; // int | 
 $replySize = 56; // int | 
-$rootThreadMode = true; // bool | 
+$rootThreadMode = True; // bool | 
 $sortMode = 56; // int | 
-$showbanned = "showbanned_example"; // string | If this value is not null or empty, banned posts are requested to be returned
+$showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
     $result = $apiInstance->forumGetPostsThreadedPaged($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned);
@@ -389,7 +389,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -410,13 +410,13 @@ $apiInstance = new Bungie\Api\ForumApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$childPostId = 789; // int | 
+$childPostId = 56; // int | 
 $page = 56; // int | 
 $pageSize = 56; // int | 
 $replySize = 56; // int | 
-$rootThreadMode = true; // bool | 
+$rootThreadMode = True; // bool | 
 $sortMode = 56; // int | 
-$showbanned = "showbanned_example"; // string | If this value is not null or empty, banned posts are requested to be returned
+$showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
     $result = $apiInstance->forumGetPostsThreadedPagedFromChild($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned);
@@ -450,7 +450,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -495,7 +495,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -516,7 +516,7 @@ $apiInstance = new Bungie\Api\ForumApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$contentId = 789; // int | 
+$contentId = 56; // int | 
 
 try {
     $result = $apiInstance->forumGetTopicForContent($contentId);
@@ -544,7 +544,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -566,13 +566,13 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client()
 );
 $categoryFilter = 56; // int | A category filter
-$group = 789; // int | The group, if any.
+$group = 56; // int | The group, if any.
 $page = 56; // int | Zero paged page number
 $pageSize = 56; // int | Unused
 $quickDate = 56; // int | A date filter.
 $sort = 56; // int | The sort mode.
-$locales = "locales_example"; // string | Comma seperated list of locales posts must match to return in the result list. Default 'en'
-$tagstring = "tagstring_example"; // string | The tags to search, if any.
+$locales = 'locales_example'; // string | Comma seperated list of locales posts must match to return in the result list. Default 'en'
+$tagstring = 'tagstring_example'; // string | The tags to search, if any.
 
 try {
     $result = $apiInstance->forumGetTopicsPaged($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring);
@@ -607,7 +607,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -632,7 +632,7 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client(),
     $config
 );
-$topicId = 789; // int | The post id of the recruitment topic you wish to join.
+$topicId = 56; // int | The post id of the recruitment topic you wish to join.
 
 try {
     $result = $apiInstance->forumJoinFireteamThread($topicId);
@@ -660,7 +660,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -685,8 +685,8 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client(),
     $config
 );
-$targetMembershipId = 789; // int | The id of the user you wish to kick.
-$topicId = 789; // int | The post id of the recruitment topic you wish to join.
+$targetMembershipId = 56; // int | The id of the user you wish to kick.
+$topicId = 56; // int | The post id of the recruitment topic you wish to join.
 
 try {
     $result = $apiInstance->forumKickBanFireteamApplicant($targetMembershipId, $topicId);
@@ -715,7 +715,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -740,7 +740,7 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client(),
     $config
 );
-$topicId = 789; // int | The post id of the recruitment topic you wish to leave.
+$topicId = 56; // int | The post id of the recruitment topic you wish to leave.
 
 try {
     $result = $apiInstance->forumLeaveFireteamThread($topicId);
@@ -768,7 +768,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

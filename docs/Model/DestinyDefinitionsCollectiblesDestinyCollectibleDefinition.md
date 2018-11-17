@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **displayProperties** | [**\Bungie\Model\DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) |  | [optional] 
-**scope** | **object** | Indicates whether this Collectible&#39;s state is determined on a per-character or on an account-wide basis. | [optional] 
+**scope** | [**DestinyDestinyScope**](DestinyDestinyScope.md) | Indicates whether this Collectible&#39;s state is determined on a per-character or on an account-wide basis. | [optional] 
 **sourceString** | **string** | A human readable string for a hint about how to acquire the item. | [optional] 
 **sourceHash** | **int** | This is a hash identifier we are building on the BNet side in an attempt to let people group collectibles by similar sources.  I can&#39;t promise that it&#39;s going to be 100% accurate, but if the designers were consistent in assigning the same source strings to items with the same sources, it *ought to* be. No promises though.  This hash also doesn&#39;t relate to an actual definition, just to note: we&#39;ve got nothing useful other than the source string for this data. | [optional] 
 **itemHash** | **int** |  | [optional] 

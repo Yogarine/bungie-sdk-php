@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**displayProperties** | **object** | Sadly, these don&#39;t appear to be populated anymore (ever?) | [optional] 
+**displayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) | Sadly, these don&#39;t appear to be populated anymore (ever?) | [optional] 
 **smallTransparentIcon** | **string** |  | [optional] 
 **mapIcon** | **string** |  | [optional] 
 **largeTransparentIcon** | **string** |  | [optional] 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **activityBubbleName** | **int** | The Activity Bubble within the Destination. Look this up in the DestinyDestinationDefinition&#39;s bubbles and bubbleSettings properties. | [optional] 
 **activityPathBundle** | **int** | If we had map information, this would tell us something cool about the path this location wants you to take. I wish we had map information. | [optional] 
 **activityPathDestination** | **int** | If we had map information, this would tell us about path information related to destination on the map. Sad. Maybe you can do something cool with it. Go to town man. | [optional] 
-**navPointType** | **object** | The type of Nav Point that this represents. See the enumeration for more info. | [optional] 
+**navPointType** | [**DestinyDestinyActivityNavPointType**](DestinyDestinyActivityNavPointType.md) | The type of Nav Point that this represents. See the enumeration for more info. | [optional] 
 **worldPosition** | **int[]** | Looks like it should be the position on the map, but sadly it does not look populated... yet? | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
