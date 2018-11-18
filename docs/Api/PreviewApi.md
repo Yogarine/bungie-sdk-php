@@ -58,7 +58,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -113,7 +113,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -135,7 +135,7 @@ $apiInstance = new Bungie\Api\PreviewApi(
     new GuzzleHttp\Client()
 );
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
@@ -154,7 +154,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **maxtop** | **int**| Maximum number of top players to return. Use a large number to get entire leaderboard. | [optional]
  **modes** | **string**| List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
  **statid** | **string**| ID of stat to return rather than returning all Leaderboard stats. | [optional]
@@ -170,7 +170,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -193,7 +193,7 @@ $apiInstance = new Bungie\Api\PreviewApi(
 );
 $characterId = 56; // int | The specific character to build the leaderboard around for the provided Destiny Membership.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The specific character to build the leaderboard around for the provided Destiny Membership. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **maxtop** | **int**| Maximum number of top players to return. Use a large number to get entire leaderboard. | [optional]
  **modes** | **string**| List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
  **statid** | **string**| ID of stat to return rather than returning all Leaderboard stats. | [optional]
@@ -229,12 +229,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destiny2InsertSocketPlug**
-> \Bungie\Model\InlineResponse20045 destiny2InsertSocketPlug()
+> \Bungie\Model\InlineResponse20045 destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest)
 
 
 
@@ -245,6 +245,10 @@ Insert a plug into a socketed item. I know how it sounds, but I assure you it's 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -254,9 +258,10 @@ $apiInstance = new Bungie\Api\PreviewApi(
     new GuzzleHttp\Client(),
     $config
 );
+$destinyRequestsActionsDestinyInsertPlugsActionRequest = new \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest | 
 
 try {
-    $result = $apiInstance->destiny2InsertSocketPlug();
+    $result = $apiInstance->destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PreviewApi->destiny2InsertSocketPlug: ', $e->getMessage(), PHP_EOL;
@@ -265,7 +270,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinyRequestsActionsDestinyInsertPlugsActionRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest**](../Model/DestinyRequestsActionsDestinyInsertPlugsActionRequest.md)|  |
 
 ### Return type
 
@@ -273,12 +281,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

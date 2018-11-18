@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getAvailableLocales**
-> \Bungie\Model\InlineResponse20016 getAvailableLocales()
+> \Bungie\Model\InlineResponse20068 getAvailableLocales()
 
 
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
+[**\Bungie\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
 
 ### Authorization
 
@@ -50,12 +50,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommonSettings**
-> \Bungie\Model\InlineResponse20068 getCommonSettings()
+> \Bungie\Model\InlineResponse20069 getCommonSettings()
 
 
 
@@ -86,7 +86,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
+[**\Bungie\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
 
 ### Authorization
 
@@ -95,12 +95,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGlobalAlerts**
-> \Bungie\Model\InlineResponse20069 getGlobalAlerts($includestreaming)
+> \Bungie\Model\InlineResponse20070 getGlobalAlerts($includestreaming)
 
 
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
+[**\Bungie\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

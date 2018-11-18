@@ -61,7 +61,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $founderIdNew = 56; // int | The new founder for this group. Must already be a group admin.
 $groupId = 56; // int | The target group id.
-$membershipType = 56; // int | Membership type of the provided founderIdNew.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided founderIdNew.
 
 try {
     $result = $apiInstance->groupV2AbdicateFoundership($founderIdNew, $groupId, $membershipType);
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **founderIdNew** | **int**| The new founder for this group. Must already be a group admin. |
  **groupId** | **int**| The target group id. |
- **membershipType** | **int**| Membership type of the provided founderIdNew. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provided founderIdNew. |
 
 ### Return type
 
@@ -91,12 +91,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2AddOptionalConversation**
-> \Bungie\Model\InlineResponse20011 groupV2AddOptionalConversation($groupId)
+> \Bungie\Model\InlineResponse20011 groupV2AddOptionalConversation($groupId, $groupsV2GroupOptionalConversationAddRequest)
 
 
 
@@ -107,6 +107,10 @@ Add a new optional conversation/chat channel. Requires admin permissions to the 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -117,9 +121,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | Group ID of the group to edit.
+$groupsV2GroupOptionalConversationAddRequest = new \Bungie\Model\GroupsV2GroupOptionalConversationAddRequest(); // \Bungie\Model\GroupsV2GroupOptionalConversationAddRequest | 
 
 try {
-    $result = $apiInstance->groupV2AddOptionalConversation($groupId);
+    $result = $apiInstance->groupV2AddOptionalConversation($groupId, $groupsV2GroupOptionalConversationAddRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2AddOptionalConversation: ', $e->getMessage(), PHP_EOL;
@@ -132,6 +137,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID of the group to edit. |
+ **groupsV2GroupOptionalConversationAddRequest** | [**\Bungie\Model\GroupsV2GroupOptionalConversationAddRequest**](../Model/GroupsV2GroupOptionalConversationAddRequest.md)|  |
 
 ### Return type
 
@@ -139,17 +145,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2ApproveAllPending**
-> \Bungie\Model\InlineResponse20030 groupV2ApproveAllPending($groupId)
+> \Bungie\Model\InlineResponse20030 groupV2ApproveAllPending($groupId, $groupsV2GroupApplicationRequest)
 
 
 
@@ -160,6 +166,10 @@ Approve all of the pending users for the given group.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -170,9 +180,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
+$groupsV2GroupApplicationRequest = new \Bungie\Model\GroupsV2GroupApplicationRequest(); // \Bungie\Model\GroupsV2GroupApplicationRequest | 
 
 try {
-    $result = $apiInstance->groupV2ApproveAllPending($groupId);
+    $result = $apiInstance->groupV2ApproveAllPending($groupId, $groupsV2GroupApplicationRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2ApproveAllPending: ', $e->getMessage(), PHP_EOL;
@@ -185,6 +196,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
+ **groupsV2GroupApplicationRequest** | [**\Bungie\Model\GroupsV2GroupApplicationRequest**](../Model/GroupsV2GroupApplicationRequest.md)|  |
 
 ### Return type
 
@@ -192,17 +204,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2ApprovePending**
-> \Bungie\Model\InlineResponse20018 groupV2ApprovePending($groupId, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20018 groupV2ApprovePending($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
 
 
 
@@ -213,6 +225,10 @@ Approve the given membershipId to join the group/clan as long as they have appli
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -224,10 +240,11 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group.
 $membershipId = 56; // int | The membership id being approved.
-$membershipType = 56; // int | Membership type of the supplied membership ID.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
+$groupsV2GroupApplicationRequest = new \Bungie\Model\GroupsV2GroupApplicationRequest(); // \Bungie\Model\GroupsV2GroupApplicationRequest | 
 
 try {
-    $result = $apiInstance->groupV2ApprovePending($groupId, $membershipId, $membershipType);
+    $result = $apiInstance->groupV2ApprovePending($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2ApprovePending: ', $e->getMessage(), PHP_EOL;
@@ -241,7 +258,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
  **membershipId** | **int**| The membership id being approved. |
- **membershipType** | **int**| Membership type of the supplied membership ID. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the supplied membership ID. |
+ **groupsV2GroupApplicationRequest** | [**\Bungie\Model\GroupsV2GroupApplicationRequest**](../Model/GroupsV2GroupApplicationRequest.md)|  |
 
 ### Return type
 
@@ -249,17 +267,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2ApprovePendingForList**
-> \Bungie\Model\InlineResponse20030 groupV2ApprovePendingForList($groupId)
+> \Bungie\Model\InlineResponse20030 groupV2ApprovePendingForList($groupId, $groupsV2GroupApplicationListRequest)
 
 
 
@@ -270,6 +288,10 @@ Approve all of the pending users for the given group.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -280,9 +302,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
+$groupsV2GroupApplicationListRequest = new \Bungie\Model\GroupsV2GroupApplicationListRequest(); // \Bungie\Model\GroupsV2GroupApplicationListRequest | 
 
 try {
-    $result = $apiInstance->groupV2ApprovePendingForList($groupId);
+    $result = $apiInstance->groupV2ApprovePendingForList($groupId, $groupsV2GroupApplicationListRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2ApprovePendingForList: ', $e->getMessage(), PHP_EOL;
@@ -295,6 +318,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
+ **groupsV2GroupApplicationListRequest** | [**\Bungie\Model\GroupsV2GroupApplicationListRequest**](../Model/GroupsV2GroupApplicationListRequest.md)|  |
 
 ### Return type
 
@@ -302,17 +326,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2BanMember**
-> \Bungie\Model\InlineResponse20019 groupV2BanMember($groupId, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20019 groupV2BanMember($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest)
 
 
 
@@ -323,6 +347,10 @@ Bans the requested member from the requested group for the specified period of t
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -334,10 +362,11 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | Group ID that has the member to ban.
 $membershipId = 56; // int | Membership ID of the member to ban from the group.
-$membershipType = 56; // int | Membership type of the provided membership ID.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
+$groupsV2GroupBanRequest = new \Bungie\Model\GroupsV2GroupBanRequest(); // \Bungie\Model\GroupsV2GroupBanRequest | 
 
 try {
-    $result = $apiInstance->groupV2BanMember($groupId, $membershipId, $membershipType);
+    $result = $apiInstance->groupV2BanMember($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2BanMember: ', $e->getMessage(), PHP_EOL;
@@ -351,7 +380,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID that has the member to ban. |
  **membershipId** | **int**| Membership ID of the member to ban from the group. |
- **membershipType** | **int**| Membership type of the provided membership ID. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provided membership ID. |
+ **groupsV2GroupBanRequest** | [**\Bungie\Model\GroupsV2GroupBanRequest**](../Model/GroupsV2GroupBanRequest.md)|  |
 
 ### Return type
 
@@ -359,17 +389,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2CreateGroup**
-> \Bungie\Model\InlineResponse20024 groupV2CreateGroup()
+> \Bungie\Model\InlineResponse20024 groupV2CreateGroup($groupsV2GroupAction)
 
 
 
@@ -380,6 +410,10 @@ Create a new group.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -389,9 +423,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
+$groupsV2GroupAction = new \Bungie\Model\GroupsV2GroupAction(); // \Bungie\Model\GroupsV2GroupAction | 
 
 try {
-    $result = $apiInstance->groupV2CreateGroup();
+    $result = $apiInstance->groupV2CreateGroup($groupsV2GroupAction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2CreateGroup: ', $e->getMessage(), PHP_EOL;
@@ -400,7 +435,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupsV2GroupAction** | [**\Bungie\Model\GroupsV2GroupAction**](../Model/GroupsV2GroupAction.md)|  |
 
 ### Return type
 
@@ -408,17 +446,17 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2DenyAllPending**
-> \Bungie\Model\InlineResponse20030 groupV2DenyAllPending($groupId)
+> \Bungie\Model\InlineResponse20030 groupV2DenyAllPending($groupId, $groupsV2GroupApplicationRequest)
 
 
 
@@ -429,6 +467,10 @@ Deny all of the pending users for the given group.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -439,9 +481,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
+$groupsV2GroupApplicationRequest = new \Bungie\Model\GroupsV2GroupApplicationRequest(); // \Bungie\Model\GroupsV2GroupApplicationRequest | 
 
 try {
-    $result = $apiInstance->groupV2DenyAllPending($groupId);
+    $result = $apiInstance->groupV2DenyAllPending($groupId, $groupsV2GroupApplicationRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2DenyAllPending: ', $e->getMessage(), PHP_EOL;
@@ -454,6 +497,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
+ **groupsV2GroupApplicationRequest** | [**\Bungie\Model\GroupsV2GroupApplicationRequest**](../Model/GroupsV2GroupApplicationRequest.md)|  |
 
 ### Return type
 
@@ -461,17 +505,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2DenyPendingForList**
-> \Bungie\Model\InlineResponse20030 groupV2DenyPendingForList($groupId)
+> \Bungie\Model\InlineResponse20030 groupV2DenyPendingForList($groupId, $groupsV2GroupApplicationListRequest)
 
 
 
@@ -482,6 +526,10 @@ Deny all of the pending users for the given group that match the passed-in .
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -492,9 +540,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
+$groupsV2GroupApplicationListRequest = new \Bungie\Model\GroupsV2GroupApplicationListRequest(); // \Bungie\Model\GroupsV2GroupApplicationListRequest | 
 
 try {
-    $result = $apiInstance->groupV2DenyPendingForList($groupId);
+    $result = $apiInstance->groupV2DenyPendingForList($groupId, $groupsV2GroupApplicationListRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2DenyPendingForList: ', $e->getMessage(), PHP_EOL;
@@ -507,6 +556,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
+ **groupsV2GroupApplicationListRequest** | [**\Bungie\Model\GroupsV2GroupApplicationListRequest**](../Model/GroupsV2GroupApplicationListRequest.md)|  |
 
 ### Return type
 
@@ -514,17 +564,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2EditClanBanner**
-> \Bungie\Model\InlineResponse20019 groupV2EditClanBanner($groupId)
+> \Bungie\Model\InlineResponse20019 groupV2EditClanBanner($groupId, $groupsV2ClanBanner)
 
 
 
@@ -535,6 +585,10 @@ Edit an existing group's clan banner. You must have suitable permissions in the 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -545,9 +599,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | Group ID of the group to edit.
+$groupsV2ClanBanner = new \Bungie\Model\GroupsV2ClanBanner(); // \Bungie\Model\GroupsV2ClanBanner | 
 
 try {
-    $result = $apiInstance->groupV2EditClanBanner($groupId);
+    $result = $apiInstance->groupV2EditClanBanner($groupId, $groupsV2ClanBanner);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2EditClanBanner: ', $e->getMessage(), PHP_EOL;
@@ -560,6 +615,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID of the group to edit. |
+ **groupsV2ClanBanner** | [**\Bungie\Model\GroupsV2ClanBanner**](../Model/GroupsV2ClanBanner.md)|  |
 
 ### Return type
 
@@ -567,17 +623,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2EditFounderOptions**
-> \Bungie\Model\InlineResponse20019 groupV2EditFounderOptions($groupId)
+> \Bungie\Model\InlineResponse20019 groupV2EditFounderOptions($groupId, $groupsV2GroupOptionsEditAction)
 
 
 
@@ -588,6 +644,10 @@ Edit group options only available to a founder. You must have suitable permissio
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -598,9 +658,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | Group ID of the group to edit.
+$groupsV2GroupOptionsEditAction = new \Bungie\Model\GroupsV2GroupOptionsEditAction(); // \Bungie\Model\GroupsV2GroupOptionsEditAction | 
 
 try {
-    $result = $apiInstance->groupV2EditFounderOptions($groupId);
+    $result = $apiInstance->groupV2EditFounderOptions($groupId, $groupsV2GroupOptionsEditAction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2EditFounderOptions: ', $e->getMessage(), PHP_EOL;
@@ -613,6 +674,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID of the group to edit. |
+ **groupsV2GroupOptionsEditAction** | [**\Bungie\Model\GroupsV2GroupOptionsEditAction**](../Model/GroupsV2GroupOptionsEditAction.md)|  |
 
 ### Return type
 
@@ -620,17 +682,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2EditGroup**
-> \Bungie\Model\InlineResponse20019 groupV2EditGroup($groupId)
+> \Bungie\Model\InlineResponse20019 groupV2EditGroup($groupId, $groupsV2GroupEditAction)
 
 
 
@@ -641,6 +703,10 @@ Edit an existing group. You must have suitable permissions in the group to perfo
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -651,9 +717,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | Group ID of the group to edit.
+$groupsV2GroupEditAction = new \Bungie\Model\GroupsV2GroupEditAction(); // \Bungie\Model\GroupsV2GroupEditAction | 
 
 try {
-    $result = $apiInstance->groupV2EditGroup($groupId);
+    $result = $apiInstance->groupV2EditGroup($groupId, $groupsV2GroupEditAction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2EditGroup: ', $e->getMessage(), PHP_EOL;
@@ -666,6 +733,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID of the group to edit. |
+ **groupsV2GroupEditAction** | [**\Bungie\Model\GroupsV2GroupEditAction**](../Model/GroupsV2GroupEditAction.md)|  |
 
 ### Return type
 
@@ -673,12 +741,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -694,6 +762,10 @@ Edit the membership type of a given member. You must have suitable permissions i
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -705,8 +777,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group to which the member belongs.
 $membershipId = 56; // int | Membership ID to modify.
-$membershipType = 56; // int | Membership type of the provide membership ID.
-$memberType = 56; // int | New membertype for the specified member.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provide membership ID.
+$memberType = new \Bungie\Model\\Bungie\Model\GroupsV2RuntimeGroupMemberType(); // \Bungie\Model\GroupsV2RuntimeGroupMemberType | New membertype for the specified member.
 
 try {
     $result = $apiInstance->groupV2EditGroupMembership($groupId, $membershipId, $membershipType, $memberType);
@@ -723,8 +795,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group to which the member belongs. |
  **membershipId** | **int**| Membership ID to modify. |
- **membershipType** | **int**| Membership type of the provide membership ID. |
- **memberType** | **int**| New membertype for the specified member. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provide membership ID. |
+ **memberType** | [**\Bungie\Model\GroupsV2RuntimeGroupMemberType**](../Model/.md)| New membertype for the specified member. |
 
 ### Return type
 
@@ -732,17 +804,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2EditOptionalConversation**
-> \Bungie\Model\InlineResponse20011 groupV2EditOptionalConversation($conversationId, $groupId)
+> \Bungie\Model\InlineResponse20011 groupV2EditOptionalConversation($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest)
 
 
 
@@ -753,6 +825,10 @@ Edit the settings of an optional conversation/chat channel. Requires admin permi
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -764,9 +840,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $conversationId = 56; // int | Conversation Id of the channel being edited.
 $groupId = 56; // int | Group ID of the group to edit.
+$groupsV2GroupOptionalConversationEditRequest = new \Bungie\Model\GroupsV2GroupOptionalConversationEditRequest(); // \Bungie\Model\GroupsV2GroupOptionalConversationEditRequest | 
 
 try {
-    $result = $apiInstance->groupV2EditOptionalConversation($conversationId, $groupId);
+    $result = $apiInstance->groupV2EditOptionalConversation($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2EditOptionalConversation: ', $e->getMessage(), PHP_EOL;
@@ -780,6 +857,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversationId** | **int**| Conversation Id of the channel being edited. |
  **groupId** | **int**| Group ID of the group to edit. |
+ **groupsV2GroupOptionalConversationEditRequest** | [**\Bungie\Model\GroupsV2GroupOptionalConversationEditRequest**](../Model/GroupsV2GroupOptionalConversationEditRequest.md)|  |
 
 ### Return type
 
@@ -787,12 +865,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -843,7 +921,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -888,7 +966,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -933,7 +1011,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -949,6 +1027,10 @@ Get the list of banned members in a given group. Only accessible to group Admins
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -983,12 +1065,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1037,7 +1119,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1059,7 +1141,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client()
 );
 $groupName = 'groupName_example'; // string | Exact name of the group to find.
-$groupType = 56; // int | Type of group to find.
+$groupType = new \Bungie\Model\\Bungie\Model\GroupsV2GroupType(); // \Bungie\Model\GroupsV2GroupType | Type of group to find.
 
 try {
     $result = $apiInstance->groupV2GetGroupByName($groupName, $groupType);
@@ -1075,7 +1157,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupName** | **string**| Exact name of the group to find. |
- **groupType** | **int**| Type of group to find. |
+ **groupType** | [**\Bungie\Model\GroupsV2GroupType**](../Model/.md)| Type of group to find. |
 
 ### Return type
 
@@ -1088,7 +1170,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1137,7 +1219,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1158,10 +1240,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter = 56; // int | Filter apply to list of joined groups.
-$groupType = 56; // int | Type of group the supplied member founded.
+$filter = new \Bungie\Model\\Bungie\Model\GroupsV2GroupsForMemberFilter(); // \Bungie\Model\GroupsV2GroupsForMemberFilter | Filter apply to list of joined groups.
+$groupType = new \Bungie\Model\\Bungie\Model\GroupsV2GroupType(); // \Bungie\Model\GroupsV2GroupType | Type of group the supplied member founded.
 $membershipId = 56; // int | Membership ID to for which to find founded groups.
-$membershipType = 56; // int | Membership type of the supplied membership ID.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
 
 try {
     $result = $apiInstance->groupV2GetGroupsForMember($filter, $groupType, $membershipId, $membershipType);
@@ -1176,10 +1258,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **int**| Filter apply to list of joined groups. |
- **groupType** | **int**| Type of group the supplied member founded. |
+ **filter** | [**\Bungie\Model\GroupsV2GroupsForMemberFilter**](../Model/.md)| Filter apply to list of joined groups. |
+ **groupType** | [**\Bungie\Model\GroupsV2GroupType**](../Model/.md)| Type of group the supplied member founded. |
  **membershipId** | **int**| Membership ID to for which to find founded groups. |
- **membershipType** | **int**| Membership type of the supplied membership ID. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the supplied membership ID. |
 
 ### Return type
 
@@ -1192,7 +1274,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1208,6 +1290,10 @@ Get the list of users who have been invited into the group.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1242,12 +1328,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1270,7 +1356,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed size of 50 items per page.
 $groupId = 56; // int | The ID of the group.
-$memberType = 56; // int | Filter out other member types. Use None for all members.
+$memberType = new \Bungie\Model\\Bungie\Model\GroupsV2RuntimeGroupMemberType(); // \Bungie\Model\GroupsV2RuntimeGroupMemberType | Filter out other member types. Use None for all members.
 $nameSearch = 'nameSearch_example'; // string | The name fragment upon which a search should be executed for members with matching display or unique names.
 
 try {
@@ -1288,7 +1374,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **currentpage** | **int**| Page number (starting with 1). Each page has a fixed size of 50 items per page. |
  **groupId** | **int**| The ID of the group. |
- **memberType** | **int**| Filter out other member types. Use None for all members. | [optional]
+ **memberType** | [**\Bungie\Model\GroupsV2RuntimeGroupMemberType**](../Model/.md)| Filter out other member types. Use None for all members. | [optional]
  **nameSearch** | **string**| The name fragment upon which a search should be executed for members with matching display or unique names. | [optional]
 
 ### Return type
@@ -1302,7 +1388,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1318,6 +1404,10 @@ Get the list of users who are awaiting a decision on their application to join a
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1352,12 +1442,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1378,10 +1468,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter = 56; // int | Filter apply to list of potential joined groups.
-$groupType = 56; // int | Type of group the supplied member applied.
+$filter = new \Bungie\Model\\Bungie\Model\GroupsV2GroupPotentialMemberStatus(); // \Bungie\Model\GroupsV2GroupPotentialMemberStatus | Filter apply to list of potential joined groups.
+$groupType = new \Bungie\Model\\Bungie\Model\GroupsV2GroupType(); // \Bungie\Model\GroupsV2GroupType | Type of group the supplied member applied.
 $membershipId = 56; // int | Membership ID to for which to find applied groups.
-$membershipType = 56; // int | Membership type of the supplied membership ID.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
 
 try {
     $result = $apiInstance->groupV2GetPotentialGroupsForMember($filter, $groupType, $membershipId, $membershipType);
@@ -1396,10 +1486,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **int**| Filter apply to list of potential joined groups. |
- **groupType** | **int**| Type of group the supplied member applied. |
+ **filter** | [**\Bungie\Model\GroupsV2GroupPotentialMemberStatus**](../Model/.md)| Filter apply to list of potential joined groups. |
+ **groupType** | [**\Bungie\Model\GroupsV2GroupType**](../Model/.md)| Type of group the supplied member applied. |
  **membershipId** | **int**| Membership ID to for which to find applied groups. |
- **membershipType** | **int**| Membership type of the supplied membership ID. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the supplied membership ID. |
 
 ### Return type
 
@@ -1412,7 +1502,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1428,6 +1518,10 @@ Gets groups recommended for you based on the groups to whom those you follow bel
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1437,8 +1531,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$createDateRange = 56; // int | Requested range in which to pull recommended groups
-$groupType = 56; // int | Type of groups requested
+$createDateRange = new \Bungie\Model\\Bungie\Model\GroupsV2GroupDateRange(); // \Bungie\Model\GroupsV2GroupDateRange | Requested range in which to pull recommended groups
+$groupType = new \Bungie\Model\\Bungie\Model\GroupsV2GroupType(); // \Bungie\Model\GroupsV2GroupType | Type of groups requested
 
 try {
     $result = $apiInstance->groupV2GetRecommendedGroups($createDateRange, $groupType);
@@ -1453,8 +1547,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createDateRange** | **int**| Requested range in which to pull recommended groups |
- **groupType** | **int**| Type of groups requested |
+ **createDateRange** | [**\Bungie\Model\GroupsV2GroupDateRange**](../Model/.md)| Requested range in which to pull recommended groups |
+ **groupType** | [**\Bungie\Model\GroupsV2GroupType**](../Model/.md)| Type of groups requested |
 
 ### Return type
 
@@ -1462,12 +1556,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1483,6 +1577,10 @@ Gets the state of the user's clan invite preferences for a particular membership
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1492,7 +1590,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$mType = 56; // int | The Destiny membership type of the account we wish to access settings.
+$mType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The Destiny membership type of the account we wish to access settings.
 
 try {
     $result = $apiInstance->groupV2GetUserClanInviteSetting($mType);
@@ -1507,7 +1605,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mType** | **int**| The Destiny membership type of the account we wish to access settings. |
+ **mType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| The Destiny membership type of the account we wish to access settings. |
 
 ### Return type
 
@@ -1515,17 +1613,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2GroupSearch**
-> \Bungie\Model\InlineResponse20021 groupV2GroupSearch()
+> \Bungie\Model\InlineResponse20021 groupV2GroupSearch($groupsV2GroupQuery)
 
 
 
@@ -1541,9 +1639,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$groupsV2GroupQuery = new \Bungie\Model\GroupsV2GroupQuery(); // \Bungie\Model\GroupsV2GroupQuery | 
 
 try {
-    $result = $apiInstance->groupV2GroupSearch();
+    $result = $apiInstance->groupV2GroupSearch($groupsV2GroupQuery);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2GroupSearch: ', $e->getMessage(), PHP_EOL;
@@ -1552,7 +1651,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupsV2GroupQuery** | [**\Bungie\Model\GroupsV2GroupQuery**](../Model/GroupsV2GroupQuery.md)|  |
 
 ### Return type
 
@@ -1564,13 +1666,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2IndividualGroupInvite**
-> \Bungie\Model\InlineResponse20028 groupV2IndividualGroupInvite($groupId, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20028 groupV2IndividualGroupInvite($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
 
 
 
@@ -1581,6 +1683,10 @@ Invite a user to join this group.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1592,10 +1698,11 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group you would like to join.
 $membershipId = 56; // int | Membership id of the account being invited.
-$membershipType = 56; // int | MembershipType of the account being invited.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account being invited.
+$groupsV2GroupApplicationRequest = new \Bungie\Model\GroupsV2GroupApplicationRequest(); // \Bungie\Model\GroupsV2GroupApplicationRequest | 
 
 try {
-    $result = $apiInstance->groupV2IndividualGroupInvite($groupId, $membershipId, $membershipType);
+    $result = $apiInstance->groupV2IndividualGroupInvite($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2IndividualGroupInvite: ', $e->getMessage(), PHP_EOL;
@@ -1609,7 +1716,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group you would like to join. |
  **membershipId** | **int**| Membership id of the account being invited. |
- **membershipType** | **int**| MembershipType of the account being invited. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| MembershipType of the account being invited. |
+ **groupsV2GroupApplicationRequest** | [**\Bungie\Model\GroupsV2GroupApplicationRequest**](../Model/GroupsV2GroupApplicationRequest.md)|  |
 
 ### Return type
 
@@ -1617,12 +1725,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1638,6 +1746,10 @@ Cancels a pending invitation to join a group.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1649,7 +1761,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group you would like to join.
 $membershipId = 56; // int | Membership id of the account being cancelled.
-$membershipType = 56; // int | MembershipType of the account being cancelled.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account being cancelled.
 
 try {
     $result = $apiInstance->groupV2IndividualGroupInviteCancel($groupId, $membershipId, $membershipType);
@@ -1666,7 +1778,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group you would like to join. |
  **membershipId** | **int**| Membership id of the account being cancelled. |
- **membershipType** | **int**| MembershipType of the account being cancelled. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| MembershipType of the account being cancelled. |
 
 ### Return type
 
@@ -1674,12 +1786,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1695,6 +1807,10 @@ Kick a member from the given group, forcing them to reapply if they wish to re-j
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1706,7 +1822,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | Group ID to kick the user from.
 $membershipId = 56; // int | Membership ID to kick.
-$membershipType = 56; // int | Membership type of the provided membership ID.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
 
 try {
     $result = $apiInstance->groupV2KickMember($groupId, $membershipId, $membershipType);
@@ -1723,7 +1839,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID to kick the user from. |
  **membershipId** | **int**| Membership ID to kick. |
- **membershipType** | **int**| Membership type of the provided membership ID. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provided membership ID. |
 
 ### Return type
 
@@ -1731,17 +1847,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupV2RequestGroupMembership**
-> \Bungie\Model\InlineResponse20028 groupV2RequestGroupMembership($groupId, $membershipType)
+> \Bungie\Model\InlineResponse20028 groupV2RequestGroupMembership($groupId, $membershipType, $groupsV2GroupApplicationRequest)
 
 
 
@@ -1752,6 +1868,10 @@ Request permission to join the given group.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1762,10 +1882,11 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group you would like to join.
-$membershipType = 56; // int | MembershipType of the account to use when joining.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account to use when joining.
+$groupsV2GroupApplicationRequest = new \Bungie\Model\GroupsV2GroupApplicationRequest(); // \Bungie\Model\GroupsV2GroupApplicationRequest | 
 
 try {
-    $result = $apiInstance->groupV2RequestGroupMembership($groupId, $membershipType);
+    $result = $apiInstance->groupV2RequestGroupMembership($groupId, $membershipType, $groupsV2GroupApplicationRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupV2Api->groupV2RequestGroupMembership: ', $e->getMessage(), PHP_EOL;
@@ -1778,7 +1899,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group you would like to join. |
- **membershipType** | **int**| MembershipType of the account to use when joining. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| MembershipType of the account to use when joining. |
+ **groupsV2GroupApplicationRequest** | [**\Bungie\Model\GroupsV2GroupApplicationRequest**](../Model/GroupsV2GroupApplicationRequest.md)|  |
 
 ### Return type
 
@@ -1786,12 +1908,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1807,6 +1929,10 @@ Rescind your application to join the given group or leave the group if you are a
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1817,7 +1943,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
-$membershipType = 56; // int | MembershipType of the account to leave.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account to leave.
 
 try {
     $result = $apiInstance->groupV2RescindGroupMembership($groupId, $membershipType);
@@ -1833,7 +1959,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
- **membershipType** | **int**| MembershipType of the account to leave. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| MembershipType of the account to leave. |
 
 ### Return type
 
@@ -1841,12 +1967,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1862,6 +1988,10 @@ Sets the state of the user's clan invite preferences - true if they wish to be i
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1872,7 +2002,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $allowInvites = True; // bool | True to allow invites of this user to clans, false otherwise.
-$mType = 56; // int | The Destiny membership type of linked account we are manipulating.
+$mType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The Destiny membership type of linked account we are manipulating.
 
 try {
     $result = $apiInstance->groupV2SetUserClanInviteSetting($allowInvites, $mType);
@@ -1888,7 +2018,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allowInvites** | **bool**| True to allow invites of this user to clans, false otherwise. |
- **mType** | **int**| The Destiny membership type of linked account we are manipulating. |
+ **mType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| The Destiny membership type of linked account we are manipulating. |
 
 ### Return type
 
@@ -1896,12 +2026,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1917,6 +2047,10 @@ Unbans the requested member, allowing them to re-apply for membership.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1928,7 +2062,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | 
 $membershipId = 56; // int | Membership ID of the member to unban from the group
-$membershipType = 56; // int | Membership type of the provided membership ID.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
 
 try {
     $result = $apiInstance->groupV2UnbanMember($groupId, $membershipId, $membershipType);
@@ -1945,7 +2079,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**|  |
  **membershipId** | **int**| Membership ID of the member to unban from the group |
- **membershipType** | **int**| Membership type of the provided membership ID. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provided membership ID. |
 
 ### Return type
 
@@ -1953,12 +2087,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

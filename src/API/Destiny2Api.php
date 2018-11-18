@@ -296,11 +296,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -334,6 +334,11 @@ class Destiny2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -362,28 +367,30 @@ class Destiny2Api
     /**
      * Operation destiny2AwaInitializeRequest
      *
+     * @param  \Bungie\Model\DestinyAdvancedAwaPermissionRequested $destinyAdvancedAwaPermissionRequested destinyAdvancedAwaPermissionRequested (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20058
      */
-    public function destiny2AwaInitializeRequest()
+    public function destiny2AwaInitializeRequest($destinyAdvancedAwaPermissionRequested)
     {
-        list($response) = $this->destiny2AwaInitializeRequestWithHttpInfo();
+        list($response) = $this->destiny2AwaInitializeRequestWithHttpInfo($destinyAdvancedAwaPermissionRequested);
         return $response;
     }
 
     /**
      * Operation destiny2AwaInitializeRequestWithHttpInfo
      *
+     * @param  \Bungie\Model\DestinyAdvancedAwaPermissionRequested $destinyAdvancedAwaPermissionRequested (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20058, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2AwaInitializeRequestWithHttpInfo()
+    public function destiny2AwaInitializeRequestWithHttpInfo($destinyAdvancedAwaPermissionRequested)
     {
-        $request = $this->destiny2AwaInitializeRequestRequest();
+        $request = $this->destiny2AwaInitializeRequestRequest($destinyAdvancedAwaPermissionRequested);
 
         try {
             $options = $this->createHttpClientOption();
@@ -463,13 +470,14 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyAdvancedAwaPermissionRequested $destinyAdvancedAwaPermissionRequested (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2AwaInitializeRequestAsync()
+    public function destiny2AwaInitializeRequestAsync($destinyAdvancedAwaPermissionRequested)
     {
-        return $this->destiny2AwaInitializeRequestAsyncWithHttpInfo()
+        return $this->destiny2AwaInitializeRequestAsyncWithHttpInfo($destinyAdvancedAwaPermissionRequested)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -482,14 +490,15 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyAdvancedAwaPermissionRequested $destinyAdvancedAwaPermissionRequested (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2AwaInitializeRequestAsyncWithHttpInfo()
+    public function destiny2AwaInitializeRequestAsyncWithHttpInfo($destinyAdvancedAwaPermissionRequested)
     {
         $returnType = '\Bungie\Model\InlineResponse20058';
-        $request = $this->destiny2AwaInitializeRequestRequest();
+        $request = $this->destiny2AwaInitializeRequestRequest($destinyAdvancedAwaPermissionRequested);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -528,12 +537,19 @@ class Destiny2Api
     /**
      * Create request for operation 'destiny2AwaInitializeRequest'
      *
+     * @param  \Bungie\Model\DestinyAdvancedAwaPermissionRequested $destinyAdvancedAwaPermissionRequested (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2AwaInitializeRequestRequest()
+    protected function destiny2AwaInitializeRequestRequest($destinyAdvancedAwaPermissionRequested)
     {
+        // verify the required parameter 'destinyAdvancedAwaPermissionRequested' is set
+        if ($destinyAdvancedAwaPermissionRequested === null || (is_array($destinyAdvancedAwaPermissionRequested) && count($destinyAdvancedAwaPermissionRequested) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $destinyAdvancedAwaPermissionRequested when calling destiny2AwaInitializeRequest'
+            );
+        }
 
         $resourcePath = '/Destiny2/Awa/Initialize/';
         $formParams = [];
@@ -546,15 +562,18 @@ class Destiny2Api
 
         // body params
         $_tempBody = null;
+        if (isset($destinyAdvancedAwaPermissionRequested)) {
+            $_tempBody = $destinyAdvancedAwaPermissionRequested;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -587,6 +606,11 @@ class Destiny2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -615,28 +639,30 @@ class Destiny2Api
     /**
      * Operation destiny2AwaProvideAuthorizationResult
      *
+     * @param  \Bungie\Model\DestinyAdvancedAwaUserResponse $destinyAdvancedAwaUserResponse destinyAdvancedAwaUserResponse (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function destiny2AwaProvideAuthorizationResult()
+    public function destiny2AwaProvideAuthorizationResult($destinyAdvancedAwaUserResponse)
     {
-        list($response) = $this->destiny2AwaProvideAuthorizationResultWithHttpInfo();
+        list($response) = $this->destiny2AwaProvideAuthorizationResultWithHttpInfo($destinyAdvancedAwaUserResponse);
         return $response;
     }
 
     /**
      * Operation destiny2AwaProvideAuthorizationResultWithHttpInfo
      *
+     * @param  \Bungie\Model\DestinyAdvancedAwaUserResponse $destinyAdvancedAwaUserResponse (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2AwaProvideAuthorizationResultWithHttpInfo()
+    public function destiny2AwaProvideAuthorizationResultWithHttpInfo($destinyAdvancedAwaUserResponse)
     {
-        $request = $this->destiny2AwaProvideAuthorizationResultRequest();
+        $request = $this->destiny2AwaProvideAuthorizationResultRequest($destinyAdvancedAwaUserResponse);
 
         try {
             $options = $this->createHttpClientOption();
@@ -716,13 +742,14 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyAdvancedAwaUserResponse $destinyAdvancedAwaUserResponse (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2AwaProvideAuthorizationResultAsync()
+    public function destiny2AwaProvideAuthorizationResultAsync($destinyAdvancedAwaUserResponse)
     {
-        return $this->destiny2AwaProvideAuthorizationResultAsyncWithHttpInfo()
+        return $this->destiny2AwaProvideAuthorizationResultAsyncWithHttpInfo($destinyAdvancedAwaUserResponse)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -735,14 +762,15 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyAdvancedAwaUserResponse $destinyAdvancedAwaUserResponse (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2AwaProvideAuthorizationResultAsyncWithHttpInfo()
+    public function destiny2AwaProvideAuthorizationResultAsyncWithHttpInfo($destinyAdvancedAwaUserResponse)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->destiny2AwaProvideAuthorizationResultRequest();
+        $request = $this->destiny2AwaProvideAuthorizationResultRequest($destinyAdvancedAwaUserResponse);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -781,12 +809,19 @@ class Destiny2Api
     /**
      * Create request for operation 'destiny2AwaProvideAuthorizationResult'
      *
+     * @param  \Bungie\Model\DestinyAdvancedAwaUserResponse $destinyAdvancedAwaUserResponse (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2AwaProvideAuthorizationResultRequest()
+    protected function destiny2AwaProvideAuthorizationResultRequest($destinyAdvancedAwaUserResponse)
     {
+        // verify the required parameter 'destinyAdvancedAwaUserResponse' is set
+        if ($destinyAdvancedAwaUserResponse === null || (is_array($destinyAdvancedAwaUserResponse) && count($destinyAdvancedAwaUserResponse) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $destinyAdvancedAwaUserResponse when calling destiny2AwaProvideAuthorizationResult'
+            );
+        }
 
         $resourcePath = '/Destiny2/Awa/AwaProvideAuthorizationResult/';
         $formParams = [];
@@ -799,15 +834,18 @@ class Destiny2Api
 
         // body params
         $_tempBody = null;
+        if (isset($destinyAdvancedAwaUserResponse)) {
+            $_tempBody = $destinyAdvancedAwaUserResponse;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -864,28 +902,30 @@ class Destiny2Api
     /**
      * Operation destiny2EquipItem
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest $destinyRequestsActionsDestinyItemActionRequest destinyRequestsActionsDestinyItemActionRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function destiny2EquipItem()
+    public function destiny2EquipItem($destinyRequestsActionsDestinyItemActionRequest)
     {
-        list($response) = $this->destiny2EquipItemWithHttpInfo();
+        list($response) = $this->destiny2EquipItemWithHttpInfo($destinyRequestsActionsDestinyItemActionRequest);
         return $response;
     }
 
     /**
      * Operation destiny2EquipItemWithHttpInfo
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest $destinyRequestsActionsDestinyItemActionRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2EquipItemWithHttpInfo()
+    public function destiny2EquipItemWithHttpInfo($destinyRequestsActionsDestinyItemActionRequest)
     {
-        $request = $this->destiny2EquipItemRequest();
+        $request = $this->destiny2EquipItemRequest($destinyRequestsActionsDestinyItemActionRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -965,13 +1005,14 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest $destinyRequestsActionsDestinyItemActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2EquipItemAsync()
+    public function destiny2EquipItemAsync($destinyRequestsActionsDestinyItemActionRequest)
     {
-        return $this->destiny2EquipItemAsyncWithHttpInfo()
+        return $this->destiny2EquipItemAsyncWithHttpInfo($destinyRequestsActionsDestinyItemActionRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -984,14 +1025,15 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest $destinyRequestsActionsDestinyItemActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2EquipItemAsyncWithHttpInfo()
+    public function destiny2EquipItemAsyncWithHttpInfo($destinyRequestsActionsDestinyItemActionRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->destiny2EquipItemRequest();
+        $request = $this->destiny2EquipItemRequest($destinyRequestsActionsDestinyItemActionRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1030,12 +1072,19 @@ class Destiny2Api
     /**
      * Create request for operation 'destiny2EquipItem'
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest $destinyRequestsActionsDestinyItemActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2EquipItemRequest()
+    protected function destiny2EquipItemRequest($destinyRequestsActionsDestinyItemActionRequest)
     {
+        // verify the required parameter 'destinyRequestsActionsDestinyItemActionRequest' is set
+        if ($destinyRequestsActionsDestinyItemActionRequest === null || (is_array($destinyRequestsActionsDestinyItemActionRequest) && count($destinyRequestsActionsDestinyItemActionRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $destinyRequestsActionsDestinyItemActionRequest when calling destiny2EquipItem'
+            );
+        }
 
         $resourcePath = '/Destiny2/Actions/Items/EquipItem/';
         $formParams = [];
@@ -1048,15 +1097,18 @@ class Destiny2Api
 
         // body params
         $_tempBody = null;
+        if (isset($destinyRequestsActionsDestinyItemActionRequest)) {
+            $_tempBody = $destinyRequestsActionsDestinyItemActionRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -1089,6 +1141,11 @@ class Destiny2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -1117,28 +1174,30 @@ class Destiny2Api
     /**
      * Operation destiny2EquipItems
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest $destinyRequestsActionsDestinyItemSetActionRequest destinyRequestsActionsDestinyItemSetActionRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20044
      */
-    public function destiny2EquipItems()
+    public function destiny2EquipItems($destinyRequestsActionsDestinyItemSetActionRequest)
     {
-        list($response) = $this->destiny2EquipItemsWithHttpInfo();
+        list($response) = $this->destiny2EquipItemsWithHttpInfo($destinyRequestsActionsDestinyItemSetActionRequest);
         return $response;
     }
 
     /**
      * Operation destiny2EquipItemsWithHttpInfo
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest $destinyRequestsActionsDestinyItemSetActionRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20044, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2EquipItemsWithHttpInfo()
+    public function destiny2EquipItemsWithHttpInfo($destinyRequestsActionsDestinyItemSetActionRequest)
     {
-        $request = $this->destiny2EquipItemsRequest();
+        $request = $this->destiny2EquipItemsRequest($destinyRequestsActionsDestinyItemSetActionRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1218,13 +1277,14 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest $destinyRequestsActionsDestinyItemSetActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2EquipItemsAsync()
+    public function destiny2EquipItemsAsync($destinyRequestsActionsDestinyItemSetActionRequest)
     {
-        return $this->destiny2EquipItemsAsyncWithHttpInfo()
+        return $this->destiny2EquipItemsAsyncWithHttpInfo($destinyRequestsActionsDestinyItemSetActionRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1237,14 +1297,15 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest $destinyRequestsActionsDestinyItemSetActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2EquipItemsAsyncWithHttpInfo()
+    public function destiny2EquipItemsAsyncWithHttpInfo($destinyRequestsActionsDestinyItemSetActionRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20044';
-        $request = $this->destiny2EquipItemsRequest();
+        $request = $this->destiny2EquipItemsRequest($destinyRequestsActionsDestinyItemSetActionRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1283,12 +1344,19 @@ class Destiny2Api
     /**
      * Create request for operation 'destiny2EquipItems'
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest $destinyRequestsActionsDestinyItemSetActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2EquipItemsRequest()
+    protected function destiny2EquipItemsRequest($destinyRequestsActionsDestinyItemSetActionRequest)
     {
+        // verify the required parameter 'destinyRequestsActionsDestinyItemSetActionRequest' is set
+        if ($destinyRequestsActionsDestinyItemSetActionRequest === null || (is_array($destinyRequestsActionsDestinyItemSetActionRequest) && count($destinyRequestsActionsDestinyItemSetActionRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $destinyRequestsActionsDestinyItemSetActionRequest when calling destiny2EquipItems'
+            );
+        }
 
         $resourcePath = '/Destiny2/Actions/Items/EquipItems/';
         $formParams = [];
@@ -1301,15 +1369,18 @@ class Destiny2Api
 
         // body params
         $_tempBody = null;
+        if (isset($destinyRequestsActionsDestinyItemSetActionRequest)) {
+            $_tempBody = $destinyRequestsActionsDestinyItemSetActionRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -1342,6 +1413,11 @@ class Destiny2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -1372,9 +1448,9 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $count Number of rows to return (optional)
-     * @param  int $mode A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. (optional)
+     * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType $mode A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. (optional)
      * @param  int $page Page number to return, starting with 0. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -1392,9 +1468,9 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $count Number of rows to return (optional)
-     * @param  int $mode A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. (optional)
+     * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType $mode A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. (optional)
      * @param  int $page Page number to return, starting with 0. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -1485,9 +1561,9 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $count Number of rows to return (optional)
-     * @param  int $mode A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. (optional)
+     * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType $mode A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. (optional)
      * @param  int $page Page number to return, starting with 0. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1510,9 +1586,9 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $count Number of rows to return (optional)
-     * @param  int $mode A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. (optional)
+     * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType $mode A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. (optional)
      * @param  int $page Page number to return, starting with 0. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1562,9 +1638,9 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $count Number of rows to return (optional)
-     * @param  int $mode A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. (optional)
+     * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType $mode A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. (optional)
      * @param  int $page Page number to return, starting with 0. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1641,11 +1717,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1705,7 +1781,7 @@ class Destiny2Api
      *
      * @param  int $characterId ID of the character. (required)
      * @param  int $destinyMembershipId Destiny membership ID. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -1723,7 +1799,7 @@ class Destiny2Api
      *
      * @param  int $characterId ID of the character. (required)
      * @param  int $destinyMembershipId Destiny membership ID. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -1814,7 +1890,7 @@ class Destiny2Api
      *
      * @param  int $characterId ID of the character. (required)
      * @param  int $destinyMembershipId Destiny membership ID. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1837,7 +1913,7 @@ class Destiny2Api
      *
      * @param  int $characterId ID of the character. (required)
      * @param  int $destinyMembershipId Destiny membership ID. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1887,7 +1963,7 @@ class Destiny2Api
      *
      * @param  int $characterId ID of the character. (required)
      * @param  int $destinyMembershipId Destiny membership ID. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1923,7 +1999,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'csv', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
@@ -1959,11 +2035,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -2236,11 +2312,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -2531,11 +2607,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -2799,11 +2875,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -2864,7 +2940,7 @@ class Destiny2Api
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting collectible detail info. (required)
      * @param  int $collectiblePresentationNodeHash The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -2883,7 +2959,7 @@ class Destiny2Api
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting collectible detail info. (required)
      * @param  int $collectiblePresentationNodeHash The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -2975,7 +3051,7 @@ class Destiny2Api
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting collectible detail info. (required)
      * @param  int $collectiblePresentationNodeHash The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -2999,7 +3075,7 @@ class Destiny2Api
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting collectible detail info. (required)
      * @param  int $collectiblePresentationNodeHash The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -3050,7 +3126,7 @@ class Destiny2Api
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting collectible detail info. (required)
      * @param  int $collectiblePresentationNodeHash The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -3092,7 +3168,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'csv', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
@@ -3136,11 +3212,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3200,7 +3276,7 @@ class Destiny2Api
      *
      * @param  int $characterId The specific character whose activities should be returned. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3217,7 +3293,7 @@ class Destiny2Api
      *
      * @param  int $characterId The specific character whose activities should be returned. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3307,7 +3383,7 @@ class Destiny2Api
      *
      * @param  int $characterId The specific character whose activities should be returned. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3329,7 +3405,7 @@ class Destiny2Api
      *
      * @param  int $characterId The specific character whose activities should be returned. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3378,7 +3454,7 @@ class Destiny2Api
      *
      * @param  int $characterId The specific character whose activities should be returned. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3442,11 +3518,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3729,11 +3805,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3978,11 +4054,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -4042,12 +4118,12 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \DateTime $dayend Last day to return when daily stats are requested. Use the format YYYY-MM-DD. (optional)
      * @param  \DateTime $daystart First day to return when daily stats are requested. Use the format YYYY-MM-DD (optional)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
-     * @param  int $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
+     * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4064,12 +4140,12 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \DateTime $dayend Last day to return when daily stats are requested. Use the format YYYY-MM-DD. (optional)
      * @param  \DateTime $daystart First day to return when daily stats are requested. Use the format YYYY-MM-DD (optional)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
-     * @param  int $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
+     * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4159,12 +4235,12 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \DateTime $dayend Last day to return when daily stats are requested. Use the format YYYY-MM-DD. (optional)
      * @param  \DateTime $daystart First day to return when daily stats are requested. Use the format YYYY-MM-DD (optional)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
-     * @param  int $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
+     * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4186,12 +4262,12 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \DateTime $dayend Last day to return when daily stats are requested. Use the format YYYY-MM-DD. (optional)
      * @param  \DateTime $daystart First day to return when daily stats are requested. Use the format YYYY-MM-DD (optional)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
-     * @param  int $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
+     * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4240,12 +4316,12 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \DateTime $dayend Last day to return when daily stats are requested. Use the format YYYY-MM-DD. (optional)
      * @param  \DateTime $daystart First day to return when daily stats are requested. Use the format YYYY-MM-DD (optional)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
-     * @param  int $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
+     * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4288,14 +4364,14 @@ class Destiny2Api
         }
         // query params
         if (is_array($groups)) {
-            $groups = ObjectSerializer::serializeCollection($groups, 'csv', true);
+            $groups = ObjectSerializer::serializeCollection($groups, 'multi', true);
         }
         if ($groups !== null) {
             $queryParams['groups'] = ObjectSerializer::toQueryValue($groups);
         }
         // query params
         if (is_array($modes)) {
-            $modes = ObjectSerializer::serializeCollection($modes, 'csv', true);
+            $modes = ObjectSerializer::serializeCollection($modes, 'multi', true);
         }
         if ($modes !== null) {
             $queryParams['modes'] = ObjectSerializer::toQueryValue($modes);
@@ -4335,11 +4411,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -4584,11 +4660,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -4647,7 +4723,7 @@ class Destiny2Api
      * Operation destiny2GetHistoricalStatsForAccount
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -4664,7 +4740,7 @@ class Destiny2Api
      * Operation destiny2GetHistoricalStatsForAccountWithHttpInfo
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -4754,7 +4830,7 @@ class Destiny2Api
      * 
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
      *
      * @throws \InvalidArgumentException
@@ -4776,7 +4852,7 @@ class Destiny2Api
      * 
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
      *
      * @throws \InvalidArgumentException
@@ -4825,7 +4901,7 @@ class Destiny2Api
      * Create request for operation 'destiny2GetHistoricalStatsForAccount'
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
      *
      * @throws \InvalidArgumentException
@@ -4855,7 +4931,7 @@ class Destiny2Api
 
         // query params
         if (is_array($groups)) {
-            $groups = ObjectSerializer::serializeCollection($groups, 'csv', true);
+            $groups = ObjectSerializer::serializeCollection($groups, 'multi', true);
         }
         if ($groups !== null) {
             $queryParams['groups'] = ObjectSerializer::toQueryValue($groups);
@@ -4883,11 +4959,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -4947,7 +5023,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId The membership ID of the destiny profile. (required)
      * @param  int $itemInstanceId The Instance ID of the destiny item. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -4965,7 +5041,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId The membership ID of the destiny profile. (required)
      * @param  int $itemInstanceId The Instance ID of the destiny item. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -5056,7 +5132,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId The membership ID of the destiny profile. (required)
      * @param  int $itemInstanceId The Instance ID of the destiny item. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -5079,7 +5155,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId The membership ID of the destiny profile. (required)
      * @param  int $itemInstanceId The Instance ID of the destiny item. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -5129,7 +5205,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId The membership ID of the destiny profile. (required)
      * @param  int $itemInstanceId The Instance ID of the destiny item. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -5165,7 +5241,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'csv', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
@@ -5201,11 +5277,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -5264,7 +5340,7 @@ class Destiny2Api
      * Operation destiny2GetLeaderboards
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -5283,7 +5359,7 @@ class Destiny2Api
      * Operation destiny2GetLeaderboardsWithHttpInfo
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -5375,7 +5451,7 @@ class Destiny2Api
      * 
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -5399,7 +5475,7 @@ class Destiny2Api
      * 
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -5450,7 +5526,7 @@ class Destiny2Api
      * Create request for operation 'destiny2GetLeaderboards'
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -5515,11 +5591,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -5579,7 +5655,7 @@ class Destiny2Api
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -5599,7 +5675,7 @@ class Destiny2Api
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -5692,7 +5768,7 @@ class Destiny2Api
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -5717,7 +5793,7 @@ class Destiny2Api
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -5769,7 +5845,7 @@ class Destiny2Api
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -5848,11 +5924,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -5911,7 +5987,7 @@ class Destiny2Api
      * Operation destiny2GetLinkedProfiles
      *
      * @param  int $membershipId The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don&#39;t pass us a PSN membership ID and the XBox membership type, it&#39;s not going to work! (required)
-     * @param  int $membershipType The type for the membership whose linked Destiny accounts you want returned. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType The type for the membership whose linked Destiny accounts you want returned. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5927,7 +6003,7 @@ class Destiny2Api
      * Operation destiny2GetLinkedProfilesWithHttpInfo
      *
      * @param  int $membershipId The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don&#39;t pass us a PSN membership ID and the XBox membership type, it&#39;s not going to work! (required)
-     * @param  int $membershipType The type for the membership whose linked Destiny accounts you want returned. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType The type for the membership whose linked Destiny accounts you want returned. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6016,7 +6092,7 @@ class Destiny2Api
      * 
      *
      * @param  int $membershipId The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don&#39;t pass us a PSN membership ID and the XBox membership type, it&#39;s not going to work! (required)
-     * @param  int $membershipType The type for the membership whose linked Destiny accounts you want returned. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType The type for the membership whose linked Destiny accounts you want returned. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6037,7 +6113,7 @@ class Destiny2Api
      * 
      *
      * @param  int $membershipId The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don&#39;t pass us a PSN membership ID and the XBox membership type, it&#39;s not going to work! (required)
-     * @param  int $membershipType The type for the membership whose linked Destiny accounts you want returned. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType The type for the membership whose linked Destiny accounts you want returned. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6085,7 +6161,7 @@ class Destiny2Api
      * Create request for operation 'destiny2GetLinkedProfiles'
      *
      * @param  int $membershipId The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don&#39;t pass us a PSN membership ID and the XBox membership type, it&#39;s not going to work! (required)
-     * @param  int $membershipType The type for the membership whose linked Destiny accounts you want returned. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType The type for the membership whose linked Destiny accounts you want returned. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6135,11 +6211,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -6403,11 +6479,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -6466,7 +6542,7 @@ class Destiny2Api
      * Operation destiny2GetProfile
      *
      * @param  int $destinyMembershipId Destiny membership ID. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -6483,7 +6559,7 @@ class Destiny2Api
      * Operation destiny2GetProfileWithHttpInfo
      *
      * @param  int $destinyMembershipId Destiny membership ID. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -6573,7 +6649,7 @@ class Destiny2Api
      * 
      *
      * @param  int $destinyMembershipId Destiny membership ID. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6595,7 +6671,7 @@ class Destiny2Api
      * 
      *
      * @param  int $destinyMembershipId Destiny membership ID. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6644,7 +6720,7 @@ class Destiny2Api
      * Create request for operation 'destiny2GetProfile'
      *
      * @param  int $destinyMembershipId Destiny membership ID. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6674,7 +6750,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'csv', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
@@ -6702,11 +6778,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -6970,11 +7046,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7219,11 +7295,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7283,7 +7359,7 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7300,7 +7376,7 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7390,7 +7466,7 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7412,7 +7488,7 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7461,7 +7537,7 @@ class Destiny2Api
      *
      * @param  int $characterId The id of the character to retrieve. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7525,11 +7601,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7589,7 +7665,7 @@ class Destiny2Api
      *
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $vendorHash The Hash identifier of the Vendor to be returned. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
@@ -7608,7 +7684,7 @@ class Destiny2Api
      *
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $vendorHash The Hash identifier of the Vendor to be returned. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
@@ -7700,7 +7776,7 @@ class Destiny2Api
      *
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $vendorHash The Hash identifier of the Vendor to be returned. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
@@ -7724,7 +7800,7 @@ class Destiny2Api
      *
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $vendorHash The Hash identifier of the Vendor to be returned. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
@@ -7775,7 +7851,7 @@ class Destiny2Api
      *
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $vendorHash The Hash identifier of the Vendor to be returned. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
@@ -7818,7 +7894,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'csv', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
@@ -7862,11 +7938,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7926,7 +8002,7 @@ class Destiny2Api
      *
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -7944,7 +8020,7 @@ class Destiny2Api
      *
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -8035,7 +8111,7 @@ class Destiny2Api
      *
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -8058,7 +8134,7 @@ class Destiny2Api
      *
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -8108,7 +8184,7 @@ class Destiny2Api
      *
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \Bungie\Model\DestinyDestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
@@ -8144,7 +8220,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'csv', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
@@ -8180,11 +8256,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -8242,28 +8318,30 @@ class Destiny2Api
     /**
      * Operation destiny2InsertSocketPlug
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20045
      */
-    public function destiny2InsertSocketPlug()
+    public function destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest)
     {
-        list($response) = $this->destiny2InsertSocketPlugWithHttpInfo();
+        list($response) = $this->destiny2InsertSocketPlugWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest);
         return $response;
     }
 
     /**
      * Operation destiny2InsertSocketPlugWithHttpInfo
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20045, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2InsertSocketPlugWithHttpInfo()
+    public function destiny2InsertSocketPlugWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest)
     {
-        $request = $this->destiny2InsertSocketPlugRequest();
+        $request = $this->destiny2InsertSocketPlugRequest($destinyRequestsActionsDestinyInsertPlugsActionRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8343,13 +8421,14 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2InsertSocketPlugAsync()
+    public function destiny2InsertSocketPlugAsync($destinyRequestsActionsDestinyInsertPlugsActionRequest)
     {
-        return $this->destiny2InsertSocketPlugAsyncWithHttpInfo()
+        return $this->destiny2InsertSocketPlugAsyncWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8362,14 +8441,15 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2InsertSocketPlugAsyncWithHttpInfo()
+    public function destiny2InsertSocketPlugAsyncWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20045';
-        $request = $this->destiny2InsertSocketPlugRequest();
+        $request = $this->destiny2InsertSocketPlugRequest($destinyRequestsActionsDestinyInsertPlugsActionRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8408,12 +8488,19 @@ class Destiny2Api
     /**
      * Create request for operation 'destiny2InsertSocketPlug'
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2InsertSocketPlugRequest()
+    protected function destiny2InsertSocketPlugRequest($destinyRequestsActionsDestinyInsertPlugsActionRequest)
     {
+        // verify the required parameter 'destinyRequestsActionsDestinyInsertPlugsActionRequest' is set
+        if ($destinyRequestsActionsDestinyInsertPlugsActionRequest === null || (is_array($destinyRequestsActionsDestinyInsertPlugsActionRequest) && count($destinyRequestsActionsDestinyInsertPlugsActionRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $destinyRequestsActionsDestinyInsertPlugsActionRequest when calling destiny2InsertSocketPlug'
+            );
+        }
 
         $resourcePath = '/Destiny2/Actions/Items/InsertSocketPlug/';
         $formParams = [];
@@ -8426,15 +8513,18 @@ class Destiny2Api
 
         // body params
         $_tempBody = null;
+        if (isset($destinyRequestsActionsDestinyInsertPlugsActionRequest)) {
+            $_tempBody = $destinyRequestsActionsDestinyInsertPlugsActionRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -8467,6 +8557,11 @@ class Destiny2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -8495,28 +8590,30 @@ class Destiny2Api
     /**
      * Operation destiny2PullFromPostmaster
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest $destinyRequestsActionsDestinyPostmasterTransferRequest destinyRequestsActionsDestinyPostmasterTransferRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function destiny2PullFromPostmaster()
+    public function destiny2PullFromPostmaster($destinyRequestsActionsDestinyPostmasterTransferRequest)
     {
-        list($response) = $this->destiny2PullFromPostmasterWithHttpInfo();
+        list($response) = $this->destiny2PullFromPostmasterWithHttpInfo($destinyRequestsActionsDestinyPostmasterTransferRequest);
         return $response;
     }
 
     /**
      * Operation destiny2PullFromPostmasterWithHttpInfo
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest $destinyRequestsActionsDestinyPostmasterTransferRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2PullFromPostmasterWithHttpInfo()
+    public function destiny2PullFromPostmasterWithHttpInfo($destinyRequestsActionsDestinyPostmasterTransferRequest)
     {
-        $request = $this->destiny2PullFromPostmasterRequest();
+        $request = $this->destiny2PullFromPostmasterRequest($destinyRequestsActionsDestinyPostmasterTransferRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8596,13 +8693,14 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest $destinyRequestsActionsDestinyPostmasterTransferRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2PullFromPostmasterAsync()
+    public function destiny2PullFromPostmasterAsync($destinyRequestsActionsDestinyPostmasterTransferRequest)
     {
-        return $this->destiny2PullFromPostmasterAsyncWithHttpInfo()
+        return $this->destiny2PullFromPostmasterAsyncWithHttpInfo($destinyRequestsActionsDestinyPostmasterTransferRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8615,14 +8713,15 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest $destinyRequestsActionsDestinyPostmasterTransferRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2PullFromPostmasterAsyncWithHttpInfo()
+    public function destiny2PullFromPostmasterAsyncWithHttpInfo($destinyRequestsActionsDestinyPostmasterTransferRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->destiny2PullFromPostmasterRequest();
+        $request = $this->destiny2PullFromPostmasterRequest($destinyRequestsActionsDestinyPostmasterTransferRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8661,12 +8760,19 @@ class Destiny2Api
     /**
      * Create request for operation 'destiny2PullFromPostmaster'
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest $destinyRequestsActionsDestinyPostmasterTransferRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2PullFromPostmasterRequest()
+    protected function destiny2PullFromPostmasterRequest($destinyRequestsActionsDestinyPostmasterTransferRequest)
     {
+        // verify the required parameter 'destinyRequestsActionsDestinyPostmasterTransferRequest' is set
+        if ($destinyRequestsActionsDestinyPostmasterTransferRequest === null || (is_array($destinyRequestsActionsDestinyPostmasterTransferRequest) && count($destinyRequestsActionsDestinyPostmasterTransferRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $destinyRequestsActionsDestinyPostmasterTransferRequest when calling destiny2PullFromPostmaster'
+            );
+        }
 
         $resourcePath = '/Destiny2/Actions/Items/PullFromPostmaster/';
         $formParams = [];
@@ -8679,15 +8785,18 @@ class Destiny2Api
 
         // body params
         $_tempBody = null;
+        if (isset($destinyRequestsActionsDestinyPostmasterTransferRequest)) {
+            $_tempBody = $destinyRequestsActionsDestinyPostmasterTransferRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -8720,6 +8829,11 @@ class Destiny2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -8749,14 +8863,15 @@ class Destiny2Api
      * Operation destiny2ReportOffensivePostGameCarnageReportPlayer
      *
      * @param  int $activityId The ID of the activity where you ran into the brigand that you&#39;re reporting. (required)
+     * @param  \Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest $destinyReportingRequestsDestinyReportOffensePgcrRequest destinyReportingRequestsDestinyReportOffensePgcrRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function destiny2ReportOffensivePostGameCarnageReportPlayer($activityId)
+    public function destiny2ReportOffensivePostGameCarnageReportPlayer($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest)
     {
-        list($response) = $this->destiny2ReportOffensivePostGameCarnageReportPlayerWithHttpInfo($activityId);
+        list($response) = $this->destiny2ReportOffensivePostGameCarnageReportPlayerWithHttpInfo($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest);
         return $response;
     }
 
@@ -8764,14 +8879,15 @@ class Destiny2Api
      * Operation destiny2ReportOffensivePostGameCarnageReportPlayerWithHttpInfo
      *
      * @param  int $activityId The ID of the activity where you ran into the brigand that you&#39;re reporting. (required)
+     * @param  \Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest $destinyReportingRequestsDestinyReportOffensePgcrRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2ReportOffensivePostGameCarnageReportPlayerWithHttpInfo($activityId)
+    public function destiny2ReportOffensivePostGameCarnageReportPlayerWithHttpInfo($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest)
     {
-        $request = $this->destiny2ReportOffensivePostGameCarnageReportPlayerRequest($activityId);
+        $request = $this->destiny2ReportOffensivePostGameCarnageReportPlayerRequest($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8852,13 +8968,14 @@ class Destiny2Api
      * 
      *
      * @param  int $activityId The ID of the activity where you ran into the brigand that you&#39;re reporting. (required)
+     * @param  \Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest $destinyReportingRequestsDestinyReportOffensePgcrRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2ReportOffensivePostGameCarnageReportPlayerAsync($activityId)
+    public function destiny2ReportOffensivePostGameCarnageReportPlayerAsync($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest)
     {
-        return $this->destiny2ReportOffensivePostGameCarnageReportPlayerAsyncWithHttpInfo($activityId)
+        return $this->destiny2ReportOffensivePostGameCarnageReportPlayerAsyncWithHttpInfo($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8872,14 +8989,15 @@ class Destiny2Api
      * 
      *
      * @param  int $activityId The ID of the activity where you ran into the brigand that you&#39;re reporting. (required)
+     * @param  \Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest $destinyReportingRequestsDestinyReportOffensePgcrRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2ReportOffensivePostGameCarnageReportPlayerAsyncWithHttpInfo($activityId)
+    public function destiny2ReportOffensivePostGameCarnageReportPlayerAsyncWithHttpInfo($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->destiny2ReportOffensivePostGameCarnageReportPlayerRequest($activityId);
+        $request = $this->destiny2ReportOffensivePostGameCarnageReportPlayerRequest($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8919,16 +9037,23 @@ class Destiny2Api
      * Create request for operation 'destiny2ReportOffensivePostGameCarnageReportPlayer'
      *
      * @param  int $activityId The ID of the activity where you ran into the brigand that you&#39;re reporting. (required)
+     * @param  \Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest $destinyReportingRequestsDestinyReportOffensePgcrRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2ReportOffensivePostGameCarnageReportPlayerRequest($activityId)
+    protected function destiny2ReportOffensivePostGameCarnageReportPlayerRequest($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest)
     {
         // verify the required parameter 'activityId' is set
         if ($activityId === null || (is_array($activityId) && count($activityId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $activityId when calling destiny2ReportOffensivePostGameCarnageReportPlayer'
+            );
+        }
+        // verify the required parameter 'destinyReportingRequestsDestinyReportOffensePgcrRequest' is set
+        if ($destinyReportingRequestsDestinyReportOffensePgcrRequest === null || (is_array($destinyReportingRequestsDestinyReportOffensePgcrRequest) && count($destinyReportingRequestsDestinyReportOffensePgcrRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $destinyReportingRequestsDestinyReportOffensePgcrRequest when calling destiny2ReportOffensivePostGameCarnageReportPlayer'
             );
         }
 
@@ -8951,15 +9076,18 @@ class Destiny2Api
 
         // body params
         $_tempBody = null;
+        if (isset($destinyReportingRequestsDestinyReportOffensePgcrRequest)) {
+            $_tempBody = $destinyReportingRequestsDestinyReportOffensePgcrRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -8992,6 +9120,11 @@ class Destiny2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -9254,11 +9387,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -9317,7 +9450,7 @@ class Destiny2Api
      * Operation destiny2SearchDestinyPlayer
      *
      * @param  string $displayName The full gamertag or PSN id of the player. Spaces and case are ignored. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type, or All. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type, or All. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9333,7 +9466,7 @@ class Destiny2Api
      * Operation destiny2SearchDestinyPlayerWithHttpInfo
      *
      * @param  string $displayName The full gamertag or PSN id of the player. Spaces and case are ignored. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type, or All. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type, or All. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9422,7 +9555,7 @@ class Destiny2Api
      * 
      *
      * @param  string $displayName The full gamertag or PSN id of the player. Spaces and case are ignored. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type, or All. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type, or All. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9443,7 +9576,7 @@ class Destiny2Api
      * 
      *
      * @param  string $displayName The full gamertag or PSN id of the player. Spaces and case are ignored. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type, or All. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type, or All. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9491,7 +9624,7 @@ class Destiny2Api
      * Create request for operation 'destiny2SearchDestinyPlayer'
      *
      * @param  string $displayName The full gamertag or PSN id of the player. Spaces and case are ignored. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type, or All. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type, or All. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9541,11 +9674,11 @@ class Destiny2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -9603,28 +9736,30 @@ class Destiny2Api
     /**
      * Operation destiny2SetItemLockState
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest $destinyRequestsActionsDestinyItemStateRequest destinyRequestsActionsDestinyItemStateRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function destiny2SetItemLockState()
+    public function destiny2SetItemLockState($destinyRequestsActionsDestinyItemStateRequest)
     {
-        list($response) = $this->destiny2SetItemLockStateWithHttpInfo();
+        list($response) = $this->destiny2SetItemLockStateWithHttpInfo($destinyRequestsActionsDestinyItemStateRequest);
         return $response;
     }
 
     /**
      * Operation destiny2SetItemLockStateWithHttpInfo
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest $destinyRequestsActionsDestinyItemStateRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2SetItemLockStateWithHttpInfo()
+    public function destiny2SetItemLockStateWithHttpInfo($destinyRequestsActionsDestinyItemStateRequest)
     {
-        $request = $this->destiny2SetItemLockStateRequest();
+        $request = $this->destiny2SetItemLockStateRequest($destinyRequestsActionsDestinyItemStateRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9704,13 +9839,14 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest $destinyRequestsActionsDestinyItemStateRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2SetItemLockStateAsync()
+    public function destiny2SetItemLockStateAsync($destinyRequestsActionsDestinyItemStateRequest)
     {
-        return $this->destiny2SetItemLockStateAsyncWithHttpInfo()
+        return $this->destiny2SetItemLockStateAsyncWithHttpInfo($destinyRequestsActionsDestinyItemStateRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9723,14 +9859,15 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest $destinyRequestsActionsDestinyItemStateRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2SetItemLockStateAsyncWithHttpInfo()
+    public function destiny2SetItemLockStateAsyncWithHttpInfo($destinyRequestsActionsDestinyItemStateRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->destiny2SetItemLockStateRequest();
+        $request = $this->destiny2SetItemLockStateRequest($destinyRequestsActionsDestinyItemStateRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9769,12 +9906,19 @@ class Destiny2Api
     /**
      * Create request for operation 'destiny2SetItemLockState'
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest $destinyRequestsActionsDestinyItemStateRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2SetItemLockStateRequest()
+    protected function destiny2SetItemLockStateRequest($destinyRequestsActionsDestinyItemStateRequest)
     {
+        // verify the required parameter 'destinyRequestsActionsDestinyItemStateRequest' is set
+        if ($destinyRequestsActionsDestinyItemStateRequest === null || (is_array($destinyRequestsActionsDestinyItemStateRequest) && count($destinyRequestsActionsDestinyItemStateRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $destinyRequestsActionsDestinyItemStateRequest when calling destiny2SetItemLockState'
+            );
+        }
 
         $resourcePath = '/Destiny2/Actions/Items/SetLockState/';
         $formParams = [];
@@ -9787,15 +9931,18 @@ class Destiny2Api
 
         // body params
         $_tempBody = null;
+        if (isset($destinyRequestsActionsDestinyItemStateRequest)) {
+            $_tempBody = $destinyRequestsActionsDestinyItemStateRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -9828,6 +9975,11 @@ class Destiny2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -9856,28 +10008,30 @@ class Destiny2Api
     /**
      * Operation destiny2TransferItem
      *
+     * @param  \Bungie\Model\DestinyRequestsDestinyItemTransferRequest $destinyRequestsDestinyItemTransferRequest destinyRequestsDestinyItemTransferRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function destiny2TransferItem()
+    public function destiny2TransferItem($destinyRequestsDestinyItemTransferRequest)
     {
-        list($response) = $this->destiny2TransferItemWithHttpInfo();
+        list($response) = $this->destiny2TransferItemWithHttpInfo($destinyRequestsDestinyItemTransferRequest);
         return $response;
     }
 
     /**
      * Operation destiny2TransferItemWithHttpInfo
      *
+     * @param  \Bungie\Model\DestinyRequestsDestinyItemTransferRequest $destinyRequestsDestinyItemTransferRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2TransferItemWithHttpInfo()
+    public function destiny2TransferItemWithHttpInfo($destinyRequestsDestinyItemTransferRequest)
     {
-        $request = $this->destiny2TransferItemRequest();
+        $request = $this->destiny2TransferItemRequest($destinyRequestsDestinyItemTransferRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9957,13 +10111,14 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsDestinyItemTransferRequest $destinyRequestsDestinyItemTransferRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2TransferItemAsync()
+    public function destiny2TransferItemAsync($destinyRequestsDestinyItemTransferRequest)
     {
-        return $this->destiny2TransferItemAsyncWithHttpInfo()
+        return $this->destiny2TransferItemAsyncWithHttpInfo($destinyRequestsDestinyItemTransferRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9976,14 +10131,15 @@ class Destiny2Api
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsDestinyItemTransferRequest $destinyRequestsDestinyItemTransferRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2TransferItemAsyncWithHttpInfo()
+    public function destiny2TransferItemAsyncWithHttpInfo($destinyRequestsDestinyItemTransferRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->destiny2TransferItemRequest();
+        $request = $this->destiny2TransferItemRequest($destinyRequestsDestinyItemTransferRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10022,12 +10178,19 @@ class Destiny2Api
     /**
      * Create request for operation 'destiny2TransferItem'
      *
+     * @param  \Bungie\Model\DestinyRequestsDestinyItemTransferRequest $destinyRequestsDestinyItemTransferRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2TransferItemRequest()
+    protected function destiny2TransferItemRequest($destinyRequestsDestinyItemTransferRequest)
     {
+        // verify the required parameter 'destinyRequestsDestinyItemTransferRequest' is set
+        if ($destinyRequestsDestinyItemTransferRequest === null || (is_array($destinyRequestsDestinyItemTransferRequest) && count($destinyRequestsDestinyItemTransferRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $destinyRequestsDestinyItemTransferRequest when calling destiny2TransferItem'
+            );
+        }
 
         $resourcePath = '/Destiny2/Actions/Items/TransferItem/';
         $formParams = [];
@@ -10040,15 +10203,18 @@ class Destiny2Api
 
         // body params
         $_tempBody = null;
+        if (isset($destinyRequestsDestinyItemTransferRequest)) {
+            $_tempBody = $destinyRequestsDestinyItemTransferRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -10081,6 +10247,11 @@ class Destiny2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();

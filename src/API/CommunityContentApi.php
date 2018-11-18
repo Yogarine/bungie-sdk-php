@@ -90,9 +90,9 @@ class CommunityContentApi
     /**
      * Operation communityContentGetCommunityContent
      *
-     * @param  int $mediaFilter The type of media to get (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumCommunityContentSortMode $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +107,9 @@ class CommunityContentApi
     /**
      * Operation communityContentGetCommunityContentWithHttpInfo
      *
-     * @param  int $mediaFilter The type of media to get (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumCommunityContentSortMode $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -197,9 +197,9 @@ class CommunityContentApi
      *
      * 
      *
-     * @param  int $mediaFilter The type of media to get (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumCommunityContentSortMode $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -219,9 +219,9 @@ class CommunityContentApi
      *
      * 
      *
-     * @param  int $mediaFilter The type of media to get (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumCommunityContentSortMode $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -268,9 +268,9 @@ class CommunityContentApi
     /**
      * Create request for operation 'communityContentGetCommunityContent'
      *
-     * @param  int $mediaFilter The type of media to get (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumCommunityContentSortMode $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -334,11 +334,11 @@ class CommunityContentApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -397,8 +397,8 @@ class CommunityContentApi
      * Operation communityContentGetCommunityLiveStatuses
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      * @param  int $modeHash The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. (optional)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
@@ -416,8 +416,8 @@ class CommunityContentApi
      * Operation communityContentGetCommunityLiveStatusesWithHttpInfo
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      * @param  int $modeHash The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. (optional)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
@@ -508,8 +508,8 @@ class CommunityContentApi
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      * @param  int $modeHash The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. (optional)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
@@ -532,8 +532,8 @@ class CommunityContentApi
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      * @param  int $modeHash The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. (optional)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
@@ -583,8 +583,8 @@ class CommunityContentApi
      * Create request for operation 'communityContentGetCommunityLiveStatuses'
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      * @param  int $modeHash The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. (optional)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
@@ -658,11 +658,11 @@ class CommunityContentApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -721,8 +721,8 @@ class CommunityContentApi
      * Operation communityContentGetCommunityLiveStatusesForClanmates
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -738,8 +738,8 @@ class CommunityContentApi
      * Operation communityContentGetCommunityLiveStatusesForClanmatesWithHttpInfo
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -828,8 +828,8 @@ class CommunityContentApi
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -850,8 +850,8 @@ class CommunityContentApi
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -899,8 +899,8 @@ class CommunityContentApi
      * Create request for operation 'communityContentGetCommunityLiveStatusesForClanmates'
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -964,11 +964,11 @@ class CommunityContentApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1027,8 +1027,8 @@ class CommunityContentApi
      * Operation communityContentGetCommunityLiveStatusesForFriends
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1044,8 +1044,8 @@ class CommunityContentApi
      * Operation communityContentGetCommunityLiveStatusesForFriendsWithHttpInfo
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1134,8 +1134,8 @@ class CommunityContentApi
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1156,8 +1156,8 @@ class CommunityContentApi
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1205,8 +1205,8 @@ class CommunityContentApi
      * Create request for operation 'communityContentGetCommunityLiveStatusesForFriends'
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1270,11 +1270,11 @@ class CommunityContentApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1333,8 +1333,8 @@ class CommunityContentApi
      * Operation communityContentGetFeaturedCommunityLiveStatuses
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -1351,8 +1351,8 @@ class CommunityContentApi
      * Operation communityContentGetFeaturedCommunityLiveStatusesWithHttpInfo
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -1442,8 +1442,8 @@ class CommunityContentApi
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1465,8 +1465,8 @@ class CommunityContentApi
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1515,8 +1515,8 @@ class CommunityContentApi
      * Create request for operation 'communityContentGetFeaturedCommunityLiveStatuses'
      *
      * @param  int $page Zero based page. (required)
-     * @param  int $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1585,11 +1585,11 @@ class CommunityContentApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1648,8 +1648,8 @@ class CommunityContentApi
      * Operation communityContentGetStreamingStatusForMember
      *
      * @param  int $membershipId The membershipId related to that type. (required)
-     * @param  int $membershipType The type of account for which info will be extracted. (required)
-     * @param  int $partnershipType The type of partnership for which info will be extracted. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType The type of account for which info will be extracted. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1665,8 +1665,8 @@ class CommunityContentApi
      * Operation communityContentGetStreamingStatusForMemberWithHttpInfo
      *
      * @param  int $membershipId The membershipId related to that type. (required)
-     * @param  int $membershipType The type of account for which info will be extracted. (required)
-     * @param  int $partnershipType The type of partnership for which info will be extracted. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType The type of account for which info will be extracted. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1755,8 +1755,8 @@ class CommunityContentApi
      * 
      *
      * @param  int $membershipId The membershipId related to that type. (required)
-     * @param  int $membershipType The type of account for which info will be extracted. (required)
-     * @param  int $partnershipType The type of partnership for which info will be extracted. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType The type of account for which info will be extracted. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1777,8 +1777,8 @@ class CommunityContentApi
      * 
      *
      * @param  int $membershipId The membershipId related to that type. (required)
-     * @param  int $membershipType The type of account for which info will be extracted. (required)
-     * @param  int $partnershipType The type of partnership for which info will be extracted. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType The type of account for which info will be extracted. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1826,8 +1826,8 @@ class CommunityContentApi
      * Create request for operation 'communityContentGetStreamingStatusForMember'
      *
      * @param  int $membershipId The membershipId related to that type. (required)
-     * @param  int $membershipType The type of account for which info will be extracted. (required)
-     * @param  int $partnershipType The type of partnership for which info will be extracted. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType The type of account for which info will be extracted. (required)
+     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1891,11 +1891,11 @@ class CommunityContentApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }

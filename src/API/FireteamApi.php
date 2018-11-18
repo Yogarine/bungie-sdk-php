@@ -296,11 +296,11 @@ class FireteamApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -334,6 +334,11 @@ class FireteamApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -362,13 +367,13 @@ class FireteamApi
     /**
      * Operation fireteamGetAvailableClanFireteams
      *
-     * @param  int $activityType The activity type to filter by. (required)
-     * @param  int $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $groupId The group id of the clan. (required)
      * @param  int $page Zero based page (required)
-     * @param  int $platform The platform filter. (required)
-     * @param  int $publicOnly Determines public/private filtering. (required)
-     * @param  int $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
+     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -384,13 +389,13 @@ class FireteamApi
     /**
      * Operation fireteamGetAvailableClanFireteamsWithHttpInfo
      *
-     * @param  int $activityType The activity type to filter by. (required)
-     * @param  int $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $groupId The group id of the clan. (required)
      * @param  int $page Zero based page (required)
-     * @param  int $platform The platform filter. (required)
-     * @param  int $publicOnly Determines public/private filtering. (required)
-     * @param  int $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
+     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -479,13 +484,13 @@ class FireteamApi
      *
      * 
      *
-     * @param  int $activityType The activity type to filter by. (required)
-     * @param  int $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $groupId The group id of the clan. (required)
      * @param  int $page Zero based page (required)
-     * @param  int $platform The platform filter. (required)
-     * @param  int $publicOnly Determines public/private filtering. (required)
-     * @param  int $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
+     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
@@ -506,13 +511,13 @@ class FireteamApi
      *
      * 
      *
-     * @param  int $activityType The activity type to filter by. (required)
-     * @param  int $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $groupId The group id of the clan. (required)
      * @param  int $page Zero based page (required)
-     * @param  int $platform The platform filter. (required)
-     * @param  int $publicOnly Determines public/private filtering. (required)
-     * @param  int $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
+     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
@@ -560,13 +565,13 @@ class FireteamApi
     /**
      * Create request for operation 'fireteamGetAvailableClanFireteams'
      *
-     * @param  int $activityType The activity type to filter by. (required)
-     * @param  int $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $groupId The group id of the clan. (required)
      * @param  int $page Zero based page (required)
-     * @param  int $platform The platform filter. (required)
-     * @param  int $publicOnly Determines public/private filtering. (required)
-     * @param  int $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
+     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
@@ -691,11 +696,11 @@ class FireteamApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -729,6 +734,11 @@ class FireteamApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -982,11 +992,11 @@ class FireteamApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1020,6 +1030,11 @@ class FireteamApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -1051,7 +1066,7 @@ class FireteamApi
      * @param  int $groupId The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). (required)
      * @param  bool $includeClosed If true, return fireteams that have been closed. (required)
      * @param  int $page Deprecated parameter, ignored. (required)
-     * @param  int $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
      * @param  bool $groupFilter If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. (optional)
      * @param  string $langFilter An optional language filter. (optional)
      *
@@ -1071,7 +1086,7 @@ class FireteamApi
      * @param  int $groupId The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). (required)
      * @param  bool $includeClosed If true, return fireteams that have been closed. (required)
      * @param  int $page Deprecated parameter, ignored. (required)
-     * @param  int $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
      * @param  bool $groupFilter If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. (optional)
      * @param  string $langFilter An optional language filter. (optional)
      *
@@ -1164,7 +1179,7 @@ class FireteamApi
      * @param  int $groupId The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). (required)
      * @param  bool $includeClosed If true, return fireteams that have been closed. (required)
      * @param  int $page Deprecated parameter, ignored. (required)
-     * @param  int $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
      * @param  bool $groupFilter If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. (optional)
      * @param  string $langFilter An optional language filter. (optional)
      *
@@ -1189,7 +1204,7 @@ class FireteamApi
      * @param  int $groupId The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). (required)
      * @param  bool $includeClosed If true, return fireteams that have been closed. (required)
      * @param  int $page Deprecated parameter, ignored. (required)
-     * @param  int $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
      * @param  bool $groupFilter If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. (optional)
      * @param  string $langFilter An optional language filter. (optional)
      *
@@ -1241,7 +1256,7 @@ class FireteamApi
      * @param  int $groupId The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). (required)
      * @param  bool $includeClosed If true, return fireteams that have been closed. (required)
      * @param  int $page Deprecated parameter, ignored. (required)
-     * @param  int $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
      * @param  bool $groupFilter If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. (optional)
      * @param  string $langFilter An optional language filter. (optional)
      *
@@ -1329,11 +1344,11 @@ class FireteamApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1367,6 +1382,11 @@ class FireteamApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -1395,11 +1415,11 @@ class FireteamApi
     /**
      * Operation fireteamSearchPublicAvailableClanFireteams
      *
-     * @param  int $activityType The activity type to filter by. (required)
-     * @param  int $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $page Zero based page (required)
-     * @param  int $platform The platform filter. (required)
-     * @param  int $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -1415,11 +1435,11 @@ class FireteamApi
     /**
      * Operation fireteamSearchPublicAvailableClanFireteamsWithHttpInfo
      *
-     * @param  int $activityType The activity type to filter by. (required)
-     * @param  int $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $page Zero based page (required)
-     * @param  int $platform The platform filter. (required)
-     * @param  int $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -1508,11 +1528,11 @@ class FireteamApi
      *
      * 
      *
-     * @param  int $activityType The activity type to filter by. (required)
-     * @param  int $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $page Zero based page (required)
-     * @param  int $platform The platform filter. (required)
-     * @param  int $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1533,11 +1553,11 @@ class FireteamApi
      *
      * 
      *
-     * @param  int $activityType The activity type to filter by. (required)
-     * @param  int $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $page Zero based page (required)
-     * @param  int $platform The platform filter. (required)
-     * @param  int $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1585,11 +1605,11 @@ class FireteamApi
     /**
      * Create request for operation 'fireteamSearchPublicAvailableClanFireteams'
      *
-     * @param  int $activityType The activity type to filter by. (required)
-     * @param  int $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $page Zero based page (required)
-     * @param  int $platform The platform filter. (required)
-     * @param  int $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1686,11 +1706,11 @@ class FireteamApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1724,6 +1744,11 @@ class FireteamApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();

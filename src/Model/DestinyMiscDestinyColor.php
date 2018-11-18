@@ -208,22 +208,6 @@ class DestinyMiscDestinyColor implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['red']) && !preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $this->container['red'])) {
-            $invalidProperties[] = "invalid value for 'red', must be conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.";
-        }
-
-        if (!is_null($this->container['green']) && !preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $this->container['green'])) {
-            $invalidProperties[] = "invalid value for 'green', must be conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.";
-        }
-
-        if (!is_null($this->container['blue']) && !preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $this->container['blue'])) {
-            $invalidProperties[] = "invalid value for 'blue', must be conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.";
-        }
-
-        if (!is_null($this->container['alpha']) && !preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $this->container['alpha'])) {
-            $invalidProperties[] = "invalid value for 'alpha', must be conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.";
-        }
-
         return $invalidProperties;
     }
 
@@ -258,11 +242,6 @@ class DestinyMiscDestinyColor implements ModelInterface, ArrayAccess
      */
     public function setRed($red)
     {
-
-        if (!is_null($red) && (!preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $red))) {
-            throw new \InvalidArgumentException("invalid value for $red when calling DestinyMiscDestinyColor., must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.");
-        }
-
         $this->container['red'] = $red;
 
         return $this;
@@ -287,11 +266,6 @@ class DestinyMiscDestinyColor implements ModelInterface, ArrayAccess
      */
     public function setGreen($green)
     {
-
-        if (!is_null($green) && (!preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $green))) {
-            throw new \InvalidArgumentException("invalid value for $green when calling DestinyMiscDestinyColor., must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.");
-        }
-
         $this->container['green'] = $green;
 
         return $this;
@@ -316,11 +290,6 @@ class DestinyMiscDestinyColor implements ModelInterface, ArrayAccess
      */
     public function setBlue($blue)
     {
-
-        if (!is_null($blue) && (!preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $blue))) {
-            throw new \InvalidArgumentException("invalid value for $blue when calling DestinyMiscDestinyColor., must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.");
-        }
-
         $this->container['blue'] = $blue;
 
         return $this;
@@ -345,11 +314,6 @@ class DestinyMiscDestinyColor implements ModelInterface, ArrayAccess
      */
     public function setAlpha($alpha)
     {
-
-        if (!is_null($alpha) && (!preg_match("/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/", $alpha))) {
-            throw new \InvalidArgumentException("invalid value for $alpha when calling DestinyMiscDestinyColor., must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.");
-        }
-
         $this->container['alpha'] = $alpha;
 
         return $this;

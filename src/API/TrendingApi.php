@@ -277,11 +277,11 @@ class TrendingApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -564,11 +564,11 @@ class TrendingApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -627,7 +627,7 @@ class TrendingApi
      * Operation trendingGetTrendingEntryDetail
      *
      * @param  string $identifier The identifier for the entity to be returned. (required)
-     * @param  int $trendingEntryType The type of entity to be returned. (required)
+     * @param  \Bungie\Model\TrendingTrendingEntryType $trendingEntryType The type of entity to be returned. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -643,7 +643,7 @@ class TrendingApi
      * Operation trendingGetTrendingEntryDetailWithHttpInfo
      *
      * @param  string $identifier The identifier for the entity to be returned. (required)
-     * @param  int $trendingEntryType The type of entity to be returned. (required)
+     * @param  \Bungie\Model\TrendingTrendingEntryType $trendingEntryType The type of entity to be returned. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -732,7 +732,7 @@ class TrendingApi
      * 
      *
      * @param  string $identifier The identifier for the entity to be returned. (required)
-     * @param  int $trendingEntryType The type of entity to be returned. (required)
+     * @param  \Bungie\Model\TrendingTrendingEntryType $trendingEntryType The type of entity to be returned. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -753,7 +753,7 @@ class TrendingApi
      * 
      *
      * @param  string $identifier The identifier for the entity to be returned. (required)
-     * @param  int $trendingEntryType The type of entity to be returned. (required)
+     * @param  \Bungie\Model\TrendingTrendingEntryType $trendingEntryType The type of entity to be returned. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -801,7 +801,7 @@ class TrendingApi
      * Create request for operation 'trendingGetTrendingEntryDetail'
      *
      * @param  string $identifier The identifier for the entity to be returned. (required)
-     * @param  int $trendingEntryType The type of entity to be returned. (required)
+     * @param  \Bungie\Model\TrendingTrendingEntryType $trendingEntryType The type of entity to be returned. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -851,11 +851,11 @@ class TrendingApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }

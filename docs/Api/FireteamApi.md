@@ -23,6 +23,10 @@ Gets a count of all active non-public fireteams for the specified clan. Maximum 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -55,12 +59,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -76,6 +80,10 @@ Gets a listing of all of this clan's fireteams that are have available slots. Ca
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -85,13 +93,13 @@ $apiInstance = new Bungie\Api\FireteamApi(
     new GuzzleHttp\Client(),
     $config
 );
-$activityType = 56; // int | The activity type to filter by.
-$dateRange = 56; // int | The date range to grab available fireteams.
+$activityType = new \Bungie\Model\\Bungie\Model\FireteamFireteamActivityType(); // \Bungie\Model\FireteamFireteamActivityType | The activity type to filter by.
+$dateRange = new \Bungie\Model\\Bungie\Model\FireteamFireteamDateRange(); // \Bungie\Model\FireteamFireteamDateRange | The date range to grab available fireteams.
 $groupId = 56; // int | The group id of the clan.
 $page = 56; // int | Zero based page
-$platform = 56; // int | The platform filter.
-$publicOnly = 56; // int | Determines public/private filtering.
-$slotFilter = 56; // int | Filters based on available slots
+$platform = new \Bungie\Model\\Bungie\Model\FireteamFireteamPlatform(); // \Bungie\Model\FireteamFireteamPlatform | The platform filter.
+$publicOnly = new \Bungie\Model\\Bungie\Model\FireteamFireteamPublicSearchOption(); // \Bungie\Model\FireteamFireteamPublicSearchOption | Determines public/private filtering.
+$slotFilter = new \Bungie\Model\\Bungie\Model\FireteamFireteamSlotSearch(); // \Bungie\Model\FireteamFireteamSlotSearch | Filters based on available slots
 $langFilter = 'langFilter_example'; // string | An optional language filter.
 
 try {
@@ -107,13 +115,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityType** | **int**| The activity type to filter by. |
- **dateRange** | **int**| The date range to grab available fireteams. |
+ **activityType** | [**\Bungie\Model\FireteamFireteamActivityType**](../Model/.md)| The activity type to filter by. |
+ **dateRange** | [**\Bungie\Model\FireteamFireteamDateRange**](../Model/.md)| The date range to grab available fireteams. |
  **groupId** | **int**| The group id of the clan. |
  **page** | **int**| Zero based page |
- **platform** | **int**| The platform filter. |
- **publicOnly** | **int**| Determines public/private filtering. |
- **slotFilter** | **int**| Filters based on available slots |
+ **platform** | [**\Bungie\Model\FireteamFireteamPlatform**](../Model/.md)| The platform filter. |
+ **publicOnly** | [**\Bungie\Model\FireteamFireteamPublicSearchOption**](../Model/.md)| Determines public/private filtering. |
+ **slotFilter** | [**\Bungie\Model\FireteamFireteamSlotSearch**](../Model/.md)| Filters based on available slots |
  **langFilter** | **string**| An optional language filter. | [optional]
 
 ### Return type
@@ -122,12 +130,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -143,6 +151,10 @@ Gets a specific clan fireteam.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -177,12 +189,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -198,6 +210,10 @@ Gets a listing of all clan fireteams that caller is an applicant, a member, or a
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -210,7 +226,7 @@ $apiInstance = new Bungie\Api\FireteamApi(
 $groupId = 56; // int | The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true).
 $includeClosed = True; // bool | If true, return fireteams that have been closed.
 $page = 56; // int | Deprecated parameter, ignored.
-$platform = 56; // int | The platform filter.
+$platform = new \Bungie\Model\\Bungie\Model\FireteamFireteamPlatform(); // \Bungie\Model\FireteamFireteamPlatform | The platform filter.
 $groupFilter = True; // bool | If true, filter by clan. Otherwise, ignore the clan and show all of the user's fireteams.
 $langFilter = 'langFilter_example'; // string | An optional language filter.
 
@@ -230,7 +246,7 @@ Name | Type | Description  | Notes
  **groupId** | **int**| The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). |
  **includeClosed** | **bool**| If true, return fireteams that have been closed. |
  **page** | **int**| Deprecated parameter, ignored. |
- **platform** | **int**| The platform filter. |
+ **platform** | [**\Bungie\Model\FireteamFireteamPlatform**](../Model/.md)| The platform filter. |
  **groupFilter** | **bool**| If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. | [optional]
  **langFilter** | **string**| An optional language filter. | [optional]
 
@@ -240,12 +256,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -261,6 +277,10 @@ Gets a listing of all public fireteams starting now with open slots. Caller is n
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -270,11 +290,11 @@ $apiInstance = new Bungie\Api\FireteamApi(
     new GuzzleHttp\Client(),
     $config
 );
-$activityType = 56; // int | The activity type to filter by.
-$dateRange = 56; // int | The date range to grab available fireteams.
+$activityType = new \Bungie\Model\\Bungie\Model\FireteamFireteamActivityType(); // \Bungie\Model\FireteamFireteamActivityType | The activity type to filter by.
+$dateRange = new \Bungie\Model\\Bungie\Model\FireteamFireteamDateRange(); // \Bungie\Model\FireteamFireteamDateRange | The date range to grab available fireteams.
 $page = 56; // int | Zero based page
-$platform = 56; // int | The platform filter.
-$slotFilter = 56; // int | Filters based on available slots
+$platform = new \Bungie\Model\\Bungie\Model\FireteamFireteamPlatform(); // \Bungie\Model\FireteamFireteamPlatform | The platform filter.
+$slotFilter = new \Bungie\Model\\Bungie\Model\FireteamFireteamSlotSearch(); // \Bungie\Model\FireteamFireteamSlotSearch | Filters based on available slots
 $langFilter = 'langFilter_example'; // string | An optional language filter.
 
 try {
@@ -290,11 +310,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityType** | **int**| The activity type to filter by. |
- **dateRange** | **int**| The date range to grab available fireteams. |
+ **activityType** | [**\Bungie\Model\FireteamFireteamActivityType**](../Model/.md)| The activity type to filter by. |
+ **dateRange** | [**\Bungie\Model\FireteamFireteamDateRange**](../Model/.md)| The date range to grab available fireteams. |
  **page** | **int**| Zero based page |
- **platform** | **int**| The platform filter. |
- **slotFilter** | **int**| Filters based on available slots |
+ **platform** | [**\Bungie\Model\FireteamFireteamPlatform**](../Model/.md)| The platform filter. |
+ **slotFilter** | [**\Bungie\Model\FireteamFireteamSlotSearch**](../Model/.md)| Filters based on available slots |
  **langFilter** | **string**| An optional language filter. | [optional]
 
 ### Return type
@@ -303,12 +323,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

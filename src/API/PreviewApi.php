@@ -305,11 +305,11 @@ class PreviewApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -600,11 +600,11 @@ class PreviewApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -663,7 +663,7 @@ class PreviewApi
      * Operation destiny2GetLeaderboards
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -682,7 +682,7 @@ class PreviewApi
      * Operation destiny2GetLeaderboardsWithHttpInfo
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -774,7 +774,7 @@ class PreviewApi
      * 
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -798,7 +798,7 @@ class PreviewApi
      * 
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -849,7 +849,7 @@ class PreviewApi
      * Create request for operation 'destiny2GetLeaderboards'
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -914,11 +914,11 @@ class PreviewApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -978,7 +978,7 @@ class PreviewApi
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -998,7 +998,7 @@ class PreviewApi
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -1091,7 +1091,7 @@ class PreviewApi
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -1116,7 +1116,7 @@ class PreviewApi
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -1168,7 +1168,7 @@ class PreviewApi
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
-     * @param  int $membershipType A valid non-BungieNet membership type. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  string $statid ID of stat to return rather than returning all Leaderboard stats. (optional)
@@ -1247,11 +1247,11 @@ class PreviewApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1309,28 +1309,30 @@ class PreviewApi
     /**
      * Operation destiny2InsertSocketPlug
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20045
      */
-    public function destiny2InsertSocketPlug()
+    public function destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest)
     {
-        list($response) = $this->destiny2InsertSocketPlugWithHttpInfo();
+        list($response) = $this->destiny2InsertSocketPlugWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest);
         return $response;
     }
 
     /**
      * Operation destiny2InsertSocketPlugWithHttpInfo
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20045, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2InsertSocketPlugWithHttpInfo()
+    public function destiny2InsertSocketPlugWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest)
     {
-        $request = $this->destiny2InsertSocketPlugRequest();
+        $request = $this->destiny2InsertSocketPlugRequest($destinyRequestsActionsDestinyInsertPlugsActionRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1410,13 +1412,14 @@ class PreviewApi
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2InsertSocketPlugAsync()
+    public function destiny2InsertSocketPlugAsync($destinyRequestsActionsDestinyInsertPlugsActionRequest)
     {
-        return $this->destiny2InsertSocketPlugAsyncWithHttpInfo()
+        return $this->destiny2InsertSocketPlugAsyncWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1429,14 +1432,15 @@ class PreviewApi
      *
      * 
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2InsertSocketPlugAsyncWithHttpInfo()
+    public function destiny2InsertSocketPlugAsyncWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20045';
-        $request = $this->destiny2InsertSocketPlugRequest();
+        $request = $this->destiny2InsertSocketPlugRequest($destinyRequestsActionsDestinyInsertPlugsActionRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1475,12 +1479,19 @@ class PreviewApi
     /**
      * Create request for operation 'destiny2InsertSocketPlug'
      *
+     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2InsertSocketPlugRequest()
+    protected function destiny2InsertSocketPlugRequest($destinyRequestsActionsDestinyInsertPlugsActionRequest)
     {
+        // verify the required parameter 'destinyRequestsActionsDestinyInsertPlugsActionRequest' is set
+        if ($destinyRequestsActionsDestinyInsertPlugsActionRequest === null || (is_array($destinyRequestsActionsDestinyInsertPlugsActionRequest) && count($destinyRequestsActionsDestinyInsertPlugsActionRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $destinyRequestsActionsDestinyInsertPlugsActionRequest when calling destiny2InsertSocketPlug'
+            );
+        }
 
         $resourcePath = '/Destiny2/Actions/Items/InsertSocketPlug/';
         $formParams = [];
@@ -1493,15 +1504,18 @@ class PreviewApi
 
         // body params
         $_tempBody = null;
+        if (isset($destinyRequestsActionsDestinyInsertPlugsActionRequest)) {
+            $_tempBody = $destinyRequestsActionsDestinyInsertPlugsActionRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -1534,6 +1548,11 @@ class PreviewApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();

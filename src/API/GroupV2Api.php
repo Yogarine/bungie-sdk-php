@@ -92,7 +92,7 @@ class GroupV2Api
      *
      * @param  int $founderIdNew The new founder for this group. Must already be a group admin. (required)
      * @param  int $groupId The target group id. (required)
-     * @param  int $membershipType Membership type of the provided founderIdNew. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided founderIdNew. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -109,7 +109,7 @@ class GroupV2Api
      *
      * @param  int $founderIdNew The new founder for this group. Must already be a group admin. (required)
      * @param  int $groupId The target group id. (required)
-     * @param  int $membershipType Membership type of the provided founderIdNew. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided founderIdNew. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -199,7 +199,7 @@ class GroupV2Api
      *
      * @param  int $founderIdNew The new founder for this group. Must already be a group admin. (required)
      * @param  int $groupId The target group id. (required)
-     * @param  int $membershipType Membership type of the provided founderIdNew. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided founderIdNew. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -221,7 +221,7 @@ class GroupV2Api
      *
      * @param  int $founderIdNew The new founder for this group. Must already be a group admin. (required)
      * @param  int $groupId The target group id. (required)
-     * @param  int $membershipType Membership type of the provided founderIdNew. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided founderIdNew. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -270,7 +270,7 @@ class GroupV2Api
      *
      * @param  int $founderIdNew The new founder for this group. Must already be a group admin. (required)
      * @param  int $groupId The target group id. (required)
-     * @param  int $membershipType Membership type of the provided founderIdNew. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided founderIdNew. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -334,11 +334,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -397,14 +397,15 @@ class GroupV2Api
      * Operation groupV2AddOptionalConversation
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionalConversationAddRequest $groupsV2GroupOptionalConversationAddRequest groupsV2GroupOptionalConversationAddRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20011
      */
-    public function groupV2AddOptionalConversation($groupId)
+    public function groupV2AddOptionalConversation($groupId, $groupsV2GroupOptionalConversationAddRequest)
     {
-        list($response) = $this->groupV2AddOptionalConversationWithHttpInfo($groupId);
+        list($response) = $this->groupV2AddOptionalConversationWithHttpInfo($groupId, $groupsV2GroupOptionalConversationAddRequest);
         return $response;
     }
 
@@ -412,14 +413,15 @@ class GroupV2Api
      * Operation groupV2AddOptionalConversationWithHttpInfo
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionalConversationAddRequest $groupsV2GroupOptionalConversationAddRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2AddOptionalConversationWithHttpInfo($groupId)
+    public function groupV2AddOptionalConversationWithHttpInfo($groupId, $groupsV2GroupOptionalConversationAddRequest)
     {
-        $request = $this->groupV2AddOptionalConversationRequest($groupId);
+        $request = $this->groupV2AddOptionalConversationRequest($groupId, $groupsV2GroupOptionalConversationAddRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -500,13 +502,14 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionalConversationAddRequest $groupsV2GroupOptionalConversationAddRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2AddOptionalConversationAsync($groupId)
+    public function groupV2AddOptionalConversationAsync($groupId, $groupsV2GroupOptionalConversationAddRequest)
     {
-        return $this->groupV2AddOptionalConversationAsyncWithHttpInfo($groupId)
+        return $this->groupV2AddOptionalConversationAsyncWithHttpInfo($groupId, $groupsV2GroupOptionalConversationAddRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -520,14 +523,15 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionalConversationAddRequest $groupsV2GroupOptionalConversationAddRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2AddOptionalConversationAsyncWithHttpInfo($groupId)
+    public function groupV2AddOptionalConversationAsyncWithHttpInfo($groupId, $groupsV2GroupOptionalConversationAddRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20011';
-        $request = $this->groupV2AddOptionalConversationRequest($groupId);
+        $request = $this->groupV2AddOptionalConversationRequest($groupId, $groupsV2GroupOptionalConversationAddRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -567,16 +571,23 @@ class GroupV2Api
      * Create request for operation 'groupV2AddOptionalConversation'
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionalConversationAddRequest $groupsV2GroupOptionalConversationAddRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2AddOptionalConversationRequest($groupId)
+    protected function groupV2AddOptionalConversationRequest($groupId, $groupsV2GroupOptionalConversationAddRequest)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $groupId when calling groupV2AddOptionalConversation'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupOptionalConversationAddRequest' is set
+        if ($groupsV2GroupOptionalConversationAddRequest === null || (is_array($groupsV2GroupOptionalConversationAddRequest) && count($groupsV2GroupOptionalConversationAddRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupOptionalConversationAddRequest when calling groupV2AddOptionalConversation'
             );
         }
 
@@ -599,15 +610,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupOptionalConversationAddRequest)) {
+            $_tempBody = $groupsV2GroupOptionalConversationAddRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -640,6 +654,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -669,14 +688,15 @@ class GroupV2Api
      * Operation groupV2ApproveAllPending
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest groupsV2GroupApplicationRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20030
      */
-    public function groupV2ApproveAllPending($groupId)
+    public function groupV2ApproveAllPending($groupId, $groupsV2GroupApplicationRequest)
     {
-        list($response) = $this->groupV2ApproveAllPendingWithHttpInfo($groupId);
+        list($response) = $this->groupV2ApproveAllPendingWithHttpInfo($groupId, $groupsV2GroupApplicationRequest);
         return $response;
     }
 
@@ -684,14 +704,15 @@ class GroupV2Api
      * Operation groupV2ApproveAllPendingWithHttpInfo
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20030, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2ApproveAllPendingWithHttpInfo($groupId)
+    public function groupV2ApproveAllPendingWithHttpInfo($groupId, $groupsV2GroupApplicationRequest)
     {
-        $request = $this->groupV2ApproveAllPendingRequest($groupId);
+        $request = $this->groupV2ApproveAllPendingRequest($groupId, $groupsV2GroupApplicationRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -772,13 +793,14 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2ApproveAllPendingAsync($groupId)
+    public function groupV2ApproveAllPendingAsync($groupId, $groupsV2GroupApplicationRequest)
     {
-        return $this->groupV2ApproveAllPendingAsyncWithHttpInfo($groupId)
+        return $this->groupV2ApproveAllPendingAsyncWithHttpInfo($groupId, $groupsV2GroupApplicationRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -792,14 +814,15 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2ApproveAllPendingAsyncWithHttpInfo($groupId)
+    public function groupV2ApproveAllPendingAsyncWithHttpInfo($groupId, $groupsV2GroupApplicationRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20030';
-        $request = $this->groupV2ApproveAllPendingRequest($groupId);
+        $request = $this->groupV2ApproveAllPendingRequest($groupId, $groupsV2GroupApplicationRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -839,16 +862,23 @@ class GroupV2Api
      * Create request for operation 'groupV2ApproveAllPending'
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2ApproveAllPendingRequest($groupId)
+    protected function groupV2ApproveAllPendingRequest($groupId, $groupsV2GroupApplicationRequest)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $groupId when calling groupV2ApproveAllPending'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupApplicationRequest' is set
+        if ($groupsV2GroupApplicationRequest === null || (is_array($groupsV2GroupApplicationRequest) && count($groupsV2GroupApplicationRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupApplicationRequest when calling groupV2ApproveAllPending'
             );
         }
 
@@ -871,15 +901,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupApplicationRequest)) {
+            $_tempBody = $groupsV2GroupApplicationRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -912,6 +945,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -942,15 +980,16 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group. (required)
      * @param  int $membershipId The membership id being approved. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest groupsV2GroupApplicationRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20018
      */
-    public function groupV2ApprovePending($groupId, $membershipId, $membershipType)
+    public function groupV2ApprovePending($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
     {
-        list($response) = $this->groupV2ApprovePendingWithHttpInfo($groupId, $membershipId, $membershipType);
+        list($response) = $this->groupV2ApprovePendingWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest);
         return $response;
     }
 
@@ -959,15 +998,16 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group. (required)
      * @param  int $membershipId The membership id being approved. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20018, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2ApprovePendingWithHttpInfo($groupId, $membershipId, $membershipType)
+    public function groupV2ApprovePendingWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
     {
-        $request = $this->groupV2ApprovePendingRequest($groupId, $membershipId, $membershipType);
+        $request = $this->groupV2ApprovePendingRequest($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1049,14 +1089,15 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group. (required)
      * @param  int $membershipId The membership id being approved. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2ApprovePendingAsync($groupId, $membershipId, $membershipType)
+    public function groupV2ApprovePendingAsync($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
     {
-        return $this->groupV2ApprovePendingAsyncWithHttpInfo($groupId, $membershipId, $membershipType)
+        return $this->groupV2ApprovePendingAsyncWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1071,15 +1112,16 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group. (required)
      * @param  int $membershipId The membership id being approved. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2ApprovePendingAsyncWithHttpInfo($groupId, $membershipId, $membershipType)
+    public function groupV2ApprovePendingAsyncWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20018';
-        $request = $this->groupV2ApprovePendingRequest($groupId, $membershipId, $membershipType);
+        $request = $this->groupV2ApprovePendingRequest($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1120,12 +1162,13 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group. (required)
      * @param  int $membershipId The membership id being approved. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2ApprovePendingRequest($groupId, $membershipId, $membershipType)
+    protected function groupV2ApprovePendingRequest($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
@@ -1143,6 +1186,12 @@ class GroupV2Api
         if ($membershipType === null || (is_array($membershipType) && count($membershipType) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $membershipType when calling groupV2ApprovePending'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupApplicationRequest' is set
+        if ($groupsV2GroupApplicationRequest === null || (is_array($groupsV2GroupApplicationRequest) && count($groupsV2GroupApplicationRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupApplicationRequest when calling groupV2ApprovePending'
             );
         }
 
@@ -1181,15 +1230,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupApplicationRequest)) {
+            $_tempBody = $groupsV2GroupApplicationRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -1222,6 +1274,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -1251,14 +1308,15 @@ class GroupV2Api
      * Operation groupV2ApprovePendingForList
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationListRequest $groupsV2GroupApplicationListRequest groupsV2GroupApplicationListRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20030
      */
-    public function groupV2ApprovePendingForList($groupId)
+    public function groupV2ApprovePendingForList($groupId, $groupsV2GroupApplicationListRequest)
     {
-        list($response) = $this->groupV2ApprovePendingForListWithHttpInfo($groupId);
+        list($response) = $this->groupV2ApprovePendingForListWithHttpInfo($groupId, $groupsV2GroupApplicationListRequest);
         return $response;
     }
 
@@ -1266,14 +1324,15 @@ class GroupV2Api
      * Operation groupV2ApprovePendingForListWithHttpInfo
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationListRequest $groupsV2GroupApplicationListRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20030, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2ApprovePendingForListWithHttpInfo($groupId)
+    public function groupV2ApprovePendingForListWithHttpInfo($groupId, $groupsV2GroupApplicationListRequest)
     {
-        $request = $this->groupV2ApprovePendingForListRequest($groupId);
+        $request = $this->groupV2ApprovePendingForListRequest($groupId, $groupsV2GroupApplicationListRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1354,13 +1413,14 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationListRequest $groupsV2GroupApplicationListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2ApprovePendingForListAsync($groupId)
+    public function groupV2ApprovePendingForListAsync($groupId, $groupsV2GroupApplicationListRequest)
     {
-        return $this->groupV2ApprovePendingForListAsyncWithHttpInfo($groupId)
+        return $this->groupV2ApprovePendingForListAsyncWithHttpInfo($groupId, $groupsV2GroupApplicationListRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1374,14 +1434,15 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationListRequest $groupsV2GroupApplicationListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2ApprovePendingForListAsyncWithHttpInfo($groupId)
+    public function groupV2ApprovePendingForListAsyncWithHttpInfo($groupId, $groupsV2GroupApplicationListRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20030';
-        $request = $this->groupV2ApprovePendingForListRequest($groupId);
+        $request = $this->groupV2ApprovePendingForListRequest($groupId, $groupsV2GroupApplicationListRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1421,16 +1482,23 @@ class GroupV2Api
      * Create request for operation 'groupV2ApprovePendingForList'
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationListRequest $groupsV2GroupApplicationListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2ApprovePendingForListRequest($groupId)
+    protected function groupV2ApprovePendingForListRequest($groupId, $groupsV2GroupApplicationListRequest)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $groupId when calling groupV2ApprovePendingForList'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupApplicationListRequest' is set
+        if ($groupsV2GroupApplicationListRequest === null || (is_array($groupsV2GroupApplicationListRequest) && count($groupsV2GroupApplicationListRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupApplicationListRequest when calling groupV2ApprovePendingForList'
             );
         }
 
@@ -1453,15 +1521,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupApplicationListRequest)) {
+            $_tempBody = $groupsV2GroupApplicationListRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -1494,6 +1565,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -1524,15 +1600,16 @@ class GroupV2Api
      *
      * @param  int $groupId Group ID that has the member to ban. (required)
      * @param  int $membershipId Membership ID of the member to ban from the group. (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2GroupBanRequest $groupsV2GroupBanRequest groupsV2GroupBanRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function groupV2BanMember($groupId, $membershipId, $membershipType)
+    public function groupV2BanMember($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest)
     {
-        list($response) = $this->groupV2BanMemberWithHttpInfo($groupId, $membershipId, $membershipType);
+        list($response) = $this->groupV2BanMemberWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest);
         return $response;
     }
 
@@ -1541,15 +1618,16 @@ class GroupV2Api
      *
      * @param  int $groupId Group ID that has the member to ban. (required)
      * @param  int $membershipId Membership ID of the member to ban from the group. (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2GroupBanRequest $groupsV2GroupBanRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2BanMemberWithHttpInfo($groupId, $membershipId, $membershipType)
+    public function groupV2BanMemberWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest)
     {
-        $request = $this->groupV2BanMemberRequest($groupId, $membershipId, $membershipType);
+        $request = $this->groupV2BanMemberRequest($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1631,14 +1709,15 @@ class GroupV2Api
      *
      * @param  int $groupId Group ID that has the member to ban. (required)
      * @param  int $membershipId Membership ID of the member to ban from the group. (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2GroupBanRequest $groupsV2GroupBanRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2BanMemberAsync($groupId, $membershipId, $membershipType)
+    public function groupV2BanMemberAsync($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest)
     {
-        return $this->groupV2BanMemberAsyncWithHttpInfo($groupId, $membershipId, $membershipType)
+        return $this->groupV2BanMemberAsyncWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1653,15 +1732,16 @@ class GroupV2Api
      *
      * @param  int $groupId Group ID that has the member to ban. (required)
      * @param  int $membershipId Membership ID of the member to ban from the group. (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2GroupBanRequest $groupsV2GroupBanRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2BanMemberAsyncWithHttpInfo($groupId, $membershipId, $membershipType)
+    public function groupV2BanMemberAsyncWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->groupV2BanMemberRequest($groupId, $membershipId, $membershipType);
+        $request = $this->groupV2BanMemberRequest($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1702,12 +1782,13 @@ class GroupV2Api
      *
      * @param  int $groupId Group ID that has the member to ban. (required)
      * @param  int $membershipId Membership ID of the member to ban from the group. (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2GroupBanRequest $groupsV2GroupBanRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2BanMemberRequest($groupId, $membershipId, $membershipType)
+    protected function groupV2BanMemberRequest($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
@@ -1725,6 +1806,12 @@ class GroupV2Api
         if ($membershipType === null || (is_array($membershipType) && count($membershipType) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $membershipType when calling groupV2BanMember'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupBanRequest' is set
+        if ($groupsV2GroupBanRequest === null || (is_array($groupsV2GroupBanRequest) && count($groupsV2GroupBanRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupBanRequest when calling groupV2BanMember'
             );
         }
 
@@ -1763,15 +1850,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupBanRequest)) {
+            $_tempBody = $groupsV2GroupBanRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -1804,6 +1894,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -1832,28 +1927,30 @@ class GroupV2Api
     /**
      * Operation groupV2CreateGroup
      *
+     * @param  \Bungie\Model\GroupsV2GroupAction $groupsV2GroupAction groupsV2GroupAction (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20024
      */
-    public function groupV2CreateGroup()
+    public function groupV2CreateGroup($groupsV2GroupAction)
     {
-        list($response) = $this->groupV2CreateGroupWithHttpInfo();
+        list($response) = $this->groupV2CreateGroupWithHttpInfo($groupsV2GroupAction);
         return $response;
     }
 
     /**
      * Operation groupV2CreateGroupWithHttpInfo
      *
+     * @param  \Bungie\Model\GroupsV2GroupAction $groupsV2GroupAction (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20024, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2CreateGroupWithHttpInfo()
+    public function groupV2CreateGroupWithHttpInfo($groupsV2GroupAction)
     {
-        $request = $this->groupV2CreateGroupRequest();
+        $request = $this->groupV2CreateGroupRequest($groupsV2GroupAction);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1933,13 +2030,14 @@ class GroupV2Api
      *
      * 
      *
+     * @param  \Bungie\Model\GroupsV2GroupAction $groupsV2GroupAction (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2CreateGroupAsync()
+    public function groupV2CreateGroupAsync($groupsV2GroupAction)
     {
-        return $this->groupV2CreateGroupAsyncWithHttpInfo()
+        return $this->groupV2CreateGroupAsyncWithHttpInfo($groupsV2GroupAction)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1952,14 +2050,15 @@ class GroupV2Api
      *
      * 
      *
+     * @param  \Bungie\Model\GroupsV2GroupAction $groupsV2GroupAction (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2CreateGroupAsyncWithHttpInfo()
+    public function groupV2CreateGroupAsyncWithHttpInfo($groupsV2GroupAction)
     {
         $returnType = '\Bungie\Model\InlineResponse20024';
-        $request = $this->groupV2CreateGroupRequest();
+        $request = $this->groupV2CreateGroupRequest($groupsV2GroupAction);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1998,12 +2097,19 @@ class GroupV2Api
     /**
      * Create request for operation 'groupV2CreateGroup'
      *
+     * @param  \Bungie\Model\GroupsV2GroupAction $groupsV2GroupAction (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2CreateGroupRequest()
+    protected function groupV2CreateGroupRequest($groupsV2GroupAction)
     {
+        // verify the required parameter 'groupsV2GroupAction' is set
+        if ($groupsV2GroupAction === null || (is_array($groupsV2GroupAction) && count($groupsV2GroupAction) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupAction when calling groupV2CreateGroup'
+            );
+        }
 
         $resourcePath = '/GroupV2/Create/';
         $formParams = [];
@@ -2016,15 +2122,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupAction)) {
+            $_tempBody = $groupsV2GroupAction;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -2057,6 +2166,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -2086,14 +2200,15 @@ class GroupV2Api
      * Operation groupV2DenyAllPending
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest groupsV2GroupApplicationRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20030
      */
-    public function groupV2DenyAllPending($groupId)
+    public function groupV2DenyAllPending($groupId, $groupsV2GroupApplicationRequest)
     {
-        list($response) = $this->groupV2DenyAllPendingWithHttpInfo($groupId);
+        list($response) = $this->groupV2DenyAllPendingWithHttpInfo($groupId, $groupsV2GroupApplicationRequest);
         return $response;
     }
 
@@ -2101,14 +2216,15 @@ class GroupV2Api
      * Operation groupV2DenyAllPendingWithHttpInfo
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20030, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2DenyAllPendingWithHttpInfo($groupId)
+    public function groupV2DenyAllPendingWithHttpInfo($groupId, $groupsV2GroupApplicationRequest)
     {
-        $request = $this->groupV2DenyAllPendingRequest($groupId);
+        $request = $this->groupV2DenyAllPendingRequest($groupId, $groupsV2GroupApplicationRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2189,13 +2305,14 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2DenyAllPendingAsync($groupId)
+    public function groupV2DenyAllPendingAsync($groupId, $groupsV2GroupApplicationRequest)
     {
-        return $this->groupV2DenyAllPendingAsyncWithHttpInfo($groupId)
+        return $this->groupV2DenyAllPendingAsyncWithHttpInfo($groupId, $groupsV2GroupApplicationRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2209,14 +2326,15 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2DenyAllPendingAsyncWithHttpInfo($groupId)
+    public function groupV2DenyAllPendingAsyncWithHttpInfo($groupId, $groupsV2GroupApplicationRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20030';
-        $request = $this->groupV2DenyAllPendingRequest($groupId);
+        $request = $this->groupV2DenyAllPendingRequest($groupId, $groupsV2GroupApplicationRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2256,16 +2374,23 @@ class GroupV2Api
      * Create request for operation 'groupV2DenyAllPending'
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2DenyAllPendingRequest($groupId)
+    protected function groupV2DenyAllPendingRequest($groupId, $groupsV2GroupApplicationRequest)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $groupId when calling groupV2DenyAllPending'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupApplicationRequest' is set
+        if ($groupsV2GroupApplicationRequest === null || (is_array($groupsV2GroupApplicationRequest) && count($groupsV2GroupApplicationRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupApplicationRequest when calling groupV2DenyAllPending'
             );
         }
 
@@ -2288,15 +2413,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupApplicationRequest)) {
+            $_tempBody = $groupsV2GroupApplicationRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -2329,6 +2457,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -2358,14 +2491,15 @@ class GroupV2Api
      * Operation groupV2DenyPendingForList
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationListRequest $groupsV2GroupApplicationListRequest groupsV2GroupApplicationListRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20030
      */
-    public function groupV2DenyPendingForList($groupId)
+    public function groupV2DenyPendingForList($groupId, $groupsV2GroupApplicationListRequest)
     {
-        list($response) = $this->groupV2DenyPendingForListWithHttpInfo($groupId);
+        list($response) = $this->groupV2DenyPendingForListWithHttpInfo($groupId, $groupsV2GroupApplicationListRequest);
         return $response;
     }
 
@@ -2373,14 +2507,15 @@ class GroupV2Api
      * Operation groupV2DenyPendingForListWithHttpInfo
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationListRequest $groupsV2GroupApplicationListRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20030, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2DenyPendingForListWithHttpInfo($groupId)
+    public function groupV2DenyPendingForListWithHttpInfo($groupId, $groupsV2GroupApplicationListRequest)
     {
-        $request = $this->groupV2DenyPendingForListRequest($groupId);
+        $request = $this->groupV2DenyPendingForListRequest($groupId, $groupsV2GroupApplicationListRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2461,13 +2596,14 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationListRequest $groupsV2GroupApplicationListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2DenyPendingForListAsync($groupId)
+    public function groupV2DenyPendingForListAsync($groupId, $groupsV2GroupApplicationListRequest)
     {
-        return $this->groupV2DenyPendingForListAsyncWithHttpInfo($groupId)
+        return $this->groupV2DenyPendingForListAsyncWithHttpInfo($groupId, $groupsV2GroupApplicationListRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2481,14 +2617,15 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationListRequest $groupsV2GroupApplicationListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2DenyPendingForListAsyncWithHttpInfo($groupId)
+    public function groupV2DenyPendingForListAsyncWithHttpInfo($groupId, $groupsV2GroupApplicationListRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20030';
-        $request = $this->groupV2DenyPendingForListRequest($groupId);
+        $request = $this->groupV2DenyPendingForListRequest($groupId, $groupsV2GroupApplicationListRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2528,16 +2665,23 @@ class GroupV2Api
      * Create request for operation 'groupV2DenyPendingForList'
      *
      * @param  int $groupId ID of the group. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationListRequest $groupsV2GroupApplicationListRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2DenyPendingForListRequest($groupId)
+    protected function groupV2DenyPendingForListRequest($groupId, $groupsV2GroupApplicationListRequest)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $groupId when calling groupV2DenyPendingForList'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupApplicationListRequest' is set
+        if ($groupsV2GroupApplicationListRequest === null || (is_array($groupsV2GroupApplicationListRequest) && count($groupsV2GroupApplicationListRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupApplicationListRequest when calling groupV2DenyPendingForList'
             );
         }
 
@@ -2560,15 +2704,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupApplicationListRequest)) {
+            $_tempBody = $groupsV2GroupApplicationListRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -2601,6 +2748,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -2630,14 +2782,15 @@ class GroupV2Api
      * Operation groupV2EditClanBanner
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2ClanBanner $groupsV2ClanBanner groupsV2ClanBanner (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function groupV2EditClanBanner($groupId)
+    public function groupV2EditClanBanner($groupId, $groupsV2ClanBanner)
     {
-        list($response) = $this->groupV2EditClanBannerWithHttpInfo($groupId);
+        list($response) = $this->groupV2EditClanBannerWithHttpInfo($groupId, $groupsV2ClanBanner);
         return $response;
     }
 
@@ -2645,14 +2798,15 @@ class GroupV2Api
      * Operation groupV2EditClanBannerWithHttpInfo
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2ClanBanner $groupsV2ClanBanner (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2EditClanBannerWithHttpInfo($groupId)
+    public function groupV2EditClanBannerWithHttpInfo($groupId, $groupsV2ClanBanner)
     {
-        $request = $this->groupV2EditClanBannerRequest($groupId);
+        $request = $this->groupV2EditClanBannerRequest($groupId, $groupsV2ClanBanner);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2733,13 +2887,14 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2ClanBanner $groupsV2ClanBanner (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2EditClanBannerAsync($groupId)
+    public function groupV2EditClanBannerAsync($groupId, $groupsV2ClanBanner)
     {
-        return $this->groupV2EditClanBannerAsyncWithHttpInfo($groupId)
+        return $this->groupV2EditClanBannerAsyncWithHttpInfo($groupId, $groupsV2ClanBanner)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2753,14 +2908,15 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2ClanBanner $groupsV2ClanBanner (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2EditClanBannerAsyncWithHttpInfo($groupId)
+    public function groupV2EditClanBannerAsyncWithHttpInfo($groupId, $groupsV2ClanBanner)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->groupV2EditClanBannerRequest($groupId);
+        $request = $this->groupV2EditClanBannerRequest($groupId, $groupsV2ClanBanner);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2800,16 +2956,23 @@ class GroupV2Api
      * Create request for operation 'groupV2EditClanBanner'
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2ClanBanner $groupsV2ClanBanner (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2EditClanBannerRequest($groupId)
+    protected function groupV2EditClanBannerRequest($groupId, $groupsV2ClanBanner)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $groupId when calling groupV2EditClanBanner'
+            );
+        }
+        // verify the required parameter 'groupsV2ClanBanner' is set
+        if ($groupsV2ClanBanner === null || (is_array($groupsV2ClanBanner) && count($groupsV2ClanBanner) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2ClanBanner when calling groupV2EditClanBanner'
             );
         }
 
@@ -2832,15 +2995,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2ClanBanner)) {
+            $_tempBody = $groupsV2ClanBanner;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -2873,6 +3039,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -2902,14 +3073,15 @@ class GroupV2Api
      * Operation groupV2EditFounderOptions
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionsEditAction $groupsV2GroupOptionsEditAction groupsV2GroupOptionsEditAction (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function groupV2EditFounderOptions($groupId)
+    public function groupV2EditFounderOptions($groupId, $groupsV2GroupOptionsEditAction)
     {
-        list($response) = $this->groupV2EditFounderOptionsWithHttpInfo($groupId);
+        list($response) = $this->groupV2EditFounderOptionsWithHttpInfo($groupId, $groupsV2GroupOptionsEditAction);
         return $response;
     }
 
@@ -2917,14 +3089,15 @@ class GroupV2Api
      * Operation groupV2EditFounderOptionsWithHttpInfo
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionsEditAction $groupsV2GroupOptionsEditAction (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2EditFounderOptionsWithHttpInfo($groupId)
+    public function groupV2EditFounderOptionsWithHttpInfo($groupId, $groupsV2GroupOptionsEditAction)
     {
-        $request = $this->groupV2EditFounderOptionsRequest($groupId);
+        $request = $this->groupV2EditFounderOptionsRequest($groupId, $groupsV2GroupOptionsEditAction);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3005,13 +3178,14 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionsEditAction $groupsV2GroupOptionsEditAction (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2EditFounderOptionsAsync($groupId)
+    public function groupV2EditFounderOptionsAsync($groupId, $groupsV2GroupOptionsEditAction)
     {
-        return $this->groupV2EditFounderOptionsAsyncWithHttpInfo($groupId)
+        return $this->groupV2EditFounderOptionsAsyncWithHttpInfo($groupId, $groupsV2GroupOptionsEditAction)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3025,14 +3199,15 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionsEditAction $groupsV2GroupOptionsEditAction (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2EditFounderOptionsAsyncWithHttpInfo($groupId)
+    public function groupV2EditFounderOptionsAsyncWithHttpInfo($groupId, $groupsV2GroupOptionsEditAction)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->groupV2EditFounderOptionsRequest($groupId);
+        $request = $this->groupV2EditFounderOptionsRequest($groupId, $groupsV2GroupOptionsEditAction);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3072,16 +3247,23 @@ class GroupV2Api
      * Create request for operation 'groupV2EditFounderOptions'
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionsEditAction $groupsV2GroupOptionsEditAction (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2EditFounderOptionsRequest($groupId)
+    protected function groupV2EditFounderOptionsRequest($groupId, $groupsV2GroupOptionsEditAction)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $groupId when calling groupV2EditFounderOptions'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupOptionsEditAction' is set
+        if ($groupsV2GroupOptionsEditAction === null || (is_array($groupsV2GroupOptionsEditAction) && count($groupsV2GroupOptionsEditAction) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupOptionsEditAction when calling groupV2EditFounderOptions'
             );
         }
 
@@ -3104,15 +3286,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupOptionsEditAction)) {
+            $_tempBody = $groupsV2GroupOptionsEditAction;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -3145,6 +3330,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -3174,14 +3364,15 @@ class GroupV2Api
      * Operation groupV2EditGroup
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupEditAction $groupsV2GroupEditAction groupsV2GroupEditAction (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function groupV2EditGroup($groupId)
+    public function groupV2EditGroup($groupId, $groupsV2GroupEditAction)
     {
-        list($response) = $this->groupV2EditGroupWithHttpInfo($groupId);
+        list($response) = $this->groupV2EditGroupWithHttpInfo($groupId, $groupsV2GroupEditAction);
         return $response;
     }
 
@@ -3189,14 +3380,15 @@ class GroupV2Api
      * Operation groupV2EditGroupWithHttpInfo
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupEditAction $groupsV2GroupEditAction (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2EditGroupWithHttpInfo($groupId)
+    public function groupV2EditGroupWithHttpInfo($groupId, $groupsV2GroupEditAction)
     {
-        $request = $this->groupV2EditGroupRequest($groupId);
+        $request = $this->groupV2EditGroupRequest($groupId, $groupsV2GroupEditAction);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3277,13 +3469,14 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupEditAction $groupsV2GroupEditAction (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2EditGroupAsync($groupId)
+    public function groupV2EditGroupAsync($groupId, $groupsV2GroupEditAction)
     {
-        return $this->groupV2EditGroupAsyncWithHttpInfo($groupId)
+        return $this->groupV2EditGroupAsyncWithHttpInfo($groupId, $groupsV2GroupEditAction)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3297,14 +3490,15 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupEditAction $groupsV2GroupEditAction (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2EditGroupAsyncWithHttpInfo($groupId)
+    public function groupV2EditGroupAsyncWithHttpInfo($groupId, $groupsV2GroupEditAction)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->groupV2EditGroupRequest($groupId);
+        $request = $this->groupV2EditGroupRequest($groupId, $groupsV2GroupEditAction);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3344,16 +3538,23 @@ class GroupV2Api
      * Create request for operation 'groupV2EditGroup'
      *
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupEditAction $groupsV2GroupEditAction (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2EditGroupRequest($groupId)
+    protected function groupV2EditGroupRequest($groupId, $groupsV2GroupEditAction)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $groupId when calling groupV2EditGroup'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupEditAction' is set
+        if ($groupsV2GroupEditAction === null || (is_array($groupsV2GroupEditAction) && count($groupsV2GroupEditAction) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupEditAction when calling groupV2EditGroup'
             );
         }
 
@@ -3376,15 +3577,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupEditAction)) {
+            $_tempBody = $groupsV2GroupEditAction;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -3417,6 +3621,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -3447,8 +3656,8 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group to which the member belongs. (required)
      * @param  int $membershipId Membership ID to modify. (required)
-     * @param  int $membershipType Membership type of the provide membership ID. (required)
-     * @param  int $memberType New membertype for the specified member. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provide membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2RuntimeGroupMemberType $memberType New membertype for the specified member. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3465,8 +3674,8 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group to which the member belongs. (required)
      * @param  int $membershipId Membership ID to modify. (required)
-     * @param  int $membershipType Membership type of the provide membership ID. (required)
-     * @param  int $memberType New membertype for the specified member. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provide membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2RuntimeGroupMemberType $memberType New membertype for the specified member. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3556,8 +3765,8 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group to which the member belongs. (required)
      * @param  int $membershipId Membership ID to modify. (required)
-     * @param  int $membershipType Membership type of the provide membership ID. (required)
-     * @param  int $memberType New membertype for the specified member. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provide membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2RuntimeGroupMemberType $memberType New membertype for the specified member. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3579,8 +3788,8 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group to which the member belongs. (required)
      * @param  int $membershipId Membership ID to modify. (required)
-     * @param  int $membershipType Membership type of the provide membership ID. (required)
-     * @param  int $memberType New membertype for the specified member. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provide membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2RuntimeGroupMemberType $memberType New membertype for the specified member. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3629,8 +3838,8 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group to which the member belongs. (required)
      * @param  int $membershipId Membership ID to modify. (required)
-     * @param  int $membershipType Membership type of the provide membership ID. (required)
-     * @param  int $memberType New membertype for the specified member. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provide membership ID. (required)
+     * @param  \Bungie\Model\GroupsV2RuntimeGroupMemberType $memberType New membertype for the specified member. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3708,11 +3917,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3746,6 +3955,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -3776,14 +3990,15 @@ class GroupV2Api
      *
      * @param  int $conversationId Conversation Id of the channel being edited. (required)
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionalConversationEditRequest $groupsV2GroupOptionalConversationEditRequest groupsV2GroupOptionalConversationEditRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20011
      */
-    public function groupV2EditOptionalConversation($conversationId, $groupId)
+    public function groupV2EditOptionalConversation($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest)
     {
-        list($response) = $this->groupV2EditOptionalConversationWithHttpInfo($conversationId, $groupId);
+        list($response) = $this->groupV2EditOptionalConversationWithHttpInfo($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest);
         return $response;
     }
 
@@ -3792,14 +4007,15 @@ class GroupV2Api
      *
      * @param  int $conversationId Conversation Id of the channel being edited. (required)
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionalConversationEditRequest $groupsV2GroupOptionalConversationEditRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2EditOptionalConversationWithHttpInfo($conversationId, $groupId)
+    public function groupV2EditOptionalConversationWithHttpInfo($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest)
     {
-        $request = $this->groupV2EditOptionalConversationRequest($conversationId, $groupId);
+        $request = $this->groupV2EditOptionalConversationRequest($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3881,13 +4097,14 @@ class GroupV2Api
      *
      * @param  int $conversationId Conversation Id of the channel being edited. (required)
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionalConversationEditRequest $groupsV2GroupOptionalConversationEditRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2EditOptionalConversationAsync($conversationId, $groupId)
+    public function groupV2EditOptionalConversationAsync($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest)
     {
-        return $this->groupV2EditOptionalConversationAsyncWithHttpInfo($conversationId, $groupId)
+        return $this->groupV2EditOptionalConversationAsyncWithHttpInfo($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3902,14 +4119,15 @@ class GroupV2Api
      *
      * @param  int $conversationId Conversation Id of the channel being edited. (required)
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionalConversationEditRequest $groupsV2GroupOptionalConversationEditRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2EditOptionalConversationAsyncWithHttpInfo($conversationId, $groupId)
+    public function groupV2EditOptionalConversationAsyncWithHttpInfo($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20011';
-        $request = $this->groupV2EditOptionalConversationRequest($conversationId, $groupId);
+        $request = $this->groupV2EditOptionalConversationRequest($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3950,11 +4168,12 @@ class GroupV2Api
      *
      * @param  int $conversationId Conversation Id of the channel being edited. (required)
      * @param  int $groupId Group ID of the group to edit. (required)
+     * @param  \Bungie\Model\GroupsV2GroupOptionalConversationEditRequest $groupsV2GroupOptionalConversationEditRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2EditOptionalConversationRequest($conversationId, $groupId)
+    protected function groupV2EditOptionalConversationRequest($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest)
     {
         // verify the required parameter 'conversationId' is set
         if ($conversationId === null || (is_array($conversationId) && count($conversationId) === 0)) {
@@ -3966,6 +4185,12 @@ class GroupV2Api
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $groupId when calling groupV2EditOptionalConversation'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupOptionalConversationEditRequest' is set
+        if ($groupsV2GroupOptionalConversationEditRequest === null || (is_array($groupsV2GroupOptionalConversationEditRequest) && count($groupsV2GroupOptionalConversationEditRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupOptionalConversationEditRequest when calling groupV2EditOptionalConversation'
             );
         }
 
@@ -3996,15 +4221,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupOptionalConversationEditRequest)) {
+            $_tempBody = $groupsV2GroupOptionalConversationEditRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -4037,6 +4265,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -4290,11 +4523,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -4539,11 +4772,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -4788,11 +5021,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -5075,11 +5308,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -5113,6 +5346,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -5347,11 +5585,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -5410,7 +5648,7 @@ class GroupV2Api
      * Operation groupV2GetGroupByName
      *
      * @param  string $groupName Exact name of the group to find. (required)
-     * @param  int $groupType Type of group to find. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group to find. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5426,7 +5664,7 @@ class GroupV2Api
      * Operation groupV2GetGroupByNameWithHttpInfo
      *
      * @param  string $groupName Exact name of the group to find. (required)
-     * @param  int $groupType Type of group to find. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group to find. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5515,7 +5753,7 @@ class GroupV2Api
      * 
      *
      * @param  string $groupName Exact name of the group to find. (required)
-     * @param  int $groupType Type of group to find. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group to find. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5536,7 +5774,7 @@ class GroupV2Api
      * 
      *
      * @param  string $groupName Exact name of the group to find. (required)
-     * @param  int $groupType Type of group to find. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group to find. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5584,7 +5822,7 @@ class GroupV2Api
      * Create request for operation 'groupV2GetGroupByName'
      *
      * @param  string $groupName Exact name of the group to find. (required)
-     * @param  int $groupType Type of group to find. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group to find. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5634,11 +5872,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -5902,11 +6140,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -5964,10 +6202,10 @@ class GroupV2Api
     /**
      * Operation groupV2GetGroupsForMember
      *
-     * @param  int $filter Filter apply to list of joined groups. (required)
-     * @param  int $groupType Type of group the supplied member founded. (required)
+     * @param  \Bungie\Model\GroupsV2GroupsForMemberFilter $filter Filter apply to list of joined groups. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group the supplied member founded. (required)
      * @param  int $membershipId Membership ID to for which to find founded groups. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5982,10 +6220,10 @@ class GroupV2Api
     /**
      * Operation groupV2GetGroupsForMemberWithHttpInfo
      *
-     * @param  int $filter Filter apply to list of joined groups. (required)
-     * @param  int $groupType Type of group the supplied member founded. (required)
+     * @param  \Bungie\Model\GroupsV2GroupsForMemberFilter $filter Filter apply to list of joined groups. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group the supplied member founded. (required)
      * @param  int $membershipId Membership ID to for which to find founded groups. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6073,10 +6311,10 @@ class GroupV2Api
      *
      * 
      *
-     * @param  int $filter Filter apply to list of joined groups. (required)
-     * @param  int $groupType Type of group the supplied member founded. (required)
+     * @param  \Bungie\Model\GroupsV2GroupsForMemberFilter $filter Filter apply to list of joined groups. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group the supplied member founded. (required)
      * @param  int $membershipId Membership ID to for which to find founded groups. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6096,10 +6334,10 @@ class GroupV2Api
      *
      * 
      *
-     * @param  int $filter Filter apply to list of joined groups. (required)
-     * @param  int $groupType Type of group the supplied member founded. (required)
+     * @param  \Bungie\Model\GroupsV2GroupsForMemberFilter $filter Filter apply to list of joined groups. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group the supplied member founded. (required)
      * @param  int $membershipId Membership ID to for which to find founded groups. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6146,10 +6384,10 @@ class GroupV2Api
     /**
      * Create request for operation 'groupV2GetGroupsForMember'
      *
-     * @param  int $filter Filter apply to list of joined groups. (required)
-     * @param  int $groupType Type of group the supplied member founded. (required)
+     * @param  \Bungie\Model\GroupsV2GroupsForMemberFilter $filter Filter apply to list of joined groups. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group the supplied member founded. (required)
      * @param  int $membershipId Membership ID to for which to find founded groups. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6227,11 +6465,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -6514,11 +6752,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -6552,6 +6790,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -6582,7 +6825,7 @@ class GroupV2Api
      *
      * @param  int $currentpage Page number (starting with 1). Each page has a fixed size of 50 items per page. (required)
      * @param  int $groupId The ID of the group. (required)
-     * @param  int $memberType Filter out other member types. Use None for all members. (optional)
+     * @param  \Bungie\Model\GroupsV2RuntimeGroupMemberType $memberType Filter out other member types. Use None for all members. (optional)
      * @param  string $nameSearch The name fragment upon which a search should be executed for members with matching display or unique names. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -6600,7 +6843,7 @@ class GroupV2Api
      *
      * @param  int $currentpage Page number (starting with 1). Each page has a fixed size of 50 items per page. (required)
      * @param  int $groupId The ID of the group. (required)
-     * @param  int $memberType Filter out other member types. Use None for all members. (optional)
+     * @param  \Bungie\Model\GroupsV2RuntimeGroupMemberType $memberType Filter out other member types. Use None for all members. (optional)
      * @param  string $nameSearch The name fragment upon which a search should be executed for members with matching display or unique names. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -6691,7 +6934,7 @@ class GroupV2Api
      *
      * @param  int $currentpage Page number (starting with 1). Each page has a fixed size of 50 items per page. (required)
      * @param  int $groupId The ID of the group. (required)
-     * @param  int $memberType Filter out other member types. Use None for all members. (optional)
+     * @param  \Bungie\Model\GroupsV2RuntimeGroupMemberType $memberType Filter out other member types. Use None for all members. (optional)
      * @param  string $nameSearch The name fragment upon which a search should be executed for members with matching display or unique names. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6714,7 +6957,7 @@ class GroupV2Api
      *
      * @param  int $currentpage Page number (starting with 1). Each page has a fixed size of 50 items per page. (required)
      * @param  int $groupId The ID of the group. (required)
-     * @param  int $memberType Filter out other member types. Use None for all members. (optional)
+     * @param  \Bungie\Model\GroupsV2RuntimeGroupMemberType $memberType Filter out other member types. Use None for all members. (optional)
      * @param  string $nameSearch The name fragment upon which a search should be executed for members with matching display or unique names. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6764,7 +7007,7 @@ class GroupV2Api
      *
      * @param  int $currentpage Page number (starting with 1). Each page has a fixed size of 50 items per page. (required)
      * @param  int $groupId The ID of the group. (required)
-     * @param  int $memberType Filter out other member types. Use None for all members. (optional)
+     * @param  \Bungie\Model\GroupsV2RuntimeGroupMemberType $memberType Filter out other member types. Use None for all members. (optional)
      * @param  string $nameSearch The name fragment upon which a search should be executed for members with matching display or unique names. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6823,11 +7066,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7110,11 +7353,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7148,6 +7391,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -7176,10 +7424,10 @@ class GroupV2Api
     /**
      * Operation groupV2GetPotentialGroupsForMember
      *
-     * @param  int $filter Filter apply to list of potential joined groups. (required)
-     * @param  int $groupType Type of group the supplied member applied. (required)
+     * @param  \Bungie\Model\GroupsV2GroupPotentialMemberStatus $filter Filter apply to list of potential joined groups. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group the supplied member applied. (required)
      * @param  int $membershipId Membership ID to for which to find applied groups. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7194,10 +7442,10 @@ class GroupV2Api
     /**
      * Operation groupV2GetPotentialGroupsForMemberWithHttpInfo
      *
-     * @param  int $filter Filter apply to list of potential joined groups. (required)
-     * @param  int $groupType Type of group the supplied member applied. (required)
+     * @param  \Bungie\Model\GroupsV2GroupPotentialMemberStatus $filter Filter apply to list of potential joined groups. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group the supplied member applied. (required)
      * @param  int $membershipId Membership ID to for which to find applied groups. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7285,10 +7533,10 @@ class GroupV2Api
      *
      * 
      *
-     * @param  int $filter Filter apply to list of potential joined groups. (required)
-     * @param  int $groupType Type of group the supplied member applied. (required)
+     * @param  \Bungie\Model\GroupsV2GroupPotentialMemberStatus $filter Filter apply to list of potential joined groups. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group the supplied member applied. (required)
      * @param  int $membershipId Membership ID to for which to find applied groups. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7308,10 +7556,10 @@ class GroupV2Api
      *
      * 
      *
-     * @param  int $filter Filter apply to list of potential joined groups. (required)
-     * @param  int $groupType Type of group the supplied member applied. (required)
+     * @param  \Bungie\Model\GroupsV2GroupPotentialMemberStatus $filter Filter apply to list of potential joined groups. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group the supplied member applied. (required)
      * @param  int $membershipId Membership ID to for which to find applied groups. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7358,10 +7606,10 @@ class GroupV2Api
     /**
      * Create request for operation 'groupV2GetPotentialGroupsForMember'
      *
-     * @param  int $filter Filter apply to list of potential joined groups. (required)
-     * @param  int $groupType Type of group the supplied member applied. (required)
+     * @param  \Bungie\Model\GroupsV2GroupPotentialMemberStatus $filter Filter apply to list of potential joined groups. (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of group the supplied member applied. (required)
      * @param  int $membershipId Membership ID to for which to find applied groups. (required)
-     * @param  int $membershipType Membership type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the supplied membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7439,11 +7687,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7501,8 +7749,8 @@ class GroupV2Api
     /**
      * Operation groupV2GetRecommendedGroups
      *
-     * @param  int $createDateRange Requested range in which to pull recommended groups (required)
-     * @param  int $groupType Type of groups requested (required)
+     * @param  \Bungie\Model\GroupsV2GroupDateRange $createDateRange Requested range in which to pull recommended groups (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of groups requested (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7517,8 +7765,8 @@ class GroupV2Api
     /**
      * Operation groupV2GetRecommendedGroupsWithHttpInfo
      *
-     * @param  int $createDateRange Requested range in which to pull recommended groups (required)
-     * @param  int $groupType Type of groups requested (required)
+     * @param  \Bungie\Model\GroupsV2GroupDateRange $createDateRange Requested range in which to pull recommended groups (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of groups requested (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7606,8 +7854,8 @@ class GroupV2Api
      *
      * 
      *
-     * @param  int $createDateRange Requested range in which to pull recommended groups (required)
-     * @param  int $groupType Type of groups requested (required)
+     * @param  \Bungie\Model\GroupsV2GroupDateRange $createDateRange Requested range in which to pull recommended groups (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of groups requested (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7627,8 +7875,8 @@ class GroupV2Api
      *
      * 
      *
-     * @param  int $createDateRange Requested range in which to pull recommended groups (required)
-     * @param  int $groupType Type of groups requested (required)
+     * @param  \Bungie\Model\GroupsV2GroupDateRange $createDateRange Requested range in which to pull recommended groups (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of groups requested (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7675,8 +7923,8 @@ class GroupV2Api
     /**
      * Create request for operation 'groupV2GetRecommendedGroups'
      *
-     * @param  int $createDateRange Requested range in which to pull recommended groups (required)
-     * @param  int $groupType Type of groups requested (required)
+     * @param  \Bungie\Model\GroupsV2GroupDateRange $createDateRange Requested range in which to pull recommended groups (required)
+     * @param  \Bungie\Model\GroupsV2GroupType $groupType Type of groups requested (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7726,11 +7974,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7764,6 +8012,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -7792,7 +8045,7 @@ class GroupV2Api
     /**
      * Operation groupV2GetUserClanInviteSetting
      *
-     * @param  int $mType The Destiny membership type of the account we wish to access settings. (required)
+     * @param  \Bungie\Model\BungieMembershipType $mType The Destiny membership type of the account we wish to access settings. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7807,7 +8060,7 @@ class GroupV2Api
     /**
      * Operation groupV2GetUserClanInviteSettingWithHttpInfo
      *
-     * @param  int $mType The Destiny membership type of the account we wish to access settings. (required)
+     * @param  \Bungie\Model\BungieMembershipType $mType The Destiny membership type of the account we wish to access settings. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7895,7 +8148,7 @@ class GroupV2Api
      *
      * 
      *
-     * @param  int $mType The Destiny membership type of the account we wish to access settings. (required)
+     * @param  \Bungie\Model\BungieMembershipType $mType The Destiny membership type of the account we wish to access settings. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7915,7 +8168,7 @@ class GroupV2Api
      *
      * 
      *
-     * @param  int $mType The Destiny membership type of the account we wish to access settings. (required)
+     * @param  \Bungie\Model\BungieMembershipType $mType The Destiny membership type of the account we wish to access settings. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7962,7 +8215,7 @@ class GroupV2Api
     /**
      * Create request for operation 'groupV2GetUserClanInviteSetting'
      *
-     * @param  int $mType The Destiny membership type of the account we wish to access settings. (required)
+     * @param  \Bungie\Model\BungieMembershipType $mType The Destiny membership type of the account we wish to access settings. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7998,11 +8251,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -8036,6 +8289,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -8064,28 +8322,30 @@ class GroupV2Api
     /**
      * Operation groupV2GroupSearch
      *
+     * @param  \Bungie\Model\GroupsV2GroupQuery $groupsV2GroupQuery groupsV2GroupQuery (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20021
      */
-    public function groupV2GroupSearch()
+    public function groupV2GroupSearch($groupsV2GroupQuery)
     {
-        list($response) = $this->groupV2GroupSearchWithHttpInfo();
+        list($response) = $this->groupV2GroupSearchWithHttpInfo($groupsV2GroupQuery);
         return $response;
     }
 
     /**
      * Operation groupV2GroupSearchWithHttpInfo
      *
+     * @param  \Bungie\Model\GroupsV2GroupQuery $groupsV2GroupQuery (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20021, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2GroupSearchWithHttpInfo()
+    public function groupV2GroupSearchWithHttpInfo($groupsV2GroupQuery)
     {
-        $request = $this->groupV2GroupSearchRequest();
+        $request = $this->groupV2GroupSearchRequest($groupsV2GroupQuery);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8165,13 +8425,14 @@ class GroupV2Api
      *
      * 
      *
+     * @param  \Bungie\Model\GroupsV2GroupQuery $groupsV2GroupQuery (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2GroupSearchAsync()
+    public function groupV2GroupSearchAsync($groupsV2GroupQuery)
     {
-        return $this->groupV2GroupSearchAsyncWithHttpInfo()
+        return $this->groupV2GroupSearchAsyncWithHttpInfo($groupsV2GroupQuery)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8184,14 +8445,15 @@ class GroupV2Api
      *
      * 
      *
+     * @param  \Bungie\Model\GroupsV2GroupQuery $groupsV2GroupQuery (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2GroupSearchAsyncWithHttpInfo()
+    public function groupV2GroupSearchAsyncWithHttpInfo($groupsV2GroupQuery)
     {
         $returnType = '\Bungie\Model\InlineResponse20021';
-        $request = $this->groupV2GroupSearchRequest();
+        $request = $this->groupV2GroupSearchRequest($groupsV2GroupQuery);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8230,12 +8492,19 @@ class GroupV2Api
     /**
      * Create request for operation 'groupV2GroupSearch'
      *
+     * @param  \Bungie\Model\GroupsV2GroupQuery $groupsV2GroupQuery (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2GroupSearchRequest()
+    protected function groupV2GroupSearchRequest($groupsV2GroupQuery)
     {
+        // verify the required parameter 'groupsV2GroupQuery' is set
+        if ($groupsV2GroupQuery === null || (is_array($groupsV2GroupQuery) && count($groupsV2GroupQuery) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupQuery when calling groupV2GroupSearch'
+            );
+        }
 
         $resourcePath = '/GroupV2/Search/';
         $formParams = [];
@@ -8248,15 +8517,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupQuery)) {
+            $_tempBody = $groupsV2GroupQuery;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -8315,15 +8587,16 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group you would like to join. (required)
      * @param  int $membershipId Membership id of the account being invited. (required)
-     * @param  int $membershipType MembershipType of the account being invited. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account being invited. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest groupsV2GroupApplicationRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20028
      */
-    public function groupV2IndividualGroupInvite($groupId, $membershipId, $membershipType)
+    public function groupV2IndividualGroupInvite($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
     {
-        list($response) = $this->groupV2IndividualGroupInviteWithHttpInfo($groupId, $membershipId, $membershipType);
+        list($response) = $this->groupV2IndividualGroupInviteWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest);
         return $response;
     }
 
@@ -8332,15 +8605,16 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group you would like to join. (required)
      * @param  int $membershipId Membership id of the account being invited. (required)
-     * @param  int $membershipType MembershipType of the account being invited. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account being invited. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20028, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2IndividualGroupInviteWithHttpInfo($groupId, $membershipId, $membershipType)
+    public function groupV2IndividualGroupInviteWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
     {
-        $request = $this->groupV2IndividualGroupInviteRequest($groupId, $membershipId, $membershipType);
+        $request = $this->groupV2IndividualGroupInviteRequest($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8422,14 +8696,15 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group you would like to join. (required)
      * @param  int $membershipId Membership id of the account being invited. (required)
-     * @param  int $membershipType MembershipType of the account being invited. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account being invited. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2IndividualGroupInviteAsync($groupId, $membershipId, $membershipType)
+    public function groupV2IndividualGroupInviteAsync($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
     {
-        return $this->groupV2IndividualGroupInviteAsyncWithHttpInfo($groupId, $membershipId, $membershipType)
+        return $this->groupV2IndividualGroupInviteAsyncWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8444,15 +8719,16 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group you would like to join. (required)
      * @param  int $membershipId Membership id of the account being invited. (required)
-     * @param  int $membershipType MembershipType of the account being invited. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account being invited. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2IndividualGroupInviteAsyncWithHttpInfo($groupId, $membershipId, $membershipType)
+    public function groupV2IndividualGroupInviteAsyncWithHttpInfo($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20028';
-        $request = $this->groupV2IndividualGroupInviteRequest($groupId, $membershipId, $membershipType);
+        $request = $this->groupV2IndividualGroupInviteRequest($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8493,12 +8769,13 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group you would like to join. (required)
      * @param  int $membershipId Membership id of the account being invited. (required)
-     * @param  int $membershipType MembershipType of the account being invited. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account being invited. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2IndividualGroupInviteRequest($groupId, $membershipId, $membershipType)
+    protected function groupV2IndividualGroupInviteRequest($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
@@ -8516,6 +8793,12 @@ class GroupV2Api
         if ($membershipType === null || (is_array($membershipType) && count($membershipType) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $membershipType when calling groupV2IndividualGroupInvite'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupApplicationRequest' is set
+        if ($groupsV2GroupApplicationRequest === null || (is_array($groupsV2GroupApplicationRequest) && count($groupsV2GroupApplicationRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupApplicationRequest when calling groupV2IndividualGroupInvite'
             );
         }
 
@@ -8554,15 +8837,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupApplicationRequest)) {
+            $_tempBody = $groupsV2GroupApplicationRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -8595,6 +8881,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -8625,7 +8916,7 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group you would like to join. (required)
      * @param  int $membershipId Membership id of the account being cancelled. (required)
-     * @param  int $membershipType MembershipType of the account being cancelled. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account being cancelled. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8642,7 +8933,7 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group you would like to join. (required)
      * @param  int $membershipId Membership id of the account being cancelled. (required)
-     * @param  int $membershipType MembershipType of the account being cancelled. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account being cancelled. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8732,7 +9023,7 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group you would like to join. (required)
      * @param  int $membershipId Membership id of the account being cancelled. (required)
-     * @param  int $membershipType MembershipType of the account being cancelled. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account being cancelled. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8754,7 +9045,7 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group you would like to join. (required)
      * @param  int $membershipId Membership id of the account being cancelled. (required)
-     * @param  int $membershipType MembershipType of the account being cancelled. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account being cancelled. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8803,7 +9094,7 @@ class GroupV2Api
      *
      * @param  int $groupId ID of the group you would like to join. (required)
      * @param  int $membershipId Membership id of the account being cancelled. (required)
-     * @param  int $membershipType MembershipType of the account being cancelled. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account being cancelled. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8867,11 +9158,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -8905,6 +9196,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -8935,7 +9231,7 @@ class GroupV2Api
      *
      * @param  int $groupId Group ID to kick the user from. (required)
      * @param  int $membershipId Membership ID to kick. (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8952,7 +9248,7 @@ class GroupV2Api
      *
      * @param  int $groupId Group ID to kick the user from. (required)
      * @param  int $membershipId Membership ID to kick. (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9042,7 +9338,7 @@ class GroupV2Api
      *
      * @param  int $groupId Group ID to kick the user from. (required)
      * @param  int $membershipId Membership ID to kick. (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9064,7 +9360,7 @@ class GroupV2Api
      *
      * @param  int $groupId Group ID to kick the user from. (required)
      * @param  int $membershipId Membership ID to kick. (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9113,7 +9409,7 @@ class GroupV2Api
      *
      * @param  int $groupId Group ID to kick the user from. (required)
      * @param  int $membershipId Membership ID to kick. (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9177,11 +9473,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -9215,6 +9511,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -9244,15 +9545,16 @@ class GroupV2Api
      * Operation groupV2RequestGroupMembership
      *
      * @param  int $groupId ID of the group you would like to join. (required)
-     * @param  int $membershipType MembershipType of the account to use when joining. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account to use when joining. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest groupsV2GroupApplicationRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20028
      */
-    public function groupV2RequestGroupMembership($groupId, $membershipType)
+    public function groupV2RequestGroupMembership($groupId, $membershipType, $groupsV2GroupApplicationRequest)
     {
-        list($response) = $this->groupV2RequestGroupMembershipWithHttpInfo($groupId, $membershipType);
+        list($response) = $this->groupV2RequestGroupMembershipWithHttpInfo($groupId, $membershipType, $groupsV2GroupApplicationRequest);
         return $response;
     }
 
@@ -9260,15 +9562,16 @@ class GroupV2Api
      * Operation groupV2RequestGroupMembershipWithHttpInfo
      *
      * @param  int $groupId ID of the group you would like to join. (required)
-     * @param  int $membershipType MembershipType of the account to use when joining. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account to use when joining. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20028, HTTP status code, HTTP response headers (array of strings)
      */
-    public function groupV2RequestGroupMembershipWithHttpInfo($groupId, $membershipType)
+    public function groupV2RequestGroupMembershipWithHttpInfo($groupId, $membershipType, $groupsV2GroupApplicationRequest)
     {
-        $request = $this->groupV2RequestGroupMembershipRequest($groupId, $membershipType);
+        $request = $this->groupV2RequestGroupMembershipRequest($groupId, $membershipType, $groupsV2GroupApplicationRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9349,14 +9652,15 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group you would like to join. (required)
-     * @param  int $membershipType MembershipType of the account to use when joining. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account to use when joining. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2RequestGroupMembershipAsync($groupId, $membershipType)
+    public function groupV2RequestGroupMembershipAsync($groupId, $membershipType, $groupsV2GroupApplicationRequest)
     {
-        return $this->groupV2RequestGroupMembershipAsyncWithHttpInfo($groupId, $membershipType)
+        return $this->groupV2RequestGroupMembershipAsyncWithHttpInfo($groupId, $membershipType, $groupsV2GroupApplicationRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9370,15 +9674,16 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group you would like to join. (required)
-     * @param  int $membershipType MembershipType of the account to use when joining. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account to use when joining. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function groupV2RequestGroupMembershipAsyncWithHttpInfo($groupId, $membershipType)
+    public function groupV2RequestGroupMembershipAsyncWithHttpInfo($groupId, $membershipType, $groupsV2GroupApplicationRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20028';
-        $request = $this->groupV2RequestGroupMembershipRequest($groupId, $membershipType);
+        $request = $this->groupV2RequestGroupMembershipRequest($groupId, $membershipType, $groupsV2GroupApplicationRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9418,12 +9723,13 @@ class GroupV2Api
      * Create request for operation 'groupV2RequestGroupMembership'
      *
      * @param  int $groupId ID of the group you would like to join. (required)
-     * @param  int $membershipType MembershipType of the account to use when joining. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account to use when joining. (required)
+     * @param  \Bungie\Model\GroupsV2GroupApplicationRequest $groupsV2GroupApplicationRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function groupV2RequestGroupMembershipRequest($groupId, $membershipType)
+    protected function groupV2RequestGroupMembershipRequest($groupId, $membershipType, $groupsV2GroupApplicationRequest)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
@@ -9435,6 +9741,12 @@ class GroupV2Api
         if ($membershipType === null || (is_array($membershipType) && count($membershipType) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $membershipType when calling groupV2RequestGroupMembership'
+            );
+        }
+        // verify the required parameter 'groupsV2GroupApplicationRequest' is set
+        if ($groupsV2GroupApplicationRequest === null || (is_array($groupsV2GroupApplicationRequest) && count($groupsV2GroupApplicationRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $groupsV2GroupApplicationRequest when calling groupV2RequestGroupMembership'
             );
         }
 
@@ -9465,15 +9777,18 @@ class GroupV2Api
 
         // body params
         $_tempBody = null;
+        if (isset($groupsV2GroupApplicationRequest)) {
+            $_tempBody = $groupsV2GroupApplicationRequest;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -9506,6 +9821,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -9535,7 +9855,7 @@ class GroupV2Api
      * Operation groupV2RescindGroupMembership
      *
      * @param  int $groupId ID of the group. (required)
-     * @param  int $membershipType MembershipType of the account to leave. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account to leave. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9551,7 +9871,7 @@ class GroupV2Api
      * Operation groupV2RescindGroupMembershipWithHttpInfo
      *
      * @param  int $groupId ID of the group. (required)
-     * @param  int $membershipType MembershipType of the account to leave. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account to leave. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9640,7 +9960,7 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group. (required)
-     * @param  int $membershipType MembershipType of the account to leave. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account to leave. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9661,7 +9981,7 @@ class GroupV2Api
      * 
      *
      * @param  int $groupId ID of the group. (required)
-     * @param  int $membershipType MembershipType of the account to leave. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account to leave. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9709,7 +10029,7 @@ class GroupV2Api
      * Create request for operation 'groupV2RescindGroupMembership'
      *
      * @param  int $groupId ID of the group. (required)
-     * @param  int $membershipType MembershipType of the account to leave. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType MembershipType of the account to leave. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9759,11 +10079,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -9797,6 +10117,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -9826,7 +10151,7 @@ class GroupV2Api
      * Operation groupV2SetUserClanInviteSetting
      *
      * @param  bool $allowInvites True to allow invites of this user to clans, false otherwise. (required)
-     * @param  int $mType The Destiny membership type of linked account we are manipulating. (required)
+     * @param  \Bungie\Model\BungieMembershipType $mType The Destiny membership type of linked account we are manipulating. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9842,7 +10167,7 @@ class GroupV2Api
      * Operation groupV2SetUserClanInviteSettingWithHttpInfo
      *
      * @param  bool $allowInvites True to allow invites of this user to clans, false otherwise. (required)
-     * @param  int $mType The Destiny membership type of linked account we are manipulating. (required)
+     * @param  \Bungie\Model\BungieMembershipType $mType The Destiny membership type of linked account we are manipulating. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9931,7 +10256,7 @@ class GroupV2Api
      * 
      *
      * @param  bool $allowInvites True to allow invites of this user to clans, false otherwise. (required)
-     * @param  int $mType The Destiny membership type of linked account we are manipulating. (required)
+     * @param  \Bungie\Model\BungieMembershipType $mType The Destiny membership type of linked account we are manipulating. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9952,7 +10277,7 @@ class GroupV2Api
      * 
      *
      * @param  bool $allowInvites True to allow invites of this user to clans, false otherwise. (required)
-     * @param  int $mType The Destiny membership type of linked account we are manipulating. (required)
+     * @param  \Bungie\Model\BungieMembershipType $mType The Destiny membership type of linked account we are manipulating. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10000,7 +10325,7 @@ class GroupV2Api
      * Create request for operation 'groupV2SetUserClanInviteSetting'
      *
      * @param  bool $allowInvites True to allow invites of this user to clans, false otherwise. (required)
-     * @param  int $mType The Destiny membership type of linked account we are manipulating. (required)
+     * @param  \Bungie\Model\BungieMembershipType $mType The Destiny membership type of linked account we are manipulating. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -10050,11 +10375,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -10088,6 +10413,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -10118,7 +10448,7 @@ class GroupV2Api
      *
      * @param  int $groupId groupId (required)
      * @param  int $membershipId Membership ID of the member to unban from the group (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -10135,7 +10465,7 @@ class GroupV2Api
      *
      * @param  int $groupId (required)
      * @param  int $membershipId Membership ID of the member to unban from the group (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -10225,7 +10555,7 @@ class GroupV2Api
      *
      * @param  int $groupId (required)
      * @param  int $membershipId Membership ID of the member to unban from the group (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10247,7 +10577,7 @@ class GroupV2Api
      *
      * @param  int $groupId (required)
      * @param  int $membershipId Membership ID of the member to unban from the group (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10296,7 +10626,7 @@ class GroupV2Api
      *
      * @param  int $groupId (required)
      * @param  int $membershipId Membership ID of the member to unban from the group (required)
-     * @param  int $membershipType Membership type of the provided membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Membership type of the provided membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -10360,11 +10690,11 @@ class GroupV2Api
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -10398,6 +10728,11 @@ class GroupV2Api
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();

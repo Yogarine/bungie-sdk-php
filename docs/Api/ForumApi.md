@@ -32,6 +32,10 @@ Allows the owner of a fireteam thread to approve all joined members and start a 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -64,12 +68,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -90,10 +94,10 @@ $apiInstance = new Bungie\Api\ForumApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$categoryFilter = 56; // int | The category filter.
+$categoryFilter = new \Bungie\Model\\Bungie\Model\ForumForumTopicsCategoryFiltersEnum(); // \Bungie\Model\ForumForumTopicsCategoryFiltersEnum | The category filter.
 $page = 56; // int | Zero base page
-$quickDate = 56; // int | The date filter.
-$sort = 56; // int | The sort mode.
+$quickDate = new \Bungie\Model\\Bungie\Model\ForumForumTopicsQuickDateEnum(); // \Bungie\Model\ForumForumTopicsQuickDateEnum | The date filter.
+$sort = new \Bungie\Model\\Bungie\Model\ForumForumTopicsSortEnum(); // \Bungie\Model\ForumForumTopicsSortEnum | The sort mode.
 $locales = 'locales_example'; // string | Comma seperated list of locales posts must match to return in the result list. Default 'en'
 
 try {
@@ -109,10 +113,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryFilter** | **int**| The category filter. |
+ **categoryFilter** | [**\Bungie\Model\ForumForumTopicsCategoryFiltersEnum**](../Model/.md)| The category filter. |
  **page** | **int**| Zero base page |
- **quickDate** | **int**| The date filter. |
- **sort** | **int**| The sort mode. |
+ **quickDate** | [**\Bungie\Model\ForumForumTopicsQuickDateEnum**](../Model/.md)| The date filter. |
+ **sort** | [**\Bungie\Model\ForumForumTopicsSortEnum**](../Model/.md)| The sort mode. |
  **locales** | **string**| Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; | [optional]
 
 ### Return type
@@ -126,7 +130,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -175,7 +179,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -224,7 +228,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -275,7 +279,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -326,7 +330,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -353,7 +357,7 @@ $pageSize = 56; // int |
 $parentPostId = 56; // int | 
 $replySize = 56; // int | 
 $rootThreadMode = True; // bool | 
-$sortMode = 56; // int | 
+$sortMode = new \Bungie\Model\\Bungie\Model\ForumForumPostSortEnum(); // \Bungie\Model\ForumForumPostSortEnum | 
 $showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
@@ -375,7 +379,7 @@ Name | Type | Description  | Notes
  **parentPostId** | **int**|  |
  **replySize** | **int**|  |
  **rootThreadMode** | **bool**|  |
- **sortMode** | **int**|  |
+ **sortMode** | [**\Bungie\Model\ForumForumPostSortEnum**](../Model/.md)|  |
  **showbanned** | **string**| If this value is not null or empty, banned posts are requested to be returned | [optional]
 
 ### Return type
@@ -389,7 +393,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -415,7 +419,7 @@ $page = 56; // int |
 $pageSize = 56; // int | 
 $replySize = 56; // int | 
 $rootThreadMode = True; // bool | 
-$sortMode = 56; // int | 
+$sortMode = new \Bungie\Model\\Bungie\Model\ForumForumPostSortEnum(); // \Bungie\Model\ForumForumPostSortEnum | 
 $showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
@@ -436,7 +440,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  |
  **replySize** | **int**|  |
  **rootThreadMode** | **bool**|  |
- **sortMode** | **int**|  |
+ **sortMode** | [**\Bungie\Model\ForumForumPostSortEnum**](../Model/.md)|  |
  **showbanned** | **string**| If this value is not null or empty, banned posts are requested to be returned | [optional]
 
 ### Return type
@@ -450,12 +454,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **forumGetRecruitmentThreadSummaries**
-> \Bungie\Model\InlineResponse20015 forumGetRecruitmentThreadSummaries()
+> \Bungie\Model\InlineResponse20015 forumGetRecruitmentThreadSummaries($requestBody)
 
 
 
@@ -471,9 +475,10 @@ $apiInstance = new Bungie\Api\ForumApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$requestBody = array(new \Bungie\Model\array()); // int[] | 
 
 try {
-    $result = $apiInstance->forumGetRecruitmentThreadSummaries();
+    $result = $apiInstance->forumGetRecruitmentThreadSummaries($requestBody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ForumApi->forumGetRecruitmentThreadSummaries: ', $e->getMessage(), PHP_EOL;
@@ -482,7 +487,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestBody** | [**int[]**](../Model/array.md)|  |
 
 ### Return type
 
@@ -494,8 +502,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -544,7 +552,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -565,12 +573,12 @@ $apiInstance = new Bungie\Api\ForumApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$categoryFilter = 56; // int | A category filter
+$categoryFilter = new \Bungie\Model\\Bungie\Model\ForumForumTopicsCategoryFiltersEnum(); // \Bungie\Model\ForumForumTopicsCategoryFiltersEnum | A category filter
 $group = 56; // int | The group, if any.
 $page = 56; // int | Zero paged page number
 $pageSize = 56; // int | Unused
-$quickDate = 56; // int | A date filter.
-$sort = 56; // int | The sort mode.
+$quickDate = new \Bungie\Model\\Bungie\Model\ForumForumTopicsQuickDateEnum(); // \Bungie\Model\ForumForumTopicsQuickDateEnum | A date filter.
+$sort = new \Bungie\Model\\Bungie\Model\ForumForumTopicsSortEnum(); // \Bungie\Model\ForumForumTopicsSortEnum | The sort mode.
 $locales = 'locales_example'; // string | Comma seperated list of locales posts must match to return in the result list. Default 'en'
 $tagstring = 'tagstring_example'; // string | The tags to search, if any.
 
@@ -587,12 +595,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryFilter** | **int**| A category filter |
+ **categoryFilter** | [**\Bungie\Model\ForumForumTopicsCategoryFiltersEnum**](../Model/.md)| A category filter |
  **group** | **int**| The group, if any. |
  **page** | **int**| Zero paged page number |
  **pageSize** | **int**| Unused |
- **quickDate** | **int**| A date filter. |
- **sort** | **int**| The sort mode. |
+ **quickDate** | [**\Bungie\Model\ForumForumTopicsQuickDateEnum**](../Model/.md)| A date filter. |
+ **sort** | [**\Bungie\Model\ForumForumTopicsSortEnum**](../Model/.md)| The sort mode. |
  **locales** | **string**| Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; | [optional]
  **tagstring** | **string**| The tags to search, if any. | [optional]
 
@@ -607,7 +615,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -623,6 +631,10 @@ Allows a user to slot themselves into a recruitment thread fireteam slot. Return
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -655,12 +667,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -676,6 +688,10 @@ Allows a recruitment thread owner to kick a join user from the fireteam. Returns
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -710,12 +726,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -731,6 +747,10 @@ Allows a user to remove themselves from a recruitment thread fireteam slot. Retu
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -763,12 +783,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

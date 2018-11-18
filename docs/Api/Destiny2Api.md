@@ -53,6 +53,10 @@ Returns the action token if user approves the request.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -85,17 +89,17 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destiny2AwaInitializeRequest**
-> \Bungie\Model\InlineResponse20058 destiny2AwaInitializeRequest()
+> \Bungie\Model\InlineResponse20058 destiny2AwaInitializeRequest($destinyAdvancedAwaPermissionRequested)
 
 
 
@@ -106,6 +110,10 @@ Initialize a request to perform an advanced write action.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -115,9 +123,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
+$destinyAdvancedAwaPermissionRequested = new \Bungie\Model\DestinyAdvancedAwaPermissionRequested(); // \Bungie\Model\DestinyAdvancedAwaPermissionRequested | 
 
 try {
-    $result = $apiInstance->destiny2AwaInitializeRequest();
+    $result = $apiInstance->destiny2AwaInitializeRequest($destinyAdvancedAwaPermissionRequested);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Destiny2Api->destiny2AwaInitializeRequest: ', $e->getMessage(), PHP_EOL;
@@ -126,7 +135,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinyAdvancedAwaPermissionRequested** | [**\Bungie\Model\DestinyAdvancedAwaPermissionRequested**](../Model/DestinyAdvancedAwaPermissionRequested.md)|  |
 
 ### Return type
 
@@ -134,17 +146,17 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destiny2AwaProvideAuthorizationResult**
-> \Bungie\Model\InlineResponse20019 destiny2AwaProvideAuthorizationResult()
+> \Bungie\Model\InlineResponse20019 destiny2AwaProvideAuthorizationResult($destinyAdvancedAwaUserResponse)
 
 
 
@@ -160,9 +172,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$destinyAdvancedAwaUserResponse = new \Bungie\Model\DestinyAdvancedAwaUserResponse(); // \Bungie\Model\DestinyAdvancedAwaUserResponse | 
 
 try {
-    $result = $apiInstance->destiny2AwaProvideAuthorizationResult();
+    $result = $apiInstance->destiny2AwaProvideAuthorizationResult($destinyAdvancedAwaUserResponse);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Destiny2Api->destiny2AwaProvideAuthorizationResult: ', $e->getMessage(), PHP_EOL;
@@ -171,7 +184,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinyAdvancedAwaUserResponse** | [**\Bungie\Model\DestinyAdvancedAwaUserResponse**](../Model/DestinyAdvancedAwaUserResponse.md)|  |
 
 ### Return type
 
@@ -183,13 +199,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destiny2EquipItem**
-> \Bungie\Model\InlineResponse20019 destiny2EquipItem()
+> \Bungie\Model\InlineResponse20019 destiny2EquipItem($destinyRequestsActionsDestinyItemActionRequest)
 
 
 
@@ -200,6 +216,10 @@ Equip an item. You must have a valid Destiny Account, and either be in a social 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -209,9 +229,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
+$destinyRequestsActionsDestinyItemActionRequest = new \Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest | 
 
 try {
-    $result = $apiInstance->destiny2EquipItem();
+    $result = $apiInstance->destiny2EquipItem($destinyRequestsActionsDestinyItemActionRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Destiny2Api->destiny2EquipItem: ', $e->getMessage(), PHP_EOL;
@@ -220,7 +241,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinyRequestsActionsDestinyItemActionRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest**](../Model/DestinyRequestsActionsDestinyItemActionRequest.md)|  |
 
 ### Return type
 
@@ -228,17 +252,17 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destiny2EquipItems**
-> \Bungie\Model\InlineResponse20044 destiny2EquipItems()
+> \Bungie\Model\InlineResponse20044 destiny2EquipItems($destinyRequestsActionsDestinyItemSetActionRequest)
 
 
 
@@ -249,6 +273,10 @@ Equip a list of items by itemInstanceIds. You must have a valid Destiny Account,
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -258,9 +286,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
+$destinyRequestsActionsDestinyItemSetActionRequest = new \Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest | 
 
 try {
-    $result = $apiInstance->destiny2EquipItems();
+    $result = $apiInstance->destiny2EquipItems($destinyRequestsActionsDestinyItemSetActionRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Destiny2Api->destiny2EquipItems: ', $e->getMessage(), PHP_EOL;
@@ -269,7 +298,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinyRequestsActionsDestinyItemSetActionRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest**](../Model/DestinyRequestsActionsDestinyItemSetActionRequest.md)|  |
 
 ### Return type
 
@@ -277,12 +309,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -305,9 +337,9 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The id of the character to retrieve.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $count = 56; // int | Number of rows to return
-$mode = 56; // int | A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation.
+$mode = new \Bungie\Model\\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType(); // \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType | A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation.
 $page = 56; // int | Page number to return, starting with 0.
 
 try {
@@ -325,9 +357,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The id of the character to retrieve. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **count** | **int**| Number of rows to return | [optional]
- **mode** | **int**| A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. | [optional]
+ **mode** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType**](../Model/.md)| A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. | [optional]
  **page** | **int**| Page number to return, starting with 0. | [optional]
 
 ### Return type
@@ -341,7 +373,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -364,7 +396,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | ID of the character.
 $destinyMembershipId = 56; // int | Destiny membership ID.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
@@ -382,7 +414,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| ID of the character. |
  **destinyMembershipId** | **int**| Destiny membership ID. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
@@ -396,7 +428,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -447,7 +479,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -502,7 +534,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -551,7 +583,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -575,7 +607,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 $characterId = 56; // int | The Destiny Character ID of the character for whom we're getting collectible detail info.
 $collectiblePresentationNodeHash = 56; // int | The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node.
 $destinyMembershipId = 56; // int | Destiny membership ID of another user. You may be denied.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
@@ -594,7 +626,7 @@ Name | Type | Description  | Notes
  **characterId** | **int**| The Destiny Character ID of the character for whom we&#39;re getting collectible detail info. |
  **collectiblePresentationNodeHash** | **int**| The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. |
  **destinyMembershipId** | **int**| Destiny membership ID of another user. You may be denied. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
@@ -608,7 +640,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -631,7 +663,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The specific character whose activities should be returned.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 
 try {
     $result = $apiInstance->destiny2GetDestinyAggregateActivityStats($characterId, $destinyMembershipId, $membershipType);
@@ -648,7 +680,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The specific character whose activities should be returned. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
 
 ### Return type
 
@@ -661,7 +693,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -712,7 +744,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -757,7 +789,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -780,12 +812,12 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $dayend = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Last day to return when daily stats are requested. Use the format YYYY-MM-DD.
 $daystart = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | First day to return when daily stats are requested. Use the format YYYY-MM-DD
 $groups = array(new \Bungie\Model\\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType()); // \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] | Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals
 $modes = array(new \Bungie\Model\\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType()); // \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType[] | Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
-$periodType = 56; // int | Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity
+$periodType = new \Bungie\Model\\Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType(); // \Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType | Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity
 
 try {
     $result = $apiInstance->destiny2GetHistoricalStats($characterId, $destinyMembershipId, $membershipType, $dayend, $daystart, $groups, $modes, $periodType);
@@ -802,12 +834,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **dayend** | **\DateTime**| Last day to return when daily stats are requested. Use the format YYYY-MM-DD. | [optional]
  **daystart** | **\DateTime**| First day to return when daily stats are requested. Use the format YYYY-MM-DD | [optional]
  **groups** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[]**](../Model/\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.md)| Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals | [optional]
  **modes** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType[]**](../Model/\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType.md)| Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
- **periodType** | **int**| Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity | [optional]
+ **periodType** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType**](../Model/.md)| Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity | [optional]
 
 ### Return type
 
@@ -820,7 +852,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -865,7 +897,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -887,7 +919,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client()
 );
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $groups = array(new \Bungie\Model\\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType()); // \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] | Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals.
 
 try {
@@ -904,7 +936,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **groups** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[]**](../Model/\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.md)| Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. | [optional]
 
 ### Return type
@@ -918,7 +950,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -941,7 +973,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $destinyMembershipId = 56; // int | The membership ID of the destiny profile.
 $itemInstanceId = 56; // int | The Instance ID of the destiny item.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
@@ -959,7 +991,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| The membership ID of the destiny profile. |
  **itemInstanceId** | **int**| The Instance ID of the destiny item. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
@@ -973,7 +1005,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -995,7 +1027,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client()
 );
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
@@ -1014,7 +1046,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **maxtop** | **int**| Maximum number of top players to return. Use a large number to get entire leaderboard. | [optional]
  **modes** | **string**| List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
  **statid** | **string**| ID of stat to return rather than returning all Leaderboard stats. | [optional]
@@ -1030,7 +1062,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1053,7 +1085,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The specific character to build the leaderboard around for the provided Destiny Membership.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
@@ -1073,7 +1105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The specific character to build the leaderboard around for the provided Destiny Membership. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **maxtop** | **int**| Maximum number of top players to return. Use a large number to get entire leaderboard. | [optional]
  **modes** | **string**| List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
  **statid** | **string**| ID of stat to return rather than returning all Leaderboard stats. | [optional]
@@ -1089,7 +1121,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1111,7 +1143,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client()
 );
 $membershipId = 56; // int | The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don't pass us a PSN membership ID and the XBox membership type, it's not going to work!
-$membershipType = 56; // int | The type for the membership whose linked Destiny accounts you want returned.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The type for the membership whose linked Destiny accounts you want returned.
 
 try {
     $result = $apiInstance->destiny2GetLinkedProfiles($membershipId, $membershipType);
@@ -1127,7 +1159,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **membershipId** | **int**| The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don&#39;t pass us a PSN membership ID and the XBox membership type, it&#39;s not going to work! |
- **membershipType** | **int**| The type for the membership whose linked Destiny accounts you want returned. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| The type for the membership whose linked Destiny accounts you want returned. |
 
 ### Return type
 
@@ -1140,7 +1172,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1189,7 +1221,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1211,7 +1243,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client()
 );
 $destinyMembershipId = 56; // int | Destiny membership ID.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
@@ -1228,7 +1260,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| Destiny membership ID. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
@@ -1242,7 +1274,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1291,7 +1323,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1336,7 +1368,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1359,7 +1391,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The id of the character to retrieve.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 
 try {
     $result = $apiInstance->destiny2GetUniqueWeaponHistory($characterId, $destinyMembershipId, $membershipType);
@@ -1376,7 +1408,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The id of the character to retrieve. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
 
 ### Return type
 
@@ -1389,7 +1421,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1412,7 +1444,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The Destiny Character ID of the character for whom we're getting vendor info.
 $destinyMembershipId = 56; // int | Destiny membership ID of another user. You may be denied.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $vendorHash = 56; // int | The Hash identifier of the Vendor to be returned.
 $components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
@@ -1431,7 +1463,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The Destiny Character ID of the character for whom we&#39;re getting vendor info. |
  **destinyMembershipId** | **int**| Destiny membership ID of another user. You may be denied. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **vendorHash** | **int**| The Hash identifier of the Vendor to be returned. |
  **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
@@ -1446,7 +1478,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1469,7 +1501,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The Destiny Character ID of the character for whom we're getting vendor info.
 $destinyMembershipId = 56; // int | Destiny membership ID of another user. You may be denied.
-$membershipType = 56; // int | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
@@ -1487,7 +1519,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The Destiny Character ID of the character for whom we&#39;re getting vendor info. |
  **destinyMembershipId** | **int**| Destiny membership ID of another user. You may be denied. |
- **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
@@ -1501,12 +1533,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destiny2InsertSocketPlug**
-> \Bungie\Model\InlineResponse20045 destiny2InsertSocketPlug()
+> \Bungie\Model\InlineResponse20045 destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest)
 
 
 
@@ -1517,6 +1549,10 @@ Insert a plug into a socketed item. I know how it sounds, but I assure you it's 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1526,9 +1562,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
+$destinyRequestsActionsDestinyInsertPlugsActionRequest = new \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest | 
 
 try {
-    $result = $apiInstance->destiny2InsertSocketPlug();
+    $result = $apiInstance->destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Destiny2Api->destiny2InsertSocketPlug: ', $e->getMessage(), PHP_EOL;
@@ -1537,7 +1574,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinyRequestsActionsDestinyInsertPlugsActionRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest**](../Model/DestinyRequestsActionsDestinyInsertPlugsActionRequest.md)|  |
 
 ### Return type
 
@@ -1545,17 +1585,17 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destiny2PullFromPostmaster**
-> \Bungie\Model\InlineResponse20019 destiny2PullFromPostmaster()
+> \Bungie\Model\InlineResponse20019 destiny2PullFromPostmaster($destinyRequestsActionsDestinyPostmasterTransferRequest)
 
 
 
@@ -1566,6 +1606,10 @@ Extract an item from the Postmaster, with whatever implications that may entail.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1575,9 +1619,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
+$destinyRequestsActionsDestinyPostmasterTransferRequest = new \Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest | 
 
 try {
-    $result = $apiInstance->destiny2PullFromPostmaster();
+    $result = $apiInstance->destiny2PullFromPostmaster($destinyRequestsActionsDestinyPostmasterTransferRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Destiny2Api->destiny2PullFromPostmaster: ', $e->getMessage(), PHP_EOL;
@@ -1586,7 +1631,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinyRequestsActionsDestinyPostmasterTransferRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest**](../Model/DestinyRequestsActionsDestinyPostmasterTransferRequest.md)|  |
 
 ### Return type
 
@@ -1594,17 +1642,17 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destiny2ReportOffensivePostGameCarnageReportPlayer**
-> \Bungie\Model\InlineResponse20019 destiny2ReportOffensivePostGameCarnageReportPlayer($activityId)
+> \Bungie\Model\InlineResponse20019 destiny2ReportOffensivePostGameCarnageReportPlayer($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest)
 
 
 
@@ -1615,6 +1663,10 @@ Report a player that you met in an activity that was engaging in ToS-violating a
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1625,9 +1677,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $activityId = 56; // int | The ID of the activity where you ran into the brigand that you're reporting.
+$destinyReportingRequestsDestinyReportOffensePgcrRequest = new \Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest(); // \Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest | 
 
 try {
-    $result = $apiInstance->destiny2ReportOffensivePostGameCarnageReportPlayer($activityId);
+    $result = $apiInstance->destiny2ReportOffensivePostGameCarnageReportPlayer($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Destiny2Api->destiny2ReportOffensivePostGameCarnageReportPlayer: ', $e->getMessage(), PHP_EOL;
@@ -1640,6 +1693,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activityId** | **int**| The ID of the activity where you ran into the brigand that you&#39;re reporting. |
+ **destinyReportingRequestsDestinyReportOffensePgcrRequest** | [**\Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest**](../Model/DestinyReportingRequestsDestinyReportOffensePgcrRequest.md)|  |
 
 ### Return type
 
@@ -1647,12 +1701,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1705,7 +1759,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1727,7 +1781,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client()
 );
 $displayName = 'displayName_example'; // string | The full gamertag or PSN id of the player. Spaces and case are ignored.
-$membershipType = 56; // int | A valid non-BungieNet membership type, or All.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type, or All.
 
 try {
     $result = $apiInstance->destiny2SearchDestinyPlayer($displayName, $membershipType);
@@ -1743,7 +1797,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **displayName** | **string**| The full gamertag or PSN id of the player. Spaces and case are ignored. |
- **membershipType** | **int**| A valid non-BungieNet membership type, or All. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type, or All. |
 
 ### Return type
 
@@ -1756,12 +1810,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destiny2SetItemLockState**
-> \Bungie\Model\InlineResponse20019 destiny2SetItemLockState()
+> \Bungie\Model\InlineResponse20019 destiny2SetItemLockState($destinyRequestsActionsDestinyItemStateRequest)
 
 
 
@@ -1772,6 +1826,10 @@ Set the Lock State for an instanced item. You must have a valid Destiny Account.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1781,9 +1839,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
+$destinyRequestsActionsDestinyItemStateRequest = new \Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest | 
 
 try {
-    $result = $apiInstance->destiny2SetItemLockState();
+    $result = $apiInstance->destiny2SetItemLockState($destinyRequestsActionsDestinyItemStateRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Destiny2Api->destiny2SetItemLockState: ', $e->getMessage(), PHP_EOL;
@@ -1792,7 +1851,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinyRequestsActionsDestinyItemStateRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest**](../Model/DestinyRequestsActionsDestinyItemStateRequest.md)|  |
 
 ### Return type
 
@@ -1800,17 +1862,17 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destiny2TransferItem**
-> \Bungie\Model\InlineResponse20019 destiny2TransferItem()
+> \Bungie\Model\InlineResponse20019 destiny2TransferItem($destinyRequestsDestinyItemTransferRequest)
 
 
 
@@ -1821,6 +1883,10 @@ Transfer an item to/from your vault. You must have a valid Destiny account. You 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
 // Configure OAuth2 access token for authorization: oauth2
 $config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1830,9 +1896,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
+$destinyRequestsDestinyItemTransferRequest = new \Bungie\Model\DestinyRequestsDestinyItemTransferRequest(); // \Bungie\Model\DestinyRequestsDestinyItemTransferRequest | 
 
 try {
-    $result = $apiInstance->destiny2TransferItem();
+    $result = $apiInstance->destiny2TransferItem($destinyRequestsDestinyItemTransferRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Destiny2Api->destiny2TransferItem: ', $e->getMessage(), PHP_EOL;
@@ -1841,7 +1908,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinyRequestsDestinyItemTransferRequest** | [**\Bungie\Model\DestinyRequestsDestinyItemTransferRequest**](../Model/DestinyRequestsDestinyItemTransferRequest.md)|  |
 
 ### Return type
 
@@ -1849,12 +1919,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../../README.md#oauth2)
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

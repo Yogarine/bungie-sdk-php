@@ -277,11 +277,11 @@ class UserApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -545,11 +545,11 @@ class UserApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -608,7 +608,7 @@ class UserApi
      * Operation userGetMembershipDataById
      *
      * @param  int $membershipId The membership ID of the target user. (required)
-     * @param  int $membershipType Type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Type of the supplied membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -624,7 +624,7 @@ class UserApi
      * Operation userGetMembershipDataByIdWithHttpInfo
      *
      * @param  int $membershipId The membership ID of the target user. (required)
-     * @param  int $membershipType Type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Type of the supplied membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -713,7 +713,7 @@ class UserApi
      * 
      *
      * @param  int $membershipId The membership ID of the target user. (required)
-     * @param  int $membershipType Type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Type of the supplied membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -734,7 +734,7 @@ class UserApi
      * 
      *
      * @param  int $membershipId The membership ID of the target user. (required)
-     * @param  int $membershipType Type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Type of the supplied membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -782,7 +782,7 @@ class UserApi
      * Create request for operation 'userGetMembershipDataById'
      *
      * @param  int $membershipId The membership ID of the target user. (required)
-     * @param  int $membershipType Type of the supplied membership ID. (required)
+     * @param  \Bungie\Model\BungieMembershipType $membershipType Type of the supplied membership ID. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -832,11 +832,11 @@ class UserApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1081,11 +1081,11 @@ class UserApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1119,6 +1119,11 @@ class UserApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -1353,11 +1358,11 @@ class UserApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1611,11 +1616,11 @@ class UserApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }

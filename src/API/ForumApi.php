@@ -296,11 +296,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -334,6 +334,11 @@ class ForumApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -362,10 +367,10 @@ class ForumApi
     /**
      * Operation forumGetCoreTopicsPaged
      *
-     * @param  int $categoryFilter The category filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
-     * @param  int $quickDate The date filter. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate The date filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -381,10 +386,10 @@ class ForumApi
     /**
      * Operation forumGetCoreTopicsPagedWithHttpInfo
      *
-     * @param  int $categoryFilter The category filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
-     * @param  int $quickDate The date filter. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate The date filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -473,10 +478,10 @@ class ForumApi
      *
      * 
      *
-     * @param  int $categoryFilter The category filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
-     * @param  int $quickDate The date filter. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate The date filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      *
      * @throws \InvalidArgumentException
@@ -497,10 +502,10 @@ class ForumApi
      *
      * 
      *
-     * @param  int $categoryFilter The category filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
-     * @param  int $quickDate The date filter. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate The date filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      *
      * @throws \InvalidArgumentException
@@ -548,10 +553,10 @@ class ForumApi
     /**
      * Create request for operation 'forumGetCoreTopicsPaged'
      *
-     * @param  int $categoryFilter The category filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
-     * @param  int $quickDate The date filter. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate The date filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      *
      * @throws \InvalidArgumentException
@@ -634,11 +639,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -892,11 +897,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1160,11 +1165,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1437,11 +1442,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1714,11 +1719,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1782,7 +1787,7 @@ class ForumApi
      * @param  int $parentPostId parentPostId (required)
      * @param  int $replySize replySize (required)
      * @param  bool $rootThreadMode rootThreadMode (required)
-     * @param  int $sortMode sortMode (required)
+     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -1804,7 +1809,7 @@ class ForumApi
      * @param  int $parentPostId (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  int $sortMode (required)
+     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -1899,7 +1904,7 @@ class ForumApi
      * @param  int $parentPostId (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  int $sortMode (required)
+     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
@@ -1926,7 +1931,7 @@ class ForumApi
      * @param  int $parentPostId (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  int $sortMode (required)
+     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
@@ -1980,7 +1985,7 @@ class ForumApi
      * @param  int $parentPostId (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  int $sortMode (required)
+     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
@@ -2105,11 +2110,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -2172,7 +2177,7 @@ class ForumApi
      * @param  int $pageSize pageSize (required)
      * @param  int $replySize replySize (required)
      * @param  bool $rootThreadMode rootThreadMode (required)
-     * @param  int $sortMode sortMode (required)
+     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -2193,7 +2198,7 @@ class ForumApi
      * @param  int $pageSize (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  int $sortMode (required)
+     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -2287,7 +2292,7 @@ class ForumApi
      * @param  int $pageSize (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  int $sortMode (required)
+     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
@@ -2313,7 +2318,7 @@ class ForumApi
      * @param  int $pageSize (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  int $sortMode (required)
+     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
@@ -2366,7 +2371,7 @@ class ForumApi
      * @param  int $pageSize (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  int $sortMode (required)
+     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
@@ -2477,11 +2482,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -2539,28 +2544,30 @@ class ForumApi
     /**
      * Operation forumGetRecruitmentThreadSummaries
      *
+     * @param  int[] $requestBody requestBody (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Bungie\Model\InlineResponse20015
      */
-    public function forumGetRecruitmentThreadSummaries()
+    public function forumGetRecruitmentThreadSummaries($requestBody)
     {
-        list($response) = $this->forumGetRecruitmentThreadSummariesWithHttpInfo();
+        list($response) = $this->forumGetRecruitmentThreadSummariesWithHttpInfo($requestBody);
         return $response;
     }
 
     /**
      * Operation forumGetRecruitmentThreadSummariesWithHttpInfo
      *
+     * @param  int[] $requestBody (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Bungie\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetRecruitmentThreadSummariesWithHttpInfo()
+    public function forumGetRecruitmentThreadSummariesWithHttpInfo($requestBody)
     {
-        $request = $this->forumGetRecruitmentThreadSummariesRequest();
+        $request = $this->forumGetRecruitmentThreadSummariesRequest($requestBody);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2640,13 +2647,14 @@ class ForumApi
      *
      * 
      *
+     * @param  int[] $requestBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetRecruitmentThreadSummariesAsync()
+    public function forumGetRecruitmentThreadSummariesAsync($requestBody)
     {
-        return $this->forumGetRecruitmentThreadSummariesAsyncWithHttpInfo()
+        return $this->forumGetRecruitmentThreadSummariesAsyncWithHttpInfo($requestBody)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2659,14 +2667,15 @@ class ForumApi
      *
      * 
      *
+     * @param  int[] $requestBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetRecruitmentThreadSummariesAsyncWithHttpInfo()
+    public function forumGetRecruitmentThreadSummariesAsyncWithHttpInfo($requestBody)
     {
         $returnType = '\Bungie\Model\InlineResponse20015';
-        $request = $this->forumGetRecruitmentThreadSummariesRequest();
+        $request = $this->forumGetRecruitmentThreadSummariesRequest($requestBody);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2705,12 +2714,19 @@ class ForumApi
     /**
      * Create request for operation 'forumGetRecruitmentThreadSummaries'
      *
+     * @param  int[] $requestBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetRecruitmentThreadSummariesRequest()
+    protected function forumGetRecruitmentThreadSummariesRequest($requestBody)
     {
+        // verify the required parameter 'requestBody' is set
+        if ($requestBody === null || (is_array($requestBody) && count($requestBody) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $requestBody when calling forumGetRecruitmentThreadSummaries'
+            );
+        }
 
         $resourcePath = '/Forum/Recruit/Summaries/';
         $formParams = [];
@@ -2723,15 +2739,18 @@ class ForumApi
 
         // body params
         $_tempBody = null;
+        if (isset($requestBody)) {
+            $_tempBody = $requestBody;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -2994,11 +3013,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3056,12 +3075,12 @@ class ForumApi
     /**
      * Operation forumGetTopicsPaged
      *
-     * @param  int $categoryFilter A category filter (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
-     * @param  int $quickDate A date filter. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate A date filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      * @param  string $tagstring The tags to search, if any. (optional)
      *
@@ -3078,12 +3097,12 @@ class ForumApi
     /**
      * Operation forumGetTopicsPagedWithHttpInfo
      *
-     * @param  int $categoryFilter A category filter (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
-     * @param  int $quickDate A date filter. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate A date filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      * @param  string $tagstring The tags to search, if any. (optional)
      *
@@ -3173,12 +3192,12 @@ class ForumApi
      *
      * 
      *
-     * @param  int $categoryFilter A category filter (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
-     * @param  int $quickDate A date filter. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate A date filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      * @param  string $tagstring The tags to search, if any. (optional)
      *
@@ -3200,12 +3219,12 @@ class ForumApi
      *
      * 
      *
-     * @param  int $categoryFilter A category filter (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
-     * @param  int $quickDate A date filter. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate A date filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      * @param  string $tagstring The tags to search, if any. (optional)
      *
@@ -3254,12 +3273,12 @@ class ForumApi
     /**
      * Create request for operation 'forumGetTopicsPaged'
      *
-     * @param  int $categoryFilter A category filter (required)
+     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
-     * @param  int $quickDate A date filter. (required)
-     * @param  int $sort The sort mode. (required)
+     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate A date filter. (required)
+     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      * @param  string $tagstring The tags to search, if any. (optional)
      *
@@ -3375,11 +3394,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3643,11 +3662,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3681,6 +3700,11 @@ class ForumApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -3934,11 +3958,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3972,6 +3996,11 @@ class ForumApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
@@ -4206,11 +4235,11 @@ class ForumApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -4244,6 +4273,11 @@ class ForumApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
         // this endpoint requires OAuth (access token)
         if ($this->config->getAccessToken() !== null) {
             $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();

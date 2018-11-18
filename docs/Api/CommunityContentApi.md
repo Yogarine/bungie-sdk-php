@@ -29,9 +29,9 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$mediaFilter = 56; // int | The type of media to get
+$mediaFilter = new \Bungie\Model\\Bungie\Model\ForumForumTopicsCategoryFiltersEnum(); // \Bungie\Model\ForumForumTopicsCategoryFiltersEnum | The type of media to get
 $page = 56; // int | Zero based page
-$sort = 56; // int | The sort mode.
+$sort = new \Bungie\Model\\Bungie\Model\ForumCommunityContentSortMode(); // \Bungie\Model\ForumCommunityContentSortMode | The sort mode.
 
 try {
     $result = $apiInstance->communityContentGetCommunityContent($mediaFilter, $page, $sort);
@@ -46,9 +46,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mediaFilter** | **int**| The type of media to get |
+ **mediaFilter** | [**\Bungie\Model\ForumForumTopicsCategoryFiltersEnum**](../Model/.md)| The type of media to get |
  **page** | **int**| Zero based page |
- **sort** | **int**| The sort mode. |
+ **sort** | [**\Bungie\Model\ForumCommunityContentSortMode**](../Model/.md)| The sort mode. |
 
 ### Return type
 
@@ -61,7 +61,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -83,8 +83,8 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     new GuzzleHttp\Client()
 );
 $page = 56; // int | Zero based page.
-$partnershipType = 56; // int | The type of partnership for which the status should be returned.
-$sort = 56; // int | The sort mode.
+$partnershipType = new \Bungie\Model\\Bungie\Model\PartnershipsPartnershipType(); // \Bungie\Model\PartnershipsPartnershipType | The type of partnership for which the status should be returned.
+$sort = new \Bungie\Model\\Bungie\Model\CommunityCommunityStatusSort(); // \Bungie\Model\CommunityCommunityStatusSort | The sort mode.
 $modeHash = 56; // int | The hash of the Activity Mode for which streams should be retrieved. Don't pass it in or pass 0 to not filter by mode.
 $streamLocale = 'streamLocale_example'; // string | The locale for streams you'd like to see. Don't pass this to fall back on your BNet locale. Pass 'ALL' to not filter by locale.
 
@@ -102,8 +102,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Zero based page. |
- **partnershipType** | **int**| The type of partnership for which the status should be returned. |
- **sort** | **int**| The sort mode. |
+ **partnershipType** | [**\Bungie\Model\PartnershipsPartnershipType**](../Model/.md)| The type of partnership for which the status should be returned. |
+ **sort** | [**\Bungie\Model\CommunityCommunityStatusSort**](../Model/.md)| The sort mode. |
  **modeHash** | **int**| The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. | [optional]
  **streamLocale** | **string**| The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. | [optional]
 
@@ -118,7 +118,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -140,8 +140,8 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     new GuzzleHttp\Client()
 );
 $page = 56; // int | Zero based page.
-$partnershipType = 56; // int | The type of partnership for which the status should be returned.
-$sort = 56; // int | The sort mode.
+$partnershipType = new \Bungie\Model\\Bungie\Model\PartnershipsPartnershipType(); // \Bungie\Model\PartnershipsPartnershipType | The type of partnership for which the status should be returned.
+$sort = new \Bungie\Model\\Bungie\Model\CommunityCommunityStatusSort(); // \Bungie\Model\CommunityCommunityStatusSort | The sort mode.
 
 try {
     $result = $apiInstance->communityContentGetCommunityLiveStatusesForClanmates($page, $partnershipType, $sort);
@@ -157,8 +157,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Zero based page. |
- **partnershipType** | **int**| The type of partnership for which the status should be returned. |
- **sort** | **int**| The sort mode. |
+ **partnershipType** | [**\Bungie\Model\PartnershipsPartnershipType**](../Model/.md)| The type of partnership for which the status should be returned. |
+ **sort** | [**\Bungie\Model\CommunityCommunityStatusSort**](../Model/.md)| The sort mode. |
 
 ### Return type
 
@@ -171,7 +171,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -193,8 +193,8 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     new GuzzleHttp\Client()
 );
 $page = 56; // int | Zero based page.
-$partnershipType = 56; // int | The type of partnership for which the status should be returned.
-$sort = 56; // int | The sort mode.
+$partnershipType = new \Bungie\Model\\Bungie\Model\PartnershipsPartnershipType(); // \Bungie\Model\PartnershipsPartnershipType | The type of partnership for which the status should be returned.
+$sort = new \Bungie\Model\\Bungie\Model\CommunityCommunityStatusSort(); // \Bungie\Model\CommunityCommunityStatusSort | The sort mode.
 
 try {
     $result = $apiInstance->communityContentGetCommunityLiveStatusesForFriends($page, $partnershipType, $sort);
@@ -210,8 +210,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Zero based page. |
- **partnershipType** | **int**| The type of partnership for which the status should be returned. |
- **sort** | **int**| The sort mode. |
+ **partnershipType** | [**\Bungie\Model\PartnershipsPartnershipType**](../Model/.md)| The type of partnership for which the status should be returned. |
+ **sort** | [**\Bungie\Model\CommunityCommunityStatusSort**](../Model/.md)| The sort mode. |
 
 ### Return type
 
@@ -224,7 +224,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -246,8 +246,8 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     new GuzzleHttp\Client()
 );
 $page = 56; // int | Zero based page.
-$partnershipType = 56; // int | The type of partnership for which the status should be returned.
-$sort = 56; // int | The sort mode.
+$partnershipType = new \Bungie\Model\\Bungie\Model\PartnershipsPartnershipType(); // \Bungie\Model\PartnershipsPartnershipType | The type of partnership for which the status should be returned.
+$sort = new \Bungie\Model\\Bungie\Model\CommunityCommunityStatusSort(); // \Bungie\Model\CommunityCommunityStatusSort | The sort mode.
 $streamLocale = 'streamLocale_example'; // string | The locale for streams you'd like to see. Don't pass this to fall back on your BNet locale. Pass 'ALL' to not filter by locale.
 
 try {
@@ -264,8 +264,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Zero based page. |
- **partnershipType** | **int**| The type of partnership for which the status should be returned. |
- **sort** | **int**| The sort mode. |
+ **partnershipType** | [**\Bungie\Model\PartnershipsPartnershipType**](../Model/.md)| The type of partnership for which the status should be returned. |
+ **sort** | [**\Bungie\Model\CommunityCommunityStatusSort**](../Model/.md)| The sort mode. |
  **streamLocale** | **string**| The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. | [optional]
 
 ### Return type
@@ -279,7 +279,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -301,8 +301,8 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     new GuzzleHttp\Client()
 );
 $membershipId = 56; // int | The membershipId related to that type.
-$membershipType = 56; // int | The type of account for which info will be extracted.
-$partnershipType = 56; // int | The type of partnership for which info will be extracted.
+$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The type of account for which info will be extracted.
+$partnershipType = new \Bungie\Model\\Bungie\Model\PartnershipsPartnershipType(); // \Bungie\Model\PartnershipsPartnershipType | The type of partnership for which info will be extracted.
 
 try {
     $result = $apiInstance->communityContentGetStreamingStatusForMember($membershipId, $membershipType, $partnershipType);
@@ -318,8 +318,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **membershipId** | **int**| The membershipId related to that type. |
- **membershipType** | **int**| The type of account for which info will be extracted. |
- **partnershipType** | **int**| The type of partnership for which info will be extracted. |
+ **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| The type of account for which info will be extracted. |
+ **partnershipType** | [**\Bungie\Model\PartnershipsPartnershipType**](../Model/.md)| The type of partnership for which info will be extracted. |
 
 ### Return type
 
@@ -332,7 +332,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

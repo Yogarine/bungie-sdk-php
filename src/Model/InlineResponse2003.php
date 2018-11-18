@@ -58,12 +58,12 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'response' => '\Bungie\Model\UserGeneralUser[]',
+        'errorCode' => '\Bungie\Model\ExceptionsPlatformErrorCodes',
+        'throttleSeconds' => 'int',
+        'errorStatus' => 'string',
         'message' => 'string',
         'messageData' => 'map[string,string]',
-        'errorStatus' => 'string',
-        'throttleSeconds' => 'int',
-        'detailedErrorTrace' => 'string',
-        'errorCode' => '\Bungie\Model\ExceptionsPlatformErrorCodes'
+        'detailedErrorTrace' => 'string'
     ];
 
     /**
@@ -73,12 +73,12 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
       */
     protected static $openAPIFormats = [
         'response' => null,
+        'errorCode' => null,
+        'throttleSeconds' => 'int32',
+        'errorStatus' => null,
         'message' => null,
         'messageData' => null,
-        'errorStatus' => null,
-        'throttleSeconds' => 'int32',
-        'detailedErrorTrace' => null,
-        'errorCode' => null
+        'detailedErrorTrace' => null
     ];
 
     /**
@@ -109,12 +109,12 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'response' => 'Response',
+        'errorCode' => 'ErrorCode',
+        'throttleSeconds' => 'ThrottleSeconds',
+        'errorStatus' => 'ErrorStatus',
         'message' => 'Message',
         'messageData' => 'MessageData',
-        'errorStatus' => 'ErrorStatus',
-        'throttleSeconds' => 'ThrottleSeconds',
-        'detailedErrorTrace' => 'DetailedErrorTrace',
-        'errorCode' => 'ErrorCode'
+        'detailedErrorTrace' => 'DetailedErrorTrace'
     ];
 
     /**
@@ -124,12 +124,12 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'response' => 'setResponse',
+        'errorCode' => 'setErrorCode',
+        'throttleSeconds' => 'setThrottleSeconds',
+        'errorStatus' => 'setErrorStatus',
         'message' => 'setMessage',
         'messageData' => 'setMessageData',
-        'errorStatus' => 'setErrorStatus',
-        'throttleSeconds' => 'setThrottleSeconds',
-        'detailedErrorTrace' => 'setDetailedErrorTrace',
-        'errorCode' => 'setErrorCode'
+        'detailedErrorTrace' => 'setDetailedErrorTrace'
     ];
 
     /**
@@ -139,12 +139,12 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'response' => 'getResponse',
+        'errorCode' => 'getErrorCode',
+        'throttleSeconds' => 'getThrottleSeconds',
+        'errorStatus' => 'getErrorStatus',
         'message' => 'getMessage',
         'messageData' => 'getMessageData',
-        'errorStatus' => 'getErrorStatus',
-        'throttleSeconds' => 'getThrottleSeconds',
-        'detailedErrorTrace' => 'getDetailedErrorTrace',
-        'errorCode' => 'getErrorCode'
+        'detailedErrorTrace' => 'getDetailedErrorTrace'
     ];
 
     /**
@@ -208,12 +208,12 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['throttleSeconds'] = isset($data['throttleSeconds']) ? $data['throttleSeconds'] : null;
+        $this->container['errorStatus'] = isset($data['errorStatus']) ? $data['errorStatus'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['messageData'] = isset($data['messageData']) ? $data['messageData'] : null;
-        $this->container['errorStatus'] = isset($data['errorStatus']) ? $data['errorStatus'] : null;
-        $this->container['throttleSeconds'] = isset($data['throttleSeconds']) ? $data['throttleSeconds'] : null;
         $this->container['detailedErrorTrace'] = isset($data['detailedErrorTrace']) ? $data['detailedErrorTrace'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
     }
 
     /**
@@ -260,6 +260,78 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
     public function setResponse($response)
     {
         $this->container['response'] = $response;
+
+        return $this;
+    }
+
+    /**
+     * Gets errorCode
+     *
+     * @return \Bungie\Model\ExceptionsPlatformErrorCodes|null
+     */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+     * Sets errorCode
+     *
+     * @param \Bungie\Model\ExceptionsPlatformErrorCodes|null $errorCode errorCode
+     *
+     * @return $this
+     */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets throttleSeconds
+     *
+     * @return int|null
+     */
+    public function getThrottleSeconds()
+    {
+        return $this->container['throttleSeconds'];
+    }
+
+    /**
+     * Sets throttleSeconds
+     *
+     * @param int|null $throttleSeconds throttleSeconds
+     *
+     * @return $this
+     */
+    public function setThrottleSeconds($throttleSeconds)
+    {
+        $this->container['throttleSeconds'] = $throttleSeconds;
+
+        return $this;
+    }
+
+    /**
+     * Gets errorStatus
+     *
+     * @return string|null
+     */
+    public function getErrorStatus()
+    {
+        return $this->container['errorStatus'];
+    }
+
+    /**
+     * Sets errorStatus
+     *
+     * @param string|null $errorStatus errorStatus
+     *
+     * @return $this
+     */
+    public function setErrorStatus($errorStatus)
+    {
+        $this->container['errorStatus'] = $errorStatus;
 
         return $this;
     }
@@ -313,54 +385,6 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets errorStatus
-     *
-     * @return string|null
-     */
-    public function getErrorStatus()
-    {
-        return $this->container['errorStatus'];
-    }
-
-    /**
-     * Sets errorStatus
-     *
-     * @param string|null $errorStatus errorStatus
-     *
-     * @return $this
-     */
-    public function setErrorStatus($errorStatus)
-    {
-        $this->container['errorStatus'] = $errorStatus;
-
-        return $this;
-    }
-
-    /**
-     * Gets throttleSeconds
-     *
-     * @return int|null
-     */
-    public function getThrottleSeconds()
-    {
-        return $this->container['throttleSeconds'];
-    }
-
-    /**
-     * Sets throttleSeconds
-     *
-     * @param int|null $throttleSeconds throttleSeconds
-     *
-     * @return $this
-     */
-    public function setThrottleSeconds($throttleSeconds)
-    {
-        $this->container['throttleSeconds'] = $throttleSeconds;
-
-        return $this;
-    }
-
-    /**
      * Gets detailedErrorTrace
      *
      * @return string|null
@@ -380,30 +404,6 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
     public function setDetailedErrorTrace($detailedErrorTrace)
     {
         $this->container['detailedErrorTrace'] = $detailedErrorTrace;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorCode
-     *
-     * @return \Bungie\Model\ExceptionsPlatformErrorCodes|null
-     */
-    public function getErrorCode()
-    {
-        return $this->container['errorCode'];
-    }
-
-    /**
-     * Sets errorCode
-     *
-     * @param \Bungie\Model\ExceptionsPlatformErrorCodes|null $errorCode errorCode
-     *
-     * @return $this
-     */
-    public function setErrorCode($errorCode)
-    {
-        $this->container['errorCode'] = $errorCode;
 
         return $this;
     }

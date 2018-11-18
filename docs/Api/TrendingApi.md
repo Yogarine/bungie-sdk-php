@@ -50,7 +50,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -101,7 +101,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -123,7 +123,7 @@ $apiInstance = new Bungie\Api\TrendingApi(
     new GuzzleHttp\Client()
 );
 $identifier = 'identifier_example'; // string | The identifier for the entity to be returned.
-$trendingEntryType = 56; // int | The type of entity to be returned.
+$trendingEntryType = new \Bungie\Model\\Bungie\Model\TrendingTrendingEntryType(); // \Bungie\Model\TrendingTrendingEntryType | The type of entity to be returned.
 
 try {
     $result = $apiInstance->trendingGetTrendingEntryDetail($identifier, $trendingEntryType);
@@ -139,7 +139,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| The identifier for the entity to be returned. |
- **trendingEntryType** | **int**| The type of entity to be returned. |
+ **trendingEntryType** | [**\Bungie\Model\TrendingTrendingEntryType**](../Model/.md)| The type of entity to be returned. |
 
 ### Return type
 
@@ -152,7 +152,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
