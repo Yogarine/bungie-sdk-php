@@ -57,7 +57,7 @@ class DestinyPresentationNodesComponent implements \Bungie\Model\ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'nodes' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Presentation\DestinyPresentationNodeComponent]'
+        'nodes' => 'map[string,\Bungie\Model\Destiny\Components\Presentation\DestinyPresentationNodeComponent]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class DestinyPresentationNodesComponent implements \Bungie\Model\ModelInterface,
     /**
      * Gets nodes
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Presentation\DestinyPresentationNodeComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Components\Presentation\DestinyPresentationNodeComponent]|null
      */
     public function getNodes()
     {
@@ -217,7 +217,7 @@ class DestinyPresentationNodesComponent implements \Bungie\Model\ModelInterface,
     /**
      * Sets nodes
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Presentation\DestinyPresentationNodeComponent]|null $nodes nodes
+     * @param map[string,\Bungie\Model\Destiny\Components\Presentation\DestinyPresentationNodeComponent]|null $nodes nodes
      *
      * @return $this
      */

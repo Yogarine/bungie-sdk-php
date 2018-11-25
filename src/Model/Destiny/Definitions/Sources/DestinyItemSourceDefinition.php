@@ -63,7 +63,7 @@ class DestinyItemSourceDefinition implements \Bungie\Model\ModelInterface, Array
         'maxQuality' => 'int',
         'minLevelRequired' => 'int',
         'maxLevelRequired' => 'int',
-        'computedStats' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]',
+        'computedStats' => 'map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]',
         'sourceHashes' => '\Bungie\Model\int[]'
     ];
 
@@ -364,7 +364,7 @@ class DestinyItemSourceDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets computedStats
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]|null
      */
     public function getComputedStats()
     {
@@ -374,7 +374,7 @@ class DestinyItemSourceDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets computedStats
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]|null $computedStats The stats computed for this level/quality range.
+     * @param map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]|null $computedStats The stats computed for this level/quality range.
      *
      * @return $this
      */

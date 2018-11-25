@@ -58,12 +58,12 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'progressions' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\DestinyProgression]',
-        'factions' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Progression\DestinyFactionProgression]',
-        'milestones' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Milestones\DestinyMilestone]',
+        'progressions' => 'map[string,\Bungie\Model\Destiny\DestinyProgression]',
+        'factions' => 'map[string,\Bungie\Model\Destiny\Progression\DestinyFactionProgression]',
+        'milestones' => 'map[string,\Bungie\Model\Destiny\Milestones\DestinyMilestone]',
         'quests' => '\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyQuestStatus[]',
-        'uninstancedItemObjectives' => '\Bungie\Model\map[string,\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]]',
-        'checklists' => '\Bungie\Model\map[string,\Bungie\Model\map[string,bool]]'
+        'uninstancedItemObjectives' => 'map[string,\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]]',
+        'checklists' => 'map[string,map[string,bool]]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
     /**
      * Gets progressions
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\DestinyProgression]|null
+     * @return map[string,\Bungie\Model\Destiny\DestinyProgression]|null
      */
     public function getProgressions()
     {
@@ -248,7 +248,7 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
     /**
      * Sets progressions
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\DestinyProgression]|null $progressions A Dictionary of all known progressions for the Character, keyed by the Progression's hash.  Not all progressions have user-facing data, but those who do will have that data contained in the DestinyProgressionDefinition.
+     * @param map[string,\Bungie\Model\Destiny\DestinyProgression]|null $progressions A Dictionary of all known progressions for the Character, keyed by the Progression's hash.  Not all progressions have user-facing data, but those who do will have that data contained in the DestinyProgressionDefinition.
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
     /**
      * Gets factions
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Progression\DestinyFactionProgression]|null
+     * @return map[string,\Bungie\Model\Destiny\Progression\DestinyFactionProgression]|null
      */
     public function getFactions()
     {
@@ -272,7 +272,7 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
     /**
      * Sets factions
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Progression\DestinyFactionProgression]|null $factions A dictionary of all known Factions, keyed by the Faction's hash. It contains data about this character's status with the faction.
+     * @param map[string,\Bungie\Model\Destiny\Progression\DestinyFactionProgression]|null $factions A dictionary of all known Factions, keyed by the Faction's hash. It contains data about this character's status with the faction.
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
     /**
      * Gets milestones
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Milestones\DestinyMilestone]|null
+     * @return map[string,\Bungie\Model\Destiny\Milestones\DestinyMilestone]|null
      */
     public function getMilestones()
     {
@@ -296,7 +296,7 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
     /**
      * Sets milestones
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Milestones\DestinyMilestone]|null $milestones Milestones are related to the simple progressions shown in the game, but return additional and hopefully helpful information for users about the specifics of the Milestone's status.
+     * @param map[string,\Bungie\Model\Destiny\Milestones\DestinyMilestone]|null $milestones Milestones are related to the simple progressions shown in the game, but return additional and hopefully helpful information for users about the specifics of the Milestone's status.
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
     /**
      * Gets uninstancedItemObjectives
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]]|null
+     * @return map[string,\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]]|null
      */
     public function getUninstancedItemObjectives()
     {
@@ -344,7 +344,7 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
     /**
      * Sets uninstancedItemObjectives
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]]|null $uninstancedItemObjectives Sometimes, you have items in your inventory that don't have instances, but still have Objective information. This provides you that objective information for uninstanced items.   This dictionary is keyed by the item's hash: which you can use to look up the name and description for the overall task(s) implied by the objective. The value is the list of objectives for this item, and their statuses.
+     * @param map[string,\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]]|null $uninstancedItemObjectives Sometimes, you have items in your inventory that don't have instances, but still have Objective information. This provides you that objective information for uninstanced items.   This dictionary is keyed by the item's hash: which you can use to look up the name and description for the overall task(s) implied by the objective. The value is the list of objectives for this item, and their statuses.
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
     /**
      * Gets checklists
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\map[string,bool]]|null
+     * @return map[string,map[string,bool]]|null
      */
     public function getChecklists()
     {
@@ -368,7 +368,7 @@ class DestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterfa
     /**
      * Sets checklists
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\map[string,bool]]|null $checklists The set of checklists that can be examined for this specific character, keyed by the hash identifier of the Checklist (DestinyChecklistDefinition)  For each checklist returned, its value is itself a Dictionary keyed by the checklist's hash identifier with the value being a boolean indicating if it's been discovered yet.
+     * @param map[string,map[string,bool]]|null $checklists The set of checklists that can be examined for this specific character, keyed by the hash identifier of the Checklist (DestinyChecklistDefinition)  For each checklist returned, its value is itself a Dictionary keyed by the checklist's hash identifier with the value being a boolean indicating if it's been discovered yet.
      *
      * @return $this
      */

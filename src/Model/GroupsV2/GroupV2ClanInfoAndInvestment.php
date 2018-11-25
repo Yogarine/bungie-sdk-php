@@ -58,7 +58,7 @@ class GroupV2ClanInfoAndInvestment implements \Bungie\Model\ModelInterface, Arra
       * @var string[]
       */
     protected static $openAPITypes = [
-        'd2ClanProgressions' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\DestinyProgression]',
+        'd2ClanProgressions' => 'map[string,\Bungie\Model\Destiny\DestinyProgression]',
         'clanCallsign' => 'string',
         'clanBannerData' => '\Bungie\Model\GroupsV2\ClanBanner'
     ];
@@ -220,7 +220,7 @@ class GroupV2ClanInfoAndInvestment implements \Bungie\Model\ModelInterface, Arra
     /**
      * Gets d2ClanProgressions
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\DestinyProgression]|null
+     * @return map[string,\Bungie\Model\Destiny\DestinyProgression]|null
      */
     public function getD2ClanProgressions()
     {
@@ -230,7 +230,7 @@ class GroupV2ClanInfoAndInvestment implements \Bungie\Model\ModelInterface, Arra
     /**
      * Sets d2ClanProgressions
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\DestinyProgression]|null $d2ClanProgressions d2ClanProgressions
+     * @param map[string,\Bungie\Model\Destiny\DestinyProgression]|null $d2ClanProgressions d2ClanProgressions
      *
      * @return $this
      */

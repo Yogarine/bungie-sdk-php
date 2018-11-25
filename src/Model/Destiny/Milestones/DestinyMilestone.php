@@ -61,7 +61,7 @@ class DestinyMilestone implements \Bungie\Model\ModelInterface, ArrayAccess
         'milestoneHash' => 'int',
         'availableQuests' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneQuest[]',
         'activities' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneChallengeActivity[]',
-        'values' => '\Bungie\Model\map[string,float]',
+        'values' => 'map[string,float]',
         'vendorHashes' => '\Bungie\Model\int[]',
         'vendors' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneVendor[]',
         'rewards' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneRewardCategory[]',
@@ -334,7 +334,7 @@ class DestinyMilestone implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets values
      *
-     * @return \Bungie\Model\map[string,float]|null
+     * @return map[string,float]|null
      */
     public function getValues()
     {
@@ -344,7 +344,7 @@ class DestinyMilestone implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets values
      *
-     * @param \Bungie\Model\map[string,float]|null $values Milestones may have arbitrary key/value pairs associated with them, for data that users will want to know about but that doesn't fit neatly into any of the common components such as Quests. A good example of this would be - if this existed in Destiny 1 - the number of wins you currently have on your Trials of Osiris ticket. Looking in the DestinyMilestoneDefinition, you can use the string identifier of this dictionary to look up more info about the value, including localized string content for displaying the value. The value in the dictionary is the floating point number. The definition will tell you how to format this number.
+     * @param map[string,float]|null $values Milestones may have arbitrary key/value pairs associated with them, for data that users will want to know about but that doesn't fit neatly into any of the common components such as Quests. A good example of this would be - if this existed in Destiny 1 - the number of wins you currently have on your Trials of Osiris ticket. Looking in the DestinyMilestoneDefinition, you can use the string identifier of this dictionary to look up more info about the value, including localized string content for displaying the value. The value in the dictionary is the floating point number. The definition will tell you how to format this number.
      *
      * @return $this
      */

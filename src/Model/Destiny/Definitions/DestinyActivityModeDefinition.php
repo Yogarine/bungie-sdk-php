@@ -66,7 +66,7 @@ class DestinyActivityModeDefinition implements \Bungie\Model\ModelInterface, Arr
         'isAggregateMode' => 'bool',
         'parentHashes' => '\Bungie\Model\int[]',
         'friendlyName' => 'string',
-        'activityModeMappings' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType]',
+        'activityModeMappings' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType]',
         'display' => 'bool',
         'order' => 'int',
         'hash' => 'int',
@@ -478,7 +478,7 @@ class DestinyActivityModeDefinition implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets activityModeMappings
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType]|null
+     * @return map[string,\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType]|null
      */
     public function getActivityModeMappings()
     {
@@ -488,7 +488,7 @@ class DestinyActivityModeDefinition implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets activityModeMappings
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType]|null $activityModeMappings If this exists, the mode has specific Activities (referred to by the Key) that should instead map to other Activity Modes when they are played. This was useful in D1 for Private Matches, where we wanted to have Private Matches as an activity mode while still referring to the specific mode being played.
+     * @param map[string,\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType]|null $activityModeMappings If this exists, the mode has specific Activities (referred to by the Key) that should instead map to other Activity Modes when they are played. This was useful in D1 for Private Matches, where we wanted to have Private Matches as an activity mode while still referring to the specific mode being played.
      *
      * @return $this
      */

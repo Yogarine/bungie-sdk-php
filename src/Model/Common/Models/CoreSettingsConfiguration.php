@@ -57,7 +57,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'systems' => '\Bungie\Model\map[string,\Bungie\Model\Common\Models\CoreSystem]',
+        'systems' => 'map[string,\Bungie\Model\Common\Models\CoreSystem]',
         'ignoreReasons' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
         'forumCategories' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
         'groupAvatars' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
@@ -309,7 +309,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets systems
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Common\Models\CoreSystem]|null
+     * @return map[string,\Bungie\Model\Common\Models\CoreSystem]|null
      */
     public function getSystems()
     {
@@ -319,7 +319,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets systems
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Common\Models\CoreSystem]|null $systems systems
+     * @param map[string,\Bungie\Model\Common\Models\CoreSystem]|null $systems systems
      *
      * @return $this
      */

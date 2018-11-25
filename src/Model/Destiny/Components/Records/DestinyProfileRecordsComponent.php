@@ -59,7 +59,7 @@ class DestinyProfileRecordsComponent implements \Bungie\Model\ModelInterface, Ar
     protected static $openAPITypes = [
         'score' => 'int',
         'trackedRecordHash' => 'int',
-        'records' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]'
+        'records' => 'map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class DestinyProfileRecordsComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets records
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null
      */
     public function getRecords()
     {
@@ -277,7 +277,7 @@ class DestinyProfileRecordsComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets records
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null $records records
+     * @param map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null $records records
      *
      * @return $this
      */

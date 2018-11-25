@@ -60,7 +60,7 @@ class DestinyItemStatBlockDefinition implements \Bungie\Model\ModelInterface, Ar
     protected static $openAPITypes = [
         'disablePrimaryStatDisplay' => 'bool',
         'statGroupHash' => 'int',
-        'stats' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]',
+        'stats' => 'map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]',
         'hasDisplayableStats' => 'bool',
         'primaryBaseStatHash' => 'int'
     ];
@@ -280,7 +280,7 @@ class DestinyItemStatBlockDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets stats
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]|null
      */
     public function getStats()
     {
@@ -290,7 +290,7 @@ class DestinyItemStatBlockDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets stats
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]|null $stats If you are looking for precomputed values for the stats on a weapon, this is where they are stored. Technically these are the \"Display\" stat values. Please see DestinyStatsDefinition for what Display Stat Values means, it's a very long story... but essentially these are the closest values BNet can get to the item stats that you see in-game.  These stats are keyed by the DestinyStatDefinition's hash identifier for the stat that's found on the item.
+     * @param map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]|null $stats If you are looking for precomputed values for the stats on a weapon, this is where they are stored. Technically these are the \"Display\" stat values. Please see DestinyStatsDefinition for what Display Stat Values means, it's a very long story... but essentially these are the closest values BNet can get to the item stats that you see in-game.  These stats are keyed by the DestinyStatDefinition's hash identifier for the stat that's found on the item.
      *
      * @return $this
      */

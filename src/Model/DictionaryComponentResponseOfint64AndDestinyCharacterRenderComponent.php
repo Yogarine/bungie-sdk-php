@@ -57,7 +57,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterRenderComponent imple
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterRenderComponent]',
+        'data' => 'map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterRenderComponent]',
         'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterRenderComponent imple
     /**
      * Gets data
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterRenderComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterRenderComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterRenderComponent imple
     /**
      * Sets data
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterRenderComponent]|null $data data
+     * @param map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterRenderComponent]|null $data data
      *
      * @return $this
      */

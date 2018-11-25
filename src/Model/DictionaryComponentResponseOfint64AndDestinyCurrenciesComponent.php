@@ -57,7 +57,7 @@ class DictionaryComponentResponseOfint64AndDestinyCurrenciesComponent implements
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Inventory\DestinyCurrenciesComponent]',
+        'data' => 'map[string,\Bungie\Model\Destiny\Components\Inventory\DestinyCurrenciesComponent]',
         'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint64AndDestinyCurrenciesComponent implements
     /**
      * Gets data
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Inventory\DestinyCurrenciesComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Components\Inventory\DestinyCurrenciesComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint64AndDestinyCurrenciesComponent implements
     /**
      * Sets data
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Inventory\DestinyCurrenciesComponent]|null $data data
+     * @param map[string,\Bungie\Model\Destiny\Components\Inventory\DestinyCurrenciesComponent]|null $data data
      *
      * @return $this
      */

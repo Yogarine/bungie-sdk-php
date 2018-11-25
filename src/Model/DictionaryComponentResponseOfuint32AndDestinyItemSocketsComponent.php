@@ -57,7 +57,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemSocketsComponent implemen
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemSocketsComponent]',
+        'data' => 'map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemSocketsComponent]',
         'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemSocketsComponent implemen
     /**
      * Gets data
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemSocketsComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemSocketsComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemSocketsComponent implemen
     /**
      * Sets data
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemSocketsComponent]|null $data data
+     * @param map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemSocketsComponent]|null $data data
      *
      * @return $this
      */

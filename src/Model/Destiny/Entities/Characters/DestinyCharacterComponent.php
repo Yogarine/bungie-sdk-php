@@ -65,7 +65,7 @@ class DestinyCharacterComponent implements \Bungie\Model\ModelInterface, ArrayAc
         'minutesPlayedThisSession' => 'int',
         'minutesPlayedTotal' => 'int',
         'light' => 'int',
-        'stats' => '\Bungie\Model\map[string,int]',
+        'stats' => 'map[string,int]',
         'raceHash' => 'int',
         'genderHash' => 'int',
         'classHash' => 'int',
@@ -502,7 +502,7 @@ class DestinyCharacterComponent implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets stats
      *
-     * @return \Bungie\Model\map[string,int]|null
+     * @return map[string,int]|null
      */
     public function getStats()
     {
@@ -512,7 +512,7 @@ class DestinyCharacterComponent implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets stats
      *
-     * @param \Bungie\Model\map[string,int]|null $stats Your character's stats, such as Agility, Resilience, etc... *not* historical stats.  You'll have to call a different endpoint for those.
+     * @param map[string,int]|null $stats Your character's stats, such as Agility, Resilience, etc... *not* historical stats.  You'll have to call a different endpoint for those.
      *
      * @return $this
      */

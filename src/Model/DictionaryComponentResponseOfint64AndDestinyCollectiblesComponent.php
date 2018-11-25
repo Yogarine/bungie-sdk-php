@@ -57,7 +57,7 @@ class DictionaryComponentResponseOfint64AndDestinyCollectiblesComponent implemen
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectiblesComponent]',
+        'data' => 'map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectiblesComponent]',
         'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint64AndDestinyCollectiblesComponent implemen
     /**
      * Gets data
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectiblesComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectiblesComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint64AndDestinyCollectiblesComponent implemen
     /**
      * Sets data
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectiblesComponent]|null $data data
+     * @param map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectiblesComponent]|null $data data
      *
      * @return $this
      */

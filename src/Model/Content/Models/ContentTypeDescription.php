@@ -65,7 +65,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
         'reminder' => 'string',
         'properties' => '\Bungie\Model\\Bungie\Model\Content\Models\ContentTypeProperty[]',
         'tagMetadata' => '\Bungie\Model\\Bungie\Model\Content\Models\TagMetadataDefinition[]',
-        'tagMetadataItems' => '\Bungie\Model\map[string,\Bungie\Model\Content\Models\TagMetadataItem]',
+        'tagMetadataItems' => 'map[string,\Bungie\Model\Content\Models\TagMetadataItem]',
         'usageExamples' => '\Bungie\Model\string[]',
         'showInContentEditor' => 'bool',
         'typeOf' => 'string',
@@ -519,7 +519,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets tagMetadataItems
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Content\Models\TagMetadataItem]|null
+     * @return map[string,\Bungie\Model\Content\Models\TagMetadataItem]|null
      */
     public function getTagMetadataItems()
     {
@@ -529,7 +529,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets tagMetadataItems
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Content\Models\TagMetadataItem]|null $tagMetadataItems tagMetadataItems
+     * @param map[string,\Bungie\Model\Content\Models\TagMetadataItem]|null $tagMetadataItems tagMetadataItems
      *
      * @return $this
      */

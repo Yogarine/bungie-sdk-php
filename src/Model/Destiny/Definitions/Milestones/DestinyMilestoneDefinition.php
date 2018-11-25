@@ -67,11 +67,11 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
         'showInMilestones' => 'bool',
         'explorePrioritizesActivityImage' => 'bool',
         'hasPredictableDates' => 'bool',
-        'quests' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneQuestDefinition]',
-        'rewards' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardCategoryDefinition]',
+        'quests' => 'map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneQuestDefinition]',
+        'rewards' => 'map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardCategoryDefinition]',
         'vendorsDisplayTitle' => 'string',
         'vendors' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneVendorDefinition[]',
-        'values' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneValueDefinition]',
+        'values' => 'map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneValueDefinition]',
         'isInGameMilestone' => 'bool',
         'activities' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityDefinition[]',
         'defaultOrder' => 'int',
@@ -538,7 +538,7 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets quests
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneQuestDefinition]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneQuestDefinition]|null
      */
     public function getQuests()
     {
@@ -548,7 +548,7 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets quests
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneQuestDefinition]|null $quests The full set of possible Quests that give the overview of the Milestone event/activity in question. Only one of these can be active at a time for a given Conceptual Milestone, but many of them may be \"available\" for the user to choose from. (for instance, with Milestones you can choose from the three available Quests, but only one can be active at a time) Keyed by the quest item.  As of Forsaken (~September 2018), Quest-style Milestones are being removed for many types of activities. There will likely be further revisions to the Milestone concept in the future.
+     * @param map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneQuestDefinition]|null $quests The full set of possible Quests that give the overview of the Milestone event/activity in question. Only one of these can be active at a time for a given Conceptual Milestone, but many of them may be \"available\" for the user to choose from. (for instance, with Milestones you can choose from the three available Quests, but only one can be active at a time) Keyed by the quest item.  As of Forsaken (~September 2018), Quest-style Milestones are being removed for many types of activities. There will likely be further revisions to the Milestone concept in the future.
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets rewards
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardCategoryDefinition]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardCategoryDefinition]|null
      */
     public function getRewards()
     {
@@ -572,7 +572,7 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets rewards
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardCategoryDefinition]|null $rewards If this milestone can provide rewards, this will define the categories into which the individual reward entries are placed.  This is keyed by the Category's hash, which is only guaranteed to be unique within a given Milestone.
+     * @param map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardCategoryDefinition]|null $rewards If this milestone can provide rewards, this will define the categories into which the individual reward entries are placed.  This is keyed by the Category's hash, which is only guaranteed to be unique within a given Milestone.
      *
      * @return $this
      */
@@ -634,7 +634,7 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets values
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneValueDefinition]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneValueDefinition]|null
      */
     public function getValues()
     {
@@ -644,7 +644,7 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets values
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneValueDefinition]|null $values Sometimes, milestones will have arbitrary values associated with them that are of interest to us or to third party developers. This is the collection of those values' definitions, keyed by the identifier of the value and providing useful definition information such as localizable names and descriptions for the value.
+     * @param map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneValueDefinition]|null $values Sometimes, milestones will have arbitrary values associated with them that are of interest to us or to third party developers. This is the collection of those values' definitions, keyed by the identifier of the value and providing useful definition information such as localizable names and descriptions for the value.
      *
      * @return $this
      */

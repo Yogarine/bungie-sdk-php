@@ -58,7 +58,7 @@ class DestinyPostGameCarnageReportExtendedData implements \Bungie\Model\ModelInt
       */
     protected static $openAPITypes = [
         'weapons' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalWeaponStats[]',
-        'values' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]'
+        'values' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class DestinyPostGameCarnageReportExtendedData implements \Bungie\Model\ModelInt
     /**
      * Gets values
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
+     * @return map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
      */
     public function getValues()
     {
@@ -247,7 +247,7 @@ class DestinyPostGameCarnageReportExtendedData implements \Bungie\Model\ModelInt
     /**
      * Sets values
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $values Collection of stats for the player in this activity.
+     * @param map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $values Collection of stats for the player in this activity.
      *
      * @return $this
      */

@@ -77,12 +77,12 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
         'visibleDependency' => 'string',
         'visibleOn' => 'string',
         'datatype' => '\Bungie\Model\Content\Models\ContentPropertyDataTypeEnum',
-        'attributes' => '\Bungie\Model\map[string,string]',
+        'attributes' => 'map[string,string]',
         'childProperties' => '\Bungie\Model\\Bungie\Model\Content\Models\ContentTypeProperty[]',
         'contentTypeAllowed' => 'string',
         'bindToProperty' => 'string',
         'boundRegex' => 'string',
-        'representationSelection' => '\Bungie\Model\map[string,string]',
+        'representationSelection' => 'map[string,string]',
         'defaultValues' => '\Bungie\Model\\Bungie\Model\Content\Models\ContentTypeDefaultValue[]',
         'isExternalAllowed' => 'bool',
         'propertySection' => 'string',
@@ -927,7 +927,7 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets attributes
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getAttributes()
     {
@@ -937,7 +937,7 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets attributes
      *
-     * @param \Bungie\Model\map[string,string]|null $attributes attributes
+     * @param map[string,string]|null $attributes attributes
      *
      * @return $this
      */
@@ -1047,7 +1047,7 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets representationSelection
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getRepresentationSelection()
     {
@@ -1057,7 +1057,7 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets representationSelection
      *
-     * @param \Bungie\Model\map[string,string]|null $representationSelection representationSelection
+     * @param map[string,string]|null $representationSelection representationSelection
      *
      * @return $this
      */

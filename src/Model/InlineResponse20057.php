@@ -57,12 +57,12 @@ class InlineResponse20057 implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Milestones\DestinyPublicMilestone]',
+        'response' => 'map[string,\Bungie\Model\Destiny\Milestones\DestinyPublicMilestone]',
         'errorCode' => '\Bungie\Model\Exceptions\PlatformErrorCodes',
         'throttleSeconds' => 'int',
         'errorStatus' => 'string',
         'message' => 'string',
-        'messageData' => '\Bungie\Model\map[string,string]',
+        'messageData' => 'map[string,string]',
         'detailedErrorTrace' => 'string'
     ];
 
@@ -243,7 +243,7 @@ class InlineResponse20057 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Milestones\DestinyPublicMilestone]|null
+     * @return map[string,\Bungie\Model\Destiny\Milestones\DestinyPublicMilestone]|null
      */
     public function getResponse()
     {
@@ -253,7 +253,7 @@ class InlineResponse20057 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Milestones\DestinyPublicMilestone]|null $response response
+     * @param map[string,\Bungie\Model\Destiny\Milestones\DestinyPublicMilestone]|null $response response
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class InlineResponse20057 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets messageData
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getMessageData()
     {
@@ -373,7 +373,7 @@ class InlineResponse20057 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets messageData
      *
-     * @param \Bungie\Model\map[string,string]|null $messageData messageData
+     * @param map[string,string]|null $messageData messageData
      *
      * @return $this
      */

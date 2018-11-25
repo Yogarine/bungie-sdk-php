@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **reminder** | **string** |  | [optional] 
 **properties** | [**\Bungie\Model\\Bungie\Model\Content\Models\ContentTypeProperty[]**](ContentTypeProperty.md) |  | [optional] 
 **tagMetadata** | [**\Bungie\Model\\Bungie\Model\Content\Models\TagMetadataDefinition[]**](TagMetadataDefinition.md) |  | [optional] 
-**tagMetadataItems** | [**\Bungie\Model\map[string,\Bungie\Model\Content\Models\TagMetadataItem]**](TagMetadataItem.md) |  | [optional] 
+**tagMetadataItems** | [**map[string,\Bungie\Model\Content\Models\TagMetadataItem]**](TagMetadataItem.md) |  | [optional] 
 **usageExamples** | **\Bungie\Model\string[]** |  | [optional] 
 **showInContentEditor** | **bool** |  | [optional] 
 **typeOf** | **string** |  | [optional] 

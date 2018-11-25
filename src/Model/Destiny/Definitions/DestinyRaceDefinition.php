@@ -60,8 +60,8 @@ class DestinyRaceDefinition implements \Bungie\Model\ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
         'raceType' => '\Bungie\Model\Destiny\DestinyRace',
-        'genderedRaceNames' => '\Bungie\Model\map[string,string]',
-        'genderedRaceNamesByGenderHash' => '\Bungie\Model\map[string,string]',
+        'genderedRaceNames' => 'map[string,string]',
+        'genderedRaceNamesByGenderHash' => 'map[string,string]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -292,7 +292,7 @@ class DestinyRaceDefinition implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets genderedRaceNames
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getGenderedRaceNames()
     {
@@ -302,7 +302,7 @@ class DestinyRaceDefinition implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets genderedRaceNames
      *
-     * @param \Bungie\Model\map[string,string]|null $genderedRaceNames A localized string referring to the singular form of the Race's name when referred to in gendered form. Keyed by the DestinyGender.
+     * @param map[string,string]|null $genderedRaceNames A localized string referring to the singular form of the Race's name when referred to in gendered form. Keyed by the DestinyGender.
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class DestinyRaceDefinition implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets genderedRaceNamesByGenderHash
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getGenderedRaceNamesByGenderHash()
     {
@@ -326,7 +326,7 @@ class DestinyRaceDefinition implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets genderedRaceNamesByGenderHash
      *
-     * @param \Bungie\Model\map[string,string]|null $genderedRaceNamesByGenderHash genderedRaceNamesByGenderHash
+     * @param map[string,string]|null $genderedRaceNamesByGenderHash genderedRaceNamesByGenderHash
      *
      * @return $this
      */

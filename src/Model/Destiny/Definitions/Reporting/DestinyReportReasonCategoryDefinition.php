@@ -59,7 +59,7 @@ class DestinyReportReasonCategoryDefinition implements \Bungie\Model\ModelInterf
       */
     protected static $openAPITypes = [
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
-        'reasons' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Reporting\DestinyReportReasonDefinition]',
+        'reasons' => 'map[string,\Bungie\Model\Destiny\Definitions\Reporting\DestinyReportReasonDefinition]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -256,7 +256,7 @@ class DestinyReportReasonCategoryDefinition implements \Bungie\Model\ModelInterf
     /**
      * Gets reasons
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Reporting\DestinyReportReasonDefinition]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\Reporting\DestinyReportReasonDefinition]|null
      */
     public function getReasons()
     {
@@ -266,7 +266,7 @@ class DestinyReportReasonCategoryDefinition implements \Bungie\Model\ModelInterf
     /**
      * Sets reasons
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Reporting\DestinyReportReasonDefinition]|null $reasons The specific reasons for the report under this category.
+     * @param map[string,\Bungie\Model\Destiny\Definitions\Reporting\DestinyReportReasonDefinition]|null $reasons The specific reasons for the report under this category.
      *
      * @return $this
      */

@@ -58,7 +58,7 @@ class DestinyCharacterRecordsComponent implements \Bungie\Model\ModelInterface, 
       */
     protected static $openAPITypes = [
         'featuredRecordHashes' => '\Bungie\Model\int[]',
-        'records' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]'
+        'records' => 'map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class DestinyCharacterRecordsComponent implements \Bungie\Model\ModelInterface, 
     /**
      * Gets records
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null
      */
     public function getRecords()
     {
@@ -247,7 +247,7 @@ class DestinyCharacterRecordsComponent implements \Bungie\Model\ModelInterface, 
     /**
      * Sets records
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null $records records
+     * @param map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null $records records
      *
      * @return $this
      */

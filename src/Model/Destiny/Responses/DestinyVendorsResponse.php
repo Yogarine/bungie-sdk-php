@@ -62,7 +62,7 @@ class DestinyVendorsResponse implements \Bungie\Model\ModelInterface, ArrayAcces
         'vendors' => '\Bungie\Model\DictionaryComponentResponseOfuint32AndDestinyVendorComponent',
         'categories' => '\Bungie\Model\DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent',
         'sales' => '\Bungie\Model\DictionaryComponentResponseOfuint32AndDestinyVendorSaleItemSetComponent',
-        'itemComponents' => '\Bungie\Model\map[string,\Bungie\Model\DestinyItemComponentSetOfint32]',
+        'itemComponents' => 'map[string,\Bungie\Model\DestinyItemComponentSetOfint32]',
         'currencyLookups' => '\Bungie\Model\SingleComponentResponseOfDestinyCurrenciesComponent'
     ];
 
@@ -334,7 +334,7 @@ class DestinyVendorsResponse implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets itemComponents
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\DestinyItemComponentSetOfint32]|null
+     * @return map[string,\Bungie\Model\DestinyItemComponentSetOfint32]|null
      */
     public function getItemComponents()
     {
@@ -344,7 +344,7 @@ class DestinyVendorsResponse implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets itemComponents
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\DestinyItemComponentSetOfint32]|null $itemComponents The set of item detail components, one set of item components per Vendor. These are keyed by the Vendor Hash, so you will get one Item Component Set per vendor returned.  The components contained inside are themselves keyed by the vendorSaleIndex, and will have whatever item-level components you requested (Sockets, Stats, Instance data etc...) per item being sold by the vendor.
+     * @param map[string,\Bungie\Model\DestinyItemComponentSetOfint32]|null $itemComponents The set of item detail components, one set of item components per Vendor. These are keyed by the Vendor Hash, so you will get one Item Component Set per vendor returned.  The components contained inside are themselves keyed by the vendorSaleIndex, and will have whatever item-level components you requested (Sockets, Stats, Instance data etc...) per item being sold by the vendor.
      *
      * @return $this
      */

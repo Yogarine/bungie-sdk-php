@@ -57,7 +57,7 @@ class DictionaryComponentResponseOfint64AndDestinyKiosksComponent implements \Bu
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Kiosks\DestinyKiosksComponent]',
+        'data' => 'map[string,\Bungie\Model\Destiny\Components\Kiosks\DestinyKiosksComponent]',
         'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint64AndDestinyKiosksComponent implements \Bu
     /**
      * Gets data
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Kiosks\DestinyKiosksComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Components\Kiosks\DestinyKiosksComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint64AndDestinyKiosksComponent implements \Bu
     /**
      * Sets data
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Kiosks\DestinyKiosksComponent]|null $data data
+     * @param map[string,\Bungie\Model\Destiny\Components\Kiosks\DestinyKiosksComponent]|null $data data
      *
      * @return $this
      */

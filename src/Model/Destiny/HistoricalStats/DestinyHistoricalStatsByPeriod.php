@@ -57,10 +57,10 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
       * @var string[]
       */
     protected static $openAPITypes = [
-        'allTime' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
-        'allTimeTier1' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
-        'allTimeTier2' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
-        'allTimeTier3' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
+        'allTime' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
+        'allTimeTier1' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
+        'allTimeTier2' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
+        'allTimeTier3' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
         'daily' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]',
         'monthly' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]'
     ];
@@ -237,7 +237,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets allTime
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
+     * @return map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
      */
     public function getAllTime()
     {
@@ -247,7 +247,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets allTime
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $allTime allTime
+     * @param map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $allTime allTime
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets allTimeTier1
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
+     * @return map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
      */
     public function getAllTimeTier1()
     {
@@ -271,7 +271,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets allTimeTier1
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $allTimeTier1 allTimeTier1
+     * @param map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $allTimeTier1 allTimeTier1
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets allTimeTier2
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
+     * @return map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
      */
     public function getAllTimeTier2()
     {
@@ -295,7 +295,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets allTimeTier2
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $allTimeTier2 allTimeTier2
+     * @param map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $allTimeTier2 allTimeTier2
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets allTimeTier3
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
+     * @return map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
      */
     public function getAllTimeTier3()
     {
@@ -319,7 +319,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets allTimeTier3
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $allTimeTier3 allTimeTier3
+     * @param map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $allTimeTier3 allTimeTier3
      *
      * @return $this
      */

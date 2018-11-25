@@ -58,7 +58,7 @@ class DestinyVendorSaleItemSetComponent implements \Bungie\Model\ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'saleItems' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]'
+        'saleItems' => 'map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyVendorSaleItemSetComponent implements \Bungie\Model\ModelInterface,
     /**
      * Gets saleItems
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]|null
      */
     public function getSaleItems()
     {
@@ -218,7 +218,7 @@ class DestinyVendorSaleItemSetComponent implements \Bungie\Model\ModelInterface,
     /**
      * Sets saleItems
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]|null $saleItems The items being sold by this vendor, keyed by the vendorItemIndex of the item being sold. (because showing sale items depends on the ordering dictated by the categories being shown - see DestinyVendorCategoryComponent - this is a dictionary for quick lookup capability.)
+     * @param map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]|null $saleItems The items being sold by this vendor, keyed by the vendorItemIndex of the item being sold. (because showing sale items depends on the ordering dictated by the categories being shown - see DestinyVendorCategoryComponent - this is a dictionary for quick lookup capability.)
      *
      * @return $this
      */

@@ -59,7 +59,7 @@ class DestinyHistoricalStatsPeriodGroup implements \Bungie\Model\ModelInterface,
     protected static $openAPITypes = [
         'period' => '\DateTime',
         'activityDetails' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsActivity',
-        'values' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]'
+        'values' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class DestinyHistoricalStatsPeriodGroup implements \Bungie\Model\ModelInterface,
     /**
      * Gets values
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
+     * @return map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
      */
     public function getValues()
     {
@@ -277,7 +277,7 @@ class DestinyHistoricalStatsPeriodGroup implements \Bungie\Model\ModelInterface,
     /**
      * Sets values
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $values Collection of stats for the period.
+     * @param map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $values Collection of stats for the period.
      *
      * @return $this
      */

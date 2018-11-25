@@ -59,7 +59,7 @@ class DestinyProfileCollectiblesComponent implements \Bungie\Model\ModelInterfac
     protected static $openAPITypes = [
         'recentCollectibleHashes' => '\Bungie\Model\int[]',
         'newnessFlaggedCollectibleHashes' => '\Bungie\Model\int[]',
-        'collectibles' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectibleComponent]'
+        'collectibles' => 'map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectibleComponent]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class DestinyProfileCollectiblesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Gets collectibles
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectibleComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectibleComponent]|null
      */
     public function getCollectibles()
     {
@@ -277,7 +277,7 @@ class DestinyProfileCollectiblesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Sets collectibles
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectibleComponent]|null $collectibles collectibles
+     * @param map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectibleComponent]|null $collectibles collectibles
      *
      * @return $this
      */

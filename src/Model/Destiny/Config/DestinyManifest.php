@@ -61,9 +61,9 @@ class DestinyManifest implements \Bungie\Model\ModelInterface, ArrayAccess
         'version' => 'string',
         'mobileAssetContentPath' => 'string',
         'mobileGearAssetDataBases' => '\Bungie\Model\\Bungie\Model\Destiny\Config\GearAssetDataBaseDefinition[]',
-        'mobileWorldContentPaths' => '\Bungie\Model\map[string,string]',
+        'mobileWorldContentPaths' => 'map[string,string]',
         'mobileClanBannerDatabasePath' => 'string',
-        'mobileGearCDN' => '\Bungie\Model\map[string,string]'
+        'mobileGearCDN' => 'map[string,string]'
     ];
 
     /**
@@ -310,7 +310,7 @@ class DestinyManifest implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets mobileWorldContentPaths
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getMobileWorldContentPaths()
     {
@@ -320,7 +320,7 @@ class DestinyManifest implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets mobileWorldContentPaths
      *
-     * @param \Bungie\Model\map[string,string]|null $mobileWorldContentPaths mobileWorldContentPaths
+     * @param map[string,string]|null $mobileWorldContentPaths mobileWorldContentPaths
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class DestinyManifest implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets mobileGearCDN
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getMobileGearCDN()
     {
@@ -368,7 +368,7 @@ class DestinyManifest implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets mobileGearCDN
      *
-     * @param \Bungie\Model\map[string,string]|null $mobileGearCDN mobileGearCDN
+     * @param map[string,string]|null $mobileGearCDN mobileGearCDN
      *
      * @return $this
      */

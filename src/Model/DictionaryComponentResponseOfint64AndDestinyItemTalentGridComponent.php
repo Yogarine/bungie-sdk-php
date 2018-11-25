@@ -57,7 +57,7 @@ class DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent implem
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemTalentGridComponent]',
+        'data' => 'map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemTalentGridComponent]',
         'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent implem
     /**
      * Gets data
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemTalentGridComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemTalentGridComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent implem
     /**
      * Sets data
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemTalentGridComponent]|null $data data
+     * @param map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemTalentGridComponent]|null $data data
      *
      * @return $this
      */

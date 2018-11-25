@@ -58,7 +58,7 @@ class DestinyCurrenciesComponent implements \Bungie\Model\ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'itemQuantities' => '\Bungie\Model\map[string,int]'
+        'itemQuantities' => 'map[string,int]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyCurrenciesComponent implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets itemQuantities
      *
-     * @return \Bungie\Model\map[string,int]|null
+     * @return map[string,int]|null
      */
     public function getItemQuantities()
     {
@@ -218,7 +218,7 @@ class DestinyCurrenciesComponent implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets itemQuantities
      *
-     * @param \Bungie\Model\map[string,int]|null $itemQuantities A dictionary - keyed by the item's hash identifier (DestinyInventoryItemDefinition), and whose value is the amount of that item you have across all available inventory buckets for purchasing.  This allows you to see whether the requesting character can afford any given purchase/action without having to re-create this list itself.
+     * @param map[string,int]|null $itemQuantities A dictionary - keyed by the item's hash identifier (DestinyInventoryItemDefinition), and whose value is the amount of that item you have across all available inventory buckets for purchasing.  This allows you to see whether the requesting character can afford any given purchase/action without having to re-create this list itself.
      *
      * @return $this
      */

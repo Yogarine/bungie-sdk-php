@@ -64,7 +64,7 @@ class DestinyTalentGridDefinition implements \Bungie\Model\ModelInterface, Array
         'nodes' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyTalentNodeDefinition[]',
         'exclusiveSets' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyTalentNodeExclusiveSetDefinition[]',
         'independentNodeIndexes' => '\Bungie\Model\int[]',
-        'groups' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyTalentExclusiveGroup]',
+        'groups' => 'map[string,\Bungie\Model\Destiny\Definitions\DestinyTalentExclusiveGroup]',
         'nodeCategories' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyTalentNodeCategory[]',
         'hash' => 'int',
         'index' => 'int',
@@ -412,7 +412,7 @@ class DestinyTalentGridDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets groups
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyTalentExclusiveGroup]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\DestinyTalentExclusiveGroup]|null
      */
     public function getGroups()
     {
@@ -422,7 +422,7 @@ class DestinyTalentGridDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets groups
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyTalentExclusiveGroup]|null $groups Talent Nodes can have \"Exclusive Groups\". These are not to be confused with Exclusive Sets (see exclusiveSets property).  Look at the definition of DestinyTalentExclusiveGroup for more information and how they work. These groups are keyed by the \"groupHash\" from DestinyTalentExclusiveGroup.
+     * @param map[string,\Bungie\Model\Destiny\Definitions\DestinyTalentExclusiveGroup]|null $groups Talent Nodes can have \"Exclusive Groups\". These are not to be confused with Exclusive Sets (see exclusiveSets property).  Look at the definition of DestinyTalentExclusiveGroup for more information and how they work. These groups are keyed by the \"groupHash\" from DestinyTalentExclusiveGroup.
      *
      * @return $this
      */

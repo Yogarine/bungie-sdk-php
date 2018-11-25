@@ -68,7 +68,7 @@ class ContentItemPublicContract implements \Bungie\Model\ModelInterface, ArrayAc
         'ratingImagePath' => 'string',
         'author' => '\Bungie\Model\User\GeneralUser',
         'autoEnglishPropertyFallback' => 'bool',
-        'properties' => '\Bungie\Model\map[string,object]',
+        'properties' => 'map[string,object]',
         'representations' => '\Bungie\Model\\Bungie\Model\Content\ContentRepresentation[]',
         'tags' => '\Bungie\Model\string[]',
         'commentSummary' => '\Bungie\Model\Content\CommentSummary'
@@ -555,7 +555,7 @@ class ContentItemPublicContract implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets properties
      *
-     * @return \Bungie\Model\map[string,object]|null
+     * @return map[string,object]|null
      */
     public function getProperties()
     {
@@ -565,7 +565,7 @@ class ContentItemPublicContract implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets properties
      *
-     * @param \Bungie\Model\map[string,object]|null $properties Firehose content is really a collection of metadata and \"properties\", which are the potentially-but-not-strictly localizable data that comprises the meat of whatever content is being shown.  As Cole Porter would have crooned, \"Anything Goes\" with Firehose properties. They are most often strings, but they can theoretically be anything. They are JSON encoded, and could be JSON structures, simple strings, numbers etc... The Content Type of the item (cType) will describe the properties, and thus how they ought to be deserialized.
+     * @param map[string,object]|null $properties Firehose content is really a collection of metadata and \"properties\", which are the potentially-but-not-strictly localizable data that comprises the meat of whatever content is being shown.  As Cole Porter would have crooned, \"Anything Goes\" with Firehose properties. They are most often strings, but they can theoretically be anything. They are JSON encoded, and could be JSON structures, simple strings, numbers etc... The Content Type of the item (cType) will describe the properties, and thus how they ought to be deserialized.
      *
      * @return $this
      */

@@ -76,7 +76,7 @@ class DestinyProfileResponse implements \Bungie\Model\ModelInterface, ArrayAcces
         'characterEquipment' => '\Bungie\Model\DictionaryComponentResponseOfint64AndDestinyInventoryComponent',
         'characterKiosks' => '\Bungie\Model\DictionaryComponentResponseOfint64AndDestinyKiosksComponent',
         'characterPlugSets' => '\Bungie\Model\DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent',
-        'characterUninstancedItemComponents' => '\Bungie\Model\map[string,\Bungie\Model\DestinyBaseItemComponentSetOfuint32]',
+        'characterUninstancedItemComponents' => 'map[string,\Bungie\Model\DestinyBaseItemComponentSetOfuint32]',
         'characterPresentationNodes' => '\Bungie\Model\DictionaryComponentResponseOfint64AndDestinyPresentationNodesComponent',
         'characterRecords' => '\Bungie\Model\DictionaryComponentResponseOfint64AndDestinyCharacterRecordsComponent',
         'characterCollectibles' => '\Bungie\Model\DictionaryComponentResponseOfint64AndDestinyCollectiblesComponent',
@@ -778,7 +778,7 @@ class DestinyProfileResponse implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets characterUninstancedItemComponents
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\DestinyBaseItemComponentSetOfuint32]|null
+     * @return map[string,\Bungie\Model\DestinyBaseItemComponentSetOfuint32]|null
      */
     public function getCharacterUninstancedItemComponents()
     {
@@ -788,7 +788,7 @@ class DestinyProfileResponse implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets characterUninstancedItemComponents
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\DestinyBaseItemComponentSetOfuint32]|null $characterUninstancedItemComponents Do you ever get the feeling that a system was designed *too* flexibly? That it can be used in so many different ways that you end up being unable to provide an easy to use abstraction for the mess that's happening under the surface?  Let's talk about character-specific data that might be related to items without instances. These two statements are totally unrelated, I promise.  At some point during D2, it was decided that items - such as Bounties - could be given to characters and *not* have instance data, but that *could* display and even use relevant state information on your account and character.  Up to now, any item that had meaningful dependencies on character or account state had to be instanced, and thus \"itemComponents\" was all that you needed: it was keyed by item's instance IDs and provided the stateful information you needed inside.  Unfortunately, we don't live in such a magical world anymore. This is information held on a per-character basis about non-instanced items that the characters have in their inventory - or that reference character-specific state information even if it's in Account-level inventory - and the values related to that item's state in relation to the given character.  To give a concrete example, look at a Moments of Triumph bounty. They exist in a character's inventory, and show/care about a character's progression toward completing the bounty. But the bounty itself is a non-instanced item, like a mod or a currency. This returns that data for the characters who have the bounty in their inventory.  I'm not crying, you're crying Okay we're both crying but it's going to be okay I promise Actually I shouldn't promise that, I don't know if it's going to be okay
+     * @param map[string,\Bungie\Model\DestinyBaseItemComponentSetOfuint32]|null $characterUninstancedItemComponents Do you ever get the feeling that a system was designed *too* flexibly? That it can be used in so many different ways that you end up being unable to provide an easy to use abstraction for the mess that's happening under the surface?  Let's talk about character-specific data that might be related to items without instances. These two statements are totally unrelated, I promise.  At some point during D2, it was decided that items - such as Bounties - could be given to characters and *not* have instance data, but that *could* display and even use relevant state information on your account and character.  Up to now, any item that had meaningful dependencies on character or account state had to be instanced, and thus \"itemComponents\" was all that you needed: it was keyed by item's instance IDs and provided the stateful information you needed inside.  Unfortunately, we don't live in such a magical world anymore. This is information held on a per-character basis about non-instanced items that the characters have in their inventory - or that reference character-specific state information even if it's in Account-level inventory - and the values related to that item's state in relation to the given character.  To give a concrete example, look at a Moments of Triumph bounty. They exist in a character's inventory, and show/care about a character's progression toward completing the bounty. But the bounty itself is a non-instanced item, like a mod or a currency. This returns that data for the characters who have the bounty in their inventory.  I'm not crying, you're crying Okay we're both crying but it's going to be okay I promise Actually I shouldn't promise that, I don't know if it's going to be okay
      *
      * @return $this
      */

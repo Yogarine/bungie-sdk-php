@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**systems** | [**\Bungie\Model\map[string,\Bungie\Model\Common\Models\CoreSystem]**](CoreSystem.md) |  | [optional] 
+**systems** | [**map[string,\Bungie\Model\Common\Models\CoreSystem]**](CoreSystem.md) |  | [optional] 
 **ignoreReasons** | [**\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 **forumCategories** | [**\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 **groupAvatars** | [**\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 

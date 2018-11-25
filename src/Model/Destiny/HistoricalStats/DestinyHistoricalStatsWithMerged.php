@@ -57,7 +57,7 @@ class DestinyHistoricalStatsWithMerged implements \Bungie\Model\ModelInterface, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsByPeriod]',
+        'results' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsByPeriod]',
         'merged' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsByPeriod'
     ];
 
@@ -213,7 +213,7 @@ class DestinyHistoricalStatsWithMerged implements \Bungie\Model\ModelInterface, 
     /**
      * Gets results
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsByPeriod]|null
+     * @return map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsByPeriod]|null
      */
     public function getResults()
     {
@@ -223,7 +223,7 @@ class DestinyHistoricalStatsWithMerged implements \Bungie\Model\ModelInterface, 
     /**
      * Sets results
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsByPeriod]|null $results results
+     * @param map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsByPeriod]|null $results results
      *
      * @return $this
      */

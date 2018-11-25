@@ -58,7 +58,7 @@ class DestinyProfileProgressionComponent implements \Bungie\Model\ModelInterface
       * @var string[]
       */
     protected static $openAPITypes = [
-        'checklists' => '\Bungie\Model\map[string,\Bungie\Model\map[string,bool]]'
+        'checklists' => 'map[string,map[string,bool]]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyProfileProgressionComponent implements \Bungie\Model\ModelInterface
     /**
      * Gets checklists
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\map[string,bool]]|null
+     * @return map[string,map[string,bool]]|null
      */
     public function getChecklists()
     {
@@ -218,7 +218,7 @@ class DestinyProfileProgressionComponent implements \Bungie\Model\ModelInterface
     /**
      * Sets checklists
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\map[string,bool]]|null $checklists The set of checklists that can be examined on a profile-wide basis, keyed by the hash identifier of the Checklist (DestinyChecklistDefinition)  For each checklist returned, its value is itself a Dictionary keyed by the checklist's hash identifier with the value being a boolean indicating if it's been discovered yet.
+     * @param map[string,map[string,bool]]|null $checklists The set of checklists that can be examined on a profile-wide basis, keyed by the hash identifier of the Checklist (DestinyChecklistDefinition)  For each checklist returned, its value is itself a Dictionary keyed by the checklist's hash identifier with the value being a boolean indicating if it's been discovered yet.
      *
      * @return $this
      */

@@ -62,7 +62,7 @@ class InlineResponse20046 implements \Bungie\Model\ModelInterface, ArrayAccess
         'throttleSeconds' => 'int',
         'errorStatus' => 'string',
         'message' => 'string',
-        'messageData' => '\Bungie\Model\map[string,string]',
+        'messageData' => 'map[string,string]',
         'detailedErrorTrace' => 'string'
     ];
 
@@ -363,7 +363,7 @@ class InlineResponse20046 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets messageData
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getMessageData()
     {
@@ -373,7 +373,7 @@ class InlineResponse20046 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets messageData
      *
-     * @param \Bungie\Model\map[string,string]|null $messageData messageData
+     * @param map[string,string]|null $messageData messageData
      *
      * @return $this
      */

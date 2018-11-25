@@ -58,7 +58,7 @@ class CoreSystem implements \Bungie\Model\ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'enabled' => 'bool',
-        'parameters' => '\Bungie\Model\map[string,string]'
+        'parameters' => 'map[string,string]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class CoreSystem implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets parameters
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getParameters()
     {
@@ -247,7 +247,7 @@ class CoreSystem implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets parameters
      *
-     * @param \Bungie\Model\map[string,string]|null $parameters parameters
+     * @param map[string,string]|null $parameters parameters
      *
      * @return $this
      */

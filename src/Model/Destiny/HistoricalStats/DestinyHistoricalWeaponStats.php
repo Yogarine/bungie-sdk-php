@@ -58,7 +58,7 @@ class DestinyHistoricalWeaponStats implements \Bungie\Model\ModelInterface, Arra
       */
     protected static $openAPITypes = [
         'referenceId' => 'int',
-        'values' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]'
+        'values' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class DestinyHistoricalWeaponStats implements \Bungie\Model\ModelInterface, Arra
     /**
      * Gets values
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
+     * @return map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
      */
     public function getValues()
     {
@@ -247,7 +247,7 @@ class DestinyHistoricalWeaponStats implements \Bungie\Model\ModelInterface, Arra
     /**
      * Sets values
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $values Collection of stats for the period.
+     * @param map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $values Collection of stats for the period.
      *
      * @return $this
      */

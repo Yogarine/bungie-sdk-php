@@ -58,8 +58,8 @@ class DestinyRecordTitleBlock implements \Bungie\Model\ModelInterface, ArrayAcce
       */
     protected static $openAPITypes = [
         'hasTitle' => 'bool',
-        'titlesByGender' => '\Bungie\Model\map[string,string]',
-        'titlesByGenderHash' => '\Bungie\Model\map[string,string]'
+        'titlesByGender' => 'map[string,string]',
+        'titlesByGenderHash' => 'map[string,string]'
     ];
 
     /**
@@ -243,7 +243,7 @@ class DestinyRecordTitleBlock implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets titlesByGender
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getTitlesByGender()
     {
@@ -253,7 +253,7 @@ class DestinyRecordTitleBlock implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets titlesByGender
      *
-     * @param \Bungie\Model\map[string,string]|null $titlesByGender titlesByGender
+     * @param map[string,string]|null $titlesByGender titlesByGender
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class DestinyRecordTitleBlock implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets titlesByGenderHash
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getTitlesByGenderHash()
     {
@@ -277,7 +277,7 @@ class DestinyRecordTitleBlock implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets titlesByGenderHash
      *
-     * @param \Bungie\Model\map[string,string]|null $titlesByGenderHash For those who prefer to use the definitions.
+     * @param map[string,string]|null $titlesByGenderHash For those who prefer to use the definitions.
      *
      * @return $this
      */

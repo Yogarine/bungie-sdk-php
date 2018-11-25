@@ -61,7 +61,7 @@ class DestinyMilestoneRewardCategoryDefinition implements \Bungie\Model\ModelInt
         'categoryHash' => 'int',
         'categoryIdentifier' => 'string',
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
-        'rewardEntries' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardEntryDefinition]',
+        'rewardEntries' => 'map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardEntryDefinition]',
         'order' => 'int'
     ];
 
@@ -304,7 +304,7 @@ class DestinyMilestoneRewardCategoryDefinition implements \Bungie\Model\ModelInt
     /**
      * Gets rewardEntries
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardEntryDefinition]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardEntryDefinition]|null
      */
     public function getRewardEntries()
     {
@@ -314,7 +314,7 @@ class DestinyMilestoneRewardCategoryDefinition implements \Bungie\Model\ModelInt
     /**
      * Sets rewardEntries
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardEntryDefinition]|null $rewardEntries If this milestone can provide rewards, this will define the sets of rewards that can be earned, the conditions under which they can be acquired, internal data that we'll use at runtime to determine whether you've already earned or redeemed this set of rewards, and the category that this reward should be placed under.
+     * @param map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardEntryDefinition]|null $rewardEntries If this milestone can provide rewards, this will define the sets of rewards that can be earned, the conditions under which they can be acquired, internal data that we'll use at runtime to determine whether you've already earned or redeemed this set of rewards, and the category that this reward should be placed under.
      *
      * @return $this
      */

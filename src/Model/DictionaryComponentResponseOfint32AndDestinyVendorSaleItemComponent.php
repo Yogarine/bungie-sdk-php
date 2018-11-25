@@ -57,7 +57,7 @@ class DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent implem
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]',
+        'data' => 'map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]',
         'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent implem
     /**
      * Gets data
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent implem
     /**
      * Sets data
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]|null $data data
+     * @param map[string,\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorSaleItemComponent]|null $data data
      *
      * @return $this
      */

@@ -60,7 +60,7 @@ class DestinyMilestoneChallengeActivity implements \Bungie\Model\ModelInterface,
         'activityHash' => 'int',
         'challenges' => '\Bungie\Model\\Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]',
         'modifierHashes' => '\Bungie\Model\int[]',
-        'booleanActivityOptions' => '\Bungie\Model\map[string,bool]',
+        'booleanActivityOptions' => 'map[string,bool]',
         'loadoutRequirementIndex' => 'int',
         'phases' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]'
     ];
@@ -309,7 +309,7 @@ class DestinyMilestoneChallengeActivity implements \Bungie\Model\ModelInterface,
     /**
      * Gets booleanActivityOptions
      *
-     * @return \Bungie\Model\map[string,bool]|null
+     * @return map[string,bool]|null
      */
     public function getBooleanActivityOptions()
     {
@@ -319,7 +319,7 @@ class DestinyMilestoneChallengeActivity implements \Bungie\Model\ModelInterface,
     /**
      * Sets booleanActivityOptions
      *
-     * @param \Bungie\Model\map[string,bool]|null $booleanActivityOptions The set of activity options for this activity, keyed by an identifier that's unique for this activity (not guaranteed to be unique between or across all activities, though should be unique for every *variant* of a given *conceptual* activity: for instance, the original D2 Raid has many variant DestinyActivityDefinitions. While other activities could potentially have the same option hashes, for any given D2 base Raid variant the hash will be unique).  As a concrete example of this data, the hashes you get for Raids will correspond to the currently active \"Challenge Mode\".  We don't have any human readable information for these, but saavy 3rd party app users could manually associate the key (a hash identifier for the \"option\" that is enabled/disabled) and the value (whether it's enabled or disabled presently)  On our side, we don't necessarily even know what these are used for (the game designers know, but we don't), and we have no human readable data for them. In order to use them, you will have to do some experimentation.
+     * @param map[string,bool]|null $booleanActivityOptions The set of activity options for this activity, keyed by an identifier that's unique for this activity (not guaranteed to be unique between or across all activities, though should be unique for every *variant* of a given *conceptual* activity: for instance, the original D2 Raid has many variant DestinyActivityDefinitions. While other activities could potentially have the same option hashes, for any given D2 base Raid variant the hash will be unique).  As a concrete example of this data, the hashes you get for Raids will correspond to the currently active \"Challenge Mode\".  We don't have any human readable information for these, but saavy 3rd party app users could manually associate the key (a hash identifier for the \"option\" that is enabled/disabled) and the value (whether it's enabled or disabled presently)  On our side, we don't necessarily even know what these are used for (the game designers know, but we don't), and we have no human readable data for them. In order to use them, you will have to do some experimentation.
      *
      * @return $this
      */

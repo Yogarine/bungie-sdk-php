@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**d2ClanProgressions** | [**\Bungie\Model\map[string,\Bungie\Model\Destiny\DestinyProgression]**](DestinyProgression.md) |  | [optional] 
+**d2ClanProgressions** | [**map[string,\Bungie\Model\Destiny\DestinyProgression]**](DestinyProgression.md) |  | [optional] 
 **clanCallsign** | **string** |  | [optional] 
 **clanBannerData** | [**\Bungie\Model\GroupsV2\ClanBanner**](ClanBanner.md) |  | [optional] 
 

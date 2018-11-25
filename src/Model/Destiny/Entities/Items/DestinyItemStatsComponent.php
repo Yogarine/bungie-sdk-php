@@ -58,7 +58,7 @@ class DestinyItemStatsComponent implements \Bungie\Model\ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stats' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\DestinyStat]'
+        'stats' => 'map[string,\Bungie\Model\Destiny\DestinyStat]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyItemStatsComponent implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets stats
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\DestinyStat]|null
+     * @return map[string,\Bungie\Model\Destiny\DestinyStat]|null
      */
     public function getStats()
     {
@@ -218,7 +218,7 @@ class DestinyItemStatsComponent implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets stats
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\DestinyStat]|null $stats If the item has stats that it provides (damage, defense, etc...), it will be given here.
+     * @param map[string,\Bungie\Model\Destiny\DestinyStat]|null $stats If the item has stats that it provides (damage, defense, etc...), it will be given here.
      *
      * @return $this
      */

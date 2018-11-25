@@ -60,7 +60,7 @@ class DestinyFactionDefinition implements \Bungie\Model\ModelInterface, ArrayAcc
     protected static $openAPITypes = [
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
         'progressionHash' => 'int',
-        'tokenValues' => '\Bungie\Model\map[string,int]',
+        'tokenValues' => 'map[string,int]',
         'rewardItemHash' => 'int',
         'rewardVendorHash' => 'int',
         'vendors' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyFactionVendorDefinition[]',
@@ -304,7 +304,7 @@ class DestinyFactionDefinition implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Gets tokenValues
      *
-     * @return \Bungie\Model\map[string,int]|null
+     * @return map[string,int]|null
      */
     public function getTokenValues()
     {
@@ -314,7 +314,7 @@ class DestinyFactionDefinition implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Sets tokenValues
      *
-     * @param \Bungie\Model\map[string,int]|null $tokenValues The faction token item hashes, and their respective progression values.
+     * @param map[string,int]|null $tokenValues The faction token item hashes, and their respective progression values.
      *
      * @return $this
      */

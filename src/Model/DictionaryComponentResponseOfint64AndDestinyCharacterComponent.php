@@ -57,7 +57,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterComponent implements 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterComponent]',
+        'data' => 'map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterComponent]',
         'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterComponent implements 
     /**
      * Gets data
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterComponent implements 
     /**
      * Sets data
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterComponent]|null $data data
+     * @param map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterComponent]|null $data data
      *
      * @return $this
      */

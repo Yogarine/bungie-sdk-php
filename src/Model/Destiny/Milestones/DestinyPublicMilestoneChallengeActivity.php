@@ -62,7 +62,7 @@ class DestinyPublicMilestoneChallengeActivity implements \Bungie\Model\ModelInte
         'modifierHashes' => '\Bungie\Model\int[]',
         'loadoutRequirementIndex' => 'int',
         'phaseHashes' => '\Bungie\Model\int[]',
-        'booleanActivityOptions' => '\Bungie\Model\map[string,bool]'
+        'booleanActivityOptions' => 'map[string,bool]'
     ];
 
     /**
@@ -357,7 +357,7 @@ class DestinyPublicMilestoneChallengeActivity implements \Bungie\Model\ModelInte
     /**
      * Gets booleanActivityOptions
      *
-     * @return \Bungie\Model\map[string,bool]|null
+     * @return map[string,bool]|null
      */
     public function getBooleanActivityOptions()
     {
@@ -367,7 +367,7 @@ class DestinyPublicMilestoneChallengeActivity implements \Bungie\Model\ModelInte
     /**
      * Sets booleanActivityOptions
      *
-     * @param \Bungie\Model\map[string,bool]|null $booleanActivityOptions The set of activity options for this activity, keyed by an identifier that's unique for this activity (not guaranteed to be unique between or across all activities, though should be unique for every *variant* of a given *conceptual* activity: for instance, the original D2 Raid has many variant DestinyActivityDefinitions. While other activities could potentially have the same option hashes, for any given D2 base Raid variant the hash will be unique).  As a concrete example of this data, the hashes you get for Raids will correspond to the currently active \"Challenge Mode\".  We have no human readable information for this data, so it's up to you if you want to associate it with such info to show it.
+     * @param map[string,bool]|null $booleanActivityOptions The set of activity options for this activity, keyed by an identifier that's unique for this activity (not guaranteed to be unique between or across all activities, though should be unique for every *variant* of a given *conceptual* activity: for instance, the original D2 Raid has many variant DestinyActivityDefinitions. While other activities could potentially have the same option hashes, for any given D2 base Raid variant the hash will be unique).  As a concrete example of this data, the hashes you get for Raids will correspond to the currently active \"Challenge Mode\".  We have no human readable information for this data, so it's up to you if you want to associate it with such info to show it.
      *
      * @return $this
      */

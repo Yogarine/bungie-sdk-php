@@ -57,7 +57,7 @@ class DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent implements \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Components\PlugSets\DestinyPlugSetsComponent]',
+        'data' => 'map[string,\Bungie\Model\Destiny\Components\PlugSets\DestinyPlugSetsComponent]',
         'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent implements \
     /**
      * Gets data
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\PlugSets\DestinyPlugSetsComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Components\PlugSets\DestinyPlugSetsComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent implements \
     /**
      * Sets data
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\PlugSets\DestinyPlugSetsComponent]|null $data data
+     * @param map[string,\Bungie\Model\Destiny\Components\PlugSets\DestinyPlugSetsComponent]|null $data data
      *
      * @return $this
      */

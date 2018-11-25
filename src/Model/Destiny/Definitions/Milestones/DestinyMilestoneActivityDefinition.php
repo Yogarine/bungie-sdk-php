@@ -59,7 +59,7 @@ class DestinyMilestoneActivityDefinition implements \Bungie\Model\ModelInterface
       */
     protected static $openAPITypes = [
         'conceptualActivityHash' => 'int',
-        'variants' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityVariantDefinition]'
+        'variants' => 'map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityVariantDefinition]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyMilestoneActivityDefinition implements \Bungie\Model\ModelInterface
     /**
      * Gets variants
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityVariantDefinition]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityVariantDefinition]|null
      */
     public function getVariants()
     {
@@ -248,7 +248,7 @@ class DestinyMilestoneActivityDefinition implements \Bungie\Model\ModelInterface
     /**
      * Sets variants
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityVariantDefinition]|null $variants A milestone-referenced activity can have many variants, such as Tiers or alternative modes of play.  Even if there is only a single variant, the details for these are represented within as a variant definition.  It is assumed that, if this DestinyMilestoneActivityDefinition is active, then all variants should be active.  If a Milestone could ever split the variants' active status conditionally, they should all have their own DestinyMilestoneActivityDefinition instead! The potential duplication will be worth it for the obviousness of processing and use.
+     * @param map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityVariantDefinition]|null $variants A milestone-referenced activity can have many variants, such as Tiers or alternative modes of play.  Even if there is only a single variant, the details for these are represented within as a variant definition.  It is assumed that, if this DestinyMilestoneActivityDefinition is active, then all variants should be active.  If a Milestone could ever split the variants' active status conditionally, they should all have their own DestinyMilestoneActivityDefinition instead! The potential duplication will be worth it for the obviousness of processing and use.
      *
      * @return $this
      */

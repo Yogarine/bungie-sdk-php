@@ -62,7 +62,7 @@ class DestinyMilestoneQuestDefinition implements \Bungie\Model\ModelInterface, A
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
         'overrideImage' => 'string',
         'questRewards' => '\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneQuestRewardsDefinition',
-        'activities' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityDefinition]',
+        'activities' => 'map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityDefinition]',
         'destinationHash' => 'int'
     ];
 
@@ -334,7 +334,7 @@ class DestinyMilestoneQuestDefinition implements \Bungie\Model\ModelInterface, A
     /**
      * Gets activities
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityDefinition]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityDefinition]|null
      */
     public function getActivities()
     {
@@ -344,7 +344,7 @@ class DestinyMilestoneQuestDefinition implements \Bungie\Model\ModelInterface, A
     /**
      * Sets activities
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityDefinition]|null $activities The full set of all possible \"conceptual activities\" that are related to this Milestone. Tiers or alternative modes of play within these conceptual activities will be defined as sub-entities. Keyed by the Conceptual Activity Hash. Use the key to look up DestinyActivityDefinition.
+     * @param map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneActivityDefinition]|null $activities The full set of all possible \"conceptual activities\" that are related to this Milestone. Tiers or alternative modes of play within these conceptual activities will be defined as sub-entities. Keyed by the Conceptual Activity Hash. Use the key to look up DestinyActivityDefinition.
      *
      * @return $this
      */

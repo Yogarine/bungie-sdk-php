@@ -61,7 +61,7 @@ class DestinyPostGameCarnageReportEntry implements \Bungie\Model\ModelInterface,
         'score' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue',
         'player' => '\Bungie\Model\Destiny\HistoricalStats\DestinyPlayer',
         'characterId' => 'int',
-        'values' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
+        'values' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
         'extended' => '\Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportExtendedData'
     ];
 
@@ -333,7 +333,7 @@ class DestinyPostGameCarnageReportEntry implements \Bungie\Model\ModelInterface,
     /**
      * Gets values
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
+     * @return map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null
      */
     public function getValues()
     {
@@ -343,7 +343,7 @@ class DestinyPostGameCarnageReportEntry implements \Bungie\Model\ModelInterface,
     /**
      * Sets values
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $values Collection of stats for the player in this activity.
+     * @param map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]|null $values Collection of stats for the player in this activity.
      *
      * @return $this
      */

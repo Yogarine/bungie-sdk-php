@@ -61,7 +61,7 @@ class DestinyStatGroupDefinition implements \Bungie\Model\ModelInterface, ArrayA
         'maximumValue' => 'int',
         'uiPosition' => 'int',
         'scaledStats' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyStatDisplayDefinition[]',
-        'overrides' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyStatOverrideDefinition]',
+        'overrides' => 'map[string,\Bungie\Model\Destiny\Definitions\DestinyStatOverrideDefinition]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -316,7 +316,7 @@ class DestinyStatGroupDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets overrides
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyStatOverrideDefinition]|null
+     * @return map[string,\Bungie\Model\Destiny\Definitions\DestinyStatOverrideDefinition]|null
      */
     public function getOverrides()
     {
@@ -326,7 +326,7 @@ class DestinyStatGroupDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets overrides
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Definitions\DestinyStatOverrideDefinition]|null $overrides The game has the ability to override, based on the stat group, what the localized text is that is displayed for Stats being shown on the item.  Mercifully, no Stat Groups use this feature currently. If they start using them, we'll all need to start using them (and those of you who are more prudent than I am can go ahead and start pre-checking for this.)
+     * @param map[string,\Bungie\Model\Destiny\Definitions\DestinyStatOverrideDefinition]|null $overrides The game has the ability to override, based on the stat group, what the localized text is that is displayed for Stats being shown on the item.  Mercifully, no Stat Groups use this feature currently. If they start using them, we'll all need to start using them (and those of you who are more prudent than I am can go ahead and start pre-checking for this.)
      *
      * @return $this
      */

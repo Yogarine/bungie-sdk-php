@@ -59,7 +59,7 @@ class DestinyItemRenderComponent implements \Bungie\Model\ModelInterface, ArrayA
       */
     protected static $openAPITypes = [
         'useCustomDyes' => 'bool',
-        'artRegions' => '\Bungie\Model\map[string,int]'
+        'artRegions' => 'map[string,int]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyItemRenderComponent implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets artRegions
      *
-     * @return \Bungie\Model\map[string,int]|null
+     * @return map[string,int]|null
      */
     public function getArtRegions()
     {
@@ -248,7 +248,7 @@ class DestinyItemRenderComponent implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets artRegions
      *
-     * @param \Bungie\Model\map[string,int]|null $artRegions A dictionary for rendering gear components, with:  key = Art Arrangement Region Index  value = The chosen Arrangement Index for the Region, based on the value of a stat on the item used for making the choice.
+     * @param map[string,int]|null $artRegions A dictionary for rendering gear components, with:  key = Art Arrangement Region Index  value = The chosen Arrangement Index for the Region, based on the value of a stat on the item used for making the choice.
      *
      * @return $this
      */

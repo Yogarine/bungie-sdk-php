@@ -57,7 +57,7 @@ class DestinyRecordsComponent implements \Bungie\Model\ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $openAPITypes = [
-        'records' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]'
+        'records' => 'map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class DestinyRecordsComponent implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets records
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null
+     * @return map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null
      */
     public function getRecords()
     {
@@ -217,7 +217,7 @@ class DestinyRecordsComponent implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets records
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null $records records
+     * @param map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]|null $records records
      *
      * @return $this
      */

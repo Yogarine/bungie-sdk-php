@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **displayProperties** | [**\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition**](DestinyDisplayPropertiesDefinition.md) |  | [optional] 
 **progressionHash** | **int** | The hash identifier for the DestinyProgressionDefinition that indicates the character&#39;s relationship with this faction in terms of experience and levels. | [optional] 
-**tokenValues** | **\Bungie\Model\map[string,int]** | The faction token item hashes, and their respective progression values. | [optional] 
+**tokenValues** | **map[string,int]** | The faction token item hashes, and their respective progression values. | [optional] 
 **rewardItemHash** | **int** | The faction reward item hash, usually an engram. | [optional] 
 **rewardVendorHash** | **int** | The faction reward vendor hash, used for faction engram previews. | [optional] 
 **vendors** | [**\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyFactionVendorDefinition[]**](DestinyFactionVendorDefinition.md) | List of vendors that are associated with this faction. The last vendor that passes the unlock flag checks is the one that should be shown. | [optional] 

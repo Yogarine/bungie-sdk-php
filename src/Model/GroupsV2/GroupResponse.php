@@ -63,8 +63,8 @@ class GroupResponse implements \Bungie\Model\ModelInterface, ArrayAccess
         'parentGroup' => '\Bungie\Model\GroupsV2\GroupV2',
         'allianceStatus' => '\Bungie\Model\GroupsV2\GroupAllianceStatus',
         'groupJoinInviteCount' => 'int',
-        'currentUserMemberMap' => '\Bungie\Model\map[string,\Bungie\Model\GroupsV2\GroupMember]',
-        'currentUserPotentialMemberMap' => '\Bungie\Model\map[string,\Bungie\Model\GroupsV2\GroupPotentialMember]'
+        'currentUserMemberMap' => 'map[string,\Bungie\Model\GroupsV2\GroupMember]',
+        'currentUserPotentialMemberMap' => 'map[string,\Bungie\Model\GroupsV2\GroupPotentialMember]'
     ];
 
     /**
@@ -393,7 +393,7 @@ class GroupResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets currentUserMemberMap
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\GroupsV2\GroupMember]|null
+     * @return map[string,\Bungie\Model\GroupsV2\GroupMember]|null
      */
     public function getCurrentUserMemberMap()
     {
@@ -403,7 +403,7 @@ class GroupResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets currentUserMemberMap
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\GroupsV2\GroupMember]|null $currentUserMemberMap This property will be populated if the authenticated user is a member of the group. Note that because of account linking, a user can sometimes be part of a clan more than once. As such, this returns the highest member type available.
+     * @param map[string,\Bungie\Model\GroupsV2\GroupMember]|null $currentUserMemberMap This property will be populated if the authenticated user is a member of the group. Note that because of account linking, a user can sometimes be part of a clan more than once. As such, this returns the highest member type available.
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class GroupResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets currentUserPotentialMemberMap
      *
-     * @return \Bungie\Model\map[string,\Bungie\Model\GroupsV2\GroupPotentialMember]|null
+     * @return map[string,\Bungie\Model\GroupsV2\GroupPotentialMember]|null
      */
     public function getCurrentUserPotentialMemberMap()
     {
@@ -427,7 +427,7 @@ class GroupResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets currentUserPotentialMemberMap
      *
-     * @param \Bungie\Model\map[string,\Bungie\Model\GroupsV2\GroupPotentialMember]|null $currentUserPotentialMemberMap This property will be populated if the authenticated user is an applicant or has an outstanding invitation to join. Note that because of account linking, a user can sometimes be part of a clan more than once.
+     * @param map[string,\Bungie\Model\GroupsV2\GroupPotentialMember]|null $currentUserPotentialMemberMap This property will be populated if the authenticated user is an applicant or has an outstanding invitation to join. Note that because of account linking, a user can sometimes be part of a clan more than once.
      *
      * @return $this
      */

@@ -60,8 +60,8 @@ class DestinyClassDefinition implements \Bungie\Model\ModelInterface, ArrayAcces
     protected static $openAPITypes = [
         'classType' => '\Bungie\Model\Destiny\DestinyClass',
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
-        'genderedClassNames' => '\Bungie\Model\map[string,string]',
-        'genderedClassNamesByGenderHash' => '\Bungie\Model\map[string,string]',
+        'genderedClassNames' => 'map[string,string]',
+        'genderedClassNamesByGenderHash' => 'map[string,string]',
         'mentorVendorHash' => 'int',
         'hash' => 'int',
         'index' => 'int',
@@ -298,7 +298,7 @@ class DestinyClassDefinition implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets genderedClassNames
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getGenderedClassNames()
     {
@@ -308,7 +308,7 @@ class DestinyClassDefinition implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets genderedClassNames
      *
-     * @param \Bungie\Model\map[string,string]|null $genderedClassNames A localized string referring to the singular form of the Class's name when referred to in gendered form. Keyed by the DestinyGender.
+     * @param map[string,string]|null $genderedClassNames A localized string referring to the singular form of the Class's name when referred to in gendered form. Keyed by the DestinyGender.
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class DestinyClassDefinition implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets genderedClassNamesByGenderHash
      *
-     * @return \Bungie\Model\map[string,string]|null
+     * @return map[string,string]|null
      */
     public function getGenderedClassNamesByGenderHash()
     {
@@ -332,7 +332,7 @@ class DestinyClassDefinition implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets genderedClassNamesByGenderHash
      *
-     * @param \Bungie\Model\map[string,string]|null $genderedClassNamesByGenderHash genderedClassNamesByGenderHash
+     * @param map[string,string]|null $genderedClassNamesByGenderHash genderedClassNamesByGenderHash
      *
      * @return $this
      */

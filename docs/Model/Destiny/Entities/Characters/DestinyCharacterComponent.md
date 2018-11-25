@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **minutesPlayedThisSession** | **int** | If the user is currently playing, this is how long they&#39;ve been playing. | [optional] 
 **minutesPlayedTotal** | **int** | If this value is 525,600, then they played Destiny for a year. Or they&#39;re a very dedicated Rent fan. Note that this includes idle time, not just time spent actually in activities shooting things. | [optional] 
 **light** | **int** | The user&#39;s calculated \&quot;Light Level\&quot;. Light level is an indicator of your power that mostly matters in the end game, once you&#39;ve reached the maximum character level: it&#39;s a level that&#39;s dependent on the average Attack/Defense power of your items. | [optional] 
-**stats** | **\Bungie\Model\map[string,int]** | Your character&#39;s stats, such as Agility, Resilience, etc... *not* historical stats.  You&#39;ll have to call a different endpoint for those. | [optional] 
+**stats** | **map[string,int]** | Your character&#39;s stats, such as Agility, Resilience, etc... *not* historical stats.  You&#39;ll have to call a different endpoint for those. | [optional] 
 **raceHash** | **int** | Use this hash to look up the character&#39;s DestinyRaceDefinition. | [optional] 
 **genderHash** | **int** | Use this hash to look up the character&#39;s DestinyGenderDefinition. | [optional] 
 **classHash** | **int** | Use this hash to look up the character&#39;s DestinyClassDefinition. | [optional] 
