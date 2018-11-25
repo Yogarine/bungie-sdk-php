@@ -2,12 +2,13 @@
     "name": "yogarine/bungie-sdk-php",
     "description": "These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.",
     "keywords": [
-        "openapitools",
-        "openapi-generator",
-        "php",
-        "sdk",
-        "rest",
-        "api"
+        "Bungie",
+        "Destiny",
+        "Grimoire",
+        "PHP",
+        "SDK",
+        "REST",
+        "API"
     ],
     "homepage": "http://openapi-generator.tech",
     "license": "proprietary",
