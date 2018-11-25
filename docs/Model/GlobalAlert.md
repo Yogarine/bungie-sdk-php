@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **alertKey** | **string** |  | [optional] 
 **alertHtml** | **string** |  | [optional] 
-**alertTimestamp** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**alertTimestamp** | **\DateTime** |  | [optional] 
 **alertLink** | **string** |  | [optional] 
 **alertLevel** | [**\Bungie\Model\GlobalAlertLevel**](GlobalAlertLevel.md) |  | [optional] 
 **alertType** | [**\Bungie\Model\GlobalAlertType**](GlobalAlertType.md) |  | [optional] 

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Bungie\API;
+namespace Bungie\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -88,30 +88,32 @@ class UserApi
     }
 
     /**
-     * Operation userGetAvailableThemes
+     * Operation getAvailableThemes
      *
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2004
      */
-    public function userGetAvailableThemes()
+    public function getAvailableThemes()
     {
-        list($response) = $this->userGetAvailableThemesWithHttpInfo();
+        list($response) = $this->getAvailableThemesWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation userGetAvailableThemesWithHttpInfo
+     * Operation getAvailableThemesWithHttpInfo
      *
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
-    public function userGetAvailableThemesWithHttpInfo()
+    public function getAvailableThemesWithHttpInfo()
     {
-        $request = $this->userGetAvailableThemesRequest();
+        $request = $this->getAvailableThemesRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -187,7 +189,7 @@ class UserApi
     }
 
     /**
-     * Operation userGetAvailableThemesAsync
+     * Operation getAvailableThemesAsync
      *
      * 
      *
@@ -195,9 +197,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userGetAvailableThemesAsync()
+    public function getAvailableThemesAsync()
     {
-        return $this->userGetAvailableThemesAsyncWithHttpInfo()
+        return $this->getAvailableThemesAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -206,7 +208,7 @@ class UserApi
     }
 
     /**
-     * Operation userGetAvailableThemesAsyncWithHttpInfo
+     * Operation getAvailableThemesAsyncWithHttpInfo
      *
      * 
      *
@@ -214,15 +216,16 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userGetAvailableThemesAsyncWithHttpInfo()
+    public function getAvailableThemesAsyncWithHttpInfo()
     {
         $returnType = '\Bungie\Model\InlineResponse2004';
-        $request = $this->userGetAvailableThemesRequest();
+        $request = $this->getAvailableThemesRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -237,6 +240,7 @@ class UserApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -254,13 +258,13 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'userGetAvailableThemes'
+     * Create request for operation 'getAvailableThemes'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function userGetAvailableThemesRequest()
+    protected function getAvailableThemesRequest()
     {
 
         $resourcePath = '/User/GetAvailableThemes/';
@@ -342,32 +346,34 @@ class UserApi
     }
 
     /**
-     * Operation userGetBungieNetUserById
+     * Operation getBungieNetUserById
      *
      * @param  int $id The requested Bungie.net membership id. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2002
      */
-    public function userGetBungieNetUserById($id)
+    public function getBungieNetUserById($id)
     {
-        list($response) = $this->userGetBungieNetUserByIdWithHttpInfo($id);
+        list($response) = $this->getBungieNetUserByIdWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation userGetBungieNetUserByIdWithHttpInfo
+     * Operation getBungieNetUserByIdWithHttpInfo
      *
      * @param  int $id The requested Bungie.net membership id. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
-    public function userGetBungieNetUserByIdWithHttpInfo($id)
+    public function getBungieNetUserByIdWithHttpInfo($id)
     {
-        $request = $this->userGetBungieNetUserByIdRequest($id);
+        $request = $this->getBungieNetUserByIdRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -443,7 +449,7 @@ class UserApi
     }
 
     /**
-     * Operation userGetBungieNetUserByIdAsync
+     * Operation getBungieNetUserByIdAsync
      *
      * 
      *
@@ -452,9 +458,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userGetBungieNetUserByIdAsync($id)
+    public function getBungieNetUserByIdAsync($id)
     {
-        return $this->userGetBungieNetUserByIdAsyncWithHttpInfo($id)
+        return $this->getBungieNetUserByIdAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -463,7 +469,7 @@ class UserApi
     }
 
     /**
-     * Operation userGetBungieNetUserByIdAsyncWithHttpInfo
+     * Operation getBungieNetUserByIdAsyncWithHttpInfo
      *
      * 
      *
@@ -472,15 +478,16 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userGetBungieNetUserByIdAsyncWithHttpInfo($id)
+    public function getBungieNetUserByIdAsyncWithHttpInfo($id)
     {
         $returnType = '\Bungie\Model\InlineResponse2002';
-        $request = $this->userGetBungieNetUserByIdRequest($id);
+        $request = $this->getBungieNetUserByIdRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -495,6 +502,7 @@ class UserApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -512,19 +520,19 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'userGetBungieNetUserById'
+     * Create request for operation 'getBungieNetUserById'
      *
      * @param  int $id The requested Bungie.net membership id. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function userGetBungieNetUserByIdRequest($id)
+    protected function getBungieNetUserByIdRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling userGetBungieNetUserById'
+                'Missing the required parameter $id when calling getBungieNetUserById'
             );
         }
 
@@ -615,34 +623,36 @@ class UserApi
     }
 
     /**
-     * Operation userGetMembershipDataById
+     * Operation getMembershipDataById
      *
      * @param  int $membershipId The membership ID of the target user. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType Type of the supplied membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2005
      */
-    public function userGetMembershipDataById($membershipId, $membershipType)
+    public function getMembershipDataById($membershipId, $membershipType)
     {
-        list($response) = $this->userGetMembershipDataByIdWithHttpInfo($membershipId, $membershipType);
+        list($response) = $this->getMembershipDataByIdWithHttpInfo($membershipId, $membershipType);
         return $response;
     }
 
     /**
-     * Operation userGetMembershipDataByIdWithHttpInfo
+     * Operation getMembershipDataByIdWithHttpInfo
      *
      * @param  int $membershipId The membership ID of the target user. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType Type of the supplied membership ID. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
-    public function userGetMembershipDataByIdWithHttpInfo($membershipId, $membershipType)
+    public function getMembershipDataByIdWithHttpInfo($membershipId, $membershipType)
     {
-        $request = $this->userGetMembershipDataByIdRequest($membershipId, $membershipType);
+        $request = $this->getMembershipDataByIdRequest($membershipId, $membershipType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -718,7 +728,7 @@ class UserApi
     }
 
     /**
-     * Operation userGetMembershipDataByIdAsync
+     * Operation getMembershipDataByIdAsync
      *
      * 
      *
@@ -728,9 +738,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userGetMembershipDataByIdAsync($membershipId, $membershipType)
+    public function getMembershipDataByIdAsync($membershipId, $membershipType)
     {
-        return $this->userGetMembershipDataByIdAsyncWithHttpInfo($membershipId, $membershipType)
+        return $this->getMembershipDataByIdAsyncWithHttpInfo($membershipId, $membershipType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -739,7 +749,7 @@ class UserApi
     }
 
     /**
-     * Operation userGetMembershipDataByIdAsyncWithHttpInfo
+     * Operation getMembershipDataByIdAsyncWithHttpInfo
      *
      * 
      *
@@ -749,15 +759,16 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userGetMembershipDataByIdAsyncWithHttpInfo($membershipId, $membershipType)
+    public function getMembershipDataByIdAsyncWithHttpInfo($membershipId, $membershipType)
     {
         $returnType = '\Bungie\Model\InlineResponse2005';
-        $request = $this->userGetMembershipDataByIdRequest($membershipId, $membershipType);
+        $request = $this->getMembershipDataByIdRequest($membershipId, $membershipType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -772,6 +783,7 @@ class UserApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -789,7 +801,7 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'userGetMembershipDataById'
+     * Create request for operation 'getMembershipDataById'
      *
      * @param  int $membershipId The membership ID of the target user. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType Type of the supplied membership ID. (required)
@@ -797,18 +809,18 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function userGetMembershipDataByIdRequest($membershipId, $membershipType)
+    protected function getMembershipDataByIdRequest($membershipId, $membershipType)
     {
         // verify the required parameter 'membershipId' is set
         if ($membershipId === null || (is_array($membershipId) && count($membershipId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $membershipId when calling userGetMembershipDataById'
+                'Missing the required parameter $membershipId when calling getMembershipDataById'
             );
         }
         // verify the required parameter 'membershipType' is set
         if ($membershipType === null || (is_array($membershipType) && count($membershipType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $membershipType when calling userGetMembershipDataById'
+                'Missing the required parameter $membershipType when calling getMembershipDataById'
             );
         }
 
@@ -907,30 +919,32 @@ class UserApi
     }
 
     /**
-     * Operation userGetMembershipDataForCurrentUser
+     * Operation getMembershipDataForCurrentUser
      *
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2005
      */
-    public function userGetMembershipDataForCurrentUser()
+    public function getMembershipDataForCurrentUser()
     {
-        list($response) = $this->userGetMembershipDataForCurrentUserWithHttpInfo();
+        list($response) = $this->getMembershipDataForCurrentUserWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation userGetMembershipDataForCurrentUserWithHttpInfo
+     * Operation getMembershipDataForCurrentUserWithHttpInfo
      *
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
-    public function userGetMembershipDataForCurrentUserWithHttpInfo()
+    public function getMembershipDataForCurrentUserWithHttpInfo()
     {
-        $request = $this->userGetMembershipDataForCurrentUserRequest();
+        $request = $this->getMembershipDataForCurrentUserRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -1006,7 +1020,7 @@ class UserApi
     }
 
     /**
-     * Operation userGetMembershipDataForCurrentUserAsync
+     * Operation getMembershipDataForCurrentUserAsync
      *
      * 
      *
@@ -1014,9 +1028,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userGetMembershipDataForCurrentUserAsync()
+    public function getMembershipDataForCurrentUserAsync()
     {
-        return $this->userGetMembershipDataForCurrentUserAsyncWithHttpInfo()
+        return $this->getMembershipDataForCurrentUserAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1025,7 +1039,7 @@ class UserApi
     }
 
     /**
-     * Operation userGetMembershipDataForCurrentUserAsyncWithHttpInfo
+     * Operation getMembershipDataForCurrentUserAsyncWithHttpInfo
      *
      * 
      *
@@ -1033,15 +1047,16 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userGetMembershipDataForCurrentUserAsyncWithHttpInfo()
+    public function getMembershipDataForCurrentUserAsyncWithHttpInfo()
     {
         $returnType = '\Bungie\Model\InlineResponse2005';
-        $request = $this->userGetMembershipDataForCurrentUserRequest();
+        $request = $this->getMembershipDataForCurrentUserRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1056,6 +1071,7 @@ class UserApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1073,13 +1089,13 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'userGetMembershipDataForCurrentUser'
+     * Create request for operation 'getMembershipDataForCurrentUser'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function userGetMembershipDataForCurrentUserRequest()
+    protected function getMembershipDataForCurrentUserRequest()
     {
 
         $resourcePath = '/User/GetMembershipsForCurrentUser/';
@@ -1165,32 +1181,34 @@ class UserApi
     }
 
     /**
-     * Operation userGetPartnerships
+     * Operation getPartnerships
      *
      * @param  int $membershipId The ID of the member for whom partnerships should be returned. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2006
      */
-    public function userGetPartnerships($membershipId)
+    public function getPartnerships($membershipId)
     {
-        list($response) = $this->userGetPartnershipsWithHttpInfo($membershipId);
+        list($response) = $this->getPartnershipsWithHttpInfo($membershipId);
         return $response;
     }
 
     /**
-     * Operation userGetPartnershipsWithHttpInfo
+     * Operation getPartnershipsWithHttpInfo
      *
      * @param  int $membershipId The ID of the member for whom partnerships should be returned. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
-    public function userGetPartnershipsWithHttpInfo($membershipId)
+    public function getPartnershipsWithHttpInfo($membershipId)
     {
-        $request = $this->userGetPartnershipsRequest($membershipId);
+        $request = $this->getPartnershipsRequest($membershipId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1266,7 +1284,7 @@ class UserApi
     }
 
     /**
-     * Operation userGetPartnershipsAsync
+     * Operation getPartnershipsAsync
      *
      * 
      *
@@ -1275,9 +1293,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userGetPartnershipsAsync($membershipId)
+    public function getPartnershipsAsync($membershipId)
     {
-        return $this->userGetPartnershipsAsyncWithHttpInfo($membershipId)
+        return $this->getPartnershipsAsyncWithHttpInfo($membershipId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1286,7 +1304,7 @@ class UserApi
     }
 
     /**
-     * Operation userGetPartnershipsAsyncWithHttpInfo
+     * Operation getPartnershipsAsyncWithHttpInfo
      *
      * 
      *
@@ -1295,15 +1313,16 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userGetPartnershipsAsyncWithHttpInfo($membershipId)
+    public function getPartnershipsAsyncWithHttpInfo($membershipId)
     {
         $returnType = '\Bungie\Model\InlineResponse2006';
-        $request = $this->userGetPartnershipsRequest($membershipId);
+        $request = $this->getPartnershipsRequest($membershipId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1318,6 +1337,7 @@ class UserApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1335,19 +1355,19 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'userGetPartnerships'
+     * Create request for operation 'getPartnerships'
      *
      * @param  int $membershipId The ID of the member for whom partnerships should be returned. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function userGetPartnershipsRequest($membershipId)
+    protected function getPartnershipsRequest($membershipId)
     {
         // verify the required parameter 'membershipId' is set
         if ($membershipId === null || (is_array($membershipId) && count($membershipId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $membershipId when calling userGetPartnerships'
+                'Missing the required parameter $membershipId when calling getPartnerships'
             );
         }
 
@@ -1438,32 +1458,34 @@ class UserApi
     }
 
     /**
-     * Operation userSearchUsers
+     * Operation searchUsers
      *
      * @param  string $q The search string. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2003
      */
-    public function userSearchUsers($q = null)
+    public function searchUsers($q = null)
     {
-        list($response) = $this->userSearchUsersWithHttpInfo($q);
+        list($response) = $this->searchUsersWithHttpInfo($q);
         return $response;
     }
 
     /**
-     * Operation userSearchUsersWithHttpInfo
+     * Operation searchUsersWithHttpInfo
      *
      * @param  string $q The search string. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
-    public function userSearchUsersWithHttpInfo($q = null)
+    public function searchUsersWithHttpInfo($q = null)
     {
-        $request = $this->userSearchUsersRequest($q);
+        $request = $this->searchUsersRequest($q);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1539,7 +1561,7 @@ class UserApi
     }
 
     /**
-     * Operation userSearchUsersAsync
+     * Operation searchUsersAsync
      *
      * 
      *
@@ -1548,9 +1570,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userSearchUsersAsync($q = null)
+    public function searchUsersAsync($q = null)
     {
-        return $this->userSearchUsersAsyncWithHttpInfo($q)
+        return $this->searchUsersAsyncWithHttpInfo($q)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1559,7 +1581,7 @@ class UserApi
     }
 
     /**
-     * Operation userSearchUsersAsyncWithHttpInfo
+     * Operation searchUsersAsyncWithHttpInfo
      *
      * 
      *
@@ -1568,15 +1590,16 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userSearchUsersAsyncWithHttpInfo($q = null)
+    public function searchUsersAsyncWithHttpInfo($q = null)
     {
         $returnType = '\Bungie\Model\InlineResponse2003';
-        $request = $this->userSearchUsersRequest($q);
+        $request = $this->searchUsersRequest($q);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1591,6 +1614,7 @@ class UserApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1608,14 +1632,14 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'userSearchUsers'
+     * Create request for operation 'searchUsers'
      *
      * @param  string $q The search string. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function userSearchUsersRequest($q = null)
+    protected function searchUsersRequest($q = null)
     {
 
         $resourcePath = '/User/SearchUsers/';

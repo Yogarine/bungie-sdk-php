@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SingleComponentResponseOfDestinyProfileProgressionComponent implements ModelInterface, ArrayAccess
+class SingleComponentResponseOfDestinyProfileProgressionComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class SingleComponentResponseOfDestinyProfileProgressionComponent implements Mod
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\DestinyComponentsProfilesDestinyProfileProgressionComponent',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\Destiny\Components\Profiles\DestinyProfileProgressionComponent',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SingleComponentResponseOfDestinyProfileProgressionComponent implements Mod
     /**
      * Gets data
      *
-     * @return \Bungie\Model\DestinyComponentsProfilesDestinyProfileProgressionComponent|null
+     * @return \Bungie\Model\Destiny\Components\Profiles\DestinyProfileProgressionComponent|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class SingleComponentResponseOfDestinyProfileProgressionComponent implements Mod
     /**
      * Sets data
      *
-     * @param \Bungie\Model\DestinyComponentsProfilesDestinyProfileProgressionComponent|null $data data
+     * @param \Bungie\Model\Destiny\Components\Profiles\DestinyProfileProgressionComponent|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SingleComponentResponseOfDestinyProfileProgressionComponent implements Mod
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class SingleComponentResponseOfDestinyProfileProgressionComponent implements Mod
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

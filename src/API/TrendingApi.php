@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Bungie\API;
+namespace Bungie\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -88,30 +88,32 @@ class TrendingApi
     }
 
     /**
-     * Operation trendingGetTrendingCategories
+     * Operation getTrendingCategories
      *
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20062
      */
-    public function trendingGetTrendingCategories()
+    public function getTrendingCategories()
     {
-        list($response) = $this->trendingGetTrendingCategoriesWithHttpInfo();
+        list($response) = $this->getTrendingCategoriesWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation trendingGetTrendingCategoriesWithHttpInfo
+     * Operation getTrendingCategoriesWithHttpInfo
      *
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20062, HTTP status code, HTTP response headers (array of strings)
      */
-    public function trendingGetTrendingCategoriesWithHttpInfo()
+    public function getTrendingCategoriesWithHttpInfo()
     {
-        $request = $this->trendingGetTrendingCategoriesRequest();
+        $request = $this->getTrendingCategoriesRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -187,7 +189,7 @@ class TrendingApi
     }
 
     /**
-     * Operation trendingGetTrendingCategoriesAsync
+     * Operation getTrendingCategoriesAsync
      *
      * 
      *
@@ -195,9 +197,9 @@ class TrendingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function trendingGetTrendingCategoriesAsync()
+    public function getTrendingCategoriesAsync()
     {
-        return $this->trendingGetTrendingCategoriesAsyncWithHttpInfo()
+        return $this->getTrendingCategoriesAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -206,7 +208,7 @@ class TrendingApi
     }
 
     /**
-     * Operation trendingGetTrendingCategoriesAsyncWithHttpInfo
+     * Operation getTrendingCategoriesAsyncWithHttpInfo
      *
      * 
      *
@@ -214,15 +216,16 @@ class TrendingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function trendingGetTrendingCategoriesAsyncWithHttpInfo()
+    public function getTrendingCategoriesAsyncWithHttpInfo()
     {
         $returnType = '\Bungie\Model\InlineResponse20062';
-        $request = $this->trendingGetTrendingCategoriesRequest();
+        $request = $this->getTrendingCategoriesRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -237,6 +240,7 @@ class TrendingApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -254,13 +258,13 @@ class TrendingApi
     }
 
     /**
-     * Create request for operation 'trendingGetTrendingCategories'
+     * Create request for operation 'getTrendingCategories'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function trendingGetTrendingCategoriesRequest()
+    protected function getTrendingCategoriesRequest()
     {
 
         $resourcePath = '/Trending/Categories/';
@@ -342,34 +346,36 @@ class TrendingApi
     }
 
     /**
-     * Operation trendingGetTrendingCategory
+     * Operation getTrendingCategory
      *
      * @param  string $categoryId The ID of the category for whom you want additional results. (required)
      * @param  int $pageNumber The page # of results to return. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20063
      */
-    public function trendingGetTrendingCategory($categoryId, $pageNumber)
+    public function getTrendingCategory($categoryId, $pageNumber)
     {
-        list($response) = $this->trendingGetTrendingCategoryWithHttpInfo($categoryId, $pageNumber);
+        list($response) = $this->getTrendingCategoryWithHttpInfo($categoryId, $pageNumber);
         return $response;
     }
 
     /**
-     * Operation trendingGetTrendingCategoryWithHttpInfo
+     * Operation getTrendingCategoryWithHttpInfo
      *
      * @param  string $categoryId The ID of the category for whom you want additional results. (required)
      * @param  int $pageNumber The page # of results to return. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20063, HTTP status code, HTTP response headers (array of strings)
      */
-    public function trendingGetTrendingCategoryWithHttpInfo($categoryId, $pageNumber)
+    public function getTrendingCategoryWithHttpInfo($categoryId, $pageNumber)
     {
-        $request = $this->trendingGetTrendingCategoryRequest($categoryId, $pageNumber);
+        $request = $this->getTrendingCategoryRequest($categoryId, $pageNumber);
 
         try {
             $options = $this->createHttpClientOption();
@@ -445,7 +451,7 @@ class TrendingApi
     }
 
     /**
-     * Operation trendingGetTrendingCategoryAsync
+     * Operation getTrendingCategoryAsync
      *
      * 
      *
@@ -455,9 +461,9 @@ class TrendingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function trendingGetTrendingCategoryAsync($categoryId, $pageNumber)
+    public function getTrendingCategoryAsync($categoryId, $pageNumber)
     {
-        return $this->trendingGetTrendingCategoryAsyncWithHttpInfo($categoryId, $pageNumber)
+        return $this->getTrendingCategoryAsyncWithHttpInfo($categoryId, $pageNumber)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -466,7 +472,7 @@ class TrendingApi
     }
 
     /**
-     * Operation trendingGetTrendingCategoryAsyncWithHttpInfo
+     * Operation getTrendingCategoryAsyncWithHttpInfo
      *
      * 
      *
@@ -476,15 +482,16 @@ class TrendingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function trendingGetTrendingCategoryAsyncWithHttpInfo($categoryId, $pageNumber)
+    public function getTrendingCategoryAsyncWithHttpInfo($categoryId, $pageNumber)
     {
         $returnType = '\Bungie\Model\InlineResponse20063';
-        $request = $this->trendingGetTrendingCategoryRequest($categoryId, $pageNumber);
+        $request = $this->getTrendingCategoryRequest($categoryId, $pageNumber);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -499,6 +506,7 @@ class TrendingApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -516,7 +524,7 @@ class TrendingApi
     }
 
     /**
-     * Create request for operation 'trendingGetTrendingCategory'
+     * Create request for operation 'getTrendingCategory'
      *
      * @param  string $categoryId The ID of the category for whom you want additional results. (required)
      * @param  int $pageNumber The page # of results to return. (required)
@@ -524,18 +532,18 @@ class TrendingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function trendingGetTrendingCategoryRequest($categoryId, $pageNumber)
+    protected function getTrendingCategoryRequest($categoryId, $pageNumber)
     {
         // verify the required parameter 'categoryId' is set
         if ($categoryId === null || (is_array($categoryId) && count($categoryId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $categoryId when calling trendingGetTrendingCategory'
+                'Missing the required parameter $categoryId when calling getTrendingCategory'
             );
         }
         // verify the required parameter 'pageNumber' is set
         if ($pageNumber === null || (is_array($pageNumber) && count($pageNumber) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $pageNumber when calling trendingGetTrendingCategory'
+                'Missing the required parameter $pageNumber when calling getTrendingCategory'
             );
         }
 
@@ -634,34 +642,36 @@ class TrendingApi
     }
 
     /**
-     * Operation trendingGetTrendingEntryDetail
+     * Operation getTrendingEntryDetail
      *
      * @param  string $identifier The identifier for the entity to be returned. (required)
-     * @param  \Bungie\Model\TrendingTrendingEntryType $trendingEntryType The type of entity to be returned. (required)
+     * @param  \Bungie\Model\Trending\TrendingEntryType $trendingEntryType The type of entity to be returned. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20064
      */
-    public function trendingGetTrendingEntryDetail($identifier, $trendingEntryType)
+    public function getTrendingEntryDetail($identifier, $trendingEntryType)
     {
-        list($response) = $this->trendingGetTrendingEntryDetailWithHttpInfo($identifier, $trendingEntryType);
+        list($response) = $this->getTrendingEntryDetailWithHttpInfo($identifier, $trendingEntryType);
         return $response;
     }
 
     /**
-     * Operation trendingGetTrendingEntryDetailWithHttpInfo
+     * Operation getTrendingEntryDetailWithHttpInfo
      *
      * @param  string $identifier The identifier for the entity to be returned. (required)
-     * @param  \Bungie\Model\TrendingTrendingEntryType $trendingEntryType The type of entity to be returned. (required)
+     * @param  \Bungie\Model\Trending\TrendingEntryType $trendingEntryType The type of entity to be returned. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20064, HTTP status code, HTTP response headers (array of strings)
      */
-    public function trendingGetTrendingEntryDetailWithHttpInfo($identifier, $trendingEntryType)
+    public function getTrendingEntryDetailWithHttpInfo($identifier, $trendingEntryType)
     {
-        $request = $this->trendingGetTrendingEntryDetailRequest($identifier, $trendingEntryType);
+        $request = $this->getTrendingEntryDetailRequest($identifier, $trendingEntryType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -737,19 +747,19 @@ class TrendingApi
     }
 
     /**
-     * Operation trendingGetTrendingEntryDetailAsync
+     * Operation getTrendingEntryDetailAsync
      *
      * 
      *
      * @param  string $identifier The identifier for the entity to be returned. (required)
-     * @param  \Bungie\Model\TrendingTrendingEntryType $trendingEntryType The type of entity to be returned. (required)
+     * @param  \Bungie\Model\Trending\TrendingEntryType $trendingEntryType The type of entity to be returned. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function trendingGetTrendingEntryDetailAsync($identifier, $trendingEntryType)
+    public function getTrendingEntryDetailAsync($identifier, $trendingEntryType)
     {
-        return $this->trendingGetTrendingEntryDetailAsyncWithHttpInfo($identifier, $trendingEntryType)
+        return $this->getTrendingEntryDetailAsyncWithHttpInfo($identifier, $trendingEntryType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -758,25 +768,26 @@ class TrendingApi
     }
 
     /**
-     * Operation trendingGetTrendingEntryDetailAsyncWithHttpInfo
+     * Operation getTrendingEntryDetailAsyncWithHttpInfo
      *
      * 
      *
      * @param  string $identifier The identifier for the entity to be returned. (required)
-     * @param  \Bungie\Model\TrendingTrendingEntryType $trendingEntryType The type of entity to be returned. (required)
+     * @param  \Bungie\Model\Trending\TrendingEntryType $trendingEntryType The type of entity to be returned. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function trendingGetTrendingEntryDetailAsyncWithHttpInfo($identifier, $trendingEntryType)
+    public function getTrendingEntryDetailAsyncWithHttpInfo($identifier, $trendingEntryType)
     {
         $returnType = '\Bungie\Model\InlineResponse20064';
-        $request = $this->trendingGetTrendingEntryDetailRequest($identifier, $trendingEntryType);
+        $request = $this->getTrendingEntryDetailRequest($identifier, $trendingEntryType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -791,6 +802,7 @@ class TrendingApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -808,26 +820,26 @@ class TrendingApi
     }
 
     /**
-     * Create request for operation 'trendingGetTrendingEntryDetail'
+     * Create request for operation 'getTrendingEntryDetail'
      *
      * @param  string $identifier The identifier for the entity to be returned. (required)
-     * @param  \Bungie\Model\TrendingTrendingEntryType $trendingEntryType The type of entity to be returned. (required)
+     * @param  \Bungie\Model\Trending\TrendingEntryType $trendingEntryType The type of entity to be returned. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function trendingGetTrendingEntryDetailRequest($identifier, $trendingEntryType)
+    protected function getTrendingEntryDetailRequest($identifier, $trendingEntryType)
     {
         // verify the required parameter 'identifier' is set
         if ($identifier === null || (is_array($identifier) && count($identifier) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $identifier when calling trendingGetTrendingEntryDetail'
+                'Missing the required parameter $identifier when calling getTrendingEntryDetail'
             );
         }
         // verify the required parameter 'trendingEntryType' is set
         if ($trendingEntryType === null || (is_array($trendingEntryType) && count($trendingEntryType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $trendingEntryType when calling trendingGetTrendingEntryDetail'
+                'Missing the required parameter $trendingEntryType when calling getTrendingEntryDetail'
             );
         }
 

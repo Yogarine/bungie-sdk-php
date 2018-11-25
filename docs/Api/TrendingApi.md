@@ -4,13 +4,13 @@ All URIs are relative to *https://www.bungie.net/Platform*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**trendingGetTrendingCategories**](TrendingApi.md#trendingGetTrendingCategories) | **GET** /Trending/Categories/ | 
-[**trendingGetTrendingCategory**](TrendingApi.md#trendingGetTrendingCategory) | **GET** /Trending/Categories/{categoryId}/{pageNumber}/ | 
-[**trendingGetTrendingEntryDetail**](TrendingApi.md#trendingGetTrendingEntryDetail) | **GET** /Trending/Details/{trendingEntryType}/{identifier}/ | 
+[**getTrendingCategories**](TrendingApi.md#getTrendingCategories) | **GET** /Trending/Categories/ | 
+[**getTrendingCategory**](TrendingApi.md#getTrendingCategory) | **GET** /Trending/Categories/{categoryId}/{pageNumber}/ | 
+[**getTrendingEntryDetail**](TrendingApi.md#getTrendingEntryDetail) | **GET** /Trending/Details/{trendingEntryType}/{identifier}/ | 
 
 
-# **trendingGetTrendingCategories**
-> \Bungie\Model\InlineResponse20062 trendingGetTrendingCategories()
+# **getTrendingCategories**
+> \Bungie\Model\InlineResponse20062 getTrendingCategories()
 
 
 
@@ -34,10 +34,10 @@ $apiInstance = new Bungie\Api\TrendingApi(
 );
 
 try {
-    $result = $apiInstance->trendingGetTrendingCategories();
+    $result = $apiInstance->getTrendingCategories();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TrendingApi->trendingGetTrendingCategories: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TrendingApi->getTrendingCategories: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -60,8 +60,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **trendingGetTrendingCategory**
-> \Bungie\Model\InlineResponse20063 trendingGetTrendingCategory($categoryId, $pageNumber)
+# **getTrendingCategory**
+> \Bungie\Model\InlineResponse20063 getTrendingCategory($categoryId, $pageNumber)
 
 
 
@@ -87,10 +87,10 @@ $categoryId = 'categoryId_example'; // string | The ID of the category for whom 
 $pageNumber = 56; // int | The page # of results to return.
 
 try {
-    $result = $apiInstance->trendingGetTrendingCategory($categoryId, $pageNumber);
+    $result = $apiInstance->getTrendingCategory($categoryId, $pageNumber);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TrendingApi->trendingGetTrendingCategory: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TrendingApi->getTrendingCategory: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -117,8 +117,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **trendingGetTrendingEntryDetail**
-> \Bungie\Model\InlineResponse20064 trendingGetTrendingEntryDetail($identifier, $trendingEntryType)
+# **getTrendingEntryDetail**
+> \Bungie\Model\InlineResponse20064 getTrendingEntryDetail($identifier, $trendingEntryType)
 
 
 
@@ -141,13 +141,13 @@ $apiInstance = new Bungie\Api\TrendingApi(
     $config
 );
 $identifier = 'identifier_example'; // string | The identifier for the entity to be returned.
-$trendingEntryType = new \Bungie\Model\\Bungie\Model\TrendingTrendingEntryType(); // \Bungie\Model\TrendingTrendingEntryType | The type of entity to be returned.
+$trendingEntryType = new \Bungie\Model\Trending\TrendingEntryType(); // \Bungie\Model\Trending\TrendingEntryType | The type of entity to be returned.
 
 try {
-    $result = $apiInstance->trendingGetTrendingEntryDetail($identifier, $trendingEntryType);
+    $result = $apiInstance->getTrendingEntryDetail($identifier, $trendingEntryType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TrendingApi->trendingGetTrendingEntryDetail: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TrendingApi->getTrendingEntryDetail: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -157,7 +157,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| The identifier for the entity to be returned. |
- **trendingEntryType** | [**\Bungie\Model\TrendingTrendingEntryType**](../Model/.md)| The type of entity to be returned. |
+ **trendingEntryType** | [**\Bungie\Model\Trending\TrendingEntryType**](../Model/.md)| The type of entity to be returned. |
 
 ### Return type
 

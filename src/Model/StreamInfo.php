@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class StreamInfo implements ModelInterface, ArrayAccess
+class StreamInfo implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Bungie\API;
+namespace Bungie\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -88,34 +88,36 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetClanAggregateStats
+     * Operation getClanAggregateStats
      *
      * @param  int $groupId Group ID of the clan whose leaderboards you wish to fetch. (required)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20049
      */
-    public function destiny2GetClanAggregateStats($groupId, $modes = null)
+    public function getClanAggregateStats($groupId, $modes = null)
     {
-        list($response) = $this->destiny2GetClanAggregateStatsWithHttpInfo($groupId, $modes);
+        list($response) = $this->getClanAggregateStatsWithHttpInfo($groupId, $modes);
         return $response;
     }
 
     /**
-     * Operation destiny2GetClanAggregateStatsWithHttpInfo
+     * Operation getClanAggregateStatsWithHttpInfo
      *
      * @param  int $groupId Group ID of the clan whose leaderboards you wish to fetch. (required)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20049, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2GetClanAggregateStatsWithHttpInfo($groupId, $modes = null)
+    public function getClanAggregateStatsWithHttpInfo($groupId, $modes = null)
     {
-        $request = $this->destiny2GetClanAggregateStatsRequest($groupId, $modes);
+        $request = $this->getClanAggregateStatsRequest($groupId, $modes);
 
         try {
             $options = $this->createHttpClientOption();
@@ -191,7 +193,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetClanAggregateStatsAsync
+     * Operation getClanAggregateStatsAsync
      *
      * 
      *
@@ -201,9 +203,9 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2GetClanAggregateStatsAsync($groupId, $modes = null)
+    public function getClanAggregateStatsAsync($groupId, $modes = null)
     {
-        return $this->destiny2GetClanAggregateStatsAsyncWithHttpInfo($groupId, $modes)
+        return $this->getClanAggregateStatsAsyncWithHttpInfo($groupId, $modes)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -212,7 +214,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetClanAggregateStatsAsyncWithHttpInfo
+     * Operation getClanAggregateStatsAsyncWithHttpInfo
      *
      * 
      *
@@ -222,15 +224,16 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2GetClanAggregateStatsAsyncWithHttpInfo($groupId, $modes = null)
+    public function getClanAggregateStatsAsyncWithHttpInfo($groupId, $modes = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20049';
-        $request = $this->destiny2GetClanAggregateStatsRequest($groupId, $modes);
+        $request = $this->getClanAggregateStatsRequest($groupId, $modes);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -245,6 +248,7 @@ class PreviewApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -262,7 +266,7 @@ class PreviewApi
     }
 
     /**
-     * Create request for operation 'destiny2GetClanAggregateStats'
+     * Create request for operation 'getClanAggregateStats'
      *
      * @param  int $groupId Group ID of the clan whose leaderboards you wish to fetch. (required)
      * @param  string $modes List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
@@ -270,12 +274,12 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2GetClanAggregateStatsRequest($groupId, $modes = null)
+    protected function getClanAggregateStatsRequest($groupId, $modes = null)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $groupId when calling destiny2GetClanAggregateStats'
+                'Missing the required parameter $groupId when calling getClanAggregateStats'
             );
         }
 
@@ -370,7 +374,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetClanLeaderboards
+     * Operation getClanLeaderboards
      *
      * @param  int $groupId Group ID of the clan whose leaderboards you wish to fetch. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
@@ -379,16 +383,17 @@ class PreviewApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20048
      */
-    public function destiny2GetClanLeaderboards($groupId, $maxtop = null, $modes = null, $statid = null)
+    public function getClanLeaderboards($groupId, $maxtop = null, $modes = null, $statid = null)
     {
-        list($response) = $this->destiny2GetClanLeaderboardsWithHttpInfo($groupId, $maxtop, $modes, $statid);
+        list($response) = $this->getClanLeaderboardsWithHttpInfo($groupId, $maxtop, $modes, $statid);
         return $response;
     }
 
     /**
-     * Operation destiny2GetClanLeaderboardsWithHttpInfo
+     * Operation getClanLeaderboardsWithHttpInfo
      *
      * @param  int $groupId Group ID of the clan whose leaderboards you wish to fetch. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
@@ -397,11 +402,12 @@ class PreviewApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20048, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2GetClanLeaderboardsWithHttpInfo($groupId, $maxtop = null, $modes = null, $statid = null)
+    public function getClanLeaderboardsWithHttpInfo($groupId, $maxtop = null, $modes = null, $statid = null)
     {
-        $request = $this->destiny2GetClanLeaderboardsRequest($groupId, $maxtop, $modes, $statid);
+        $request = $this->getClanLeaderboardsRequest($groupId, $maxtop, $modes, $statid);
 
         try {
             $options = $this->createHttpClientOption();
@@ -477,7 +483,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetClanLeaderboardsAsync
+     * Operation getClanLeaderboardsAsync
      *
      * 
      *
@@ -489,9 +495,9 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2GetClanLeaderboardsAsync($groupId, $maxtop = null, $modes = null, $statid = null)
+    public function getClanLeaderboardsAsync($groupId, $maxtop = null, $modes = null, $statid = null)
     {
-        return $this->destiny2GetClanLeaderboardsAsyncWithHttpInfo($groupId, $maxtop, $modes, $statid)
+        return $this->getClanLeaderboardsAsyncWithHttpInfo($groupId, $maxtop, $modes, $statid)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -500,7 +506,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetClanLeaderboardsAsyncWithHttpInfo
+     * Operation getClanLeaderboardsAsyncWithHttpInfo
      *
      * 
      *
@@ -512,15 +518,16 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2GetClanLeaderboardsAsyncWithHttpInfo($groupId, $maxtop = null, $modes = null, $statid = null)
+    public function getClanLeaderboardsAsyncWithHttpInfo($groupId, $maxtop = null, $modes = null, $statid = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20048';
-        $request = $this->destiny2GetClanLeaderboardsRequest($groupId, $maxtop, $modes, $statid);
+        $request = $this->getClanLeaderboardsRequest($groupId, $maxtop, $modes, $statid);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -535,6 +542,7 @@ class PreviewApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -552,7 +560,7 @@ class PreviewApi
     }
 
     /**
-     * Create request for operation 'destiny2GetClanLeaderboards'
+     * Create request for operation 'getClanLeaderboards'
      *
      * @param  int $groupId Group ID of the clan whose leaderboards you wish to fetch. (required)
      * @param  int $maxtop Maximum number of top players to return. Use a large number to get entire leaderboard. (optional)
@@ -562,12 +570,12 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2GetClanLeaderboardsRequest($groupId, $maxtop = null, $modes = null, $statid = null)
+    protected function getClanLeaderboardsRequest($groupId, $maxtop = null, $modes = null, $statid = null)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $groupId when calling destiny2GetClanLeaderboards'
+                'Missing the required parameter $groupId when calling getClanLeaderboards'
             );
         }
 
@@ -670,7 +678,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetLeaderboards
+     * Operation getLeaderboards
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
@@ -680,16 +688,17 @@ class PreviewApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20048
      */
-    public function destiny2GetLeaderboards($destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
+    public function getLeaderboards($destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
     {
-        list($response) = $this->destiny2GetLeaderboardsWithHttpInfo($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
+        list($response) = $this->getLeaderboardsWithHttpInfo($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
         return $response;
     }
 
     /**
-     * Operation destiny2GetLeaderboardsWithHttpInfo
+     * Operation getLeaderboardsWithHttpInfo
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
@@ -699,11 +708,12 @@ class PreviewApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20048, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2GetLeaderboardsWithHttpInfo($destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
+    public function getLeaderboardsWithHttpInfo($destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
     {
-        $request = $this->destiny2GetLeaderboardsRequest($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
+        $request = $this->getLeaderboardsRequest($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
 
         try {
             $options = $this->createHttpClientOption();
@@ -779,7 +789,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetLeaderboardsAsync
+     * Operation getLeaderboardsAsync
      *
      * 
      *
@@ -792,9 +802,9 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2GetLeaderboardsAsync($destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
+    public function getLeaderboardsAsync($destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
     {
-        return $this->destiny2GetLeaderboardsAsyncWithHttpInfo($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+        return $this->getLeaderboardsAsyncWithHttpInfo($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -803,7 +813,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetLeaderboardsAsyncWithHttpInfo
+     * Operation getLeaderboardsAsyncWithHttpInfo
      *
      * 
      *
@@ -816,15 +826,16 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2GetLeaderboardsAsyncWithHttpInfo($destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
+    public function getLeaderboardsAsyncWithHttpInfo($destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20048';
-        $request = $this->destiny2GetLeaderboardsRequest($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
+        $request = $this->getLeaderboardsRequest($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -839,6 +850,7 @@ class PreviewApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -856,7 +868,7 @@ class PreviewApi
     }
 
     /**
-     * Create request for operation 'destiny2GetLeaderboards'
+     * Create request for operation 'getLeaderboards'
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
@@ -867,18 +879,18 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2GetLeaderboardsRequest($destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
+    protected function getLeaderboardsRequest($destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
     {
         // verify the required parameter 'destinyMembershipId' is set
         if ($destinyMembershipId === null || (is_array($destinyMembershipId) && count($destinyMembershipId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $destinyMembershipId when calling destiny2GetLeaderboards'
+                'Missing the required parameter $destinyMembershipId when calling getLeaderboards'
             );
         }
         // verify the required parameter 'membershipType' is set
         if ($membershipType === null || (is_array($membershipType) && count($membershipType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $membershipType when calling destiny2GetLeaderboards'
+                'Missing the required parameter $membershipType when calling getLeaderboards'
             );
         }
 
@@ -989,7 +1001,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetLeaderboardsForCharacter
+     * Operation getLeaderboardsForCharacter
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
@@ -1000,16 +1012,17 @@ class PreviewApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20048
      */
-    public function destiny2GetLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
+    public function getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
     {
-        list($response) = $this->destiny2GetLeaderboardsForCharacterWithHttpInfo($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
+        list($response) = $this->getLeaderboardsForCharacterWithHttpInfo($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
         return $response;
     }
 
     /**
-     * Operation destiny2GetLeaderboardsForCharacterWithHttpInfo
+     * Operation getLeaderboardsForCharacterWithHttpInfo
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
@@ -1020,11 +1033,12 @@ class PreviewApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20048, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2GetLeaderboardsForCharacterWithHttpInfo($characterId, $destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
+    public function getLeaderboardsForCharacterWithHttpInfo($characterId, $destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
     {
-        $request = $this->destiny2GetLeaderboardsForCharacterRequest($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
+        $request = $this->getLeaderboardsForCharacterRequest($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1100,7 +1114,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetLeaderboardsForCharacterAsync
+     * Operation getLeaderboardsForCharacterAsync
      *
      * 
      *
@@ -1114,9 +1128,9 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2GetLeaderboardsForCharacterAsync($characterId, $destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
+    public function getLeaderboardsForCharacterAsync($characterId, $destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
     {
-        return $this->destiny2GetLeaderboardsForCharacterAsyncWithHttpInfo($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+        return $this->getLeaderboardsForCharacterAsyncWithHttpInfo($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1125,7 +1139,7 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2GetLeaderboardsForCharacterAsyncWithHttpInfo
+     * Operation getLeaderboardsForCharacterAsyncWithHttpInfo
      *
      * 
      *
@@ -1139,15 +1153,16 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2GetLeaderboardsForCharacterAsyncWithHttpInfo($characterId, $destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
+    public function getLeaderboardsForCharacterAsyncWithHttpInfo($characterId, $destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20048';
-        $request = $this->destiny2GetLeaderboardsForCharacterRequest($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
+        $request = $this->getLeaderboardsForCharacterRequest($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1162,6 +1177,7 @@ class PreviewApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1179,7 +1195,7 @@ class PreviewApi
     }
 
     /**
-     * Create request for operation 'destiny2GetLeaderboardsForCharacter'
+     * Create request for operation 'getLeaderboardsForCharacter'
      *
      * @param  int $characterId The specific character to build the leaderboard around for the provided Destiny Membership. (required)
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
@@ -1191,24 +1207,24 @@ class PreviewApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2GetLeaderboardsForCharacterRequest($characterId, $destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
+    protected function getLeaderboardsForCharacterRequest($characterId, $destinyMembershipId, $membershipType, $maxtop = null, $modes = null, $statid = null)
     {
         // verify the required parameter 'characterId' is set
         if ($characterId === null || (is_array($characterId) && count($characterId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $characterId when calling destiny2GetLeaderboardsForCharacter'
+                'Missing the required parameter $characterId when calling getLeaderboardsForCharacter'
             );
         }
         // verify the required parameter 'destinyMembershipId' is set
         if ($destinyMembershipId === null || (is_array($destinyMembershipId) && count($destinyMembershipId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $destinyMembershipId when calling destiny2GetLeaderboardsForCharacter'
+                'Missing the required parameter $destinyMembershipId when calling getLeaderboardsForCharacter'
             );
         }
         // verify the required parameter 'membershipType' is set
         if ($membershipType === null || (is_array($membershipType) && count($membershipType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $membershipType when calling destiny2GetLeaderboardsForCharacter'
+                'Missing the required parameter $membershipType when calling getLeaderboardsForCharacter'
             );
         }
 
@@ -1327,32 +1343,34 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2InsertSocketPlug
+     * Operation insertSocketPlug
      *
-     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
+     * @param  \Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsActionRequest $destinyInsertPlugsActionRequest destinyInsertPlugsActionRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20045
      */
-    public function destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest)
+    public function insertSocketPlug($destinyInsertPlugsActionRequest)
     {
-        list($response) = $this->destiny2InsertSocketPlugWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest);
+        list($response) = $this->insertSocketPlugWithHttpInfo($destinyInsertPlugsActionRequest);
         return $response;
     }
 
     /**
-     * Operation destiny2InsertSocketPlugWithHttpInfo
+     * Operation insertSocketPlugWithHttpInfo
      *
-     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
+     * @param  \Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsActionRequest $destinyInsertPlugsActionRequest (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20045, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destiny2InsertSocketPlugWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest)
+    public function insertSocketPlugWithHttpInfo($destinyInsertPlugsActionRequest)
     {
-        $request = $this->destiny2InsertSocketPlugRequest($destinyRequestsActionsDestinyInsertPlugsActionRequest);
+        $request = $this->insertSocketPlugRequest($destinyInsertPlugsActionRequest);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1428,18 +1446,18 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2InsertSocketPlugAsync
+     * Operation insertSocketPlugAsync
      *
      * 
      *
-     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
+     * @param  \Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsActionRequest $destinyInsertPlugsActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2InsertSocketPlugAsync($destinyRequestsActionsDestinyInsertPlugsActionRequest)
+    public function insertSocketPlugAsync($destinyInsertPlugsActionRequest)
     {
-        return $this->destiny2InsertSocketPlugAsyncWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest)
+        return $this->insertSocketPlugAsyncWithHttpInfo($destinyInsertPlugsActionRequest)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1448,24 +1466,25 @@ class PreviewApi
     }
 
     /**
-     * Operation destiny2InsertSocketPlugAsyncWithHttpInfo
+     * Operation insertSocketPlugAsyncWithHttpInfo
      *
      * 
      *
-     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
+     * @param  \Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsActionRequest $destinyInsertPlugsActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function destiny2InsertSocketPlugAsyncWithHttpInfo($destinyRequestsActionsDestinyInsertPlugsActionRequest)
+    public function insertSocketPlugAsyncWithHttpInfo($destinyInsertPlugsActionRequest)
     {
         $returnType = '\Bungie\Model\InlineResponse20045';
-        $request = $this->destiny2InsertSocketPlugRequest($destinyRequestsActionsDestinyInsertPlugsActionRequest);
+        $request = $this->insertSocketPlugRequest($destinyInsertPlugsActionRequest);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1480,6 +1499,7 @@ class PreviewApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1497,19 +1517,19 @@ class PreviewApi
     }
 
     /**
-     * Create request for operation 'destiny2InsertSocketPlug'
+     * Create request for operation 'insertSocketPlug'
      *
-     * @param  \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest $destinyRequestsActionsDestinyInsertPlugsActionRequest (required)
+     * @param  \Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsActionRequest $destinyInsertPlugsActionRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function destiny2InsertSocketPlugRequest($destinyRequestsActionsDestinyInsertPlugsActionRequest)
+    protected function insertSocketPlugRequest($destinyInsertPlugsActionRequest)
     {
-        // verify the required parameter 'destinyRequestsActionsDestinyInsertPlugsActionRequest' is set
-        if ($destinyRequestsActionsDestinyInsertPlugsActionRequest === null || (is_array($destinyRequestsActionsDestinyInsertPlugsActionRequest) && count($destinyRequestsActionsDestinyInsertPlugsActionRequest) === 0)) {
+        // verify the required parameter 'destinyInsertPlugsActionRequest' is set
+        if ($destinyInsertPlugsActionRequest === null || (is_array($destinyInsertPlugsActionRequest) && count($destinyInsertPlugsActionRequest) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $destinyRequestsActionsDestinyInsertPlugsActionRequest when calling destiny2InsertSocketPlug'
+                'Missing the required parameter $destinyInsertPlugsActionRequest when calling insertSocketPlug'
             );
         }
 
@@ -1524,8 +1544,8 @@ class PreviewApi
 
         // body params
         $_tempBody = null;
-        if (isset($destinyRequestsActionsDestinyInsertPlugsActionRequest)) {
-            $_tempBody = $destinyRequestsActionsDestinyInsertPlugsActionRequest;
+        if (isset($destinyInsertPlugsActionRequest)) {
+            $_tempBody = $destinyInsertPlugsActionRequest;
         }
 
         if ($multipart) {

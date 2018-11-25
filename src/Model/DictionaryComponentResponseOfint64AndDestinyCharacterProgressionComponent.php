@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent implements ModelInterface, ArrayAccess
+class DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'map[string,\Bungie\Model\DestinyEntitiesCharactersDestinyCharacterProgressionComponent]',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterProgressionComponent]',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent 
     /**
      * Gets data
      *
-     * @return map[string,\Bungie\Model\DestinyEntitiesCharactersDestinyCharacterProgressionComponent]|null
+     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterProgressionComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent 
     /**
      * Sets data
      *
-     * @param map[string,\Bungie\Model\DestinyEntitiesCharactersDestinyCharacterProgressionComponent]|null $data data
+     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterProgressionComponent]|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent 
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterProgressionComponent 
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

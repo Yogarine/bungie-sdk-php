@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SearchResultOfFireteamSummary implements ModelInterface, ArrayAccess
+class SearchResultOfFireteamSummary implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,10 +57,10 @@ class SearchResultOfFireteamSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\FireteamFireteamSummary[]',
+        'results' => '\Bungie\Model\\Bungie\Model\Fireteam\FireteamSummary[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
-        'query' => '\Bungie\Model\QueriesPagedQuery',
+        'query' => '\Bungie\Model\Queries\PagedQuery',
         'replacementContinuationToken' => 'string',
         'useTotalResults' => 'bool'
     ];
@@ -237,7 +237,7 @@ class SearchResultOfFireteamSummary implements ModelInterface, ArrayAccess
     /**
      * Gets results
      *
-     * @return \Bungie\Model\FireteamFireteamSummary[]|null
+     * @return \Bungie\Model\\Bungie\Model\Fireteam\FireteamSummary[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfFireteamSummary implements ModelInterface, ArrayAccess
     /**
      * Sets results
      *
-     * @param \Bungie\Model\FireteamFireteamSummary[]|null $results results
+     * @param \Bungie\Model\\Bungie\Model\Fireteam\FireteamSummary[]|null $results results
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class SearchResultOfFireteamSummary implements ModelInterface, ArrayAccess
     /**
      * Gets query
      *
-     * @return \Bungie\Model\QueriesPagedQuery|null
+     * @return \Bungie\Model\Queries\PagedQuery|null
      */
     public function getQuery()
     {
@@ -319,7 +319,7 @@ class SearchResultOfFireteamSummary implements ModelInterface, ArrayAccess
     /**
      * Sets query
      *
-     * @param \Bungie\Model\QueriesPagedQuery|null $query query
+     * @param \Bungie\Model\Queries\PagedQuery|null $query query
      *
      * @return $this
      */

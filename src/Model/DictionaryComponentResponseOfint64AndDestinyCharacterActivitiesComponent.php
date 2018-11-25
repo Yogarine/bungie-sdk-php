@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent implements ModelInterface, ArrayAccess
+class DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent i
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'map[string,\Bungie\Model\DestinyEntitiesCharactersDestinyCharacterActivitiesComponent]',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterActivitiesComponent]',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent i
     /**
      * Gets data
      *
-     * @return map[string,\Bungie\Model\DestinyEntitiesCharactersDestinyCharacterActivitiesComponent]|null
+     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterActivitiesComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent i
     /**
      * Sets data
      *
-     * @param map[string,\Bungie\Model\DestinyEntitiesCharactersDestinyCharacterActivitiesComponent]|null $data data
+     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterActivitiesComponent]|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent i
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent i
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

@@ -1,0 +1,11 @@
+# EntityActionResult
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**entityId** | **int** |  | [optional] 
+**result** | [**\Bungie\Model\Exceptions\PlatformErrorCodes**](PlatformErrorCodes.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

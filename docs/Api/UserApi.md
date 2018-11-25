@@ -4,16 +4,16 @@ All URIs are relative to *https://www.bungie.net/Platform*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**userGetAvailableThemes**](UserApi.md#userGetAvailableThemes) | **GET** /User/GetAvailableThemes/ | 
-[**userGetBungieNetUserById**](UserApi.md#userGetBungieNetUserById) | **GET** /User/GetBungieNetUserById/{id}/ | 
-[**userGetMembershipDataById**](UserApi.md#userGetMembershipDataById) | **GET** /User/GetMembershipsById/{membershipId}/{membershipType}/ | 
-[**userGetMembershipDataForCurrentUser**](UserApi.md#userGetMembershipDataForCurrentUser) | **GET** /User/GetMembershipsForCurrentUser/ | 
-[**userGetPartnerships**](UserApi.md#userGetPartnerships) | **GET** /User/{membershipId}/Partnerships/ | 
-[**userSearchUsers**](UserApi.md#userSearchUsers) | **GET** /User/SearchUsers/ | 
+[**getAvailableThemes**](UserApi.md#getAvailableThemes) | **GET** /User/GetAvailableThemes/ | 
+[**getBungieNetUserById**](UserApi.md#getBungieNetUserById) | **GET** /User/GetBungieNetUserById/{id}/ | 
+[**getMembershipDataById**](UserApi.md#getMembershipDataById) | **GET** /User/GetMembershipsById/{membershipId}/{membershipType}/ | 
+[**getMembershipDataForCurrentUser**](UserApi.md#getMembershipDataForCurrentUser) | **GET** /User/GetMembershipsForCurrentUser/ | 
+[**getPartnerships**](UserApi.md#getPartnerships) | **GET** /User/{membershipId}/Partnerships/ | 
+[**searchUsers**](UserApi.md#searchUsers) | **GET** /User/SearchUsers/ | 
 
 
-# **userGetAvailableThemes**
-> \Bungie\Model\InlineResponse2004 userGetAvailableThemes()
+# **getAvailableThemes**
+> \Bungie\Model\InlineResponse2004 getAvailableThemes()
 
 
 
@@ -37,10 +37,10 @@ $apiInstance = new Bungie\Api\UserApi(
 );
 
 try {
-    $result = $apiInstance->userGetAvailableThemes();
+    $result = $apiInstance->getAvailableThemes();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->userGetAvailableThemes: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->getAvailableThemes: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -63,8 +63,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **userGetBungieNetUserById**
-> \Bungie\Model\InlineResponse2002 userGetBungieNetUserById($id)
+# **getBungieNetUserById**
+> \Bungie\Model\InlineResponse2002 getBungieNetUserById($id)
 
 
 
@@ -89,10 +89,10 @@ $apiInstance = new Bungie\Api\UserApi(
 $id = 56; // int | The requested Bungie.net membership id.
 
 try {
-    $result = $apiInstance->userGetBungieNetUserById($id);
+    $result = $apiInstance->getBungieNetUserById($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->userGetBungieNetUserById: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->getBungieNetUserById: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -118,8 +118,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **userGetMembershipDataById**
-> \Bungie\Model\InlineResponse2005 userGetMembershipDataById($membershipId, $membershipType)
+# **getMembershipDataById**
+> \Bungie\Model\InlineResponse2005 getMembershipDataById($membershipId, $membershipType)
 
 
 
@@ -142,13 +142,13 @@ $apiInstance = new Bungie\Api\UserApi(
     $config
 );
 $membershipId = 56; // int | The membership ID of the target user.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Type of the supplied membership ID.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Type of the supplied membership ID.
 
 try {
-    $result = $apiInstance->userGetMembershipDataById($membershipId, $membershipType);
+    $result = $apiInstance->getMembershipDataById($membershipId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->userGetMembershipDataById: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->getMembershipDataById: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -175,8 +175,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **userGetMembershipDataForCurrentUser**
-> \Bungie\Model\InlineResponse2005 userGetMembershipDataForCurrentUser()
+# **getMembershipDataForCurrentUser**
+> \Bungie\Model\InlineResponse2005 getMembershipDataForCurrentUser()
 
 
 
@@ -202,10 +202,10 @@ $apiInstance = new Bungie\Api\UserApi(
 );
 
 try {
-    $result = $apiInstance->userGetMembershipDataForCurrentUser();
+    $result = $apiInstance->getMembershipDataForCurrentUser();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->userGetMembershipDataForCurrentUser: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->getMembershipDataForCurrentUser: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -228,8 +228,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **userGetPartnerships**
-> \Bungie\Model\InlineResponse2006 userGetPartnerships($membershipId)
+# **getPartnerships**
+> \Bungie\Model\InlineResponse2006 getPartnerships($membershipId)
 
 
 
@@ -254,10 +254,10 @@ $apiInstance = new Bungie\Api\UserApi(
 $membershipId = 56; // int | The ID of the member for whom partnerships should be returned.
 
 try {
-    $result = $apiInstance->userGetPartnerships($membershipId);
+    $result = $apiInstance->getPartnerships($membershipId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->userGetPartnerships: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->getPartnerships: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -283,8 +283,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **userSearchUsers**
-> \Bungie\Model\InlineResponse2003 userSearchUsers($q)
+# **searchUsers**
+> \Bungie\Model\InlineResponse2003 searchUsers($q)
 
 
 
@@ -309,10 +309,10 @@ $apiInstance = new Bungie\Api\UserApi(
 $q = 'q_example'; // string | The search string.
 
 try {
-    $result = $apiInstance->userSearchUsers($q);
+    $result = $apiInstance->searchUsers($q);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->userSearchUsers: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->searchUsers: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

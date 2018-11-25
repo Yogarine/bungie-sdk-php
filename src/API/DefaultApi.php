@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Bungie\API;
+namespace Bungie\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -93,6 +93,7 @@ class DefaultApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20068
      */
     public function getAvailableLocales()
@@ -107,6 +108,7 @@ class DefaultApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20068, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAvailableLocalesWithHttpInfo()
@@ -223,6 +225,7 @@ class DefaultApi
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -237,6 +240,7 @@ class DefaultApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -347,6 +351,7 @@ class DefaultApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20069
      */
     public function getCommonSettings()
@@ -361,6 +366,7 @@ class DefaultApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20069, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCommonSettingsWithHttpInfo()
@@ -477,6 +483,7 @@ class DefaultApi
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -491,6 +498,7 @@ class DefaultApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -602,6 +610,7 @@ class DefaultApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20070
      */
     public function getGlobalAlerts($includestreaming = null)
@@ -617,6 +626,7 @@ class DefaultApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20070, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGlobalAlertsWithHttpInfo($includestreaming = null)
@@ -735,6 +745,7 @@ class DefaultApi
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -749,6 +760,7 @@ class DefaultApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(

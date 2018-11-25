@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Bungie\API;
+namespace Bungie\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -88,7 +88,7 @@ class AppApi
     }
 
     /**
-     * Operation appGetApplicationApiUsage
+     * Operation getApplicationApiUsage
      *
      * @param  int $applicationId ID of the application to get usage statistics. (required)
      * @param  \DateTime $end End time for query. Goes to now if not specified. (optional)
@@ -96,16 +96,17 @@ class AppApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse200
      */
-    public function appGetApplicationApiUsage($applicationId, $end = null, $start = null)
+    public function getApplicationApiUsage($applicationId, $end = null, $start = null)
     {
-        list($response) = $this->appGetApplicationApiUsageWithHttpInfo($applicationId, $end, $start);
+        list($response) = $this->getApplicationApiUsageWithHttpInfo($applicationId, $end, $start);
         return $response;
     }
 
     /**
-     * Operation appGetApplicationApiUsageWithHttpInfo
+     * Operation getApplicationApiUsageWithHttpInfo
      *
      * @param  int $applicationId ID of the application to get usage statistics. (required)
      * @param  \DateTime $end End time for query. Goes to now if not specified. (optional)
@@ -113,11 +114,12 @@ class AppApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function appGetApplicationApiUsageWithHttpInfo($applicationId, $end = null, $start = null)
+    public function getApplicationApiUsageWithHttpInfo($applicationId, $end = null, $start = null)
     {
-        $request = $this->appGetApplicationApiUsageRequest($applicationId, $end, $start);
+        $request = $this->getApplicationApiUsageRequest($applicationId, $end, $start);
 
         try {
             $options = $this->createHttpClientOption();
@@ -193,7 +195,7 @@ class AppApi
     }
 
     /**
-     * Operation appGetApplicationApiUsageAsync
+     * Operation getApplicationApiUsageAsync
      *
      * 
      *
@@ -204,9 +206,9 @@ class AppApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function appGetApplicationApiUsageAsync($applicationId, $end = null, $start = null)
+    public function getApplicationApiUsageAsync($applicationId, $end = null, $start = null)
     {
-        return $this->appGetApplicationApiUsageAsyncWithHttpInfo($applicationId, $end, $start)
+        return $this->getApplicationApiUsageAsyncWithHttpInfo($applicationId, $end, $start)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -215,7 +217,7 @@ class AppApi
     }
 
     /**
-     * Operation appGetApplicationApiUsageAsyncWithHttpInfo
+     * Operation getApplicationApiUsageAsyncWithHttpInfo
      *
      * 
      *
@@ -226,15 +228,16 @@ class AppApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function appGetApplicationApiUsageAsyncWithHttpInfo($applicationId, $end = null, $start = null)
+    public function getApplicationApiUsageAsyncWithHttpInfo($applicationId, $end = null, $start = null)
     {
         $returnType = '\Bungie\Model\InlineResponse200';
-        $request = $this->appGetApplicationApiUsageRequest($applicationId, $end, $start);
+        $request = $this->getApplicationApiUsageRequest($applicationId, $end, $start);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -249,6 +252,7 @@ class AppApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -266,7 +270,7 @@ class AppApi
     }
 
     /**
-     * Create request for operation 'appGetApplicationApiUsage'
+     * Create request for operation 'getApplicationApiUsage'
      *
      * @param  int $applicationId ID of the application to get usage statistics. (required)
      * @param  \DateTime $end End time for query. Goes to now if not specified. (optional)
@@ -275,12 +279,12 @@ class AppApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function appGetApplicationApiUsageRequest($applicationId, $end = null, $start = null)
+    protected function getApplicationApiUsageRequest($applicationId, $end = null, $start = null)
     {
         // verify the required parameter 'applicationId' is set
         if ($applicationId === null || (is_array($applicationId) && count($applicationId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $applicationId when calling appGetApplicationApiUsage'
+                'Missing the required parameter $applicationId when calling getApplicationApiUsage'
             );
         }
 
@@ -383,30 +387,32 @@ class AppApi
     }
 
     /**
-     * Operation appGetBungieApplications
+     * Operation getBungieApplications
      *
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2001
      */
-    public function appGetBungieApplications()
+    public function getBungieApplications()
     {
-        list($response) = $this->appGetBungieApplicationsWithHttpInfo();
+        list($response) = $this->getBungieApplicationsWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation appGetBungieApplicationsWithHttpInfo
+     * Operation getBungieApplicationsWithHttpInfo
      *
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function appGetBungieApplicationsWithHttpInfo()
+    public function getBungieApplicationsWithHttpInfo()
     {
-        $request = $this->appGetBungieApplicationsRequest();
+        $request = $this->getBungieApplicationsRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -482,7 +488,7 @@ class AppApi
     }
 
     /**
-     * Operation appGetBungieApplicationsAsync
+     * Operation getBungieApplicationsAsync
      *
      * 
      *
@@ -490,9 +496,9 @@ class AppApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function appGetBungieApplicationsAsync()
+    public function getBungieApplicationsAsync()
     {
-        return $this->appGetBungieApplicationsAsyncWithHttpInfo()
+        return $this->getBungieApplicationsAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -501,7 +507,7 @@ class AppApi
     }
 
     /**
-     * Operation appGetBungieApplicationsAsyncWithHttpInfo
+     * Operation getBungieApplicationsAsyncWithHttpInfo
      *
      * 
      *
@@ -509,15 +515,16 @@ class AppApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function appGetBungieApplicationsAsyncWithHttpInfo()
+    public function getBungieApplicationsAsyncWithHttpInfo()
     {
         $returnType = '\Bungie\Model\InlineResponse2001';
-        $request = $this->appGetBungieApplicationsRequest();
+        $request = $this->getBungieApplicationsRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -532,6 +539,7 @@ class AppApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -549,13 +557,13 @@ class AppApi
     }
 
     /**
-     * Create request for operation 'appGetBungieApplications'
+     * Create request for operation 'getBungieApplications'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function appGetBungieApplicationsRequest()
+    protected function getBungieApplicationsRequest()
     {
 
         $resourcePath = '/App/FirstParty/';

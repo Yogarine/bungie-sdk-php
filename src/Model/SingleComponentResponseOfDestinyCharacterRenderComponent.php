@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SingleComponentResponseOfDestinyCharacterRenderComponent implements ModelInterface, ArrayAccess
+class SingleComponentResponseOfDestinyCharacterRenderComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class SingleComponentResponseOfDestinyCharacterRenderComponent implements ModelI
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\DestinyEntitiesCharactersDestinyCharacterRenderComponent',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterRenderComponent',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SingleComponentResponseOfDestinyCharacterRenderComponent implements ModelI
     /**
      * Gets data
      *
-     * @return \Bungie\Model\DestinyEntitiesCharactersDestinyCharacterRenderComponent|null
+     * @return \Bungie\Model\Destiny\Entities\Characters\DestinyCharacterRenderComponent|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class SingleComponentResponseOfDestinyCharacterRenderComponent implements ModelI
     /**
      * Sets data
      *
-     * @param \Bungie\Model\DestinyEntitiesCharactersDestinyCharacterRenderComponent|null $data data
+     * @param \Bungie\Model\Destiny\Entities\Characters\DestinyCharacterRenderComponent|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SingleComponentResponseOfDestinyCharacterRenderComponent implements ModelI
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class SingleComponentResponseOfDestinyCharacterRenderComponent implements ModelI
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

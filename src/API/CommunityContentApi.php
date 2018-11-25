@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Bungie\API;
+namespace Bungie\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -88,36 +88,38 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityContent
+     * Operation getCommunityContent
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\ForumCommunityContentSortMode $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\CommunityContentSortMode $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20010
      */
-    public function communityContentGetCommunityContent($mediaFilter, $page, $sort)
+    public function getCommunityContent($mediaFilter, $page, $sort)
     {
-        list($response) = $this->communityContentGetCommunityContentWithHttpInfo($mediaFilter, $page, $sort);
+        list($response) = $this->getCommunityContentWithHttpInfo($mediaFilter, $page, $sort);
         return $response;
     }
 
     /**
-     * Operation communityContentGetCommunityContentWithHttpInfo
+     * Operation getCommunityContentWithHttpInfo
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\ForumCommunityContentSortMode $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\CommunityContentSortMode $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
-    public function communityContentGetCommunityContentWithHttpInfo($mediaFilter, $page, $sort)
+    public function getCommunityContentWithHttpInfo($mediaFilter, $page, $sort)
     {
-        $request = $this->communityContentGetCommunityContentRequest($mediaFilter, $page, $sort);
+        $request = $this->getCommunityContentRequest($mediaFilter, $page, $sort);
 
         try {
             $options = $this->createHttpClientOption();
@@ -193,20 +195,20 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityContentAsync
+     * Operation getCommunityContentAsync
      *
      * 
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\ForumCommunityContentSortMode $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\CommunityContentSortMode $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetCommunityContentAsync($mediaFilter, $page, $sort)
+    public function getCommunityContentAsync($mediaFilter, $page, $sort)
     {
-        return $this->communityContentGetCommunityContentAsyncWithHttpInfo($mediaFilter, $page, $sort)
+        return $this->getCommunityContentAsyncWithHttpInfo($mediaFilter, $page, $sort)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -215,26 +217,27 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityContentAsyncWithHttpInfo
+     * Operation getCommunityContentAsyncWithHttpInfo
      *
      * 
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\ForumCommunityContentSortMode $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\CommunityContentSortMode $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetCommunityContentAsyncWithHttpInfo($mediaFilter, $page, $sort)
+    public function getCommunityContentAsyncWithHttpInfo($mediaFilter, $page, $sort)
     {
         $returnType = '\Bungie\Model\InlineResponse20010';
-        $request = $this->communityContentGetCommunityContentRequest($mediaFilter, $page, $sort);
+        $request = $this->getCommunityContentRequest($mediaFilter, $page, $sort);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -249,6 +252,7 @@ class CommunityContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -266,33 +270,33 @@ class CommunityContentApi
     }
 
     /**
-     * Create request for operation 'communityContentGetCommunityContent'
+     * Create request for operation 'getCommunityContent'
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\ForumCommunityContentSortMode $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\CommunityContentSortMode $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function communityContentGetCommunityContentRequest($mediaFilter, $page, $sort)
+    protected function getCommunityContentRequest($mediaFilter, $page, $sort)
     {
         // verify the required parameter 'mediaFilter' is set
         if ($mediaFilter === null || (is_array($mediaFilter) && count($mediaFilter) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $mediaFilter when calling communityContentGetCommunityContent'
+                'Missing the required parameter $mediaFilter when calling getCommunityContent'
             );
         }
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling communityContentGetCommunityContent'
+                'Missing the required parameter $page when calling getCommunityContent'
             );
         }
         // verify the required parameter 'sort' is set
         if ($sort === null || (is_array($sort) && count($sort) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sort when calling communityContentGetCommunityContent'
+                'Missing the required parameter $sort when calling getCommunityContent'
             );
         }
 
@@ -399,40 +403,42 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatuses
+     * Operation getCommunityLiveStatuses
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      * @param  int $modeHash The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. (optional)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20060
      */
-    public function communityContentGetCommunityLiveStatuses($page, $partnershipType, $sort, $modeHash = null, $streamLocale = null)
+    public function getCommunityLiveStatuses($page, $partnershipType, $sort, $modeHash = null, $streamLocale = null)
     {
-        list($response) = $this->communityContentGetCommunityLiveStatusesWithHttpInfo($page, $partnershipType, $sort, $modeHash, $streamLocale);
+        list($response) = $this->getCommunityLiveStatusesWithHttpInfo($page, $partnershipType, $sort, $modeHash, $streamLocale);
         return $response;
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesWithHttpInfo
+     * Operation getCommunityLiveStatusesWithHttpInfo
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      * @param  int $modeHash The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. (optional)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20060, HTTP status code, HTTP response headers (array of strings)
      */
-    public function communityContentGetCommunityLiveStatusesWithHttpInfo($page, $partnershipType, $sort, $modeHash = null, $streamLocale = null)
+    public function getCommunityLiveStatusesWithHttpInfo($page, $partnershipType, $sort, $modeHash = null, $streamLocale = null)
     {
-        $request = $this->communityContentGetCommunityLiveStatusesRequest($page, $partnershipType, $sort, $modeHash, $streamLocale);
+        $request = $this->getCommunityLiveStatusesRequest($page, $partnershipType, $sort, $modeHash, $streamLocale);
 
         try {
             $options = $this->createHttpClientOption();
@@ -508,22 +514,22 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesAsync
+     * Operation getCommunityLiveStatusesAsync
      *
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      * @param  int $modeHash The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. (optional)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetCommunityLiveStatusesAsync($page, $partnershipType, $sort, $modeHash = null, $streamLocale = null)
+    public function getCommunityLiveStatusesAsync($page, $partnershipType, $sort, $modeHash = null, $streamLocale = null)
     {
-        return $this->communityContentGetCommunityLiveStatusesAsyncWithHttpInfo($page, $partnershipType, $sort, $modeHash, $streamLocale)
+        return $this->getCommunityLiveStatusesAsyncWithHttpInfo($page, $partnershipType, $sort, $modeHash, $streamLocale)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -532,28 +538,29 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesAsyncWithHttpInfo
+     * Operation getCommunityLiveStatusesAsyncWithHttpInfo
      *
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      * @param  int $modeHash The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. (optional)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetCommunityLiveStatusesAsyncWithHttpInfo($page, $partnershipType, $sort, $modeHash = null, $streamLocale = null)
+    public function getCommunityLiveStatusesAsyncWithHttpInfo($page, $partnershipType, $sort, $modeHash = null, $streamLocale = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20060';
-        $request = $this->communityContentGetCommunityLiveStatusesRequest($page, $partnershipType, $sort, $modeHash, $streamLocale);
+        $request = $this->getCommunityLiveStatusesRequest($page, $partnershipType, $sort, $modeHash, $streamLocale);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -568,6 +575,7 @@ class CommunityContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -585,35 +593,35 @@ class CommunityContentApi
     }
 
     /**
-     * Create request for operation 'communityContentGetCommunityLiveStatuses'
+     * Create request for operation 'getCommunityLiveStatuses'
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      * @param  int $modeHash The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. (optional)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function communityContentGetCommunityLiveStatusesRequest($page, $partnershipType, $sort, $modeHash = null, $streamLocale = null)
+    protected function getCommunityLiveStatusesRequest($page, $partnershipType, $sort, $modeHash = null, $streamLocale = null)
     {
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling communityContentGetCommunityLiveStatuses'
+                'Missing the required parameter $page when calling getCommunityLiveStatuses'
             );
         }
         // verify the required parameter 'partnershipType' is set
         if ($partnershipType === null || (is_array($partnershipType) && count($partnershipType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $partnershipType when calling communityContentGetCommunityLiveStatuses'
+                'Missing the required parameter $partnershipType when calling getCommunityLiveStatuses'
             );
         }
         // verify the required parameter 'sort' is set
         if ($sort === null || (is_array($sort) && count($sort) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sort when calling communityContentGetCommunityLiveStatuses'
+                'Missing the required parameter $sort when calling getCommunityLiveStatuses'
             );
         }
 
@@ -728,36 +736,38 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesForClanmates
+     * Operation getCommunityLiveStatusesForClanmates
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20060
      */
-    public function communityContentGetCommunityLiveStatusesForClanmates($page, $partnershipType, $sort)
+    public function getCommunityLiveStatusesForClanmates($page, $partnershipType, $sort)
     {
-        list($response) = $this->communityContentGetCommunityLiveStatusesForClanmatesWithHttpInfo($page, $partnershipType, $sort);
+        list($response) = $this->getCommunityLiveStatusesForClanmatesWithHttpInfo($page, $partnershipType, $sort);
         return $response;
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesForClanmatesWithHttpInfo
+     * Operation getCommunityLiveStatusesForClanmatesWithHttpInfo
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20060, HTTP status code, HTTP response headers (array of strings)
      */
-    public function communityContentGetCommunityLiveStatusesForClanmatesWithHttpInfo($page, $partnershipType, $sort)
+    public function getCommunityLiveStatusesForClanmatesWithHttpInfo($page, $partnershipType, $sort)
     {
-        $request = $this->communityContentGetCommunityLiveStatusesForClanmatesRequest($page, $partnershipType, $sort);
+        $request = $this->getCommunityLiveStatusesForClanmatesRequest($page, $partnershipType, $sort);
 
         try {
             $options = $this->createHttpClientOption();
@@ -833,20 +843,20 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesForClanmatesAsync
+     * Operation getCommunityLiveStatusesForClanmatesAsync
      *
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetCommunityLiveStatusesForClanmatesAsync($page, $partnershipType, $sort)
+    public function getCommunityLiveStatusesForClanmatesAsync($page, $partnershipType, $sort)
     {
-        return $this->communityContentGetCommunityLiveStatusesForClanmatesAsyncWithHttpInfo($page, $partnershipType, $sort)
+        return $this->getCommunityLiveStatusesForClanmatesAsyncWithHttpInfo($page, $partnershipType, $sort)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -855,26 +865,27 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesForClanmatesAsyncWithHttpInfo
+     * Operation getCommunityLiveStatusesForClanmatesAsyncWithHttpInfo
      *
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetCommunityLiveStatusesForClanmatesAsyncWithHttpInfo($page, $partnershipType, $sort)
+    public function getCommunityLiveStatusesForClanmatesAsyncWithHttpInfo($page, $partnershipType, $sort)
     {
         $returnType = '\Bungie\Model\InlineResponse20060';
-        $request = $this->communityContentGetCommunityLiveStatusesForClanmatesRequest($page, $partnershipType, $sort);
+        $request = $this->getCommunityLiveStatusesForClanmatesRequest($page, $partnershipType, $sort);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -889,6 +900,7 @@ class CommunityContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -906,33 +918,33 @@ class CommunityContentApi
     }
 
     /**
-     * Create request for operation 'communityContentGetCommunityLiveStatusesForClanmates'
+     * Create request for operation 'getCommunityLiveStatusesForClanmates'
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function communityContentGetCommunityLiveStatusesForClanmatesRequest($page, $partnershipType, $sort)
+    protected function getCommunityLiveStatusesForClanmatesRequest($page, $partnershipType, $sort)
     {
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling communityContentGetCommunityLiveStatusesForClanmates'
+                'Missing the required parameter $page when calling getCommunityLiveStatusesForClanmates'
             );
         }
         // verify the required parameter 'partnershipType' is set
         if ($partnershipType === null || (is_array($partnershipType) && count($partnershipType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $partnershipType when calling communityContentGetCommunityLiveStatusesForClanmates'
+                'Missing the required parameter $partnershipType when calling getCommunityLiveStatusesForClanmates'
             );
         }
         // verify the required parameter 'sort' is set
         if ($sort === null || (is_array($sort) && count($sort) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sort when calling communityContentGetCommunityLiveStatusesForClanmates'
+                'Missing the required parameter $sort when calling getCommunityLiveStatusesForClanmates'
             );
         }
 
@@ -1039,36 +1051,38 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesForFriends
+     * Operation getCommunityLiveStatusesForFriends
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20060
      */
-    public function communityContentGetCommunityLiveStatusesForFriends($page, $partnershipType, $sort)
+    public function getCommunityLiveStatusesForFriends($page, $partnershipType, $sort)
     {
-        list($response) = $this->communityContentGetCommunityLiveStatusesForFriendsWithHttpInfo($page, $partnershipType, $sort);
+        list($response) = $this->getCommunityLiveStatusesForFriendsWithHttpInfo($page, $partnershipType, $sort);
         return $response;
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesForFriendsWithHttpInfo
+     * Operation getCommunityLiveStatusesForFriendsWithHttpInfo
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20060, HTTP status code, HTTP response headers (array of strings)
      */
-    public function communityContentGetCommunityLiveStatusesForFriendsWithHttpInfo($page, $partnershipType, $sort)
+    public function getCommunityLiveStatusesForFriendsWithHttpInfo($page, $partnershipType, $sort)
     {
-        $request = $this->communityContentGetCommunityLiveStatusesForFriendsRequest($page, $partnershipType, $sort);
+        $request = $this->getCommunityLiveStatusesForFriendsRequest($page, $partnershipType, $sort);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1144,20 +1158,20 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesForFriendsAsync
+     * Operation getCommunityLiveStatusesForFriendsAsync
      *
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetCommunityLiveStatusesForFriendsAsync($page, $partnershipType, $sort)
+    public function getCommunityLiveStatusesForFriendsAsync($page, $partnershipType, $sort)
     {
-        return $this->communityContentGetCommunityLiveStatusesForFriendsAsyncWithHttpInfo($page, $partnershipType, $sort)
+        return $this->getCommunityLiveStatusesForFriendsAsyncWithHttpInfo($page, $partnershipType, $sort)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1166,26 +1180,27 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetCommunityLiveStatusesForFriendsAsyncWithHttpInfo
+     * Operation getCommunityLiveStatusesForFriendsAsyncWithHttpInfo
      *
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetCommunityLiveStatusesForFriendsAsyncWithHttpInfo($page, $partnershipType, $sort)
+    public function getCommunityLiveStatusesForFriendsAsyncWithHttpInfo($page, $partnershipType, $sort)
     {
         $returnType = '\Bungie\Model\InlineResponse20060';
-        $request = $this->communityContentGetCommunityLiveStatusesForFriendsRequest($page, $partnershipType, $sort);
+        $request = $this->getCommunityLiveStatusesForFriendsRequest($page, $partnershipType, $sort);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1200,6 +1215,7 @@ class CommunityContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1217,33 +1233,33 @@ class CommunityContentApi
     }
 
     /**
-     * Create request for operation 'communityContentGetCommunityLiveStatusesForFriends'
+     * Create request for operation 'getCommunityLiveStatusesForFriends'
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function communityContentGetCommunityLiveStatusesForFriendsRequest($page, $partnershipType, $sort)
+    protected function getCommunityLiveStatusesForFriendsRequest($page, $partnershipType, $sort)
     {
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling communityContentGetCommunityLiveStatusesForFriends'
+                'Missing the required parameter $page when calling getCommunityLiveStatusesForFriends'
             );
         }
         // verify the required parameter 'partnershipType' is set
         if ($partnershipType === null || (is_array($partnershipType) && count($partnershipType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $partnershipType when calling communityContentGetCommunityLiveStatusesForFriends'
+                'Missing the required parameter $partnershipType when calling getCommunityLiveStatusesForFriends'
             );
         }
         // verify the required parameter 'sort' is set
         if ($sort === null || (is_array($sort) && count($sort) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sort when calling communityContentGetCommunityLiveStatusesForFriends'
+                'Missing the required parameter $sort when calling getCommunityLiveStatusesForFriends'
             );
         }
 
@@ -1350,38 +1366,40 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetFeaturedCommunityLiveStatuses
+     * Operation getFeaturedCommunityLiveStatuses
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20060
      */
-    public function communityContentGetFeaturedCommunityLiveStatuses($page, $partnershipType, $sort, $streamLocale = null)
+    public function getFeaturedCommunityLiveStatuses($page, $partnershipType, $sort, $streamLocale = null)
     {
-        list($response) = $this->communityContentGetFeaturedCommunityLiveStatusesWithHttpInfo($page, $partnershipType, $sort, $streamLocale);
+        list($response) = $this->getFeaturedCommunityLiveStatusesWithHttpInfo($page, $partnershipType, $sort, $streamLocale);
         return $response;
     }
 
     /**
-     * Operation communityContentGetFeaturedCommunityLiveStatusesWithHttpInfo
+     * Operation getFeaturedCommunityLiveStatusesWithHttpInfo
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20060, HTTP status code, HTTP response headers (array of strings)
      */
-    public function communityContentGetFeaturedCommunityLiveStatusesWithHttpInfo($page, $partnershipType, $sort, $streamLocale = null)
+    public function getFeaturedCommunityLiveStatusesWithHttpInfo($page, $partnershipType, $sort, $streamLocale = null)
     {
-        $request = $this->communityContentGetFeaturedCommunityLiveStatusesRequest($page, $partnershipType, $sort, $streamLocale);
+        $request = $this->getFeaturedCommunityLiveStatusesRequest($page, $partnershipType, $sort, $streamLocale);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1457,21 +1475,21 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetFeaturedCommunityLiveStatusesAsync
+     * Operation getFeaturedCommunityLiveStatusesAsync
      *
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetFeaturedCommunityLiveStatusesAsync($page, $partnershipType, $sort, $streamLocale = null)
+    public function getFeaturedCommunityLiveStatusesAsync($page, $partnershipType, $sort, $streamLocale = null)
     {
-        return $this->communityContentGetFeaturedCommunityLiveStatusesAsyncWithHttpInfo($page, $partnershipType, $sort, $streamLocale)
+        return $this->getFeaturedCommunityLiveStatusesAsyncWithHttpInfo($page, $partnershipType, $sort, $streamLocale)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1480,27 +1498,28 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetFeaturedCommunityLiveStatusesAsyncWithHttpInfo
+     * Operation getFeaturedCommunityLiveStatusesAsyncWithHttpInfo
      *
      * 
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetFeaturedCommunityLiveStatusesAsyncWithHttpInfo($page, $partnershipType, $sort, $streamLocale = null)
+    public function getFeaturedCommunityLiveStatusesAsyncWithHttpInfo($page, $partnershipType, $sort, $streamLocale = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20060';
-        $request = $this->communityContentGetFeaturedCommunityLiveStatusesRequest($page, $partnershipType, $sort, $streamLocale);
+        $request = $this->getFeaturedCommunityLiveStatusesRequest($page, $partnershipType, $sort, $streamLocale);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1515,6 +1534,7 @@ class CommunityContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1532,34 +1552,34 @@ class CommunityContentApi
     }
 
     /**
-     * Create request for operation 'communityContentGetFeaturedCommunityLiveStatuses'
+     * Create request for operation 'getFeaturedCommunityLiveStatuses'
      *
      * @param  int $page Zero based page. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
-     * @param  \Bungie\Model\CommunityCommunityStatusSort $sort The sort mode. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which the status should be returned. (required)
+     * @param  \Bungie\Model\Community\CommunityStatusSort $sort The sort mode. (required)
      * @param  string $streamLocale The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function communityContentGetFeaturedCommunityLiveStatusesRequest($page, $partnershipType, $sort, $streamLocale = null)
+    protected function getFeaturedCommunityLiveStatusesRequest($page, $partnershipType, $sort, $streamLocale = null)
     {
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling communityContentGetFeaturedCommunityLiveStatuses'
+                'Missing the required parameter $page when calling getFeaturedCommunityLiveStatuses'
             );
         }
         // verify the required parameter 'partnershipType' is set
         if ($partnershipType === null || (is_array($partnershipType) && count($partnershipType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $partnershipType when calling communityContentGetFeaturedCommunityLiveStatuses'
+                'Missing the required parameter $partnershipType when calling getFeaturedCommunityLiveStatuses'
             );
         }
         // verify the required parameter 'sort' is set
         if ($sort === null || (is_array($sort) && count($sort) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sort when calling communityContentGetFeaturedCommunityLiveStatuses'
+                'Missing the required parameter $sort when calling getFeaturedCommunityLiveStatuses'
             );
         }
 
@@ -1670,36 +1690,38 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetStreamingStatusForMember
+     * Operation getStreamingStatusForMember
      *
      * @param  int $membershipId The membershipId related to that type. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType The type of account for which info will be extracted. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20061
      */
-    public function communityContentGetStreamingStatusForMember($membershipId, $membershipType, $partnershipType)
+    public function getStreamingStatusForMember($membershipId, $membershipType, $partnershipType)
     {
-        list($response) = $this->communityContentGetStreamingStatusForMemberWithHttpInfo($membershipId, $membershipType, $partnershipType);
+        list($response) = $this->getStreamingStatusForMemberWithHttpInfo($membershipId, $membershipType, $partnershipType);
         return $response;
     }
 
     /**
-     * Operation communityContentGetStreamingStatusForMemberWithHttpInfo
+     * Operation getStreamingStatusForMemberWithHttpInfo
      *
      * @param  int $membershipId The membershipId related to that type. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType The type of account for which info will be extracted. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20061, HTTP status code, HTTP response headers (array of strings)
      */
-    public function communityContentGetStreamingStatusForMemberWithHttpInfo($membershipId, $membershipType, $partnershipType)
+    public function getStreamingStatusForMemberWithHttpInfo($membershipId, $membershipType, $partnershipType)
     {
-        $request = $this->communityContentGetStreamingStatusForMemberRequest($membershipId, $membershipType, $partnershipType);
+        $request = $this->getStreamingStatusForMemberRequest($membershipId, $membershipType, $partnershipType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1775,20 +1797,20 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetStreamingStatusForMemberAsync
+     * Operation getStreamingStatusForMemberAsync
      *
      * 
      *
      * @param  int $membershipId The membershipId related to that type. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType The type of account for which info will be extracted. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetStreamingStatusForMemberAsync($membershipId, $membershipType, $partnershipType)
+    public function getStreamingStatusForMemberAsync($membershipId, $membershipType, $partnershipType)
     {
-        return $this->communityContentGetStreamingStatusForMemberAsyncWithHttpInfo($membershipId, $membershipType, $partnershipType)
+        return $this->getStreamingStatusForMemberAsyncWithHttpInfo($membershipId, $membershipType, $partnershipType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1797,26 +1819,27 @@ class CommunityContentApi
     }
 
     /**
-     * Operation communityContentGetStreamingStatusForMemberAsyncWithHttpInfo
+     * Operation getStreamingStatusForMemberAsyncWithHttpInfo
      *
      * 
      *
      * @param  int $membershipId The membershipId related to that type. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType The type of account for which info will be extracted. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function communityContentGetStreamingStatusForMemberAsyncWithHttpInfo($membershipId, $membershipType, $partnershipType)
+    public function getStreamingStatusForMemberAsyncWithHttpInfo($membershipId, $membershipType, $partnershipType)
     {
         $returnType = '\Bungie\Model\InlineResponse20061';
-        $request = $this->communityContentGetStreamingStatusForMemberRequest($membershipId, $membershipType, $partnershipType);
+        $request = $this->getStreamingStatusForMemberRequest($membershipId, $membershipType, $partnershipType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1831,6 +1854,7 @@ class CommunityContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1848,33 +1872,33 @@ class CommunityContentApi
     }
 
     /**
-     * Create request for operation 'communityContentGetStreamingStatusForMember'
+     * Create request for operation 'getStreamingStatusForMember'
      *
      * @param  int $membershipId The membershipId related to that type. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType The type of account for which info will be extracted. (required)
-     * @param  \Bungie\Model\PartnershipsPartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
+     * @param  \Bungie\Model\Partnerships\PartnershipType $partnershipType The type of partnership for which info will be extracted. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function communityContentGetStreamingStatusForMemberRequest($membershipId, $membershipType, $partnershipType)
+    protected function getStreamingStatusForMemberRequest($membershipId, $membershipType, $partnershipType)
     {
         // verify the required parameter 'membershipId' is set
         if ($membershipId === null || (is_array($membershipId) && count($membershipId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $membershipId when calling communityContentGetStreamingStatusForMember'
+                'Missing the required parameter $membershipId when calling getStreamingStatusForMember'
             );
         }
         // verify the required parameter 'membershipType' is set
         if ($membershipType === null || (is_array($membershipType) && count($membershipType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $membershipType when calling communityContentGetStreamingStatusForMember'
+                'Missing the required parameter $membershipType when calling getStreamingStatusForMember'
             );
         }
         // verify the required parameter 'partnershipType' is set
         if ($partnershipType === null || (is_array($partnershipType) && count($partnershipType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $partnershipType when calling communityContentGetStreamingStatusForMember'
+                'Missing the required parameter $partnershipType when calling getStreamingStatusForMember'
             );
         }
 

@@ -4,15 +4,15 @@ All URIs are relative to *https://www.bungie.net/Platform*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fireteamGetActivePrivateClanFireteamCount**](FireteamApi.md#fireteamGetActivePrivateClanFireteamCount) | **GET** /Fireteam/Clan/{groupId}/ActiveCount/ | 
-[**fireteamGetAvailableClanFireteams**](FireteamApi.md#fireteamGetAvailableClanFireteams) | **GET** /Fireteam/Clan/{groupId}/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{publicOnly}/{page}/ | 
-[**fireteamGetClanFireteam**](FireteamApi.md#fireteamGetClanFireteam) | **GET** /Fireteam/Clan/{groupId}/Summary/{fireteamId}/ | 
-[**fireteamGetMyClanFireteams**](FireteamApi.md#fireteamGetMyClanFireteams) | **GET** /Fireteam/Clan/{groupId}/My/{platform}/{includeClosed}/{page}/ | 
-[**fireteamSearchPublicAvailableClanFireteams**](FireteamApi.md#fireteamSearchPublicAvailableClanFireteams) | **GET** /Fireteam/Search/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{page}/ | 
+[**getActivePrivateClanFireteamCount**](FireteamApi.md#getActivePrivateClanFireteamCount) | **GET** /Fireteam/Clan/{groupId}/ActiveCount/ | 
+[**getAvailableClanFireteams**](FireteamApi.md#getAvailableClanFireteams) | **GET** /Fireteam/Clan/{groupId}/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{publicOnly}/{page}/ | 
+[**getClanFireteam**](FireteamApi.md#getClanFireteam) | **GET** /Fireteam/Clan/{groupId}/Summary/{fireteamId}/ | 
+[**getMyClanFireteams**](FireteamApi.md#getMyClanFireteams) | **GET** /Fireteam/Clan/{groupId}/My/{platform}/{includeClosed}/{page}/ | 
+[**searchPublicAvailableClanFireteams**](FireteamApi.md#searchPublicAvailableClanFireteams) | **GET** /Fireteam/Search/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{page}/ | 
 
 
-# **fireteamGetActivePrivateClanFireteamCount**
-> \Bungie\Model\InlineResponse20019 fireteamGetActivePrivateClanFireteamCount($groupId)
+# **getActivePrivateClanFireteamCount**
+> \Bungie\Model\InlineResponse20019 getActivePrivateClanFireteamCount($groupId)
 
 
 
@@ -39,10 +39,10 @@ $apiInstance = new Bungie\Api\FireteamApi(
 $groupId = 56; // int | The group id of the clan.
 
 try {
-    $result = $apiInstance->fireteamGetActivePrivateClanFireteamCount($groupId);
+    $result = $apiInstance->getActivePrivateClanFireteamCount($groupId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FireteamApi->fireteamGetActivePrivateClanFireteamCount: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FireteamApi->getActivePrivateClanFireteamCount: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -68,8 +68,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **fireteamGetAvailableClanFireteams**
-> \Bungie\Model\InlineResponse20065 fireteamGetAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter)
+# **getAvailableClanFireteams**
+> \Bungie\Model\InlineResponse20065 getAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter)
 
 
 
@@ -93,20 +93,20 @@ $apiInstance = new Bungie\Api\FireteamApi(
     new GuzzleHttp\Client(),
     $config
 );
-$activityType = new \Bungie\Model\\Bungie\Model\FireteamFireteamActivityType(); // \Bungie\Model\FireteamFireteamActivityType | The activity type to filter by.
-$dateRange = new \Bungie\Model\\Bungie\Model\FireteamFireteamDateRange(); // \Bungie\Model\FireteamFireteamDateRange | The date range to grab available fireteams.
+$activityType = new \Bungie\Model\Fireteam\FireteamActivityType(); // \Bungie\Model\Fireteam\FireteamActivityType | The activity type to filter by.
+$dateRange = new \Bungie\Model\Fireteam\FireteamDateRange(); // \Bungie\Model\Fireteam\FireteamDateRange | The date range to grab available fireteams.
 $groupId = 56; // int | The group id of the clan.
 $page = 56; // int | Zero based page
-$platform = new \Bungie\Model\\Bungie\Model\FireteamFireteamPlatform(); // \Bungie\Model\FireteamFireteamPlatform | The platform filter.
-$publicOnly = new \Bungie\Model\\Bungie\Model\FireteamFireteamPublicSearchOption(); // \Bungie\Model\FireteamFireteamPublicSearchOption | Determines public/private filtering.
-$slotFilter = new \Bungie\Model\\Bungie\Model\FireteamFireteamSlotSearch(); // \Bungie\Model\FireteamFireteamSlotSearch | Filters based on available slots
+$platform = new \Bungie\Model\Fireteam\FireteamPlatform(); // \Bungie\Model\Fireteam\FireteamPlatform | The platform filter.
+$publicOnly = new \Bungie\Model\Fireteam\FireteamPublicSearchOption(); // \Bungie\Model\Fireteam\FireteamPublicSearchOption | Determines public/private filtering.
+$slotFilter = new \Bungie\Model\Fireteam\FireteamSlotSearch(); // \Bungie\Model\Fireteam\FireteamSlotSearch | Filters based on available slots
 $langFilter = 'langFilter_example'; // string | An optional language filter.
 
 try {
-    $result = $apiInstance->fireteamGetAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter);
+    $result = $apiInstance->getAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FireteamApi->fireteamGetAvailableClanFireteams: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FireteamApi->getAvailableClanFireteams: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -115,13 +115,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityType** | [**\Bungie\Model\FireteamFireteamActivityType**](../Model/.md)| The activity type to filter by. |
- **dateRange** | [**\Bungie\Model\FireteamFireteamDateRange**](../Model/.md)| The date range to grab available fireteams. |
+ **activityType** | [**\Bungie\Model\Fireteam\FireteamActivityType**](../Model/.md)| The activity type to filter by. |
+ **dateRange** | [**\Bungie\Model\Fireteam\FireteamDateRange**](../Model/.md)| The date range to grab available fireteams. |
  **groupId** | **int**| The group id of the clan. |
  **page** | **int**| Zero based page |
- **platform** | [**\Bungie\Model\FireteamFireteamPlatform**](../Model/.md)| The platform filter. |
- **publicOnly** | [**\Bungie\Model\FireteamFireteamPublicSearchOption**](../Model/.md)| Determines public/private filtering. |
- **slotFilter** | [**\Bungie\Model\FireteamFireteamSlotSearch**](../Model/.md)| Filters based on available slots |
+ **platform** | [**\Bungie\Model\Fireteam\FireteamPlatform**](../Model/.md)| The platform filter. |
+ **publicOnly** | [**\Bungie\Model\Fireteam\FireteamPublicSearchOption**](../Model/.md)| Determines public/private filtering. |
+ **slotFilter** | [**\Bungie\Model\Fireteam\FireteamSlotSearch**](../Model/.md)| Filters based on available slots |
  **langFilter** | **string**| An optional language filter. | [optional]
 
 ### Return type
@@ -139,8 +139,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **fireteamGetClanFireteam**
-> \Bungie\Model\InlineResponse20067 fireteamGetClanFireteam($fireteamId, $groupId)
+# **getClanFireteam**
+> \Bungie\Model\InlineResponse20067 getClanFireteam($fireteamId, $groupId)
 
 
 
@@ -168,10 +168,10 @@ $fireteamId = 56; // int | The unique id of the fireteam.
 $groupId = 56; // int | The group id of the clan.
 
 try {
-    $result = $apiInstance->fireteamGetClanFireteam($fireteamId, $groupId);
+    $result = $apiInstance->getClanFireteam($fireteamId, $groupId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FireteamApi->fireteamGetClanFireteam: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FireteamApi->getClanFireteam: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -198,8 +198,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **fireteamGetMyClanFireteams**
-> \Bungie\Model\InlineResponse20066 fireteamGetMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter)
+# **getMyClanFireteams**
+> \Bungie\Model\InlineResponse20066 getMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter)
 
 
 
@@ -226,15 +226,15 @@ $apiInstance = new Bungie\Api\FireteamApi(
 $groupId = 56; // int | The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true).
 $includeClosed = True; // bool | If true, return fireteams that have been closed.
 $page = 56; // int | Deprecated parameter, ignored.
-$platform = new \Bungie\Model\\Bungie\Model\FireteamFireteamPlatform(); // \Bungie\Model\FireteamFireteamPlatform | The platform filter.
+$platform = new \Bungie\Model\Fireteam\FireteamPlatform(); // \Bungie\Model\Fireteam\FireteamPlatform | The platform filter.
 $groupFilter = True; // bool | If true, filter by clan. Otherwise, ignore the clan and show all of the user's fireteams.
 $langFilter = 'langFilter_example'; // string | An optional language filter.
 
 try {
-    $result = $apiInstance->fireteamGetMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter);
+    $result = $apiInstance->getMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FireteamApi->fireteamGetMyClanFireteams: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FireteamApi->getMyClanFireteams: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
  **groupId** | **int**| The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). |
  **includeClosed** | **bool**| If true, return fireteams that have been closed. |
  **page** | **int**| Deprecated parameter, ignored. |
- **platform** | [**\Bungie\Model\FireteamFireteamPlatform**](../Model/.md)| The platform filter. |
+ **platform** | [**\Bungie\Model\Fireteam\FireteamPlatform**](../Model/.md)| The platform filter. |
  **groupFilter** | **bool**| If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. | [optional]
  **langFilter** | **string**| An optional language filter. | [optional]
 
@@ -265,8 +265,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **fireteamSearchPublicAvailableClanFireteams**
-> \Bungie\Model\InlineResponse20065 fireteamSearchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter)
+# **searchPublicAvailableClanFireteams**
+> \Bungie\Model\InlineResponse20065 searchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter)
 
 
 
@@ -290,18 +290,18 @@ $apiInstance = new Bungie\Api\FireteamApi(
     new GuzzleHttp\Client(),
     $config
 );
-$activityType = new \Bungie\Model\\Bungie\Model\FireteamFireteamActivityType(); // \Bungie\Model\FireteamFireteamActivityType | The activity type to filter by.
-$dateRange = new \Bungie\Model\\Bungie\Model\FireteamFireteamDateRange(); // \Bungie\Model\FireteamFireteamDateRange | The date range to grab available fireteams.
+$activityType = new \Bungie\Model\Fireteam\FireteamActivityType(); // \Bungie\Model\Fireteam\FireteamActivityType | The activity type to filter by.
+$dateRange = new \Bungie\Model\Fireteam\FireteamDateRange(); // \Bungie\Model\Fireteam\FireteamDateRange | The date range to grab available fireteams.
 $page = 56; // int | Zero based page
-$platform = new \Bungie\Model\\Bungie\Model\FireteamFireteamPlatform(); // \Bungie\Model\FireteamFireteamPlatform | The platform filter.
-$slotFilter = new \Bungie\Model\\Bungie\Model\FireteamFireteamSlotSearch(); // \Bungie\Model\FireteamFireteamSlotSearch | Filters based on available slots
+$platform = new \Bungie\Model\Fireteam\FireteamPlatform(); // \Bungie\Model\Fireteam\FireteamPlatform | The platform filter.
+$slotFilter = new \Bungie\Model\Fireteam\FireteamSlotSearch(); // \Bungie\Model\Fireteam\FireteamSlotSearch | Filters based on available slots
 $langFilter = 'langFilter_example'; // string | An optional language filter.
 
 try {
-    $result = $apiInstance->fireteamSearchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter);
+    $result = $apiInstance->searchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FireteamApi->fireteamSearchPublicAvailableClanFireteams: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FireteamApi->searchPublicAvailableClanFireteams: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -310,11 +310,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityType** | [**\Bungie\Model\FireteamFireteamActivityType**](../Model/.md)| The activity type to filter by. |
- **dateRange** | [**\Bungie\Model\FireteamFireteamDateRange**](../Model/.md)| The date range to grab available fireteams. |
+ **activityType** | [**\Bungie\Model\Fireteam\FireteamActivityType**](../Model/.md)| The activity type to filter by. |
+ **dateRange** | [**\Bungie\Model\Fireteam\FireteamDateRange**](../Model/.md)| The date range to grab available fireteams. |
  **page** | **int**| Zero based page |
- **platform** | [**\Bungie\Model\FireteamFireteamPlatform**](../Model/.md)| The platform filter. |
- **slotFilter** | [**\Bungie\Model\FireteamFireteamSlotSearch**](../Model/.md)| Filters based on available slots |
+ **platform** | [**\Bungie\Model\Fireteam\FireteamPlatform**](../Model/.md)| The platform filter. |
+ **slotFilter** | [**\Bungie\Model\Fireteam\FireteamSlotSearch**](../Model/.md)| Filters based on available slots |
  **langFilter** | **string**| An optional language filter. | [optional]
 
 ### Return type

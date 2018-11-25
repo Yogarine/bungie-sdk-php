@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Bungie\API;
+namespace Bungie\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -88,7 +88,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentGetContentById
+     * Operation getContentById
      *
      * @param  int $id id (required)
      * @param  string $locale locale (required)
@@ -96,16 +96,17 @@ class ContentApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2008
      */
-    public function contentGetContentById($id, $locale, $head = null)
+    public function getContentById($id, $locale, $head = null)
     {
-        list($response) = $this->contentGetContentByIdWithHttpInfo($id, $locale, $head);
+        list($response) = $this->getContentByIdWithHttpInfo($id, $locale, $head);
         return $response;
     }
 
     /**
-     * Operation contentGetContentByIdWithHttpInfo
+     * Operation getContentByIdWithHttpInfo
      *
      * @param  int $id (required)
      * @param  string $locale (required)
@@ -113,11 +114,12 @@ class ContentApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
      */
-    public function contentGetContentByIdWithHttpInfo($id, $locale, $head = null)
+    public function getContentByIdWithHttpInfo($id, $locale, $head = null)
     {
-        $request = $this->contentGetContentByIdRequest($id, $locale, $head);
+        $request = $this->getContentByIdRequest($id, $locale, $head);
 
         try {
             $options = $this->createHttpClientOption();
@@ -193,7 +195,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentGetContentByIdAsync
+     * Operation getContentByIdAsync
      *
      * 
      *
@@ -204,9 +206,9 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentGetContentByIdAsync($id, $locale, $head = null)
+    public function getContentByIdAsync($id, $locale, $head = null)
     {
-        return $this->contentGetContentByIdAsyncWithHttpInfo($id, $locale, $head)
+        return $this->getContentByIdAsyncWithHttpInfo($id, $locale, $head)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -215,7 +217,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentGetContentByIdAsyncWithHttpInfo
+     * Operation getContentByIdAsyncWithHttpInfo
      *
      * 
      *
@@ -226,15 +228,16 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentGetContentByIdAsyncWithHttpInfo($id, $locale, $head = null)
+    public function getContentByIdAsyncWithHttpInfo($id, $locale, $head = null)
     {
         $returnType = '\Bungie\Model\InlineResponse2008';
-        $request = $this->contentGetContentByIdRequest($id, $locale, $head);
+        $request = $this->getContentByIdRequest($id, $locale, $head);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -249,6 +252,7 @@ class ContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -266,7 +270,7 @@ class ContentApi
     }
 
     /**
-     * Create request for operation 'contentGetContentById'
+     * Create request for operation 'getContentById'
      *
      * @param  int $id (required)
      * @param  string $locale (required)
@@ -275,18 +279,18 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function contentGetContentByIdRequest($id, $locale, $head = null)
+    protected function getContentByIdRequest($id, $locale, $head = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling contentGetContentById'
+                'Missing the required parameter $id when calling getContentById'
             );
         }
         // verify the required parameter 'locale' is set
         if ($locale === null || (is_array($locale) && count($locale) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $locale when calling contentGetContentById'
+                'Missing the required parameter $locale when calling getContentById'
             );
         }
 
@@ -389,7 +393,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentGetContentByTagAndType
+     * Operation getContentByTagAndType
      *
      * @param  string $locale locale (required)
      * @param  string $tag tag (required)
@@ -398,16 +402,17 @@ class ContentApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2008
      */
-    public function contentGetContentByTagAndType($locale, $tag, $type, $head = null)
+    public function getContentByTagAndType($locale, $tag, $type, $head = null)
     {
-        list($response) = $this->contentGetContentByTagAndTypeWithHttpInfo($locale, $tag, $type, $head);
+        list($response) = $this->getContentByTagAndTypeWithHttpInfo($locale, $tag, $type, $head);
         return $response;
     }
 
     /**
-     * Operation contentGetContentByTagAndTypeWithHttpInfo
+     * Operation getContentByTagAndTypeWithHttpInfo
      *
      * @param  string $locale (required)
      * @param  string $tag (required)
@@ -416,11 +421,12 @@ class ContentApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
      */
-    public function contentGetContentByTagAndTypeWithHttpInfo($locale, $tag, $type, $head = null)
+    public function getContentByTagAndTypeWithHttpInfo($locale, $tag, $type, $head = null)
     {
-        $request = $this->contentGetContentByTagAndTypeRequest($locale, $tag, $type, $head);
+        $request = $this->getContentByTagAndTypeRequest($locale, $tag, $type, $head);
 
         try {
             $options = $this->createHttpClientOption();
@@ -496,7 +502,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentGetContentByTagAndTypeAsync
+     * Operation getContentByTagAndTypeAsync
      *
      * 
      *
@@ -508,9 +514,9 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentGetContentByTagAndTypeAsync($locale, $tag, $type, $head = null)
+    public function getContentByTagAndTypeAsync($locale, $tag, $type, $head = null)
     {
-        return $this->contentGetContentByTagAndTypeAsyncWithHttpInfo($locale, $tag, $type, $head)
+        return $this->getContentByTagAndTypeAsyncWithHttpInfo($locale, $tag, $type, $head)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -519,7 +525,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentGetContentByTagAndTypeAsyncWithHttpInfo
+     * Operation getContentByTagAndTypeAsyncWithHttpInfo
      *
      * 
      *
@@ -531,15 +537,16 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentGetContentByTagAndTypeAsyncWithHttpInfo($locale, $tag, $type, $head = null)
+    public function getContentByTagAndTypeAsyncWithHttpInfo($locale, $tag, $type, $head = null)
     {
         $returnType = '\Bungie\Model\InlineResponse2008';
-        $request = $this->contentGetContentByTagAndTypeRequest($locale, $tag, $type, $head);
+        $request = $this->getContentByTagAndTypeRequest($locale, $tag, $type, $head);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -554,6 +561,7 @@ class ContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -571,7 +579,7 @@ class ContentApi
     }
 
     /**
-     * Create request for operation 'contentGetContentByTagAndType'
+     * Create request for operation 'getContentByTagAndType'
      *
      * @param  string $locale (required)
      * @param  string $tag (required)
@@ -581,24 +589,24 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function contentGetContentByTagAndTypeRequest($locale, $tag, $type, $head = null)
+    protected function getContentByTagAndTypeRequest($locale, $tag, $type, $head = null)
     {
         // verify the required parameter 'locale' is set
         if ($locale === null || (is_array($locale) && count($locale) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $locale when calling contentGetContentByTagAndType'
+                'Missing the required parameter $locale when calling getContentByTagAndType'
             );
         }
         // verify the required parameter 'tag' is set
         if ($tag === null || (is_array($tag) && count($tag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $tag when calling contentGetContentByTagAndType'
+                'Missing the required parameter $tag when calling getContentByTagAndType'
             );
         }
         // verify the required parameter 'type' is set
         if ($type === null || (is_array($type) && count($type) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $type when calling contentGetContentByTagAndType'
+                'Missing the required parameter $type when calling getContentByTagAndType'
             );
         }
 
@@ -709,32 +717,34 @@ class ContentApi
     }
 
     /**
-     * Operation contentGetContentType
+     * Operation getContentType
      *
      * @param  string $type type (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2007
      */
-    public function contentGetContentType($type)
+    public function getContentType($type)
     {
-        list($response) = $this->contentGetContentTypeWithHttpInfo($type);
+        list($response) = $this->getContentTypeWithHttpInfo($type);
         return $response;
     }
 
     /**
-     * Operation contentGetContentTypeWithHttpInfo
+     * Operation getContentTypeWithHttpInfo
      *
      * @param  string $type (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
      */
-    public function contentGetContentTypeWithHttpInfo($type)
+    public function getContentTypeWithHttpInfo($type)
     {
-        $request = $this->contentGetContentTypeRequest($type);
+        $request = $this->getContentTypeRequest($type);
 
         try {
             $options = $this->createHttpClientOption();
@@ -810,7 +820,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentGetContentTypeAsync
+     * Operation getContentTypeAsync
      *
      * 
      *
@@ -819,9 +829,9 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentGetContentTypeAsync($type)
+    public function getContentTypeAsync($type)
     {
-        return $this->contentGetContentTypeAsyncWithHttpInfo($type)
+        return $this->getContentTypeAsyncWithHttpInfo($type)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -830,7 +840,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentGetContentTypeAsyncWithHttpInfo
+     * Operation getContentTypeAsyncWithHttpInfo
      *
      * 
      *
@@ -839,15 +849,16 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentGetContentTypeAsyncWithHttpInfo($type)
+    public function getContentTypeAsyncWithHttpInfo($type)
     {
         $returnType = '\Bungie\Model\InlineResponse2007';
-        $request = $this->contentGetContentTypeRequest($type);
+        $request = $this->getContentTypeRequest($type);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -862,6 +873,7 @@ class ContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -879,19 +891,19 @@ class ContentApi
     }
 
     /**
-     * Create request for operation 'contentGetContentType'
+     * Create request for operation 'getContentType'
      *
      * @param  string $type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function contentGetContentTypeRequest($type)
+    protected function getContentTypeRequest($type)
     {
         // verify the required parameter 'type' is set
         if ($type === null || (is_array($type) && count($type) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $type when calling contentGetContentType'
+                'Missing the required parameter $type when calling getContentType'
             );
         }
 
@@ -982,7 +994,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentSearchContentByTagAndType
+     * Operation searchContentByTagAndType
      *
      * @param  string $locale locale (required)
      * @param  string $tag tag (required)
@@ -993,16 +1005,17 @@ class ContentApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2009
      */
-    public function contentSearchContentByTagAndType($locale, $tag, $type, $currentpage = null, $head = null, $itemsperpage = null)
+    public function searchContentByTagAndType($locale, $tag, $type, $currentpage = null, $head = null, $itemsperpage = null)
     {
-        list($response) = $this->contentSearchContentByTagAndTypeWithHttpInfo($locale, $tag, $type, $currentpage, $head, $itemsperpage);
+        list($response) = $this->searchContentByTagAndTypeWithHttpInfo($locale, $tag, $type, $currentpage, $head, $itemsperpage);
         return $response;
     }
 
     /**
-     * Operation contentSearchContentByTagAndTypeWithHttpInfo
+     * Operation searchContentByTagAndTypeWithHttpInfo
      *
      * @param  string $locale (required)
      * @param  string $tag (required)
@@ -1013,11 +1026,12 @@ class ContentApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
      */
-    public function contentSearchContentByTagAndTypeWithHttpInfo($locale, $tag, $type, $currentpage = null, $head = null, $itemsperpage = null)
+    public function searchContentByTagAndTypeWithHttpInfo($locale, $tag, $type, $currentpage = null, $head = null, $itemsperpage = null)
     {
-        $request = $this->contentSearchContentByTagAndTypeRequest($locale, $tag, $type, $currentpage, $head, $itemsperpage);
+        $request = $this->searchContentByTagAndTypeRequest($locale, $tag, $type, $currentpage, $head, $itemsperpage);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1093,7 +1107,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentSearchContentByTagAndTypeAsync
+     * Operation searchContentByTagAndTypeAsync
      *
      * 
      *
@@ -1107,9 +1121,9 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentSearchContentByTagAndTypeAsync($locale, $tag, $type, $currentpage = null, $head = null, $itemsperpage = null)
+    public function searchContentByTagAndTypeAsync($locale, $tag, $type, $currentpage = null, $head = null, $itemsperpage = null)
     {
-        return $this->contentSearchContentByTagAndTypeAsyncWithHttpInfo($locale, $tag, $type, $currentpage, $head, $itemsperpage)
+        return $this->searchContentByTagAndTypeAsyncWithHttpInfo($locale, $tag, $type, $currentpage, $head, $itemsperpage)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1118,7 +1132,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentSearchContentByTagAndTypeAsyncWithHttpInfo
+     * Operation searchContentByTagAndTypeAsyncWithHttpInfo
      *
      * 
      *
@@ -1132,15 +1146,16 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentSearchContentByTagAndTypeAsyncWithHttpInfo($locale, $tag, $type, $currentpage = null, $head = null, $itemsperpage = null)
+    public function searchContentByTagAndTypeAsyncWithHttpInfo($locale, $tag, $type, $currentpage = null, $head = null, $itemsperpage = null)
     {
         $returnType = '\Bungie\Model\InlineResponse2009';
-        $request = $this->contentSearchContentByTagAndTypeRequest($locale, $tag, $type, $currentpage, $head, $itemsperpage);
+        $request = $this->searchContentByTagAndTypeRequest($locale, $tag, $type, $currentpage, $head, $itemsperpage);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1155,6 +1170,7 @@ class ContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1172,7 +1188,7 @@ class ContentApi
     }
 
     /**
-     * Create request for operation 'contentSearchContentByTagAndType'
+     * Create request for operation 'searchContentByTagAndType'
      *
      * @param  string $locale (required)
      * @param  string $tag (required)
@@ -1184,24 +1200,24 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function contentSearchContentByTagAndTypeRequest($locale, $tag, $type, $currentpage = null, $head = null, $itemsperpage = null)
+    protected function searchContentByTagAndTypeRequest($locale, $tag, $type, $currentpage = null, $head = null, $itemsperpage = null)
     {
         // verify the required parameter 'locale' is set
         if ($locale === null || (is_array($locale) && count($locale) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $locale when calling contentSearchContentByTagAndType'
+                'Missing the required parameter $locale when calling searchContentByTagAndType'
             );
         }
         // verify the required parameter 'tag' is set
         if ($tag === null || (is_array($tag) && count($tag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $tag when calling contentSearchContentByTagAndType'
+                'Missing the required parameter $tag when calling searchContentByTagAndType'
             );
         }
         // verify the required parameter 'type' is set
         if ($type === null || (is_array($type) && count($type) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $type when calling contentSearchContentByTagAndType'
+                'Missing the required parameter $type when calling searchContentByTagAndType'
             );
         }
 
@@ -1320,7 +1336,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentSearchContentWithText
+     * Operation searchContentWithText
      *
      * @param  string $locale locale (required)
      * @param  string $ctype Content type tag: Help, News, etc. Supply multiple ctypes separated by space. (optional)
@@ -1332,16 +1348,17 @@ class ContentApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse2009
      */
-    public function contentSearchContentWithText($locale, $ctype = null, $currentpage = null, $head = null, $searchtext = null, $source = null, $tag = null)
+    public function searchContentWithText($locale, $ctype = null, $currentpage = null, $head = null, $searchtext = null, $source = null, $tag = null)
     {
-        list($response) = $this->contentSearchContentWithTextWithHttpInfo($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag);
+        list($response) = $this->searchContentWithTextWithHttpInfo($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag);
         return $response;
     }
 
     /**
-     * Operation contentSearchContentWithTextWithHttpInfo
+     * Operation searchContentWithTextWithHttpInfo
      *
      * @param  string $locale (required)
      * @param  string $ctype Content type tag: Help, News, etc. Supply multiple ctypes separated by space. (optional)
@@ -1353,11 +1370,12 @@ class ContentApi
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
      */
-    public function contentSearchContentWithTextWithHttpInfo($locale, $ctype = null, $currentpage = null, $head = null, $searchtext = null, $source = null, $tag = null)
+    public function searchContentWithTextWithHttpInfo($locale, $ctype = null, $currentpage = null, $head = null, $searchtext = null, $source = null, $tag = null)
     {
-        $request = $this->contentSearchContentWithTextRequest($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag);
+        $request = $this->searchContentWithTextRequest($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1433,7 +1451,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentSearchContentWithTextAsync
+     * Operation searchContentWithTextAsync
      *
      * 
      *
@@ -1448,9 +1466,9 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentSearchContentWithTextAsync($locale, $ctype = null, $currentpage = null, $head = null, $searchtext = null, $source = null, $tag = null)
+    public function searchContentWithTextAsync($locale, $ctype = null, $currentpage = null, $head = null, $searchtext = null, $source = null, $tag = null)
     {
-        return $this->contentSearchContentWithTextAsyncWithHttpInfo($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag)
+        return $this->searchContentWithTextAsyncWithHttpInfo($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1459,7 +1477,7 @@ class ContentApi
     }
 
     /**
-     * Operation contentSearchContentWithTextAsyncWithHttpInfo
+     * Operation searchContentWithTextAsyncWithHttpInfo
      *
      * 
      *
@@ -1474,15 +1492,16 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentSearchContentWithTextAsyncWithHttpInfo($locale, $ctype = null, $currentpage = null, $head = null, $searchtext = null, $source = null, $tag = null)
+    public function searchContentWithTextAsyncWithHttpInfo($locale, $ctype = null, $currentpage = null, $head = null, $searchtext = null, $source = null, $tag = null)
     {
         $returnType = '\Bungie\Model\InlineResponse2009';
-        $request = $this->contentSearchContentWithTextRequest($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag);
+        $request = $this->searchContentWithTextRequest($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1497,6 +1516,7 @@ class ContentApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1514,7 +1534,7 @@ class ContentApi
     }
 
     /**
-     * Create request for operation 'contentSearchContentWithText'
+     * Create request for operation 'searchContentWithText'
      *
      * @param  string $locale (required)
      * @param  string $ctype Content type tag: Help, News, etc. Supply multiple ctypes separated by space. (optional)
@@ -1527,12 +1547,12 @@ class ContentApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function contentSearchContentWithTextRequest($locale, $ctype = null, $currentpage = null, $head = null, $searchtext = null, $source = null, $tag = null)
+    protected function searchContentWithTextRequest($locale, $ctype = null, $currentpage = null, $head = null, $searchtext = null, $source = null, $tag = null)
     {
         // verify the required parameter 'locale' is set
         if ($locale === null || (is_array($locale) && count($locale) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $locale when calling contentSearchContentWithText'
+                'Missing the required parameter $locale when calling searchContentWithText'
             );
         }
 

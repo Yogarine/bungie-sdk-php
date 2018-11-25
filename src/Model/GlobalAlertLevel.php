@@ -43,10 +43,10 @@ class GlobalAlertLevel
     /**
      * Possible values of this enum
      */
-    const UNKNOWN = 0;
-    const BLUE = 1;
-    const YELLOW = 2;
-    const RED = 3;
+    const GLOBAL_ALERT_LEVEL_UNKNOWN = 0;
+    const GLOBAL_ALERT_LEVEL_BLUE = 1;
+    const GLOBAL_ALERT_LEVEL_YELLOW = 2;
+    const GLOBAL_ALERT_LEVEL_RED = 3;
     
     /**
      * Gets allowable values of the enum
@@ -55,10 +55,10 @@ class GlobalAlertLevel
     public static function getAllowableEnumValues()
     {
         return [
-            self::UNKNOWN,
-            self::BLUE,
-            self::YELLOW,
-            self::RED,
+            self::GLOBAL_ALERT_LEVEL_UNKNOWN,
+            self::GLOBAL_ALERT_LEVEL_BLUE,
+            self::GLOBAL_ALERT_LEVEL_YELLOW,
+            self::GLOBAL_ALERT_LEVEL_RED,
         ];
     }
 }

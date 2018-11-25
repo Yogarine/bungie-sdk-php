@@ -4,15 +4,15 @@ All URIs are relative to *https://www.bungie.net/Platform*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**destiny2GetClanAggregateStats**](PreviewApi.md#destiny2GetClanAggregateStats) | **GET** /Destiny2/Stats/AggregateClanStats/{groupId}/ | 
-[**destiny2GetClanLeaderboards**](PreviewApi.md#destiny2GetClanLeaderboards) | **GET** /Destiny2/Stats/Leaderboards/Clans/{groupId}/ | 
-[**destiny2GetLeaderboards**](PreviewApi.md#destiny2GetLeaderboards) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/ | 
-[**destiny2GetLeaderboardsForCharacter**](PreviewApi.md#destiny2GetLeaderboardsForCharacter) | **GET** /Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/ | 
-[**destiny2InsertSocketPlug**](PreviewApi.md#destiny2InsertSocketPlug) | **POST** /Destiny2/Actions/Items/InsertSocketPlug/ | 
+[**getClanAggregateStats**](PreviewApi.md#getClanAggregateStats) | **GET** /Destiny2/Stats/AggregateClanStats/{groupId}/ | 
+[**getClanLeaderboards**](PreviewApi.md#getClanLeaderboards) | **GET** /Destiny2/Stats/Leaderboards/Clans/{groupId}/ | 
+[**getLeaderboards**](PreviewApi.md#getLeaderboards) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/ | 
+[**getLeaderboardsForCharacter**](PreviewApi.md#getLeaderboardsForCharacter) | **GET** /Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/ | 
+[**insertSocketPlug**](PreviewApi.md#insertSocketPlug) | **POST** /Destiny2/Actions/Items/InsertSocketPlug/ | 
 
 
-# **destiny2GetClanAggregateStats**
-> \Bungie\Model\InlineResponse20049 destiny2GetClanAggregateStats($groupId, $modes)
+# **getClanAggregateStats**
+> \Bungie\Model\InlineResponse20049 getClanAggregateStats($groupId, $modes)
 
 
 
@@ -38,10 +38,10 @@ $groupId = 56; // int | Group ID of the clan whose leaderboards you wish to fetc
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 
 try {
-    $result = $apiInstance->destiny2GetClanAggregateStats($groupId, $modes);
+    $result = $apiInstance->getClanAggregateStats($groupId, $modes);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PreviewApi->destiny2GetClanAggregateStats: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PreviewApi->getClanAggregateStats: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -68,8 +68,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetClanLeaderboards**
-> \Bungie\Model\InlineResponse20048 destiny2GetClanLeaderboards($groupId, $maxtop, $modes, $statid)
+# **getClanLeaderboards**
+> \Bungie\Model\InlineResponse20048 getClanLeaderboards($groupId, $maxtop, $modes, $statid)
 
 
 
@@ -97,10 +97,10 @@ $modes = 'modes_example'; // string | List of game modes for which to get leader
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
 
 try {
-    $result = $apiInstance->destiny2GetClanLeaderboards($groupId, $maxtop, $modes, $statid);
+    $result = $apiInstance->getClanLeaderboards($groupId, $maxtop, $modes, $statid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PreviewApi->destiny2GetClanLeaderboards: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PreviewApi->getClanLeaderboards: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -129,8 +129,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetLeaderboards**
-> \Bungie\Model\InlineResponse20048 destiny2GetLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+# **getLeaderboards**
+> \Bungie\Model\InlineResponse20048 getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -153,16 +153,16 @@ $apiInstance = new Bungie\Api\PreviewApi(
     $config
 );
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
 
 try {
-    $result = $apiInstance->destiny2GetLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
+    $result = $apiInstance->getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PreviewApi->destiny2GetLeaderboards: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PreviewApi->getLeaderboards: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -192,8 +192,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetLeaderboardsForCharacter**
-> \Bungie\Model\InlineResponse20048 destiny2GetLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+# **getLeaderboardsForCharacter**
+> \Bungie\Model\InlineResponse20048 getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -217,16 +217,16 @@ $apiInstance = new Bungie\Api\PreviewApi(
 );
 $characterId = 56; // int | The specific character to build the leaderboard around for the provided Destiny Membership.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
 
 try {
-    $result = $apiInstance->destiny2GetLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
+    $result = $apiInstance->getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PreviewApi->destiny2GetLeaderboardsForCharacter: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PreviewApi->getLeaderboardsForCharacter: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -257,8 +257,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2InsertSocketPlug**
-> \Bungie\Model\InlineResponse20045 destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest)
+# **insertSocketPlug**
+> \Bungie\Model\InlineResponse20045 insertSocketPlug($destinyInsertPlugsActionRequest)
 
 
 
@@ -282,13 +282,13 @@ $apiInstance = new Bungie\Api\PreviewApi(
     new GuzzleHttp\Client(),
     $config
 );
-$destinyRequestsActionsDestinyInsertPlugsActionRequest = new \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest | 
+$destinyInsertPlugsActionRequest = new DestinyInsertPlugsActionRequest(); // \Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsActionRequest | 
 
 try {
-    $result = $apiInstance->destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest);
+    $result = $apiInstance->insertSocketPlug($destinyInsertPlugsActionRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PreviewApi->destiny2InsertSocketPlug: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PreviewApi->insertSocketPlug: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -297,7 +297,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destinyRequestsActionsDestinyInsertPlugsActionRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest**](../Model/DestinyRequestsActionsDestinyInsertPlugsActionRequest.md)|  |
+ **destinyInsertPlugsActionRequest** | [**\Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsActionRequest**](../Model/DestinyInsertPlugsActionRequest.md)|  |
 
 ### Return type
 

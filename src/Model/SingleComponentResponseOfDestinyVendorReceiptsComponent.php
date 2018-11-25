@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SingleComponentResponseOfDestinyVendorReceiptsComponent implements ModelInterface, ArrayAccess
+class SingleComponentResponseOfDestinyVendorReceiptsComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class SingleComponentResponseOfDestinyVendorReceiptsComponent implements ModelIn
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\DestinyEntitiesProfilesDestinyVendorReceiptsComponent',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\Destiny\Entities\Profiles\DestinyVendorReceiptsComponent',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SingleComponentResponseOfDestinyVendorReceiptsComponent implements ModelIn
     /**
      * Gets data
      *
-     * @return \Bungie\Model\DestinyEntitiesProfilesDestinyVendorReceiptsComponent|null
+     * @return \Bungie\Model\Destiny\Entities\Profiles\DestinyVendorReceiptsComponent|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class SingleComponentResponseOfDestinyVendorReceiptsComponent implements ModelIn
     /**
      * Sets data
      *
-     * @param \Bungie\Model\DestinyEntitiesProfilesDestinyVendorReceiptsComponent|null $data data
+     * @param \Bungie\Model\Destiny\Entities\Profiles\DestinyVendorReceiptsComponent|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SingleComponentResponseOfDestinyVendorReceiptsComponent implements ModelIn
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class SingleComponentResponseOfDestinyVendorReceiptsComponent implements ModelIn
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

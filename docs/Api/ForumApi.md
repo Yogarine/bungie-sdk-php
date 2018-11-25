@@ -4,24 +4,24 @@ All URIs are relative to *https://www.bungie.net/Platform*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**forumApproveFireteamThread**](ForumApi.md#forumApproveFireteamThread) | **POST** /Forum/Recruit/Approve/{topicId}/ | 
-[**forumGetCoreTopicsPaged**](ForumApi.md#forumGetCoreTopicsPaged) | **GET** /Forum/GetCoreTopicsPaged/{page}/{sort}/{quickDate}/{categoryFilter}/ | 
-[**forumGetForumTagSuggestions**](ForumApi.md#forumGetForumTagSuggestions) | **GET** /Forum/GetForumTagSuggestions/ | 
-[**forumGetPoll**](ForumApi.md#forumGetPoll) | **GET** /Forum/Poll/{topicId}/ | 
-[**forumGetPostAndParent**](ForumApi.md#forumGetPostAndParent) | **GET** /Forum/GetPostAndParent/{childPostId}/ | 
-[**forumGetPostAndParentAwaitingApproval**](ForumApi.md#forumGetPostAndParentAwaitingApproval) | **GET** /Forum/GetPostAndParentAwaitingApproval/{childPostId}/ | 
-[**forumGetPostsThreadedPaged**](ForumApi.md#forumGetPostsThreadedPaged) | **GET** /Forum/GetPostsThreadedPaged/{parentPostId}/{page}/{pageSize}/{replySize}/{getParentPost}/{rootThreadMode}/{sortMode}/ | 
-[**forumGetPostsThreadedPagedFromChild**](ForumApi.md#forumGetPostsThreadedPagedFromChild) | **GET** /Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode}/ | 
-[**forumGetRecruitmentThreadSummaries**](ForumApi.md#forumGetRecruitmentThreadSummaries) | **POST** /Forum/Recruit/Summaries/ | 
-[**forumGetTopicForContent**](ForumApi.md#forumGetTopicForContent) | **GET** /Forum/GetTopicForContent/{contentId}/ | 
-[**forumGetTopicsPaged**](ForumApi.md#forumGetTopicsPaged) | **GET** /Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/ | 
-[**forumJoinFireteamThread**](ForumApi.md#forumJoinFireteamThread) | **POST** /Forum/Recruit/Join/{topicId}/ | 
-[**forumKickBanFireteamApplicant**](ForumApi.md#forumKickBanFireteamApplicant) | **POST** /Forum/Recruit/KickBan/{topicId}/{targetMembershipId}/ | 
-[**forumLeaveFireteamThread**](ForumApi.md#forumLeaveFireteamThread) | **POST** /Forum/Recruit/Leave/{topicId}/ | 
+[**approveFireteamThread**](ForumApi.md#approveFireteamThread) | **POST** /Forum/Recruit/Approve/{topicId}/ | 
+[**getCoreTopicsPaged**](ForumApi.md#getCoreTopicsPaged) | **GET** /Forum/GetCoreTopicsPaged/{page}/{sort}/{quickDate}/{categoryFilter}/ | 
+[**getForumTagSuggestions**](ForumApi.md#getForumTagSuggestions) | **GET** /Forum/GetForumTagSuggestions/ | 
+[**getPoll**](ForumApi.md#getPoll) | **GET** /Forum/Poll/{topicId}/ | 
+[**getPostAndParent**](ForumApi.md#getPostAndParent) | **GET** /Forum/GetPostAndParent/{childPostId}/ | 
+[**getPostAndParentAwaitingApproval**](ForumApi.md#getPostAndParentAwaitingApproval) | **GET** /Forum/GetPostAndParentAwaitingApproval/{childPostId}/ | 
+[**getPostsThreadedPaged**](ForumApi.md#getPostsThreadedPaged) | **GET** /Forum/GetPostsThreadedPaged/{parentPostId}/{page}/{pageSize}/{replySize}/{getParentPost}/{rootThreadMode}/{sortMode}/ | 
+[**getPostsThreadedPagedFromChild**](ForumApi.md#getPostsThreadedPagedFromChild) | **GET** /Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode}/ | 
+[**getRecruitmentThreadSummaries**](ForumApi.md#getRecruitmentThreadSummaries) | **POST** /Forum/Recruit/Summaries/ | 
+[**getTopicForContent**](ForumApi.md#getTopicForContent) | **GET** /Forum/GetTopicForContent/{contentId}/ | 
+[**getTopicsPaged**](ForumApi.md#getTopicsPaged) | **GET** /Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/ | 
+[**joinFireteamThread**](ForumApi.md#joinFireteamThread) | **POST** /Forum/Recruit/Join/{topicId}/ | 
+[**kickBanFireteamApplicant**](ForumApi.md#kickBanFireteamApplicant) | **POST** /Forum/Recruit/KickBan/{topicId}/{targetMembershipId}/ | 
+[**leaveFireteamThread**](ForumApi.md#leaveFireteamThread) | **POST** /Forum/Recruit/Leave/{topicId}/ | 
 
 
-# **forumApproveFireteamThread**
-> \Bungie\Model\InlineResponse20014 forumApproveFireteamThread($topicId)
+# **approveFireteamThread**
+> \Bungie\Model\InlineResponse20014 approveFireteamThread($topicId)
 
 
 
@@ -48,10 +48,10 @@ $apiInstance = new Bungie\Api\ForumApi(
 $topicId = 56; // int | The post id of the recruitment topic to approve.
 
 try {
-    $result = $apiInstance->forumApproveFireteamThread($topicId);
+    $result = $apiInstance->approveFireteamThread($topicId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumApproveFireteamThread: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->approveFireteamThread: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -77,8 +77,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumGetCoreTopicsPaged**
-> \Bungie\Model\InlineResponse20010 forumGetCoreTopicsPaged($categoryFilter, $page, $quickDate, $sort, $locales)
+# **getCoreTopicsPaged**
+> \Bungie\Model\InlineResponse20010 getCoreTopicsPaged($categoryFilter, $page, $quickDate, $sort, $locales)
 
 
 
@@ -100,17 +100,17 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client(),
     $config
 );
-$categoryFilter = new \Bungie\Model\\Bungie\Model\ForumForumTopicsCategoryFiltersEnum(); // \Bungie\Model\ForumForumTopicsCategoryFiltersEnum | The category filter.
+$categoryFilter = new \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum(); // \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum | The category filter.
 $page = 56; // int | Zero base page
-$quickDate = new \Bungie\Model\\Bungie\Model\ForumForumTopicsQuickDateEnum(); // \Bungie\Model\ForumForumTopicsQuickDateEnum | The date filter.
-$sort = new \Bungie\Model\\Bungie\Model\ForumForumTopicsSortEnum(); // \Bungie\Model\ForumForumTopicsSortEnum | The sort mode.
+$quickDate = new \Bungie\Model\Forum\ForumTopicsQuickDateEnum(); // \Bungie\Model\Forum\ForumTopicsQuickDateEnum | The date filter.
+$sort = new \Bungie\Model\Forum\ForumTopicsSortEnum(); // \Bungie\Model\Forum\ForumTopicsSortEnum | The sort mode.
 $locales = 'locales_example'; // string | Comma seperated list of locales posts must match to return in the result list. Default 'en'
 
 try {
-    $result = $apiInstance->forumGetCoreTopicsPaged($categoryFilter, $page, $quickDate, $sort, $locales);
+    $result = $apiInstance->getCoreTopicsPaged($categoryFilter, $page, $quickDate, $sort, $locales);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumGetCoreTopicsPaged: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->getCoreTopicsPaged: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -119,10 +119,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryFilter** | [**\Bungie\Model\ForumForumTopicsCategoryFiltersEnum**](../Model/.md)| The category filter. |
+ **categoryFilter** | [**\Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum**](../Model/.md)| The category filter. |
  **page** | **int**| Zero base page |
- **quickDate** | [**\Bungie\Model\ForumForumTopicsQuickDateEnum**](../Model/.md)| The date filter. |
- **sort** | [**\Bungie\Model\ForumForumTopicsSortEnum**](../Model/.md)| The sort mode. |
+ **quickDate** | [**\Bungie\Model\Forum\ForumTopicsQuickDateEnum**](../Model/.md)| The date filter. |
+ **sort** | [**\Bungie\Model\Forum\ForumTopicsSortEnum**](../Model/.md)| The sort mode. |
  **locales** | **string**| Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; | [optional]
 
 ### Return type
@@ -140,8 +140,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumGetForumTagSuggestions**
-> \Bungie\Model\InlineResponse20012 forumGetForumTagSuggestions($partialtag)
+# **getForumTagSuggestions**
+> \Bungie\Model\InlineResponse20012 getForumTagSuggestions($partialtag)
 
 
 
@@ -166,10 +166,10 @@ $apiInstance = new Bungie\Api\ForumApi(
 $partialtag = 'partialtag_example'; // string | The partial tag input to generate suggestions from.
 
 try {
-    $result = $apiInstance->forumGetForumTagSuggestions($partialtag);
+    $result = $apiInstance->getForumTagSuggestions($partialtag);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumGetForumTagSuggestions: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->getForumTagSuggestions: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -195,8 +195,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumGetPoll**
-> \Bungie\Model\InlineResponse20010 forumGetPoll($topicId)
+# **getPoll**
+> \Bungie\Model\InlineResponse20010 getPoll($topicId)
 
 
 
@@ -221,10 +221,10 @@ $apiInstance = new Bungie\Api\ForumApi(
 $topicId = 56; // int | The post id of the topic that has the poll.
 
 try {
-    $result = $apiInstance->forumGetPoll($topicId);
+    $result = $apiInstance->getPoll($topicId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumGetPoll: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->getPoll: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -250,8 +250,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumGetPostAndParent**
-> \Bungie\Model\InlineResponse20010 forumGetPostAndParent($childPostId, $showbanned)
+# **getPostAndParent**
+> \Bungie\Model\InlineResponse20010 getPostAndParent($childPostId, $showbanned)
 
 
 
@@ -277,10 +277,10 @@ $childPostId = 56; // int |
 $showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
-    $result = $apiInstance->forumGetPostAndParent($childPostId, $showbanned);
+    $result = $apiInstance->getPostAndParent($childPostId, $showbanned);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumGetPostAndParent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->getPostAndParent: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -307,8 +307,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumGetPostAndParentAwaitingApproval**
-> \Bungie\Model\InlineResponse20010 forumGetPostAndParentAwaitingApproval($childPostId, $showbanned)
+# **getPostAndParentAwaitingApproval**
+> \Bungie\Model\InlineResponse20010 getPostAndParentAwaitingApproval($childPostId, $showbanned)
 
 
 
@@ -334,10 +334,10 @@ $childPostId = 56; // int |
 $showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
-    $result = $apiInstance->forumGetPostAndParentAwaitingApproval($childPostId, $showbanned);
+    $result = $apiInstance->getPostAndParentAwaitingApproval($childPostId, $showbanned);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumGetPostAndParentAwaitingApproval: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->getPostAndParentAwaitingApproval: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -364,8 +364,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumGetPostsThreadedPaged**
-> \Bungie\Model\InlineResponse20010 forumGetPostsThreadedPaged($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned)
+# **getPostsThreadedPaged**
+> \Bungie\Model\InlineResponse20010 getPostsThreadedPaged($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned)
 
 
 
@@ -393,14 +393,14 @@ $pageSize = 56; // int |
 $parentPostId = 56; // int | 
 $replySize = 56; // int | 
 $rootThreadMode = True; // bool | 
-$sortMode = new \Bungie\Model\\Bungie\Model\ForumForumPostSortEnum(); // \Bungie\Model\ForumForumPostSortEnum | 
+$sortMode = new \Bungie\Model\Forum\ForumPostSortEnum(); // \Bungie\Model\Forum\ForumPostSortEnum | 
 $showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
-    $result = $apiInstance->forumGetPostsThreadedPaged($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned);
+    $result = $apiInstance->getPostsThreadedPaged($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumGetPostsThreadedPaged: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->getPostsThreadedPaged: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
  **parentPostId** | **int**|  |
  **replySize** | **int**|  |
  **rootThreadMode** | **bool**|  |
- **sortMode** | [**\Bungie\Model\ForumForumPostSortEnum**](../Model/.md)|  |
+ **sortMode** | [**\Bungie\Model\Forum\ForumPostSortEnum**](../Model/.md)|  |
  **showbanned** | **string**| If this value is not null or empty, banned posts are requested to be returned | [optional]
 
 ### Return type
@@ -433,8 +433,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumGetPostsThreadedPagedFromChild**
-> \Bungie\Model\InlineResponse20010 forumGetPostsThreadedPagedFromChild($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned)
+# **getPostsThreadedPagedFromChild**
+> \Bungie\Model\InlineResponse20010 getPostsThreadedPagedFromChild($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned)
 
 
 
@@ -461,14 +461,14 @@ $page = 56; // int |
 $pageSize = 56; // int | 
 $replySize = 56; // int | 
 $rootThreadMode = True; // bool | 
-$sortMode = new \Bungie\Model\\Bungie\Model\ForumForumPostSortEnum(); // \Bungie\Model\ForumForumPostSortEnum | 
+$sortMode = new \Bungie\Model\Forum\ForumPostSortEnum(); // \Bungie\Model\Forum\ForumPostSortEnum | 
 $showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
-    $result = $apiInstance->forumGetPostsThreadedPagedFromChild($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned);
+    $result = $apiInstance->getPostsThreadedPagedFromChild($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumGetPostsThreadedPagedFromChild: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->getPostsThreadedPagedFromChild: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -482,7 +482,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  |
  **replySize** | **int**|  |
  **rootThreadMode** | **bool**|  |
- **sortMode** | [**\Bungie\Model\ForumForumPostSortEnum**](../Model/.md)|  |
+ **sortMode** | [**\Bungie\Model\Forum\ForumPostSortEnum**](../Model/.md)|  |
  **showbanned** | **string**| If this value is not null or empty, banned posts are requested to be returned | [optional]
 
 ### Return type
@@ -500,8 +500,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumGetRecruitmentThreadSummaries**
-> \Bungie\Model\InlineResponse20015 forumGetRecruitmentThreadSummaries($requestBody)
+# **getRecruitmentThreadSummaries**
+> \Bungie\Model\InlineResponse20015 getRecruitmentThreadSummaries($requestBody)
 
 
 
@@ -523,13 +523,13 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client(),
     $config
 );
-$requestBody = array(new \Bungie\Model\array()); // int[] | 
+$requestBody = array(new array()); // \Bungie\Model\int[] | 
 
 try {
-    $result = $apiInstance->forumGetRecruitmentThreadSummaries($requestBody);
+    $result = $apiInstance->getRecruitmentThreadSummaries($requestBody);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumGetRecruitmentThreadSummaries: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->getRecruitmentThreadSummaries: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -538,7 +538,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestBody** | [**int[]**](../Model/array.md)|  |
+ **requestBody** | [**\Bungie\Model\int[]**](../Model/array.md)|  |
 
 ### Return type
 
@@ -555,8 +555,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumGetTopicForContent**
-> \Bungie\Model\InlineResponse20011 forumGetTopicForContent($contentId)
+# **getTopicForContent**
+> \Bungie\Model\InlineResponse20011 getTopicForContent($contentId)
 
 
 
@@ -581,10 +581,10 @@ $apiInstance = new Bungie\Api\ForumApi(
 $contentId = 56; // int | 
 
 try {
-    $result = $apiInstance->forumGetTopicForContent($contentId);
+    $result = $apiInstance->getTopicForContent($contentId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumGetTopicForContent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->getTopicForContent: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -610,8 +610,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumGetTopicsPaged**
-> \Bungie\Model\InlineResponse20010 forumGetTopicsPaged($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring)
+# **getTopicsPaged**
+> \Bungie\Model\InlineResponse20010 getTopicsPaged($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring)
 
 
 
@@ -633,20 +633,20 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client(),
     $config
 );
-$categoryFilter = new \Bungie\Model\\Bungie\Model\ForumForumTopicsCategoryFiltersEnum(); // \Bungie\Model\ForumForumTopicsCategoryFiltersEnum | A category filter
+$categoryFilter = new \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum(); // \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum | A category filter
 $group = 56; // int | The group, if any.
 $page = 56; // int | Zero paged page number
 $pageSize = 56; // int | Unused
-$quickDate = new \Bungie\Model\\Bungie\Model\ForumForumTopicsQuickDateEnum(); // \Bungie\Model\ForumForumTopicsQuickDateEnum | A date filter.
-$sort = new \Bungie\Model\\Bungie\Model\ForumForumTopicsSortEnum(); // \Bungie\Model\ForumForumTopicsSortEnum | The sort mode.
+$quickDate = new \Bungie\Model\Forum\ForumTopicsQuickDateEnum(); // \Bungie\Model\Forum\ForumTopicsQuickDateEnum | A date filter.
+$sort = new \Bungie\Model\Forum\ForumTopicsSortEnum(); // \Bungie\Model\Forum\ForumTopicsSortEnum | The sort mode.
 $locales = 'locales_example'; // string | Comma seperated list of locales posts must match to return in the result list. Default 'en'
 $tagstring = 'tagstring_example'; // string | The tags to search, if any.
 
 try {
-    $result = $apiInstance->forumGetTopicsPaged($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring);
+    $result = $apiInstance->getTopicsPaged($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumGetTopicsPaged: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->getTopicsPaged: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -655,12 +655,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryFilter** | [**\Bungie\Model\ForumForumTopicsCategoryFiltersEnum**](../Model/.md)| A category filter |
+ **categoryFilter** | [**\Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum**](../Model/.md)| A category filter |
  **group** | **int**| The group, if any. |
  **page** | **int**| Zero paged page number |
  **pageSize** | **int**| Unused |
- **quickDate** | [**\Bungie\Model\ForumForumTopicsQuickDateEnum**](../Model/.md)| A date filter. |
- **sort** | [**\Bungie\Model\ForumForumTopicsSortEnum**](../Model/.md)| The sort mode. |
+ **quickDate** | [**\Bungie\Model\Forum\ForumTopicsQuickDateEnum**](../Model/.md)| A date filter. |
+ **sort** | [**\Bungie\Model\Forum\ForumTopicsSortEnum**](../Model/.md)| The sort mode. |
  **locales** | **string**| Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; | [optional]
  **tagstring** | **string**| The tags to search, if any. | [optional]
 
@@ -679,8 +679,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumJoinFireteamThread**
-> \Bungie\Model\InlineResponse20013 forumJoinFireteamThread($topicId)
+# **joinFireteamThread**
+> \Bungie\Model\InlineResponse20013 joinFireteamThread($topicId)
 
 
 
@@ -707,10 +707,10 @@ $apiInstance = new Bungie\Api\ForumApi(
 $topicId = 56; // int | The post id of the recruitment topic you wish to join.
 
 try {
-    $result = $apiInstance->forumJoinFireteamThread($topicId);
+    $result = $apiInstance->joinFireteamThread($topicId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumJoinFireteamThread: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->joinFireteamThread: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -736,8 +736,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumKickBanFireteamApplicant**
-> \Bungie\Model\InlineResponse20013 forumKickBanFireteamApplicant($targetMembershipId, $topicId)
+# **kickBanFireteamApplicant**
+> \Bungie\Model\InlineResponse20013 kickBanFireteamApplicant($targetMembershipId, $topicId)
 
 
 
@@ -765,10 +765,10 @@ $targetMembershipId = 56; // int | The id of the user you wish to kick.
 $topicId = 56; // int | The post id of the recruitment topic you wish to join.
 
 try {
-    $result = $apiInstance->forumKickBanFireteamApplicant($targetMembershipId, $topicId);
+    $result = $apiInstance->kickBanFireteamApplicant($targetMembershipId, $topicId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumKickBanFireteamApplicant: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->kickBanFireteamApplicant: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -795,8 +795,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **forumLeaveFireteamThread**
-> \Bungie\Model\InlineResponse20013 forumLeaveFireteamThread($topicId)
+# **leaveFireteamThread**
+> \Bungie\Model\InlineResponse20013 leaveFireteamThread($topicId)
 
 
 
@@ -823,10 +823,10 @@ $apiInstance = new Bungie\Api\ForumApi(
 $topicId = 56; // int | The post id of the recruitment topic you wish to leave.
 
 try {
-    $result = $apiInstance->forumLeaveFireteamThread($topicId);
+    $result = $apiInstance->leaveFireteamThread($topicId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ForumApi->forumLeaveFireteamThread: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ForumApi->leaveFireteamThread: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

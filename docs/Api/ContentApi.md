@@ -4,15 +4,15 @@ All URIs are relative to *https://www.bungie.net/Platform*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**contentGetContentById**](ContentApi.md#contentGetContentById) | **GET** /Content/GetContentById/{id}/{locale}/ | 
-[**contentGetContentByTagAndType**](ContentApi.md#contentGetContentByTagAndType) | **GET** /Content/GetContentByTagAndType/{tag}/{type}/{locale}/ | 
-[**contentGetContentType**](ContentApi.md#contentGetContentType) | **GET** /Content/GetContentType/{type}/ | 
-[**contentSearchContentByTagAndType**](ContentApi.md#contentSearchContentByTagAndType) | **GET** /Content/SearchContentByTagAndType/{tag}/{type}/{locale}/ | 
-[**contentSearchContentWithText**](ContentApi.md#contentSearchContentWithText) | **GET** /Content/Search/{locale}/ | 
+[**getContentById**](ContentApi.md#getContentById) | **GET** /Content/GetContentById/{id}/{locale}/ | 
+[**getContentByTagAndType**](ContentApi.md#getContentByTagAndType) | **GET** /Content/GetContentByTagAndType/{tag}/{type}/{locale}/ | 
+[**getContentType**](ContentApi.md#getContentType) | **GET** /Content/GetContentType/{type}/ | 
+[**searchContentByTagAndType**](ContentApi.md#searchContentByTagAndType) | **GET** /Content/SearchContentByTagAndType/{tag}/{type}/{locale}/ | 
+[**searchContentWithText**](ContentApi.md#searchContentWithText) | **GET** /Content/Search/{locale}/ | 
 
 
-# **contentGetContentById**
-> \Bungie\Model\InlineResponse2008 contentGetContentById($id, $locale, $head)
+# **getContentById**
+> \Bungie\Model\InlineResponse2008 getContentById($id, $locale, $head)
 
 
 
@@ -39,10 +39,10 @@ $locale = 'locale_example'; // string |
 $head = True; // bool | false
 
 try {
-    $result = $apiInstance->contentGetContentById($id, $locale, $head);
+    $result = $apiInstance->getContentById($id, $locale, $head);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContentApi->contentGetContentById: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContentApi->getContentById: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -70,8 +70,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **contentGetContentByTagAndType**
-> \Bungie\Model\InlineResponse2008 contentGetContentByTagAndType($locale, $tag, $type, $head)
+# **getContentByTagAndType**
+> \Bungie\Model\InlineResponse2008 getContentByTagAndType($locale, $tag, $type, $head)
 
 
 
@@ -99,10 +99,10 @@ $type = 'type_example'; // string |
 $head = True; // bool | Not used.
 
 try {
-    $result = $apiInstance->contentGetContentByTagAndType($locale, $tag, $type, $head);
+    $result = $apiInstance->getContentByTagAndType($locale, $tag, $type, $head);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContentApi->contentGetContentByTagAndType: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContentApi->getContentByTagAndType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -131,8 +131,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **contentGetContentType**
-> \Bungie\Model\InlineResponse2007 contentGetContentType($type)
+# **getContentType**
+> \Bungie\Model\InlineResponse2007 getContentType($type)
 
 
 
@@ -157,10 +157,10 @@ $apiInstance = new Bungie\Api\ContentApi(
 $type = 'type_example'; // string | 
 
 try {
-    $result = $apiInstance->contentGetContentType($type);
+    $result = $apiInstance->getContentType($type);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContentApi->contentGetContentType: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContentApi->getContentType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -186,8 +186,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **contentSearchContentByTagAndType**
-> \Bungie\Model\InlineResponse2009 contentSearchContentByTagAndType($locale, $tag, $type, $currentpage, $head, $itemsperpage)
+# **searchContentByTagAndType**
+> \Bungie\Model\InlineResponse2009 searchContentByTagAndType($locale, $tag, $type, $currentpage, $head, $itemsperpage)
 
 
 
@@ -217,10 +217,10 @@ $head = True; // bool | Not used.
 $itemsperpage = 56; // int | Not used.
 
 try {
-    $result = $apiInstance->contentSearchContentByTagAndType($locale, $tag, $type, $currentpage, $head, $itemsperpage);
+    $result = $apiInstance->searchContentByTagAndType($locale, $tag, $type, $currentpage, $head, $itemsperpage);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContentApi->contentSearchContentByTagAndType: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContentApi->searchContentByTagAndType: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -251,8 +251,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **contentSearchContentWithText**
-> \Bungie\Model\InlineResponse2009 contentSearchContentWithText($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag)
+# **searchContentWithText**
+> \Bungie\Model\InlineResponse2009 searchContentWithText($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag)
 
 
 
@@ -283,10 +283,10 @@ $source = 'source_example'; // string | For analytics, hint at the part of the a
 $tag = 'tag_example'; // string | Tag used on the content to be searched.
 
 try {
-    $result = $apiInstance->contentSearchContentWithText($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag);
+    $result = $apiInstance->searchContentWithText($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContentApi->contentSearchContentWithText: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContentApi->searchContentWithText: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

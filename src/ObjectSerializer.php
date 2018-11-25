@@ -69,7 +69,7 @@ class ObjectSerializer
                     $getter = $data::getters()[$property];
                     $value = $data->$getter();
                     if ($value !== null
-                        && !in_array($openAPIType, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)
+                        && !in_array($openAPIType, ['DateTime', '\DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)
                         && method_exists($openAPIType, 'getAllowableEnumValues')
                         && !in_array($value, $openAPIType::getAllowableEnumValues(), true)) {
                         $imploded = implode("', '", $openAPIType::getAllowableEnumValues());
@@ -273,7 +273,7 @@ class ObjectSerializer
             } else {
                 return null;
             }
-        } elseif (in_array($class, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
+        } elseif (in_array($class, ['DateTime', '\DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
             settype($data, $class);
             return $data;
         } elseif ($class === '\SplFileObject') {

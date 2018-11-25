@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SearchResultOfGroupPotentialMembership implements ModelInterface, ArrayAccess
+class SearchResultOfGroupPotentialMembership implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,10 +57,10 @@ class SearchResultOfGroupPotentialMembership implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\GroupsV2GroupPotentialMembership[]',
+        'results' => '\Bungie\Model\\Bungie\Model\GroupsV2\GroupPotentialMembership[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
-        'query' => '\Bungie\Model\QueriesPagedQuery',
+        'query' => '\Bungie\Model\Queries\PagedQuery',
         'replacementContinuationToken' => 'string',
         'useTotalResults' => 'bool'
     ];
@@ -237,7 +237,7 @@ class SearchResultOfGroupPotentialMembership implements ModelInterface, ArrayAcc
     /**
      * Gets results
      *
-     * @return \Bungie\Model\GroupsV2GroupPotentialMembership[]|null
+     * @return \Bungie\Model\\Bungie\Model\GroupsV2\GroupPotentialMembership[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfGroupPotentialMembership implements ModelInterface, ArrayAcc
     /**
      * Sets results
      *
-     * @param \Bungie\Model\GroupsV2GroupPotentialMembership[]|null $results results
+     * @param \Bungie\Model\\Bungie\Model\GroupsV2\GroupPotentialMembership[]|null $results results
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class SearchResultOfGroupPotentialMembership implements ModelInterface, ArrayAcc
     /**
      * Gets query
      *
-     * @return \Bungie\Model\QueriesPagedQuery|null
+     * @return \Bungie\Model\Queries\PagedQuery|null
      */
     public function getQuery()
     {
@@ -319,7 +319,7 @@ class SearchResultOfGroupPotentialMembership implements ModelInterface, ArrayAcc
     /**
      * Sets query
      *
-     * @param \Bungie\Model\QueriesPagedQuery|null $query query
+     * @param \Bungie\Model\Queries\PagedQuery|null $query query
      *
      * @return $this
      */

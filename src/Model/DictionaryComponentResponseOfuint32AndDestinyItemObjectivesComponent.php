@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent implements ModelInterface, ArrayAccess
+class DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent imple
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'map[string,\Bungie\Model\DestinyEntitiesItemsDestinyItemObjectivesComponent]',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemObjectivesComponent]',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent imple
     /**
      * Gets data
      *
-     * @return map[string,\Bungie\Model\DestinyEntitiesItemsDestinyItemObjectivesComponent]|null
+     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemObjectivesComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent imple
     /**
      * Sets data
      *
-     * @param map[string,\Bungie\Model\DestinyEntitiesItemsDestinyItemObjectivesComponent]|null $data data
+     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemObjectivesComponent]|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent imple
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent imple
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

@@ -43,8 +43,8 @@ class GlobalAlertType
     /**
      * Possible values of this enum
      */
-    const GLOBALALERT = 0;
-    const STREAMINGALERT = 1;
+    const GLOBAL_ALERT_TYPE_GLOBALALERT = 0;
+    const GLOBAL_ALERT_TYPE_STREAMINGALERT = 1;
     
     /**
      * Gets allowable values of the enum
@@ -53,8 +53,8 @@ class GlobalAlertType
     public static function getAllowableEnumValues()
     {
         return [
-            self::GLOBALALERT,
-            self::STREAMINGALERT,
+            self::GLOBAL_ALERT_TYPE_GLOBALALERT,
+            self::GLOBAL_ALERT_TYPE_STREAMINGALERT,
         ];
     }
 }

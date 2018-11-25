@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SingleComponentResponseOfDestinyCollectiblesComponent implements ModelInterface, ArrayAccess
+class SingleComponentResponseOfDestinyCollectiblesComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class SingleComponentResponseOfDestinyCollectiblesComponent implements ModelInte
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\DestinyComponentsCollectiblesDestinyCollectiblesComponent',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectiblesComponent',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SingleComponentResponseOfDestinyCollectiblesComponent implements ModelInte
     /**
      * Gets data
      *
-     * @return \Bungie\Model\DestinyComponentsCollectiblesDestinyCollectiblesComponent|null
+     * @return \Bungie\Model\Destiny\Components\Collectibles\DestinyCollectiblesComponent|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class SingleComponentResponseOfDestinyCollectiblesComponent implements ModelInte
     /**
      * Sets data
      *
-     * @param \Bungie\Model\DestinyComponentsCollectiblesDestinyCollectiblesComponent|null $data data
+     * @param \Bungie\Model\Destiny\Components\Collectibles\DestinyCollectiblesComponent|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SingleComponentResponseOfDestinyCollectiblesComponent implements ModelInte
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class SingleComponentResponseOfDestinyCollectiblesComponent implements ModelInte
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SingleComponentResponseOfDestinyCharacterActivitiesComponent implements ModelInterface, ArrayAccess
+class SingleComponentResponseOfDestinyCharacterActivitiesComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class SingleComponentResponseOfDestinyCharacterActivitiesComponent implements Mo
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\DestinyEntitiesCharactersDestinyCharacterActivitiesComponent',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterActivitiesComponent',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SingleComponentResponseOfDestinyCharacterActivitiesComponent implements Mo
     /**
      * Gets data
      *
-     * @return \Bungie\Model\DestinyEntitiesCharactersDestinyCharacterActivitiesComponent|null
+     * @return \Bungie\Model\Destiny\Entities\Characters\DestinyCharacterActivitiesComponent|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class SingleComponentResponseOfDestinyCharacterActivitiesComponent implements Mo
     /**
      * Sets data
      *
-     * @param \Bungie\Model\DestinyEntitiesCharactersDestinyCharacterActivitiesComponent|null $data data
+     * @param \Bungie\Model\Destiny\Entities\Characters\DestinyCharacterActivitiesComponent|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SingleComponentResponseOfDestinyCharacterActivitiesComponent implements Mo
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class SingleComponentResponseOfDestinyCharacterActivitiesComponent implements Mo
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

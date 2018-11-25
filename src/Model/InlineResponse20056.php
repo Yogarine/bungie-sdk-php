@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class InlineResponse20056 implements ModelInterface, ArrayAccess
+class InlineResponse20056 implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,12 +57,12 @@ class InlineResponse20056 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response' => '\Bungie\Model\DestinyMilestonesDestinyMilestoneContent',
-        'errorCode' => '\Bungie\Model\ExceptionsPlatformErrorCodes',
+        'response' => '\Bungie\Model\Destiny\Milestones\DestinyMilestoneContent',
+        'errorCode' => '\Bungie\Model\Exceptions\PlatformErrorCodes',
         'throttleSeconds' => 'int',
         'errorStatus' => 'string',
         'message' => 'string',
-        'messageData' => 'map[string,string]',
+        'messageData' => '\Bungie\Model\map[string,string]',
         'detailedErrorTrace' => 'string'
     ];
 
@@ -243,7 +243,7 @@ class InlineResponse20056 implements ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Bungie\Model\DestinyMilestonesDestinyMilestoneContent|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyMilestoneContent|null
      */
     public function getResponse()
     {
@@ -253,7 +253,7 @@ class InlineResponse20056 implements ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Bungie\Model\DestinyMilestonesDestinyMilestoneContent|null $response response
+     * @param \Bungie\Model\Destiny\Milestones\DestinyMilestoneContent|null $response response
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class InlineResponse20056 implements ModelInterface, ArrayAccess
     /**
      * Gets errorCode
      *
-     * @return \Bungie\Model\ExceptionsPlatformErrorCodes|null
+     * @return \Bungie\Model\Exceptions\PlatformErrorCodes|null
      */
     public function getErrorCode()
     {
@@ -277,7 +277,7 @@ class InlineResponse20056 implements ModelInterface, ArrayAccess
     /**
      * Sets errorCode
      *
-     * @param \Bungie\Model\ExceptionsPlatformErrorCodes|null $errorCode errorCode
+     * @param \Bungie\Model\Exceptions\PlatformErrorCodes|null $errorCode errorCode
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class InlineResponse20056 implements ModelInterface, ArrayAccess
     /**
      * Gets messageData
      *
-     * @return map[string,string]|null
+     * @return \Bungie\Model\map[string,string]|null
      */
     public function getMessageData()
     {
@@ -373,7 +373,7 @@ class InlineResponse20056 implements ModelInterface, ArrayAccess
     /**
      * Sets messageData
      *
-     * @param map[string,string]|null $messageData messageData
+     * @param \Bungie\Model\map[string,string]|null $messageData messageData
      *
      * @return $this
      */

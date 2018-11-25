@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SingleComponentResponseOfDestinyItemPerksComponent implements ModelInterface, ArrayAccess
+class SingleComponentResponseOfDestinyItemPerksComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class SingleComponentResponseOfDestinyItemPerksComponent implements ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\DestinyEntitiesItemsDestinyItemPerksComponent',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\Destiny\Entities\Items\DestinyItemPerksComponent',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SingleComponentResponseOfDestinyItemPerksComponent implements ModelInterfa
     /**
      * Gets data
      *
-     * @return \Bungie\Model\DestinyEntitiesItemsDestinyItemPerksComponent|null
+     * @return \Bungie\Model\Destiny\Entities\Items\DestinyItemPerksComponent|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class SingleComponentResponseOfDestinyItemPerksComponent implements ModelInterfa
     /**
      * Sets data
      *
-     * @param \Bungie\Model\DestinyEntitiesItemsDestinyItemPerksComponent|null $data data
+     * @param \Bungie\Model\Destiny\Entities\Items\DestinyItemPerksComponent|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SingleComponentResponseOfDestinyItemPerksComponent implements ModelInterfa
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class SingleComponentResponseOfDestinyItemPerksComponent implements ModelInterfa
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

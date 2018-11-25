@@ -4,12 +4,12 @@ All URIs are relative to *https://www.bungie.net/Platform*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**appGetApplicationApiUsage**](AppApi.md#appGetApplicationApiUsage) | **GET** /App/ApiUsage/{applicationId}/ | 
-[**appGetBungieApplications**](AppApi.md#appGetBungieApplications) | **GET** /App/FirstParty/ | 
+[**getApplicationApiUsage**](AppApi.md#getApplicationApiUsage) | **GET** /App/ApiUsage/{applicationId}/ | 
+[**getBungieApplications**](AppApi.md#getBungieApplications) | **GET** /App/FirstParty/ | 
 
 
-# **appGetApplicationApiUsage**
-> \Bungie\Model\InlineResponse200 appGetApplicationApiUsage($applicationId, $end, $start)
+# **getApplicationApiUsage**
+> \Bungie\Model\InlineResponse200 getApplicationApiUsage($applicationId, $end, $start)
 
 
 
@@ -38,10 +38,10 @@ $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End time for q
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start time for query. Goes to 24 hours ago if not specified.
 
 try {
-    $result = $apiInstance->appGetApplicationApiUsage($applicationId, $end, $start);
+    $result = $apiInstance->getApplicationApiUsage($applicationId, $end, $start);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AppApi->appGetApplicationApiUsage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AppApi->getApplicationApiUsage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -69,8 +69,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **appGetBungieApplications**
-> \Bungie\Model\InlineResponse2001 appGetBungieApplications()
+# **getBungieApplications**
+> \Bungie\Model\InlineResponse2001 getBungieApplications()
 
 
 
@@ -94,10 +94,10 @@ $apiInstance = new Bungie\Api\AppApi(
 );
 
 try {
-    $result = $apiInstance->appGetBungieApplications();
+    $result = $apiInstance->getBungieApplications();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AppApi->appGetBungieApplications: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AppApi->getBungieApplications: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

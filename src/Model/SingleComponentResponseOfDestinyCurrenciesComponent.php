@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SingleComponentResponseOfDestinyCurrenciesComponent implements ModelInterface, ArrayAccess
+class SingleComponentResponseOfDestinyCurrenciesComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class SingleComponentResponseOfDestinyCurrenciesComponent implements ModelInterf
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\DestinyComponentsInventoryDestinyCurrenciesComponent',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\Destiny\Components\Inventory\DestinyCurrenciesComponent',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SingleComponentResponseOfDestinyCurrenciesComponent implements ModelInterf
     /**
      * Gets data
      *
-     * @return \Bungie\Model\DestinyComponentsInventoryDestinyCurrenciesComponent|null
+     * @return \Bungie\Model\Destiny\Components\Inventory\DestinyCurrenciesComponent|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class SingleComponentResponseOfDestinyCurrenciesComponent implements ModelInterf
     /**
      * Sets data
      *
-     * @param \Bungie\Model\DestinyComponentsInventoryDestinyCurrenciesComponent|null $data data
+     * @param \Bungie\Model\Destiny\Components\Inventory\DestinyCurrenciesComponent|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SingleComponentResponseOfDestinyCurrenciesComponent implements ModelInterf
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class SingleComponentResponseOfDestinyCurrenciesComponent implements ModelInterf
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

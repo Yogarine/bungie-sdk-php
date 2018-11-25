@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Bungie\API;
+namespace Bungie\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -88,32 +88,34 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetActivePrivateClanFireteamCount
+     * Operation getActivePrivateClanFireteamCount
      *
      * @param  int $groupId The group id of the clan. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20019
      */
-    public function fireteamGetActivePrivateClanFireteamCount($groupId)
+    public function getActivePrivateClanFireteamCount($groupId)
     {
-        list($response) = $this->fireteamGetActivePrivateClanFireteamCountWithHttpInfo($groupId);
+        list($response) = $this->getActivePrivateClanFireteamCountWithHttpInfo($groupId);
         return $response;
     }
 
     /**
-     * Operation fireteamGetActivePrivateClanFireteamCountWithHttpInfo
+     * Operation getActivePrivateClanFireteamCountWithHttpInfo
      *
      * @param  int $groupId The group id of the clan. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
-    public function fireteamGetActivePrivateClanFireteamCountWithHttpInfo($groupId)
+    public function getActivePrivateClanFireteamCountWithHttpInfo($groupId)
     {
-        $request = $this->fireteamGetActivePrivateClanFireteamCountRequest($groupId);
+        $request = $this->getActivePrivateClanFireteamCountRequest($groupId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -189,7 +191,7 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetActivePrivateClanFireteamCountAsync
+     * Operation getActivePrivateClanFireteamCountAsync
      *
      * 
      *
@@ -198,9 +200,9 @@ class FireteamApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fireteamGetActivePrivateClanFireteamCountAsync($groupId)
+    public function getActivePrivateClanFireteamCountAsync($groupId)
     {
-        return $this->fireteamGetActivePrivateClanFireteamCountAsyncWithHttpInfo($groupId)
+        return $this->getActivePrivateClanFireteamCountAsyncWithHttpInfo($groupId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -209,7 +211,7 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetActivePrivateClanFireteamCountAsyncWithHttpInfo
+     * Operation getActivePrivateClanFireteamCountAsyncWithHttpInfo
      *
      * 
      *
@@ -218,15 +220,16 @@ class FireteamApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fireteamGetActivePrivateClanFireteamCountAsyncWithHttpInfo($groupId)
+    public function getActivePrivateClanFireteamCountAsyncWithHttpInfo($groupId)
     {
         $returnType = '\Bungie\Model\InlineResponse20019';
-        $request = $this->fireteamGetActivePrivateClanFireteamCountRequest($groupId);
+        $request = $this->getActivePrivateClanFireteamCountRequest($groupId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -241,6 +244,7 @@ class FireteamApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -258,19 +262,19 @@ class FireteamApi
     }
 
     /**
-     * Create request for operation 'fireteamGetActivePrivateClanFireteamCount'
+     * Create request for operation 'getActivePrivateClanFireteamCount'
      *
      * @param  int $groupId The group id of the clan. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function fireteamGetActivePrivateClanFireteamCountRequest($groupId)
+    protected function getActivePrivateClanFireteamCountRequest($groupId)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $groupId when calling fireteamGetActivePrivateClanFireteamCount'
+                'Missing the required parameter $groupId when calling getActivePrivateClanFireteamCount'
             );
         }
 
@@ -365,46 +369,48 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetAvailableClanFireteams
+     * Operation getAvailableClanFireteams
      *
-     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
-     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $groupId The group id of the clan. (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
-     * @param  \Bungie\Model\FireteamFireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
-     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20065
      */
-    public function fireteamGetAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter = null)
+    public function getAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter = null)
     {
-        list($response) = $this->fireteamGetAvailableClanFireteamsWithHttpInfo($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter);
+        list($response) = $this->getAvailableClanFireteamsWithHttpInfo($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter);
         return $response;
     }
 
     /**
-     * Operation fireteamGetAvailableClanFireteamsWithHttpInfo
+     * Operation getAvailableClanFireteamsWithHttpInfo
      *
-     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
-     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $groupId The group id of the clan. (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
-     * @param  \Bungie\Model\FireteamFireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
-     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20065, HTTP status code, HTTP response headers (array of strings)
      */
-    public function fireteamGetAvailableClanFireteamsWithHttpInfo($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter = null)
+    public function getAvailableClanFireteamsWithHttpInfo($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter = null)
     {
-        $request = $this->fireteamGetAvailableClanFireteamsRequest($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter);
+        $request = $this->getAvailableClanFireteamsRequest($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter);
 
         try {
             $options = $this->createHttpClientOption();
@@ -480,25 +486,25 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetAvailableClanFireteamsAsync
+     * Operation getAvailableClanFireteamsAsync
      *
      * 
      *
-     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
-     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $groupId The group id of the clan. (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
-     * @param  \Bungie\Model\FireteamFireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
-     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fireteamGetAvailableClanFireteamsAsync($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter = null)
+    public function getAvailableClanFireteamsAsync($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter = null)
     {
-        return $this->fireteamGetAvailableClanFireteamsAsyncWithHttpInfo($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter)
+        return $this->getAvailableClanFireteamsAsyncWithHttpInfo($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -507,31 +513,32 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetAvailableClanFireteamsAsyncWithHttpInfo
+     * Operation getAvailableClanFireteamsAsyncWithHttpInfo
      *
      * 
      *
-     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
-     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $groupId The group id of the clan. (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
-     * @param  \Bungie\Model\FireteamFireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
-     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fireteamGetAvailableClanFireteamsAsyncWithHttpInfo($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter = null)
+    public function getAvailableClanFireteamsAsyncWithHttpInfo($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20065';
-        $request = $this->fireteamGetAvailableClanFireteamsRequest($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter);
+        $request = $this->getAvailableClanFireteamsRequest($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -546,6 +553,7 @@ class FireteamApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -563,62 +571,62 @@ class FireteamApi
     }
 
     /**
-     * Create request for operation 'fireteamGetAvailableClanFireteams'
+     * Create request for operation 'getAvailableClanFireteams'
      *
-     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
-     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $groupId The group id of the clan. (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
-     * @param  \Bungie\Model\FireteamFireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
-     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPublicSearchOption $publicOnly Determines public/private filtering. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function fireteamGetAvailableClanFireteamsRequest($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter = null)
+    protected function getAvailableClanFireteamsRequest($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter = null)
     {
         // verify the required parameter 'activityType' is set
         if ($activityType === null || (is_array($activityType) && count($activityType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $activityType when calling fireteamGetAvailableClanFireteams'
+                'Missing the required parameter $activityType when calling getAvailableClanFireteams'
             );
         }
         // verify the required parameter 'dateRange' is set
         if ($dateRange === null || (is_array($dateRange) && count($dateRange) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $dateRange when calling fireteamGetAvailableClanFireteams'
+                'Missing the required parameter $dateRange when calling getAvailableClanFireteams'
             );
         }
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $groupId when calling fireteamGetAvailableClanFireteams'
+                'Missing the required parameter $groupId when calling getAvailableClanFireteams'
             );
         }
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling fireteamGetAvailableClanFireteams'
+                'Missing the required parameter $page when calling getAvailableClanFireteams'
             );
         }
         // verify the required parameter 'platform' is set
         if ($platform === null || (is_array($platform) && count($platform) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $platform when calling fireteamGetAvailableClanFireteams'
+                'Missing the required parameter $platform when calling getAvailableClanFireteams'
             );
         }
         // verify the required parameter 'publicOnly' is set
         if ($publicOnly === null || (is_array($publicOnly) && count($publicOnly) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $publicOnly when calling fireteamGetAvailableClanFireteams'
+                'Missing the required parameter $publicOnly when calling getAvailableClanFireteams'
             );
         }
         // verify the required parameter 'slotFilter' is set
         if ($slotFilter === null || (is_array($slotFilter) && count($slotFilter) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $slotFilter when calling fireteamGetAvailableClanFireteams'
+                'Missing the required parameter $slotFilter when calling getAvailableClanFireteams'
             );
         }
 
@@ -765,34 +773,36 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetClanFireteam
+     * Operation getClanFireteam
      *
      * @param  int $fireteamId The unique id of the fireteam. (required)
      * @param  int $groupId The group id of the clan. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20067
      */
-    public function fireteamGetClanFireteam($fireteamId, $groupId)
+    public function getClanFireteam($fireteamId, $groupId)
     {
-        list($response) = $this->fireteamGetClanFireteamWithHttpInfo($fireteamId, $groupId);
+        list($response) = $this->getClanFireteamWithHttpInfo($fireteamId, $groupId);
         return $response;
     }
 
     /**
-     * Operation fireteamGetClanFireteamWithHttpInfo
+     * Operation getClanFireteamWithHttpInfo
      *
      * @param  int $fireteamId The unique id of the fireteam. (required)
      * @param  int $groupId The group id of the clan. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20067, HTTP status code, HTTP response headers (array of strings)
      */
-    public function fireteamGetClanFireteamWithHttpInfo($fireteamId, $groupId)
+    public function getClanFireteamWithHttpInfo($fireteamId, $groupId)
     {
-        $request = $this->fireteamGetClanFireteamRequest($fireteamId, $groupId);
+        $request = $this->getClanFireteamRequest($fireteamId, $groupId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -868,7 +878,7 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetClanFireteamAsync
+     * Operation getClanFireteamAsync
      *
      * 
      *
@@ -878,9 +888,9 @@ class FireteamApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fireteamGetClanFireteamAsync($fireteamId, $groupId)
+    public function getClanFireteamAsync($fireteamId, $groupId)
     {
-        return $this->fireteamGetClanFireteamAsyncWithHttpInfo($fireteamId, $groupId)
+        return $this->getClanFireteamAsyncWithHttpInfo($fireteamId, $groupId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -889,7 +899,7 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetClanFireteamAsyncWithHttpInfo
+     * Operation getClanFireteamAsyncWithHttpInfo
      *
      * 
      *
@@ -899,15 +909,16 @@ class FireteamApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fireteamGetClanFireteamAsyncWithHttpInfo($fireteamId, $groupId)
+    public function getClanFireteamAsyncWithHttpInfo($fireteamId, $groupId)
     {
         $returnType = '\Bungie\Model\InlineResponse20067';
-        $request = $this->fireteamGetClanFireteamRequest($fireteamId, $groupId);
+        $request = $this->getClanFireteamRequest($fireteamId, $groupId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -922,6 +933,7 @@ class FireteamApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -939,7 +951,7 @@ class FireteamApi
     }
 
     /**
-     * Create request for operation 'fireteamGetClanFireteam'
+     * Create request for operation 'getClanFireteam'
      *
      * @param  int $fireteamId The unique id of the fireteam. (required)
      * @param  int $groupId The group id of the clan. (required)
@@ -947,18 +959,18 @@ class FireteamApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function fireteamGetClanFireteamRequest($fireteamId, $groupId)
+    protected function getClanFireteamRequest($fireteamId, $groupId)
     {
         // verify the required parameter 'fireteamId' is set
         if ($fireteamId === null || (is_array($fireteamId) && count($fireteamId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $fireteamId when calling fireteamGetClanFireteam'
+                'Missing the required parameter $fireteamId when calling getClanFireteam'
             );
         }
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $groupId when calling fireteamGetClanFireteam'
+                'Missing the required parameter $groupId when calling getClanFireteam'
             );
         }
 
@@ -1061,42 +1073,44 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetMyClanFireteams
+     * Operation getMyClanFireteams
      *
      * @param  int $groupId The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). (required)
      * @param  bool $includeClosed If true, return fireteams that have been closed. (required)
      * @param  int $page Deprecated parameter, ignored. (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
      * @param  bool $groupFilter If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. (optional)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20066
      */
-    public function fireteamGetMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter = null, $langFilter = null)
+    public function getMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter = null, $langFilter = null)
     {
-        list($response) = $this->fireteamGetMyClanFireteamsWithHttpInfo($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter);
+        list($response) = $this->getMyClanFireteamsWithHttpInfo($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter);
         return $response;
     }
 
     /**
-     * Operation fireteamGetMyClanFireteamsWithHttpInfo
+     * Operation getMyClanFireteamsWithHttpInfo
      *
      * @param  int $groupId The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). (required)
      * @param  bool $includeClosed If true, return fireteams that have been closed. (required)
      * @param  int $page Deprecated parameter, ignored. (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
      * @param  bool $groupFilter If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. (optional)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20066, HTTP status code, HTTP response headers (array of strings)
      */
-    public function fireteamGetMyClanFireteamsWithHttpInfo($groupId, $includeClosed, $page, $platform, $groupFilter = null, $langFilter = null)
+    public function getMyClanFireteamsWithHttpInfo($groupId, $includeClosed, $page, $platform, $groupFilter = null, $langFilter = null)
     {
-        $request = $this->fireteamGetMyClanFireteamsRequest($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter);
+        $request = $this->getMyClanFireteamsRequest($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1172,23 +1186,23 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetMyClanFireteamsAsync
+     * Operation getMyClanFireteamsAsync
      *
      * 
      *
      * @param  int $groupId The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). (required)
      * @param  bool $includeClosed If true, return fireteams that have been closed. (required)
      * @param  int $page Deprecated parameter, ignored. (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
      * @param  bool $groupFilter If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. (optional)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fireteamGetMyClanFireteamsAsync($groupId, $includeClosed, $page, $platform, $groupFilter = null, $langFilter = null)
+    public function getMyClanFireteamsAsync($groupId, $includeClosed, $page, $platform, $groupFilter = null, $langFilter = null)
     {
-        return $this->fireteamGetMyClanFireteamsAsyncWithHttpInfo($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter)
+        return $this->getMyClanFireteamsAsyncWithHttpInfo($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1197,29 +1211,30 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamGetMyClanFireteamsAsyncWithHttpInfo
+     * Operation getMyClanFireteamsAsyncWithHttpInfo
      *
      * 
      *
      * @param  int $groupId The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). (required)
      * @param  bool $includeClosed If true, return fireteams that have been closed. (required)
      * @param  int $page Deprecated parameter, ignored. (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
      * @param  bool $groupFilter If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. (optional)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fireteamGetMyClanFireteamsAsyncWithHttpInfo($groupId, $includeClosed, $page, $platform, $groupFilter = null, $langFilter = null)
+    public function getMyClanFireteamsAsyncWithHttpInfo($groupId, $includeClosed, $page, $platform, $groupFilter = null, $langFilter = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20066';
-        $request = $this->fireteamGetMyClanFireteamsRequest($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter);
+        $request = $this->getMyClanFireteamsRequest($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1234,6 +1249,7 @@ class FireteamApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1251,42 +1267,42 @@ class FireteamApi
     }
 
     /**
-     * Create request for operation 'fireteamGetMyClanFireteams'
+     * Create request for operation 'getMyClanFireteams'
      *
      * @param  int $groupId The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true). (required)
      * @param  bool $includeClosed If true, return fireteams that have been closed. (required)
      * @param  int $page Deprecated parameter, ignored. (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
      * @param  bool $groupFilter If true, filter by clan. Otherwise, ignore the clan and show all of the user&#39;s fireteams. (optional)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function fireteamGetMyClanFireteamsRequest($groupId, $includeClosed, $page, $platform, $groupFilter = null, $langFilter = null)
+    protected function getMyClanFireteamsRequest($groupId, $includeClosed, $page, $platform, $groupFilter = null, $langFilter = null)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $groupId when calling fireteamGetMyClanFireteams'
+                'Missing the required parameter $groupId when calling getMyClanFireteams'
             );
         }
         // verify the required parameter 'includeClosed' is set
         if ($includeClosed === null || (is_array($includeClosed) && count($includeClosed) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $includeClosed when calling fireteamGetMyClanFireteams'
+                'Missing the required parameter $includeClosed when calling getMyClanFireteams'
             );
         }
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling fireteamGetMyClanFireteams'
+                'Missing the required parameter $page when calling getMyClanFireteams'
             );
         }
         // verify the required parameter 'platform' is set
         if ($platform === null || (is_array($platform) && count($platform) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $platform when calling fireteamGetMyClanFireteams'
+                'Missing the required parameter $platform when calling getMyClanFireteams'
             );
         }
 
@@ -1413,42 +1429,44 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamSearchPublicAvailableClanFireteams
+     * Operation searchPublicAvailableClanFireteams
      *
-     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
-     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
-     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20065
      */
-    public function fireteamSearchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter = null)
+    public function searchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter = null)
     {
-        list($response) = $this->fireteamSearchPublicAvailableClanFireteamsWithHttpInfo($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter);
+        list($response) = $this->searchPublicAvailableClanFireteamsWithHttpInfo($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter);
         return $response;
     }
 
     /**
-     * Operation fireteamSearchPublicAvailableClanFireteamsWithHttpInfo
+     * Operation searchPublicAvailableClanFireteamsWithHttpInfo
      *
-     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
-     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
-     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20065, HTTP status code, HTTP response headers (array of strings)
      */
-    public function fireteamSearchPublicAvailableClanFireteamsWithHttpInfo($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter = null)
+    public function searchPublicAvailableClanFireteamsWithHttpInfo($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter = null)
     {
-        $request = $this->fireteamSearchPublicAvailableClanFireteamsRequest($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter);
+        $request = $this->searchPublicAvailableClanFireteamsRequest($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1524,23 +1542,23 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamSearchPublicAvailableClanFireteamsAsync
+     * Operation searchPublicAvailableClanFireteamsAsync
      *
      * 
      *
-     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
-     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
-     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fireteamSearchPublicAvailableClanFireteamsAsync($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter = null)
+    public function searchPublicAvailableClanFireteamsAsync($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter = null)
     {
-        return $this->fireteamSearchPublicAvailableClanFireteamsAsyncWithHttpInfo($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter)
+        return $this->searchPublicAvailableClanFireteamsAsyncWithHttpInfo($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1549,29 +1567,30 @@ class FireteamApi
     }
 
     /**
-     * Operation fireteamSearchPublicAvailableClanFireteamsAsyncWithHttpInfo
+     * Operation searchPublicAvailableClanFireteamsAsyncWithHttpInfo
      *
      * 
      *
-     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
-     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
-     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function fireteamSearchPublicAvailableClanFireteamsAsyncWithHttpInfo($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter = null)
+    public function searchPublicAvailableClanFireteamsAsyncWithHttpInfo($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20065';
-        $request = $this->fireteamSearchPublicAvailableClanFireteamsRequest($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter);
+        $request = $this->searchPublicAvailableClanFireteamsRequest($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1586,6 +1605,7 @@ class FireteamApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1603,48 +1623,48 @@ class FireteamApi
     }
 
     /**
-     * Create request for operation 'fireteamSearchPublicAvailableClanFireteams'
+     * Create request for operation 'searchPublicAvailableClanFireteams'
      *
-     * @param  \Bungie\Model\FireteamFireteamActivityType $activityType The activity type to filter by. (required)
-     * @param  \Bungie\Model\FireteamFireteamDateRange $dateRange The date range to grab available fireteams. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamActivityType $activityType The activity type to filter by. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamDateRange $dateRange The date range to grab available fireteams. (required)
      * @param  int $page Zero based page (required)
-     * @param  \Bungie\Model\FireteamFireteamPlatform $platform The platform filter. (required)
-     * @param  \Bungie\Model\FireteamFireteamSlotSearch $slotFilter Filters based on available slots (required)
+     * @param  \Bungie\Model\Fireteam\FireteamPlatform $platform The platform filter. (required)
+     * @param  \Bungie\Model\Fireteam\FireteamSlotSearch $slotFilter Filters based on available slots (required)
      * @param  string $langFilter An optional language filter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function fireteamSearchPublicAvailableClanFireteamsRequest($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter = null)
+    protected function searchPublicAvailableClanFireteamsRequest($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter = null)
     {
         // verify the required parameter 'activityType' is set
         if ($activityType === null || (is_array($activityType) && count($activityType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $activityType when calling fireteamSearchPublicAvailableClanFireteams'
+                'Missing the required parameter $activityType when calling searchPublicAvailableClanFireteams'
             );
         }
         // verify the required parameter 'dateRange' is set
         if ($dateRange === null || (is_array($dateRange) && count($dateRange) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $dateRange when calling fireteamSearchPublicAvailableClanFireteams'
+                'Missing the required parameter $dateRange when calling searchPublicAvailableClanFireteams'
             );
         }
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling fireteamSearchPublicAvailableClanFireteams'
+                'Missing the required parameter $page when calling searchPublicAvailableClanFireteams'
             );
         }
         // verify the required parameter 'platform' is set
         if ($platform === null || (is_array($platform) && count($platform) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $platform when calling fireteamSearchPublicAvailableClanFireteams'
+                'Missing the required parameter $platform when calling searchPublicAvailableClanFireteams'
             );
         }
         // verify the required parameter 'slotFilter' is set
         if ($slotFilter === null || (is_array($slotFilter) && count($slotFilter) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $slotFilter when calling fireteamSearchPublicAvailableClanFireteams'
+                'Missing the required parameter $slotFilter when calling searchPublicAvailableClanFireteams'
             );
         }
 

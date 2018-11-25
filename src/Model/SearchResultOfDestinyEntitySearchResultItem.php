@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SearchResultOfDestinyEntitySearchResultItem implements ModelInterface, ArrayAccess
+class SearchResultOfDestinyEntitySearchResultItem implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,10 +57,10 @@ class SearchResultOfDestinyEntitySearchResultItem implements ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\DestinyDefinitionsDestinyEntitySearchResultItem[]',
+        'results' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
-        'query' => '\Bungie\Model\QueriesPagedQuery',
+        'query' => '\Bungie\Model\Queries\PagedQuery',
         'replacementContinuationToken' => 'string',
         'useTotalResults' => 'bool'
     ];
@@ -237,7 +237,7 @@ class SearchResultOfDestinyEntitySearchResultItem implements ModelInterface, Arr
     /**
      * Gets results
      *
-     * @return \Bungie\Model\DestinyDefinitionsDestinyEntitySearchResultItem[]|null
+     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfDestinyEntitySearchResultItem implements ModelInterface, Arr
     /**
      * Sets results
      *
-     * @param \Bungie\Model\DestinyDefinitionsDestinyEntitySearchResultItem[]|null $results results
+     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]|null $results results
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class SearchResultOfDestinyEntitySearchResultItem implements ModelInterface, Arr
     /**
      * Gets query
      *
-     * @return \Bungie\Model\QueriesPagedQuery|null
+     * @return \Bungie\Model\Queries\PagedQuery|null
      */
     public function getQuery()
     {
@@ -319,7 +319,7 @@ class SearchResultOfDestinyEntitySearchResultItem implements ModelInterface, Arr
     /**
      * Sets query
      *
-     * @param \Bungie\Model\QueriesPagedQuery|null $query query
+     * @param \Bungie\Model\Queries\PagedQuery|null $query query
      *
      * @return $this
      */

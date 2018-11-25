@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent implements ModelInterface, ArrayAccess
+class DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent implements M
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'map[string,\Bungie\Model\DestinyComponentsPlugSetsDestinyPlugSetsComponent]',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Components\PlugSets\DestinyPlugSetsComponent]',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent implements M
     /**
      * Gets data
      *
-     * @return map[string,\Bungie\Model\DestinyComponentsPlugSetsDestinyPlugSetsComponent]|null
+     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\PlugSets\DestinyPlugSetsComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent implements M
     /**
      * Sets data
      *
-     * @param map[string,\Bungie\Model\DestinyComponentsPlugSetsDestinyPlugSetsComponent]|null $data data
+     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Components\PlugSets\DestinyPlugSetsComponent]|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent implements M
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class DictionaryComponentResponseOfint64AndDestinyPlugSetsComponent implements M
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

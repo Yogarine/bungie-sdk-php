@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**map[string,\Bungie\Model\DestinyEntitiesCharactersDestinyCharacterRenderComponent]**](DestinyEntitiesCharactersDestinyCharacterRenderComponent.md) |  | [optional] 
-**privacy** | [**\Bungie\Model\ComponentsComponentPrivacySetting**](ComponentsComponentPrivacySetting.md) |  | [optional] 
+**data** | [**\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Characters\DestinyCharacterRenderComponent]**](DestinyCharacterRenderComponent.md) |  | [optional] 
+**privacy** | [**\Bungie\Model\Components\ComponentPrivacySetting**](ComponentPrivacySetting.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

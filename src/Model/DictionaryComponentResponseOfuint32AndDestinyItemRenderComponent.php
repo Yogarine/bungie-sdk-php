@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent implements ModelInterface, ArrayAccess
+class DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent implement
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'map[string,\Bungie\Model\DestinyEntitiesItemsDestinyItemRenderComponent]',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemRenderComponent]',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent implement
     /**
      * Gets data
      *
-     * @return map[string,\Bungie\Model\DestinyEntitiesItemsDestinyItemRenderComponent]|null
+     * @return \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemRenderComponent]|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent implement
     /**
      * Sets data
      *
-     * @param map[string,\Bungie\Model\DestinyEntitiesItemsDestinyItemRenderComponent]|null $data data
+     * @param \Bungie\Model\map[string,\Bungie\Model\Destiny\Entities\Items\DestinyItemRenderComponent]|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent implement
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent implement
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

@@ -4,46 +4,47 @@ All URIs are relative to *https://www.bungie.net/Platform*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**groupV2AbdicateFoundership**](GroupV2Api.md#groupV2AbdicateFoundership) | **POST** /GroupV2/{groupId}/Admin/AbdicateFoundership/{membershipType}/{founderIdNew}/ | 
-[**groupV2AddOptionalConversation**](GroupV2Api.md#groupV2AddOptionalConversation) | **POST** /GroupV2/{groupId}/OptionalConversations/Add/ | 
-[**groupV2ApproveAllPending**](GroupV2Api.md#groupV2ApproveAllPending) | **POST** /GroupV2/{groupId}/Members/ApproveAll/ | 
-[**groupV2ApprovePending**](GroupV2Api.md#groupV2ApprovePending) | **POST** /GroupV2/{groupId}/Members/Approve/{membershipType}/{membershipId}/ | 
-[**groupV2ApprovePendingForList**](GroupV2Api.md#groupV2ApprovePendingForList) | **POST** /GroupV2/{groupId}/Members/ApproveList/ | 
-[**groupV2BanMember**](GroupV2Api.md#groupV2BanMember) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Ban/ | 
-[**groupV2CreateGroup**](GroupV2Api.md#groupV2CreateGroup) | **POST** /GroupV2/Create/ | 
-[**groupV2DenyAllPending**](GroupV2Api.md#groupV2DenyAllPending) | **POST** /GroupV2/{groupId}/Members/DenyAll/ | 
-[**groupV2DenyPendingForList**](GroupV2Api.md#groupV2DenyPendingForList) | **POST** /GroupV2/{groupId}/Members/DenyList/ | 
-[**groupV2EditClanBanner**](GroupV2Api.md#groupV2EditClanBanner) | **POST** /GroupV2/{groupId}/EditClanBanner/ | 
-[**groupV2EditFounderOptions**](GroupV2Api.md#groupV2EditFounderOptions) | **POST** /GroupV2/{groupId}/EditFounderOptions/ | 
-[**groupV2EditGroup**](GroupV2Api.md#groupV2EditGroup) | **POST** /GroupV2/{groupId}/Edit/ | 
-[**groupV2EditGroupMembership**](GroupV2Api.md#groupV2EditGroupMembership) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/SetMembershipType/{memberType}/ | 
-[**groupV2EditOptionalConversation**](GroupV2Api.md#groupV2EditOptionalConversation) | **POST** /GroupV2/{groupId}/OptionalConversations/Edit/{conversationId}/ | 
-[**groupV2GetAdminsAndFounderOfGroup**](GroupV2Api.md#groupV2GetAdminsAndFounderOfGroup) | **GET** /GroupV2/{groupId}/AdminsAndFounder/ | 
-[**groupV2GetAvailableAvatars**](GroupV2Api.md#groupV2GetAvailableAvatars) | **GET** /GroupV2/GetAvailableAvatars/ | 
-[**groupV2GetAvailableThemes**](GroupV2Api.md#groupV2GetAvailableThemes) | **GET** /GroupV2/GetAvailableThemes/ | 
-[**groupV2GetBannedMembersOfGroup**](GroupV2Api.md#groupV2GetBannedMembersOfGroup) | **GET** /GroupV2/{groupId}/Banned/ | 
-[**groupV2GetGroup**](GroupV2Api.md#groupV2GetGroup) | **GET** /GroupV2/{groupId}/ | 
-[**groupV2GetGroupByName**](GroupV2Api.md#groupV2GetGroupByName) | **GET** /GroupV2/Name/{groupName}/{groupType}/ | 
-[**groupV2GetGroupOptionalConversations**](GroupV2Api.md#groupV2GetGroupOptionalConversations) | **GET** /GroupV2/{groupId}/OptionalConversations/ | 
-[**groupV2GetGroupsForMember**](GroupV2Api.md#groupV2GetGroupsForMember) | **GET** /GroupV2/User/{membershipType}/{membershipId}/{filter}/{groupType}/ | 
-[**groupV2GetInvitedIndividuals**](GroupV2Api.md#groupV2GetInvitedIndividuals) | **GET** /GroupV2/{groupId}/Members/InvitedIndividuals/ | 
-[**groupV2GetMembersOfGroup**](GroupV2Api.md#groupV2GetMembersOfGroup) | **GET** /GroupV2/{groupId}/Members/ | 
-[**groupV2GetPendingMemberships**](GroupV2Api.md#groupV2GetPendingMemberships) | **GET** /GroupV2/{groupId}/Members/Pending/ | 
-[**groupV2GetPotentialGroupsForMember**](GroupV2Api.md#groupV2GetPotentialGroupsForMember) | **GET** /GroupV2/User/Potential/{membershipType}/{membershipId}/{filter}/{groupType}/ | 
-[**groupV2GetRecommendedGroups**](GroupV2Api.md#groupV2GetRecommendedGroups) | **POST** /GroupV2/Recommended/{groupType}/{createDateRange}/ | 
-[**groupV2GetUserClanInviteSetting**](GroupV2Api.md#groupV2GetUserClanInviteSetting) | **GET** /GroupV2/GetUserClanInviteSetting/{mType}/ | 
-[**groupV2GroupSearch**](GroupV2Api.md#groupV2GroupSearch) | **POST** /GroupV2/Search/ | 
-[**groupV2IndividualGroupInvite**](GroupV2Api.md#groupV2IndividualGroupInvite) | **POST** /GroupV2/{groupId}/Members/IndividualInvite/{membershipType}/{membershipId}/ | 
-[**groupV2IndividualGroupInviteCancel**](GroupV2Api.md#groupV2IndividualGroupInviteCancel) | **POST** /GroupV2/{groupId}/Members/IndividualInviteCancel/{membershipType}/{membershipId}/ | 
-[**groupV2KickMember**](GroupV2Api.md#groupV2KickMember) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Kick/ | 
-[**groupV2RequestGroupMembership**](GroupV2Api.md#groupV2RequestGroupMembership) | **POST** /GroupV2/{groupId}/Members/Apply/{membershipType}/ | 
-[**groupV2RescindGroupMembership**](GroupV2Api.md#groupV2RescindGroupMembership) | **POST** /GroupV2/{groupId}/Members/Rescind/{membershipType}/ | 
-[**groupV2SetUserClanInviteSetting**](GroupV2Api.md#groupV2SetUserClanInviteSetting) | **POST** /GroupV2/SetUserClanInviteSetting/{mType}/{allowInvites}/ | 
-[**groupV2UnbanMember**](GroupV2Api.md#groupV2UnbanMember) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Unban/ | 
+[**abdicateFoundership**](GroupV2Api.md#abdicateFoundership) | **POST** /GroupV2/{groupId}/Admin/AbdicateFoundership/{membershipType}/{founderIdNew}/ | 
+[**addOptionalConversation**](GroupV2Api.md#addOptionalConversation) | **POST** /GroupV2/{groupId}/OptionalConversations/Add/ | 
+[**approveAllPending**](GroupV2Api.md#approveAllPending) | **POST** /GroupV2/{groupId}/Members/ApproveAll/ | 
+[**approvePending**](GroupV2Api.md#approvePending) | **POST** /GroupV2/{groupId}/Members/Approve/{membershipType}/{membershipId}/ | 
+[**approvePendingForList**](GroupV2Api.md#approvePendingForList) | **POST** /GroupV2/{groupId}/Members/ApproveList/ | 
+[**banMember**](GroupV2Api.md#banMember) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Ban/ | 
+[**createGroup**](GroupV2Api.md#createGroup) | **POST** /GroupV2/Create/ | 
+[**denyAllPending**](GroupV2Api.md#denyAllPending) | **POST** /GroupV2/{groupId}/Members/DenyAll/ | 
+[**denyPendingForList**](GroupV2Api.md#denyPendingForList) | **POST** /GroupV2/{groupId}/Members/DenyList/ | 
+[**editClanBanner**](GroupV2Api.md#editClanBanner) | **POST** /GroupV2/{groupId}/EditClanBanner/ | 
+[**editFounderOptions**](GroupV2Api.md#editFounderOptions) | **POST** /GroupV2/{groupId}/EditFounderOptions/ | 
+[**editGroup**](GroupV2Api.md#editGroup) | **POST** /GroupV2/{groupId}/Edit/ | 
+[**editGroupMembership**](GroupV2Api.md#editGroupMembership) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/SetMembershipType/{memberType}/ | 
+[**editOptionalConversation**](GroupV2Api.md#editOptionalConversation) | **POST** /GroupV2/{groupId}/OptionalConversations/Edit/{conversationId}/ | 
+[**getAdminsAndFounderOfGroup**](GroupV2Api.md#getAdminsAndFounderOfGroup) | **GET** /GroupV2/{groupId}/AdminsAndFounder/ | 
+[**getAvailableAvatars**](GroupV2Api.md#getAvailableAvatars) | **GET** /GroupV2/GetAvailableAvatars/ | 
+[**getAvailableThemes**](GroupV2Api.md#getAvailableThemes) | **GET** /GroupV2/GetAvailableThemes/ | 
+[**getBannedMembersOfGroup**](GroupV2Api.md#getBannedMembersOfGroup) | **GET** /GroupV2/{groupId}/Banned/ | 
+[**getGroup**](GroupV2Api.md#getGroup) | **GET** /GroupV2/{groupId}/ | 
+[**getGroupByName**](GroupV2Api.md#getGroupByName) | **GET** /GroupV2/Name/{groupName}/{groupType}/ | 
+[**getGroupByNameV2**](GroupV2Api.md#getGroupByNameV2) | **POST** /GroupV2/NameV2/ | 
+[**getGroupOptionalConversations**](GroupV2Api.md#getGroupOptionalConversations) | **GET** /GroupV2/{groupId}/OptionalConversations/ | 
+[**getGroupsForMember**](GroupV2Api.md#getGroupsForMember) | **GET** /GroupV2/User/{membershipType}/{membershipId}/{filter}/{groupType}/ | 
+[**getInvitedIndividuals**](GroupV2Api.md#getInvitedIndividuals) | **GET** /GroupV2/{groupId}/Members/InvitedIndividuals/ | 
+[**getMembersOfGroup**](GroupV2Api.md#getMembersOfGroup) | **GET** /GroupV2/{groupId}/Members/ | 
+[**getPendingMemberships**](GroupV2Api.md#getPendingMemberships) | **GET** /GroupV2/{groupId}/Members/Pending/ | 
+[**getPotentialGroupsForMember**](GroupV2Api.md#getPotentialGroupsForMember) | **GET** /GroupV2/User/Potential/{membershipType}/{membershipId}/{filter}/{groupType}/ | 
+[**getRecommendedGroups**](GroupV2Api.md#getRecommendedGroups) | **POST** /GroupV2/Recommended/{groupType}/{createDateRange}/ | 
+[**getUserClanInviteSetting**](GroupV2Api.md#getUserClanInviteSetting) | **GET** /GroupV2/GetUserClanInviteSetting/{mType}/ | 
+[**groupSearch**](GroupV2Api.md#groupSearch) | **POST** /GroupV2/Search/ | 
+[**individualGroupInvite**](GroupV2Api.md#individualGroupInvite) | **POST** /GroupV2/{groupId}/Members/IndividualInvite/{membershipType}/{membershipId}/ | 
+[**individualGroupInviteCancel**](GroupV2Api.md#individualGroupInviteCancel) | **POST** /GroupV2/{groupId}/Members/IndividualInviteCancel/{membershipType}/{membershipId}/ | 
+[**kickMember**](GroupV2Api.md#kickMember) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Kick/ | 
+[**requestGroupMembership**](GroupV2Api.md#requestGroupMembership) | **POST** /GroupV2/{groupId}/Members/Apply/{membershipType}/ | 
+[**rescindGroupMembership**](GroupV2Api.md#rescindGroupMembership) | **POST** /GroupV2/{groupId}/Members/Rescind/{membershipType}/ | 
+[**setUserClanInviteSetting**](GroupV2Api.md#setUserClanInviteSetting) | **POST** /GroupV2/SetUserClanInviteSetting/{mType}/{allowInvites}/ | 
+[**unbanMember**](GroupV2Api.md#unbanMember) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Unban/ | 
 
 
-# **groupV2AbdicateFoundership**
-> \Bungie\Model\InlineResponse20018 groupV2AbdicateFoundership($founderIdNew, $groupId, $membershipType)
+# **abdicateFoundership**
+> \Bungie\Model\InlineResponse20018 abdicateFoundership($founderIdNew, $groupId, $membershipType)
 
 
 
@@ -67,13 +68,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $founderIdNew = 56; // int | The new founder for this group. Must already be a group admin.
 $groupId = 56; // int | The target group id.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided founderIdNew.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided founderIdNew.
 
 try {
-    $result = $apiInstance->groupV2AbdicateFoundership($founderIdNew, $groupId, $membershipType);
+    $result = $apiInstance->abdicateFoundership($founderIdNew, $groupId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2AbdicateFoundership: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->abdicateFoundership: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -101,8 +102,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2AddOptionalConversation**
-> \Bungie\Model\InlineResponse20011 groupV2AddOptionalConversation($groupId, $groupsV2GroupOptionalConversationAddRequest)
+# **addOptionalConversation**
+> \Bungie\Model\InlineResponse20011 addOptionalConversation($groupId, $groupOptionalConversationAddRequest)
 
 
 
@@ -127,13 +128,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | Group ID of the group to edit.
-$groupsV2GroupOptionalConversationAddRequest = new \Bungie\Model\GroupsV2GroupOptionalConversationAddRequest(); // \Bungie\Model\GroupsV2GroupOptionalConversationAddRequest | 
+$groupOptionalConversationAddRequest = new GroupOptionalConversationAddRequest(); // \Bungie\Model\GroupsV2\GroupOptionalConversationAddRequest | 
 
 try {
-    $result = $apiInstance->groupV2AddOptionalConversation($groupId, $groupsV2GroupOptionalConversationAddRequest);
+    $result = $apiInstance->addOptionalConversation($groupId, $groupOptionalConversationAddRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2AddOptionalConversation: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->addOptionalConversation: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -143,7 +144,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID of the group to edit. |
- **groupsV2GroupOptionalConversationAddRequest** | [**\Bungie\Model\GroupsV2GroupOptionalConversationAddRequest**](../Model/GroupsV2GroupOptionalConversationAddRequest.md)|  |
+ **groupOptionalConversationAddRequest** | [**\Bungie\Model\GroupsV2\GroupOptionalConversationAddRequest**](../Model/GroupOptionalConversationAddRequest.md)|  |
 
 ### Return type
 
@@ -160,8 +161,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2ApproveAllPending**
-> \Bungie\Model\InlineResponse20030 groupV2ApproveAllPending($groupId, $groupsV2GroupApplicationRequest)
+# **approveAllPending**
+> \Bungie\Model\InlineResponse20030 approveAllPending($groupId, $groupApplicationRequest)
 
 
 
@@ -186,13 +187,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
-$groupsV2GroupApplicationRequest = new \Bungie\Model\GroupsV2GroupApplicationRequest(); // \Bungie\Model\GroupsV2GroupApplicationRequest | 
+$groupApplicationRequest = new GroupApplicationRequest(); // \Bungie\Model\GroupsV2\GroupApplicationRequest | 
 
 try {
-    $result = $apiInstance->groupV2ApproveAllPending($groupId, $groupsV2GroupApplicationRequest);
+    $result = $apiInstance->approveAllPending($groupId, $groupApplicationRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2ApproveAllPending: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->approveAllPending: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -202,7 +203,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
- **groupsV2GroupApplicationRequest** | [**\Bungie\Model\GroupsV2GroupApplicationRequest**](../Model/GroupsV2GroupApplicationRequest.md)|  |
+ **groupApplicationRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationRequest**](../Model/GroupApplicationRequest.md)|  |
 
 ### Return type
 
@@ -219,8 +220,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2ApprovePending**
-> \Bungie\Model\InlineResponse20018 groupV2ApprovePending($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
+# **approvePending**
+> \Bungie\Model\InlineResponse20018 approvePending($groupId, $membershipId, $membershipType, $groupApplicationRequest)
 
 
 
@@ -246,14 +247,14 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group.
 $membershipId = 56; // int | The membership id being approved.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
-$groupsV2GroupApplicationRequest = new \Bungie\Model\GroupsV2GroupApplicationRequest(); // \Bungie\Model\GroupsV2GroupApplicationRequest | 
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
+$groupApplicationRequest = new GroupApplicationRequest(); // \Bungie\Model\GroupsV2\GroupApplicationRequest | 
 
 try {
-    $result = $apiInstance->groupV2ApprovePending($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest);
+    $result = $apiInstance->approvePending($groupId, $membershipId, $membershipType, $groupApplicationRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2ApprovePending: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->approvePending: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -265,7 +266,7 @@ Name | Type | Description  | Notes
  **groupId** | **int**| ID of the group. |
  **membershipId** | **int**| The membership id being approved. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the supplied membership ID. |
- **groupsV2GroupApplicationRequest** | [**\Bungie\Model\GroupsV2GroupApplicationRequest**](../Model/GroupsV2GroupApplicationRequest.md)|  |
+ **groupApplicationRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationRequest**](../Model/GroupApplicationRequest.md)|  |
 
 ### Return type
 
@@ -282,8 +283,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2ApprovePendingForList**
-> \Bungie\Model\InlineResponse20030 groupV2ApprovePendingForList($groupId, $groupsV2GroupApplicationListRequest)
+# **approvePendingForList**
+> \Bungie\Model\InlineResponse20030 approvePendingForList($groupId, $groupApplicationListRequest)
 
 
 
@@ -308,13 +309,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
-$groupsV2GroupApplicationListRequest = new \Bungie\Model\GroupsV2GroupApplicationListRequest(); // \Bungie\Model\GroupsV2GroupApplicationListRequest | 
+$groupApplicationListRequest = new GroupApplicationListRequest(); // \Bungie\Model\GroupsV2\GroupApplicationListRequest | 
 
 try {
-    $result = $apiInstance->groupV2ApprovePendingForList($groupId, $groupsV2GroupApplicationListRequest);
+    $result = $apiInstance->approvePendingForList($groupId, $groupApplicationListRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2ApprovePendingForList: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->approvePendingForList: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -324,7 +325,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
- **groupsV2GroupApplicationListRequest** | [**\Bungie\Model\GroupsV2GroupApplicationListRequest**](../Model/GroupsV2GroupApplicationListRequest.md)|  |
+ **groupApplicationListRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationListRequest**](../Model/GroupApplicationListRequest.md)|  |
 
 ### Return type
 
@@ -341,8 +342,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2BanMember**
-> \Bungie\Model\InlineResponse20019 groupV2BanMember($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest)
+# **banMember**
+> \Bungie\Model\InlineResponse20019 banMember($groupId, $membershipId, $membershipType, $groupBanRequest)
 
 
 
@@ -368,14 +369,14 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | Group ID that has the member to ban.
 $membershipId = 56; // int | Membership ID of the member to ban from the group.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
-$groupsV2GroupBanRequest = new \Bungie\Model\GroupsV2GroupBanRequest(); // \Bungie\Model\GroupsV2GroupBanRequest | 
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
+$groupBanRequest = new GroupBanRequest(); // \Bungie\Model\GroupsV2\GroupBanRequest | 
 
 try {
-    $result = $apiInstance->groupV2BanMember($groupId, $membershipId, $membershipType, $groupsV2GroupBanRequest);
+    $result = $apiInstance->banMember($groupId, $membershipId, $membershipType, $groupBanRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2BanMember: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->banMember: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -387,7 +388,7 @@ Name | Type | Description  | Notes
  **groupId** | **int**| Group ID that has the member to ban. |
  **membershipId** | **int**| Membership ID of the member to ban from the group. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provided membership ID. |
- **groupsV2GroupBanRequest** | [**\Bungie\Model\GroupsV2GroupBanRequest**](../Model/GroupsV2GroupBanRequest.md)|  |
+ **groupBanRequest** | [**\Bungie\Model\GroupsV2\GroupBanRequest**](../Model/GroupBanRequest.md)|  |
 
 ### Return type
 
@@ -404,8 +405,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2CreateGroup**
-> \Bungie\Model\InlineResponse20024 groupV2CreateGroup($groupsV2GroupAction)
+# **createGroup**
+> \Bungie\Model\InlineResponse20024 createGroup($groupAction)
 
 
 
@@ -429,13 +430,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupsV2GroupAction = new \Bungie\Model\GroupsV2GroupAction(); // \Bungie\Model\GroupsV2GroupAction | 
+$groupAction = new GroupAction(); // \Bungie\Model\GroupsV2\GroupAction | 
 
 try {
-    $result = $apiInstance->groupV2CreateGroup($groupsV2GroupAction);
+    $result = $apiInstance->createGroup($groupAction);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2CreateGroup: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->createGroup: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -444,7 +445,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupsV2GroupAction** | [**\Bungie\Model\GroupsV2GroupAction**](../Model/GroupsV2GroupAction.md)|  |
+ **groupAction** | [**\Bungie\Model\GroupsV2\GroupAction**](../Model/GroupAction.md)|  |
 
 ### Return type
 
@@ -461,8 +462,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2DenyAllPending**
-> \Bungie\Model\InlineResponse20030 groupV2DenyAllPending($groupId, $groupsV2GroupApplicationRequest)
+# **denyAllPending**
+> \Bungie\Model\InlineResponse20030 denyAllPending($groupId, $groupApplicationRequest)
 
 
 
@@ -487,13 +488,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
-$groupsV2GroupApplicationRequest = new \Bungie\Model\GroupsV2GroupApplicationRequest(); // \Bungie\Model\GroupsV2GroupApplicationRequest | 
+$groupApplicationRequest = new GroupApplicationRequest(); // \Bungie\Model\GroupsV2\GroupApplicationRequest | 
 
 try {
-    $result = $apiInstance->groupV2DenyAllPending($groupId, $groupsV2GroupApplicationRequest);
+    $result = $apiInstance->denyAllPending($groupId, $groupApplicationRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2DenyAllPending: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->denyAllPending: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -503,7 +504,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
- **groupsV2GroupApplicationRequest** | [**\Bungie\Model\GroupsV2GroupApplicationRequest**](../Model/GroupsV2GroupApplicationRequest.md)|  |
+ **groupApplicationRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationRequest**](../Model/GroupApplicationRequest.md)|  |
 
 ### Return type
 
@@ -520,8 +521,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2DenyPendingForList**
-> \Bungie\Model\InlineResponse20030 groupV2DenyPendingForList($groupId, $groupsV2GroupApplicationListRequest)
+# **denyPendingForList**
+> \Bungie\Model\InlineResponse20030 denyPendingForList($groupId, $groupApplicationListRequest)
 
 
 
@@ -546,13 +547,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
-$groupsV2GroupApplicationListRequest = new \Bungie\Model\GroupsV2GroupApplicationListRequest(); // \Bungie\Model\GroupsV2GroupApplicationListRequest | 
+$groupApplicationListRequest = new GroupApplicationListRequest(); // \Bungie\Model\GroupsV2\GroupApplicationListRequest | 
 
 try {
-    $result = $apiInstance->groupV2DenyPendingForList($groupId, $groupsV2GroupApplicationListRequest);
+    $result = $apiInstance->denyPendingForList($groupId, $groupApplicationListRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2DenyPendingForList: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->denyPendingForList: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -562,7 +563,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
- **groupsV2GroupApplicationListRequest** | [**\Bungie\Model\GroupsV2GroupApplicationListRequest**](../Model/GroupsV2GroupApplicationListRequest.md)|  |
+ **groupApplicationListRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationListRequest**](../Model/GroupApplicationListRequest.md)|  |
 
 ### Return type
 
@@ -579,8 +580,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2EditClanBanner**
-> \Bungie\Model\InlineResponse20019 groupV2EditClanBanner($groupId, $groupsV2ClanBanner)
+# **editClanBanner**
+> \Bungie\Model\InlineResponse20019 editClanBanner($groupId, $clanBanner)
 
 
 
@@ -605,13 +606,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | Group ID of the group to edit.
-$groupsV2ClanBanner = new \Bungie\Model\GroupsV2ClanBanner(); // \Bungie\Model\GroupsV2ClanBanner | 
+$clanBanner = new ClanBanner(); // \Bungie\Model\GroupsV2\ClanBanner | 
 
 try {
-    $result = $apiInstance->groupV2EditClanBanner($groupId, $groupsV2ClanBanner);
+    $result = $apiInstance->editClanBanner($groupId, $clanBanner);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2EditClanBanner: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->editClanBanner: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -621,7 +622,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID of the group to edit. |
- **groupsV2ClanBanner** | [**\Bungie\Model\GroupsV2ClanBanner**](../Model/GroupsV2ClanBanner.md)|  |
+ **clanBanner** | [**\Bungie\Model\GroupsV2\ClanBanner**](../Model/ClanBanner.md)|  |
 
 ### Return type
 
@@ -638,8 +639,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2EditFounderOptions**
-> \Bungie\Model\InlineResponse20019 groupV2EditFounderOptions($groupId, $groupsV2GroupOptionsEditAction)
+# **editFounderOptions**
+> \Bungie\Model\InlineResponse20019 editFounderOptions($groupId, $groupOptionsEditAction)
 
 
 
@@ -664,13 +665,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | Group ID of the group to edit.
-$groupsV2GroupOptionsEditAction = new \Bungie\Model\GroupsV2GroupOptionsEditAction(); // \Bungie\Model\GroupsV2GroupOptionsEditAction | 
+$groupOptionsEditAction = new GroupOptionsEditAction(); // \Bungie\Model\GroupsV2\GroupOptionsEditAction | 
 
 try {
-    $result = $apiInstance->groupV2EditFounderOptions($groupId, $groupsV2GroupOptionsEditAction);
+    $result = $apiInstance->editFounderOptions($groupId, $groupOptionsEditAction);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2EditFounderOptions: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->editFounderOptions: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -680,7 +681,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID of the group to edit. |
- **groupsV2GroupOptionsEditAction** | [**\Bungie\Model\GroupsV2GroupOptionsEditAction**](../Model/GroupsV2GroupOptionsEditAction.md)|  |
+ **groupOptionsEditAction** | [**\Bungie\Model\GroupsV2\GroupOptionsEditAction**](../Model/GroupOptionsEditAction.md)|  |
 
 ### Return type
 
@@ -697,8 +698,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2EditGroup**
-> \Bungie\Model\InlineResponse20019 groupV2EditGroup($groupId, $groupsV2GroupEditAction)
+# **editGroup**
+> \Bungie\Model\InlineResponse20019 editGroup($groupId, $groupEditAction)
 
 
 
@@ -723,13 +724,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | Group ID of the group to edit.
-$groupsV2GroupEditAction = new \Bungie\Model\GroupsV2GroupEditAction(); // \Bungie\Model\GroupsV2GroupEditAction | 
+$groupEditAction = new GroupEditAction(); // \Bungie\Model\GroupsV2\GroupEditAction | 
 
 try {
-    $result = $apiInstance->groupV2EditGroup($groupId, $groupsV2GroupEditAction);
+    $result = $apiInstance->editGroup($groupId, $groupEditAction);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2EditGroup: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->editGroup: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -739,7 +740,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID of the group to edit. |
- **groupsV2GroupEditAction** | [**\Bungie\Model\GroupsV2GroupEditAction**](../Model/GroupsV2GroupEditAction.md)|  |
+ **groupEditAction** | [**\Bungie\Model\GroupsV2\GroupEditAction**](../Model/GroupEditAction.md)|  |
 
 ### Return type
 
@@ -756,8 +757,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2EditGroupMembership**
-> \Bungie\Model\InlineResponse20019 groupV2EditGroupMembership($groupId, $membershipId, $membershipType, $memberType)
+# **editGroupMembership**
+> \Bungie\Model\InlineResponse20019 editGroupMembership($groupId, $membershipId, $membershipType, $memberType)
 
 
 
@@ -783,14 +784,14 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group to which the member belongs.
 $membershipId = 56; // int | Membership ID to modify.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provide membership ID.
-$memberType = new \Bungie\Model\\Bungie\Model\GroupsV2RuntimeGroupMemberType(); // \Bungie\Model\GroupsV2RuntimeGroupMemberType | New membertype for the specified member.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provide membership ID.
+$memberType = new \Bungie\Model\GroupsV2\RuntimeGroupMemberType(); // \Bungie\Model\GroupsV2\RuntimeGroupMemberType | New membertype for the specified member.
 
 try {
-    $result = $apiInstance->groupV2EditGroupMembership($groupId, $membershipId, $membershipType, $memberType);
+    $result = $apiInstance->editGroupMembership($groupId, $membershipId, $membershipType, $memberType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2EditGroupMembership: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->editGroupMembership: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -802,7 +803,7 @@ Name | Type | Description  | Notes
  **groupId** | **int**| ID of the group to which the member belongs. |
  **membershipId** | **int**| Membership ID to modify. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provide membership ID. |
- **memberType** | [**\Bungie\Model\GroupsV2RuntimeGroupMemberType**](../Model/.md)| New membertype for the specified member. |
+ **memberType** | [**\Bungie\Model\GroupsV2\RuntimeGroupMemberType**](../Model/.md)| New membertype for the specified member. |
 
 ### Return type
 
@@ -819,8 +820,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2EditOptionalConversation**
-> \Bungie\Model\InlineResponse20011 groupV2EditOptionalConversation($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest)
+# **editOptionalConversation**
+> \Bungie\Model\InlineResponse20011 editOptionalConversation($conversationId, $groupId, $groupOptionalConversationEditRequest)
 
 
 
@@ -846,13 +847,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $conversationId = 56; // int | Conversation Id of the channel being edited.
 $groupId = 56; // int | Group ID of the group to edit.
-$groupsV2GroupOptionalConversationEditRequest = new \Bungie\Model\GroupsV2GroupOptionalConversationEditRequest(); // \Bungie\Model\GroupsV2GroupOptionalConversationEditRequest | 
+$groupOptionalConversationEditRequest = new GroupOptionalConversationEditRequest(); // \Bungie\Model\GroupsV2\GroupOptionalConversationEditRequest | 
 
 try {
-    $result = $apiInstance->groupV2EditOptionalConversation($conversationId, $groupId, $groupsV2GroupOptionalConversationEditRequest);
+    $result = $apiInstance->editOptionalConversation($conversationId, $groupId, $groupOptionalConversationEditRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2EditOptionalConversation: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->editOptionalConversation: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -863,7 +864,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **conversationId** | **int**| Conversation Id of the channel being edited. |
  **groupId** | **int**| Group ID of the group to edit. |
- **groupsV2GroupOptionalConversationEditRequest** | [**\Bungie\Model\GroupsV2GroupOptionalConversationEditRequest**](../Model/GroupsV2GroupOptionalConversationEditRequest.md)|  |
+ **groupOptionalConversationEditRequest** | [**\Bungie\Model\GroupsV2\GroupOptionalConversationEditRequest**](../Model/GroupOptionalConversationEditRequest.md)|  |
 
 ### Return type
 
@@ -880,8 +881,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetAdminsAndFounderOfGroup**
-> \Bungie\Model\InlineResponse20025 groupV2GetAdminsAndFounderOfGroup($currentpage, $groupId)
+# **getAdminsAndFounderOfGroup**
+> \Bungie\Model\InlineResponse20025 getAdminsAndFounderOfGroup($currentpage, $groupId)
 
 
 
@@ -907,10 +908,10 @@ $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed
 $groupId = 56; // int | The ID of the group.
 
 try {
-    $result = $apiInstance->groupV2GetAdminsAndFounderOfGroup($currentpage, $groupId);
+    $result = $apiInstance->getAdminsAndFounderOfGroup($currentpage, $groupId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetAdminsAndFounderOfGroup: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getAdminsAndFounderOfGroup: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -937,8 +938,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetAvailableAvatars**
-> \Bungie\Model\InlineResponse20016 groupV2GetAvailableAvatars()
+# **getAvailableAvatars**
+> \Bungie\Model\InlineResponse20016 getAvailableAvatars()
 
 
 
@@ -962,10 +963,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 
 try {
-    $result = $apiInstance->groupV2GetAvailableAvatars();
+    $result = $apiInstance->getAvailableAvatars();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetAvailableAvatars: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getAvailableAvatars: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -988,8 +989,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetAvailableThemes**
-> \Bungie\Model\InlineResponse20017 groupV2GetAvailableThemes()
+# **getAvailableThemes**
+> \Bungie\Model\InlineResponse20017 getAvailableThemes()
 
 
 
@@ -1013,10 +1014,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 
 try {
-    $result = $apiInstance->groupV2GetAvailableThemes();
+    $result = $apiInstance->getAvailableThemes();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetAvailableThemes: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getAvailableThemes: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1039,8 +1040,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetBannedMembersOfGroup**
-> \Bungie\Model\InlineResponse20027 groupV2GetBannedMembersOfGroup($currentpage, $groupId)
+# **getBannedMembersOfGroup**
+> \Bungie\Model\InlineResponse20027 getBannedMembersOfGroup($currentpage, $groupId)
 
 
 
@@ -1068,10 +1069,10 @@ $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed
 $groupId = 56; // int | Group ID whose banned members you are fetching
 
 try {
-    $result = $apiInstance->groupV2GetBannedMembersOfGroup($currentpage, $groupId);
+    $result = $apiInstance->getBannedMembersOfGroup($currentpage, $groupId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetBannedMembersOfGroup: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getBannedMembersOfGroup: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1098,8 +1099,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetGroup**
-> \Bungie\Model\InlineResponse20022 groupV2GetGroup($groupId)
+# **getGroup**
+> \Bungie\Model\InlineResponse20022 getGroup($groupId)
 
 
 
@@ -1124,10 +1125,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 $groupId = 56; // int | Requested group's id.
 
 try {
-    $result = $apiInstance->groupV2GetGroup($groupId);
+    $result = $apiInstance->getGroup($groupId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetGroup: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getGroup: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1153,8 +1154,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetGroupByName**
-> \Bungie\Model\InlineResponse20022 groupV2GetGroupByName($groupName, $groupType)
+# **getGroupByName**
+> \Bungie\Model\InlineResponse20022 getGroupByName($groupName, $groupType)
 
 
 
@@ -1177,13 +1178,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupName = 'groupName_example'; // string | Exact name of the group to find.
-$groupType = new \Bungie\Model\\Bungie\Model\GroupsV2GroupType(); // \Bungie\Model\GroupsV2GroupType | Type of group to find.
+$groupType = new \Bungie\Model\GroupsV2\GroupType(); // \Bungie\Model\GroupsV2\GroupType | Type of group to find.
 
 try {
-    $result = $apiInstance->groupV2GetGroupByName($groupName, $groupType);
+    $result = $apiInstance->getGroupByName($groupName, $groupType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetGroupByName: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getGroupByName: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1193,7 +1194,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupName** | **string**| Exact name of the group to find. |
- **groupType** | [**\Bungie\Model\GroupsV2GroupType**](../Model/.md)| Type of group to find. |
+ **groupType** | [**\Bungie\Model\GroupsV2\GroupType**](../Model/.md)| Type of group to find. |
 
 ### Return type
 
@@ -1210,8 +1211,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetGroupOptionalConversations**
-> \Bungie\Model\InlineResponse20023 groupV2GetGroupOptionalConversations($groupId)
+# **getGroupByNameV2**
+> \Bungie\Model\InlineResponse20022 getGroupByNameV2($groupNameSearchRequest)
+
+
+
+Get information about a specific group with the given name and type. The POST version.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+$apiInstance = new Bungie\Api\GroupV2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$groupNameSearchRequest = new GroupNameSearchRequest(); // \Bungie\Model\GroupsV2\GroupNameSearchRequest | 
+
+try {
+    $result = $apiInstance->getGroupByNameV2($groupNameSearchRequest);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GroupV2Api->getGroupByNameV2: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupNameSearchRequest** | [**\Bungie\Model\GroupsV2\GroupNameSearchRequest**](../Model/GroupNameSearchRequest.md)|  |
+
+### Return type
+
+[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getGroupOptionalConversations**
+> \Bungie\Model\InlineResponse20023 getGroupOptionalConversations($groupId)
 
 
 
@@ -1236,10 +1292,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 $groupId = 56; // int | Requested group's id.
 
 try {
-    $result = $apiInstance->groupV2GetGroupOptionalConversations($groupId);
+    $result = $apiInstance->getGroupOptionalConversations($groupId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetGroupOptionalConversations: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getGroupOptionalConversations: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1265,8 +1321,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetGroupsForMember**
-> \Bungie\Model\InlineResponse20031 groupV2GetGroupsForMember($filter, $groupType, $membershipId, $membershipType)
+# **getGroupsForMember**
+> \Bungie\Model\InlineResponse20031 getGroupsForMember($filter, $groupType, $membershipId, $membershipType)
 
 
 
@@ -1288,16 +1344,16 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$filter = new \Bungie\Model\\Bungie\Model\GroupsV2GroupsForMemberFilter(); // \Bungie\Model\GroupsV2GroupsForMemberFilter | Filter apply to list of joined groups.
-$groupType = new \Bungie\Model\\Bungie\Model\GroupsV2GroupType(); // \Bungie\Model\GroupsV2GroupType | Type of group the supplied member founded.
+$filter = new \Bungie\Model\GroupsV2\GroupsForMemberFilter(); // \Bungie\Model\GroupsV2\GroupsForMemberFilter | Filter apply to list of joined groups.
+$groupType = new \Bungie\Model\GroupsV2\GroupType(); // \Bungie\Model\GroupsV2\GroupType | Type of group the supplied member founded.
 $membershipId = 56; // int | Membership ID to for which to find founded groups.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
 
 try {
-    $result = $apiInstance->groupV2GetGroupsForMember($filter, $groupType, $membershipId, $membershipType);
+    $result = $apiInstance->getGroupsForMember($filter, $groupType, $membershipId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetGroupsForMember: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getGroupsForMember: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1306,8 +1362,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**\Bungie\Model\GroupsV2GroupsForMemberFilter**](../Model/.md)| Filter apply to list of joined groups. |
- **groupType** | [**\Bungie\Model\GroupsV2GroupType**](../Model/.md)| Type of group the supplied member founded. |
+ **filter** | [**\Bungie\Model\GroupsV2\GroupsForMemberFilter**](../Model/.md)| Filter apply to list of joined groups. |
+ **groupType** | [**\Bungie\Model\GroupsV2\GroupType**](../Model/.md)| Type of group the supplied member founded. |
  **membershipId** | **int**| Membership ID to for which to find founded groups. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the supplied membership ID. |
 
@@ -1326,8 +1382,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetInvitedIndividuals**
-> \Bungie\Model\InlineResponse20029 groupV2GetInvitedIndividuals($currentpage, $groupId)
+# **getInvitedIndividuals**
+> \Bungie\Model\InlineResponse20029 getInvitedIndividuals($currentpage, $groupId)
 
 
 
@@ -1355,10 +1411,10 @@ $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed
 $groupId = 56; // int | ID of the group.
 
 try {
-    $result = $apiInstance->groupV2GetInvitedIndividuals($currentpage, $groupId);
+    $result = $apiInstance->getInvitedIndividuals($currentpage, $groupId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetInvitedIndividuals: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getInvitedIndividuals: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1385,8 +1441,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetMembersOfGroup**
-> \Bungie\Model\InlineResponse20025 groupV2GetMembersOfGroup($currentpage, $groupId, $memberType, $nameSearch)
+# **getMembersOfGroup**
+> \Bungie\Model\InlineResponse20025 getMembersOfGroup($currentpage, $groupId, $memberType, $nameSearch)
 
 
 
@@ -1410,14 +1466,14 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed size of 50 items per page.
 $groupId = 56; // int | The ID of the group.
-$memberType = new \Bungie\Model\\Bungie\Model\GroupsV2RuntimeGroupMemberType(); // \Bungie\Model\GroupsV2RuntimeGroupMemberType | Filter out other member types. Use None for all members.
+$memberType = new \Bungie\Model\GroupsV2\RuntimeGroupMemberType(); // \Bungie\Model\GroupsV2\RuntimeGroupMemberType | Filter out other member types. Use None for all members.
 $nameSearch = 'nameSearch_example'; // string | The name fragment upon which a search should be executed for members with matching display or unique names.
 
 try {
-    $result = $apiInstance->groupV2GetMembersOfGroup($currentpage, $groupId, $memberType, $nameSearch);
+    $result = $apiInstance->getMembersOfGroup($currentpage, $groupId, $memberType, $nameSearch);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetMembersOfGroup: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getMembersOfGroup: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1428,7 +1484,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **currentpage** | **int**| Page number (starting with 1). Each page has a fixed size of 50 items per page. |
  **groupId** | **int**| The ID of the group. |
- **memberType** | [**\Bungie\Model\GroupsV2RuntimeGroupMemberType**](../Model/.md)| Filter out other member types. Use None for all members. | [optional]
+ **memberType** | [**\Bungie\Model\GroupsV2\RuntimeGroupMemberType**](../Model/.md)| Filter out other member types. Use None for all members. | [optional]
  **nameSearch** | **string**| The name fragment upon which a search should be executed for members with matching display or unique names. | [optional]
 
 ### Return type
@@ -1446,8 +1502,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetPendingMemberships**
-> \Bungie\Model\InlineResponse20029 groupV2GetPendingMemberships($currentpage, $groupId)
+# **getPendingMemberships**
+> \Bungie\Model\InlineResponse20029 getPendingMemberships($currentpage, $groupId)
 
 
 
@@ -1475,10 +1531,10 @@ $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed
 $groupId = 56; // int | ID of the group.
 
 try {
-    $result = $apiInstance->groupV2GetPendingMemberships($currentpage, $groupId);
+    $result = $apiInstance->getPendingMemberships($currentpage, $groupId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetPendingMemberships: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getPendingMemberships: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1505,8 +1561,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetPotentialGroupsForMember**
-> \Bungie\Model\InlineResponse20032 groupV2GetPotentialGroupsForMember($filter, $groupType, $membershipId, $membershipType)
+# **getPotentialGroupsForMember**
+> \Bungie\Model\InlineResponse20032 getPotentialGroupsForMember($filter, $groupType, $membershipId, $membershipType)
 
 
 
@@ -1528,16 +1584,16 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$filter = new \Bungie\Model\\Bungie\Model\GroupsV2GroupPotentialMemberStatus(); // \Bungie\Model\GroupsV2GroupPotentialMemberStatus | Filter apply to list of potential joined groups.
-$groupType = new \Bungie\Model\\Bungie\Model\GroupsV2GroupType(); // \Bungie\Model\GroupsV2GroupType | Type of group the supplied member applied.
+$filter = new \Bungie\Model\GroupsV2\GroupPotentialMemberStatus(); // \Bungie\Model\GroupsV2\GroupPotentialMemberStatus | Filter apply to list of potential joined groups.
+$groupType = new \Bungie\Model\GroupsV2\GroupType(); // \Bungie\Model\GroupsV2\GroupType | Type of group the supplied member applied.
 $membershipId = 56; // int | Membership ID to for which to find applied groups.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
 
 try {
-    $result = $apiInstance->groupV2GetPotentialGroupsForMember($filter, $groupType, $membershipId, $membershipType);
+    $result = $apiInstance->getPotentialGroupsForMember($filter, $groupType, $membershipId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetPotentialGroupsForMember: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getPotentialGroupsForMember: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1546,8 +1602,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**\Bungie\Model\GroupsV2GroupPotentialMemberStatus**](../Model/.md)| Filter apply to list of potential joined groups. |
- **groupType** | [**\Bungie\Model\GroupsV2GroupType**](../Model/.md)| Type of group the supplied member applied. |
+ **filter** | [**\Bungie\Model\GroupsV2\GroupPotentialMemberStatus**](../Model/.md)| Filter apply to list of potential joined groups. |
+ **groupType** | [**\Bungie\Model\GroupsV2\GroupType**](../Model/.md)| Type of group the supplied member applied. |
  **membershipId** | **int**| Membership ID to for which to find applied groups. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the supplied membership ID. |
 
@@ -1566,8 +1622,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetRecommendedGroups**
-> \Bungie\Model\InlineResponse20020 groupV2GetRecommendedGroups($createDateRange, $groupType)
+# **getRecommendedGroups**
+> \Bungie\Model\InlineResponse20020 getRecommendedGroups($createDateRange, $groupType)
 
 
 
@@ -1591,14 +1647,14 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$createDateRange = new \Bungie\Model\\Bungie\Model\GroupsV2GroupDateRange(); // \Bungie\Model\GroupsV2GroupDateRange | Requested range in which to pull recommended groups
-$groupType = new \Bungie\Model\\Bungie\Model\GroupsV2GroupType(); // \Bungie\Model\GroupsV2GroupType | Type of groups requested
+$createDateRange = new \Bungie\Model\GroupsV2\GroupDateRange(); // \Bungie\Model\GroupsV2\GroupDateRange | Requested range in which to pull recommended groups
+$groupType = new \Bungie\Model\GroupsV2\GroupType(); // \Bungie\Model\GroupsV2\GroupType | Type of groups requested
 
 try {
-    $result = $apiInstance->groupV2GetRecommendedGroups($createDateRange, $groupType);
+    $result = $apiInstance->getRecommendedGroups($createDateRange, $groupType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetRecommendedGroups: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getRecommendedGroups: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1607,8 +1663,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createDateRange** | [**\Bungie\Model\GroupsV2GroupDateRange**](../Model/.md)| Requested range in which to pull recommended groups |
- **groupType** | [**\Bungie\Model\GroupsV2GroupType**](../Model/.md)| Type of groups requested |
+ **createDateRange** | [**\Bungie\Model\GroupsV2\GroupDateRange**](../Model/.md)| Requested range in which to pull recommended groups |
+ **groupType** | [**\Bungie\Model\GroupsV2\GroupType**](../Model/.md)| Type of groups requested |
 
 ### Return type
 
@@ -1625,8 +1681,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GetUserClanInviteSetting**
-> \Bungie\Model\InlineResponse20018 groupV2GetUserClanInviteSetting($mType)
+# **getUserClanInviteSetting**
+> \Bungie\Model\InlineResponse20018 getUserClanInviteSetting($mType)
 
 
 
@@ -1650,13 +1706,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$mType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The Destiny membership type of the account we wish to access settings.
+$mType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The Destiny membership type of the account we wish to access settings.
 
 try {
-    $result = $apiInstance->groupV2GetUserClanInviteSetting($mType);
+    $result = $apiInstance->getUserClanInviteSetting($mType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GetUserClanInviteSetting: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->getUserClanInviteSetting: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1682,8 +1738,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2GroupSearch**
-> \Bungie\Model\InlineResponse20021 groupV2GroupSearch($groupsV2GroupQuery)
+# **groupSearch**
+> \Bungie\Model\InlineResponse20021 groupSearch($groupQuery)
 
 
 
@@ -1705,13 +1761,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$groupsV2GroupQuery = new \Bungie\Model\GroupsV2GroupQuery(); // \Bungie\Model\GroupsV2GroupQuery | 
+$groupQuery = new GroupQuery(); // \Bungie\Model\GroupsV2\GroupQuery | 
 
 try {
-    $result = $apiInstance->groupV2GroupSearch($groupsV2GroupQuery);
+    $result = $apiInstance->groupSearch($groupQuery);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2GroupSearch: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->groupSearch: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1720,7 +1776,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupsV2GroupQuery** | [**\Bungie\Model\GroupsV2GroupQuery**](../Model/GroupsV2GroupQuery.md)|  |
+ **groupQuery** | [**\Bungie\Model\GroupsV2\GroupQuery**](../Model/GroupQuery.md)|  |
 
 ### Return type
 
@@ -1737,8 +1793,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2IndividualGroupInvite**
-> \Bungie\Model\InlineResponse20028 groupV2IndividualGroupInvite($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest)
+# **individualGroupInvite**
+> \Bungie\Model\InlineResponse20028 individualGroupInvite($groupId, $membershipId, $membershipType, $groupApplicationRequest)
 
 
 
@@ -1764,14 +1820,14 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group you would like to join.
 $membershipId = 56; // int | Membership id of the account being invited.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account being invited.
-$groupsV2GroupApplicationRequest = new \Bungie\Model\GroupsV2GroupApplicationRequest(); // \Bungie\Model\GroupsV2GroupApplicationRequest | 
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account being invited.
+$groupApplicationRequest = new GroupApplicationRequest(); // \Bungie\Model\GroupsV2\GroupApplicationRequest | 
 
 try {
-    $result = $apiInstance->groupV2IndividualGroupInvite($groupId, $membershipId, $membershipType, $groupsV2GroupApplicationRequest);
+    $result = $apiInstance->individualGroupInvite($groupId, $membershipId, $membershipType, $groupApplicationRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2IndividualGroupInvite: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->individualGroupInvite: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1783,7 +1839,7 @@ Name | Type | Description  | Notes
  **groupId** | **int**| ID of the group you would like to join. |
  **membershipId** | **int**| Membership id of the account being invited. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| MembershipType of the account being invited. |
- **groupsV2GroupApplicationRequest** | [**\Bungie\Model\GroupsV2GroupApplicationRequest**](../Model/GroupsV2GroupApplicationRequest.md)|  |
+ **groupApplicationRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationRequest**](../Model/GroupApplicationRequest.md)|  |
 
 ### Return type
 
@@ -1800,8 +1856,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2IndividualGroupInviteCancel**
-> \Bungie\Model\InlineResponse20028 groupV2IndividualGroupInviteCancel($groupId, $membershipId, $membershipType)
+# **individualGroupInviteCancel**
+> \Bungie\Model\InlineResponse20028 individualGroupInviteCancel($groupId, $membershipId, $membershipType)
 
 
 
@@ -1827,13 +1883,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group you would like to join.
 $membershipId = 56; // int | Membership id of the account being cancelled.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account being cancelled.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account being cancelled.
 
 try {
-    $result = $apiInstance->groupV2IndividualGroupInviteCancel($groupId, $membershipId, $membershipType);
+    $result = $apiInstance->individualGroupInviteCancel($groupId, $membershipId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2IndividualGroupInviteCancel: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->individualGroupInviteCancel: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1861,8 +1917,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2KickMember**
-> \Bungie\Model\InlineResponse20026 groupV2KickMember($groupId, $membershipId, $membershipType)
+# **kickMember**
+> \Bungie\Model\InlineResponse20026 kickMember($groupId, $membershipId, $membershipType)
 
 
 
@@ -1888,13 +1944,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | Group ID to kick the user from.
 $membershipId = 56; // int | Membership ID to kick.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
 
 try {
-    $result = $apiInstance->groupV2KickMember($groupId, $membershipId, $membershipType);
+    $result = $apiInstance->kickMember($groupId, $membershipId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2KickMember: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->kickMember: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1922,8 +1978,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2RequestGroupMembership**
-> \Bungie\Model\InlineResponse20028 groupV2RequestGroupMembership($groupId, $membershipType, $groupsV2GroupApplicationRequest)
+# **requestGroupMembership**
+> \Bungie\Model\InlineResponse20028 requestGroupMembership($groupId, $membershipType, $groupApplicationRequest)
 
 
 
@@ -1948,14 +2004,14 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group you would like to join.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account to use when joining.
-$groupsV2GroupApplicationRequest = new \Bungie\Model\GroupsV2GroupApplicationRequest(); // \Bungie\Model\GroupsV2GroupApplicationRequest | 
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account to use when joining.
+$groupApplicationRequest = new GroupApplicationRequest(); // \Bungie\Model\GroupsV2\GroupApplicationRequest | 
 
 try {
-    $result = $apiInstance->groupV2RequestGroupMembership($groupId, $membershipType, $groupsV2GroupApplicationRequest);
+    $result = $apiInstance->requestGroupMembership($groupId, $membershipType, $groupApplicationRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2RequestGroupMembership: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->requestGroupMembership: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1966,7 +2022,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group you would like to join. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| MembershipType of the account to use when joining. |
- **groupsV2GroupApplicationRequest** | [**\Bungie\Model\GroupsV2GroupApplicationRequest**](../Model/GroupsV2GroupApplicationRequest.md)|  |
+ **groupApplicationRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationRequest**](../Model/GroupApplicationRequest.md)|  |
 
 ### Return type
 
@@ -1983,8 +2039,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2RescindGroupMembership**
-> \Bungie\Model\InlineResponse20026 groupV2RescindGroupMembership($groupId, $membershipType)
+# **rescindGroupMembership**
+> \Bungie\Model\InlineResponse20026 rescindGroupMembership($groupId, $membershipType)
 
 
 
@@ -2009,13 +2065,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account to leave.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account to leave.
 
 try {
-    $result = $apiInstance->groupV2RescindGroupMembership($groupId, $membershipType);
+    $result = $apiInstance->rescindGroupMembership($groupId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2RescindGroupMembership: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->rescindGroupMembership: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -2042,8 +2098,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2SetUserClanInviteSetting**
-> \Bungie\Model\InlineResponse20019 groupV2SetUserClanInviteSetting($allowInvites, $mType)
+# **setUserClanInviteSetting**
+> \Bungie\Model\InlineResponse20019 setUserClanInviteSetting($allowInvites, $mType)
 
 
 
@@ -2068,13 +2124,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $allowInvites = True; // bool | True to allow invites of this user to clans, false otherwise.
-$mType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The Destiny membership type of linked account we are manipulating.
+$mType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The Destiny membership type of linked account we are manipulating.
 
 try {
-    $result = $apiInstance->groupV2SetUserClanInviteSetting($allowInvites, $mType);
+    $result = $apiInstance->setUserClanInviteSetting($allowInvites, $mType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2SetUserClanInviteSetting: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->setUserClanInviteSetting: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -2101,8 +2157,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **groupV2UnbanMember**
-> \Bungie\Model\InlineResponse20019 groupV2UnbanMember($groupId, $membershipId, $membershipType)
+# **unbanMember**
+> \Bungie\Model\InlineResponse20019 unbanMember($groupId, $membershipId, $membershipType)
 
 
 
@@ -2128,13 +2184,13 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | 
 $membershipId = 56; // int | Membership ID of the member to unban from the group
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
 
 try {
-    $result = $apiInstance->groupV2UnbanMember($groupId, $membershipId, $membershipType);
+    $result = $apiInstance->unbanMember($groupId, $membershipId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->groupV2UnbanMember: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupV2Api->unbanMember: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

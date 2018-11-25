@@ -4,45 +4,45 @@ All URIs are relative to *https://www.bungie.net/Platform*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**destiny2AwaGetActionToken**](Destiny2Api.md#destiny2AwaGetActionToken) | **GET** /Destiny2/Awa/GetActionToken/{correlationId}/ | 
-[**destiny2AwaInitializeRequest**](Destiny2Api.md#destiny2AwaInitializeRequest) | **POST** /Destiny2/Awa/Initialize/ | 
-[**destiny2AwaProvideAuthorizationResult**](Destiny2Api.md#destiny2AwaProvideAuthorizationResult) | **POST** /Destiny2/Awa/AwaProvideAuthorizationResult/ | 
-[**destiny2EquipItem**](Destiny2Api.md#destiny2EquipItem) | **POST** /Destiny2/Actions/Items/EquipItem/ | 
-[**destiny2EquipItems**](Destiny2Api.md#destiny2EquipItems) | **POST** /Destiny2/Actions/Items/EquipItems/ | 
-[**destiny2GetActivityHistory**](Destiny2Api.md#destiny2GetActivityHistory) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/ | 
-[**destiny2GetCharacter**](Destiny2Api.md#destiny2GetCharacter) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/ | 
-[**destiny2GetClanAggregateStats**](Destiny2Api.md#destiny2GetClanAggregateStats) | **GET** /Destiny2/Stats/AggregateClanStats/{groupId}/ | 
-[**destiny2GetClanLeaderboards**](Destiny2Api.md#destiny2GetClanLeaderboards) | **GET** /Destiny2/Stats/Leaderboards/Clans/{groupId}/ | 
-[**destiny2GetClanWeeklyRewardState**](Destiny2Api.md#destiny2GetClanWeeklyRewardState) | **GET** /Destiny2/Clan/{groupId}/WeeklyRewardState/ | 
-[**destiny2GetCollectibleNodeDetails**](Destiny2Api.md#destiny2GetCollectibleNodeDetails) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Collectibles/{collectiblePresentationNodeHash}/ | 
-[**destiny2GetDestinyAggregateActivityStats**](Destiny2Api.md#destiny2GetDestinyAggregateActivityStats) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/AggregateActivityStats/ | 
-[**destiny2GetDestinyEntityDefinition**](Destiny2Api.md#destiny2GetDestinyEntityDefinition) | **GET** /Destiny2/Manifest/{entityType}/{hashIdentifier}/ | 
-[**destiny2GetDestinyManifest**](Destiny2Api.md#destiny2GetDestinyManifest) | **GET** /Destiny2/Manifest/ | 
-[**destiny2GetHistoricalStats**](Destiny2Api.md#destiny2GetHistoricalStats) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/ | 
-[**destiny2GetHistoricalStatsDefinition**](Destiny2Api.md#destiny2GetHistoricalStatsDefinition) | **GET** /Destiny2/Stats/Definition/ | 
-[**destiny2GetHistoricalStatsForAccount**](Destiny2Api.md#destiny2GetHistoricalStatsForAccount) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/ | 
-[**destiny2GetItem**](Destiny2Api.md#destiny2GetItem) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Item/{itemInstanceId}/ | 
-[**destiny2GetLeaderboards**](Destiny2Api.md#destiny2GetLeaderboards) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/ | 
-[**destiny2GetLeaderboardsForCharacter**](Destiny2Api.md#destiny2GetLeaderboardsForCharacter) | **GET** /Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/ | 
-[**destiny2GetLinkedProfiles**](Destiny2Api.md#destiny2GetLinkedProfiles) | **GET** /Destiny2/{membershipType}/Profile/{membershipId}/LinkedProfiles/ | 
-[**destiny2GetPostGameCarnageReport**](Destiny2Api.md#destiny2GetPostGameCarnageReport) | **GET** /Destiny2/Stats/PostGameCarnageReport/{activityId}/ | 
-[**destiny2GetProfile**](Destiny2Api.md#destiny2GetProfile) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/ | 
-[**destiny2GetPublicMilestoneContent**](Destiny2Api.md#destiny2GetPublicMilestoneContent) | **GET** /Destiny2/Milestones/{milestoneHash}/Content/ | 
-[**destiny2GetPublicMilestones**](Destiny2Api.md#destiny2GetPublicMilestones) | **GET** /Destiny2/Milestones/ | 
-[**destiny2GetUniqueWeaponHistory**](Destiny2Api.md#destiny2GetUniqueWeaponHistory) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/ | 
-[**destiny2GetVendor**](Destiny2Api.md#destiny2GetVendor) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/{vendorHash}/ | 
-[**destiny2GetVendors**](Destiny2Api.md#destiny2GetVendors) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/ | 
-[**destiny2InsertSocketPlug**](Destiny2Api.md#destiny2InsertSocketPlug) | **POST** /Destiny2/Actions/Items/InsertSocketPlug/ | 
-[**destiny2PullFromPostmaster**](Destiny2Api.md#destiny2PullFromPostmaster) | **POST** /Destiny2/Actions/Items/PullFromPostmaster/ | 
-[**destiny2ReportOffensivePostGameCarnageReportPlayer**](Destiny2Api.md#destiny2ReportOffensivePostGameCarnageReportPlayer) | **POST** /Destiny2/Stats/PostGameCarnageReport/{activityId}/Report/ | 
-[**destiny2SearchDestinyEntities**](Destiny2Api.md#destiny2SearchDestinyEntities) | **GET** /Destiny2/Armory/Search/{type}/{searchTerm}/ | 
-[**destiny2SearchDestinyPlayer**](Destiny2Api.md#destiny2SearchDestinyPlayer) | **GET** /Destiny2/SearchDestinyPlayer/{membershipType}/{displayName}/ | 
-[**destiny2SetItemLockState**](Destiny2Api.md#destiny2SetItemLockState) | **POST** /Destiny2/Actions/Items/SetLockState/ | 
-[**destiny2TransferItem**](Destiny2Api.md#destiny2TransferItem) | **POST** /Destiny2/Actions/Items/TransferItem/ | 
+[**awaGetActionToken**](Destiny2Api.md#awaGetActionToken) | **GET** /Destiny2/Awa/GetActionToken/{correlationId}/ | 
+[**awaInitializeRequest**](Destiny2Api.md#awaInitializeRequest) | **POST** /Destiny2/Awa/Initialize/ | 
+[**awaProvideAuthorizationResult**](Destiny2Api.md#awaProvideAuthorizationResult) | **POST** /Destiny2/Awa/AwaProvideAuthorizationResult/ | 
+[**equipItem**](Destiny2Api.md#equipItem) | **POST** /Destiny2/Actions/Items/EquipItem/ | 
+[**equipItems**](Destiny2Api.md#equipItems) | **POST** /Destiny2/Actions/Items/EquipItems/ | 
+[**getActivityHistory**](Destiny2Api.md#getActivityHistory) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/ | 
+[**getCharacter**](Destiny2Api.md#getCharacter) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/ | 
+[**getClanAggregateStats**](Destiny2Api.md#getClanAggregateStats) | **GET** /Destiny2/Stats/AggregateClanStats/{groupId}/ | 
+[**getClanLeaderboards**](Destiny2Api.md#getClanLeaderboards) | **GET** /Destiny2/Stats/Leaderboards/Clans/{groupId}/ | 
+[**getClanWeeklyRewardState**](Destiny2Api.md#getClanWeeklyRewardState) | **GET** /Destiny2/Clan/{groupId}/WeeklyRewardState/ | 
+[**getCollectibleNodeDetails**](Destiny2Api.md#getCollectibleNodeDetails) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Collectibles/{collectiblePresentationNodeHash}/ | 
+[**getDestinyAggregateActivityStats**](Destiny2Api.md#getDestinyAggregateActivityStats) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/AggregateActivityStats/ | 
+[**getDestinyEntityDefinition**](Destiny2Api.md#getDestinyEntityDefinition) | **GET** /Destiny2/Manifest/{entityType}/{hashIdentifier}/ | 
+[**getDestinyManifest**](Destiny2Api.md#getDestinyManifest) | **GET** /Destiny2/Manifest/ | 
+[**getHistoricalStats**](Destiny2Api.md#getHistoricalStats) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/ | 
+[**getHistoricalStatsDefinition**](Destiny2Api.md#getHistoricalStatsDefinition) | **GET** /Destiny2/Stats/Definition/ | 
+[**getHistoricalStatsForAccount**](Destiny2Api.md#getHistoricalStatsForAccount) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/ | 
+[**getItem**](Destiny2Api.md#getItem) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Item/{itemInstanceId}/ | 
+[**getLeaderboards**](Destiny2Api.md#getLeaderboards) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/ | 
+[**getLeaderboardsForCharacter**](Destiny2Api.md#getLeaderboardsForCharacter) | **GET** /Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/ | 
+[**getLinkedProfiles**](Destiny2Api.md#getLinkedProfiles) | **GET** /Destiny2/{membershipType}/Profile/{membershipId}/LinkedProfiles/ | 
+[**getPostGameCarnageReport**](Destiny2Api.md#getPostGameCarnageReport) | **GET** /Destiny2/Stats/PostGameCarnageReport/{activityId}/ | 
+[**getProfile**](Destiny2Api.md#getProfile) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/ | 
+[**getPublicMilestoneContent**](Destiny2Api.md#getPublicMilestoneContent) | **GET** /Destiny2/Milestones/{milestoneHash}/Content/ | 
+[**getPublicMilestones**](Destiny2Api.md#getPublicMilestones) | **GET** /Destiny2/Milestones/ | 
+[**getUniqueWeaponHistory**](Destiny2Api.md#getUniqueWeaponHistory) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/ | 
+[**getVendor**](Destiny2Api.md#getVendor) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/{vendorHash}/ | 
+[**getVendors**](Destiny2Api.md#getVendors) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/ | 
+[**insertSocketPlug**](Destiny2Api.md#insertSocketPlug) | **POST** /Destiny2/Actions/Items/InsertSocketPlug/ | 
+[**pullFromPostmaster**](Destiny2Api.md#pullFromPostmaster) | **POST** /Destiny2/Actions/Items/PullFromPostmaster/ | 
+[**reportOffensivePostGameCarnageReportPlayer**](Destiny2Api.md#reportOffensivePostGameCarnageReportPlayer) | **POST** /Destiny2/Stats/PostGameCarnageReport/{activityId}/Report/ | 
+[**searchDestinyEntities**](Destiny2Api.md#searchDestinyEntities) | **GET** /Destiny2/Armory/Search/{type}/{searchTerm}/ | 
+[**searchDestinyPlayer**](Destiny2Api.md#searchDestinyPlayer) | **GET** /Destiny2/SearchDestinyPlayer/{membershipType}/{displayName}/ | 
+[**setItemLockState**](Destiny2Api.md#setItemLockState) | **POST** /Destiny2/Actions/Items/SetLockState/ | 
+[**transferItem**](Destiny2Api.md#transferItem) | **POST** /Destiny2/Actions/Items/TransferItem/ | 
 
 
-# **destiny2AwaGetActionToken**
-> \Bungie\Model\InlineResponse20059 destiny2AwaGetActionToken($correlationId)
+# **awaGetActionToken**
+> \Bungie\Model\InlineResponse20059 awaGetActionToken($correlationId)
 
 
 
@@ -69,10 +69,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 $correlationId = 'correlationId_example'; // string | The identifier for the advanced write action request.
 
 try {
-    $result = $apiInstance->destiny2AwaGetActionToken($correlationId);
+    $result = $apiInstance->awaGetActionToken($correlationId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2AwaGetActionToken: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->awaGetActionToken: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -98,8 +98,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2AwaInitializeRequest**
-> \Bungie\Model\InlineResponse20058 destiny2AwaInitializeRequest($destinyAdvancedAwaPermissionRequested)
+# **awaInitializeRequest**
+> \Bungie\Model\InlineResponse20058 awaInitializeRequest($awaPermissionRequested)
 
 
 
@@ -123,13 +123,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$destinyAdvancedAwaPermissionRequested = new \Bungie\Model\DestinyAdvancedAwaPermissionRequested(); // \Bungie\Model\DestinyAdvancedAwaPermissionRequested | 
+$awaPermissionRequested = new AwaPermissionRequested(); // \Bungie\Model\Destiny\Advanced\AwaPermissionRequested | 
 
 try {
-    $result = $apiInstance->destiny2AwaInitializeRequest($destinyAdvancedAwaPermissionRequested);
+    $result = $apiInstance->awaInitializeRequest($awaPermissionRequested);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2AwaInitializeRequest: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->awaInitializeRequest: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -138,7 +138,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destinyAdvancedAwaPermissionRequested** | [**\Bungie\Model\DestinyAdvancedAwaPermissionRequested**](../Model/DestinyAdvancedAwaPermissionRequested.md)|  |
+ **awaPermissionRequested** | [**\Bungie\Model\Destiny\Advanced\AwaPermissionRequested**](../Model/AwaPermissionRequested.md)|  |
 
 ### Return type
 
@@ -155,8 +155,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2AwaProvideAuthorizationResult**
-> \Bungie\Model\InlineResponse20019 destiny2AwaProvideAuthorizationResult($destinyAdvancedAwaUserResponse)
+# **awaProvideAuthorizationResult**
+> \Bungie\Model\InlineResponse20019 awaProvideAuthorizationResult($awaUserResponse)
 
 
 
@@ -178,13 +178,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$destinyAdvancedAwaUserResponse = new \Bungie\Model\DestinyAdvancedAwaUserResponse(); // \Bungie\Model\DestinyAdvancedAwaUserResponse | 
+$awaUserResponse = new AwaUserResponse(); // \Bungie\Model\Destiny\Advanced\AwaUserResponse | 
 
 try {
-    $result = $apiInstance->destiny2AwaProvideAuthorizationResult($destinyAdvancedAwaUserResponse);
+    $result = $apiInstance->awaProvideAuthorizationResult($awaUserResponse);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2AwaProvideAuthorizationResult: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->awaProvideAuthorizationResult: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -193,7 +193,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destinyAdvancedAwaUserResponse** | [**\Bungie\Model\DestinyAdvancedAwaUserResponse**](../Model/DestinyAdvancedAwaUserResponse.md)|  |
+ **awaUserResponse** | [**\Bungie\Model\Destiny\Advanced\AwaUserResponse**](../Model/AwaUserResponse.md)|  |
 
 ### Return type
 
@@ -210,8 +210,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2EquipItem**
-> \Bungie\Model\InlineResponse20019 destiny2EquipItem($destinyRequestsActionsDestinyItemActionRequest)
+# **equipItem**
+> \Bungie\Model\InlineResponse20019 equipItem($destinyItemActionRequest)
 
 
 
@@ -235,13 +235,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$destinyRequestsActionsDestinyItemActionRequest = new \Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest | 
+$destinyItemActionRequest = new DestinyItemActionRequest(); // \Bungie\Model\Destiny\Requests\Actions\DestinyItemActionRequest | 
 
 try {
-    $result = $apiInstance->destiny2EquipItem($destinyRequestsActionsDestinyItemActionRequest);
+    $result = $apiInstance->equipItem($destinyItemActionRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2EquipItem: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->equipItem: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -250,7 +250,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destinyRequestsActionsDestinyItemActionRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyItemActionRequest**](../Model/DestinyRequestsActionsDestinyItemActionRequest.md)|  |
+ **destinyItemActionRequest** | [**\Bungie\Model\Destiny\Requests\Actions\DestinyItemActionRequest**](../Model/DestinyItemActionRequest.md)|  |
 
 ### Return type
 
@@ -267,8 +267,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2EquipItems**
-> \Bungie\Model\InlineResponse20044 destiny2EquipItems($destinyRequestsActionsDestinyItemSetActionRequest)
+# **equipItems**
+> \Bungie\Model\InlineResponse20044 equipItems($destinyItemSetActionRequest)
 
 
 
@@ -292,13 +292,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$destinyRequestsActionsDestinyItemSetActionRequest = new \Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest | 
+$destinyItemSetActionRequest = new DestinyItemSetActionRequest(); // \Bungie\Model\Destiny\Requests\Actions\DestinyItemSetActionRequest | 
 
 try {
-    $result = $apiInstance->destiny2EquipItems($destinyRequestsActionsDestinyItemSetActionRequest);
+    $result = $apiInstance->equipItems($destinyItemSetActionRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2EquipItems: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->equipItems: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -307,7 +307,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destinyRequestsActionsDestinyItemSetActionRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyItemSetActionRequest**](../Model/DestinyRequestsActionsDestinyItemSetActionRequest.md)|  |
+ **destinyItemSetActionRequest** | [**\Bungie\Model\Destiny\Requests\Actions\DestinyItemSetActionRequest**](../Model/DestinyItemSetActionRequest.md)|  |
 
 ### Return type
 
@@ -324,8 +324,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetActivityHistory**
-> \Bungie\Model\InlineResponse20053 destiny2GetActivityHistory($characterId, $destinyMembershipId, $membershipType, $count, $mode, $page)
+# **getActivityHistory**
+> \Bungie\Model\InlineResponse20053 getActivityHistory($characterId, $destinyMembershipId, $membershipType, $count, $mode, $page)
 
 
 
@@ -349,16 +349,16 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The id of the character to retrieve.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $count = 56; // int | Number of rows to return
-$mode = new \Bungie\Model\\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType(); // \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType | A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation.
+$mode = new \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType(); // \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType | A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation.
 $page = 56; // int | Page number to return, starting with 0.
 
 try {
-    $result = $apiInstance->destiny2GetActivityHistory($characterId, $destinyMembershipId, $membershipType, $count, $mode, $page);
+    $result = $apiInstance->getActivityHistory($characterId, $destinyMembershipId, $membershipType, $count, $mode, $page);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetActivityHistory: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getActivityHistory: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **count** | **int**| Number of rows to return | [optional]
- **mode** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType**](../Model/.md)| A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. | [optional]
+ **mode** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType**](../Model/.md)| A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. | [optional]
  **page** | **int**| Page number to return, starting with 0. | [optional]
 
 ### Return type
@@ -389,8 +389,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetCharacter**
-> \Bungie\Model\InlineResponse20038 destiny2GetCharacter($characterId, $destinyMembershipId, $membershipType, $components)
+# **getCharacter**
+> \Bungie\Model\InlineResponse20038 getCharacter($characterId, $destinyMembershipId, $membershipType, $components)
 
 
 
@@ -414,14 +414,14 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | ID of the character.
 $destinyMembershipId = 56; // int | Destiny membership ID.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
-    $result = $apiInstance->destiny2GetCharacter($characterId, $destinyMembershipId, $membershipType, $components);
+    $result = $apiInstance->getCharacter($characterId, $destinyMembershipId, $membershipType, $components);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetCharacter: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getCharacter: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
  **characterId** | **int**| ID of the character. |
  **destinyMembershipId** | **int**| Destiny membership ID. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **components** | [**\Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -450,8 +450,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetClanAggregateStats**
-> \Bungie\Model\InlineResponse20049 destiny2GetClanAggregateStats($groupId, $modes)
+# **getClanAggregateStats**
+> \Bungie\Model\InlineResponse20049 getClanAggregateStats($groupId, $modes)
 
 
 
@@ -477,10 +477,10 @@ $groupId = 56; // int | Group ID of the clan whose leaderboards you wish to fetc
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 
 try {
-    $result = $apiInstance->destiny2GetClanAggregateStats($groupId, $modes);
+    $result = $apiInstance->getClanAggregateStats($groupId, $modes);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetClanAggregateStats: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getClanAggregateStats: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -507,8 +507,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetClanLeaderboards**
-> \Bungie\Model\InlineResponse20048 destiny2GetClanLeaderboards($groupId, $maxtop, $modes, $statid)
+# **getClanLeaderboards**
+> \Bungie\Model\InlineResponse20048 getClanLeaderboards($groupId, $maxtop, $modes, $statid)
 
 
 
@@ -536,10 +536,10 @@ $modes = 'modes_example'; // string | List of game modes for which to get leader
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
 
 try {
-    $result = $apiInstance->destiny2GetClanLeaderboards($groupId, $maxtop, $modes, $statid);
+    $result = $apiInstance->getClanLeaderboards($groupId, $maxtop, $modes, $statid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetClanLeaderboards: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getClanLeaderboards: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -568,8 +568,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetClanWeeklyRewardState**
-> \Bungie\Model\InlineResponse20039 destiny2GetClanWeeklyRewardState($groupId)
+# **getClanWeeklyRewardState**
+> \Bungie\Model\InlineResponse20039 getClanWeeklyRewardState($groupId)
 
 
 
@@ -594,10 +594,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 $groupId = 56; // int | A valid group id of clan.
 
 try {
-    $result = $apiInstance->destiny2GetClanWeeklyRewardState($groupId);
+    $result = $apiInstance->getClanWeeklyRewardState($groupId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetClanWeeklyRewardState: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getClanWeeklyRewardState: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -623,8 +623,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetCollectibleNodeDetails**
-> \Bungie\Model\InlineResponse20043 destiny2GetCollectibleNodeDetails($characterId, $collectiblePresentationNodeHash, $destinyMembershipId, $membershipType, $components)
+# **getCollectibleNodeDetails**
+> \Bungie\Model\InlineResponse20043 getCollectibleNodeDetails($characterId, $collectiblePresentationNodeHash, $destinyMembershipId, $membershipType, $components)
 
 
 
@@ -649,14 +649,14 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 $characterId = 56; // int | The Destiny Character ID of the character for whom we're getting collectible detail info.
 $collectiblePresentationNodeHash = 56; // int | The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node.
 $destinyMembershipId = 56; // int | Destiny membership ID of another user. You may be denied.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
-    $result = $apiInstance->destiny2GetCollectibleNodeDetails($characterId, $collectiblePresentationNodeHash, $destinyMembershipId, $membershipType, $components);
+    $result = $apiInstance->getCollectibleNodeDetails($characterId, $collectiblePresentationNodeHash, $destinyMembershipId, $membershipType, $components);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetCollectibleNodeDetails: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getCollectibleNodeDetails: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -669,7 +669,7 @@ Name | Type | Description  | Notes
  **collectiblePresentationNodeHash** | **int**| The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. |
  **destinyMembershipId** | **int**| Destiny membership ID of another user. You may be denied. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **components** | [**\Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -686,8 +686,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetDestinyAggregateActivityStats**
-> \Bungie\Model\InlineResponse20055 destiny2GetDestinyAggregateActivityStats($characterId, $destinyMembershipId, $membershipType)
+# **getDestinyAggregateActivityStats**
+> \Bungie\Model\InlineResponse20055 getDestinyAggregateActivityStats($characterId, $destinyMembershipId, $membershipType)
 
 
 
@@ -711,13 +711,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The specific character whose activities should be returned.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 
 try {
-    $result = $apiInstance->destiny2GetDestinyAggregateActivityStats($characterId, $destinyMembershipId, $membershipType);
+    $result = $apiInstance->getDestinyAggregateActivityStats($characterId, $destinyMembershipId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetDestinyAggregateActivityStats: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getDestinyAggregateActivityStats: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -745,8 +745,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetDestinyEntityDefinition**
-> \Bungie\Model\InlineResponse20034 destiny2GetDestinyEntityDefinition($entityType, $hashIdentifier)
+# **getDestinyEntityDefinition**
+> \Bungie\Model\InlineResponse20034 getDestinyEntityDefinition($entityType, $hashIdentifier)
 
 
 
@@ -772,10 +772,10 @@ $entityType = 'entityType_example'; // string | The type of entity for whom you 
 $hashIdentifier = 56; // int | The hash identifier for the specific Entity you want returned.
 
 try {
-    $result = $apiInstance->destiny2GetDestinyEntityDefinition($entityType, $hashIdentifier);
+    $result = $apiInstance->getDestinyEntityDefinition($entityType, $hashIdentifier);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetDestinyEntityDefinition: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getDestinyEntityDefinition: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -802,8 +802,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetDestinyManifest**
-> \Bungie\Model\InlineResponse20033 destiny2GetDestinyManifest()
+# **getDestinyManifest**
+> \Bungie\Model\InlineResponse20033 getDestinyManifest()
 
 
 
@@ -827,10 +827,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 
 try {
-    $result = $apiInstance->destiny2GetDestinyManifest();
+    $result = $apiInstance->getDestinyManifest();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetDestinyManifest: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getDestinyManifest: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -853,8 +853,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetHistoricalStats**
-> \Bungie\Model\InlineResponse20051 destiny2GetHistoricalStats($characterId, $destinyMembershipId, $membershipType, $dayend, $daystart, $groups, $modes, $periodType)
+# **getHistoricalStats**
+> \Bungie\Model\InlineResponse20051 getHistoricalStats($characterId, $destinyMembershipId, $membershipType, $dayend, $daystart, $groups, $modes, $periodType)
 
 
 
@@ -878,18 +878,18 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $dayend = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Last day to return when daily stats are requested. Use the format YYYY-MM-DD.
 $daystart = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | First day to return when daily stats are requested. Use the format YYYY-MM-DD
-$groups = array(new \Bungie\Model\\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType()); // \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] | Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals
-$modes = array(new \Bungie\Model\\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType()); // \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType[] | Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
-$periodType = new \Bungie\Model\\Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType(); // \Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType | Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity
+$groups = array(new \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType()); // \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] | Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals
+$modes = array(new \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType()); // \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] | Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+$periodType = new \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType(); // \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType | Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity
 
 try {
-    $result = $apiInstance->destiny2GetHistoricalStats($characterId, $destinyMembershipId, $membershipType, $dayend, $daystart, $groups, $modes, $periodType);
+    $result = $apiInstance->getHistoricalStats($characterId, $destinyMembershipId, $membershipType, $dayend, $daystart, $groups, $modes, $periodType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetHistoricalStats: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getHistoricalStats: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -903,9 +903,9 @@ Name | Type | Description  | Notes
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **dayend** | **\DateTime**| Last day to return when daily stats are requested. Use the format YYYY-MM-DD. | [optional]
  **daystart** | **\DateTime**| First day to return when daily stats are requested. Use the format YYYY-MM-DD | [optional]
- **groups** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[]**](../Model/\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.md)| Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals | [optional]
- **modes** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType[]**](../Model/\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyActivityModeType.md)| Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
- **periodType** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsPeriodType**](../Model/.md)| Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity | [optional]
+ **groups** | [**\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[]**](../Model/\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType.md)| Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals | [optional]
+ **modes** | [**\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]**](../Model/\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType.md)| Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
+ **periodType** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType**](../Model/.md)| Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity | [optional]
 
 ### Return type
 
@@ -922,8 +922,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetHistoricalStatsDefinition**
-> \Bungie\Model\InlineResponse20047 destiny2GetHistoricalStatsDefinition()
+# **getHistoricalStatsDefinition**
+> \Bungie\Model\InlineResponse20047 getHistoricalStatsDefinition()
 
 
 
@@ -947,10 +947,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 
 try {
-    $result = $apiInstance->destiny2GetHistoricalStatsDefinition();
+    $result = $apiInstance->getHistoricalStatsDefinition();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetHistoricalStatsDefinition: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getHistoricalStatsDefinition: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -973,8 +973,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetHistoricalStatsForAccount**
-> \Bungie\Model\InlineResponse20052 destiny2GetHistoricalStatsForAccount($destinyMembershipId, $membershipType, $groups)
+# **getHistoricalStatsForAccount**
+> \Bungie\Model\InlineResponse20052 getHistoricalStatsForAccount($destinyMembershipId, $membershipType, $groups)
 
 
 
@@ -997,14 +997,14 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$groups = array(new \Bungie\Model\\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType()); // \Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[] | Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$groups = array(new \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType()); // \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] | Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals.
 
 try {
-    $result = $apiInstance->destiny2GetHistoricalStatsForAccount($destinyMembershipId, $membershipType, $groups);
+    $result = $apiInstance->getHistoricalStatsForAccount($destinyMembershipId, $membershipType, $groups);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetHistoricalStatsForAccount: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getHistoricalStatsForAccount: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1015,7 +1015,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **groups** | [**\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType[]**](../Model/\Bungie\Model\DestinyHistoricalStatsDefinitionsDestinyStatsGroupType.md)| Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. | [optional]
+ **groups** | [**\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[]**](../Model/\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType.md)| Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. | [optional]
 
 ### Return type
 
@@ -1032,8 +1032,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetItem**
-> \Bungie\Model\InlineResponse20040 destiny2GetItem($destinyMembershipId, $itemInstanceId, $membershipType, $components)
+# **getItem**
+> \Bungie\Model\InlineResponse20040 getItem($destinyMembershipId, $itemInstanceId, $membershipType, $components)
 
 
 
@@ -1057,14 +1057,14 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $destinyMembershipId = 56; // int | The membership ID of the destiny profile.
 $itemInstanceId = 56; // int | The Instance ID of the destiny item.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
-    $result = $apiInstance->destiny2GetItem($destinyMembershipId, $itemInstanceId, $membershipType, $components);
+    $result = $apiInstance->getItem($destinyMembershipId, $itemInstanceId, $membershipType, $components);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetItem: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getItem: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1076,7 +1076,7 @@ Name | Type | Description  | Notes
  **destinyMembershipId** | **int**| The membership ID of the destiny profile. |
  **itemInstanceId** | **int**| The Instance ID of the destiny item. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **components** | [**\Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -1093,8 +1093,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetLeaderboards**
-> \Bungie\Model\InlineResponse20048 destiny2GetLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+# **getLeaderboards**
+> \Bungie\Model\InlineResponse20048 getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -1117,16 +1117,16 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
 
 try {
-    $result = $apiInstance->destiny2GetLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
+    $result = $apiInstance->getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetLeaderboards: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getLeaderboards: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1156,8 +1156,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetLeaderboardsForCharacter**
-> \Bungie\Model\InlineResponse20048 destiny2GetLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+# **getLeaderboardsForCharacter**
+> \Bungie\Model\InlineResponse20048 getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -1181,16 +1181,16 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The specific character to build the leaderboard around for the provided Destiny Membership.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
 
 try {
-    $result = $apiInstance->destiny2GetLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
+    $result = $apiInstance->getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetLeaderboardsForCharacter: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getLeaderboardsForCharacter: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1221,8 +1221,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetLinkedProfiles**
-> \Bungie\Model\InlineResponse20036 destiny2GetLinkedProfiles($membershipId, $membershipType)
+# **getLinkedProfiles**
+> \Bungie\Model\InlineResponse20036 getLinkedProfiles($membershipId, $membershipType)
 
 
 
@@ -1245,13 +1245,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $membershipId = 56; // int | The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don't pass us a PSN membership ID and the XBox membership type, it's not going to work!
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The type for the membership whose linked Destiny accounts you want returned.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The type for the membership whose linked Destiny accounts you want returned.
 
 try {
-    $result = $apiInstance->destiny2GetLinkedProfiles($membershipId, $membershipType);
+    $result = $apiInstance->getLinkedProfiles($membershipId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetLinkedProfiles: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getLinkedProfiles: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1278,8 +1278,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetPostGameCarnageReport**
-> \Bungie\Model\InlineResponse20046 destiny2GetPostGameCarnageReport($activityId)
+# **getPostGameCarnageReport**
+> \Bungie\Model\InlineResponse20046 getPostGameCarnageReport($activityId)
 
 
 
@@ -1304,10 +1304,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 $activityId = 56; // int | The ID of the activity whose PGCR is requested.
 
 try {
-    $result = $apiInstance->destiny2GetPostGameCarnageReport($activityId);
+    $result = $apiInstance->getPostGameCarnageReport($activityId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetPostGameCarnageReport: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getPostGameCarnageReport: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1333,8 +1333,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetProfile**
-> \Bungie\Model\InlineResponse20037 destiny2GetProfile($destinyMembershipId, $membershipType, $components)
+# **getProfile**
+> \Bungie\Model\InlineResponse20037 getProfile($destinyMembershipId, $membershipType, $components)
 
 
 
@@ -1357,14 +1357,14 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $destinyMembershipId = 56; // int | Destiny membership ID.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
-    $result = $apiInstance->destiny2GetProfile($destinyMembershipId, $membershipType, $components);
+    $result = $apiInstance->getProfile($destinyMembershipId, $membershipType, $components);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetProfile: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getProfile: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1375,7 +1375,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| Destiny membership ID. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **components** | [**\Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -1392,8 +1392,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetPublicMilestoneContent**
-> \Bungie\Model\InlineResponse20056 destiny2GetPublicMilestoneContent($milestoneHash)
+# **getPublicMilestoneContent**
+> \Bungie\Model\InlineResponse20056 getPublicMilestoneContent($milestoneHash)
 
 
 
@@ -1418,10 +1418,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 $milestoneHash = 56; // int | The identifier for the milestone to be returned.
 
 try {
-    $result = $apiInstance->destiny2GetPublicMilestoneContent($milestoneHash);
+    $result = $apiInstance->getPublicMilestoneContent($milestoneHash);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetPublicMilestoneContent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getPublicMilestoneContent: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1447,8 +1447,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetPublicMilestones**
-> \Bungie\Model\InlineResponse20057 destiny2GetPublicMilestones()
+# **getPublicMilestones**
+> \Bungie\Model\InlineResponse20057 getPublicMilestones()
 
 
 
@@ -1472,10 +1472,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 
 try {
-    $result = $apiInstance->destiny2GetPublicMilestones();
+    $result = $apiInstance->getPublicMilestones();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetPublicMilestones: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getPublicMilestones: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1498,8 +1498,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetUniqueWeaponHistory**
-> \Bungie\Model\InlineResponse20054 destiny2GetUniqueWeaponHistory($characterId, $destinyMembershipId, $membershipType)
+# **getUniqueWeaponHistory**
+> \Bungie\Model\InlineResponse20054 getUniqueWeaponHistory($characterId, $destinyMembershipId, $membershipType)
 
 
 
@@ -1523,13 +1523,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The id of the character to retrieve.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 
 try {
-    $result = $apiInstance->destiny2GetUniqueWeaponHistory($characterId, $destinyMembershipId, $membershipType);
+    $result = $apiInstance->getUniqueWeaponHistory($characterId, $destinyMembershipId, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetUniqueWeaponHistory: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getUniqueWeaponHistory: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1557,8 +1557,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetVendor**
-> \Bungie\Model\InlineResponse20042 destiny2GetVendor($characterId, $destinyMembershipId, $membershipType, $vendorHash, $components)
+# **getVendor**
+> \Bungie\Model\InlineResponse20042 getVendor($characterId, $destinyMembershipId, $membershipType, $vendorHash, $components)
 
 
 
@@ -1582,15 +1582,15 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The Destiny Character ID of the character for whom we're getting vendor info.
 $destinyMembershipId = 56; // int | Destiny membership ID of another user. You may be denied.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
 $vendorHash = 56; // int | The Hash identifier of the Vendor to be returned.
-$components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
-    $result = $apiInstance->destiny2GetVendor($characterId, $destinyMembershipId, $membershipType, $vendorHash, $components);
+    $result = $apiInstance->getVendor($characterId, $destinyMembershipId, $membershipType, $vendorHash, $components);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetVendor: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getVendor: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1603,7 +1603,7 @@ Name | Type | Description  | Notes
  **destinyMembershipId** | **int**| Destiny membership ID of another user. You may be denied. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
  **vendorHash** | **int**| The Hash identifier of the Vendor to be returned. |
- **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **components** | [**\Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -1620,8 +1620,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2GetVendors**
-> \Bungie\Model\InlineResponse20041 destiny2GetVendors($characterId, $destinyMembershipId, $membershipType, $components)
+# **getVendors**
+> \Bungie\Model\InlineResponse20041 getVendors($characterId, $destinyMembershipId, $membershipType, $components)
 
 
 
@@ -1645,14 +1645,14 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The Destiny Character ID of the character for whom we're getting vendor info.
 $destinyMembershipId = 56; // int | Destiny membership ID of another user. You may be denied.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$components = array(new \Bungie\Model\\Bungie\Model\DestinyDestinyComponentType()); // \Bungie\Model\DestinyDestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
-    $result = $apiInstance->destiny2GetVendors($characterId, $destinyMembershipId, $membershipType, $components);
+    $result = $apiInstance->getVendors($characterId, $destinyMembershipId, $membershipType, $components);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2GetVendors: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->getVendors: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1664,7 +1664,7 @@ Name | Type | Description  | Notes
  **characterId** | **int**| The Destiny Character ID of the character for whom we&#39;re getting vendor info. |
  **destinyMembershipId** | **int**| Destiny membership ID of another user. You may be denied. |
  **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **components** | [**\Bungie\Model\DestinyDestinyComponentType[]**](../Model/\Bungie\Model\DestinyDestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **components** | [**\Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -1681,8 +1681,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2InsertSocketPlug**
-> \Bungie\Model\InlineResponse20045 destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest)
+# **insertSocketPlug**
+> \Bungie\Model\InlineResponse20045 insertSocketPlug($destinyInsertPlugsActionRequest)
 
 
 
@@ -1706,13 +1706,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$destinyRequestsActionsDestinyInsertPlugsActionRequest = new \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest | 
+$destinyInsertPlugsActionRequest = new DestinyInsertPlugsActionRequest(); // \Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsActionRequest | 
 
 try {
-    $result = $apiInstance->destiny2InsertSocketPlug($destinyRequestsActionsDestinyInsertPlugsActionRequest);
+    $result = $apiInstance->insertSocketPlug($destinyInsertPlugsActionRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2InsertSocketPlug: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->insertSocketPlug: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1721,7 +1721,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destinyRequestsActionsDestinyInsertPlugsActionRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyInsertPlugsActionRequest**](../Model/DestinyRequestsActionsDestinyInsertPlugsActionRequest.md)|  |
+ **destinyInsertPlugsActionRequest** | [**\Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsActionRequest**](../Model/DestinyInsertPlugsActionRequest.md)|  |
 
 ### Return type
 
@@ -1738,8 +1738,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2PullFromPostmaster**
-> \Bungie\Model\InlineResponse20019 destiny2PullFromPostmaster($destinyRequestsActionsDestinyPostmasterTransferRequest)
+# **pullFromPostmaster**
+> \Bungie\Model\InlineResponse20019 pullFromPostmaster($destinyPostmasterTransferRequest)
 
 
 
@@ -1763,13 +1763,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$destinyRequestsActionsDestinyPostmasterTransferRequest = new \Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest | 
+$destinyPostmasterTransferRequest = new DestinyPostmasterTransferRequest(); // \Bungie\Model\Destiny\Requests\Actions\DestinyPostmasterTransferRequest | 
 
 try {
-    $result = $apiInstance->destiny2PullFromPostmaster($destinyRequestsActionsDestinyPostmasterTransferRequest);
+    $result = $apiInstance->pullFromPostmaster($destinyPostmasterTransferRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2PullFromPostmaster: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->pullFromPostmaster: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1778,7 +1778,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destinyRequestsActionsDestinyPostmasterTransferRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyPostmasterTransferRequest**](../Model/DestinyRequestsActionsDestinyPostmasterTransferRequest.md)|  |
+ **destinyPostmasterTransferRequest** | [**\Bungie\Model\Destiny\Requests\Actions\DestinyPostmasterTransferRequest**](../Model/DestinyPostmasterTransferRequest.md)|  |
 
 ### Return type
 
@@ -1795,8 +1795,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2ReportOffensivePostGameCarnageReportPlayer**
-> \Bungie\Model\InlineResponse20019 destiny2ReportOffensivePostGameCarnageReportPlayer($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest)
+# **reportOffensivePostGameCarnageReportPlayer**
+> \Bungie\Model\InlineResponse20019 reportOffensivePostGameCarnageReportPlayer($activityId, $destinyReportOffensePgcrRequest)
 
 
 
@@ -1821,13 +1821,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $activityId = 56; // int | The ID of the activity where you ran into the brigand that you're reporting.
-$destinyReportingRequestsDestinyReportOffensePgcrRequest = new \Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest(); // \Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest | 
+$destinyReportOffensePgcrRequest = new DestinyReportOffensePgcrRequest(); // \Bungie\Model\Destiny\Reporting\Requests\DestinyReportOffensePgcrRequest | 
 
 try {
-    $result = $apiInstance->destiny2ReportOffensivePostGameCarnageReportPlayer($activityId, $destinyReportingRequestsDestinyReportOffensePgcrRequest);
+    $result = $apiInstance->reportOffensivePostGameCarnageReportPlayer($activityId, $destinyReportOffensePgcrRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2ReportOffensivePostGameCarnageReportPlayer: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->reportOffensivePostGameCarnageReportPlayer: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1837,7 +1837,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activityId** | **int**| The ID of the activity where you ran into the brigand that you&#39;re reporting. |
- **destinyReportingRequestsDestinyReportOffensePgcrRequest** | [**\Bungie\Model\DestinyReportingRequestsDestinyReportOffensePgcrRequest**](../Model/DestinyReportingRequestsDestinyReportOffensePgcrRequest.md)|  |
+ **destinyReportOffensePgcrRequest** | [**\Bungie\Model\Destiny\Reporting\Requests\DestinyReportOffensePgcrRequest**](../Model/DestinyReportOffensePgcrRequest.md)|  |
 
 ### Return type
 
@@ -1854,8 +1854,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2SearchDestinyEntities**
-> \Bungie\Model\InlineResponse20050 destiny2SearchDestinyEntities($searchTerm, $type, $page)
+# **searchDestinyEntities**
+> \Bungie\Model\InlineResponse20050 searchDestinyEntities($searchTerm, $type, $page)
 
 
 
@@ -1882,10 +1882,10 @@ $type = 'type_example'; // string | The type of entity for whom you would like r
 $page = 56; // int | Page number to return, starting with 0.
 
 try {
-    $result = $apiInstance->destiny2SearchDestinyEntities($searchTerm, $type, $page);
+    $result = $apiInstance->searchDestinyEntities($searchTerm, $type, $page);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2SearchDestinyEntities: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->searchDestinyEntities: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1913,8 +1913,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2SearchDestinyPlayer**
-> \Bungie\Model\InlineResponse20035 destiny2SearchDestinyPlayer($displayName, $membershipType)
+# **searchDestinyPlayer**
+> \Bungie\Model\InlineResponse20035 searchDestinyPlayer($displayName, $membershipType)
 
 
 
@@ -1937,13 +1937,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $displayName = 'displayName_example'; // string | The full gamertag or PSN id of the player. Spaces and case are ignored.
-$membershipType = new \Bungie\Model\\Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type, or All.
+$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type, or All.
 
 try {
-    $result = $apiInstance->destiny2SearchDestinyPlayer($displayName, $membershipType);
+    $result = $apiInstance->searchDestinyPlayer($displayName, $membershipType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2SearchDestinyPlayer: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->searchDestinyPlayer: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -1970,8 +1970,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2SetItemLockState**
-> \Bungie\Model\InlineResponse20019 destiny2SetItemLockState($destinyRequestsActionsDestinyItemStateRequest)
+# **setItemLockState**
+> \Bungie\Model\InlineResponse20019 setItemLockState($destinyItemStateRequest)
 
 
 
@@ -1995,13 +1995,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$destinyRequestsActionsDestinyItemStateRequest = new \Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest(); // \Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest | 
+$destinyItemStateRequest = new DestinyItemStateRequest(); // \Bungie\Model\Destiny\Requests\Actions\DestinyItemStateRequest | 
 
 try {
-    $result = $apiInstance->destiny2SetItemLockState($destinyRequestsActionsDestinyItemStateRequest);
+    $result = $apiInstance->setItemLockState($destinyItemStateRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2SetItemLockState: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->setItemLockState: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -2010,7 +2010,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destinyRequestsActionsDestinyItemStateRequest** | [**\Bungie\Model\DestinyRequestsActionsDestinyItemStateRequest**](../Model/DestinyRequestsActionsDestinyItemStateRequest.md)|  |
+ **destinyItemStateRequest** | [**\Bungie\Model\Destiny\Requests\Actions\DestinyItemStateRequest**](../Model/DestinyItemStateRequest.md)|  |
 
 ### Return type
 
@@ -2027,8 +2027,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destiny2TransferItem**
-> \Bungie\Model\InlineResponse20019 destiny2TransferItem($destinyRequestsDestinyItemTransferRequest)
+# **transferItem**
+> \Bungie\Model\InlineResponse20019 transferItem($destinyItemTransferRequest)
 
 
 
@@ -2052,13 +2052,13 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$destinyRequestsDestinyItemTransferRequest = new \Bungie\Model\DestinyRequestsDestinyItemTransferRequest(); // \Bungie\Model\DestinyRequestsDestinyItemTransferRequest | 
+$destinyItemTransferRequest = new DestinyItemTransferRequest(); // \Bungie\Model\Destiny\Requests\DestinyItemTransferRequest | 
 
 try {
-    $result = $apiInstance->destiny2TransferItem($destinyRequestsDestinyItemTransferRequest);
+    $result = $apiInstance->transferItem($destinyItemTransferRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Destiny2Api->destiny2TransferItem: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Destiny2Api->transferItem: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -2067,7 +2067,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destinyRequestsDestinyItemTransferRequest** | [**\Bungie\Model\DestinyRequestsDestinyItemTransferRequest**](../Model/DestinyRequestsDestinyItemTransferRequest.md)|  |
+ **destinyItemTransferRequest** | [**\Bungie\Model\Destiny\Requests\DestinyItemTransferRequest**](../Model/DestinyItemTransferRequest.md)|  |
 
 ### Return type
 

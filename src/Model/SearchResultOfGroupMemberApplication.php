@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SearchResultOfGroupMemberApplication implements ModelInterface, ArrayAccess
+class SearchResultOfGroupMemberApplication implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,10 +57,10 @@ class SearchResultOfGroupMemberApplication implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\GroupsV2GroupMemberApplication[]',
+        'results' => '\Bungie\Model\\Bungie\Model\GroupsV2\GroupMemberApplication[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
-        'query' => '\Bungie\Model\QueriesPagedQuery',
+        'query' => '\Bungie\Model\Queries\PagedQuery',
         'replacementContinuationToken' => 'string',
         'useTotalResults' => 'bool'
     ];
@@ -237,7 +237,7 @@ class SearchResultOfGroupMemberApplication implements ModelInterface, ArrayAcces
     /**
      * Gets results
      *
-     * @return \Bungie\Model\GroupsV2GroupMemberApplication[]|null
+     * @return \Bungie\Model\\Bungie\Model\GroupsV2\GroupMemberApplication[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfGroupMemberApplication implements ModelInterface, ArrayAcces
     /**
      * Sets results
      *
-     * @param \Bungie\Model\GroupsV2GroupMemberApplication[]|null $results results
+     * @param \Bungie\Model\\Bungie\Model\GroupsV2\GroupMemberApplication[]|null $results results
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class SearchResultOfGroupMemberApplication implements ModelInterface, ArrayAcces
     /**
      * Gets query
      *
-     * @return \Bungie\Model\QueriesPagedQuery|null
+     * @return \Bungie\Model\Queries\PagedQuery|null
      */
     public function getQuery()
     {
@@ -319,7 +319,7 @@ class SearchResultOfGroupMemberApplication implements ModelInterface, ArrayAcces
     /**
      * Sets query
      *
-     * @param \Bungie\Model\QueriesPagedQuery|null $query query
+     * @param \Bungie\Model\Queries\PagedQuery|null $query query
      *
      * @return $this
      */

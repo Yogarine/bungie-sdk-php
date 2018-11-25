@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SearchResultOfTrendingEntry implements ModelInterface, ArrayAccess
+class SearchResultOfTrendingEntry implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,10 +57,10 @@ class SearchResultOfTrendingEntry implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\TrendingTrendingEntry[]',
+        'results' => '\Bungie\Model\\Bungie\Model\Trending\TrendingEntry[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
-        'query' => '\Bungie\Model\QueriesPagedQuery',
+        'query' => '\Bungie\Model\Queries\PagedQuery',
         'replacementContinuationToken' => 'string',
         'useTotalResults' => 'bool'
     ];
@@ -237,7 +237,7 @@ class SearchResultOfTrendingEntry implements ModelInterface, ArrayAccess
     /**
      * Gets results
      *
-     * @return \Bungie\Model\TrendingTrendingEntry[]|null
+     * @return \Bungie\Model\\Bungie\Model\Trending\TrendingEntry[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfTrendingEntry implements ModelInterface, ArrayAccess
     /**
      * Sets results
      *
-     * @param \Bungie\Model\TrendingTrendingEntry[]|null $results results
+     * @param \Bungie\Model\\Bungie\Model\Trending\TrendingEntry[]|null $results results
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class SearchResultOfTrendingEntry implements ModelInterface, ArrayAccess
     /**
      * Gets query
      *
-     * @return \Bungie\Model\QueriesPagedQuery|null
+     * @return \Bungie\Model\Queries\PagedQuery|null
      */
     public function getQuery()
     {
@@ -319,7 +319,7 @@ class SearchResultOfTrendingEntry implements ModelInterface, ArrayAccess
     /**
      * Sets query
      *
-     * @param \Bungie\Model\QueriesPagedQuery|null $query query
+     * @param \Bungie\Model\Queries\PagedQuery|null $query query
      *
      * @return $this
      */

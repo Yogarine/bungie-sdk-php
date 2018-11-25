@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SingleComponentResponseOfDestinyPresentationNodesComponent implements ModelInterface, ArrayAccess
+class SingleComponentResponseOfDestinyPresentationNodesComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class SingleComponentResponseOfDestinyPresentationNodesComponent implements Mode
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\DestinyComponentsPresentationDestinyPresentationNodesComponent',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\Destiny\Components\Presentation\DestinyPresentationNodesComponent',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SingleComponentResponseOfDestinyPresentationNodesComponent implements Mode
     /**
      * Gets data
      *
-     * @return \Bungie\Model\DestinyComponentsPresentationDestinyPresentationNodesComponent|null
+     * @return \Bungie\Model\Destiny\Components\Presentation\DestinyPresentationNodesComponent|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class SingleComponentResponseOfDestinyPresentationNodesComponent implements Mode
     /**
      * Sets data
      *
-     * @param \Bungie\Model\DestinyComponentsPresentationDestinyPresentationNodesComponent|null $data data
+     * @param \Bungie\Model\Destiny\Components\Presentation\DestinyPresentationNodesComponent|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SingleComponentResponseOfDestinyPresentationNodesComponent implements Mode
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class SingleComponentResponseOfDestinyPresentationNodesComponent implements Mode
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */

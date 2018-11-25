@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class DestinyBaseItemComponentSetOfuint32 implements ModelInterface, ArrayAccess
+class DestinyBaseItemComponentSetOfuint32 implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 

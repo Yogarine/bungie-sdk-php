@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Bungie\API;
+namespace Bungie\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -88,32 +88,34 @@ class ForumApi
     }
 
     /**
-     * Operation forumApproveFireteamThread
+     * Operation approveFireteamThread
      *
      * @param  int $topicId The post id of the recruitment topic to approve. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20014
      */
-    public function forumApproveFireteamThread($topicId)
+    public function approveFireteamThread($topicId)
     {
-        list($response) = $this->forumApproveFireteamThreadWithHttpInfo($topicId);
+        list($response) = $this->approveFireteamThreadWithHttpInfo($topicId);
         return $response;
     }
 
     /**
-     * Operation forumApproveFireteamThreadWithHttpInfo
+     * Operation approveFireteamThreadWithHttpInfo
      *
      * @param  int $topicId The post id of the recruitment topic to approve. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20014, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumApproveFireteamThreadWithHttpInfo($topicId)
+    public function approveFireteamThreadWithHttpInfo($topicId)
     {
-        $request = $this->forumApproveFireteamThreadRequest($topicId);
+        $request = $this->approveFireteamThreadRequest($topicId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -189,7 +191,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumApproveFireteamThreadAsync
+     * Operation approveFireteamThreadAsync
      *
      * 
      *
@@ -198,9 +200,9 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumApproveFireteamThreadAsync($topicId)
+    public function approveFireteamThreadAsync($topicId)
     {
-        return $this->forumApproveFireteamThreadAsyncWithHttpInfo($topicId)
+        return $this->approveFireteamThreadAsyncWithHttpInfo($topicId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -209,7 +211,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumApproveFireteamThreadAsyncWithHttpInfo
+     * Operation approveFireteamThreadAsyncWithHttpInfo
      *
      * 
      *
@@ -218,15 +220,16 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumApproveFireteamThreadAsyncWithHttpInfo($topicId)
+    public function approveFireteamThreadAsyncWithHttpInfo($topicId)
     {
         $returnType = '\Bungie\Model\InlineResponse20014';
-        $request = $this->forumApproveFireteamThreadRequest($topicId);
+        $request = $this->approveFireteamThreadRequest($topicId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -241,6 +244,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -258,19 +262,19 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumApproveFireteamThread'
+     * Create request for operation 'approveFireteamThread'
      *
      * @param  int $topicId The post id of the recruitment topic to approve. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumApproveFireteamThreadRequest($topicId)
+    protected function approveFireteamThreadRequest($topicId)
     {
         // verify the required parameter 'topicId' is set
         if ($topicId === null || (is_array($topicId) && count($topicId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $topicId when calling forumApproveFireteamThread'
+                'Missing the required parameter $topicId when calling approveFireteamThread'
             );
         }
 
@@ -365,40 +369,42 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetCoreTopicsPaged
+     * Operation getCoreTopicsPaged
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
-     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate The date filter. (required)
-     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate The date filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20010
      */
-    public function forumGetCoreTopicsPaged($categoryFilter, $page, $quickDate, $sort, $locales = null)
+    public function getCoreTopicsPaged($categoryFilter, $page, $quickDate, $sort, $locales = null)
     {
-        list($response) = $this->forumGetCoreTopicsPagedWithHttpInfo($categoryFilter, $page, $quickDate, $sort, $locales);
+        list($response) = $this->getCoreTopicsPagedWithHttpInfo($categoryFilter, $page, $quickDate, $sort, $locales);
         return $response;
     }
 
     /**
-     * Operation forumGetCoreTopicsPagedWithHttpInfo
+     * Operation getCoreTopicsPagedWithHttpInfo
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
-     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate The date filter. (required)
-     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate The date filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetCoreTopicsPagedWithHttpInfo($categoryFilter, $page, $quickDate, $sort, $locales = null)
+    public function getCoreTopicsPagedWithHttpInfo($categoryFilter, $page, $quickDate, $sort, $locales = null)
     {
-        $request = $this->forumGetCoreTopicsPagedRequest($categoryFilter, $page, $quickDate, $sort, $locales);
+        $request = $this->getCoreTopicsPagedRequest($categoryFilter, $page, $quickDate, $sort, $locales);
 
         try {
             $options = $this->createHttpClientOption();
@@ -474,22 +480,22 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetCoreTopicsPagedAsync
+     * Operation getCoreTopicsPagedAsync
      *
      * 
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
-     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate The date filter. (required)
-     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate The date filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetCoreTopicsPagedAsync($categoryFilter, $page, $quickDate, $sort, $locales = null)
+    public function getCoreTopicsPagedAsync($categoryFilter, $page, $quickDate, $sort, $locales = null)
     {
-        return $this->forumGetCoreTopicsPagedAsyncWithHttpInfo($categoryFilter, $page, $quickDate, $sort, $locales)
+        return $this->getCoreTopicsPagedAsyncWithHttpInfo($categoryFilter, $page, $quickDate, $sort, $locales)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -498,28 +504,29 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetCoreTopicsPagedAsyncWithHttpInfo
+     * Operation getCoreTopicsPagedAsyncWithHttpInfo
      *
      * 
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
-     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate The date filter. (required)
-     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate The date filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetCoreTopicsPagedAsyncWithHttpInfo($categoryFilter, $page, $quickDate, $sort, $locales = null)
+    public function getCoreTopicsPagedAsyncWithHttpInfo($categoryFilter, $page, $quickDate, $sort, $locales = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20010';
-        $request = $this->forumGetCoreTopicsPagedRequest($categoryFilter, $page, $quickDate, $sort, $locales);
+        $request = $this->getCoreTopicsPagedRequest($categoryFilter, $page, $quickDate, $sort, $locales);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -534,6 +541,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -551,41 +559,41 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumGetCoreTopicsPaged'
+     * Create request for operation 'getCoreTopicsPaged'
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
-     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate The date filter. (required)
-     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate The date filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetCoreTopicsPagedRequest($categoryFilter, $page, $quickDate, $sort, $locales = null)
+    protected function getCoreTopicsPagedRequest($categoryFilter, $page, $quickDate, $sort, $locales = null)
     {
         // verify the required parameter 'categoryFilter' is set
         if ($categoryFilter === null || (is_array($categoryFilter) && count($categoryFilter) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $categoryFilter when calling forumGetCoreTopicsPaged'
+                'Missing the required parameter $categoryFilter when calling getCoreTopicsPaged'
             );
         }
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling forumGetCoreTopicsPaged'
+                'Missing the required parameter $page when calling getCoreTopicsPaged'
             );
         }
         // verify the required parameter 'quickDate' is set
         if ($quickDate === null || (is_array($quickDate) && count($quickDate) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $quickDate when calling forumGetCoreTopicsPaged'
+                'Missing the required parameter $quickDate when calling getCoreTopicsPaged'
             );
         }
         // verify the required parameter 'sort' is set
         if ($sort === null || (is_array($sort) && count($sort) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sort when calling forumGetCoreTopicsPaged'
+                'Missing the required parameter $sort when calling getCoreTopicsPaged'
             );
         }
 
@@ -704,32 +712,34 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetForumTagSuggestions
+     * Operation getForumTagSuggestions
      *
      * @param  string $partialtag The partial tag input to generate suggestions from. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20012
      */
-    public function forumGetForumTagSuggestions($partialtag = null)
+    public function getForumTagSuggestions($partialtag = null)
     {
-        list($response) = $this->forumGetForumTagSuggestionsWithHttpInfo($partialtag);
+        list($response) = $this->getForumTagSuggestionsWithHttpInfo($partialtag);
         return $response;
     }
 
     /**
-     * Operation forumGetForumTagSuggestionsWithHttpInfo
+     * Operation getForumTagSuggestionsWithHttpInfo
      *
      * @param  string $partialtag The partial tag input to generate suggestions from. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetForumTagSuggestionsWithHttpInfo($partialtag = null)
+    public function getForumTagSuggestionsWithHttpInfo($partialtag = null)
     {
-        $request = $this->forumGetForumTagSuggestionsRequest($partialtag);
+        $request = $this->getForumTagSuggestionsRequest($partialtag);
 
         try {
             $options = $this->createHttpClientOption();
@@ -805,7 +815,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetForumTagSuggestionsAsync
+     * Operation getForumTagSuggestionsAsync
      *
      * 
      *
@@ -814,9 +824,9 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetForumTagSuggestionsAsync($partialtag = null)
+    public function getForumTagSuggestionsAsync($partialtag = null)
     {
-        return $this->forumGetForumTagSuggestionsAsyncWithHttpInfo($partialtag)
+        return $this->getForumTagSuggestionsAsyncWithHttpInfo($partialtag)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -825,7 +835,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetForumTagSuggestionsAsyncWithHttpInfo
+     * Operation getForumTagSuggestionsAsyncWithHttpInfo
      *
      * 
      *
@@ -834,15 +844,16 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetForumTagSuggestionsAsyncWithHttpInfo($partialtag = null)
+    public function getForumTagSuggestionsAsyncWithHttpInfo($partialtag = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20012';
-        $request = $this->forumGetForumTagSuggestionsRequest($partialtag);
+        $request = $this->getForumTagSuggestionsRequest($partialtag);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -857,6 +868,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -874,14 +886,14 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumGetForumTagSuggestions'
+     * Create request for operation 'getForumTagSuggestions'
      *
      * @param  string $partialtag The partial tag input to generate suggestions from. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetForumTagSuggestionsRequest($partialtag = null)
+    protected function getForumTagSuggestionsRequest($partialtag = null)
     {
 
         $resourcePath = '/Forum/GetForumTagSuggestions/';
@@ -967,32 +979,34 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPoll
+     * Operation getPoll
      *
      * @param  int $topicId The post id of the topic that has the poll. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20010
      */
-    public function forumGetPoll($topicId)
+    public function getPoll($topicId)
     {
-        list($response) = $this->forumGetPollWithHttpInfo($topicId);
+        list($response) = $this->getPollWithHttpInfo($topicId);
         return $response;
     }
 
     /**
-     * Operation forumGetPollWithHttpInfo
+     * Operation getPollWithHttpInfo
      *
      * @param  int $topicId The post id of the topic that has the poll. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetPollWithHttpInfo($topicId)
+    public function getPollWithHttpInfo($topicId)
     {
-        $request = $this->forumGetPollRequest($topicId);
+        $request = $this->getPollRequest($topicId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1068,7 +1082,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPollAsync
+     * Operation getPollAsync
      *
      * 
      *
@@ -1077,9 +1091,9 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetPollAsync($topicId)
+    public function getPollAsync($topicId)
     {
-        return $this->forumGetPollAsyncWithHttpInfo($topicId)
+        return $this->getPollAsyncWithHttpInfo($topicId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1088,7 +1102,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPollAsyncWithHttpInfo
+     * Operation getPollAsyncWithHttpInfo
      *
      * 
      *
@@ -1097,15 +1111,16 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetPollAsyncWithHttpInfo($topicId)
+    public function getPollAsyncWithHttpInfo($topicId)
     {
         $returnType = '\Bungie\Model\InlineResponse20010';
-        $request = $this->forumGetPollRequest($topicId);
+        $request = $this->getPollRequest($topicId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1120,6 +1135,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1137,19 +1153,19 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumGetPoll'
+     * Create request for operation 'getPoll'
      *
      * @param  int $topicId The post id of the topic that has the poll. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetPollRequest($topicId)
+    protected function getPollRequest($topicId)
     {
         // verify the required parameter 'topicId' is set
         if ($topicId === null || (is_array($topicId) && count($topicId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $topicId when calling forumGetPoll'
+                'Missing the required parameter $topicId when calling getPoll'
             );
         }
 
@@ -1240,34 +1256,36 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostAndParent
+     * Operation getPostAndParent
      *
      * @param  int $childPostId childPostId (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20010
      */
-    public function forumGetPostAndParent($childPostId, $showbanned = null)
+    public function getPostAndParent($childPostId, $showbanned = null)
     {
-        list($response) = $this->forumGetPostAndParentWithHttpInfo($childPostId, $showbanned);
+        list($response) = $this->getPostAndParentWithHttpInfo($childPostId, $showbanned);
         return $response;
     }
 
     /**
-     * Operation forumGetPostAndParentWithHttpInfo
+     * Operation getPostAndParentWithHttpInfo
      *
      * @param  int $childPostId (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetPostAndParentWithHttpInfo($childPostId, $showbanned = null)
+    public function getPostAndParentWithHttpInfo($childPostId, $showbanned = null)
     {
-        $request = $this->forumGetPostAndParentRequest($childPostId, $showbanned);
+        $request = $this->getPostAndParentRequest($childPostId, $showbanned);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1343,7 +1361,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostAndParentAsync
+     * Operation getPostAndParentAsync
      *
      * 
      *
@@ -1353,9 +1371,9 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetPostAndParentAsync($childPostId, $showbanned = null)
+    public function getPostAndParentAsync($childPostId, $showbanned = null)
     {
-        return $this->forumGetPostAndParentAsyncWithHttpInfo($childPostId, $showbanned)
+        return $this->getPostAndParentAsyncWithHttpInfo($childPostId, $showbanned)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1364,7 +1382,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostAndParentAsyncWithHttpInfo
+     * Operation getPostAndParentAsyncWithHttpInfo
      *
      * 
      *
@@ -1374,15 +1392,16 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetPostAndParentAsyncWithHttpInfo($childPostId, $showbanned = null)
+    public function getPostAndParentAsyncWithHttpInfo($childPostId, $showbanned = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20010';
-        $request = $this->forumGetPostAndParentRequest($childPostId, $showbanned);
+        $request = $this->getPostAndParentRequest($childPostId, $showbanned);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1397,6 +1416,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1414,7 +1434,7 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumGetPostAndParent'
+     * Create request for operation 'getPostAndParent'
      *
      * @param  int $childPostId (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
@@ -1422,12 +1442,12 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetPostAndParentRequest($childPostId, $showbanned = null)
+    protected function getPostAndParentRequest($childPostId, $showbanned = null)
     {
         // verify the required parameter 'childPostId' is set
         if ($childPostId === null || (is_array($childPostId) && count($childPostId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $childPostId when calling forumGetPostAndParent'
+                'Missing the required parameter $childPostId when calling getPostAndParent'
             );
         }
 
@@ -1522,34 +1542,36 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostAndParentAwaitingApproval
+     * Operation getPostAndParentAwaitingApproval
      *
      * @param  int $childPostId childPostId (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20010
      */
-    public function forumGetPostAndParentAwaitingApproval($childPostId, $showbanned = null)
+    public function getPostAndParentAwaitingApproval($childPostId, $showbanned = null)
     {
-        list($response) = $this->forumGetPostAndParentAwaitingApprovalWithHttpInfo($childPostId, $showbanned);
+        list($response) = $this->getPostAndParentAwaitingApprovalWithHttpInfo($childPostId, $showbanned);
         return $response;
     }
 
     /**
-     * Operation forumGetPostAndParentAwaitingApprovalWithHttpInfo
+     * Operation getPostAndParentAwaitingApprovalWithHttpInfo
      *
      * @param  int $childPostId (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetPostAndParentAwaitingApprovalWithHttpInfo($childPostId, $showbanned = null)
+    public function getPostAndParentAwaitingApprovalWithHttpInfo($childPostId, $showbanned = null)
     {
-        $request = $this->forumGetPostAndParentAwaitingApprovalRequest($childPostId, $showbanned);
+        $request = $this->getPostAndParentAwaitingApprovalRequest($childPostId, $showbanned);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1625,7 +1647,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostAndParentAwaitingApprovalAsync
+     * Operation getPostAndParentAwaitingApprovalAsync
      *
      * 
      *
@@ -1635,9 +1657,9 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetPostAndParentAwaitingApprovalAsync($childPostId, $showbanned = null)
+    public function getPostAndParentAwaitingApprovalAsync($childPostId, $showbanned = null)
     {
-        return $this->forumGetPostAndParentAwaitingApprovalAsyncWithHttpInfo($childPostId, $showbanned)
+        return $this->getPostAndParentAwaitingApprovalAsyncWithHttpInfo($childPostId, $showbanned)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1646,7 +1668,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostAndParentAwaitingApprovalAsyncWithHttpInfo
+     * Operation getPostAndParentAwaitingApprovalAsyncWithHttpInfo
      *
      * 
      *
@@ -1656,15 +1678,16 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetPostAndParentAwaitingApprovalAsyncWithHttpInfo($childPostId, $showbanned = null)
+    public function getPostAndParentAwaitingApprovalAsyncWithHttpInfo($childPostId, $showbanned = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20010';
-        $request = $this->forumGetPostAndParentAwaitingApprovalRequest($childPostId, $showbanned);
+        $request = $this->getPostAndParentAwaitingApprovalRequest($childPostId, $showbanned);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1679,6 +1702,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -1696,7 +1720,7 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumGetPostAndParentAwaitingApproval'
+     * Create request for operation 'getPostAndParentAwaitingApproval'
      *
      * @param  int $childPostId (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
@@ -1704,12 +1728,12 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetPostAndParentAwaitingApprovalRequest($childPostId, $showbanned = null)
+    protected function getPostAndParentAwaitingApprovalRequest($childPostId, $showbanned = null)
     {
         // verify the required parameter 'childPostId' is set
         if ($childPostId === null || (is_array($childPostId) && count($childPostId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $childPostId when calling forumGetPostAndParentAwaitingApproval'
+                'Missing the required parameter $childPostId when calling getPostAndParentAwaitingApproval'
             );
         }
 
@@ -1804,7 +1828,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostsThreadedPaged
+     * Operation getPostsThreadedPaged
      *
      * @param  bool $getParentPost getParentPost (required)
      * @param  int $page page (required)
@@ -1812,21 +1836,22 @@ class ForumApi
      * @param  int $parentPostId parentPostId (required)
      * @param  int $replySize replySize (required)
      * @param  bool $rootThreadMode rootThreadMode (required)
-     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode sortMode (required)
+     * @param  \Bungie\Model\Forum\ForumPostSortEnum $sortMode sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20010
      */
-    public function forumGetPostsThreadedPaged($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
+    public function getPostsThreadedPaged($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
     {
-        list($response) = $this->forumGetPostsThreadedPagedWithHttpInfo($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned);
+        list($response) = $this->getPostsThreadedPagedWithHttpInfo($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned);
         return $response;
     }
 
     /**
-     * Operation forumGetPostsThreadedPagedWithHttpInfo
+     * Operation getPostsThreadedPagedWithHttpInfo
      *
      * @param  bool $getParentPost (required)
      * @param  int $page (required)
@@ -1834,16 +1859,17 @@ class ForumApi
      * @param  int $parentPostId (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
+     * @param  \Bungie\Model\Forum\ForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetPostsThreadedPagedWithHttpInfo($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
+    public function getPostsThreadedPagedWithHttpInfo($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
     {
-        $request = $this->forumGetPostsThreadedPagedRequest($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned);
+        $request = $this->getPostsThreadedPagedRequest($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1919,7 +1945,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostsThreadedPagedAsync
+     * Operation getPostsThreadedPagedAsync
      *
      * 
      *
@@ -1929,15 +1955,15 @@ class ForumApi
      * @param  int $parentPostId (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
+     * @param  \Bungie\Model\Forum\ForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetPostsThreadedPagedAsync($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
+    public function getPostsThreadedPagedAsync($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
     {
-        return $this->forumGetPostsThreadedPagedAsyncWithHttpInfo($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned)
+        return $this->getPostsThreadedPagedAsyncWithHttpInfo($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1946,7 +1972,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostsThreadedPagedAsyncWithHttpInfo
+     * Operation getPostsThreadedPagedAsyncWithHttpInfo
      *
      * 
      *
@@ -1956,21 +1982,22 @@ class ForumApi
      * @param  int $parentPostId (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
+     * @param  \Bungie\Model\Forum\ForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetPostsThreadedPagedAsyncWithHttpInfo($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
+    public function getPostsThreadedPagedAsyncWithHttpInfo($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20010';
-        $request = $this->forumGetPostsThreadedPagedRequest($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned);
+        $request = $this->getPostsThreadedPagedRequest($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -1985,6 +2012,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -2002,7 +2030,7 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumGetPostsThreadedPaged'
+     * Create request for operation 'getPostsThreadedPaged'
      *
      * @param  bool $getParentPost (required)
      * @param  int $page (required)
@@ -2010,54 +2038,54 @@ class ForumApi
      * @param  int $parentPostId (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
+     * @param  \Bungie\Model\Forum\ForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetPostsThreadedPagedRequest($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
+    protected function getPostsThreadedPagedRequest($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
     {
         // verify the required parameter 'getParentPost' is set
         if ($getParentPost === null || (is_array($getParentPost) && count($getParentPost) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $getParentPost when calling forumGetPostsThreadedPaged'
+                'Missing the required parameter $getParentPost when calling getPostsThreadedPaged'
             );
         }
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling forumGetPostsThreadedPaged'
+                'Missing the required parameter $page when calling getPostsThreadedPaged'
             );
         }
         // verify the required parameter 'pageSize' is set
         if ($pageSize === null || (is_array($pageSize) && count($pageSize) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $pageSize when calling forumGetPostsThreadedPaged'
+                'Missing the required parameter $pageSize when calling getPostsThreadedPaged'
             );
         }
         // verify the required parameter 'parentPostId' is set
         if ($parentPostId === null || (is_array($parentPostId) && count($parentPostId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $parentPostId when calling forumGetPostsThreadedPaged'
+                'Missing the required parameter $parentPostId when calling getPostsThreadedPaged'
             );
         }
         // verify the required parameter 'replySize' is set
         if ($replySize === null || (is_array($replySize) && count($replySize) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $replySize when calling forumGetPostsThreadedPaged'
+                'Missing the required parameter $replySize when calling getPostsThreadedPaged'
             );
         }
         // verify the required parameter 'rootThreadMode' is set
         if ($rootThreadMode === null || (is_array($rootThreadMode) && count($rootThreadMode) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $rootThreadMode when calling forumGetPostsThreadedPaged'
+                'Missing the required parameter $rootThreadMode when calling getPostsThreadedPaged'
             );
         }
         // verify the required parameter 'sortMode' is set
         if ($sortMode === null || (is_array($sortMode) && count($sortMode) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sortMode when calling forumGetPostsThreadedPaged'
+                'Missing the required parameter $sortMode when calling getPostsThreadedPaged'
             );
         }
 
@@ -2200,44 +2228,46 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostsThreadedPagedFromChild
+     * Operation getPostsThreadedPagedFromChild
      *
      * @param  int $childPostId childPostId (required)
      * @param  int $page page (required)
      * @param  int $pageSize pageSize (required)
      * @param  int $replySize replySize (required)
      * @param  bool $rootThreadMode rootThreadMode (required)
-     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode sortMode (required)
+     * @param  \Bungie\Model\Forum\ForumPostSortEnum $sortMode sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20010
      */
-    public function forumGetPostsThreadedPagedFromChild($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
+    public function getPostsThreadedPagedFromChild($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
     {
-        list($response) = $this->forumGetPostsThreadedPagedFromChildWithHttpInfo($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned);
+        list($response) = $this->getPostsThreadedPagedFromChildWithHttpInfo($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned);
         return $response;
     }
 
     /**
-     * Operation forumGetPostsThreadedPagedFromChildWithHttpInfo
+     * Operation getPostsThreadedPagedFromChildWithHttpInfo
      *
      * @param  int $childPostId (required)
      * @param  int $page (required)
      * @param  int $pageSize (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
+     * @param  \Bungie\Model\Forum\ForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetPostsThreadedPagedFromChildWithHttpInfo($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
+    public function getPostsThreadedPagedFromChildWithHttpInfo($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
     {
-        $request = $this->forumGetPostsThreadedPagedFromChildRequest($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned);
+        $request = $this->getPostsThreadedPagedFromChildRequest($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2313,7 +2343,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostsThreadedPagedFromChildAsync
+     * Operation getPostsThreadedPagedFromChildAsync
      *
      * 
      *
@@ -2322,15 +2352,15 @@ class ForumApi
      * @param  int $pageSize (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
+     * @param  \Bungie\Model\Forum\ForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetPostsThreadedPagedFromChildAsync($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
+    public function getPostsThreadedPagedFromChildAsync($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
     {
-        return $this->forumGetPostsThreadedPagedFromChildAsyncWithHttpInfo($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned)
+        return $this->getPostsThreadedPagedFromChildAsyncWithHttpInfo($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2339,7 +2369,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetPostsThreadedPagedFromChildAsyncWithHttpInfo
+     * Operation getPostsThreadedPagedFromChildAsyncWithHttpInfo
      *
      * 
      *
@@ -2348,21 +2378,22 @@ class ForumApi
      * @param  int $pageSize (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
+     * @param  \Bungie\Model\Forum\ForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetPostsThreadedPagedFromChildAsyncWithHttpInfo($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
+    public function getPostsThreadedPagedFromChildAsyncWithHttpInfo($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20010';
-        $request = $this->forumGetPostsThreadedPagedFromChildRequest($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned);
+        $request = $this->getPostsThreadedPagedFromChildRequest($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -2377,6 +2408,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -2394,55 +2426,55 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumGetPostsThreadedPagedFromChild'
+     * Create request for operation 'getPostsThreadedPagedFromChild'
      *
      * @param  int $childPostId (required)
      * @param  int $page (required)
      * @param  int $pageSize (required)
      * @param  int $replySize (required)
      * @param  bool $rootThreadMode (required)
-     * @param  \Bungie\Model\ForumForumPostSortEnum $sortMode (required)
+     * @param  \Bungie\Model\Forum\ForumPostSortEnum $sortMode (required)
      * @param  string $showbanned If this value is not null or empty, banned posts are requested to be returned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetPostsThreadedPagedFromChildRequest($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
+    protected function getPostsThreadedPagedFromChildRequest($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned = null)
     {
         // verify the required parameter 'childPostId' is set
         if ($childPostId === null || (is_array($childPostId) && count($childPostId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $childPostId when calling forumGetPostsThreadedPagedFromChild'
+                'Missing the required parameter $childPostId when calling getPostsThreadedPagedFromChild'
             );
         }
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling forumGetPostsThreadedPagedFromChild'
+                'Missing the required parameter $page when calling getPostsThreadedPagedFromChild'
             );
         }
         // verify the required parameter 'pageSize' is set
         if ($pageSize === null || (is_array($pageSize) && count($pageSize) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $pageSize when calling forumGetPostsThreadedPagedFromChild'
+                'Missing the required parameter $pageSize when calling getPostsThreadedPagedFromChild'
             );
         }
         // verify the required parameter 'replySize' is set
         if ($replySize === null || (is_array($replySize) && count($replySize) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $replySize when calling forumGetPostsThreadedPagedFromChild'
+                'Missing the required parameter $replySize when calling getPostsThreadedPagedFromChild'
             );
         }
         // verify the required parameter 'rootThreadMode' is set
         if ($rootThreadMode === null || (is_array($rootThreadMode) && count($rootThreadMode) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $rootThreadMode when calling forumGetPostsThreadedPagedFromChild'
+                'Missing the required parameter $rootThreadMode when calling getPostsThreadedPagedFromChild'
             );
         }
         // verify the required parameter 'sortMode' is set
         if ($sortMode === null || (is_array($sortMode) && count($sortMode) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sortMode when calling forumGetPostsThreadedPagedFromChild'
+                'Missing the required parameter $sortMode when calling getPostsThreadedPagedFromChild'
             );
         }
 
@@ -2577,32 +2609,34 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetRecruitmentThreadSummaries
+     * Operation getRecruitmentThreadSummaries
      *
-     * @param  int[] $requestBody requestBody (required)
+     * @param  \Bungie\Model\int[] $requestBody requestBody (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20015
      */
-    public function forumGetRecruitmentThreadSummaries($requestBody)
+    public function getRecruitmentThreadSummaries($requestBody)
     {
-        list($response) = $this->forumGetRecruitmentThreadSummariesWithHttpInfo($requestBody);
+        list($response) = $this->getRecruitmentThreadSummariesWithHttpInfo($requestBody);
         return $response;
     }
 
     /**
-     * Operation forumGetRecruitmentThreadSummariesWithHttpInfo
+     * Operation getRecruitmentThreadSummariesWithHttpInfo
      *
-     * @param  int[] $requestBody (required)
+     * @param  \Bungie\Model\int[] $requestBody (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetRecruitmentThreadSummariesWithHttpInfo($requestBody)
+    public function getRecruitmentThreadSummariesWithHttpInfo($requestBody)
     {
-        $request = $this->forumGetRecruitmentThreadSummariesRequest($requestBody);
+        $request = $this->getRecruitmentThreadSummariesRequest($requestBody);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2678,18 +2712,18 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetRecruitmentThreadSummariesAsync
+     * Operation getRecruitmentThreadSummariesAsync
      *
      * 
      *
-     * @param  int[] $requestBody (required)
+     * @param  \Bungie\Model\int[] $requestBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetRecruitmentThreadSummariesAsync($requestBody)
+    public function getRecruitmentThreadSummariesAsync($requestBody)
     {
-        return $this->forumGetRecruitmentThreadSummariesAsyncWithHttpInfo($requestBody)
+        return $this->getRecruitmentThreadSummariesAsyncWithHttpInfo($requestBody)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2698,24 +2732,25 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetRecruitmentThreadSummariesAsyncWithHttpInfo
+     * Operation getRecruitmentThreadSummariesAsyncWithHttpInfo
      *
      * 
      *
-     * @param  int[] $requestBody (required)
+     * @param  \Bungie\Model\int[] $requestBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetRecruitmentThreadSummariesAsyncWithHttpInfo($requestBody)
+    public function getRecruitmentThreadSummariesAsyncWithHttpInfo($requestBody)
     {
         $returnType = '\Bungie\Model\InlineResponse20015';
-        $request = $this->forumGetRecruitmentThreadSummariesRequest($requestBody);
+        $request = $this->getRecruitmentThreadSummariesRequest($requestBody);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -2730,6 +2765,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -2747,19 +2783,19 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumGetRecruitmentThreadSummaries'
+     * Create request for operation 'getRecruitmentThreadSummaries'
      *
-     * @param  int[] $requestBody (required)
+     * @param  \Bungie\Model\int[] $requestBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetRecruitmentThreadSummariesRequest($requestBody)
+    protected function getRecruitmentThreadSummariesRequest($requestBody)
     {
         // verify the required parameter 'requestBody' is set
         if ($requestBody === null || (is_array($requestBody) && count($requestBody) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $requestBody when calling forumGetRecruitmentThreadSummaries'
+                'Missing the required parameter $requestBody when calling getRecruitmentThreadSummaries'
             );
         }
 
@@ -2845,32 +2881,34 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetTopicForContent
+     * Operation getTopicForContent
      *
      * @param  int $contentId contentId (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20011
      */
-    public function forumGetTopicForContent($contentId)
+    public function getTopicForContent($contentId)
     {
-        list($response) = $this->forumGetTopicForContentWithHttpInfo($contentId);
+        list($response) = $this->getTopicForContentWithHttpInfo($contentId);
         return $response;
     }
 
     /**
-     * Operation forumGetTopicForContentWithHttpInfo
+     * Operation getTopicForContentWithHttpInfo
      *
      * @param  int $contentId (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetTopicForContentWithHttpInfo($contentId)
+    public function getTopicForContentWithHttpInfo($contentId)
     {
-        $request = $this->forumGetTopicForContentRequest($contentId);
+        $request = $this->getTopicForContentRequest($contentId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2946,7 +2984,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetTopicForContentAsync
+     * Operation getTopicForContentAsync
      *
      * 
      *
@@ -2955,9 +2993,9 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetTopicForContentAsync($contentId)
+    public function getTopicForContentAsync($contentId)
     {
-        return $this->forumGetTopicForContentAsyncWithHttpInfo($contentId)
+        return $this->getTopicForContentAsyncWithHttpInfo($contentId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2966,7 +3004,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetTopicForContentAsyncWithHttpInfo
+     * Operation getTopicForContentAsyncWithHttpInfo
      *
      * 
      *
@@ -2975,15 +3013,16 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetTopicForContentAsyncWithHttpInfo($contentId)
+    public function getTopicForContentAsyncWithHttpInfo($contentId)
     {
         $returnType = '\Bungie\Model\InlineResponse20011';
-        $request = $this->forumGetTopicForContentRequest($contentId);
+        $request = $this->getTopicForContentRequest($contentId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -2998,6 +3037,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -3015,19 +3055,19 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumGetTopicForContent'
+     * Create request for operation 'getTopicForContent'
      *
      * @param  int $contentId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetTopicForContentRequest($contentId)
+    protected function getTopicForContentRequest($contentId)
     {
         // verify the required parameter 'contentId' is set
         if ($contentId === null || (is_array($contentId) && count($contentId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $contentId when calling forumGetTopicForContent'
+                'Missing the required parameter $contentId when calling getTopicForContent'
             );
         }
 
@@ -3118,46 +3158,48 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetTopicsPaged
+     * Operation getTopicsPaged
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
-     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate A date filter. (required)
-     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate A date filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      * @param  string $tagstring The tags to search, if any. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20010
      */
-    public function forumGetTopicsPaged($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales = null, $tagstring = null)
+    public function getTopicsPaged($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales = null, $tagstring = null)
     {
-        list($response) = $this->forumGetTopicsPagedWithHttpInfo($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring);
+        list($response) = $this->getTopicsPagedWithHttpInfo($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring);
         return $response;
     }
 
     /**
-     * Operation forumGetTopicsPagedWithHttpInfo
+     * Operation getTopicsPagedWithHttpInfo
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
-     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate A date filter. (required)
-     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate A date filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      * @param  string $tagstring The tags to search, if any. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumGetTopicsPagedWithHttpInfo($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales = null, $tagstring = null)
+    public function getTopicsPagedWithHttpInfo($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales = null, $tagstring = null)
     {
-        $request = $this->forumGetTopicsPagedRequest($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring);
+        $request = $this->getTopicsPagedRequest($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3233,25 +3275,25 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetTopicsPagedAsync
+     * Operation getTopicsPagedAsync
      *
      * 
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
-     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate A date filter. (required)
-     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate A date filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      * @param  string $tagstring The tags to search, if any. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetTopicsPagedAsync($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales = null, $tagstring = null)
+    public function getTopicsPagedAsync($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales = null, $tagstring = null)
     {
-        return $this->forumGetTopicsPagedAsyncWithHttpInfo($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring)
+        return $this->getTopicsPagedAsyncWithHttpInfo($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3260,31 +3302,32 @@ class ForumApi
     }
 
     /**
-     * Operation forumGetTopicsPagedAsyncWithHttpInfo
+     * Operation getTopicsPagedAsyncWithHttpInfo
      *
      * 
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
-     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate A date filter. (required)
-     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate A date filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      * @param  string $tagstring The tags to search, if any. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumGetTopicsPagedAsyncWithHttpInfo($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales = null, $tagstring = null)
+    public function getTopicsPagedAsyncWithHttpInfo($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales = null, $tagstring = null)
     {
         $returnType = '\Bungie\Model\InlineResponse20010';
-        $request = $this->forumGetTopicsPagedRequest($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring);
+        $request = $this->getTopicsPagedRequest($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -3299,6 +3342,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -3316,56 +3360,56 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumGetTopicsPaged'
+     * Create request for operation 'getTopicsPaged'
      *
-     * @param  \Bungie\Model\ForumForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
-     * @param  \Bungie\Model\ForumForumTopicsQuickDateEnum $quickDate A date filter. (required)
-     * @param  \Bungie\Model\ForumForumTopicsSortEnum $sort The sort mode. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate A date filter. (required)
+     * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
      * @param  string $locales Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; (optional)
      * @param  string $tagstring The tags to search, if any. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumGetTopicsPagedRequest($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales = null, $tagstring = null)
+    protected function getTopicsPagedRequest($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales = null, $tagstring = null)
     {
         // verify the required parameter 'categoryFilter' is set
         if ($categoryFilter === null || (is_array($categoryFilter) && count($categoryFilter) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $categoryFilter when calling forumGetTopicsPaged'
+                'Missing the required parameter $categoryFilter when calling getTopicsPaged'
             );
         }
         // verify the required parameter 'group' is set
         if ($group === null || (is_array($group) && count($group) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $group when calling forumGetTopicsPaged'
+                'Missing the required parameter $group when calling getTopicsPaged'
             );
         }
         // verify the required parameter 'page' is set
         if ($page === null || (is_array($page) && count($page) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $page when calling forumGetTopicsPaged'
+                'Missing the required parameter $page when calling getTopicsPaged'
             );
         }
         // verify the required parameter 'pageSize' is set
         if ($pageSize === null || (is_array($pageSize) && count($pageSize) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $pageSize when calling forumGetTopicsPaged'
+                'Missing the required parameter $pageSize when calling getTopicsPaged'
             );
         }
         // verify the required parameter 'quickDate' is set
         if ($quickDate === null || (is_array($quickDate) && count($quickDate) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $quickDate when calling forumGetTopicsPaged'
+                'Missing the required parameter $quickDate when calling getTopicsPaged'
             );
         }
         // verify the required parameter 'sort' is set
         if ($sort === null || (is_array($sort) && count($sort) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $sort when calling forumGetTopicsPaged'
+                'Missing the required parameter $sort when calling getTopicsPaged'
             );
         }
 
@@ -3504,32 +3548,34 @@ class ForumApi
     }
 
     /**
-     * Operation forumJoinFireteamThread
+     * Operation joinFireteamThread
      *
      * @param  int $topicId The post id of the recruitment topic you wish to join. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20013
      */
-    public function forumJoinFireteamThread($topicId)
+    public function joinFireteamThread($topicId)
     {
-        list($response) = $this->forumJoinFireteamThreadWithHttpInfo($topicId);
+        list($response) = $this->joinFireteamThreadWithHttpInfo($topicId);
         return $response;
     }
 
     /**
-     * Operation forumJoinFireteamThreadWithHttpInfo
+     * Operation joinFireteamThreadWithHttpInfo
      *
      * @param  int $topicId The post id of the recruitment topic you wish to join. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumJoinFireteamThreadWithHttpInfo($topicId)
+    public function joinFireteamThreadWithHttpInfo($topicId)
     {
-        $request = $this->forumJoinFireteamThreadRequest($topicId);
+        $request = $this->joinFireteamThreadRequest($topicId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3605,7 +3651,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumJoinFireteamThreadAsync
+     * Operation joinFireteamThreadAsync
      *
      * 
      *
@@ -3614,9 +3660,9 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumJoinFireteamThreadAsync($topicId)
+    public function joinFireteamThreadAsync($topicId)
     {
-        return $this->forumJoinFireteamThreadAsyncWithHttpInfo($topicId)
+        return $this->joinFireteamThreadAsyncWithHttpInfo($topicId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3625,7 +3671,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumJoinFireteamThreadAsyncWithHttpInfo
+     * Operation joinFireteamThreadAsyncWithHttpInfo
      *
      * 
      *
@@ -3634,15 +3680,16 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumJoinFireteamThreadAsyncWithHttpInfo($topicId)
+    public function joinFireteamThreadAsyncWithHttpInfo($topicId)
     {
         $returnType = '\Bungie\Model\InlineResponse20013';
-        $request = $this->forumJoinFireteamThreadRequest($topicId);
+        $request = $this->joinFireteamThreadRequest($topicId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -3657,6 +3704,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -3674,19 +3722,19 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumJoinFireteamThread'
+     * Create request for operation 'joinFireteamThread'
      *
      * @param  int $topicId The post id of the recruitment topic you wish to join. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumJoinFireteamThreadRequest($topicId)
+    protected function joinFireteamThreadRequest($topicId)
     {
         // verify the required parameter 'topicId' is set
         if ($topicId === null || (is_array($topicId) && count($topicId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $topicId when calling forumJoinFireteamThread'
+                'Missing the required parameter $topicId when calling joinFireteamThread'
             );
         }
 
@@ -3781,34 +3829,36 @@ class ForumApi
     }
 
     /**
-     * Operation forumKickBanFireteamApplicant
+     * Operation kickBanFireteamApplicant
      *
      * @param  int $targetMembershipId The id of the user you wish to kick. (required)
      * @param  int $topicId The post id of the recruitment topic you wish to join. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20013
      */
-    public function forumKickBanFireteamApplicant($targetMembershipId, $topicId)
+    public function kickBanFireteamApplicant($targetMembershipId, $topicId)
     {
-        list($response) = $this->forumKickBanFireteamApplicantWithHttpInfo($targetMembershipId, $topicId);
+        list($response) = $this->kickBanFireteamApplicantWithHttpInfo($targetMembershipId, $topicId);
         return $response;
     }
 
     /**
-     * Operation forumKickBanFireteamApplicantWithHttpInfo
+     * Operation kickBanFireteamApplicantWithHttpInfo
      *
      * @param  int $targetMembershipId The id of the user you wish to kick. (required)
      * @param  int $topicId The post id of the recruitment topic you wish to join. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumKickBanFireteamApplicantWithHttpInfo($targetMembershipId, $topicId)
+    public function kickBanFireteamApplicantWithHttpInfo($targetMembershipId, $topicId)
     {
-        $request = $this->forumKickBanFireteamApplicantRequest($targetMembershipId, $topicId);
+        $request = $this->kickBanFireteamApplicantRequest($targetMembershipId, $topicId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3884,7 +3934,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumKickBanFireteamApplicantAsync
+     * Operation kickBanFireteamApplicantAsync
      *
      * 
      *
@@ -3894,9 +3944,9 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumKickBanFireteamApplicantAsync($targetMembershipId, $topicId)
+    public function kickBanFireteamApplicantAsync($targetMembershipId, $topicId)
     {
-        return $this->forumKickBanFireteamApplicantAsyncWithHttpInfo($targetMembershipId, $topicId)
+        return $this->kickBanFireteamApplicantAsyncWithHttpInfo($targetMembershipId, $topicId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3905,7 +3955,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumKickBanFireteamApplicantAsyncWithHttpInfo
+     * Operation kickBanFireteamApplicantAsyncWithHttpInfo
      *
      * 
      *
@@ -3915,15 +3965,16 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumKickBanFireteamApplicantAsyncWithHttpInfo($targetMembershipId, $topicId)
+    public function kickBanFireteamApplicantAsyncWithHttpInfo($targetMembershipId, $topicId)
     {
         $returnType = '\Bungie\Model\InlineResponse20013';
-        $request = $this->forumKickBanFireteamApplicantRequest($targetMembershipId, $topicId);
+        $request = $this->kickBanFireteamApplicantRequest($targetMembershipId, $topicId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -3938,6 +3989,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -3955,7 +4007,7 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumKickBanFireteamApplicant'
+     * Create request for operation 'kickBanFireteamApplicant'
      *
      * @param  int $targetMembershipId The id of the user you wish to kick. (required)
      * @param  int $topicId The post id of the recruitment topic you wish to join. (required)
@@ -3963,18 +4015,18 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumKickBanFireteamApplicantRequest($targetMembershipId, $topicId)
+    protected function kickBanFireteamApplicantRequest($targetMembershipId, $topicId)
     {
         // verify the required parameter 'targetMembershipId' is set
         if ($targetMembershipId === null || (is_array($targetMembershipId) && count($targetMembershipId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $targetMembershipId when calling forumKickBanFireteamApplicant'
+                'Missing the required parameter $targetMembershipId when calling kickBanFireteamApplicant'
             );
         }
         // verify the required parameter 'topicId' is set
         if ($topicId === null || (is_array($topicId) && count($topicId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $topicId when calling forumKickBanFireteamApplicant'
+                'Missing the required parameter $topicId when calling kickBanFireteamApplicant'
             );
         }
 
@@ -4077,32 +4129,34 @@ class ForumApi
     }
 
     /**
-     * Operation forumLeaveFireteamThread
+     * Operation leaveFireteamThread
      *
      * @param  int $topicId The post id of the recruitment topic you wish to leave. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return \Bungie\Model\InlineResponse20013
      */
-    public function forumLeaveFireteamThread($topicId)
+    public function leaveFireteamThread($topicId)
     {
-        list($response) = $this->forumLeaveFireteamThreadWithHttpInfo($topicId);
+        list($response) = $this->leaveFireteamThreadWithHttpInfo($topicId);
         return $response;
     }
 
     /**
-     * Operation forumLeaveFireteamThreadWithHttpInfo
+     * Operation leaveFireteamThreadWithHttpInfo
      *
      * @param  int $topicId The post id of the recruitment topic you wish to leave. (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return array of \Bungie\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
      */
-    public function forumLeaveFireteamThreadWithHttpInfo($topicId)
+    public function leaveFireteamThreadWithHttpInfo($topicId)
     {
-        $request = $this->forumLeaveFireteamThreadRequest($topicId);
+        $request = $this->leaveFireteamThreadRequest($topicId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4178,7 +4232,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumLeaveFireteamThreadAsync
+     * Operation leaveFireteamThreadAsync
      *
      * 
      *
@@ -4187,9 +4241,9 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumLeaveFireteamThreadAsync($topicId)
+    public function leaveFireteamThreadAsync($topicId)
     {
-        return $this->forumLeaveFireteamThreadAsyncWithHttpInfo($topicId)
+        return $this->leaveFireteamThreadAsyncWithHttpInfo($topicId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4198,7 +4252,7 @@ class ForumApi
     }
 
     /**
-     * Operation forumLeaveFireteamThreadAsyncWithHttpInfo
+     * Operation leaveFireteamThreadAsyncWithHttpInfo
      *
      * 
      *
@@ -4207,15 +4261,16 @@ class ForumApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function forumLeaveFireteamThreadAsyncWithHttpInfo($topicId)
+    public function leaveFireteamThreadAsyncWithHttpInfo($topicId)
     {
         $returnType = '\Bungie\Model\InlineResponse20013';
-        $request = $this->forumLeaveFireteamThreadRequest($topicId);
+        $request = $this->leaveFireteamThreadRequest($topicId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
+                    /** @var \Psr\Http\Message\ResponseInterface $response */
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
@@ -4230,6 +4285,7 @@ class ForumApi
                     ];
                 },
                 function ($exception) {
+                    /** @var \GuzzleHttp\Exception\RequestException $exception */
                     $response = $exception->getResponse();
                     $statusCode = $response->getStatusCode();
                     throw new ApiException(
@@ -4247,19 +4303,19 @@ class ForumApi
     }
 
     /**
-     * Create request for operation 'forumLeaveFireteamThread'
+     * Create request for operation 'leaveFireteamThread'
      *
      * @param  int $topicId The post id of the recruitment topic you wish to leave. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function forumLeaveFireteamThreadRequest($topicId)
+    protected function leaveFireteamThreadRequest($topicId)
     {
         // verify the required parameter 'topicId' is set
         if ($topicId === null || (is_array($topicId) && count($topicId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $topicId when calling forumLeaveFireteamThread'
+                'Missing the required parameter $topicId when calling leaveFireteamThread'
             );
         }
 

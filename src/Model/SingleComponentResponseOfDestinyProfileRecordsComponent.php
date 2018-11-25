@@ -40,7 +40,7 @@ use \Bungie\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SingleComponentResponseOfDestinyProfileRecordsComponent implements ModelInterface, ArrayAccess
+class SingleComponentResponseOfDestinyProfileRecordsComponent implements \Bungie\Model\ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,8 +57,8 @@ class SingleComponentResponseOfDestinyProfileRecordsComponent implements ModelIn
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Bungie\Model\DestinyComponentsRecordsDestinyProfileRecordsComponent',
-        'privacy' => '\Bungie\Model\ComponentsComponentPrivacySetting'
+        'data' => '\Bungie\Model\Destiny\Components\Records\DestinyProfileRecordsComponent',
+        'privacy' => '\Bungie\Model\Components\ComponentPrivacySetting'
     ];
 
     /**
@@ -213,7 +213,7 @@ class SingleComponentResponseOfDestinyProfileRecordsComponent implements ModelIn
     /**
      * Gets data
      *
-     * @return \Bungie\Model\DestinyComponentsRecordsDestinyProfileRecordsComponent|null
+     * @return \Bungie\Model\Destiny\Components\Records\DestinyProfileRecordsComponent|null
      */
     public function getData()
     {
@@ -223,7 +223,7 @@ class SingleComponentResponseOfDestinyProfileRecordsComponent implements ModelIn
     /**
      * Sets data
      *
-     * @param \Bungie\Model\DestinyComponentsRecordsDestinyProfileRecordsComponent|null $data data
+     * @param \Bungie\Model\Destiny\Components\Records\DestinyProfileRecordsComponent|null $data data
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class SingleComponentResponseOfDestinyProfileRecordsComponent implements ModelIn
     /**
      * Gets privacy
      *
-     * @return \Bungie\Model\ComponentsComponentPrivacySetting|null
+     * @return \Bungie\Model\Components\ComponentPrivacySetting|null
      */
     public function getPrivacy()
     {
@@ -247,7 +247,7 @@ class SingleComponentResponseOfDestinyProfileRecordsComponent implements ModelIn
     /**
      * Sets privacy
      *
-     * @param \Bungie\Model\ComponentsComponentPrivacySetting|null $privacy privacy
+     * @param \Bungie\Model\Components\ComponentPrivacySetting|null $privacy privacy
      *
      * @return $this
      */
