@@ -63,10 +63,10 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
         'overrideStyleItemHash' => 'int',
         'quantity' => 'int',
         'saleStatus' => '\Bungie\Model\Destiny\VendorItemStatus',
-        'costs' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]',
-        'requiredUnlocks' => '\Bungie\Model\int[]',
-        'unlockStatuses' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyUnlockStatus[]',
-        'failureIndexes' => '\Bungie\Model\int[]',
+        'costs' => '\Bungie\Model\Destiny\DestinyItemQuantity[]',
+        'requiredUnlocks' => 'int[]',
+        'unlockStatuses' => '\Bungie\Model\Destiny\DestinyUnlockStatus[]',
+        'failureIndexes' => 'int[]',
         'augments' => '\Bungie\Model\Destiny\DestinyVendorItemState',
         'overrideNextRefreshDate' => '\DateTime'
     ];
@@ -388,7 +388,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets costs
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null
+     * @return \Bungie\Model\Destiny\DestinyItemQuantity[]|null
      */
     public function getCosts()
     {
@@ -398,7 +398,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets costs
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null $costs A summary of the current costs of the item.
+     * @param \Bungie\Model\Destiny\DestinyItemQuantity[]|null $costs A summary of the current costs of the item.
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets requiredUnlocks
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getRequiredUnlocks()
     {
@@ -422,7 +422,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets requiredUnlocks
      *
-     * @param \Bungie\Model\int[]|null $requiredUnlocks If you can't buy the item due to a complex character state, these will be hashes for DestinyUnlockDefinitions that you can check to see messages regarding the failure (if the unlocks have human readable information: it is not guaranteed that Unlocks will have human readable strings, and your application will have to handle that)  Prefer using failureIndexes instead. These are provided for informational purposes, but have largely been supplanted by failureIndexes.
+     * @param int[]|null $requiredUnlocks If you can't buy the item due to a complex character state, these will be hashes for DestinyUnlockDefinitions that you can check to see messages regarding the failure (if the unlocks have human readable information: it is not guaranteed that Unlocks will have human readable strings, and your application will have to handle that)  Prefer using failureIndexes instead. These are provided for informational purposes, but have largely been supplanted by failureIndexes.
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets unlockStatuses
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyUnlockStatus[]|null
+     * @return \Bungie\Model\Destiny\DestinyUnlockStatus[]|null
      */
     public function getUnlockStatuses()
     {
@@ -446,7 +446,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets unlockStatuses
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyUnlockStatus[]|null $unlockStatuses If any complex unlock states are checked in determining purchasability, these will be returned here along with the status of the unlock check.  Prefer using failureIndexes instead. These are provided for informational purposes, but have largely been supplanted by failureIndexes.
+     * @param \Bungie\Model\Destiny\DestinyUnlockStatus[]|null $unlockStatuses If any complex unlock states are checked in determining purchasability, these will be returned here along with the status of the unlock check.  Prefer using failureIndexes instead. These are provided for informational purposes, but have largely been supplanted by failureIndexes.
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets failureIndexes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getFailureIndexes()
     {
@@ -470,7 +470,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets failureIndexes
      *
-     * @param \Bungie\Model\int[]|null $failureIndexes Indexes in to the \"failureStrings\" lookup table in DestinyVendorDefinition for the given Vendor. Gives some more reliable failure information for why you can't purchase an item.  It is preferred to use these over requiredUnlocks and unlockStatuses: the latter are provided mostly in case someone can do something interesting with it that I didn't anticipate.
+     * @param int[]|null $failureIndexes Indexes in to the \"failureStrings\" lookup table in DestinyVendorDefinition for the given Vendor. Gives some more reliable failure information for why you can't purchase an item.  It is preferred to use these over requiredUnlocks and unlockStatuses: the latter are provided mostly in case someone can do something interesting with it that I didn't anticipate.
      *
      * @return $this
      */

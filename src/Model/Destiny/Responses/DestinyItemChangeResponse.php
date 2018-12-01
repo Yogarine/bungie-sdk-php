@@ -58,8 +58,8 @@ class DestinyItemChangeResponse implements \Bungie\Model\ModelInterface, ArrayAc
       */
     protected static $openAPITypes = [
         'item' => '\Bungie\Model\Destiny\Responses\DestinyItemResponse',
-        'addedInventoryItems' => '\Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]',
-        'removedInventoryItems' => '\Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]'
+        'addedInventoryItems' => '\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]',
+        'removedInventoryItems' => '\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]'
     ];
 
     /**
@@ -243,7 +243,7 @@ class DestinyItemChangeResponse implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets addedInventoryItems
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null
+     * @return \Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null
      */
     public function getAddedInventoryItems()
     {
@@ -253,7 +253,7 @@ class DestinyItemChangeResponse implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets addedInventoryItems
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null $addedInventoryItems Items that appeared in the inventory possibly as a result of an action.
+     * @param \Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null $addedInventoryItems Items that appeared in the inventory possibly as a result of an action.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class DestinyItemChangeResponse implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets removedInventoryItems
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null
+     * @return \Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null
      */
     public function getRemovedInventoryItems()
     {
@@ -277,7 +277,7 @@ class DestinyItemChangeResponse implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets removedInventoryItems
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null $removedInventoryItems Items that disappeared from the inventory possibly as a result of an action.
+     * @param \Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null $removedInventoryItems Items that disappeared from the inventory possibly as a result of an action.
      *
      * @return $this
      */

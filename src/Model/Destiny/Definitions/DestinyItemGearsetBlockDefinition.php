@@ -59,7 +59,7 @@ class DestinyItemGearsetBlockDefinition implements \Bungie\Model\ModelInterface,
       */
     protected static $openAPITypes = [
         'trackingValueMax' => 'int',
-        'itemList' => '\Bungie\Model\int[]'
+        'itemList' => 'int[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyItemGearsetBlockDefinition implements \Bungie\Model\ModelInterface,
     /**
      * Gets itemList
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getItemList()
     {
@@ -248,7 +248,7 @@ class DestinyItemGearsetBlockDefinition implements \Bungie\Model\ModelInterface,
     /**
      * Sets itemList
      *
-     * @param \Bungie\Model\int[]|null $itemList The list of hashes for items in the gearset. Use them to look up DestinyInventoryItemDefinition entries for the items in the set.
+     * @param int[]|null $itemList The list of hashes for items in the gearset. Use them to look up DestinyInventoryItemDefinition entries for the items in the set.
      *
      * @return $this
      */

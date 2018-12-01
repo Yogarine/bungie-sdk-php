@@ -64,7 +64,7 @@ class DestinyActivityModeDefinition implements \Bungie\Model\ModelInterface, Arr
         'activityModeCategory' => '\Bungie\Model\Destiny\DestinyActivityModeCategory',
         'isTeamBased' => 'bool',
         'isAggregateMode' => 'bool',
-        'parentHashes' => '\Bungie\Model\int[]',
+        'parentHashes' => 'int[]',
         'friendlyName' => 'string',
         'activityModeMappings' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType]',
         'display' => 'bool',
@@ -430,7 +430,7 @@ class DestinyActivityModeDefinition implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets parentHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getParentHashes()
     {
@@ -440,7 +440,7 @@ class DestinyActivityModeDefinition implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets parentHashes
      *
-     * @param \Bungie\Model\int[]|null $parentHashes The hash identifiers of the DestinyActivityModeDefinitions that represent all of the \"parent\" modes for this mode. For instance, the Nightfall Mode is also a member of AllStrikes and AllPvE.
+     * @param int[]|null $parentHashes The hash identifiers of the DestinyActivityModeDefinitions that represent all of the \"parent\" modes for this mode. For instance, the Nightfall Mode is also a member of AllStrikes and AllPvE.
      *
      * @return $this
      */

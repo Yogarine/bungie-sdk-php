@@ -58,7 +58,7 @@ class DestinyItemObjectivesComponent implements \Bungie\Model\ModelInterface, Ar
       * @var string[]
       */
     protected static $openAPITypes = [
-        'objectives' => '\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]',
+        'objectives' => '\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]',
         'flavorObjective' => '\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress',
         'dateCompleted' => '\DateTime'
     ];
@@ -220,7 +220,7 @@ class DestinyItemObjectivesComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets objectives
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null
+     * @return \Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null
      */
     public function getObjectives()
     {
@@ -230,7 +230,7 @@ class DestinyItemObjectivesComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets objectives
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null $objectives If the item has a hard association with objectives, your progress on them will be defined here.   Objectives are our standard way to describe a series of tasks that have to be completed for a reward.
+     * @param \Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null $objectives If the item has a hard association with objectives, your progress on them will be defined here.   Objectives are our standard way to describe a series of tasks that have to be completed for a reward.
      *
      * @return $this
      */

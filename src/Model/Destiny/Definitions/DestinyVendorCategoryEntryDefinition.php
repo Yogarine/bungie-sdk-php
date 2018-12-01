@@ -70,7 +70,7 @@ class DestinyVendorCategoryEntryDefinition implements \Bungie\Model\ModelInterfa
         'disabledDescription' => 'string',
         'displayTitle' => 'string',
         'overlay' => '\Bungie\Model\Destiny\Definitions\DestinyVendorCategoryOverlayDefinition',
-        'vendorItemIndexes' => '\Bungie\Model\int[]',
+        'vendorItemIndexes' => 'int[]',
         'isPreview' => 'bool',
         'isDisplayOnly' => 'bool',
         'resetIntervalMinutesOverride' => 'int',
@@ -592,7 +592,7 @@ class DestinyVendorCategoryEntryDefinition implements \Bungie\Model\ModelInterfa
     /**
      * Gets vendorItemIndexes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getVendorItemIndexes()
     {
@@ -602,7 +602,7 @@ class DestinyVendorCategoryEntryDefinition implements \Bungie\Model\ModelInterfa
     /**
      * Sets vendorItemIndexes
      *
-     * @param \Bungie\Model\int[]|null $vendorItemIndexes A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime.
+     * @param int[]|null $vendorItemIndexes A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime.
      *
      * @return $this
      */

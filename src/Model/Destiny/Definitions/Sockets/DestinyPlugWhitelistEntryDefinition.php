@@ -60,7 +60,7 @@ class DestinyPlugWhitelistEntryDefinition implements \Bungie\Model\ModelInterfac
     protected static $openAPITypes = [
         'categoryHash' => 'int',
         'categoryIdentifier' => 'string',
-        'reinitializationPossiblePlugHashes' => '\Bungie\Model\int[]'
+        'reinitializationPossiblePlugHashes' => 'int[]'
     ];
 
     /**
@@ -268,7 +268,7 @@ class DestinyPlugWhitelistEntryDefinition implements \Bungie\Model\ModelInterfac
     /**
      * Gets reinitializationPossiblePlugHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getReinitializationPossiblePlugHashes()
     {
@@ -278,7 +278,7 @@ class DestinyPlugWhitelistEntryDefinition implements \Bungie\Model\ModelInterfac
     /**
      * Sets reinitializationPossiblePlugHashes
      *
-     * @param \Bungie\Model\int[]|null $reinitializationPossiblePlugHashes The list of all plug items (DestinyInventoryItemDefinition) that the socket may randomly be populated with when reinitialized.  Which ones you should actually show are determined by the plug being inserted into the socket, and the socket’s type.  When you inspect the plug that could go into a Masterwork Socket, look up the socket type of the socket being inspected and find the DestinySocketTypeDefinition.  Then, look at the Plugs that can fit in that socket. Find the Whitelist in the DestinySocketTypeDefinition that matches the plug item’s categoryhash.  That whitelist entry will potentially have a new “reinitializationPossiblePlugHashes” property.If it does, that means we know what it will roll if you try to insert this plug into this socket.
+     * @param int[]|null $reinitializationPossiblePlugHashes The list of all plug items (DestinyInventoryItemDefinition) that the socket may randomly be populated with when reinitialized.  Which ones you should actually show are determined by the plug being inserted into the socket, and the socket’s type.  When you inspect the plug that could go into a Masterwork Socket, look up the socket type of the socket being inspected and find the DestinySocketTypeDefinition.  Then, look at the Plugs that can fit in that socket. Find the Whitelist in the DestinySocketTypeDefinition that matches the plug item’s categoryhash.  That whitelist entry will potentially have a new “reinitializationPossiblePlugHashes” property.If it does, that means we know what it will roll if you try to insert this plug into this socket.
      *
      * @return $this
      */

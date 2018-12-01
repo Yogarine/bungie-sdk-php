@@ -2611,7 +2611,7 @@ class ForumApi
     /**
      * Operation getRecruitmentThreadSummaries
      *
-     * @param  \Bungie\Model\int[] $requestBody requestBody (required)
+     * @param  int[] $requestBody requestBody (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2627,7 +2627,7 @@ class ForumApi
     /**
      * Operation getRecruitmentThreadSummariesWithHttpInfo
      *
-     * @param  \Bungie\Model\int[] $requestBody (required)
+     * @param  int[] $requestBody (required)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2716,7 +2716,7 @@ class ForumApi
      *
      * 
      *
-     * @param  \Bungie\Model\int[] $requestBody (required)
+     * @param  int[] $requestBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2736,7 +2736,7 @@ class ForumApi
      *
      * 
      *
-     * @param  \Bungie\Model\int[] $requestBody (required)
+     * @param  int[] $requestBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2785,7 +2785,7 @@ class ForumApi
     /**
      * Create request for operation 'getRecruitmentThreadSummaries'
      *
-     * @param  \Bungie\Model\int[] $requestBody (required)
+     * @param  int[] $requestBody (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

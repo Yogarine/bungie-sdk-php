@@ -57,14 +57,14 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'relatedPosts' => '\Bungie\Model\\Bungie\Model\Forum\PostResponse[]',
-        'authors' => '\Bungie\Model\\Bungie\Model\User\GeneralUser[]',
-        'groups' => '\Bungie\Model\\Bungie\Model\GroupsV2\GroupResponse[]',
-        'searchedTags' => '\Bungie\Model\\Bungie\Model\Tags\Models\Contracts\TagResponse[]',
-        'polls' => '\Bungie\Model\\Bungie\Model\Forum\PollResponse[]',
-        'recruitmentDetails' => '\Bungie\Model\\Bungie\Model\Forum\ForumRecruitmentDetail[]',
+        'relatedPosts' => '\Bungie\Model\Forum\PostResponse[]',
+        'authors' => '\Bungie\Model\User\GeneralUser[]',
+        'groups' => '\Bungie\Model\GroupsV2\GroupResponse[]',
+        'searchedTags' => '\Bungie\Model\Tags\Models\Contracts\TagResponse[]',
+        'polls' => '\Bungie\Model\Forum\PollResponse[]',
+        'recruitmentDetails' => '\Bungie\Model\Forum\ForumRecruitmentDetail[]',
         'availablePages' => 'int',
-        'results' => '\Bungie\Model\\Bungie\Model\Forum\PostResponse[]',
+        'results' => '\Bungie\Model\Forum\PostResponse[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -279,7 +279,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets relatedPosts
      *
-     * @return \Bungie\Model\\Bungie\Model\Forum\PostResponse[]|null
+     * @return \Bungie\Model\Forum\PostResponse[]|null
      */
     public function getRelatedPosts()
     {
@@ -289,7 +289,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets relatedPosts
      *
-     * @param \Bungie\Model\\Bungie\Model\Forum\PostResponse[]|null $relatedPosts relatedPosts
+     * @param \Bungie\Model\Forum\PostResponse[]|null $relatedPosts relatedPosts
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets authors
      *
-     * @return \Bungie\Model\\Bungie\Model\User\GeneralUser[]|null
+     * @return \Bungie\Model\User\GeneralUser[]|null
      */
     public function getAuthors()
     {
@@ -313,7 +313,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets authors
      *
-     * @param \Bungie\Model\\Bungie\Model\User\GeneralUser[]|null $authors authors
+     * @param \Bungie\Model\User\GeneralUser[]|null $authors authors
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets groups
      *
-     * @return \Bungie\Model\\Bungie\Model\GroupsV2\GroupResponse[]|null
+     * @return \Bungie\Model\GroupsV2\GroupResponse[]|null
      */
     public function getGroups()
     {
@@ -337,7 +337,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets groups
      *
-     * @param \Bungie\Model\\Bungie\Model\GroupsV2\GroupResponse[]|null $groups groups
+     * @param \Bungie\Model\GroupsV2\GroupResponse[]|null $groups groups
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets searchedTags
      *
-     * @return \Bungie\Model\\Bungie\Model\Tags\Models\Contracts\TagResponse[]|null
+     * @return \Bungie\Model\Tags\Models\Contracts\TagResponse[]|null
      */
     public function getSearchedTags()
     {
@@ -361,7 +361,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets searchedTags
      *
-     * @param \Bungie\Model\\Bungie\Model\Tags\Models\Contracts\TagResponse[]|null $searchedTags searchedTags
+     * @param \Bungie\Model\Tags\Models\Contracts\TagResponse[]|null $searchedTags searchedTags
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets polls
      *
-     * @return \Bungie\Model\\Bungie\Model\Forum\PollResponse[]|null
+     * @return \Bungie\Model\Forum\PollResponse[]|null
      */
     public function getPolls()
     {
@@ -385,7 +385,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets polls
      *
-     * @param \Bungie\Model\\Bungie\Model\Forum\PollResponse[]|null $polls polls
+     * @param \Bungie\Model\Forum\PollResponse[]|null $polls polls
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets recruitmentDetails
      *
-     * @return \Bungie\Model\\Bungie\Model\Forum\ForumRecruitmentDetail[]|null
+     * @return \Bungie\Model\Forum\ForumRecruitmentDetail[]|null
      */
     public function getRecruitmentDetails()
     {
@@ -409,7 +409,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets recruitmentDetails
      *
-     * @param \Bungie\Model\\Bungie\Model\Forum\ForumRecruitmentDetail[]|null $recruitmentDetails recruitmentDetails
+     * @param \Bungie\Model\Forum\ForumRecruitmentDetail[]|null $recruitmentDetails recruitmentDetails
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\Forum\PostResponse[]|null
+     * @return \Bungie\Model\Forum\PostResponse[]|null
      */
     public function getResults()
     {
@@ -457,7 +457,7 @@ class PostSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\Forum\PostResponse[]|null $results results
+     * @param \Bungie\Model\Forum\PostResponse[]|null $results results
      *
      * @return $this
      */

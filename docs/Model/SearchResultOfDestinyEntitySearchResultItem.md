@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]**](DestinyEntitySearchResultItem.md) |  | [optional] 
+**results** | [**\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]**](DestinyEntitySearchResultItem.md) |  | [optional] 
 **totalResults** | **int** |  | [optional] 
 **hasMore** | **bool** |  | [optional] 
 **query** | [**\Bungie\Model\Queries\PagedQuery**](PagedQuery.md) |  | [optional] 

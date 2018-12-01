@@ -58,10 +58,10 @@ class DestinyPublicMilestoneChallengeActivity implements \Bungie\Model\ModelInte
       */
     protected static $openAPITypes = [
         'activityHash' => 'int',
-        'challengeObjectiveHashes' => '\Bungie\Model\int[]',
-        'modifierHashes' => '\Bungie\Model\int[]',
+        'challengeObjectiveHashes' => 'int[]',
+        'modifierHashes' => 'int[]',
         'loadoutRequirementIndex' => 'int',
-        'phaseHashes' => '\Bungie\Model\int[]',
+        'phaseHashes' => 'int[]',
         'booleanActivityOptions' => 'map[string,bool]'
     ];
 
@@ -261,7 +261,7 @@ class DestinyPublicMilestoneChallengeActivity implements \Bungie\Model\ModelInte
     /**
      * Gets challengeObjectiveHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getChallengeObjectiveHashes()
     {
@@ -271,7 +271,7 @@ class DestinyPublicMilestoneChallengeActivity implements \Bungie\Model\ModelInte
     /**
      * Sets challengeObjectiveHashes
      *
-     * @param \Bungie\Model\int[]|null $challengeObjectiveHashes challengeObjectiveHashes
+     * @param int[]|null $challengeObjectiveHashes challengeObjectiveHashes
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class DestinyPublicMilestoneChallengeActivity implements \Bungie\Model\ModelInte
     /**
      * Gets modifierHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getModifierHashes()
     {
@@ -295,7 +295,7 @@ class DestinyPublicMilestoneChallengeActivity implements \Bungie\Model\ModelInte
     /**
      * Sets modifierHashes
      *
-     * @param \Bungie\Model\int[]|null $modifierHashes If the activity has modifiers, this will be the list of modifiers that all variants have in common. Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data.  Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all *possible* modifiers for the activity, not the active ones. Use only the active ones to match what's really live.
+     * @param int[]|null $modifierHashes If the activity has modifiers, this will be the list of modifiers that all variants have in common. Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data.  Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all *possible* modifiers for the activity, not the active ones. Use only the active ones to match what's really live.
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class DestinyPublicMilestoneChallengeActivity implements \Bungie\Model\ModelInte
     /**
      * Gets phaseHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getPhaseHashes()
     {
@@ -343,7 +343,7 @@ class DestinyPublicMilestoneChallengeActivity implements \Bungie\Model\ModelInte
     /**
      * Sets phaseHashes
      *
-     * @param \Bungie\Model\int[]|null $phaseHashes The ordered list of phases for this activity, if any. Note that we have no human readable info for phases, nor any entities to relate them to: relating these hashes to something human readable is up to you unfortunately.
+     * @param int[]|null $phaseHashes The ordered list of phases for this activity, if any. Note that we have no human readable info for phases, nor any entities to relate them to: relating these hashes to something human readable is up to you unfortunately.
      *
      * @return $this
      */

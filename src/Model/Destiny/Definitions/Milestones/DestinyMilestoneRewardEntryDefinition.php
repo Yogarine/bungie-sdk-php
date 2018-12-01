@@ -60,7 +60,7 @@ class DestinyMilestoneRewardEntryDefinition implements \Bungie\Model\ModelInterf
     protected static $openAPITypes = [
         'rewardEntryHash' => 'int',
         'rewardEntryIdentifier' => 'string',
-        'items' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]',
+        'items' => '\Bungie\Model\Destiny\DestinyItemQuantity[]',
         'vendorHash' => 'int',
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
         'order' => 'int'
@@ -286,7 +286,7 @@ class DestinyMilestoneRewardEntryDefinition implements \Bungie\Model\ModelInterf
     /**
      * Gets items
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null
+     * @return \Bungie\Model\Destiny\DestinyItemQuantity[]|null
      */
     public function getItems()
     {
@@ -296,7 +296,7 @@ class DestinyMilestoneRewardEntryDefinition implements \Bungie\Model\ModelInterf
     /**
      * Sets items
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null $items The items you will get as rewards, and how much of it you'll get.
+     * @param \Bungie\Model\Destiny\DestinyItemQuantity[]|null $items The items you will get as rewards, and how much of it you'll get.
      *
      * @return $this
      */

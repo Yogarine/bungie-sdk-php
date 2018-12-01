@@ -57,7 +57,7 @@ class SearchResultOfContentItemPublicContract implements \Bungie\Model\ModelInte
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\Content\ContentItemPublicContract[]',
+        'results' => '\Bungie\Model\Content\ContentItemPublicContract[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class SearchResultOfContentItemPublicContract implements \Bungie\Model\ModelInte
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\Content\ContentItemPublicContract[]|null
+     * @return \Bungie\Model\Content\ContentItemPublicContract[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfContentItemPublicContract implements \Bungie\Model\ModelInte
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\Content\ContentItemPublicContract[]|null $results results
+     * @param \Bungie\Model\Content\ContentItemPublicContract[]|null $results results
      *
      * @return $this
      */

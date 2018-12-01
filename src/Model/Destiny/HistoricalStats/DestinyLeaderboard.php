@@ -58,7 +58,7 @@ class DestinyLeaderboard implements \Bungie\Model\ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'statId' => 'string',
-        'entries' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyLeaderboardEntry[]'
+        'entries' => '\Bungie\Model\Destiny\HistoricalStats\DestinyLeaderboardEntry[]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class DestinyLeaderboard implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets entries
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyLeaderboardEntry[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\DestinyLeaderboardEntry[]|null
      */
     public function getEntries()
     {
@@ -247,7 +247,7 @@ class DestinyLeaderboard implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets entries
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyLeaderboardEntry[]|null $entries entries
+     * @param \Bungie\Model\Destiny\HistoricalStats\DestinyLeaderboardEntry[]|null $entries entries
      *
      * @return $this
      */

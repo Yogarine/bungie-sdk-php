@@ -58,7 +58,7 @@ class DestinyVendorReceipt implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'currencyPaid' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]',
+        'currencyPaid' => '\Bungie\Model\Destiny\DestinyItemQuantity[]',
         'itemReceived' => '\Bungie\Model\Destiny\DestinyItemQuantity',
         'licenseUnlockHash' => 'int',
         'purchasedByCharacterId' => 'int',
@@ -250,7 +250,7 @@ class DestinyVendorReceipt implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets currencyPaid
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null
+     * @return \Bungie\Model\Destiny\DestinyItemQuantity[]|null
      */
     public function getCurrencyPaid()
     {
@@ -260,7 +260,7 @@ class DestinyVendorReceipt implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets currencyPaid
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null $currencyPaid The amount paid for the item, in terms of items that were consumed in the purchase and their quantity.
+     * @param \Bungie\Model\Destiny\DestinyItemQuantity[]|null $currencyPaid The amount paid for the item, in terms of items that were consumed in the purchase and their quantity.
      *
      * @return $this
      */

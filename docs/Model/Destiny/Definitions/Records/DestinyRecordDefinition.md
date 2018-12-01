@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **scope** | [**\Bungie\Model\Destiny\DestinyScope**](DestinyScope.md) | Indicates whether this Record&#39;s state is determined on a per-character or on an account-wide basis. | [optional] 
 **presentationInfo** | [**\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationChildBlock**](DestinyPresentationChildBlock.md) |  | [optional] 
 **loreHash** | **int** |  | [optional] 
-**objectiveHashes** | **\Bungie\Model\int[]** |  | [optional] 
+**objectiveHashes** | **int[]** |  | [optional] 
 **recordValueStyle** | [**\Bungie\Model\Destiny\DestinyRecordValueStyle**](DestinyRecordValueStyle.md) |  | [optional] 
 **titleInfo** | [**\Bungie\Model\Destiny\Definitions\Records\DestinyRecordTitleBlock**](DestinyRecordTitleBlock.md) |  | [optional] 
 **completionInfo** | [**\Bungie\Model\Destiny\Definitions\Records\DestinyRecordCompletionBlock**](DestinyRecordCompletionBlock.md) |  | [optional] 

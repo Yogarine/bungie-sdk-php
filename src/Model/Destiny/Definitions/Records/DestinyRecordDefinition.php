@@ -61,7 +61,7 @@ class DestinyRecordDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
         'scope' => '\Bungie\Model\Destiny\DestinyScope',
         'presentationInfo' => '\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationChildBlock',
         'loreHash' => 'int',
-        'objectiveHashes' => '\Bungie\Model\int[]',
+        'objectiveHashes' => 'int[]',
         'recordValueStyle' => '\Bungie\Model\Destiny\DestinyRecordValueStyle',
         'titleInfo' => '\Bungie\Model\Destiny\Definitions\Records\DestinyRecordTitleBlock',
         'completionInfo' => '\Bungie\Model\Destiny\Definitions\Records\DestinyRecordCompletionBlock',
@@ -375,7 +375,7 @@ class DestinyRecordDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets objectiveHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getObjectiveHashes()
     {
@@ -385,7 +385,7 @@ class DestinyRecordDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets objectiveHashes
      *
-     * @param \Bungie\Model\int[]|null $objectiveHashes objectiveHashes
+     * @param int[]|null $objectiveHashes objectiveHashes
      *
      * @return $this
      */

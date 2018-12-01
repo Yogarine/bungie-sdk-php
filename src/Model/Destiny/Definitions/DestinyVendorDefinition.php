@@ -67,8 +67,8 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
         'factionHash' => 'int',
         'resetIntervalMinutes' => 'int',
         'resetOffsetMinutes' => 'int',
-        'failureStrings' => '\Bungie\Model\string[]',
-        'unlockRanges' => '\Bungie\Model\\Bungie\Model\Dates\DateRange[]',
+        'failureStrings' => 'string[]',
+        'unlockRanges' => '\Bungie\Model\Dates\DateRange[]',
         'vendorIdentifier' => 'string',
         'vendorPortrait' => 'string',
         'vendorBanner' => 'string',
@@ -76,19 +76,19 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
         'visible' => 'bool',
         'vendorSubcategoryIdentifier' => 'string',
         'consolidateCategories' => 'bool',
-        'actions' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorActionDefinition[]',
-        'categories' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]',
-        'originalCategories' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]',
-        'displayCategories' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyDisplayCategoryDefinition[]',
-        'interactions' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionDefinition[]',
-        'inventoryFlyouts' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutDefinition[]',
-        'itemList' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorItemDefinition[]',
-        'services' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorServiceDefinition[]',
-        'acceptedItems' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorAcceptedItemDefinition[]',
+        'actions' => '\Bungie\Model\Destiny\Definitions\DestinyVendorActionDefinition[]',
+        'categories' => '\Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]',
+        'originalCategories' => '\Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]',
+        'displayCategories' => '\Bungie\Model\Destiny\Definitions\DestinyDisplayCategoryDefinition[]',
+        'interactions' => '\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionDefinition[]',
+        'inventoryFlyouts' => '\Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutDefinition[]',
+        'itemList' => '\Bungie\Model\Destiny\Definitions\DestinyVendorItemDefinition[]',
+        'services' => '\Bungie\Model\Destiny\Definitions\DestinyVendorServiceDefinition[]',
+        'acceptedItems' => '\Bungie\Model\Destiny\Definitions\DestinyVendorAcceptedItemDefinition[]',
         'returnWithVendorRequest' => 'bool',
-        'locations' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Vendors\DestinyVendorLocationDefinition[]',
-        'groups' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorGroupReference[]',
-        'ignoreSaleItemHashes' => '\Bungie\Model\int[]',
+        'locations' => '\Bungie\Model\Destiny\Definitions\Vendors\DestinyVendorLocationDefinition[]',
+        'groups' => '\Bungie\Model\Destiny\Definitions\DestinyVendorGroupReference[]',
+        'ignoreSaleItemHashes' => 'int[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -622,7 +622,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets failureStrings
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getFailureStrings()
     {
@@ -632,7 +632,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets failureStrings
      *
-     * @param \Bungie\Model\string[]|null $failureStrings If an item can't be purchased from the vendor, there may be many \"custom\"/game state specific reasons why not.  This is a list of localized strings with messages for those custom failures. The live BNet data will return a failureIndexes property for items that can't be purchased: using those values to index into this array, you can show the user the appropriate failure message for the item that can't be bought.
+     * @param string[]|null $failureStrings If an item can't be purchased from the vendor, there may be many \"custom\"/game state specific reasons why not.  This is a list of localized strings with messages for those custom failures. The live BNet data will return a failureIndexes property for items that can't be purchased: using those values to index into this array, you can show the user the appropriate failure message for the item that can't be bought.
      *
      * @return $this
      */
@@ -646,7 +646,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets unlockRanges
      *
-     * @return \Bungie\Model\\Bungie\Model\Dates\DateRange[]|null
+     * @return \Bungie\Model\Dates\DateRange[]|null
      */
     public function getUnlockRanges()
     {
@@ -656,7 +656,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets unlockRanges
      *
-     * @param \Bungie\Model\\Bungie\Model\Dates\DateRange[]|null $unlockRanges If we were able to predict the dates when this Vendor will be visible/available, this will be the list of those date ranges. Sadly, we're not able to predict this very frequently, so this will often be useless data.
+     * @param \Bungie\Model\Dates\DateRange[]|null $unlockRanges If we were able to predict the dates when this Vendor will be visible/available, this will be the list of those date ranges. Sadly, we're not able to predict this very frequently, so this will often be useless data.
      *
      * @return $this
      */
@@ -838,7 +838,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets actions
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorActionDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorActionDefinition[]|null
      */
     public function getActions()
     {
@@ -848,7 +848,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets actions
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorActionDefinition[]|null $actions Describes \"actions\" that can be performed on a vendor. Currently, none of these exist. But theoretically a Vendor could let you interact with it by performing actions. We'll see what these end up looking like if they ever get used.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorActionDefinition[]|null $actions Describes \"actions\" that can be performed on a vendor. Currently, none of these exist. But theoretically a Vendor could let you interact with it by performing actions. We'll see what these end up looking like if they ever get used.
      *
      * @return $this
      */
@@ -862,7 +862,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets categories
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]|null
      */
     public function getCategories()
     {
@@ -872,7 +872,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets categories
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]|null $categories These are the headers for sections of items that the vendor is selling. When you see items organized by category in the header, it is these categories that it is showing.  Well, technically not *exactly* these. On BNet, it doesn't make sense to have categories be \"paged\" as we do in Destiny, so we run some heuristics to attempt to aggregate pages of categories together.   These are the categories post-concatenation, if the vendor had concatenation applied. If you want the pre-aggregated category data, use originalCategories.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]|null $categories These are the headers for sections of items that the vendor is selling. When you see items organized by category in the header, it is these categories that it is showing.  Well, technically not *exactly* these. On BNet, it doesn't make sense to have categories be \"paged\" as we do in Destiny, so we run some heuristics to attempt to aggregate pages of categories together.   These are the categories post-concatenation, if the vendor had concatenation applied. If you want the pre-aggregated category data, use originalCategories.
      *
      * @return $this
      */
@@ -886,7 +886,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets originalCategories
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]|null
      */
     public function getOriginalCategories()
     {
@@ -896,7 +896,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets originalCategories
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]|null $originalCategories See the categories property for a description of categories and why originalCategories exists.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorCategoryEntryDefinition[]|null $originalCategories See the categories property for a description of categories and why originalCategories exists.
      *
      * @return $this
      */
@@ -910,7 +910,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets displayCategories
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyDisplayCategoryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyDisplayCategoryDefinition[]|null
      */
     public function getDisplayCategories()
     {
@@ -920,7 +920,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets displayCategories
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyDisplayCategoryDefinition[]|null $displayCategories Display Categories are different from \"categories\" in that these are specifically for visual grouping and display of categories in Vendor UI.   The \"categories\" structure is for validation of the contained items, and can be categorized entirely separately from \"Display Categories\", there need be and often will be no meaningful relationship between the two.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyDisplayCategoryDefinition[]|null $displayCategories Display Categories are different from \"categories\" in that these are specifically for visual grouping and display of categories in Vendor UI.   The \"categories\" structure is for validation of the contained items, and can be categorized entirely separately from \"Display Categories\", there need be and often will be no meaningful relationship between the two.
      *
      * @return $this
      */
@@ -934,7 +934,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets interactions
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorInteractionDefinition[]|null
      */
     public function getInteractions()
     {
@@ -944,7 +944,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets interactions
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionDefinition[]|null $interactions In addition to selling items, vendors can have \"interactions\": UI where you \"talk\" with the vendor and they offer you a reward, some item, or merely acknowledge via dialog that you did something cool.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorInteractionDefinition[]|null $interactions In addition to selling items, vendors can have \"interactions\": UI where you \"talk\" with the vendor and they offer you a reward, some item, or merely acknowledge via dialog that you did something cool.
      *
      * @return $this
      */
@@ -958,7 +958,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets inventoryFlyouts
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutDefinition[]|null
      */
     public function getInventoryFlyouts()
     {
@@ -968,7 +968,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets inventoryFlyouts
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutDefinition[]|null $inventoryFlyouts If the vendor shows you items from your own inventory - such as the Vault vendor does - this data describes the UI around showing those inventory buckets and which ones get shown.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutDefinition[]|null $inventoryFlyouts If the vendor shows you items from your own inventory - such as the Vault vendor does - this data describes the UI around showing those inventory buckets and which ones get shown.
      *
      * @return $this
      */
@@ -982,7 +982,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets itemList
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorItemDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorItemDefinition[]|null
      */
     public function getItemList()
     {
@@ -992,7 +992,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets itemList
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorItemDefinition[]|null $itemList If the vendor sells items (or merely has a list of items to show like the \"Sack\" vendors do), this is the list of those items that the vendor can sell. From this list, only a subset will be available from the vendor at any given time, selected randomly and reset on the vendor's refresh interval.  Note that a vendor can sell the same item multiple ways: for instance, nothing stops a vendor from selling you some specific weapon but using two different currencies, or the same weapon at multiple \"item levels\".
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorItemDefinition[]|null $itemList If the vendor sells items (or merely has a list of items to show like the \"Sack\" vendors do), this is the list of those items that the vendor can sell. From this list, only a subset will be available from the vendor at any given time, selected randomly and reset on the vendor's refresh interval.  Note that a vendor can sell the same item multiple ways: for instance, nothing stops a vendor from selling you some specific weapon but using two different currencies, or the same weapon at multiple \"item levels\".
      *
      * @return $this
      */
@@ -1006,7 +1006,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets services
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorServiceDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorServiceDefinition[]|null
      */
     public function getServices()
     {
@@ -1016,7 +1016,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets services
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorServiceDefinition[]|null $services BNet doesn't use this data yet, but it appears to be an optional list of flavor text about services that the Vendor can provide.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorServiceDefinition[]|null $services BNet doesn't use this data yet, but it appears to be an optional list of flavor text about services that the Vendor can provide.
      *
      * @return $this
      */
@@ -1030,7 +1030,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets acceptedItems
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorAcceptedItemDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorAcceptedItemDefinition[]|null
      */
     public function getAcceptedItems()
     {
@@ -1040,7 +1040,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets acceptedItems
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorAcceptedItemDefinition[]|null $acceptedItems If the Vendor is actually a vehicle for the transferring of items (like the Vault and Postmaster vendors), this defines the list of source->destination buckets for transferring.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorAcceptedItemDefinition[]|null $acceptedItems If the Vendor is actually a vehicle for the transferring of items (like the Vault and Postmaster vendors), this defines the list of source->destination buckets for transferring.
      *
      * @return $this
      */
@@ -1078,7 +1078,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets locations
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Vendors\DestinyVendorLocationDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Vendors\DestinyVendorLocationDefinition[]|null
      */
     public function getLocations()
     {
@@ -1088,7 +1088,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets locations
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Vendors\DestinyVendorLocationDefinition[]|null $locations A vendor can be at different places in the world depending on the game/character/account state. This is the list of possible locations for the vendor, along with conditions we use to determine which one is currently active.
+     * @param \Bungie\Model\Destiny\Definitions\Vendors\DestinyVendorLocationDefinition[]|null $locations A vendor can be at different places in the world depending on the game/character/account state. This is the list of possible locations for the vendor, along with conditions we use to determine which one is currently active.
      *
      * @return $this
      */
@@ -1102,7 +1102,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets groups
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorGroupReference[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorGroupReference[]|null
      */
     public function getGroups()
     {
@@ -1112,7 +1112,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets groups
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorGroupReference[]|null $groups A vendor can be a part of 0 or 1 \"groups\" at a time: a group being a collection of Vendors related by either location or function/purpose. It's used for our our Companion Vendor UI. Only one of these can be active for a Vendor at a time.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorGroupReference[]|null $groups A vendor can be a part of 0 or 1 \"groups\" at a time: a group being a collection of Vendors related by either location or function/purpose. It's used for our our Companion Vendor UI. Only one of these can be active for a Vendor at a time.
      *
      * @return $this
      */
@@ -1126,7 +1126,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets ignoreSaleItemHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getIgnoreSaleItemHashes()
     {
@@ -1136,7 +1136,7 @@ class DestinyVendorDefinition implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets ignoreSaleItemHashes
      *
-     * @param \Bungie\Model\int[]|null $ignoreSaleItemHashes Some items don't make sense to return in the API, for example because they represent an action to be performed rather than an item being sold. I'd rather we not do this, but at least in the short term this is a workable workaround.
+     * @param int[]|null $ignoreSaleItemHashes Some items don't make sense to return in the API, for example because they represent an action to be performed rather than an item being sold. I'd rather we not do this, but at least in the short term this is a workable workaround.
      *
      * @return $this
      */

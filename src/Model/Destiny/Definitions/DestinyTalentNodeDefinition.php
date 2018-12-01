@@ -62,15 +62,15 @@ class DestinyTalentNodeDefinition implements \Bungie\Model\ModelInterface, Array
         'nodeHash' => 'int',
         'row' => 'int',
         'column' => 'int',
-        'prerequisiteNodeIndexes' => '\Bungie\Model\int[]',
+        'prerequisiteNodeIndexes' => 'int[]',
         'binaryPairNodeIndex' => 'int',
         'autoUnlocks' => 'bool',
         'lastStepRepeats' => 'bool',
         'isRandom' => 'bool',
         'randomActivationRequirement' => '\Bungie\Model\Destiny\Definitions\DestinyNodeActivationRequirement',
         'isRandomRepurchasable' => 'bool',
-        'steps' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyNodeStepDefinition[]',
-        'exclusiveWithNodeHashes' => '\Bungie\Model\int[]',
+        'steps' => '\Bungie\Model\Destiny\Definitions\DestinyNodeStepDefinition[]',
+        'exclusiveWithNodeHashes' => 'int[]',
         'randomStartProgressionBarAtProgression' => 'int',
         'layoutIdentifier' => 'string',
         'groupHash' => 'int',
@@ -412,7 +412,7 @@ class DestinyTalentNodeDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets prerequisiteNodeIndexes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getPrerequisiteNodeIndexes()
     {
@@ -422,7 +422,7 @@ class DestinyTalentNodeDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets prerequisiteNodeIndexes
      *
-     * @param \Bungie\Model\int[]|null $prerequisiteNodeIndexes Indexes into the DestinyTalentGridDefinition.nodes property for any nodes that must be activated before this one is allowed to be activated.  I would have liked to change this to hashes for Destiny 2, but we have run out of time.
+     * @param int[]|null $prerequisiteNodeIndexes Indexes into the DestinyTalentGridDefinition.nodes property for any nodes that must be activated before this one is allowed to be activated.  I would have liked to change this to hashes for Destiny 2, but we have run out of time.
      *
      * @return $this
      */
@@ -580,7 +580,7 @@ class DestinyTalentNodeDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets steps
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyNodeStepDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyNodeStepDefinition[]|null
      */
     public function getSteps()
     {
@@ -590,7 +590,7 @@ class DestinyTalentNodeDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets steps
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyNodeStepDefinition[]|null $steps At this point, \"steps\" have been obfuscated into conceptual entities, aggregating the underlying notions of \"properties\" and \"true steps\".  If you need to know a step as it truly exists - such as when recreating Node logic when processing Vendor data - you'll have to use the \"realSteps\" property below.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyNodeStepDefinition[]|null $steps At this point, \"steps\" have been obfuscated into conceptual entities, aggregating the underlying notions of \"properties\" and \"true steps\".  If you need to know a step as it truly exists - such as when recreating Node logic when processing Vendor data - you'll have to use the \"realSteps\" property below.
      *
      * @return $this
      */
@@ -604,7 +604,7 @@ class DestinyTalentNodeDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets exclusiveWithNodeHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getExclusiveWithNodeHashes()
     {
@@ -614,7 +614,7 @@ class DestinyTalentNodeDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets exclusiveWithNodeHashes
      *
-     * @param \Bungie\Model\int[]|null $exclusiveWithNodeHashes The nodeHash values for nodes that are in an Exclusive Set with this node.  See DestinyTalentGridDefinition.exclusiveSets for more info about exclusive sets.  Again, note that these are nodeHashes and *not* nodeIndexes.
+     * @param int[]|null $exclusiveWithNodeHashes The nodeHash values for nodes that are in an Exclusive Set with this node.  See DestinyTalentGridDefinition.exclusiveSets for more info about exclusive sets.  Again, note that these are nodeHashes and *not* nodeIndexes.
      *
      * @return $this
      */

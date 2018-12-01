@@ -61,9 +61,9 @@ class DestinyDestinationDefinition implements \Bungie\Model\ModelInterface, Arra
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
         'placeHash' => 'int',
         'defaultFreeroamActivityHash' => 'int',
-        'activityGraphEntries' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]',
-        'bubbleSettings' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyDestinationBubbleSettingDefinition[]',
-        'bubbles' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyBubbleDefinition[]',
+        'activityGraphEntries' => '\Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]',
+        'bubbleSettings' => '\Bungie\Model\Destiny\Definitions\DestinyDestinationBubbleSettingDefinition[]',
+        'bubbles' => '\Bungie\Model\Destiny\Definitions\DestinyBubbleDefinition[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -328,7 +328,7 @@ class DestinyDestinationDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Gets activityGraphEntries
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]|null
      */
     public function getActivityGraphEntries()
     {
@@ -338,7 +338,7 @@ class DestinyDestinationDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Sets activityGraphEntries
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]|null $activityGraphEntries If the Destination has default Activity Graphs (i.e. \"Map\") that should be shown in the director, this is the list of those Graphs. At most, only one should be active at any given time for a Destination: these would represent, for example, different variants on a Map if the Destination is changing on a macro level based on game state.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]|null $activityGraphEntries If the Destination has default Activity Graphs (i.e. \"Map\") that should be shown in the director, this is the list of those Graphs. At most, only one should be active at any given time for a Destination: these would represent, for example, different variants on a Map if the Destination is changing on a macro level based on game state.
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class DestinyDestinationDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Gets bubbleSettings
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyDestinationBubbleSettingDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyDestinationBubbleSettingDefinition[]|null
      */
     public function getBubbleSettings()
     {
@@ -362,7 +362,7 @@ class DestinyDestinationDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Sets bubbleSettings
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyDestinationBubbleSettingDefinition[]|null $bubbleSettings A Destination may have many \"Bubbles\" zones with human readable properties.  We don't get as much info as I'd like about them - I'd love to return info like where on the map they are located - but at least this gives you the name of those bubbles. bubbleSettings and bubbles both have the identical number of entries, and you should match up their indexes to provide matching bubble and bubbleSettings data.  DEPRECATED - Just use bubbles, it now has this data.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyDestinationBubbleSettingDefinition[]|null $bubbleSettings A Destination may have many \"Bubbles\" zones with human readable properties.  We don't get as much info as I'd like about them - I'd love to return info like where on the map they are located - but at least this gives you the name of those bubbles. bubbleSettings and bubbles both have the identical number of entries, and you should match up their indexes to provide matching bubble and bubbleSettings data.  DEPRECATED - Just use bubbles, it now has this data.
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class DestinyDestinationDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Gets bubbles
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyBubbleDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyBubbleDefinition[]|null
      */
     public function getBubbles()
     {
@@ -386,7 +386,7 @@ class DestinyDestinationDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Sets bubbles
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyBubbleDefinition[]|null $bubbles This provides the unique identifiers for every bubble in the destination (only guaranteed unique within the destination), and any intrinsic properties of the bubble.  bubbleSettings and bubbles both have the identical number of entries, and you should match up their indexes to provide matching bubble and bubbleSettings data.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyBubbleDefinition[]|null $bubbles This provides the unique identifiers for every bubble in the destination (only guaranteed unique within the destination), and any intrinsic properties of the bubble.  bubbleSettings and bubbles both have the identical number of entries, and you should match up their indexes to provide matching bubble and bubbleSettings data.
      *
      * @return $this
      */

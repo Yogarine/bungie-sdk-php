@@ -61,7 +61,7 @@ class DestinyMilestoneQuest implements \Bungie\Model\ModelInterface, ArrayAccess
         'questItemHash' => 'int',
         'status' => '\Bungie\Model\Destiny\Quests\DestinyQuestStatus',
         'activity' => '\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivity',
-        'challenges' => '\Bungie\Model\\Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]'
+        'challenges' => '\Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]'
     ];
 
     /**
@@ -298,7 +298,7 @@ class DestinyMilestoneQuest implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets challenges
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]|null
+     * @return \Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]|null
      */
     public function getChallenges()
     {
@@ -308,7 +308,7 @@ class DestinyMilestoneQuest implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets challenges
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]|null $challenges The activities referred to by this quest can have many associated challenges. They are all contained here, with activityHashes so that you can associate them with the specific activity variants in which they can be found. In retrospect, I probably should have put these under the specific Activity Variants, but it's too late to change it now. Theoretically, a quest without Activities can still have Challenges, which is why this is on a higher level than activity/variants, but it probably should have been in both places. That may come as a later revision.
+     * @param \Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]|null $challenges The activities referred to by this quest can have many associated challenges. They are all contained here, with activityHashes so that you can associate them with the specific activity variants in which they can be found. In retrospect, I probably should have put these under the specific Activity Variants, but it's too late to change it now. Theoretically, a quest without Activities can still have Challenges, which is why this is on a higher level than activity/variants, but it probably should have been in both places. That may come as a later revision.
      *
      * @return $this
      */

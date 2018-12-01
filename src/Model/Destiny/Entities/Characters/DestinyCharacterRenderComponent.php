@@ -58,7 +58,7 @@ class DestinyCharacterRenderComponent implements \Bungie\Model\ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'customDyes' => '\Bungie\Model\\Bungie\Model\Destiny\DyeReference[]',
+        'customDyes' => '\Bungie\Model\Destiny\DyeReference[]',
         'customization' => '\Bungie\Model\Destiny\Character\DestinyCharacterCustomization',
         'peerView' => '\Bungie\Model\Destiny\Character\DestinyCharacterPeerView'
     ];
@@ -220,7 +220,7 @@ class DestinyCharacterRenderComponent implements \Bungie\Model\ModelInterface, A
     /**
      * Gets customDyes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DyeReference[]|null
+     * @return \Bungie\Model\Destiny\DyeReference[]|null
      */
     public function getCustomDyes()
     {
@@ -230,7 +230,7 @@ class DestinyCharacterRenderComponent implements \Bungie\Model\ModelInterface, A
     /**
      * Sets customDyes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DyeReference[]|null $customDyes Custom dyes, calculated by iterating over the character's equipped items. Useful for pre-fetching all of the dye data needed from our server.
+     * @param \Bungie\Model\Destiny\DyeReference[]|null $customDyes Custom dyes, calculated by iterating over the character's equipped items. Useful for pre-fetching all of the dye data needed from our server.
      *
      * @return $this
      */

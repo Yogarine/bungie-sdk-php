@@ -59,12 +59,12 @@ class DestinyCharacterActivitiesComponent implements \Bungie\Model\ModelInterfac
       */
     protected static $openAPITypes = [
         'dateActivityStarted' => '\DateTime',
-        'availableActivities' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyActivity[]',
+        'availableActivities' => '\Bungie\Model\Destiny\DestinyActivity[]',
         'currentActivityHash' => 'int',
         'currentActivityModeHash' => 'int',
         'currentActivityModeType' => 'int',
-        'currentActivityModeHashes' => '\Bungie\Model\int[]',
-        'currentActivityModeTypes' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]',
+        'currentActivityModeHashes' => 'int[]',
+        'currentActivityModeTypes' => '\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]',
         'currentPlaylistActivityHash' => 'int',
         'lastCompletedStoryHash' => 'int'
     ];
@@ -415,7 +415,7 @@ class DestinyCharacterActivitiesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Gets availableActivities
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyActivity[]|null
+     * @return \Bungie\Model\Destiny\DestinyActivity[]|null
      */
     public function getAvailableActivities()
     {
@@ -425,7 +425,7 @@ class DestinyCharacterActivitiesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Sets availableActivities
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyActivity[]|null $availableActivities The list of activities that the user can play.
+     * @param \Bungie\Model\Destiny\DestinyActivity[]|null $availableActivities The list of activities that the user can play.
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class DestinyCharacterActivitiesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Gets currentActivityModeHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getCurrentActivityModeHashes()
     {
@@ -530,7 +530,7 @@ class DestinyCharacterActivitiesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Sets currentActivityModeHashes
      *
-     * @param \Bungie\Model\int[]|null $currentActivityModeHashes If the user is in an activity, this will be the hashes of the DestinyActivityModeDefinition being played. Combine with currentActivityHash to give a person a full picture of what they're doing right now.
+     * @param int[]|null $currentActivityModeHashes If the user is in an activity, this will be the hashes of the DestinyActivityModeDefinition being played. Combine with currentActivityHash to give a person a full picture of what they're doing right now.
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class DestinyCharacterActivitiesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Gets currentActivityModeTypes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null
      */
     public function getCurrentActivityModeTypes()
     {
@@ -554,7 +554,7 @@ class DestinyCharacterActivitiesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Sets currentActivityModeTypes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null $currentActivityModeTypes All Activity Modes that apply to the current activity being played, in enum form.
+     * @param \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null $currentActivityModeTypes All Activity Modes that apply to the current activity being played, in enum form.
      *
      * @return $this
      */

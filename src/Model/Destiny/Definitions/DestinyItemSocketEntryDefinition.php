@@ -60,12 +60,12 @@ class DestinyItemSocketEntryDefinition implements \Bungie\Model\ModelInterface, 
     protected static $openAPITypes = [
         'socketTypeHash' => 'int',
         'singleInitialItemHash' => 'int',
-        'reusablePlugItems' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]',
+        'reusablePlugItems' => '\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]',
         'preventInitializationOnVendorPurchase' => 'bool',
         'hidePerksInItemTooltip' => 'bool',
         'plugSources' => '\Bungie\Model\Destiny\SocketPlugSources',
         'reusablePlugSetHash' => 'int',
-        'randomizedPlugItems' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemRandomizedDefinition[]',
+        'randomizedPlugItems' => '\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemRandomizedDefinition[]',
         'defaultVisible' => 'bool'
     ];
 
@@ -304,7 +304,7 @@ class DestinyItemSocketEntryDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets reusablePlugItems
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]|null
      */
     public function getReusablePlugItems()
     {
@@ -314,7 +314,7 @@ class DestinyItemSocketEntryDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets reusablePlugItems
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]|null $reusablePlugItems This is a list of pre-determined plugs that can *always* be plugged into this socket, without the character having the plug in their inventory.  If this list is populated, you will not be allowed to plug an arbitrary item in the socket: you will only be able to choose from one of these reusable plugs.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]|null $reusablePlugItems This is a list of pre-determined plugs that can *always* be plugged into this socket, without the character having the plug in their inventory.  If this list is populated, you will not be allowed to plug an arbitrary item in the socket: you will only be able to choose from one of these reusable plugs.
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class DestinyItemSocketEntryDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets randomizedPlugItems
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemRandomizedDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemRandomizedDefinition[]|null
      */
     public function getRandomizedPlugItems()
     {
@@ -434,7 +434,7 @@ class DestinyItemSocketEntryDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets randomizedPlugItems
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemRandomizedDefinition[]|null $randomizedPlugItems As of Forsaken, item sockets can have randomized plugs. If this is populated, the live data will return a subset of plugs from this list that are active and able to be inserted into the socket just like a reusable plug.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemRandomizedDefinition[]|null $randomizedPlugItems As of Forsaken, item sockets can have randomized plugs. If this is populated, the live data will return a subset of plugs from this list that are active and able to be inserted into the socket just like a reusable plug.
      *
      * @return $this
      */

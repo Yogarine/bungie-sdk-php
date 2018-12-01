@@ -66,7 +66,7 @@ class DestinyItemInstanceComponent implements \Bungie\Model\ModelInterface, Arra
         'isEquipped' => 'bool',
         'canEquip' => 'bool',
         'equipRequiredLevel' => 'int',
-        'unlockHashesRequiredToEquip' => '\Bungie\Model\int[]',
+        'unlockHashesRequiredToEquip' => 'int[]',
         'cannotEquipReason' => '\Bungie\Model\Destiny\EquipFailureReason'
     ];
 
@@ -454,7 +454,7 @@ class DestinyItemInstanceComponent implements \Bungie\Model\ModelInterface, Arra
     /**
      * Gets unlockHashesRequiredToEquip
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getUnlockHashesRequiredToEquip()
     {
@@ -464,7 +464,7 @@ class DestinyItemInstanceComponent implements \Bungie\Model\ModelInterface, Arra
     /**
      * Sets unlockHashesRequiredToEquip
      *
-     * @param \Bungie\Model\int[]|null $unlockHashesRequiredToEquip Sometimes, there are limitations to equipping that are represented by character-level flags called \"unlocks\".  This is a list of flags that they need in order to equip the item that the character has not met. Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes.
+     * @param int[]|null $unlockHashesRequiredToEquip Sometimes, there are limitations to equipping that are represented by character-level flags called \"unlocks\".  This is a list of flags that they need in order to equip the item that the character has not met. Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes.
      *
      * @return $this
      */

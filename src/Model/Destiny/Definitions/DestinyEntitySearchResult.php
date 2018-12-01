@@ -58,7 +58,7 @@ class DestinyEntitySearchResult implements \Bungie\Model\ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'suggestedWords' => '\Bungie\Model\string[]',
+        'suggestedWords' => 'string[]',
         'results' => '\Bungie\Model\SearchResultOfDestinyEntitySearchResultItem'
     ];
 
@@ -214,7 +214,7 @@ class DestinyEntitySearchResult implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets suggestedWords
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getSuggestedWords()
     {
@@ -224,7 +224,7 @@ class DestinyEntitySearchResult implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets suggestedWords
      *
-     * @param \Bungie\Model\string[]|null $suggestedWords A list of suggested words that might make for better search results, based on the text searched for.
+     * @param string[]|null $suggestedWords A list of suggested words that might make for better search results, based on the text searched for.
      *
      * @return $this
      */

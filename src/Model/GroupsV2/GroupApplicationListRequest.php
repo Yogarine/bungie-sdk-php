@@ -57,7 +57,7 @@ class GroupApplicationListRequest implements \Bungie\Model\ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'memberships' => '\Bungie\Model\\Bungie\Model\User\UserMembership[]',
+        'memberships' => '\Bungie\Model\User\UserMembership[]',
         'message' => 'string'
     ];
 
@@ -213,7 +213,7 @@ class GroupApplicationListRequest implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets memberships
      *
-     * @return \Bungie\Model\\Bungie\Model\User\UserMembership[]|null
+     * @return \Bungie\Model\User\UserMembership[]|null
      */
     public function getMemberships()
     {
@@ -223,7 +223,7 @@ class GroupApplicationListRequest implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets memberships
      *
-     * @param \Bungie\Model\\Bungie\Model\User\UserMembership[]|null $memberships memberships
+     * @param \Bungie\Model\User\UserMembership[]|null $memberships memberships
      *
      * @return $this
      */

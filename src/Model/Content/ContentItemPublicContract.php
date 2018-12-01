@@ -69,8 +69,8 @@ class ContentItemPublicContract implements \Bungie\Model\ModelInterface, ArrayAc
         'author' => '\Bungie\Model\User\GeneralUser',
         'autoEnglishPropertyFallback' => 'bool',
         'properties' => 'map[string,object]',
-        'representations' => '\Bungie\Model\\Bungie\Model\Content\ContentRepresentation[]',
-        'tags' => '\Bungie\Model\string[]',
+        'representations' => '\Bungie\Model\Content\ContentRepresentation[]',
+        'tags' => 'string[]',
         'commentSummary' => '\Bungie\Model\Content\CommentSummary'
     ];
 
@@ -579,7 +579,7 @@ class ContentItemPublicContract implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets representations
      *
-     * @return \Bungie\Model\\Bungie\Model\Content\ContentRepresentation[]|null
+     * @return \Bungie\Model\Content\ContentRepresentation[]|null
      */
     public function getRepresentations()
     {
@@ -589,7 +589,7 @@ class ContentItemPublicContract implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets representations
      *
-     * @param \Bungie\Model\\Bungie\Model\Content\ContentRepresentation[]|null $representations representations
+     * @param \Bungie\Model\Content\ContentRepresentation[]|null $representations representations
      *
      * @return $this
      */
@@ -603,7 +603,7 @@ class ContentItemPublicContract implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets tags
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getTags()
     {
@@ -613,7 +613,7 @@ class ContentItemPublicContract implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets tags
      *
-     * @param \Bungie\Model\string[]|null $tags tags
+     * @param string[]|null $tags tags
      *
      * @return $this
      */

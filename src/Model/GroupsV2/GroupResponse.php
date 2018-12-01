@@ -59,7 +59,7 @@ class GroupResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'detail' => '\Bungie\Model\GroupsV2\GroupV2',
         'founder' => '\Bungie\Model\GroupsV2\GroupMember',
-        'alliedIds' => '\Bungie\Model\int[]',
+        'alliedIds' => 'int[]',
         'parentGroup' => '\Bungie\Model\GroupsV2\GroupV2',
         'allianceStatus' => '\Bungie\Model\GroupsV2\GroupAllianceStatus',
         'groupJoinInviteCount' => 'int',
@@ -297,7 +297,7 @@ class GroupResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets alliedIds
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getAlliedIds()
     {
@@ -307,7 +307,7 @@ class GroupResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets alliedIds
      *
-     * @param \Bungie\Model\int[]|null $alliedIds alliedIds
+     * @param int[]|null $alliedIds alliedIds
      *
      * @return $this
      */

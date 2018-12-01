@@ -59,7 +59,7 @@ class DestinyMilestoneContentItemCategory implements \Bungie\Model\ModelInterfac
       */
     protected static $openAPITypes = [
         'title' => 'string',
-        'itemHashes' => '\Bungie\Model\int[]'
+        'itemHashes' => 'int[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyMilestoneContentItemCategory implements \Bungie\Model\ModelInterfac
     /**
      * Gets itemHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getItemHashes()
     {
@@ -248,7 +248,7 @@ class DestinyMilestoneContentItemCategory implements \Bungie\Model\ModelInterfac
     /**
      * Sets itemHashes
      *
-     * @param \Bungie\Model\int[]|null $itemHashes itemHashes
+     * @param int[]|null $itemHashes itemHashes
      *
      * @return $this
      */

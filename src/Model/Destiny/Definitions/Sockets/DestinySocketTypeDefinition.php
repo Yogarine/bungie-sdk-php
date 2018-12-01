@@ -60,7 +60,7 @@ class DestinySocketTypeDefinition implements \Bungie\Model\ModelInterface, Array
     protected static $openAPITypes = [
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
         'insertAction' => '\Bungie\Model\Destiny\Definitions\Sockets\DestinyInsertPlugActionDefinition',
-        'plugWhitelist' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Sockets\DestinyPlugWhitelistEntryDefinition[]',
+        'plugWhitelist' => '\Bungie\Model\Destiny\Definitions\Sockets\DestinyPlugWhitelistEntryDefinition[]',
         'socketCategoryHash' => 'int',
         'visibility' => '\Bungie\Model\Destiny\DestinySocketVisibility',
         'alwaysRandomizeSockets' => 'bool',
@@ -68,7 +68,7 @@ class DestinySocketTypeDefinition implements \Bungie\Model\ModelInterface, Array
         'hideDuplicateReusablePlugs' => 'bool',
         'overridesUiAppearance' => 'bool',
         'avoidDuplicatesOnInitialization' => 'bool',
-        'currencyScalars' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Sockets\DestinySocketTypeScalarMaterialRequirementEntry[]',
+        'currencyScalars' => '\Bungie\Model\Destiny\Definitions\Sockets\DestinySocketTypeScalarMaterialRequirementEntry[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -334,7 +334,7 @@ class DestinySocketTypeDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets plugWhitelist
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Sockets\DestinyPlugWhitelistEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Sockets\DestinyPlugWhitelistEntryDefinition[]|null
      */
     public function getPlugWhitelist()
     {
@@ -344,7 +344,7 @@ class DestinySocketTypeDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets plugWhitelist
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Sockets\DestinyPlugWhitelistEntryDefinition[]|null $plugWhitelist A list of Plug \"Categories\" that are allowed to be plugged into sockets of this type.  These should be compared against a given plug item's DestinyInventoryItemDefinition.plug.plugCategoryHash, which indicates the plug item's category.  If the plug's category matches any whitelisted plug, or if the whitelist is empty, it is allowed to be inserted.
+     * @param \Bungie\Model\Destiny\Definitions\Sockets\DestinyPlugWhitelistEntryDefinition[]|null $plugWhitelist A list of Plug \"Categories\" that are allowed to be plugged into sockets of this type.  These should be compared against a given plug item's DestinyInventoryItemDefinition.plug.plugCategoryHash, which indicates the plug item's category.  If the plug's category matches any whitelisted plug, or if the whitelist is empty, it is allowed to be inserted.
      *
      * @return $this
      */
@@ -526,7 +526,7 @@ class DestinySocketTypeDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets currencyScalars
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Sockets\DestinySocketTypeScalarMaterialRequirementEntry[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Sockets\DestinySocketTypeScalarMaterialRequirementEntry[]|null
      */
     public function getCurrencyScalars()
     {
@@ -536,7 +536,7 @@ class DestinySocketTypeDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets currencyScalars
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Sockets\DestinySocketTypeScalarMaterialRequirementEntry[]|null $currencyScalars currencyScalars
+     * @param \Bungie\Model\Destiny\Definitions\Sockets\DestinySocketTypeScalarMaterialRequirementEntry[]|null $currencyScalars currencyScalars
      *
      * @return $this
      */

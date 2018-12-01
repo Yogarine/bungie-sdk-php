@@ -57,7 +57,7 @@ class GroupPotentialMembershipSearchResponse implements \Bungie\Model\ModelInter
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\GroupsV2\GroupPotentialMembership[]',
+        'results' => '\Bungie\Model\GroupsV2\GroupPotentialMembership[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class GroupPotentialMembershipSearchResponse implements \Bungie\Model\ModelInter
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\GroupsV2\GroupPotentialMembership[]|null
+     * @return \Bungie\Model\GroupsV2\GroupPotentialMembership[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class GroupPotentialMembershipSearchResponse implements \Bungie\Model\ModelInter
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\GroupsV2\GroupPotentialMembership[]|null $results results
+     * @param \Bungie\Model\GroupsV2\GroupPotentialMembership[]|null $results results
      *
      * @return $this
      */

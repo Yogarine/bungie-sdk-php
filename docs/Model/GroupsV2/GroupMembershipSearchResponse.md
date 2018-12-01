@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**\Bungie\Model\\Bungie\Model\GroupsV2\GroupMembership[]**](GroupMembership.md) |  | [optional] 
+**results** | [**\Bungie\Model\GroupsV2\GroupMembership[]**](GroupMembership.md) |  | [optional] 
 **totalResults** | **int** |  | [optional] 
 **hasMore** | **bool** |  | [optional] 
 **query** | [**\Bungie\Model\Queries\PagedQuery**](PagedQuery.md) |  | [optional] 

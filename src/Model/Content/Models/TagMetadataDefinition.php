@@ -59,7 +59,7 @@ class TagMetadataDefinition implements \Bungie\Model\ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'description' => 'string',
         'order' => 'int',
-        'items' => '\Bungie\Model\\Bungie\Model\Content\Models\TagMetadataItem[]',
+        'items' => '\Bungie\Model\Content\Models\TagMetadataItem[]',
         'datatype' => 'string',
         'name' => 'string',
         'isRequired' => 'bool'
@@ -285,7 +285,7 @@ class TagMetadataDefinition implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \Bungie\Model\\Bungie\Model\Content\Models\TagMetadataItem[]|null
+     * @return \Bungie\Model\Content\Models\TagMetadataItem[]|null
      */
     public function getItems()
     {
@@ -295,7 +295,7 @@ class TagMetadataDefinition implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \Bungie\Model\\Bungie\Model\Content\Models\TagMetadataItem[]|null $items items
+     * @param \Bungie\Model\Content\Models\TagMetadataItem[]|null $items items
      *
      * @return $this
      */

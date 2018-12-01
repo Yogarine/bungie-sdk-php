@@ -58,9 +58,9 @@ class DestinyPresentationNodeChildrenBlock implements \Bungie\Model\ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'presentationNodes' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeChildEntry[]',
-        'collectibles' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeCollectibleChildEntry[]',
-        'records' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeRecordChildEntry[]'
+        'presentationNodes' => '\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeChildEntry[]',
+        'collectibles' => '\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeCollectibleChildEntry[]',
+        'records' => '\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeRecordChildEntry[]'
     ];
 
     /**
@@ -220,7 +220,7 @@ class DestinyPresentationNodeChildrenBlock implements \Bungie\Model\ModelInterfa
     /**
      * Gets presentationNodes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeChildEntry[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeChildEntry[]|null
      */
     public function getPresentationNodes()
     {
@@ -230,7 +230,7 @@ class DestinyPresentationNodeChildrenBlock implements \Bungie\Model\ModelInterfa
     /**
      * Sets presentationNodes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeChildEntry[]|null $presentationNodes presentationNodes
+     * @param \Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeChildEntry[]|null $presentationNodes presentationNodes
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class DestinyPresentationNodeChildrenBlock implements \Bungie\Model\ModelInterfa
     /**
      * Gets collectibles
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeCollectibleChildEntry[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeCollectibleChildEntry[]|null
      */
     public function getCollectibles()
     {
@@ -254,7 +254,7 @@ class DestinyPresentationNodeChildrenBlock implements \Bungie\Model\ModelInterfa
     /**
      * Sets collectibles
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeCollectibleChildEntry[]|null $collectibles collectibles
+     * @param \Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeCollectibleChildEntry[]|null $collectibles collectibles
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class DestinyPresentationNodeChildrenBlock implements \Bungie\Model\ModelInterfa
     /**
      * Gets records
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeRecordChildEntry[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeRecordChildEntry[]|null
      */
     public function getRecords()
     {
@@ -278,7 +278,7 @@ class DestinyPresentationNodeChildrenBlock implements \Bungie\Model\ModelInterfa
     /**
      * Sets records
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeRecordChildEntry[]|null $records records
+     * @param \Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeRecordChildEntry[]|null $records records
      *
      * @return $this
      */

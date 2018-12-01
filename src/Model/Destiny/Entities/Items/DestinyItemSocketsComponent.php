@@ -58,7 +58,7 @@ class DestinyItemSocketsComponent implements \Bungie\Model\ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sockets' => '\Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemSocketState[]'
+        'sockets' => '\Bungie\Model\Destiny\Entities\Items\DestinyItemSocketState[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyItemSocketsComponent implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets sockets
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemSocketState[]|null
+     * @return \Bungie\Model\Destiny\Entities\Items\DestinyItemSocketState[]|null
      */
     public function getSockets()
     {
@@ -218,7 +218,7 @@ class DestinyItemSocketsComponent implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets sockets
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemSocketState[]|null $sockets The list of all sockets on the item, and their status information.
+     * @param \Bungie\Model\Destiny\Entities\Items\DestinyItemSocketState[]|null $sockets The list of all sockets on the item, and their status information.
      *
      * @return $this
      */

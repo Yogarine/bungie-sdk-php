@@ -57,7 +57,7 @@ class DestinyActivityLoadoutRequirementSet implements \Bungie\Model\ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'requirements' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirement[]'
+        'requirements' => '\Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirement[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class DestinyActivityLoadoutRequirementSet implements \Bungie\Model\ModelInterfa
     /**
      * Gets requirements
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirement[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirement[]|null
      */
     public function getRequirements()
     {
@@ -217,7 +217,7 @@ class DestinyActivityLoadoutRequirementSet implements \Bungie\Model\ModelInterfa
     /**
      * Sets requirements
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirement[]|null $requirements The set of requirements that will be applied on the activity if this requirement set is active.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirement[]|null $requirements The set of requirements that will be applied on the activity if this requirement set is active.
      *
      * @return $this
      */

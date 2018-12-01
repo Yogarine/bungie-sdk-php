@@ -57,7 +57,7 @@ class SearchResultOfTrendingEntry implements \Bungie\Model\ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\Trending\TrendingEntry[]',
+        'results' => '\Bungie\Model\Trending\TrendingEntry[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class SearchResultOfTrendingEntry implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\Trending\TrendingEntry[]|null
+     * @return \Bungie\Model\Trending\TrendingEntry[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfTrendingEntry implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\Trending\TrendingEntry[]|null $results results
+     * @param \Bungie\Model\Trending\TrendingEntry[]|null $results results
      *
      * @return $this
      */

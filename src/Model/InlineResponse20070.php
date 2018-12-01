@@ -57,7 +57,7 @@ class InlineResponse20070 implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response' => '\Bungie\Model\\Bungie\Model\GlobalAlert[]',
+        'response' => '\Bungie\Model\GlobalAlert[]',
         'errorCode' => '\Bungie\Model\Exceptions\PlatformErrorCodes',
         'throttleSeconds' => 'int',
         'errorStatus' => 'string',
@@ -243,7 +243,7 @@ class InlineResponse20070 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Bungie\Model\\Bungie\Model\GlobalAlert[]|null
+     * @return \Bungie\Model\GlobalAlert[]|null
      */
     public function getResponse()
     {
@@ -253,7 +253,7 @@ class InlineResponse20070 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Bungie\Model\\Bungie\Model\GlobalAlert[]|null $response response
+     * @param \Bungie\Model\GlobalAlert[]|null $response response
      *
      * @return $this
      */

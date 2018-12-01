@@ -58,7 +58,7 @@ class DestinyTalentNodeExclusiveSetDefinition implements \Bungie\Model\ModelInte
       * @var string[]
       */
     protected static $openAPITypes = [
-        'nodeIndexes' => '\Bungie\Model\int[]'
+        'nodeIndexes' => 'int[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyTalentNodeExclusiveSetDefinition implements \Bungie\Model\ModelInte
     /**
      * Gets nodeIndexes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getNodeIndexes()
     {
@@ -218,7 +218,7 @@ class DestinyTalentNodeExclusiveSetDefinition implements \Bungie\Model\ModelInte
     /**
      * Sets nodeIndexes
      *
-     * @param \Bungie\Model\int[]|null $nodeIndexes The list of node indexes for the exclusive set. Historically, these were indexes. I would have liked to replace this with nodeHashes for consistency, but it's way too late for that. (9:09 PM, he's right!)
+     * @param int[]|null $nodeIndexes The list of node indexes for the exclusive set. Historically, these were indexes. I would have liked to replace this with nodeHashes for consistency, but it's way too late for that. (9:09 PM, he's right!)
      *
      * @return $this
      */

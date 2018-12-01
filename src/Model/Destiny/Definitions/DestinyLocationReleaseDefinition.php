@@ -71,7 +71,7 @@ class DestinyLocationReleaseDefinition implements \Bungie\Model\ModelInterface, 
         'activityPathBundle' => 'int',
         'activityPathDestination' => 'int',
         'navPointType' => '\Bungie\Model\Destiny\DestinyActivityNavPointType',
-        'worldPosition' => '\Bungie\Model\int[]'
+        'worldPosition' => 'int[]'
     ];
 
     /**
@@ -598,7 +598,7 @@ class DestinyLocationReleaseDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets worldPosition
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getWorldPosition()
     {
@@ -608,7 +608,7 @@ class DestinyLocationReleaseDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets worldPosition
      *
-     * @param \Bungie\Model\int[]|null $worldPosition Looks like it should be the position on the map, but sadly it does not look populated... yet?
+     * @param int[]|null $worldPosition Looks like it should be the position on the map, but sadly it does not look populated... yet?
      *
      * @return $this
      */

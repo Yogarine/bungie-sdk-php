@@ -59,7 +59,7 @@ class DestinyVendorGroup implements \Bungie\Model\ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'vendorGroupHash' => 'int',
-        'vendorHashes' => '\Bungie\Model\int[]'
+        'vendorHashes' => 'int[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyVendorGroup implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets vendorHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getVendorHashes()
     {
@@ -248,7 +248,7 @@ class DestinyVendorGroup implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets vendorHashes
      *
-     * @param \Bungie\Model\int[]|null $vendorHashes The ordered list of vendors within a particular group.
+     * @param int[]|null $vendorHashes The ordered list of vendors within a particular group.
      *
      * @return $this
      */

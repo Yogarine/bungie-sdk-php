@@ -58,7 +58,7 @@ class DestinyItemValueBlockDefinition implements \Bungie\Model\ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'itemValue' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]',
+        'itemValue' => '\Bungie\Model\Destiny\DestinyItemQuantity[]',
         'valueDescription' => 'string'
     ];
 
@@ -214,7 +214,7 @@ class DestinyItemValueBlockDefinition implements \Bungie\Model\ModelInterface, A
     /**
      * Gets itemValue
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null
+     * @return \Bungie\Model\Destiny\DestinyItemQuantity[]|null
      */
     public function getItemValue()
     {
@@ -224,7 +224,7 @@ class DestinyItemValueBlockDefinition implements \Bungie\Model\ModelInterface, A
     /**
      * Sets itemValue
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null $itemValue References to the items that make up this item's \"value\", and the quantity.
+     * @param \Bungie\Model\Destiny\DestinyItemQuantity[]|null $itemValue References to the items that make up this item's \"value\", and the quantity.
      *
      * @return $this
      */

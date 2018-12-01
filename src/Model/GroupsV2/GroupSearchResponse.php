@@ -57,7 +57,7 @@ class GroupSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\GroupsV2\GroupV2Card[]',
+        'results' => '\Bungie\Model\GroupsV2\GroupV2Card[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class GroupSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\GroupsV2\GroupV2Card[]|null
+     * @return \Bungie\Model\GroupsV2\GroupV2Card[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class GroupSearchResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\GroupsV2\GroupV2Card[]|null $results results
+     * @param \Bungie\Model\GroupsV2\GroupV2Card[]|null $results results
      *
      * @return $this
      */

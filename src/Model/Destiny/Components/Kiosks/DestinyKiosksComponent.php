@@ -58,7 +58,7 @@ class DestinyKiosksComponent implements \Bungie\Model\ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'kioskItems' => 'map[string,\Bungie\Model\\Bungie\Model\Destiny\Components\Kiosks\DestinyKioskItem[]]'
+        'kioskItems' => 'map[string,\Bungie\Model\Destiny\Components\Kiosks\DestinyKioskItem[]]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyKiosksComponent implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets kioskItems
      *
-     * @return map[string,\Bungie\Model\\Bungie\Model\Destiny\Components\Kiosks\DestinyKioskItem[]]|null
+     * @return map[string,\Bungie\Model\Destiny\Components\Kiosks\DestinyKioskItem[]]|null
      */
     public function getKioskItems()
     {
@@ -218,7 +218,7 @@ class DestinyKiosksComponent implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets kioskItems
      *
-     * @param map[string,\Bungie\Model\\Bungie\Model\Destiny\Components\Kiosks\DestinyKioskItem[]]|null $kioskItems A dictionary keyed by the Kiosk Vendor's hash identifier (use it to look up the DestinyVendorDefinition for the relevant kiosk vendor), and whose value is a list of all the items that the user can \"see\" in the Kiosk, and any other interesting metadata.
+     * @param map[string,\Bungie\Model\Destiny\Components\Kiosks\DestinyKioskItem[]]|null $kioskItems A dictionary keyed by the Kiosk Vendor's hash identifier (use it to look up the DestinyVendorDefinition for the relevant kiosk vendor), and whose value is a list of all the items that the user can \"see\" in the Kiosk, and any other interesting metadata.
      *
      * @return $this
      */

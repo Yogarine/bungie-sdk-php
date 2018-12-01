@@ -59,7 +59,7 @@ class DestinyNodeActivationRequirement implements \Bungie\Model\ModelInterface, 
       */
     protected static $openAPITypes = [
         'gridLevel' => 'int',
-        'materialRequirementHashes' => '\Bungie\Model\int[]'
+        'materialRequirementHashes' => 'int[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyNodeActivationRequirement implements \Bungie\Model\ModelInterface, 
     /**
      * Gets materialRequirementHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getMaterialRequirementHashes()
     {
@@ -248,7 +248,7 @@ class DestinyNodeActivationRequirement implements \Bungie\Model\ModelInterface, 
     /**
      * Sets materialRequirementHashes
      *
-     * @param \Bungie\Model\int[]|null $materialRequirementHashes The list of hash identifiers for material requirement sets: materials that are required for the node to be activated. See DestinyMaterialRequirementSetDefinition for more information about material requirements.  In this case, only a single DestinyMaterialRequirementSetDefinition will be chosen from this list, and we won't know which one will be chosen until an instance of the item is created.
+     * @param int[]|null $materialRequirementHashes The list of hash identifiers for material requirement sets: materials that are required for the node to be activated. See DestinyMaterialRequirementSetDefinition for more information about material requirements.  In this case, only a single DestinyMaterialRequirementSetDefinition will be chosen from this list, and we won't know which one will be chosen until an instance of the item is created.
      *
      * @return $this
      */

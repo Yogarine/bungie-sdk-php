@@ -68,13 +68,13 @@ class DestinyNodeStepDefinition implements \Bungie\Model\ModelInterface, ArrayAc
         'canActivateNextStep' => 'bool',
         'nextStepIndex' => 'int',
         'isNextStepRandom' => 'bool',
-        'perkHashes' => '\Bungie\Model\int[]',
+        'perkHashes' => 'int[]',
         'startProgressionBarAtProgress' => 'int',
-        'statHashes' => '\Bungie\Model\int[]',
+        'statHashes' => 'int[]',
         'affectsQuality' => 'bool',
         'stepGroups' => '\Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepGroups',
         'affectsLevel' => 'bool',
-        'socketReplacements' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyNodeSocketReplaceResponse[]'
+        'socketReplacements' => '\Bungie\Model\Destiny\Definitions\DestinyNodeSocketReplaceResponse[]'
     ];
 
     /**
@@ -544,7 +544,7 @@ class DestinyNodeStepDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets perkHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getPerkHashes()
     {
@@ -554,7 +554,7 @@ class DestinyNodeStepDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets perkHashes
      *
-     * @param \Bungie\Model\int[]|null $perkHashes The list of hash identifiers for Perks (DestinySandboxPerkDefinition) that are applied when this step is active. Perks provide a variety of benefits and modifications - examine DestinySandboxPerkDefinition to learn more.
+     * @param int[]|null $perkHashes The list of hash identifiers for Perks (DestinySandboxPerkDefinition) that are applied when this step is active. Perks provide a variety of benefits and modifications - examine DestinySandboxPerkDefinition to learn more.
      *
      * @return $this
      */
@@ -592,7 +592,7 @@ class DestinyNodeStepDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets statHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getStatHashes()
     {
@@ -602,7 +602,7 @@ class DestinyNodeStepDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets statHashes
      *
-     * @param \Bungie\Model\int[]|null $statHashes When the step provides stat benefits on the item or character, this is the list of hash identifiers for stats (DestinyStatDefinition) that are provided.
+     * @param int[]|null $statHashes When the step provides stat benefits on the item or character, this is the list of hash identifiers for stats (DestinyStatDefinition) that are provided.
      *
      * @return $this
      */
@@ -688,7 +688,7 @@ class DestinyNodeStepDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets socketReplacements
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyNodeSocketReplaceResponse[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyNodeSocketReplaceResponse[]|null
      */
     public function getSocketReplacements()
     {
@@ -698,7 +698,7 @@ class DestinyNodeStepDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets socketReplacements
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyNodeSocketReplaceResponse[]|null $socketReplacements If this step is activated, this will be a list of information used to replace socket items with new Plugs. See DestinyInventoryItemDefinition for more information about sockets and plugs.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyNodeSocketReplaceResponse[]|null $socketReplacements If this step is activated, this will be a list of information used to replace socket items with new Plugs. See DestinyInventoryItemDefinition for more information about sockets and plugs.
      *
      * @return $this
      */

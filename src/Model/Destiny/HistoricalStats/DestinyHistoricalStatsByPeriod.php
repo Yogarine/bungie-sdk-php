@@ -61,8 +61,8 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
         'allTimeTier1' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
         'allTimeTier2' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
         'allTimeTier3' => 'map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsValue]',
-        'daily' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]',
-        'monthly' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]'
+        'daily' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]',
+        'monthly' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]'
     ];
 
     /**
@@ -333,7 +333,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets daily
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null
      */
     public function getDaily()
     {
@@ -343,7 +343,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets daily
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null $daily daily
+     * @param \Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null $daily daily
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets monthly
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null
      */
     public function getMonthly()
     {
@@ -367,7 +367,7 @@ class DestinyHistoricalStatsByPeriod implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets monthly
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null $monthly monthly
+     * @param \Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null $monthly monthly
      *
      * @return $this
      */

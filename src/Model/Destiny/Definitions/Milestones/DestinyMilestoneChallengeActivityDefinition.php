@@ -58,9 +58,9 @@ class DestinyMilestoneChallengeActivityDefinition implements \Bungie\Model\Model
       */
     protected static $openAPITypes = [
         'activityHash' => 'int',
-        'challenges' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeDefinition[]',
-        'activityGraphNodes' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityGraphNodeEntry[]',
-        'phases' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityPhase[]'
+        'challenges' => '\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeDefinition[]',
+        'activityGraphNodes' => '\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityGraphNodeEntry[]',
+        'phases' => '\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityPhase[]'
     ];
 
     /**
@@ -249,7 +249,7 @@ class DestinyMilestoneChallengeActivityDefinition implements \Bungie\Model\Model
     /**
      * Gets challenges
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeDefinition[]|null
      */
     public function getChallenges()
     {
@@ -259,7 +259,7 @@ class DestinyMilestoneChallengeActivityDefinition implements \Bungie\Model\Model
     /**
      * Sets challenges
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeDefinition[]|null $challenges challenges
+     * @param \Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeDefinition[]|null $challenges challenges
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class DestinyMilestoneChallengeActivityDefinition implements \Bungie\Model\Model
     /**
      * Gets activityGraphNodes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityGraphNodeEntry[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityGraphNodeEntry[]|null
      */
     public function getActivityGraphNodes()
     {
@@ -283,7 +283,7 @@ class DestinyMilestoneChallengeActivityDefinition implements \Bungie\Model\Model
     /**
      * Sets activityGraphNodes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityGraphNodeEntry[]|null $activityGraphNodes If the activity and its challenge is visible on any of these nodes, it will be returned.
+     * @param \Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityGraphNodeEntry[]|null $activityGraphNodes If the activity and its challenge is visible on any of these nodes, it will be returned.
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class DestinyMilestoneChallengeActivityDefinition implements \Bungie\Model\Model
     /**
      * Gets phases
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityPhase[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityPhase[]|null
      */
     public function getPhases()
     {
@@ -307,7 +307,7 @@ class DestinyMilestoneChallengeActivityDefinition implements \Bungie\Model\Model
     /**
      * Sets phases
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityPhase[]|null $phases Phases related to this activity, if there are any.  These will be listed in the order in which they will appear in the actual activity.
+     * @param \Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityPhase[]|null $phases Phases related to this activity, if there are any.  These will be listed in the order in which they will appear in the actual activity.
      *
      * @return $this
      */

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\\Bungie\Model\Tags\Models\Contracts\TagResponse[]**](TagResponse.md) |  | [optional] 
+**response** | [**\Bungie\Model\Tags\Models\Contracts\TagResponse[]**](TagResponse.md) |  | [optional] 
 **errorCode** | [**\Bungie\Model\Exceptions\PlatformErrorCodes**](PlatformErrorCodes.md) |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

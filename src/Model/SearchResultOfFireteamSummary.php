@@ -57,7 +57,7 @@ class SearchResultOfFireteamSummary implements \Bungie\Model\ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\Fireteam\FireteamSummary[]',
+        'results' => '\Bungie\Model\Fireteam\FireteamSummary[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class SearchResultOfFireteamSummary implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\Fireteam\FireteamSummary[]|null
+     * @return \Bungie\Model\Fireteam\FireteamSummary[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfFireteamSummary implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\Fireteam\FireteamSummary[]|null $results results
+     * @param \Bungie\Model\Fireteam\FireteamSummary[]|null $results results
      *
      * @return $this
      */

@@ -57,7 +57,7 @@ class InlineResponse2001 implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response' => '\Bungie\Model\\Bungie\Model\Applications\Application[]',
+        'response' => '\Bungie\Model\Applications\Application[]',
         'errorCode' => '\Bungie\Model\Exceptions\PlatformErrorCodes',
         'throttleSeconds' => 'int',
         'errorStatus' => 'string',
@@ -243,7 +243,7 @@ class InlineResponse2001 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Bungie\Model\\Bungie\Model\Applications\Application[]|null
+     * @return \Bungie\Model\Applications\Application[]|null
      */
     public function getResponse()
     {
@@ -253,7 +253,7 @@ class InlineResponse2001 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Bungie\Model\\Bungie\Model\Applications\Application[]|null $response response
+     * @param \Bungie\Model\Applications\Application[]|null $response response
      *
      * @return $this
      */

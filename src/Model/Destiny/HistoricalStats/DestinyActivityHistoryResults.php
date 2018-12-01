@@ -57,7 +57,7 @@ class DestinyActivityHistoryResults implements \Bungie\Model\ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'activities' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]'
+        'activities' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class DestinyActivityHistoryResults implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets activities
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null
      */
     public function getActivities()
     {
@@ -217,7 +217,7 @@ class DestinyActivityHistoryResults implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets activities
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null $activities List of activities, the most recent activity first.
+     * @param \Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPeriodGroup[]|null $activities List of activities, the most recent activity first.
      *
      * @return $this
      */

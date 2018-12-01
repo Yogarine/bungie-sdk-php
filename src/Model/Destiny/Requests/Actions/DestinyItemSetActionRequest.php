@@ -57,7 +57,7 @@ class DestinyItemSetActionRequest implements \Bungie\Model\ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'itemIds' => '\Bungie\Model\int[]',
+        'itemIds' => 'int[]',
         'characterId' => 'int',
         'membershipType' => '\Bungie\Model\BungieMembershipType'
     ];
@@ -219,7 +219,7 @@ class DestinyItemSetActionRequest implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets itemIds
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getItemIds()
     {
@@ -229,7 +229,7 @@ class DestinyItemSetActionRequest implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets itemIds
      *
-     * @param \Bungie\Model\int[]|null $itemIds itemIds
+     * @param int[]|null $itemIds itemIds
      *
      * @return $this
      */

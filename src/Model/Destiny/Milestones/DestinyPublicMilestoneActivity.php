@@ -59,8 +59,8 @@ class DestinyPublicMilestoneActivity implements \Bungie\Model\ModelInterface, Ar
       */
     protected static $openAPITypes = [
         'activityHash' => 'int',
-        'modifierHashes' => '\Bungie\Model\int[]',
-        'variants' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneActivityVariant[]',
+        'modifierHashes' => 'int[]',
+        'variants' => '\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneActivityVariant[]',
         'activityModeHash' => 'int',
         'activityModeType' => 'int'
     ];
@@ -391,7 +391,7 @@ class DestinyPublicMilestoneActivity implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets modifierHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getModifierHashes()
     {
@@ -401,7 +401,7 @@ class DestinyPublicMilestoneActivity implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets modifierHashes
      *
-     * @param \Bungie\Model\int[]|null $modifierHashes The activity may have 0-to-many modifiers: if it does, this will contain the hashes to the DestinyActivityModifierDefinition that defines the modifier being applied.
+     * @param int[]|null $modifierHashes The activity may have 0-to-many modifiers: if it does, this will contain the hashes to the DestinyActivityModifierDefinition that defines the modifier being applied.
      *
      * @return $this
      */
@@ -415,7 +415,7 @@ class DestinyPublicMilestoneActivity implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets variants
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneActivityVariant[]|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneActivityVariant[]|null
      */
     public function getVariants()
     {
@@ -425,7 +425,7 @@ class DestinyPublicMilestoneActivity implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets variants
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneActivityVariant[]|null $variants Every relevant variation of this conceptual activity, including the conceptual activity itself, have variants defined here.
+     * @param \Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneActivityVariant[]|null $variants Every relevant variation of this conceptual activity, including the conceptual activity itself, have variants defined here.
      *
      * @return $this
      */

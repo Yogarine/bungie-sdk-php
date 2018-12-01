@@ -60,9 +60,9 @@ class DestinyTalentExclusiveGroup implements \Bungie\Model\ModelInterface, Array
     protected static $openAPITypes = [
         'groupHash' => 'int',
         'loreHash' => 'int',
-        'nodeHashes' => '\Bungie\Model\int[]',
-        'opposingGroupHashes' => '\Bungie\Model\int[]',
-        'opposingNodeHashes' => '\Bungie\Model\int[]'
+        'nodeHashes' => 'int[]',
+        'opposingGroupHashes' => 'int[]',
+        'opposingNodeHashes' => 'int[]'
     ];
 
     /**
@@ -280,7 +280,7 @@ class DestinyTalentExclusiveGroup implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets nodeHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getNodeHashes()
     {
@@ -290,7 +290,7 @@ class DestinyTalentExclusiveGroup implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets nodeHashes
      *
-     * @param \Bungie\Model\int[]|null $nodeHashes A quick reference of the talent nodes that are part of this group, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)
+     * @param int[]|null $nodeHashes A quick reference of the talent nodes that are part of this group, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class DestinyTalentExclusiveGroup implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets opposingGroupHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getOpposingGroupHashes()
     {
@@ -314,7 +314,7 @@ class DestinyTalentExclusiveGroup implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets opposingGroupHashes
      *
-     * @param \Bungie\Model\int[]|null $opposingGroupHashes A quick reference of Groups whose nodes will be deactivated if any node in this group is activated.
+     * @param int[]|null $opposingGroupHashes A quick reference of Groups whose nodes will be deactivated if any node in this group is activated.
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class DestinyTalentExclusiveGroup implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets opposingNodeHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getOpposingNodeHashes()
     {
@@ -338,7 +338,7 @@ class DestinyTalentExclusiveGroup implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets opposingNodeHashes
      *
-     * @param \Bungie\Model\int[]|null $opposingNodeHashes A quick reference of Nodes that will be deactivated if any node in this group is activated, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)
+     * @param int[]|null $opposingNodeHashes A quick reference of Nodes that will be deactivated if any node in this group is activated, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)
      *
      * @return $this
      */

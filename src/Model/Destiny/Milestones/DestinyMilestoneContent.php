@@ -60,8 +60,8 @@ class DestinyMilestoneContent implements \Bungie\Model\ModelInterface, ArrayAcce
     protected static $openAPITypes = [
         'about' => 'string',
         'status' => 'string',
-        'tips' => '\Bungie\Model\string[]',
-        'itemCategories' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneContentItemCategory[]'
+        'tips' => 'string[]',
+        'itemCategories' => '\Bungie\Model\Destiny\Milestones\DestinyMilestoneContentItemCategory[]'
     ];
 
     /**
@@ -274,7 +274,7 @@ class DestinyMilestoneContent implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets tips
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getTips()
     {
@@ -284,7 +284,7 @@ class DestinyMilestoneContent implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets tips
      *
-     * @param \Bungie\Model\string[]|null $tips A list of tips, provided by the Firehose.
+     * @param string[]|null $tips A list of tips, provided by the Firehose.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class DestinyMilestoneContent implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets itemCategories
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneContentItemCategory[]|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyMilestoneContentItemCategory[]|null
      */
     public function getItemCategories()
     {
@@ -308,7 +308,7 @@ class DestinyMilestoneContent implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets itemCategories
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneContentItemCategory[]|null $itemCategories If DPS has defined items related to this Milestone, they can categorize those items in the Firehose. That data will then be returned as item categories here.
+     * @param \Bungie\Model\Destiny\Milestones\DestinyMilestoneContentItemCategory[]|null $itemCategories If DPS has defined items related to this Milestone, they can categorize those items in the Firehose. That data will then be returned as item categories here.
      *
      * @return $this
      */

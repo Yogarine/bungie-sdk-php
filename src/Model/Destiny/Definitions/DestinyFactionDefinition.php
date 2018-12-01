@@ -63,7 +63,7 @@ class DestinyFactionDefinition implements \Bungie\Model\ModelInterface, ArrayAcc
         'tokenValues' => 'map[string,int]',
         'rewardItemHash' => 'int',
         'rewardVendorHash' => 'int',
-        'vendors' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyFactionVendorDefinition[]',
+        'vendors' => '\Bungie\Model\Destiny\Definitions\DestinyFactionVendorDefinition[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -376,7 +376,7 @@ class DestinyFactionDefinition implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Gets vendors
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyFactionVendorDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyFactionVendorDefinition[]|null
      */
     public function getVendors()
     {
@@ -386,7 +386,7 @@ class DestinyFactionDefinition implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Sets vendors
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyFactionVendorDefinition[]|null $vendors List of vendors that are associated with this faction. The last vendor that passes the unlock flag checks is the one that should be shown.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyFactionVendorDefinition[]|null $vendors List of vendors that are associated with this faction. The last vendor that passes the unlock flag checks is the one that should be shown.
      *
      * @return $this
      */

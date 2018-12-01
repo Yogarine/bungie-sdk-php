@@ -64,7 +64,7 @@ class GroupV2 implements \Bungie\Model\ModelInterface, ArrayAccess
         'creationDate' => '\DateTime',
         'modificationDate' => '\DateTime',
         'about' => 'string',
-        'tags' => '\Bungie\Model\string[]',
+        'tags' => 'string[]',
         'memberCount' => 'int',
         'isPublic' => 'bool',
         'isPublicTopicAdminOnly' => 'bool',
@@ -537,7 +537,7 @@ class GroupV2 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets tags
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getTags()
     {
@@ -547,7 +547,7 @@ class GroupV2 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets tags
      *
-     * @param \Bungie\Model\string[]|null $tags tags
+     * @param string[]|null $tags tags
      *
      * @return $this
      */

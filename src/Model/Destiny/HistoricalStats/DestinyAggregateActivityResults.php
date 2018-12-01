@@ -57,7 +57,7 @@ class DestinyAggregateActivityResults implements \Bungie\Model\ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'activities' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyAggregateActivityStats[]'
+        'activities' => '\Bungie\Model\Destiny\HistoricalStats\DestinyAggregateActivityStats[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class DestinyAggregateActivityResults implements \Bungie\Model\ModelInterface, A
     /**
      * Gets activities
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyAggregateActivityStats[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\DestinyAggregateActivityStats[]|null
      */
     public function getActivities()
     {
@@ -217,7 +217,7 @@ class DestinyAggregateActivityResults implements \Bungie\Model\ModelInterface, A
     /**
      * Sets activities
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyAggregateActivityStats[]|null $activities List of all activities the player has participated in.
+     * @param \Bungie\Model\Destiny\HistoricalStats\DestinyAggregateActivityStats[]|null $activities List of all activities the player has participated in.
      *
      * @return $this
      */

@@ -58,8 +58,8 @@ class DestinyItemSourceBlockDefinition implements \Bungie\Model\ModelInterface, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sourceHashes' => '\Bungie\Model\int[]',
-        'sources' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Sources\DestinyItemSourceDefinition[]',
+        'sourceHashes' => 'int[]',
+        'sources' => '\Bungie\Model\Destiny\Definitions\Sources\DestinyItemSourceDefinition[]',
         'exclusive' => '\Bungie\Model\BungieMembershipType'
     ];
 
@@ -220,7 +220,7 @@ class DestinyItemSourceBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets sourceHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getSourceHashes()
     {
@@ -230,7 +230,7 @@ class DestinyItemSourceBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets sourceHashes
      *
-     * @param \Bungie\Model\int[]|null $sourceHashes The list of hash identifiers for Reward Sources that hint where the item can be found (DestinyRewardSourceDefinition).
+     * @param int[]|null $sourceHashes The list of hash identifiers for Reward Sources that hint where the item can be found (DestinyRewardSourceDefinition).
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class DestinyItemSourceBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets sources
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Sources\DestinyItemSourceDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Sources\DestinyItemSourceDefinition[]|null
      */
     public function getSources()
     {
@@ -254,7 +254,7 @@ class DestinyItemSourceBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets sources
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Sources\DestinyItemSourceDefinition[]|null $sources A collection of details about the stats that were computed for the ways we found that the item could be spawned.
+     * @param \Bungie\Model\Destiny\Definitions\Sources\DestinyItemSourceDefinition[]|null $sources A collection of details about the stats that were computed for the ways we found that the item could be spawned.
      *
      * @return $this
      */

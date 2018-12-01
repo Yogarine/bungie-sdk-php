@@ -58,8 +58,8 @@ class DestinyActivityLoadoutRequirement implements \Bungie\Model\ModelInterface,
       */
     protected static $openAPITypes = [
         'equipmentSlotHash' => 'int',
-        'allowedEquippedItemHashes' => '\Bungie\Model\int[]',
-        'allowedWeaponSubTypes' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyItemSubType[]'
+        'allowedEquippedItemHashes' => 'int[]',
+        'allowedWeaponSubTypes' => '\Bungie\Model\Destiny\DestinyItemSubType[]'
     ];
 
     /**
@@ -243,7 +243,7 @@ class DestinyActivityLoadoutRequirement implements \Bungie\Model\ModelInterface,
     /**
      * Gets allowedEquippedItemHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getAllowedEquippedItemHashes()
     {
@@ -253,7 +253,7 @@ class DestinyActivityLoadoutRequirement implements \Bungie\Model\ModelInterface,
     /**
      * Sets allowedEquippedItemHashes
      *
-     * @param \Bungie\Model\int[]|null $allowedEquippedItemHashes allowedEquippedItemHashes
+     * @param int[]|null $allowedEquippedItemHashes allowedEquippedItemHashes
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class DestinyActivityLoadoutRequirement implements \Bungie\Model\ModelInterface,
     /**
      * Gets allowedWeaponSubTypes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyItemSubType[]|null
+     * @return \Bungie\Model\Destiny\DestinyItemSubType[]|null
      */
     public function getAllowedWeaponSubTypes()
     {
@@ -277,7 +277,7 @@ class DestinyActivityLoadoutRequirement implements \Bungie\Model\ModelInterface,
     /**
      * Sets allowedWeaponSubTypes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyItemSubType[]|null $allowedWeaponSubTypes allowedWeaponSubTypes
+     * @param \Bungie\Model\Destiny\DestinyItemSubType[]|null $allowedWeaponSubTypes allowedWeaponSubTypes
      *
      * @return $this
      */

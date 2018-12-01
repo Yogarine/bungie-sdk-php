@@ -60,7 +60,7 @@ class DestinyVendorDisplayPropertiesDefinition implements \Bungie\Model\ModelInt
         'largeIcon' => 'string',
         'subtitle' => 'string',
         'originalIcon' => 'string',
-        'requirementsDisplay' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorRequirementDisplayEntryDefinition[]',
+        'requirementsDisplay' => '\Bungie\Model\Destiny\Definitions\DestinyVendorRequirementDisplayEntryDefinition[]',
         'smallTransparentIcon' => 'string',
         'mapIcon' => 'string',
         'largeTransparentIcon' => 'string',
@@ -339,7 +339,7 @@ class DestinyVendorDisplayPropertiesDefinition implements \Bungie\Model\ModelInt
     /**
      * Gets requirementsDisplay
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorRequirementDisplayEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorRequirementDisplayEntryDefinition[]|null
      */
     public function getRequirementsDisplay()
     {
@@ -349,7 +349,7 @@ class DestinyVendorDisplayPropertiesDefinition implements \Bungie\Model\ModelInt
     /**
      * Sets requirementsDisplay
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorRequirementDisplayEntryDefinition[]|null $requirementsDisplay Vendors, in addition to expected display property data, may also show some \"common requirements\" as statically defined definition data. This might be when a vendor accepts a single type of currency, or when the currency is unique to the vendor and the designers wanted to show that currency when you interact with the vendor.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorRequirementDisplayEntryDefinition[]|null $requirementsDisplay Vendors, in addition to expected display property data, may also show some \"common requirements\" as statically defined definition data. This might be when a vendor accepts a single type of currency, or when the currency is unique to the vendor and the designers wanted to show that currency when you interact with the vendor.
      *
      * @return $this
      */

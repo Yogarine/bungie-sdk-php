@@ -57,7 +57,7 @@ class InlineResponse20017 implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response' => '\Bungie\Model\\Bungie\Model\Config\GroupTheme[]',
+        'response' => '\Bungie\Model\Config\GroupTheme[]',
         'errorCode' => '\Bungie\Model\Exceptions\PlatformErrorCodes',
         'throttleSeconds' => 'int',
         'errorStatus' => 'string',
@@ -243,7 +243,7 @@ class InlineResponse20017 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Bungie\Model\\Bungie\Model\Config\GroupTheme[]|null
+     * @return \Bungie\Model\Config\GroupTheme[]|null
      */
     public function getResponse()
     {
@@ -253,7 +253,7 @@ class InlineResponse20017 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Bungie\Model\\Bungie\Model\Config\GroupTheme[]|null $response response
+     * @param \Bungie\Model\Config\GroupTheme[]|null $response response
      *
      * @return $this
      */

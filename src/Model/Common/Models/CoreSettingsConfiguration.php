@@ -58,22 +58,22 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
       */
     protected static $openAPITypes = [
         'systems' => 'map[string,\Bungie\Model\Common\Models\CoreSystem]',
-        'ignoreReasons' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'forumCategories' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'groupAvatars' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'destinyMembershipTypes' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'recruitmentPlatformTags' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'recruitmentMiscTags' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'recruitmentActivities' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'userContentLocales' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'systemContentLocales' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'clanBannerDecals' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'clanBannerDecalColors' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'clanBannerGonfalons' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'clanBannerGonfalonColors' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'clanBannerGonfalonDetails' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'clanBannerGonfalonDetailColors' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
-        'clanBannerStandards' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]',
+        'ignoreReasons' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'forumCategories' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'groupAvatars' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'destinyMembershipTypes' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'recruitmentPlatformTags' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'recruitmentMiscTags' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'recruitmentActivities' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'userContentLocales' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'systemContentLocales' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'clanBannerDecals' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'clanBannerDecalColors' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'clanBannerGonfalons' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'clanBannerGonfalonColors' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'clanBannerGonfalonDetails' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'clanBannerGonfalonDetailColors' => '\Bungie\Model\Common\Models\CoreSetting[]',
+        'clanBannerStandards' => '\Bungie\Model\Common\Models\CoreSetting[]',
         'destiny2CoreSettings' => '\Bungie\Model\Common\Models\Destiny2CoreSettings'
     ];
 
@@ -333,7 +333,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets ignoreReasons
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getIgnoreReasons()
     {
@@ -343,7 +343,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets ignoreReasons
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $ignoreReasons ignoreReasons
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $ignoreReasons ignoreReasons
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets forumCategories
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getForumCategories()
     {
@@ -367,7 +367,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets forumCategories
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $forumCategories forumCategories
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $forumCategories forumCategories
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets groupAvatars
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getGroupAvatars()
     {
@@ -391,7 +391,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets groupAvatars
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $groupAvatars groupAvatars
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $groupAvatars groupAvatars
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets destinyMembershipTypes
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getDestinyMembershipTypes()
     {
@@ -415,7 +415,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets destinyMembershipTypes
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $destinyMembershipTypes destinyMembershipTypes
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $destinyMembershipTypes destinyMembershipTypes
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets recruitmentPlatformTags
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getRecruitmentPlatformTags()
     {
@@ -439,7 +439,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets recruitmentPlatformTags
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $recruitmentPlatformTags recruitmentPlatformTags
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $recruitmentPlatformTags recruitmentPlatformTags
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets recruitmentMiscTags
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getRecruitmentMiscTags()
     {
@@ -463,7 +463,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets recruitmentMiscTags
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $recruitmentMiscTags recruitmentMiscTags
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $recruitmentMiscTags recruitmentMiscTags
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets recruitmentActivities
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getRecruitmentActivities()
     {
@@ -487,7 +487,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets recruitmentActivities
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $recruitmentActivities recruitmentActivities
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $recruitmentActivities recruitmentActivities
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets userContentLocales
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getUserContentLocales()
     {
@@ -511,7 +511,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets userContentLocales
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $userContentLocales userContentLocales
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $userContentLocales userContentLocales
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets systemContentLocales
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getSystemContentLocales()
     {
@@ -535,7 +535,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets systemContentLocales
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $systemContentLocales systemContentLocales
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $systemContentLocales systemContentLocales
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets clanBannerDecals
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getClanBannerDecals()
     {
@@ -559,7 +559,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets clanBannerDecals
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerDecals clanBannerDecals
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerDecals clanBannerDecals
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets clanBannerDecalColors
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getClanBannerDecalColors()
     {
@@ -583,7 +583,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets clanBannerDecalColors
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerDecalColors clanBannerDecalColors
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerDecalColors clanBannerDecalColors
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets clanBannerGonfalons
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getClanBannerGonfalons()
     {
@@ -607,7 +607,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets clanBannerGonfalons
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerGonfalons clanBannerGonfalons
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerGonfalons clanBannerGonfalons
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets clanBannerGonfalonColors
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getClanBannerGonfalonColors()
     {
@@ -631,7 +631,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets clanBannerGonfalonColors
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerGonfalonColors clanBannerGonfalonColors
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerGonfalonColors clanBannerGonfalonColors
      *
      * @return $this
      */
@@ -645,7 +645,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets clanBannerGonfalonDetails
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getClanBannerGonfalonDetails()
     {
@@ -655,7 +655,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets clanBannerGonfalonDetails
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerGonfalonDetails clanBannerGonfalonDetails
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerGonfalonDetails clanBannerGonfalonDetails
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets clanBannerGonfalonDetailColors
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getClanBannerGonfalonDetailColors()
     {
@@ -679,7 +679,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets clanBannerGonfalonDetailColors
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerGonfalonDetailColors clanBannerGonfalonDetailColors
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerGonfalonDetailColors clanBannerGonfalonDetailColors
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets clanBannerStandards
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getClanBannerStandards()
     {
@@ -703,7 +703,7 @@ class CoreSettingsConfiguration implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets clanBannerStandards
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerStandards clanBannerStandards
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $clanBannerStandards clanBannerStandards
      *
      * @return $this
      */

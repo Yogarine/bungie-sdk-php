@@ -1816,7 +1816,7 @@ class Destiny2Api
      * @param  int $characterId ID of the character. (required)
      * @param  int $destinyMembershipId Destiny membership ID. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1835,7 +1835,7 @@ class Destiny2Api
      * @param  int $characterId ID of the character. (required)
      * @param  int $destinyMembershipId Destiny membership ID. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1927,7 +1927,7 @@ class Destiny2Api
      * @param  int $characterId ID of the character. (required)
      * @param  int $destinyMembershipId Destiny membership ID. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1950,7 +1950,7 @@ class Destiny2Api
      * @param  int $characterId ID of the character. (required)
      * @param  int $destinyMembershipId Destiny membership ID. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2002,7 +2002,7 @@ class Destiny2Api
      * @param  int $characterId ID of the character. (required)
      * @param  int $destinyMembershipId Destiny membership ID. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3011,7 +3011,7 @@ class Destiny2Api
      * @param  int $collectiblePresentationNodeHash The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3031,7 +3031,7 @@ class Destiny2Api
      * @param  int $collectiblePresentationNodeHash The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3124,7 +3124,7 @@ class Destiny2Api
      * @param  int $collectiblePresentationNodeHash The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3148,7 +3148,7 @@ class Destiny2Api
      * @param  int $collectiblePresentationNodeHash The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3201,7 +3201,7 @@ class Destiny2Api
      * @param  int $collectiblePresentationNodeHash The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4227,8 +4227,8 @@ class Destiny2Api
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \DateTime $dayend Last day to return when daily stats are requested. Use the format YYYY-MM-DD. (optional)
      * @param  \DateTime $daystart First day to return when daily stats are requested. Use the format YYYY-MM-DD (optional)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -4250,8 +4250,8 @@ class Destiny2Api
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \DateTime $dayend Last day to return when daily stats are requested. Use the format YYYY-MM-DD. (optional)
      * @param  \DateTime $daystart First day to return when daily stats are requested. Use the format YYYY-MM-DD (optional)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
@@ -4346,8 +4346,8 @@ class Destiny2Api
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \DateTime $dayend Last day to return when daily stats are requested. Use the format YYYY-MM-DD. (optional)
      * @param  \DateTime $daystart First day to return when daily stats are requested. Use the format YYYY-MM-DD (optional)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
      *
      * @throws \InvalidArgumentException
@@ -4373,8 +4373,8 @@ class Destiny2Api
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \DateTime $dayend Last day to return when daily stats are requested. Use the format YYYY-MM-DD. (optional)
      * @param  \DateTime $daystart First day to return when daily stats are requested. Use the format YYYY-MM-DD (optional)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
      *
      * @throws \InvalidArgumentException
@@ -4429,8 +4429,8 @@ class Destiny2Api
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  \DateTime $dayend Last day to return when daily stats are requested. Use the format YYYY-MM-DD. (optional)
      * @param  \DateTime $daystart First day to return when daily stats are requested. Use the format YYYY-MM-DD (optional)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] $modes Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. (optional)
      * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType $periodType Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity (optional)
      *
      * @throws \InvalidArgumentException
@@ -4848,7 +4848,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4866,7 +4866,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4957,7 +4957,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4979,7 +4979,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5030,7 +5030,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId The Destiny membershipId of the user to retrieve. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
+     * @param  \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] $groups Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5157,7 +5157,7 @@ class Destiny2Api
      * @param  int $destinyMembershipId The membership ID of the destiny profile. (required)
      * @param  int $itemInstanceId The Instance ID of the destiny item. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5176,7 +5176,7 @@ class Destiny2Api
      * @param  int $destinyMembershipId The membership ID of the destiny profile. (required)
      * @param  int $itemInstanceId The Instance ID of the destiny item. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5268,7 +5268,7 @@ class Destiny2Api
      * @param  int $destinyMembershipId The membership ID of the destiny profile. (required)
      * @param  int $itemInstanceId The Instance ID of the destiny item. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5291,7 +5291,7 @@ class Destiny2Api
      * @param  int $destinyMembershipId The membership ID of the destiny profile. (required)
      * @param  int $itemInstanceId The Instance ID of the destiny item. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5343,7 +5343,7 @@ class Destiny2Api
      * @param  int $destinyMembershipId The membership ID of the destiny profile. (required)
      * @param  int $itemInstanceId The Instance ID of the destiny item. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6721,7 +6721,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId Destiny membership ID. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6739,7 +6739,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId Destiny membership ID. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6830,7 +6830,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId Destiny membership ID. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6852,7 +6852,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId Destiny membership ID. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6903,7 +6903,7 @@ class Destiny2Api
      *
      * @param  int $destinyMembershipId Destiny membership ID. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7881,7 +7881,7 @@ class Destiny2Api
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $vendorHash The Hash identifier of the Vendor to be returned. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7901,7 +7901,7 @@ class Destiny2Api
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $vendorHash The Hash identifier of the Vendor to be returned. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7994,7 +7994,7 @@ class Destiny2Api
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $vendorHash The Hash identifier of the Vendor to be returned. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8018,7 +8018,7 @@ class Destiny2Api
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $vendorHash The Hash identifier of the Vendor to be returned. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8071,7 +8071,7 @@ class Destiny2Api
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
      * @param  int $vendorHash The Hash identifier of the Vendor to be returned. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8226,7 +8226,7 @@ class Destiny2Api
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8245,7 +8245,7 @@ class Destiny2Api
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \Bungie\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8337,7 +8337,7 @@ class Destiny2Api
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8360,7 +8360,7 @@ class Destiny2Api
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8412,7 +8412,7 @@ class Destiny2Api
      * @param  int $characterId The Destiny Character ID of the character for whom we&#39;re getting vendor info. (required)
      * @param  int $destinyMembershipId Destiny membership ID of another user. You may be denied. (required)
      * @param  \Bungie\Model\BungieMembershipType $membershipType A valid non-BungieNet membership type. (required)
-     * @param  \Bungie\Model\\Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
+     * @param  \Bungie\Model\Destiny\DestinyComponentType[] $components A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

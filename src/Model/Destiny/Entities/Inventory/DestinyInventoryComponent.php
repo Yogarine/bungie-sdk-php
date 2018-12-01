@@ -58,7 +58,7 @@ class DestinyInventoryComponent implements \Bungie\Model\ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]'
+        'items' => '\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyInventoryComponent implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets items
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null
+     * @return \Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null
      */
     public function getItems()
     {
@@ -218,7 +218,7 @@ class DestinyInventoryComponent implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets items
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null $items The items in this inventory. If you care to bucket them, use the item's bucketHash property to group them.
+     * @param \Bungie\Model\Destiny\Entities\Items\DestinyItemComponent[]|null $items The items in this inventory. If you care to bucket them, use the item's bucketHash property to group them.
      *
      * @return $this
      */

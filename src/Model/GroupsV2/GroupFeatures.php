@@ -60,7 +60,7 @@ class GroupFeatures implements \Bungie\Model\ModelInterface, ArrayAccess
         'maximumMembers' => 'int',
         'maximumMembershipsOfGroupType' => 'int',
         'capabilities' => '\Bungie\Model\GroupsV2\Capabilities',
-        'membershipTypes' => '\Bungie\Model\\Bungie\Model\BungieMembershipType[]',
+        'membershipTypes' => '\Bungie\Model\BungieMembershipType[]',
         'invitePermissionOverride' => 'bool',
         'updateCulturePermissionOverride' => 'bool',
         'hostGuidedGamePermissionOverride' => '\Bungie\Model\GroupsV2\HostGuidedGamesPermissionLevel',
@@ -327,7 +327,7 @@ class GroupFeatures implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets membershipTypes
      *
-     * @return \Bungie\Model\\Bungie\Model\BungieMembershipType[]|null
+     * @return \Bungie\Model\BungieMembershipType[]|null
      */
     public function getMembershipTypes()
     {
@@ -337,7 +337,7 @@ class GroupFeatures implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets membershipTypes
      *
-     * @param \Bungie\Model\\Bungie\Model\BungieMembershipType[]|null $membershipTypes membershipTypes
+     * @param \Bungie\Model\BungieMembershipType[]|null $membershipTypes membershipTypes
      *
      * @return $this
      */

@@ -57,7 +57,7 @@ class Series implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'datapoints' => '\Bungie\Model\\Bungie\Model\Applications\Datapoint[]',
+        'datapoints' => '\Bungie\Model\Applications\Datapoint[]',
         'target' => 'string'
     ];
 
@@ -213,7 +213,7 @@ class Series implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets datapoints
      *
-     * @return \Bungie\Model\\Bungie\Model\Applications\Datapoint[]|null
+     * @return \Bungie\Model\Applications\Datapoint[]|null
      */
     public function getDatapoints()
     {
@@ -223,7 +223,7 @@ class Series implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets datapoints
      *
-     * @param \Bungie\Model\\Bungie\Model\Applications\Datapoint[]|null $datapoints Collection of samples with time and value.
+     * @param \Bungie\Model\Applications\Datapoint[]|null $datapoints Collection of samples with time and value.
      *
      * @return $this
      */

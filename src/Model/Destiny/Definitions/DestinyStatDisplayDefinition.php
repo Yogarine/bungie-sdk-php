@@ -61,7 +61,7 @@ class DestinyStatDisplayDefinition implements \Bungie\Model\ModelInterface, Arra
         'statHash' => 'int',
         'maximumValue' => 'int',
         'displayAsNumeric' => 'bool',
-        'displayInterpolation' => '\Bungie\Model\\Bungie\Model\Interpolation\InterpolationPoint[]'
+        'displayInterpolation' => '\Bungie\Model\Interpolation\InterpolationPoint[]'
     ];
 
     /**
@@ -298,7 +298,7 @@ class DestinyStatDisplayDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Gets displayInterpolation
      *
-     * @return \Bungie\Model\\Bungie\Model\Interpolation\InterpolationPoint[]|null
+     * @return \Bungie\Model\Interpolation\InterpolationPoint[]|null
      */
     public function getDisplayInterpolation()
     {
@@ -308,7 +308,7 @@ class DestinyStatDisplayDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Sets displayInterpolation
      *
-     * @param \Bungie\Model\\Bungie\Model\Interpolation\InterpolationPoint[]|null $displayInterpolation The interpolation table representing how the Investment Stat is transformed into a Display Stat.   See DestinyStatDefinition for a description of the stages of stat transformation.
+     * @param \Bungie\Model\Interpolation\InterpolationPoint[]|null $displayInterpolation The interpolation table representing how the Investment Stat is transformed into a Display Stat.   See DestinyStatDefinition for a description of the stages of stat transformation.
      *
      * @return $this
      */

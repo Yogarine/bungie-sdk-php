@@ -58,7 +58,7 @@ class DestinyMaterialRequirementSetDefinition implements \Bungie\Model\ModelInte
       * @var string[]
       */
     protected static $openAPITypes = [
-        'materials' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]',
+        'materials' => '\Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -226,7 +226,7 @@ class DestinyMaterialRequirementSetDefinition implements \Bungie\Model\ModelInte
     /**
      * Gets materials
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]|null
      */
     public function getMaterials()
     {
@@ -236,7 +236,7 @@ class DestinyMaterialRequirementSetDefinition implements \Bungie\Model\ModelInte
     /**
      * Sets materials
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]|null $materials The list of all materials that are required.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]|null $materials The list of all materials that are required.
      *
      * @return $this
      */

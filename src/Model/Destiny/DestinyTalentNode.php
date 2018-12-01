@@ -63,7 +63,7 @@ class DestinyTalentNode implements \Bungie\Model\ModelInterface, ArrayAccess
         'state' => '\Bungie\Model\Destiny\DestinyTalentNodeState',
         'isActivated' => 'bool',
         'stepIndex' => 'int',
-        'materialsToUpgrade' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]',
+        'materialsToUpgrade' => '\Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]',
         'activationGridLevel' => 'int',
         'progressPercent' => 'float',
         'hidden' => 'bool',
@@ -382,7 +382,7 @@ class DestinyTalentNode implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets materialsToUpgrade
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]|null
      */
     public function getMaterialsToUpgrade()
     {
@@ -392,7 +392,7 @@ class DestinyTalentNode implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets materialsToUpgrade
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]|null $materialsToUpgrade If the node has material requirements to be activated, this is the list of those requirements.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyMaterialRequirement[]|null $materialsToUpgrade If the node has material requirements to be activated, this is the list of those requirements.
      *
      * @return $this
      */

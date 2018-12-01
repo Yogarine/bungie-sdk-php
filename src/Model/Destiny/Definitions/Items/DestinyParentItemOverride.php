@@ -57,7 +57,7 @@ class DestinyParentItemOverride implements \Bungie\Model\ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'additionalEquipRequirementsDisplayStrings' => '\Bungie\Model\string[]',
+        'additionalEquipRequirementsDisplayStrings' => 'string[]',
         'pipIcon' => 'string'
     ];
 
@@ -213,7 +213,7 @@ class DestinyParentItemOverride implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets additionalEquipRequirementsDisplayStrings
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getAdditionalEquipRequirementsDisplayStrings()
     {
@@ -223,7 +223,7 @@ class DestinyParentItemOverride implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets additionalEquipRequirementsDisplayStrings
      *
-     * @param \Bungie\Model\string[]|null $additionalEquipRequirementsDisplayStrings additionalEquipRequirementsDisplayStrings
+     * @param string[]|null $additionalEquipRequirementsDisplayStrings additionalEquipRequirementsDisplayStrings
      *
      * @return $this
      */

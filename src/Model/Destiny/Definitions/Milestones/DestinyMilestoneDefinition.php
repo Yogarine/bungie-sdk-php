@@ -70,10 +70,10 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
         'quests' => 'map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneQuestDefinition]',
         'rewards' => 'map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneRewardCategoryDefinition]',
         'vendorsDisplayTitle' => 'string',
-        'vendors' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneVendorDefinition[]',
+        'vendors' => '\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneVendorDefinition[]',
         'values' => 'map[string,\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneValueDefinition]',
         'isInGameMilestone' => 'bool',
-        'activities' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityDefinition[]',
+        'activities' => '\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityDefinition[]',
         'defaultOrder' => 'int',
         'hash' => 'int',
         'index' => 'int',
@@ -610,7 +610,7 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets vendors
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneVendorDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneVendorDefinition[]|null
      */
     public function getVendors()
     {
@@ -620,7 +620,7 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets vendors
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneVendorDefinition[]|null $vendors Sometimes, milestones will have rewards provided by Vendors. This definition gives the information needed to understand which vendors are relevant, the order in which they should be returned if order matters, and the conditions under which the Vendor is relevant to the user.
+     * @param \Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneVendorDefinition[]|null $vendors Sometimes, milestones will have rewards provided by Vendors. This definition gives the information needed to understand which vendors are relevant, the order in which they should be returned if order matters, and the conditions under which the Vendor is relevant to the user.
      *
      * @return $this
      */
@@ -682,7 +682,7 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets activities
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityDefinition[]|null
      */
     public function getActivities()
     {
@@ -692,7 +692,7 @@ class DestinyMilestoneDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets activities
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityDefinition[]|null $activities A Milestone can now be represented by one or more activities directly (without a backing Quest), and that activity can have many challenges, modifiers, and related to it.
+     * @param \Bungie\Model\Destiny\Definitions\Milestones\DestinyMilestoneChallengeActivityDefinition[]|null $activities A Milestone can now be represented by one or more activities directly (without a backing Quest), and that activity can have many challenges, modifiers, and related to it.
      *
      * @return $this
      */

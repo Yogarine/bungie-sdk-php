@@ -62,7 +62,7 @@ class DestinyEquipmentSlotDefinition implements \Bungie\Model\ModelInterface, Ar
         'equipmentCategoryHash' => 'int',
         'bucketTypeHash' => 'int',
         'applyCustomArtDyes' => 'bool',
-        'artDyeChannels' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyArtDyeReference[]',
+        'artDyeChannels' => '\Bungie\Model\Destiny\Definitions\DestinyArtDyeReference[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -346,7 +346,7 @@ class DestinyEquipmentSlotDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets artDyeChannels
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyArtDyeReference[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyArtDyeReference[]|null
      */
     public function getArtDyeChannels()
     {
@@ -356,7 +356,7 @@ class DestinyEquipmentSlotDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets artDyeChannels
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyArtDyeReference[]|null $artDyeChannels The Art Dye Channels that apply to this equipment slot.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyArtDyeReference[]|null $artDyeChannels The Art Dye Channels that apply to this equipment slot.
      *
      * @return $this
      */

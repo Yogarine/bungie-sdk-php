@@ -58,8 +58,8 @@ class ApiUsage implements \Bungie\Model\ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'range' => '\Bungie\Model\Dates\DateRange',
-        'apiCalls' => '\Bungie\Model\\Bungie\Model\Applications\Series[]',
-        'throttledRequests' => '\Bungie\Model\\Bungie\Model\Applications\Series[]'
+        'apiCalls' => '\Bungie\Model\Applications\Series[]',
+        'throttledRequests' => '\Bungie\Model\Applications\Series[]'
     ];
 
     /**
@@ -243,7 +243,7 @@ class ApiUsage implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets apiCalls
      *
-     * @return \Bungie\Model\\Bungie\Model\Applications\Series[]|null
+     * @return \Bungie\Model\Applications\Series[]|null
      */
     public function getApiCalls()
     {
@@ -253,7 +253,7 @@ class ApiUsage implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets apiCalls
      *
-     * @param \Bungie\Model\\Bungie\Model\Applications\Series[]|null $apiCalls Counts for on API calls made for the time range.
+     * @param \Bungie\Model\Applications\Series[]|null $apiCalls Counts for on API calls made for the time range.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class ApiUsage implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets throttledRequests
      *
-     * @return \Bungie\Model\\Bungie\Model\Applications\Series[]|null
+     * @return \Bungie\Model\Applications\Series[]|null
      */
     public function getThrottledRequests()
     {
@@ -277,7 +277,7 @@ class ApiUsage implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets throttledRequests
      *
-     * @param \Bungie\Model\\Bungie\Model\Applications\Series[]|null $throttledRequests Instances of blocked requests or requests that crossed the warn threshold during the time range.
+     * @param \Bungie\Model\Applications\Series[]|null $throttledRequests Instances of blocked requests or requests that crossed the warn threshold during the time range.
      *
      * @return $this
      */

@@ -60,7 +60,7 @@ class DestinyVendorInventoryFlyoutDefinition implements \Bungie\Model\ModelInter
     protected static $openAPITypes = [
         'lockedDescription' => 'string',
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
-        'buckets' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutBucketDefinition[]',
+        'buckets' => '\Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutBucketDefinition[]',
         'flyoutId' => 'int',
         'suppressNewness' => 'bool',
         'equipmentSlotHash' => 'int'
@@ -286,7 +286,7 @@ class DestinyVendorInventoryFlyoutDefinition implements \Bungie\Model\ModelInter
     /**
      * Gets buckets
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutBucketDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutBucketDefinition[]|null
      */
     public function getBuckets()
     {
@@ -296,7 +296,7 @@ class DestinyVendorInventoryFlyoutDefinition implements \Bungie\Model\ModelInter
     /**
      * Sets buckets
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutBucketDefinition[]|null $buckets A list of inventory buckets and other metadata to show on the screen.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorInventoryFlyoutBucketDefinition[]|null $buckets A list of inventory buckets and other metadata to show on the screen.
      *
      * @return $this
      */

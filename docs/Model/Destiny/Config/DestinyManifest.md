@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **version** | **string** |  | [optional] 
 **mobileAssetContentPath** | **string** |  | [optional] 
-**mobileGearAssetDataBases** | [**\Bungie\Model\\Bungie\Model\Destiny\Config\GearAssetDataBaseDefinition[]**](GearAssetDataBaseDefinition.md) |  | [optional] 
+**mobileGearAssetDataBases** | [**\Bungie\Model\Destiny\Config\GearAssetDataBaseDefinition[]**](GearAssetDataBaseDefinition.md) |  | [optional] 
 **mobileWorldContentPaths** | **map[string,string]** |  | [optional] 
 **mobileClanBannerDatabasePath** | **string** |  | [optional] 
 **mobileGearCDN** | **map[string,string]** |  | [optional] 

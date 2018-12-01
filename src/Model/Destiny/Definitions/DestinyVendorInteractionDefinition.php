@@ -59,10 +59,10 @@ class DestinyVendorInteractionDefinition implements \Bungie\Model\ModelInterface
       */
     protected static $openAPITypes = [
         'interactionIndex' => 'int',
-        'replies' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionReplyDefinition[]',
+        'replies' => '\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionReplyDefinition[]',
         'vendorCategoryIndex' => 'int',
         'questlineItemHash' => 'int',
-        'sackInteractionList' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionSackEntryDefinition[]',
+        'sackInteractionList' => '\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionSackEntryDefinition[]',
         'uiInteractionType' => 'int',
         'interactionType' => '\Bungie\Model\Destiny\VendorInteractionType',
         'rewardBlockLabel' => 'string',
@@ -304,7 +304,7 @@ class DestinyVendorInteractionDefinition implements \Bungie\Model\ModelInterface
     /**
      * Gets replies
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionReplyDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorInteractionReplyDefinition[]|null
      */
     public function getReplies()
     {
@@ -314,7 +314,7 @@ class DestinyVendorInteractionDefinition implements \Bungie\Model\ModelInterface
     /**
      * Sets replies
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionReplyDefinition[]|null $replies The potential replies that the user can make to the interaction.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorInteractionReplyDefinition[]|null $replies The potential replies that the user can make to the interaction.
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class DestinyVendorInteractionDefinition implements \Bungie\Model\ModelInterface
     /**
      * Gets sackInteractionList
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionSackEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorInteractionSackEntryDefinition[]|null
      */
     public function getSackInteractionList()
     {
@@ -386,7 +386,7 @@ class DestinyVendorInteractionDefinition implements \Bungie\Model\ModelInterface
     /**
      * Sets sackInteractionList
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorInteractionSackEntryDefinition[]|null $sackInteractionList If this interaction is meant to show you sacks, this is the list of types of sacks to be shown. If empty, the interaction is not meant to show sacks.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorInteractionSackEntryDefinition[]|null $sackInteractionList If this interaction is meant to show you sacks, this is the list of types of sacks to be shown. If empty, the interaction is not meant to show sacks.
      *
      * @return $this
      */

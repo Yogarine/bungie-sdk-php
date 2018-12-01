@@ -58,8 +58,8 @@ class DestinyReportOffensePgcrRequest implements \Bungie\Model\ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'reasonCategoryHashes' => '\Bungie\Model\int[]',
-        'reasonHashes' => '\Bungie\Model\int[]',
+        'reasonCategoryHashes' => 'int[]',
+        'reasonHashes' => 'int[]',
         'offendingCharacterId' => 'int'
     ];
 
@@ -220,7 +220,7 @@ class DestinyReportOffensePgcrRequest implements \Bungie\Model\ModelInterface, A
     /**
      * Gets reasonCategoryHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getReasonCategoryHashes()
     {
@@ -230,7 +230,7 @@ class DestinyReportOffensePgcrRequest implements \Bungie\Model\ModelInterface, A
     /**
      * Sets reasonCategoryHashes
      *
-     * @param \Bungie\Model\int[]|null $reasonCategoryHashes So you've decided to report someone instead of cursing them and their descendants. Well, okay then. This is the category or categorie(s) of infractions for which you are reporting the user. These are hash identifiers that map to DestinyReportReasonCategoryDefinition entries.
+     * @param int[]|null $reasonCategoryHashes So you've decided to report someone instead of cursing them and their descendants. Well, okay then. This is the category or categorie(s) of infractions for which you are reporting the user. These are hash identifiers that map to DestinyReportReasonCategoryDefinition entries.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class DestinyReportOffensePgcrRequest implements \Bungie\Model\ModelInterface, A
     /**
      * Gets reasonHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getReasonHashes()
     {
@@ -254,7 +254,7 @@ class DestinyReportOffensePgcrRequest implements \Bungie\Model\ModelInterface, A
     /**
      * Sets reasonHashes
      *
-     * @param \Bungie\Model\int[]|null $reasonHashes If applicable, provide a more specific reason(s) within the general category of problems provided by the reasonHash. This is also an identifier for a reason. All reasonHashes provided must be children of at least one the reasonCategoryHashes provided.
+     * @param int[]|null $reasonHashes If applicable, provide a more specific reason(s) within the general category of problems provided by the reasonHash. This is also an identifier for a reason. All reasonHashes provided must be children of at least one the reasonCategoryHashes provided.
      *
      * @return $this
      */

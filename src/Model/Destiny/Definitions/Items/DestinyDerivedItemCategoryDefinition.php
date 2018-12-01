@@ -59,7 +59,7 @@ class DestinyDerivedItemCategoryDefinition implements \Bungie\Model\ModelInterfa
       */
     protected static $openAPITypes = [
         'categoryDescription' => 'string',
-        'items' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemDefinition[]'
+        'items' => '\Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemDefinition[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyDerivedItemCategoryDefinition implements \Bungie\Model\ModelInterfa
     /**
      * Gets items
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemDefinition[]|null
      */
     public function getItems()
     {
@@ -248,7 +248,7 @@ class DestinyDerivedItemCategoryDefinition implements \Bungie\Model\ModelInterfa
     /**
      * Sets items
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemDefinition[]|null $items This is the list of all of the items for this category and the basic properties we'll know about them.
+     * @param \Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemDefinition[]|null $items This is the list of all of the items for this category and the basic properties we'll know about them.
      *
      * @return $this
      */

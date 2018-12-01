@@ -69,8 +69,8 @@ class DestinyItemCategoryDefinition implements \Bungie\Model\ModelInterface, Arr
         'grantDestinyItemType' => '\Bungie\Model\Destiny\DestinyItemType',
         'grantDestinySubType' => '\Bungie\Model\Destiny\DestinyItemSubType',
         'grantDestinyClass' => '\Bungie\Model\Destiny\DestinyClass',
-        'groupedCategoryHashes' => '\Bungie\Model\int[]',
-        'parentCategoryHashes' => '\Bungie\Model\int[]',
+        'groupedCategoryHashes' => 'int[]',
+        'parentCategoryHashes' => 'int[]',
         'groupCategoryOnly' => 'bool',
         'hash' => 'int',
         'index' => 'int',
@@ -568,7 +568,7 @@ class DestinyItemCategoryDefinition implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets groupedCategoryHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getGroupedCategoryHashes()
     {
@@ -578,7 +578,7 @@ class DestinyItemCategoryDefinition implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets groupedCategoryHashes
      *
-     * @param \Bungie\Model\int[]|null $groupedCategoryHashes If this category is a \"parent\" category of other categories, those children will have their hashes listed in rendering order here, and can be looked up using these hashes against DestinyItemCategoryDefinition.  In this way, you can build up a visual hierarchy of item categories. That's what we did, and you can do it too. I believe in you. Yes, you, Carl.  (I hope someone named Carl reads this someday)
+     * @param int[]|null $groupedCategoryHashes If this category is a \"parent\" category of other categories, those children will have their hashes listed in rendering order here, and can be looked up using these hashes against DestinyItemCategoryDefinition.  In this way, you can build up a visual hierarchy of item categories. That's what we did, and you can do it too. I believe in you. Yes, you, Carl.  (I hope someone named Carl reads this someday)
      *
      * @return $this
      */
@@ -592,7 +592,7 @@ class DestinyItemCategoryDefinition implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets parentCategoryHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getParentCategoryHashes()
     {
@@ -602,7 +602,7 @@ class DestinyItemCategoryDefinition implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets parentCategoryHashes
      *
-     * @param \Bungie\Model\int[]|null $parentCategoryHashes All item category hashes of \"parent\" categories: categories that contain this as a child through the hierarchy of groupedCategoryHashes. It's a bit redundant, but having this child-centric list speeds up some calculations.
+     * @param int[]|null $parentCategoryHashes All item category hashes of \"parent\" categories: categories that contain this as a child through the hierarchy of groupedCategoryHashes. It's a bit redundant, but having this child-centric list speeds up some calculations.
      *
      * @return $this
      */

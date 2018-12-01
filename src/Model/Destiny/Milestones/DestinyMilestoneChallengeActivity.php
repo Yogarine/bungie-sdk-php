@@ -58,11 +58,11 @@ class DestinyMilestoneChallengeActivity implements \Bungie\Model\ModelInterface,
       */
     protected static $openAPITypes = [
         'activityHash' => 'int',
-        'challenges' => '\Bungie\Model\\Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]',
-        'modifierHashes' => '\Bungie\Model\int[]',
+        'challenges' => '\Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]',
+        'modifierHashes' => 'int[]',
         'booleanActivityOptions' => 'map[string,bool]',
         'loadoutRequirementIndex' => 'int',
-        'phases' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]'
+        'phases' => '\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]'
     ];
 
     /**
@@ -261,7 +261,7 @@ class DestinyMilestoneChallengeActivity implements \Bungie\Model\ModelInterface,
     /**
      * Gets challenges
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]|null
+     * @return \Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]|null
      */
     public function getChallenges()
     {
@@ -271,7 +271,7 @@ class DestinyMilestoneChallengeActivity implements \Bungie\Model\ModelInterface,
     /**
      * Sets challenges
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]|null $challenges challenges
+     * @param \Bungie\Model\Destiny\Challenges\DestinyChallengeStatus[]|null $challenges challenges
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class DestinyMilestoneChallengeActivity implements \Bungie\Model\ModelInterface,
     /**
      * Gets modifierHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getModifierHashes()
     {
@@ -295,7 +295,7 @@ class DestinyMilestoneChallengeActivity implements \Bungie\Model\ModelInterface,
     /**
      * Sets modifierHashes
      *
-     * @param \Bungie\Model\int[]|null $modifierHashes If the activity has modifiers, this will be the list of modifiers that all variants have in common. Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data.  Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all *possible* modifiers for the activity, not the active ones. Use only the active ones to match what's really live.
+     * @param int[]|null $modifierHashes If the activity has modifiers, this will be the list of modifiers that all variants have in common. Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data.  Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all *possible* modifiers for the activity, not the active ones. Use only the active ones to match what's really live.
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class DestinyMilestoneChallengeActivity implements \Bungie\Model\ModelInterface,
     /**
      * Gets phases
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]|null
      */
     public function getPhases()
     {
@@ -367,7 +367,7 @@ class DestinyMilestoneChallengeActivity implements \Bungie\Model\ModelInterface,
     /**
      * Sets phases
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]|null $phases If the Activity has discrete \"phases\" that we can track, that info will be here. Otherwise, this value will be NULL. Note that this is a list and not a dictionary: the order implies the ascending order of phases or progression in this activity.
+     * @param \Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]|null $phases If the Activity has discrete \"phases\" that we can track, that info will be here. Otherwise, this value will be NULL. Note that this is a list and not a dictionary: the order implies the ascending order of phases or progression in this activity.
      *
      * @return $this
      */

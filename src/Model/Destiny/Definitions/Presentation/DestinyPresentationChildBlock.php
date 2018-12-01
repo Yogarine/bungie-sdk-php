@@ -58,7 +58,7 @@ class DestinyPresentationChildBlock implements \Bungie\Model\ModelInterface, Arr
       */
     protected static $openAPITypes = [
         'presentationNodeType' => '\Bungie\Model\Destiny\DestinyPresentationNodeType',
-        'parentPresentationNodeHashes' => '\Bungie\Model\int[]',
+        'parentPresentationNodeHashes' => 'int[]',
         'displayStyle' => '\Bungie\Model\Destiny\DestinyPresentationDisplayStyle'
     ];
 
@@ -243,7 +243,7 @@ class DestinyPresentationChildBlock implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets parentPresentationNodeHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getParentPresentationNodeHashes()
     {
@@ -253,7 +253,7 @@ class DestinyPresentationChildBlock implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets parentPresentationNodeHashes
      *
-     * @param \Bungie\Model\int[]|null $parentPresentationNodeHashes parentPresentationNodeHashes
+     * @param int[]|null $parentPresentationNodeHashes parentPresentationNodeHashes
      *
      * @return $this
      */

@@ -60,7 +60,7 @@ class DestinyStatGroupDefinition implements \Bungie\Model\ModelInterface, ArrayA
     protected static $openAPITypes = [
         'maximumValue' => 'int',
         'uiPosition' => 'int',
-        'scaledStats' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyStatDisplayDefinition[]',
+        'scaledStats' => '\Bungie\Model\Destiny\Definitions\DestinyStatDisplayDefinition[]',
         'overrides' => 'map[string,\Bungie\Model\Destiny\Definitions\DestinyStatOverrideDefinition]',
         'hash' => 'int',
         'index' => 'int',
@@ -292,7 +292,7 @@ class DestinyStatGroupDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets scaledStats
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyStatDisplayDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyStatDisplayDefinition[]|null
      */
     public function getScaledStats()
     {
@@ -302,7 +302,7 @@ class DestinyStatGroupDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets scaledStats
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyStatDisplayDefinition[]|null $scaledStats Any stat that requires scaling to be transformed from an \"Investment\" stat to a \"Display\" stat will have an entry in this list. For more information on what those types of stats mean and the transformation process, see DestinyStatDefinition.  In retrospect, I wouldn't mind if this was a dictionary keyed by the stat hash instead. But I'm going to leave it be because [[After Apple Picking]].
+     * @param \Bungie\Model\Destiny\Definitions\DestinyStatDisplayDefinition[]|null $scaledStats Any stat that requires scaling to be transformed from an \"Investment\" stat to a \"Display\" stat will have an entry in this list. For more information on what those types of stats mean and the transformation process, see DestinyStatDefinition.  In retrospect, I wouldn't mind if this was a dictionary keyed by the stat hash instead. But I'm going to leave it be because [[After Apple Picking]].
      *
      * @return $this
      */

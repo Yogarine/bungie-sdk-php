@@ -58,7 +58,7 @@ class DestinyVendorCategoriesComponent implements \Bungie\Model\ModelInterface, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'categories' => '\Bungie\Model\\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorCategory[]'
+        'categories' => '\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorCategory[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyVendorCategoriesComponent implements \Bungie\Model\ModelInterface, 
     /**
      * Gets categories
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorCategory[]|null
+     * @return \Bungie\Model\Destiny\Entities\Vendors\DestinyVendorCategory[]|null
      */
     public function getCategories()
     {
@@ -218,7 +218,7 @@ class DestinyVendorCategoriesComponent implements \Bungie\Model\ModelInterface, 
     /**
      * Sets categories
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Entities\Vendors\DestinyVendorCategory[]|null $categories The list of categories for items that the vendor sells, in rendering order.  These categories each point to a \"display category\" in the displayCategories property of the DestinyVendorDefinition, as opposed to the other categories.
+     * @param \Bungie\Model\Destiny\Entities\Vendors\DestinyVendorCategory[]|null $categories The list of categories for items that the vendor sells, in rendering order.  These categories each point to a \"display category\" in the displayCategories property of the DestinyVendorDefinition, as opposed to the other categories.
      *
      * @return $this
      */

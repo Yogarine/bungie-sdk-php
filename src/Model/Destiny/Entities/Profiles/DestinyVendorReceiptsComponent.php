@@ -58,7 +58,7 @@ class DestinyVendorReceiptsComponent implements \Bungie\Model\ModelInterface, Ar
       * @var string[]
       */
     protected static $openAPITypes = [
-        'receipts' => '\Bungie\Model\\Bungie\Model\Destiny\Vendors\DestinyVendorReceipt[]'
+        'receipts' => '\Bungie\Model\Destiny\Vendors\DestinyVendorReceipt[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyVendorReceiptsComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets receipts
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Vendors\DestinyVendorReceipt[]|null
+     * @return \Bungie\Model\Destiny\Vendors\DestinyVendorReceipt[]|null
      */
     public function getReceipts()
     {
@@ -218,7 +218,7 @@ class DestinyVendorReceiptsComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets receipts
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Vendors\DestinyVendorReceipt[]|null $receipts The receipts for refundable purchases made at a vendor.
+     * @param \Bungie\Model\Destiny\Vendors\DestinyVendorReceipt[]|null $receipts The receipts for refundable purchases made at a vendor.
      *
      * @return $this
      */

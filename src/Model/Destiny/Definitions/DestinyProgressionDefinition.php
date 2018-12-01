@@ -62,7 +62,7 @@ class DestinyProgressionDefinition implements \Bungie\Model\ModelInterface, Arra
         'scope' => '\Bungie\Model\Destiny\DestinyProgressionScope',
         'repeatLastStep' => 'bool',
         'source' => 'string',
-        'steps' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyProgressionStepDefinition[]',
+        'steps' => '\Bungie\Model\Destiny\Definitions\DestinyProgressionStepDefinition[]',
         'visible' => 'bool',
         'factionHash' => 'int',
         'hash' => 'int',
@@ -358,7 +358,7 @@ class DestinyProgressionDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Gets steps
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyProgressionStepDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyProgressionStepDefinition[]|null
      */
     public function getSteps()
     {
@@ -368,7 +368,7 @@ class DestinyProgressionDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Sets steps
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyProgressionStepDefinition[]|null $steps Progressions are divided into Steps, which roughly equate to \"Levels\" in the traditional sense of a Progression. Notably, the last step can be repeated indefinitely if repeatLastStep is true, meaning that the calculation for your level is not as simple as comparing your current progress to the max progress of the steps.   These and more calculations are done for you if you grab live character progression data, such as in the DestinyCharacterProgressionComponent.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyProgressionStepDefinition[]|null $steps Progressions are divided into Steps, which roughly equate to \"Levels\" in the traditional sense of a Progression. Notably, the last step can be repeated indefinitely if repeatLastStep is true, meaning that the calculation for your level is not as simple as comparing your current progress to the max progress of the steps.   These and more calculations are done for you if you grab live character progression data, such as in the DestinyCharacterProgressionComponent.
      *
      * @return $this
      */

@@ -59,7 +59,7 @@ class DestinyMilestoneRewardCategory implements \Bungie\Model\ModelInterface, Ar
       */
     protected static $openAPITypes = [
         'rewardCategoryHash' => 'int',
-        'entries' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneRewardEntry[]'
+        'entries' => '\Bungie\Model\Destiny\Milestones\DestinyMilestoneRewardEntry[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyMilestoneRewardCategory implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets entries
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneRewardEntry[]|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyMilestoneRewardEntry[]|null
      */
     public function getEntries()
     {
@@ -248,7 +248,7 @@ class DestinyMilestoneRewardCategory implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets entries
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneRewardEntry[]|null $entries The individual reward entries for this category, and their status.
+     * @param \Bungie\Model\Destiny\Milestones\DestinyMilestoneRewardEntry[]|null $entries The individual reward entries for this category, and their status.
      *
      * @return $this
      */

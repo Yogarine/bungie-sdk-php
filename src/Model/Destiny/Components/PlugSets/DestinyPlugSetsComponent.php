@@ -58,7 +58,7 @@ class DestinyPlugSetsComponent implements \Bungie\Model\ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'plugs' => 'map[string,\Bungie\Model\\Bungie\Model\Destiny\Sockets\DestinyItemPlug[]]'
+        'plugs' => 'map[string,\Bungie\Model\Destiny\Sockets\DestinyItemPlug[]]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyPlugSetsComponent implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Gets plugs
      *
-     * @return map[string,\Bungie\Model\\Bungie\Model\Destiny\Sockets\DestinyItemPlug[]]|null
+     * @return map[string,\Bungie\Model\Destiny\Sockets\DestinyItemPlug[]]|null
      */
     public function getPlugs()
     {
@@ -218,7 +218,7 @@ class DestinyPlugSetsComponent implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Sets plugs
      *
-     * @param map[string,\Bungie\Model\\Bungie\Model\Destiny\Sockets\DestinyItemPlug[]]|null $plugs The shared list of plugs for each relevant PlugSet, keyed by the hash identifier of the PlugSet (DestinyPlugSetDefinition).
+     * @param map[string,\Bungie\Model\Destiny\Sockets\DestinyItemPlug[]]|null $plugs The shared list of plugs for each relevant PlugSet, keyed by the hash identifier of the PlugSet (DestinyPlugSetDefinition).
      *
      * @return $this
      */

@@ -57,7 +57,7 @@ class UserMembershipData implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'destinyMemberships' => '\Bungie\Model\\Bungie\Model\User\UserInfoCard[]',
+        'destinyMemberships' => '\Bungie\Model\User\UserInfoCard[]',
         'bungieNetUser' => '\Bungie\Model\User\GeneralUser'
     ];
 
@@ -213,7 +213,7 @@ class UserMembershipData implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets destinyMemberships
      *
-     * @return \Bungie\Model\\Bungie\Model\User\UserInfoCard[]|null
+     * @return \Bungie\Model\User\UserInfoCard[]|null
      */
     public function getDestinyMemberships()
     {
@@ -223,7 +223,7 @@ class UserMembershipData implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets destinyMemberships
      *
-     * @param \Bungie\Model\\Bungie\Model\User\UserInfoCard[]|null $destinyMemberships this allows you to see destiny memberships that are visible and linked to this account (regardless of whether or not they have characters on the world server)
+     * @param \Bungie\Model\User\UserInfoCard[]|null $destinyMemberships this allows you to see destiny memberships that are visible and linked to this account (regardless of whether or not they have characters on the world server)
      *
      * @return $this
      */

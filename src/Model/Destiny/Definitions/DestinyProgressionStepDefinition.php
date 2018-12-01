@@ -61,7 +61,7 @@ class DestinyProgressionStepDefinition implements \Bungie\Model\ModelInterface, 
         'stepName' => 'string',
         'displayEffectType' => '\Bungie\Model\Destiny\DestinyProgressionStepDisplayEffect',
         'progressTotal' => 'int',
-        'rewardItems' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]',
+        'rewardItems' => '\Bungie\Model\Destiny\DestinyItemQuantity[]',
         'icon' => 'string'
     ];
 
@@ -304,7 +304,7 @@ class DestinyProgressionStepDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets rewardItems
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null
+     * @return \Bungie\Model\Destiny\DestinyItemQuantity[]|null
      */
     public function getRewardItems()
     {
@@ -314,7 +314,7 @@ class DestinyProgressionStepDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets rewardItems
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null $rewardItems A listing of items rewarded as a result of reaching this level.
+     * @param \Bungie\Model\Destiny\DestinyItemQuantity[]|null $rewardItems A listing of items rewarded as a result of reaching this level.
      *
      * @return $this
      */

@@ -59,7 +59,7 @@ class DestinyItemTalentGridComponent implements \Bungie\Model\ModelInterface, Ar
       */
     protected static $openAPITypes = [
         'talentGridHash' => 'int',
-        'nodes' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyTalentNode[]',
+        'nodes' => '\Bungie\Model\Destiny\DestinyTalentNode[]',
         'isGridComplete' => 'bool',
         'gridProgression' => '\Bungie\Model\Destiny\DestinyProgression'
     ];
@@ -250,7 +250,7 @@ class DestinyItemTalentGridComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets nodes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyTalentNode[]|null
+     * @return \Bungie\Model\Destiny\DestinyTalentNode[]|null
      */
     public function getNodes()
     {
@@ -260,7 +260,7 @@ class DestinyItemTalentGridComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets nodes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyTalentNode[]|null $nodes Detailed information about the individual nodes in the talent grid.  A node represents a single visual \"pip\" in the talent grid or Build detail view, though each node may have multiple \"steps\" which indicate the actual bonuses and visual representation of that node.
+     * @param \Bungie\Model\Destiny\DestinyTalentNode[]|null $nodes Detailed information about the individual nodes in the talent grid.  A node represents a single visual \"pip\" in the talent grid or Build detail view, though each node may have multiple \"steps\" which indicate the actual bonuses and visual representation of that node.
      *
      * @return $this
      */

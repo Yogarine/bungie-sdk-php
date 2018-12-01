@@ -57,7 +57,7 @@ class TrendingCategories implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'categories' => '\Bungie\Model\\Bungie\Model\Trending\TrendingCategory[]'
+        'categories' => '\Bungie\Model\Trending\TrendingCategory[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class TrendingCategories implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets categories
      *
-     * @return \Bungie\Model\\Bungie\Model\Trending\TrendingCategory[]|null
+     * @return \Bungie\Model\Trending\TrendingCategory[]|null
      */
     public function getCategories()
     {
@@ -217,7 +217,7 @@ class TrendingCategories implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets categories
      *
-     * @param \Bungie\Model\\Bungie\Model\Trending\TrendingCategory[]|null $categories categories
+     * @param \Bungie\Model\Trending\TrendingCategory[]|null $categories categories
      *
      * @return $this
      */

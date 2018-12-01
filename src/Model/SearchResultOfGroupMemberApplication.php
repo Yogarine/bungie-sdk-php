@@ -57,7 +57,7 @@ class SearchResultOfGroupMemberApplication implements \Bungie\Model\ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\GroupsV2\GroupMemberApplication[]',
+        'results' => '\Bungie\Model\GroupsV2\GroupMemberApplication[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class SearchResultOfGroupMemberApplication implements \Bungie\Model\ModelInterfa
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\GroupsV2\GroupMemberApplication[]|null
+     * @return \Bungie\Model\GroupsV2\GroupMemberApplication[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfGroupMemberApplication implements \Bungie\Model\ModelInterfa
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\GroupsV2\GroupMemberApplication[]|null $results results
+     * @param \Bungie\Model\GroupsV2\GroupMemberApplication[]|null $results results
      *
      * @return $this
      */

@@ -57,7 +57,7 @@ class SearchResultOfGroupMembership implements \Bungie\Model\ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\GroupsV2\GroupMembership[]',
+        'results' => '\Bungie\Model\GroupsV2\GroupMembership[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class SearchResultOfGroupMembership implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\GroupsV2\GroupMembership[]|null
+     * @return \Bungie\Model\GroupsV2\GroupMembership[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfGroupMembership implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\GroupsV2\GroupMembership[]|null $results results
+     * @param \Bungie\Model\GroupsV2\GroupMembership[]|null $results results
      *
      * @return $this
      */

@@ -63,8 +63,8 @@ class DestinyCharacterCustomization implements \Bungie\Model\ModelInterface, Arr
         'skinColor' => 'int',
         'lipColor' => 'int',
         'eyeColor' => 'int',
-        'hairColors' => '\Bungie\Model\int[]',
-        'featureColors' => '\Bungie\Model\int[]',
+        'hairColors' => 'int[]',
+        'featureColors' => 'int[]',
         'decalColor' => 'int',
         'wearHelmet' => 'bool',
         'hairIndex' => 'int',
@@ -394,7 +394,7 @@ class DestinyCharacterCustomization implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets hairColors
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getHairColors()
     {
@@ -404,7 +404,7 @@ class DestinyCharacterCustomization implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets hairColors
      *
-     * @param \Bungie\Model\int[]|null $hairColors hairColors
+     * @param int[]|null $hairColors hairColors
      *
      * @return $this
      */
@@ -418,7 +418,7 @@ class DestinyCharacterCustomization implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets featureColors
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getFeatureColors()
     {
@@ -428,7 +428,7 @@ class DestinyCharacterCustomization implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets featureColors
      *
-     * @param \Bungie\Model\int[]|null $featureColors featureColors
+     * @param int[]|null $featureColors featureColors
      *
      * @return $this
      */

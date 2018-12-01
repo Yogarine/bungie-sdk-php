@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **creationDate** | **\DateTime** |  | [optional] 
 **modificationDate** | **\DateTime** |  | [optional] 
 **about** | **string** |  | [optional] 
-**tags** | **\Bungie\Model\string[]** |  | [optional] 
+**tags** | **string[]** |  | [optional] 
 **memberCount** | **int** |  | [optional] 
 **isPublic** | **bool** |  | [optional] 
 **isPublicTopicAdminOnly** | **bool** |  | [optional] 

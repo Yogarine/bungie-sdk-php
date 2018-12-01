@@ -58,7 +58,7 @@ class PollResponse implements \Bungie\Model\ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'topicId' => 'int',
-        'results' => '\Bungie\Model\\Bungie\Model\Forum\PollResult[]',
+        'results' => '\Bungie\Model\Forum\PollResult[]',
         'totalVotes' => 'int'
     ];
 
@@ -243,7 +243,7 @@ class PollResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\Forum\PollResult[]|null
+     * @return \Bungie\Model\Forum\PollResult[]|null
      */
     public function getResults()
     {
@@ -253,7 +253,7 @@ class PollResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\Forum\PollResult[]|null $results results
+     * @param \Bungie\Model\Forum\PollResult[]|null $results results
      *
      * @return $this
      */

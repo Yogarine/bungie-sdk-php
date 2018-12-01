@@ -59,9 +59,9 @@ class DestinyItemSocketBlockDefinition implements \Bungie\Model\ModelInterface, 
       */
     protected static $openAPITypes = [
         'detail' => 'string',
-        'socketEntries' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryDefinition[]',
-        'intrinsicSockets' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemIntrinsicSocketEntryDefinition[]',
-        'socketCategories' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketCategoryDefinition[]'
+        'socketEntries' => '\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryDefinition[]',
+        'intrinsicSockets' => '\Bungie\Model\Destiny\Definitions\DestinyItemIntrinsicSocketEntryDefinition[]',
+        'socketCategories' => '\Bungie\Model\Destiny\Definitions\DestinyItemSocketCategoryDefinition[]'
     ];
 
     /**
@@ -250,7 +250,7 @@ class DestinyItemSocketBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets socketEntries
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryDefinition[]|null
      */
     public function getSocketEntries()
     {
@@ -260,7 +260,7 @@ class DestinyItemSocketBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets socketEntries
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryDefinition[]|null $socketEntries Each non-intrinsic (or mutable) socket on an item is defined here. Check inside for more info.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryDefinition[]|null $socketEntries Each non-intrinsic (or mutable) socket on an item is defined here. Check inside for more info.
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ class DestinyItemSocketBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets intrinsicSockets
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemIntrinsicSocketEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemIntrinsicSocketEntryDefinition[]|null
      */
     public function getIntrinsicSockets()
     {
@@ -284,7 +284,7 @@ class DestinyItemSocketBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets intrinsicSockets
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemIntrinsicSocketEntryDefinition[]|null $intrinsicSockets Each intrinsic (or immutable/permanent) socket on an item is defined here, along with the plug that is permanently affixed to the socket.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemIntrinsicSocketEntryDefinition[]|null $intrinsicSockets Each intrinsic (or immutable/permanent) socket on an item is defined here, along with the plug that is permanently affixed to the socket.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class DestinyItemSocketBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets socketCategories
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketCategoryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemSocketCategoryDefinition[]|null
      */
     public function getSocketCategories()
     {
@@ -308,7 +308,7 @@ class DestinyItemSocketBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets socketCategories
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketCategoryDefinition[]|null $socketCategories A convenience property, that refers to the sockets in the \"sockets\" property, pre-grouped by category and ordered in the manner that they should be grouped in the UI. You could form this yourself with the existing data, but why would you want to? Enjoy life man.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemSocketCategoryDefinition[]|null $socketCategories A convenience property, that refers to the sockets in the \"sockets\" property, pre-grouped by category and ordered in the manner that they should be grouped in the UI. You could form this yourself with the existing data, but why would you want to? Enjoy life man.
      *
      * @return $this
      */

@@ -58,9 +58,9 @@ class DestinyPublicActivityStatus implements \Bungie\Model\ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'challengeObjectiveHashes' => '\Bungie\Model\int[]',
-        'modifierHashes' => '\Bungie\Model\int[]',
-        'rewardTooltipItems' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]'
+        'challengeObjectiveHashes' => 'int[]',
+        'modifierHashes' => 'int[]',
+        'rewardTooltipItems' => '\Bungie\Model\Destiny\DestinyItemQuantity[]'
     ];
 
     /**
@@ -220,7 +220,7 @@ class DestinyPublicActivityStatus implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets challengeObjectiveHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getChallengeObjectiveHashes()
     {
@@ -230,7 +230,7 @@ class DestinyPublicActivityStatus implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets challengeObjectiveHashes
      *
-     * @param \Bungie\Model\int[]|null $challengeObjectiveHashes Active Challenges for the activity, if any - represented as hashes for DestinyObjectiveDefinitions.
+     * @param int[]|null $challengeObjectiveHashes Active Challenges for the activity, if any - represented as hashes for DestinyObjectiveDefinitions.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class DestinyPublicActivityStatus implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets modifierHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getModifierHashes()
     {
@@ -254,7 +254,7 @@ class DestinyPublicActivityStatus implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets modifierHashes
      *
-     * @param \Bungie\Model\int[]|null $modifierHashes The active modifiers on this activity, if any - represented as hashes for DestinyActivityModifierDefinitions.
+     * @param int[]|null $modifierHashes The active modifiers on this activity, if any - represented as hashes for DestinyActivityModifierDefinitions.
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class DestinyPublicActivityStatus implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets rewardTooltipItems
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null
+     * @return \Bungie\Model\Destiny\DestinyItemQuantity[]|null
      */
     public function getRewardTooltipItems()
     {
@@ -278,7 +278,7 @@ class DestinyPublicActivityStatus implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets rewardTooltipItems
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null $rewardTooltipItems If the activity itself provides any specific \"mock\" rewards, this will be the items and their quantity.  Why \"mock\", you ask? Because these are the rewards as they are represented in the tooltip of the Activity.  These are often pointers to fake items that look good in a tooltip, but represent an abstract concept of what you will get for a reward rather than the specific items you may obtain.
+     * @param \Bungie\Model\Destiny\DestinyItemQuantity[]|null $rewardTooltipItems If the activity itself provides any specific \"mock\" rewards, this will be the items and their quantity.  Why \"mock\", you ask? Because these are the rewards as they are represented in the tooltip of the Activity.  These are often pointers to fake items that look good in a tooltip, but represent an abstract concept of what you will get for a reward rather than the specific items you may obtain.
      *
      * @return $this
      */

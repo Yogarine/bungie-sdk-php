@@ -59,7 +59,7 @@ class DestinyMilestoneActivityCompletionStatus implements \Bungie\Model\ModelInt
       */
     protected static $openAPITypes = [
         'completed' => 'bool',
-        'phases' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]'
+        'phases' => '\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyMilestoneActivityCompletionStatus implements \Bungie\Model\ModelInt
     /**
      * Gets phases
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]|null
      */
     public function getPhases()
     {
@@ -248,7 +248,7 @@ class DestinyMilestoneActivityCompletionStatus implements \Bungie\Model\ModelInt
     /**
      * Sets phases
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]|null $phases If the Activity has discrete \"phases\" that we can track, that info will be here. Otherwise, this value will be NULL. Note that this is a list and not a dictionary: the order implies the ascending order of phases or progression in this activity.
+     * @param \Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityPhase[]|null $phases If the Activity has discrete \"phases\" that we can track, that info will be here. Otherwise, this value will be NULL. Note that this is a list and not a dictionary: the order implies the ascending order of phases or progression in this activity.
      *
      * @return $this
      */

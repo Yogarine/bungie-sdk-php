@@ -59,7 +59,7 @@ class DestinyPlugSetDefinition implements \Bungie\Model\ModelInterface, ArrayAcc
       */
     protected static $openAPITypes = [
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
-        'reusablePlugItems' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]',
+        'reusablePlugItems' => '\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -256,7 +256,7 @@ class DestinyPlugSetDefinition implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Gets reusablePlugItems
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]|null
      */
     public function getReusablePlugItems()
     {
@@ -266,7 +266,7 @@ class DestinyPlugSetDefinition implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Sets reusablePlugItems
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]|null $reusablePlugItems This is a list of pre-determined plugs that can be plugged into this socket, without the character having the plug in their inventory.  If this list is populated, you will not be allowed to plug an arbitrary item in the socket: you will only be able to choose from one of these reusable plugs.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemSocketEntryPlugItemDefinition[]|null $reusablePlugItems This is a list of pre-determined plugs that can be plugged into this socket, without the character having the plug in their inventory.  If this list is populated, you will not be allowed to plug an arbitrary item in the socket: you will only be able to choose from one of these reusable plugs.
      *
      * @return $this
      */

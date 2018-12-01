@@ -64,7 +64,7 @@ class DestinyItemSourceDefinition implements \Bungie\Model\ModelInterface, Array
         'minLevelRequired' => 'int',
         'maxLevelRequired' => 'int',
         'computedStats' => 'map[string,\Bungie\Model\Destiny\Definitions\DestinyInventoryItemStatDefinition]',
-        'sourceHashes' => '\Bungie\Model\int[]'
+        'sourceHashes' => 'int[]'
     ];
 
     /**
@@ -388,7 +388,7 @@ class DestinyItemSourceDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets sourceHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getSourceHashes()
     {
@@ -398,7 +398,7 @@ class DestinyItemSourceDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets sourceHashes
      *
-     * @param \Bungie\Model\int[]|null $sourceHashes The DestinyRewardSourceDefinitions found that can spawn the item at this level.
+     * @param int[]|null $sourceHashes The DestinyRewardSourceDefinitions found that can spawn the item at this level.
      *
      * @return $this
      */

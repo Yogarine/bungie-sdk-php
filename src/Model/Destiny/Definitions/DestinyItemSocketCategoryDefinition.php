@@ -59,7 +59,7 @@ class DestinyItemSocketCategoryDefinition implements \Bungie\Model\ModelInterfac
       */
     protected static $openAPITypes = [
         'socketCategoryHash' => 'int',
-        'socketIndexes' => '\Bungie\Model\int[]'
+        'socketIndexes' => 'int[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyItemSocketCategoryDefinition implements \Bungie\Model\ModelInterfac
     /**
      * Gets socketIndexes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getSocketIndexes()
     {
@@ -248,7 +248,7 @@ class DestinyItemSocketCategoryDefinition implements \Bungie\Model\ModelInterfac
     /**
      * Sets socketIndexes
      *
-     * @param \Bungie\Model\int[]|null $socketIndexes Use these indexes to look up the sockets in the \"sockets.socketEntries\" property on the item definition. These are the indexes under the category, in game-rendered order.
+     * @param int[]|null $socketIndexes Use these indexes to look up the sockets in the \"sockets.socketEntries\" property on the item definition. These are the indexes under the category, in game-rendered order.
      *
      * @return $this
      */

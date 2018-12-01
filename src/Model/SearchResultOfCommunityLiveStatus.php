@@ -57,7 +57,7 @@ class SearchResultOfCommunityLiveStatus implements \Bungie\Model\ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\Community\CommunityLiveStatus[]',
+        'results' => '\Bungie\Model\Community\CommunityLiveStatus[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class SearchResultOfCommunityLiveStatus implements \Bungie\Model\ModelInterface,
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\Community\CommunityLiveStatus[]|null
+     * @return \Bungie\Model\Community\CommunityLiveStatus[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfCommunityLiveStatus implements \Bungie\Model\ModelInterface,
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\Community\CommunityLiveStatus[]|null $results results
+     * @param \Bungie\Model\Community\CommunityLiveStatus[]|null $results results
      *
      * @return $this
      */

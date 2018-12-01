@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **conversationId** | **int** |  | [optional] 
 **playerSlotsTotal** | **int** |  | [optional] 
 **playerSlotsRemaining** | **int** |  | [optional] 
-**fireteam** | [**\Bungie\Model\\Bungie\Model\User\GeneralUser[]**](GeneralUser.md) |  | [optional] 
-**kickedPlayerIds** | **\Bungie\Model\int[]** |  | [optional] 
+**fireteam** | [**\Bungie\Model\User\GeneralUser[]**](GeneralUser.md) |  | [optional] 
+**kickedPlayerIds** | **int[]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

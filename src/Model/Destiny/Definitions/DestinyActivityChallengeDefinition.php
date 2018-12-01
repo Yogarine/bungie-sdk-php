@@ -59,7 +59,7 @@ class DestinyActivityChallengeDefinition implements \Bungie\Model\ModelInterface
       */
     protected static $openAPITypes = [
         'objectiveHash' => 'int',
-        'dummyRewards' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]'
+        'dummyRewards' => '\Bungie\Model\Destiny\DestinyItemQuantity[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyActivityChallengeDefinition implements \Bungie\Model\ModelInterface
     /**
      * Gets dummyRewards
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null
+     * @return \Bungie\Model\Destiny\DestinyItemQuantity[]|null
      */
     public function getDummyRewards()
     {
@@ -248,7 +248,7 @@ class DestinyActivityChallengeDefinition implements \Bungie\Model\ModelInterface
     /**
      * Sets dummyRewards
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyItemQuantity[]|null $dummyRewards The rewards as they're represented in the UI. Note that they generally link to \"dummy\" items that give a summary of rewards rather than direct, real items themselves.  If the quantity is 0, don't show the quantity.
+     * @param \Bungie\Model\Destiny\DestinyItemQuantity[]|null $dummyRewards The rewards as they're represented in the UI. Note that they generally link to \"dummy\" items that give a summary of rewards rather than direct, real items themselves.  If the quantity is 0, don't show the quantity.
      *
      * @return $this
      */

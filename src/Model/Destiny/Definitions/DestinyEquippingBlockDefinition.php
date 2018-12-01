@@ -64,7 +64,7 @@ class DestinyEquippingBlockDefinition implements \Bungie\Model\ModelInterface, A
         'equipmentSlotTypeHash' => 'int',
         'attributes' => '\Bungie\Model\Destiny\EquippingItemBlockAttributes',
         'ammoType' => '\Bungie\Model\Destiny\DestinyAmmunitionType',
-        'displayStrings' => '\Bungie\Model\string[]'
+        'displayStrings' => 'string[]'
     ];
 
     /**
@@ -388,7 +388,7 @@ class DestinyEquippingBlockDefinition implements \Bungie\Model\ModelInterface, A
     /**
      * Gets displayStrings
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getDisplayStrings()
     {
@@ -398,7 +398,7 @@ class DestinyEquippingBlockDefinition implements \Bungie\Model\ModelInterface, A
     /**
      * Sets displayStrings
      *
-     * @param \Bungie\Model\string[]|null $displayStrings These are strings that represent the possible Game/Account/Character state failure conditions that can occur when trying to equip the item. They match up one-to-one with requiredUnlockExpressions.
+     * @param string[]|null $displayStrings These are strings that represent the possible Game/Account/Character state failure conditions that can occur when trying to equip the item. They match up one-to-one with requiredUnlockExpressions.
      *
      * @return $this
      */

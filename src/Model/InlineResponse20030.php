@@ -57,7 +57,7 @@ class InlineResponse20030 implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response' => '\Bungie\Model\\Bungie\Model\Entities\EntityActionResult[]',
+        'response' => '\Bungie\Model\Entities\EntityActionResult[]',
         'errorCode' => '\Bungie\Model\Exceptions\PlatformErrorCodes',
         'throttleSeconds' => 'int',
         'errorStatus' => 'string',
@@ -243,7 +243,7 @@ class InlineResponse20030 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Bungie\Model\\Bungie\Model\Entities\EntityActionResult[]|null
+     * @return \Bungie\Model\Entities\EntityActionResult[]|null
      */
     public function getResponse()
     {
@@ -253,7 +253,7 @@ class InlineResponse20030 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Bungie\Model\\Bungie\Model\Entities\EntityActionResult[]|null $response response
+     * @param \Bungie\Model\Entities\EntityActionResult[]|null $response response
      *
      * @return $this
      */

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **string** |  | [optional] 
 **tagText** | **string** |  | [optional] 
-**groups** | **\Bungie\Model\string[]** |  | [optional] 
+**groups** | **string[]** |  | [optional] 
 **isDefault** | **bool** |  | [optional] 
 **name** | **string** |  | [optional] 
 

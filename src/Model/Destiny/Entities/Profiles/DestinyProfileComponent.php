@@ -61,7 +61,7 @@ class DestinyProfileComponent implements \Bungie\Model\ModelInterface, ArrayAcce
         'userInfo' => '\Bungie\Model\User\UserInfoCard',
         'dateLastPlayed' => '\DateTime',
         'versionsOwned' => '\Bungie\Model\Destiny\DestinyGameVersions',
-        'characterIds' => '\Bungie\Model\int[]'
+        'characterIds' => 'int[]'
     ];
 
     /**
@@ -298,7 +298,7 @@ class DestinyProfileComponent implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets characterIds
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getCharacterIds()
     {
@@ -308,7 +308,7 @@ class DestinyProfileComponent implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets characterIds
      *
-     * @param \Bungie\Model\int[]|null $characterIds A list of the character IDs, for further querying on your part.
+     * @param int[]|null $characterIds A list of the character IDs, for further querying on your part.
      *
      * @return $this
      */

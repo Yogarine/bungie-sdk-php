@@ -60,8 +60,8 @@ class DestinyPostGameCarnageReportData implements \Bungie\Model\ModelInterface, 
         'period' => '\DateTime',
         'startingPhaseIndex' => 'int',
         'activityDetails' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsActivity',
-        'entries' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportEntry[]',
-        'teams' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportTeamEntry[]'
+        'entries' => '\Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportEntry[]',
+        'teams' => '\Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportTeamEntry[]'
     ];
 
     /**
@@ -303,7 +303,7 @@ class DestinyPostGameCarnageReportData implements \Bungie\Model\ModelInterface, 
     /**
      * Gets entries
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportEntry[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportEntry[]|null
      */
     public function getEntries()
     {
@@ -313,7 +313,7 @@ class DestinyPostGameCarnageReportData implements \Bungie\Model\ModelInterface, 
     /**
      * Sets entries
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportEntry[]|null $entries Collection of players and their data for this activity.
+     * @param \Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportEntry[]|null $entries Collection of players and their data for this activity.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class DestinyPostGameCarnageReportData implements \Bungie\Model\ModelInterface, 
     /**
      * Gets teams
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportTeamEntry[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportTeamEntry[]|null
      */
     public function getTeams()
     {
@@ -337,7 +337,7 @@ class DestinyPostGameCarnageReportData implements \Bungie\Model\ModelInterface, 
     /**
      * Sets teams
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportTeamEntry[]|null $teams Collection of stats for the player in this activity.
+     * @param \Bungie\Model\Destiny\HistoricalStats\DestinyPostGameCarnageReportTeamEntry[]|null $teams Collection of stats for the player in this activity.
      *
      * @return $this
      */

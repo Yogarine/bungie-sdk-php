@@ -58,7 +58,7 @@ class DestinyItemSetBlockDefinition implements \Bungie\Model\ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'itemList' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSetBlockEntryDefinition[]',
+        'itemList' => '\Bungie\Model\Destiny\Definitions\DestinyItemSetBlockEntryDefinition[]',
         'requireOrderedSetItemAdd' => 'bool',
         'setIsFeatured' => 'bool',
         'setType' => 'string'
@@ -226,7 +226,7 @@ class DestinyItemSetBlockDefinition implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets itemList
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSetBlockEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemSetBlockEntryDefinition[]|null
      */
     public function getItemList()
     {
@@ -236,7 +236,7 @@ class DestinyItemSetBlockDefinition implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets itemList
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemSetBlockEntryDefinition[]|null $itemList A collection of hashes of set items, for items such as Quest Metadata items that possess this data.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemSetBlockEntryDefinition[]|null $itemList A collection of hashes of set items, for items such as Quest Metadata items that possess this data.
      *
      * @return $this
      */

@@ -58,7 +58,7 @@ class DestinyVendorGroupComponent implements \Bungie\Model\ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'groups' => '\Bungie\Model\\Bungie\Model\Destiny\Components\Vendors\DestinyVendorGroup[]'
+        'groups' => '\Bungie\Model\Destiny\Components\Vendors\DestinyVendorGroup[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyVendorGroupComponent implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets groups
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Components\Vendors\DestinyVendorGroup[]|null
+     * @return \Bungie\Model\Destiny\Components\Vendors\DestinyVendorGroup[]|null
      */
     public function getGroups()
     {
@@ -218,7 +218,7 @@ class DestinyVendorGroupComponent implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets groups
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Components\Vendors\DestinyVendorGroup[]|null $groups The ordered list of groups being returned.
+     * @param \Bungie\Model\Destiny\Components\Vendors\DestinyVendorGroup[]|null $groups The ordered list of groups being returned.
      *
      * @return $this
      */

@@ -57,7 +57,7 @@ class SearchResultOfGroupBan implements \Bungie\Model\ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\GroupsV2\GroupBan[]',
+        'results' => '\Bungie\Model\GroupsV2\GroupBan[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class SearchResultOfGroupBan implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\GroupsV2\GroupBan[]|null
+     * @return \Bungie\Model\GroupsV2\GroupBan[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfGroupBan implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\GroupsV2\GroupBan[]|null $results results
+     * @param \Bungie\Model\GroupsV2\GroupBan[]|null $results results
      *
      * @return $this
      */

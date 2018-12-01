@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **disabledDescription** | **string** | If the category is disabled, this is the localized description to show. | [optional] 
 **displayTitle** | **string** | The localized title of the category. | [optional] 
 **overlay** | [**\Bungie\Model\Destiny\Definitions\DestinyVendorCategoryOverlayDefinition**](DestinyVendorCategoryOverlayDefinition.md) | If this category has an overlay prompt that should appear, this contains the details of that prompt. | [optional] 
-**vendorItemIndexes** | **\Bungie\Model\int[]** | A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime. | [optional] 
+**vendorItemIndexes** | **int[]** | A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime. | [optional] 
 **isPreview** | **bool** | Sometimes a category isn&#39;t actually used to sell items, but rather to preview them. This implies different UI (and manual placement of the category in the UI) in the game, and special treatment. | [optional] 
 **isDisplayOnly** | **bool** | If true, this category only displays items: you can&#39;t purchase anything in them. | [optional] 
 **resetIntervalMinutesOverride** | **int** |  | [optional] 

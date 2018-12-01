@@ -57,7 +57,7 @@ class SearchResultOfDestinyEntitySearchResultItem implements \Bungie\Model\Model
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]',
+        'results' => '\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class SearchResultOfDestinyEntitySearchResultItem implements \Bungie\Model\Model
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfDestinyEntitySearchResultItem implements \Bungie\Model\Model
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]|null $results results
+     * @param \Bungie\Model\Destiny\Definitions\DestinyEntitySearchResultItem[]|null $results results
      *
      * @return $this
      */

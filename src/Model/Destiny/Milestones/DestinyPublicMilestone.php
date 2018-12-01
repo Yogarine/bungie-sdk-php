@@ -59,10 +59,10 @@ class DestinyPublicMilestone implements \Bungie\Model\ModelInterface, ArrayAcces
       */
     protected static $openAPITypes = [
         'milestoneHash' => 'int',
-        'availableQuests' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneQuest[]',
-        'activities' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallengeActivity[]',
-        'vendorHashes' => '\Bungie\Model\int[]',
-        'vendors' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneVendor[]',
+        'availableQuests' => '\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneQuest[]',
+        'activities' => '\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallengeActivity[]',
+        'vendorHashes' => 'int[]',
+        'vendors' => '\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneVendor[]',
         'startDate' => '\DateTime',
         'endDate' => '\DateTime',
         'order' => 'int'
@@ -274,7 +274,7 @@ class DestinyPublicMilestone implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets availableQuests
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneQuest[]|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneQuest[]|null
      */
     public function getAvailableQuests()
     {
@@ -284,7 +284,7 @@ class DestinyPublicMilestone implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets availableQuests
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneQuest[]|null $availableQuests A milestone not need have even a single quest, but if there are active quests they will be returned here.
+     * @param \Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneQuest[]|null $availableQuests A milestone not need have even a single quest, but if there are active quests they will be returned here.
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class DestinyPublicMilestone implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets activities
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallengeActivity[]|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallengeActivity[]|null
      */
     public function getActivities()
     {
@@ -308,7 +308,7 @@ class DestinyPublicMilestone implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets activities
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallengeActivity[]|null $activities activities
+     * @param \Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallengeActivity[]|null $activities activities
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class DestinyPublicMilestone implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets vendorHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getVendorHashes()
     {
@@ -332,7 +332,7 @@ class DestinyPublicMilestone implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets vendorHashes
      *
-     * @param \Bungie\Model\int[]|null $vendorHashes Sometimes milestones - or activities active in milestones - will have relevant vendors. These are the vendors that are currently relevant.  Deprecated, already, for the sake of the new \"vendors\" property that has more data. What was I thinking.
+     * @param int[]|null $vendorHashes Sometimes milestones - or activities active in milestones - will have relevant vendors. These are the vendors that are currently relevant.  Deprecated, already, for the sake of the new \"vendors\" property that has more data. What was I thinking.
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class DestinyPublicMilestone implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets vendors
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneVendor[]|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneVendor[]|null
      */
     public function getVendors()
     {
@@ -356,7 +356,7 @@ class DestinyPublicMilestone implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets vendors
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneVendor[]|null $vendors This is why we can't have nice things. This is the ordered list of vendors to be shown that relate to this milestone, potentially along with other interesting data.
+     * @param \Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneVendor[]|null $vendors This is why we can't have nice things. This is the ordered list of vendors to be shown that relate to this milestone, potentially along with other interesting data.
      *
      * @return $this
      */

@@ -61,7 +61,7 @@ class DestinyItemPreviewBlockDefinition implements \Bungie\Model\ModelInterface,
         'screenStyle' => 'string',
         'previewVendorHash' => 'int',
         'previewActionString' => 'string',
-        'derivedItemCategories' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemCategoryDefinition[]'
+        'derivedItemCategories' => '\Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemCategoryDefinition[]'
     ];
 
     /**
@@ -298,7 +298,7 @@ class DestinyItemPreviewBlockDefinition implements \Bungie\Model\ModelInterface,
     /**
      * Gets derivedItemCategories
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemCategoryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemCategoryDefinition[]|null
      */
     public function getDerivedItemCategories()
     {
@@ -308,7 +308,7 @@ class DestinyItemPreviewBlockDefinition implements \Bungie\Model\ModelInterface,
     /**
      * Sets derivedItemCategories
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemCategoryDefinition[]|null $derivedItemCategories This is a list of the items being previewed, categorized in the same way as they are in the preview UI.
+     * @param \Bungie\Model\Destiny\Definitions\Items\DestinyDerivedItemCategoryDefinition[]|null $derivedItemCategories This is a list of the items being previewed, categorized in the same way as they are in the preview UI.
      *
      * @return $this
      */

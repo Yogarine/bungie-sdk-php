@@ -68,7 +68,7 @@ class Application implements \Bungie\Model\ModelInterface, ArrayAccess
         'creationDate' => '\DateTime',
         'statusChanged' => '\DateTime',
         'firstPublished' => '\DateTime',
-        'team' => '\Bungie\Model\\Bungie\Model\Applications\ApplicationDeveloper[]'
+        'team' => '\Bungie\Model\Applications\ApplicationDeveloper[]'
     ];
 
     /**
@@ -537,7 +537,7 @@ class Application implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets team
      *
-     * @return \Bungie\Model\\Bungie\Model\Applications\ApplicationDeveloper[]|null
+     * @return \Bungie\Model\Applications\ApplicationDeveloper[]|null
      */
     public function getTeam()
     {
@@ -547,7 +547,7 @@ class Application implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets team
      *
-     * @param \Bungie\Model\\Bungie\Model\Applications\ApplicationDeveloper[]|null $team List of team members who manage this application on Bungie.net. Will always consist of at least the application owner.
+     * @param \Bungie\Model\Applications\ApplicationDeveloper[]|null $team List of team members who manage this application on Bungie.net. Will always consist of at least the application owner.
      *
      * @return $this
      */

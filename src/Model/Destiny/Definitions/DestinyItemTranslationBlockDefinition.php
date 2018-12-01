@@ -60,10 +60,10 @@ class DestinyItemTranslationBlockDefinition implements \Bungie\Model\ModelInterf
     protected static $openAPITypes = [
         'weaponPatternIdentifier' => 'string',
         'weaponPatternHash' => 'int',
-        'defaultDyes' => '\Bungie\Model\\Bungie\Model\Destiny\DyeReference[]',
-        'lockedDyes' => '\Bungie\Model\\Bungie\Model\Destiny\DyeReference[]',
-        'customDyes' => '\Bungie\Model\\Bungie\Model\Destiny\DyeReference[]',
-        'arrangements' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyGearArtArrangementReference[]',
+        'defaultDyes' => '\Bungie\Model\Destiny\DyeReference[]',
+        'lockedDyes' => '\Bungie\Model\Destiny\DyeReference[]',
+        'customDyes' => '\Bungie\Model\Destiny\DyeReference[]',
+        'arrangements' => '\Bungie\Model\Destiny\Definitions\DestinyGearArtArrangementReference[]',
         'hasGeometry' => 'bool'
     ];
 
@@ -292,7 +292,7 @@ class DestinyItemTranslationBlockDefinition implements \Bungie\Model\ModelInterf
     /**
      * Gets defaultDyes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DyeReference[]|null
+     * @return \Bungie\Model\Destiny\DyeReference[]|null
      */
     public function getDefaultDyes()
     {
@@ -302,7 +302,7 @@ class DestinyItemTranslationBlockDefinition implements \Bungie\Model\ModelInterf
     /**
      * Sets defaultDyes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DyeReference[]|null $defaultDyes defaultDyes
+     * @param \Bungie\Model\Destiny\DyeReference[]|null $defaultDyes defaultDyes
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class DestinyItemTranslationBlockDefinition implements \Bungie\Model\ModelInterf
     /**
      * Gets lockedDyes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DyeReference[]|null
+     * @return \Bungie\Model\Destiny\DyeReference[]|null
      */
     public function getLockedDyes()
     {
@@ -326,7 +326,7 @@ class DestinyItemTranslationBlockDefinition implements \Bungie\Model\ModelInterf
     /**
      * Sets lockedDyes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DyeReference[]|null $lockedDyes lockedDyes
+     * @param \Bungie\Model\Destiny\DyeReference[]|null $lockedDyes lockedDyes
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class DestinyItemTranslationBlockDefinition implements \Bungie\Model\ModelInterf
     /**
      * Gets customDyes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DyeReference[]|null
+     * @return \Bungie\Model\Destiny\DyeReference[]|null
      */
     public function getCustomDyes()
     {
@@ -350,7 +350,7 @@ class DestinyItemTranslationBlockDefinition implements \Bungie\Model\ModelInterf
     /**
      * Sets customDyes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DyeReference[]|null $customDyes customDyes
+     * @param \Bungie\Model\Destiny\DyeReference[]|null $customDyes customDyes
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class DestinyItemTranslationBlockDefinition implements \Bungie\Model\ModelInterf
     /**
      * Gets arrangements
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyGearArtArrangementReference[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyGearArtArrangementReference[]|null
      */
     public function getArrangements()
     {
@@ -374,7 +374,7 @@ class DestinyItemTranslationBlockDefinition implements \Bungie\Model\ModelInterf
     /**
      * Sets arrangements
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyGearArtArrangementReference[]|null $arrangements arrangements
+     * @param \Bungie\Model\Destiny\Definitions\DestinyGearArtArrangementReference[]|null $arrangements arrangements
      *
      * @return $this
      */

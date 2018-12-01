@@ -58,7 +58,7 @@ class DestinyCharacterPeerView implements \Bungie\Model\ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'equipment' => '\Bungie\Model\\Bungie\Model\Destiny\Character\DestinyItemPeerView[]'
+        'equipment' => '\Bungie\Model\Destiny\Character\DestinyItemPeerView[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyCharacterPeerView implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Gets equipment
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Character\DestinyItemPeerView[]|null
+     * @return \Bungie\Model\Destiny\Character\DestinyItemPeerView[]|null
      */
     public function getEquipment()
     {
@@ -218,7 +218,7 @@ class DestinyCharacterPeerView implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Sets equipment
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Character\DestinyItemPeerView[]|null $equipment equipment
+     * @param \Bungie\Model\Destiny\Character\DestinyItemPeerView[]|null $equipment equipment
      *
      * @return $this
      */

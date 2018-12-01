@@ -59,7 +59,7 @@ class AwaUserResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'selection' => '\Bungie\Model\Destiny\Advanced\AwaUserSelection',
         'correlationId' => 'string',
-        'nonce' => '\Bungie\Model\string[]'
+        'nonce' => 'string[]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class AwaUserResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets nonce
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getNonce()
     {
@@ -277,7 +277,7 @@ class AwaUserResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets nonce
      *
-     * @param \Bungie\Model\string[]|null $nonce Secret nonce received via the PUSH notification.
+     * @param string[]|null $nonce Secret nonce received via the PUSH notification.
      *
      * @return $this
      */

@@ -57,8 +57,8 @@ class DestinyProfileCollectiblesComponent implements \Bungie\Model\ModelInterfac
       * @var string[]
       */
     protected static $openAPITypes = [
-        'recentCollectibleHashes' => '\Bungie\Model\int[]',
-        'newnessFlaggedCollectibleHashes' => '\Bungie\Model\int[]',
+        'recentCollectibleHashes' => 'int[]',
+        'newnessFlaggedCollectibleHashes' => 'int[]',
         'collectibles' => 'map[string,\Bungie\Model\Destiny\Components\Collectibles\DestinyCollectibleComponent]'
     ];
 
@@ -219,7 +219,7 @@ class DestinyProfileCollectiblesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Gets recentCollectibleHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getRecentCollectibleHashes()
     {
@@ -229,7 +229,7 @@ class DestinyProfileCollectiblesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Sets recentCollectibleHashes
      *
-     * @param \Bungie\Model\int[]|null $recentCollectibleHashes The list of collectibles determined by the game as having been \"recently\" acquired.
+     * @param int[]|null $recentCollectibleHashes The list of collectibles determined by the game as having been \"recently\" acquired.
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class DestinyProfileCollectiblesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Gets newnessFlaggedCollectibleHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getNewnessFlaggedCollectibleHashes()
     {
@@ -253,7 +253,7 @@ class DestinyProfileCollectiblesComponent implements \Bungie\Model\ModelInterfac
     /**
      * Sets newnessFlaggedCollectibleHashes
      *
-     * @param \Bungie\Model\int[]|null $newnessFlaggedCollectibleHashes The list of collectibles determined by the game as having been \"recently\" acquired.  The game client itself actually controls this data, so I personally question whether anyone will get much use out of this: because we can't edit this value through the API. But in case anyone finds it useful, here it is.
+     * @param int[]|null $newnessFlaggedCollectibleHashes The list of collectibles determined by the game as having been \"recently\" acquired.  The game client itself actually controls this data, so I personally question whether anyone will get much use out of this: because we can't edit this value through the API. But in case anyone finds it useful, here it is.
      *
      * @return $this
      */

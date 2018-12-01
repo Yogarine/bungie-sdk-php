@@ -61,11 +61,11 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
         'vendorItemIndex' => 'int',
         'itemHash' => 'int',
         'quantity' => 'int',
-        'failureIndexes' => '\Bungie\Model\int[]',
-        'currencies' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorItemQuantity[]',
+        'failureIndexes' => 'int[]',
+        'currencies' => '\Bungie\Model\Destiny\Definitions\DestinyVendorItemQuantity[]',
         'refundPolicy' => '\Bungie\Model\Destiny\DestinyVendorItemRefundPolicy',
         'refundTimeLimit' => 'int',
-        'creationLevels' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemCreationEntryLevelDefinition[]',
+        'creationLevels' => '\Bungie\Model\Destiny\Definitions\DestinyItemCreationEntryLevelDefinition[]',
         'displayCategoryIndex' => 'int',
         'categoryIndex' => 'int',
         'originalCategoryIndex' => 'int',
@@ -81,8 +81,8 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
         'isCrm' => 'bool',
         'sortValue' => 'int',
         'expirationTooltip' => 'string',
-        'redirectToSaleIndexes' => '\Bungie\Model\int[]',
-        'socketOverrides' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorItemSocketOverride[]'
+        'redirectToSaleIndexes' => 'int[]',
+        'socketOverrides' => '\Bungie\Model\Destiny\Definitions\DestinyVendorItemSocketOverride[]'
     ];
 
     /**
@@ -424,7 +424,7 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets failureIndexes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getFailureIndexes()
     {
@@ -434,7 +434,7 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets failureIndexes
      *
-     * @param \Bungie\Model\int[]|null $failureIndexes An list of indexes into the DestinyVendorDefinition.failureStrings array, indicating the possible failure strings that can be relevant for this item.
+     * @param int[]|null $failureIndexes An list of indexes into the DestinyVendorDefinition.failureStrings array, indicating the possible failure strings that can be relevant for this item.
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets currencies
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorItemQuantity[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorItemQuantity[]|null
      */
     public function getCurrencies()
     {
@@ -458,7 +458,7 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets currencies
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorItemQuantity[]|null $currencies This is a pre-compiled aggregation of item value and priceOverrideList, so that we have one place to check for what the purchaser must pay for the item. Use this instead of trying to piece together the price separately.  The somewhat crappy part about this is that, now that item quantity overrides have dynamic modifiers, this will not necessarily be statically true. If you were using this instead of live data, switch to using live data.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorItemQuantity[]|null $currencies This is a pre-compiled aggregation of item value and priceOverrideList, so that we have one place to check for what the purchaser must pay for the item. Use this instead of trying to piece together the price separately.  The somewhat crappy part about this is that, now that item quantity overrides have dynamic modifiers, this will not necessarily be statically true. If you were using this instead of live data, switch to using live data.
      *
      * @return $this
      */
@@ -520,7 +520,7 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets creationLevels
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemCreationEntryLevelDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemCreationEntryLevelDefinition[]|null
      */
     public function getCreationLevels()
     {
@@ -530,7 +530,7 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets creationLevels
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemCreationEntryLevelDefinition[]|null $creationLevels The Default level at which the item will spawn. Almost always driven by an adjusto these days. Ideally should be singular. It's a long story how this ended up as a list, but there is always either going to be 0:1 of these entities.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemCreationEntryLevelDefinition[]|null $creationLevels The Default level at which the item will spawn. Almost always driven by an adjusto these days. Ideally should be singular. It's a long story how this ended up as a list, but there is always either going to be 0:1 of these entities.
      *
      * @return $this
      */
@@ -904,7 +904,7 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets redirectToSaleIndexes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getRedirectToSaleIndexes()
     {
@@ -914,7 +914,7 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets redirectToSaleIndexes
      *
-     * @param \Bungie\Model\int[]|null $redirectToSaleIndexes If this is populated, the purchase of this item should redirect to purchasing these other items instead.
+     * @param int[]|null $redirectToSaleIndexes If this is populated, the purchase of this item should redirect to purchasing these other items instead.
      *
      * @return $this
      */
@@ -928,7 +928,7 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets socketOverrides
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorItemSocketOverride[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyVendorItemSocketOverride[]|null
      */
     public function getSocketOverrides()
     {
@@ -938,7 +938,7 @@ class DestinyVendorItemDefinition implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets socketOverrides
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyVendorItemSocketOverride[]|null $socketOverrides socketOverrides
+     * @param \Bungie\Model\Destiny\Definitions\DestinyVendorItemSocketOverride[]|null $socketOverrides socketOverrides
      *
      * @return $this
      */

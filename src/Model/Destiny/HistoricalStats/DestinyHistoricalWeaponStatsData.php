@@ -57,7 +57,7 @@ class DestinyHistoricalWeaponStatsData implements \Bungie\Model\ModelInterface, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'weapons' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalWeaponStats[]'
+        'weapons' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalWeaponStats[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class DestinyHistoricalWeaponStatsData implements \Bungie\Model\ModelInterface, 
     /**
      * Gets weapons
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalWeaponStats[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalWeaponStats[]|null
      */
     public function getWeapons()
     {
@@ -217,7 +217,7 @@ class DestinyHistoricalWeaponStatsData implements \Bungie\Model\ModelInterface, 
     /**
      * Sets weapons
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalWeaponStats[]|null $weapons List of weapons and their perspective values.
+     * @param \Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalWeaponStats[]|null $weapons List of weapons and their perspective values.
      *
      * @return $this
      */

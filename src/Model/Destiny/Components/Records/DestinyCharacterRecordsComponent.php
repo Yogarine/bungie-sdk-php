@@ -57,7 +57,7 @@ class DestinyCharacterRecordsComponent implements \Bungie\Model\ModelInterface, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'featuredRecordHashes' => '\Bungie\Model\int[]',
+        'featuredRecordHashes' => 'int[]',
         'records' => 'map[string,\Bungie\Model\Destiny\Components\Records\DestinyRecordComponent]'
     ];
 
@@ -213,7 +213,7 @@ class DestinyCharacterRecordsComponent implements \Bungie\Model\ModelInterface, 
     /**
      * Gets featuredRecordHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getFeaturedRecordHashes()
     {
@@ -223,7 +223,7 @@ class DestinyCharacterRecordsComponent implements \Bungie\Model\ModelInterface, 
     /**
      * Sets featuredRecordHashes
      *
-     * @param \Bungie\Model\int[]|null $featuredRecordHashes featuredRecordHashes
+     * @param int[]|null $featuredRecordHashes featuredRecordHashes
      *
      * @return $this
      */

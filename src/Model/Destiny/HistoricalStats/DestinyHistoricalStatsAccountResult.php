@@ -59,7 +59,7 @@ class DestinyHistoricalStatsAccountResult implements \Bungie\Model\ModelInterfac
     protected static $openAPITypes = [
         'mergedDeletedCharacters' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsWithMerged',
         'mergedAllCharacters' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsWithMerged',
-        'characters' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPerCharacter[]'
+        'characters' => '\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPerCharacter[]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class DestinyHistoricalStatsAccountResult implements \Bungie\Model\ModelInterfac
     /**
      * Gets characters
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPerCharacter[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPerCharacter[]|null
      */
     public function getCharacters()
     {
@@ -277,7 +277,7 @@ class DestinyHistoricalStatsAccountResult implements \Bungie\Model\ModelInterfac
     /**
      * Sets characters
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPerCharacter[]|null $characters characters
+     * @param \Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsPerCharacter[]|null $characters characters
      *
      * @return $this
      */

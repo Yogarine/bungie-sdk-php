@@ -61,8 +61,8 @@ class DestinyActivityPlaylistItemDefinition implements \Bungie\Model\ModelInterf
         'activityHash' => 'int',
         'directActivityModeHash' => 'int',
         'directActivityModeType' => 'int',
-        'activityModeHashes' => '\Bungie\Model\int[]',
-        'activityModeTypes' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]'
+        'activityModeHashes' => 'int[]',
+        'activityModeTypes' => '\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]'
     ];
 
     /**
@@ -448,7 +448,7 @@ class DestinyActivityPlaylistItemDefinition implements \Bungie\Model\ModelInterf
     /**
      * Gets activityModeHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getActivityModeHashes()
     {
@@ -458,7 +458,7 @@ class DestinyActivityPlaylistItemDefinition implements \Bungie\Model\ModelInterf
     /**
      * Sets activityModeHashes
      *
-     * @param \Bungie\Model\int[]|null $activityModeHashes The hash identifiers for Activity Modes relevant to this entry.
+     * @param int[]|null $activityModeHashes The hash identifiers for Activity Modes relevant to this entry.
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class DestinyActivityPlaylistItemDefinition implements \Bungie\Model\ModelInterf
     /**
      * Gets activityModeTypes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null
      */
     public function getActivityModeTypes()
     {
@@ -482,7 +482,7 @@ class DestinyActivityPlaylistItemDefinition implements \Bungie\Model\ModelInterf
     /**
      * Sets activityModeTypes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null $activityModeTypes The activity modes - if any - in enum form. Because we can't seem to escape the enums.
+     * @param \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null $activityModeTypes The activity modes - if any - in enum form. Because we can't seem to escape the enums.
      *
      * @return $this
      */

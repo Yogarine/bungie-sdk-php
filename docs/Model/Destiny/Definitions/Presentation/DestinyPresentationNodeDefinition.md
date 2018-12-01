@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **screenStyle** | [**\Bungie\Model\Destiny\DestinyPresentationScreenStyle**](DestinyPresentationScreenStyle.md) | A hint for how to display this presentation node when it&#39;s shown in its own detail screen. | [optional] 
 **requirements** | [**\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeRequirementsBlock**](DestinyPresentationNodeRequirementsBlock.md) | The requirements for being able to interact with this presentation node and its children. | [optional] 
 **disableChildSubscreenNavigation** | **bool** | If this presentation node has children, but the game doesn&#39;t let you inspect the details of those children, that is indicated here. | [optional] 
-**parentNodeHashes** | **\Bungie\Model\int[]** | A quick reference to presentation nodes that have this node as a child. (presentation nodes can be parented under multiple parents) | [optional] 
+**parentNodeHashes** | **int[]** | A quick reference to presentation nodes that have this node as a child. (presentation nodes can be parented under multiple parents) | [optional] 
 **hash** | **int** | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. | [optional] 
 **index** | **int** | The index of the entity as it was found in the investment tables. | [optional] 
 **redacted** | **bool** | If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry! | [optional] 

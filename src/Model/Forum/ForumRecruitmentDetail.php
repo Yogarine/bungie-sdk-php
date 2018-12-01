@@ -65,8 +65,8 @@ class ForumRecruitmentDetail implements \Bungie\Model\ModelInterface, ArrayAcces
         'conversationId' => 'int',
         'playerSlotsTotal' => 'int',
         'playerSlotsRemaining' => 'int',
-        'fireteam' => '\Bungie\Model\\Bungie\Model\User\GeneralUser[]',
-        'kickedPlayerIds' => '\Bungie\Model\int[]'
+        'fireteam' => '\Bungie\Model\User\GeneralUser[]',
+        'kickedPlayerIds' => 'int[]'
     ];
 
     /**
@@ -453,7 +453,7 @@ class ForumRecruitmentDetail implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets fireteam
      *
-     * @return \Bungie\Model\\Bungie\Model\User\GeneralUser[]|null
+     * @return \Bungie\Model\User\GeneralUser[]|null
      */
     public function getFireteam()
     {
@@ -463,7 +463,7 @@ class ForumRecruitmentDetail implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets fireteam
      *
-     * @param \Bungie\Model\\Bungie\Model\User\GeneralUser[]|null $fireteam fireteam
+     * @param \Bungie\Model\User\GeneralUser[]|null $fireteam fireteam
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class ForumRecruitmentDetail implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets kickedPlayerIds
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getKickedPlayerIds()
     {
@@ -487,7 +487,7 @@ class ForumRecruitmentDetail implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets kickedPlayerIds
      *
-     * @param \Bungie\Model\int[]|null $kickedPlayerIds kickedPlayerIds
+     * @param int[]|null $kickedPlayerIds kickedPlayerIds
      *
      * @return $this
      */

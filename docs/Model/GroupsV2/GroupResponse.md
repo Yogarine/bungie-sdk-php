@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **detail** | [**\Bungie\Model\GroupsV2\GroupV2**](GroupV2.md) |  | [optional] 
 **founder** | [**\Bungie\Model\GroupsV2\GroupMember**](GroupMember.md) |  | [optional] 
-**alliedIds** | **\Bungie\Model\int[]** |  | [optional] 
+**alliedIds** | **int[]** |  | [optional] 
 **parentGroup** | [**\Bungie\Model\GroupsV2\GroupV2**](GroupV2.md) |  | [optional] 
 **allianceStatus** | [**\Bungie\Model\GroupsV2\GroupAllianceStatus**](GroupAllianceStatus.md) |  | [optional] 
 **groupJoinInviteCount** | **int** |  | [optional] 

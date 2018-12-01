@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\\Bungie\Model\User\UserInfoCard[]**](UserInfoCard.md) |  | [optional] 
+**response** | [**\Bungie\Model\User\UserInfoCard[]**](UserInfoCard.md) |  | [optional] 
 **errorCode** | [**\Bungie\Model\Exceptions\PlatformErrorCodes**](PlatformErrorCodes.md) |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

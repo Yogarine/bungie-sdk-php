@@ -71,7 +71,7 @@ class TrendingEntry implements \Bungie\Model\ModelInterface, ArrayAccess
         'webmVideo' => 'string',
         'mp4Video' => 'string',
         'featureImage' => 'string',
-        'items' => '\Bungie\Model\\Bungie\Model\Trending\TrendingEntry[]',
+        'items' => '\Bungie\Model\Trending\TrendingEntry[]',
         'creationDate' => '\DateTime'
     ];
 
@@ -604,7 +604,7 @@ class TrendingEntry implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \Bungie\Model\\Bungie\Model\Trending\TrendingEntry[]|null
+     * @return \Bungie\Model\Trending\TrendingEntry[]|null
      */
     public function getItems()
     {
@@ -614,7 +614,7 @@ class TrendingEntry implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \Bungie\Model\\Bungie\Model\Trending\TrendingEntry[]|null $items If the item is of entityType TrendingEntryType.Container, it may have items - also Trending Entries - contained within it. This is the ordered list of those to display under the Container's header.
+     * @param \Bungie\Model\Trending\TrendingEntry[]|null $items If the item is of entityType TrendingEntryType.Container, it may have items - also Trending Entries - contained within it. This is the ordered list of those to display under the Container's header.
      *
      * @return $this
      */

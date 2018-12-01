@@ -59,7 +59,7 @@ class DestinyKioskItem implements \Bungie\Model\ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'index' => 'int',
         'canAcquire' => 'bool',
-        'failureIndexes' => '\Bungie\Model\int[]',
+        'failureIndexes' => 'int[]',
         'flavorObjective' => '\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress'
     ];
 
@@ -273,7 +273,7 @@ class DestinyKioskItem implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets failureIndexes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getFailureIndexes()
     {
@@ -283,7 +283,7 @@ class DestinyKioskItem implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets failureIndexes
      *
-     * @param \Bungie\Model\int[]|null $failureIndexes Indexes into failureStrings for the Vendor, indicating the reasons why it failed if any.
+     * @param int[]|null $failureIndexes Indexes into failureStrings for the Vendor, indicating the reasons why it failed if any.
      *
      * @return $this
      */

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**\Bungie\Model\\Bungie\Model\Forum\PostResponse[]**](PostResponse.md) |  | [optional] 
+**results** | [**\Bungie\Model\Forum\PostResponse[]**](PostResponse.md) |  | [optional] 
 **totalResults** | **int** |  | [optional] 
 **hasMore** | **bool** |  | [optional] 
 **query** | [**\Bungie\Model\Queries\PagedQuery**](PagedQuery.md) |  | [optional] 

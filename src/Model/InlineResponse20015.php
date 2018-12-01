@@ -57,7 +57,7 @@ class InlineResponse20015 implements \Bungie\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response' => '\Bungie\Model\\Bungie\Model\Forum\ForumRecruitmentDetail[]',
+        'response' => '\Bungie\Model\Forum\ForumRecruitmentDetail[]',
         'errorCode' => '\Bungie\Model\Exceptions\PlatformErrorCodes',
         'throttleSeconds' => 'int',
         'errorStatus' => 'string',
@@ -243,7 +243,7 @@ class InlineResponse20015 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Bungie\Model\\Bungie\Model\Forum\ForumRecruitmentDetail[]|null
+     * @return \Bungie\Model\Forum\ForumRecruitmentDetail[]|null
      */
     public function getResponse()
     {
@@ -253,7 +253,7 @@ class InlineResponse20015 implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Bungie\Model\\Bungie\Model\Forum\ForumRecruitmentDetail[]|null $response response
+     * @param \Bungie\Model\Forum\ForumRecruitmentDetail[]|null $response response
      *
      * @return $this
      */

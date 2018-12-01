@@ -58,7 +58,7 @@ class DestinyRecordComponent implements \Bungie\Model\ModelInterface, ArrayAcces
       */
     protected static $openAPITypes = [
         'state' => '\Bungie\Model\Destiny\DestinyRecordState',
-        'objectives' => '\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]'
+        'objectives' => '\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class DestinyRecordComponent implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets objectives
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null
+     * @return \Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null
      */
     public function getObjectives()
     {
@@ -247,7 +247,7 @@ class DestinyRecordComponent implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets objectives
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null $objectives objectives
+     * @param \Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null $objectives objectives
      *
      * @return $this
      */

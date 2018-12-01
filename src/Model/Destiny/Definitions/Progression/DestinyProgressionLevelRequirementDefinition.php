@@ -58,7 +58,7 @@ class DestinyProgressionLevelRequirementDefinition implements \Bungie\Model\Mode
       * @var string[]
       */
     protected static $openAPITypes = [
-        'requirementCurve' => '\Bungie\Model\\Bungie\Model\Interpolation\InterpolationPointFloat[]',
+        'requirementCurve' => '\Bungie\Model\Interpolation\InterpolationPointFloat[]',
         'progressionHash' => 'int',
         'hash' => 'int',
         'index' => 'int',
@@ -232,7 +232,7 @@ class DestinyProgressionLevelRequirementDefinition implements \Bungie\Model\Mode
     /**
      * Gets requirementCurve
      *
-     * @return \Bungie\Model\\Bungie\Model\Interpolation\InterpolationPointFloat[]|null
+     * @return \Bungie\Model\Interpolation\InterpolationPointFloat[]|null
      */
     public function getRequirementCurve()
     {
@@ -242,7 +242,7 @@ class DestinyProgressionLevelRequirementDefinition implements \Bungie\Model\Mode
     /**
      * Sets requirementCurve
      *
-     * @param \Bungie\Model\\Bungie\Model\Interpolation\InterpolationPointFloat[]|null $requirementCurve A curve of level requirements, weighted by the related progressions' level.  Interpolate against this curve with the character's progression level to determine what the level requirement of the generated item that is using this data will be.
+     * @param \Bungie\Model\Interpolation\InterpolationPointFloat[]|null $requirementCurve A curve of level requirements, weighted by the related progressions' level.  Interpolate against this curve with the character's progression level to determine what the level requirement of the generated item that is using this data will be.
      *
      * @return $this
      */

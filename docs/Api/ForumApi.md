@@ -523,7 +523,7 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client(),
     $config
 );
-$requestBody = array(new array()); // \Bungie\Model\int[] | 
+$requestBody = array(new array()); // int[] | 
 
 try {
     $result = $apiInstance->getRecruitmentThreadSummaries($requestBody);
@@ -538,7 +538,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestBody** | [**\Bungie\Model\int[]**](../Model/array.md)|  |
+ **requestBody** | [**int[]**](../Model/array.md)|  |
 
 ### Return type
 

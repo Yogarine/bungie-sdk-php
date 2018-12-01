@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **activityPathBundle** | **int** | If we had map information, this would tell us something cool about the path this location wants you to take. I wish we had map information. | [optional] 
 **activityPathDestination** | **int** | If we had map information, this would tell us about path information related to destination on the map. Sad. Maybe you can do something cool with it. Go to town man. | [optional] 
 **navPointType** | [**\Bungie\Model\Destiny\DestinyActivityNavPointType**](DestinyActivityNavPointType.md) | The type of Nav Point that this represents. See the enumeration for more info. | [optional] 
-**worldPosition** | **\Bungie\Model\int[]** | Looks like it should be the position on the map, but sadly it does not look populated... yet? | [optional] 
+**worldPosition** | **int[]** | Looks like it should be the position on the map, but sadly it does not look populated... yet? | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

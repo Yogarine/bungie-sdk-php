@@ -62,7 +62,7 @@ class DestinyHistoricalStatsActivity implements \Bungie\Model\ModelInterface, Ar
         'directorActivityHash' => 'int',
         'instanceId' => 'int',
         'mode' => '\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType',
-        'modes' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]',
+        'modes' => '\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]',
         'isPrivate' => 'bool'
     ];
 
@@ -334,7 +334,7 @@ class DestinyHistoricalStatsActivity implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets modes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null
      */
     public function getModes()
     {
@@ -344,7 +344,7 @@ class DestinyHistoricalStatsActivity implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets modes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null $modes The list of all Activity Modes to which this activity applies, including aggregates. This will let you see, for example, whether the activity was both Clash and part of the Trials of the Nine event.
+     * @param \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null $modes The list of all Activity Modes to which this activity applies, including aggregates. This will let you see, for example, whether the activity was both Clash and part of the Trials of the Nine event.
      *
      * @return $this
      */

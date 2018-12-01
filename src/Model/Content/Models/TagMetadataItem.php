@@ -59,7 +59,7 @@ class TagMetadataItem implements \Bungie\Model\ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'description' => 'string',
         'tagText' => 'string',
-        'groups' => '\Bungie\Model\string[]',
+        'groups' => 'string[]',
         'isDefault' => 'bool',
         'name' => 'string'
     ];
@@ -279,7 +279,7 @@ class TagMetadataItem implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets groups
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getGroups()
     {
@@ -289,7 +289,7 @@ class TagMetadataItem implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets groups
      *
-     * @param \Bungie\Model\string[]|null $groups groups
+     * @param string[]|null $groups groups
      *
      * @return $this
      */

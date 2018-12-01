@@ -59,7 +59,7 @@ class DestinyLocationDefinition implements \Bungie\Model\ModelInterface, ArrayAc
       */
     protected static $openAPITypes = [
         'vendorHash' => 'int',
-        'locationReleases' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyLocationReleaseDefinition[]',
+        'locationReleases' => '\Bungie\Model\Destiny\Definitions\DestinyLocationReleaseDefinition[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -256,7 +256,7 @@ class DestinyLocationDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets locationReleases
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyLocationReleaseDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyLocationReleaseDefinition[]|null
      */
     public function getLocationReleases()
     {
@@ -266,7 +266,7 @@ class DestinyLocationDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets locationReleases
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyLocationReleaseDefinition[]|null $locationReleases A Location may refer to different specific spots in the world based on the world's current state. This is a list of those potential spots, and the data we can use at runtime to determine which one of the spots is the currently valid one.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyLocationReleaseDefinition[]|null $locationReleases A Location may refer to different specific spots in the world based on the world's current state. This is a list of those potential spots, and the data we can use at runtime to determine which one of the spots is the currently valid one.
      *
      * @return $this
      */

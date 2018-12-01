@@ -61,7 +61,7 @@ class DestinyChecklistDefinition implements \Bungie\Model\ModelInterface, ArrayA
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
         'viewActionString' => 'string',
         'scope' => '\Bungie\Model\Destiny\DestinyScope',
-        'entries' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Checklists\DestinyChecklistEntryDefinition[]',
+        'entries' => '\Bungie\Model\Destiny\Definitions\Checklists\DestinyChecklistEntryDefinition[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -316,7 +316,7 @@ class DestinyChecklistDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets entries
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Checklists\DestinyChecklistEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Checklists\DestinyChecklistEntryDefinition[]|null
      */
     public function getEntries()
     {
@@ -326,7 +326,7 @@ class DestinyChecklistDefinition implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets entries
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Checklists\DestinyChecklistEntryDefinition[]|null $entries The individual checklist items. Gotta catch 'em all.
+     * @param \Bungie\Model\Destiny\Definitions\Checklists\DestinyChecklistEntryDefinition[]|null $entries The individual checklist items. Gotta catch 'em all.
      *
      * @return $this
      */

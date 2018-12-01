@@ -78,19 +78,19 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
         'visibleOn' => 'string',
         'datatype' => '\Bungie\Model\Content\Models\ContentPropertyDataTypeEnum',
         'attributes' => 'map[string,string]',
-        'childProperties' => '\Bungie\Model\\Bungie\Model\Content\Models\ContentTypeProperty[]',
+        'childProperties' => '\Bungie\Model\Content\Models\ContentTypeProperty[]',
         'contentTypeAllowed' => 'string',
         'bindToProperty' => 'string',
         'boundRegex' => 'string',
         'representationSelection' => 'map[string,string]',
-        'defaultValues' => '\Bungie\Model\\Bungie\Model\Content\Models\ContentTypeDefaultValue[]',
+        'defaultValues' => '\Bungie\Model\Content\Models\ContentTypeDefaultValue[]',
         'isExternalAllowed' => 'bool',
         'propertySection' => 'string',
         'weight' => 'int',
         'entitytype' => 'string',
         'isCombo' => 'bool',
         'suppressProperty' => 'bool',
-        'legalContentTypes' => '\Bungie\Model\string[]',
+        'legalContentTypes' => 'string[]',
         'representationValidationString' => 'string',
         'minWidth' => 'int',
         'maxWidth' => 'int',
@@ -951,7 +951,7 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets childProperties
      *
-     * @return \Bungie\Model\\Bungie\Model\Content\Models\ContentTypeProperty[]|null
+     * @return \Bungie\Model\Content\Models\ContentTypeProperty[]|null
      */
     public function getChildProperties()
     {
@@ -961,7 +961,7 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets childProperties
      *
-     * @param \Bungie\Model\\Bungie\Model\Content\Models\ContentTypeProperty[]|null $childProperties childProperties
+     * @param \Bungie\Model\Content\Models\ContentTypeProperty[]|null $childProperties childProperties
      *
      * @return $this
      */
@@ -1071,7 +1071,7 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets defaultValues
      *
-     * @return \Bungie\Model\\Bungie\Model\Content\Models\ContentTypeDefaultValue[]|null
+     * @return \Bungie\Model\Content\Models\ContentTypeDefaultValue[]|null
      */
     public function getDefaultValues()
     {
@@ -1081,7 +1081,7 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets defaultValues
      *
-     * @param \Bungie\Model\\Bungie\Model\Content\Models\ContentTypeDefaultValue[]|null $defaultValues defaultValues
+     * @param \Bungie\Model\Content\Models\ContentTypeDefaultValue[]|null $defaultValues defaultValues
      *
      * @return $this
      */
@@ -1239,7 +1239,7 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets legalContentTypes
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getLegalContentTypes()
     {
@@ -1249,7 +1249,7 @@ class ContentTypeProperty implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets legalContentTypes
      *
-     * @param \Bungie\Model\string[]|null $legalContentTypes legalContentTypes
+     * @param string[]|null $legalContentTypes legalContentTypes
      *
      * @return $this
      */

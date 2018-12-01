@@ -60,7 +60,7 @@ class DestinyManifest implements \Bungie\Model\ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'version' => 'string',
         'mobileAssetContentPath' => 'string',
-        'mobileGearAssetDataBases' => '\Bungie\Model\\Bungie\Model\Destiny\Config\GearAssetDataBaseDefinition[]',
+        'mobileGearAssetDataBases' => '\Bungie\Model\Destiny\Config\GearAssetDataBaseDefinition[]',
         'mobileWorldContentPaths' => 'map[string,string]',
         'mobileClanBannerDatabasePath' => 'string',
         'mobileGearCDN' => 'map[string,string]'
@@ -286,7 +286,7 @@ class DestinyManifest implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets mobileGearAssetDataBases
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Config\GearAssetDataBaseDefinition[]|null
+     * @return \Bungie\Model\Destiny\Config\GearAssetDataBaseDefinition[]|null
      */
     public function getMobileGearAssetDataBases()
     {
@@ -296,7 +296,7 @@ class DestinyManifest implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets mobileGearAssetDataBases
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Config\GearAssetDataBaseDefinition[]|null $mobileGearAssetDataBases mobileGearAssetDataBases
+     * @param \Bungie\Model\Destiny\Config\GearAssetDataBaseDefinition[]|null $mobileGearAssetDataBases mobileGearAssetDataBases
      *
      * @return $this
      */

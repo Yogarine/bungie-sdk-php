@@ -59,7 +59,7 @@ class DestinyPublicMilestoneQuest implements \Bungie\Model\ModelInterface, Array
     protected static $openAPITypes = [
         'questItemHash' => 'int',
         'activity' => '\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneActivity',
-        'challenges' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallenge[]'
+        'challenges' => '\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallenge[]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class DestinyPublicMilestoneQuest implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets challenges
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallenge[]|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallenge[]|null
      */
     public function getChallenges()
     {
@@ -277,7 +277,7 @@ class DestinyPublicMilestoneQuest implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets challenges
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallenge[]|null $challenges For the given quest there could be 0-to-Many challenges: mini quests that you can perform in the course of doing this quest, that may grant you rewards and benefits.
+     * @param \Bungie\Model\Destiny\Milestones\DestinyPublicMilestoneChallenge[]|null $challenges For the given quest there could be 0-to-Many challenges: mini quests that you can perform in the course of doing this quest, that may grant you rewards and benefits.
      *
      * @return $this
      */

@@ -58,12 +58,12 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
       * @var string[]
       */
     protected static $openAPITypes = [
-        'nodes' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeDefinition[]',
-        'artElements' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphArtElementDefinition[]',
-        'connections' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphConnectionDefinition[]',
-        'displayObjectives' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayObjectiveDefinition[]',
-        'displayProgressions' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayProgressionDefinition[]',
-        'linkedGraphs' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphDefinition[]',
+        'nodes' => '\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeDefinition[]',
+        'artElements' => '\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphArtElementDefinition[]',
+        'connections' => '\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphConnectionDefinition[]',
+        'displayObjectives' => '\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayObjectiveDefinition[]',
+        'displayProgressions' => '\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayProgressionDefinition[]',
+        'linkedGraphs' => '\Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphDefinition[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -256,7 +256,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets nodes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeDefinition[]|null
      */
     public function getNodes()
     {
@@ -266,7 +266,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets nodes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeDefinition[]|null $nodes These represent the visual \"nodes\" on the map's view. These are the activities you can click on in the map.
+     * @param \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeDefinition[]|null $nodes These represent the visual \"nodes\" on the map's view. These are the activities you can click on in the map.
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets artElements
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphArtElementDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphArtElementDefinition[]|null
      */
     public function getArtElements()
     {
@@ -290,7 +290,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets artElements
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphArtElementDefinition[]|null $artElements Represents one-off/special UI elements that appear on the map.
+     * @param \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphArtElementDefinition[]|null $artElements Represents one-off/special UI elements that appear on the map.
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets connections
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphConnectionDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphConnectionDefinition[]|null
      */
     public function getConnections()
     {
@@ -314,7 +314,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets connections
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphConnectionDefinition[]|null $connections Represents connections between graph nodes. However, it lacks context that we'd need to make good use of it.
+     * @param \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphConnectionDefinition[]|null $connections Represents connections between graph nodes. However, it lacks context that we'd need to make good use of it.
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets displayObjectives
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayObjectiveDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayObjectiveDefinition[]|null
      */
     public function getDisplayObjectives()
     {
@@ -338,7 +338,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets displayObjectives
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayObjectiveDefinition[]|null $displayObjectives Objectives can display on maps, and this is supposedly metadata for that. I have not had the time to analyze the details of what is useful within however: we could be missing important data to make this work. Expect this property to be expanded on later if possible.
+     * @param \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayObjectiveDefinition[]|null $displayObjectives Objectives can display on maps, and this is supposedly metadata for that. I have not had the time to analyze the details of what is useful within however: we could be missing important data to make this work. Expect this property to be expanded on later if possible.
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets displayProgressions
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayProgressionDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayProgressionDefinition[]|null
      */
     public function getDisplayProgressions()
     {
@@ -362,7 +362,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets displayProgressions
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayProgressionDefinition[]|null $displayProgressions Progressions can also display on maps, but similarly to displayObjectives we appear to lack some required information and context right now. We will have to look into it later and add more data if possible.
+     * @param \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphDisplayProgressionDefinition[]|null $displayProgressions Progressions can also display on maps, but similarly to displayObjectives we appear to lack some required information and context right now. We will have to look into it later and add more data if possible.
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets linkedGraphs
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphDefinition[]|null
      */
     public function getLinkedGraphs()
     {
@@ -386,7 +386,7 @@ class DestinyActivityGraphDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets linkedGraphs
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphDefinition[]|null $linkedGraphs Represents links between this Activity Graph and other ones.
+     * @param \Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphDefinition[]|null $linkedGraphs Represents links between this Activity Graph and other ones.
      *
      * @return $this
      */

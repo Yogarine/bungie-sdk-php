@@ -58,8 +58,8 @@ class DestinyTalentNodeStatBlock implements \Bungie\Model\ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'currentStepStats' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyStat[]',
-        'nextStepStats' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyStat[]'
+        'currentStepStats' => '\Bungie\Model\Destiny\DestinyStat[]',
+        'nextStepStats' => '\Bungie\Model\Destiny\DestinyStat[]'
     ];
 
     /**
@@ -214,7 +214,7 @@ class DestinyTalentNodeStatBlock implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets currentStepStats
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyStat[]|null
+     * @return \Bungie\Model\Destiny\DestinyStat[]|null
      */
     public function getCurrentStepStats()
     {
@@ -224,7 +224,7 @@ class DestinyTalentNodeStatBlock implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets currentStepStats
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyStat[]|null $currentStepStats The stat benefits conferred when this talent node is activated for the current Step that is active on the node.
+     * @param \Bungie\Model\Destiny\DestinyStat[]|null $currentStepStats The stat benefits conferred when this talent node is activated for the current Step that is active on the node.
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class DestinyTalentNodeStatBlock implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets nextStepStats
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyStat[]|null
+     * @return \Bungie\Model\Destiny\DestinyStat[]|null
      */
     public function getNextStepStats()
     {
@@ -248,7 +248,7 @@ class DestinyTalentNodeStatBlock implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets nextStepStats
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyStat[]|null $nextStepStats This is a holdover from the old days of Destiny 1, when a node could be activated multiple times, conferring multiple steps worth of benefits: you would use this property to show what activating the \"next\" step on the node would provide vs. what the current step is providing. While Nodes are currently not being used this way, the underlying system for this functionality still exists. I hesitate to remove this property while the ability for designers to make such a talent grid still exists. Whether you want to show it is up to you.
+     * @param \Bungie\Model\Destiny\DestinyStat[]|null $nextStepStats This is a holdover from the old days of Destiny 1, when a node could be activated multiple times, conferring multiple steps worth of benefits: you would use this property to show what activating the \"next\" step on the node would provide vs. what the current step is providing. While Nodes are currently not being used this way, the underlying system for this functionality still exists. I hesitate to remove this property while the ability for designers to make such a talent grid still exists. Whether you want to show it is up to you.
      *
      * @return $this
      */

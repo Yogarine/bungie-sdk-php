@@ -70,23 +70,23 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
         'activityTypeHash' => 'int',
         'tier' => 'int',
         'pgcrImage' => 'string',
-        'rewards' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityRewardDefinition[]',
-        'modifiers' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityModifierReferenceDefinition[]',
+        'rewards' => '\Bungie\Model\Destiny\Definitions\DestinyActivityRewardDefinition[]',
+        'modifiers' => '\Bungie\Model\Destiny\Definitions\DestinyActivityModifierReferenceDefinition[]',
         'isPlaylist' => 'bool',
-        'challenges' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityChallengeDefinition[]',
-        'optionalUnlockStrings' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityUnlockStringDefinition[]',
-        'playlistItems' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityPlaylistItemDefinition[]',
-        'activityGraphList' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]',
+        'challenges' => '\Bungie\Model\Destiny\Definitions\DestinyActivityChallengeDefinition[]',
+        'optionalUnlockStrings' => '\Bungie\Model\Destiny\Definitions\DestinyActivityUnlockStringDefinition[]',
+        'playlistItems' => '\Bungie\Model\Destiny\Definitions\DestinyActivityPlaylistItemDefinition[]',
+        'activityGraphList' => '\Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]',
         'matchmaking' => '\Bungie\Model\Destiny\Definitions\DestinyActivityMatchmakingBlockDefinition',
         'guidedGame' => '\Bungie\Model\Destiny\Definitions\DestinyActivityGuidedBlockDefinition',
         'directActivityModeHash' => 'int',
         'directActivityModeType' => 'int',
-        'loadouts' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirementSet[]',
-        'activityModeHashes' => '\Bungie\Model\int[]',
-        'activityModeTypes' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]',
+        'loadouts' => '\Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirementSet[]',
+        'activityModeHashes' => 'int[]',
+        'activityModeTypes' => '\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]',
         'isPvP' => 'bool',
-        'insertionPoints' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityInsertionPointDefinition[]',
-        'activityLocationMappings' => '\Bungie\Model\\Bungie\Model\Destiny\Constants\DestinyEnvironmentLocationMapping[]',
+        'insertionPoints' => '\Bungie\Model\Destiny\Definitions\DestinyActivityInsertionPointDefinition[]',
+        'activityLocationMappings' => '\Bungie\Model\Destiny\Constants\DestinyEnvironmentLocationMapping[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -817,7 +817,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets rewards
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityRewardDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyActivityRewardDefinition[]|null
      */
     public function getRewards()
     {
@@ -827,7 +827,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets rewards
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityRewardDefinition[]|null $rewards The expected possible rewards for the activity. These rewards may or may not be accessible for an individual player based on their character state, the account state, and even the game's state overall. But it is a useful reference for possible rewards you can earn in the activity. These match up to rewards displayed when you hover over the Activity in the in-game Director, and often refer to Placeholder or \"Dummy\" items: items that tell you what you can earn in vague terms rather than what you'll specifically be earning (partly because the game doesn't even know what you'll earn specifically until you roll for it at the end)
+     * @param \Bungie\Model\Destiny\Definitions\DestinyActivityRewardDefinition[]|null $rewards The expected possible rewards for the activity. These rewards may or may not be accessible for an individual player based on their character state, the account state, and even the game's state overall. But it is a useful reference for possible rewards you can earn in the activity. These match up to rewards displayed when you hover over the Activity in the in-game Director, and often refer to Placeholder or \"Dummy\" items: items that tell you what you can earn in vague terms rather than what you'll specifically be earning (partly because the game doesn't even know what you'll earn specifically until you roll for it at the end)
      *
      * @return $this
      */
@@ -841,7 +841,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets modifiers
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityModifierReferenceDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyActivityModifierReferenceDefinition[]|null
      */
     public function getModifiers()
     {
@@ -851,7 +851,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets modifiers
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityModifierReferenceDefinition[]|null $modifiers Activities can have Modifiers, as defined in DestinyActivityModifierDefinition. These are references to the modifiers that *can* be applied to that activity, along with data that we use to determine if that modifier is actually active at any given point in time.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyActivityModifierReferenceDefinition[]|null $modifiers Activities can have Modifiers, as defined in DestinyActivityModifierDefinition. These are references to the modifiers that *can* be applied to that activity, along with data that we use to determine if that modifier is actually active at any given point in time.
      *
      * @return $this
      */
@@ -889,7 +889,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets challenges
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityChallengeDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyActivityChallengeDefinition[]|null
      */
     public function getChallenges()
     {
@@ -899,7 +899,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets challenges
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityChallengeDefinition[]|null $challenges An activity can have many Challenges, of which any subset of them may be active for play at any given period of time. This gives the information about the challenges and data that we use to understand when they're active and what rewards they provide. Sadly, at the moment there's no central definition for challenges: much like \"Skulls\" were in Destiny 1, these are defined on individual activities and there can be many duplicates/near duplicates across the Destiny 2 ecosystem. I have it in mind to centralize these in a future revision of the API, but we are out of time.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyActivityChallengeDefinition[]|null $challenges An activity can have many Challenges, of which any subset of them may be active for play at any given period of time. This gives the information about the challenges and data that we use to understand when they're active and what rewards they provide. Sadly, at the moment there's no central definition for challenges: much like \"Skulls\" were in Destiny 1, these are defined on individual activities and there can be many duplicates/near duplicates across the Destiny 2 ecosystem. I have it in mind to centralize these in a future revision of the API, but we are out of time.
      *
      * @return $this
      */
@@ -913,7 +913,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets optionalUnlockStrings
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityUnlockStringDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyActivityUnlockStringDefinition[]|null
      */
     public function getOptionalUnlockStrings()
     {
@@ -923,7 +923,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets optionalUnlockStrings
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityUnlockStringDefinition[]|null $optionalUnlockStrings If there are status strings related to the activity and based on internal state of the game, account, or character, then this will be the definition of those strings and the states needed in order for the strings to be shown.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyActivityUnlockStringDefinition[]|null $optionalUnlockStrings If there are status strings related to the activity and based on internal state of the game, account, or character, then this will be the definition of those strings and the states needed in order for the strings to be shown.
      *
      * @return $this
      */
@@ -937,7 +937,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets playlistItems
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityPlaylistItemDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyActivityPlaylistItemDefinition[]|null
      */
     public function getPlaylistItems()
     {
@@ -947,7 +947,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets playlistItems
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityPlaylistItemDefinition[]|null $playlistItems Represents all of the possible activities that could be played in the Playlist, along with information that we can use to determine if they are active at the present time.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyActivityPlaylistItemDefinition[]|null $playlistItems Represents all of the possible activities that could be played in the Playlist, along with information that we can use to determine if they are active at the present time.
      *
      * @return $this
      */
@@ -961,7 +961,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets activityGraphList
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]|null
      */
     public function getActivityGraphList()
     {
@@ -971,7 +971,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets activityGraphList
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]|null $activityGraphList Unfortunately, in practice this is almost never populated. In theory, this is supposed to tell which Activity Graph to show if you bring up the director while in this activity.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyActivityGraphListEntryDefinition[]|null $activityGraphList Unfortunately, in practice this is almost never populated. In theory, this is supposed to tell which Activity Graph to show if you bring up the director while in this activity.
      *
      * @return $this
      */
@@ -1090,7 +1090,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets loadouts
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirementSet[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirementSet[]|null
      */
     public function getLoadouts()
     {
@@ -1100,7 +1100,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets loadouts
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirementSet[]|null $loadouts The set of all possible loadout requirements that could be active for this activity. Only one will be active at any given time, and you can discover which one through activity-associated data such as Milestones that have activity info on them.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyActivityLoadoutRequirementSet[]|null $loadouts The set of all possible loadout requirements that could be active for this activity. Only one will be active at any given time, and you can discover which one through activity-associated data such as Milestones that have activity info on them.
      *
      * @return $this
      */
@@ -1114,7 +1114,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets activityModeHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getActivityModeHashes()
     {
@@ -1124,7 +1124,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets activityModeHashes
      *
-     * @param \Bungie\Model\int[]|null $activityModeHashes The hash identifiers for Activity Modes relevant to this activity.  Note that if this is a playlist, the specific playlist entry chosen will determine the actual activity modes that end up being relevant.
+     * @param int[]|null $activityModeHashes The hash identifiers for Activity Modes relevant to this activity.  Note that if this is a playlist, the specific playlist entry chosen will determine the actual activity modes that end up being relevant.
      *
      * @return $this
      */
@@ -1138,7 +1138,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets activityModeTypes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null
      */
     public function getActivityModeTypes()
     {
@@ -1148,7 +1148,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets activityModeTypes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null $activityModeTypes The activity modes - if any - in enum form. Because we can't seem to escape the enums.
+     * @param \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null $activityModeTypes The activity modes - if any - in enum form. Because we can't seem to escape the enums.
      *
      * @return $this
      */
@@ -1186,7 +1186,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets insertionPoints
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityInsertionPointDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyActivityInsertionPointDefinition[]|null
      */
     public function getInsertionPoints()
     {
@@ -1196,7 +1196,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets insertionPoints
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyActivityInsertionPointDefinition[]|null $insertionPoints The list of phases or points of entry into an activity, along with information we can use to determine their gating and availability.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyActivityInsertionPointDefinition[]|null $insertionPoints The list of phases or points of entry into an activity, along with information we can use to determine their gating and availability.
      *
      * @return $this
      */
@@ -1210,7 +1210,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets activityLocationMappings
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Constants\DestinyEnvironmentLocationMapping[]|null
+     * @return \Bungie\Model\Destiny\Constants\DestinyEnvironmentLocationMapping[]|null
      */
     public function getActivityLocationMappings()
     {
@@ -1220,7 +1220,7 @@ class DestinyActivityDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets activityLocationMappings
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Constants\DestinyEnvironmentLocationMapping[]|null $activityLocationMappings A list of location mappings that are affected by this activity. Pulled out of DestinyLocationDefinitions for our/your lookup convenience.
+     * @param \Bungie\Model\Destiny\Constants\DestinyEnvironmentLocationMapping[]|null $activityLocationMappings A list of location mappings that are affected by this activity. Pulled out of DestinyLocationDefinitions for our/your lookup convenience.
      *
      * @return $this
      */

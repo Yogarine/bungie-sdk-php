@@ -62,7 +62,7 @@ class DestinyLinkedGraphDefinition implements \Bungie\Model\ModelInterface, Arra
         'name' => 'string',
         'unlockExpression' => '\Bungie\Model\Destiny\Definitions\DestinyUnlockExpressionDefinition',
         'linkedGraphId' => 'int',
-        'linkedGraphs' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphEntryDefinition[]',
+        'linkedGraphs' => '\Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphEntryDefinition[]',
         'overview' => 'string'
     ];
 
@@ -334,7 +334,7 @@ class DestinyLinkedGraphDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Gets linkedGraphs
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphEntryDefinition[]|null
      */
     public function getLinkedGraphs()
     {
@@ -344,7 +344,7 @@ class DestinyLinkedGraphDefinition implements \Bungie\Model\ModelInterface, Arra
     /**
      * Sets linkedGraphs
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphEntryDefinition[]|null $linkedGraphs linkedGraphs
+     * @param \Bungie\Model\Destiny\Definitions\Director\DestinyLinkedGraphEntryDefinition[]|null $linkedGraphs linkedGraphs
      *
      * @return $this
      */

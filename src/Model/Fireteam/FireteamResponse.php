@@ -58,8 +58,8 @@ class FireteamResponse implements \Bungie\Model\ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'summary' => '\Bungie\Model\Fireteam\FireteamSummary',
-        'members' => '\Bungie\Model\\Bungie\Model\Fireteam\FireteamMember[]',
-        'alternates' => '\Bungie\Model\\Bungie\Model\Fireteam\FireteamMember[]'
+        'members' => '\Bungie\Model\Fireteam\FireteamMember[]',
+        'alternates' => '\Bungie\Model\Fireteam\FireteamMember[]'
     ];
 
     /**
@@ -243,7 +243,7 @@ class FireteamResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Bungie\Model\\Bungie\Model\Fireteam\FireteamMember[]|null
+     * @return \Bungie\Model\Fireteam\FireteamMember[]|null
      */
     public function getMembers()
     {
@@ -253,7 +253,7 @@ class FireteamResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Bungie\Model\\Bungie\Model\Fireteam\FireteamMember[]|null $members members
+     * @param \Bungie\Model\Fireteam\FireteamMember[]|null $members members
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class FireteamResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets alternates
      *
-     * @return \Bungie\Model\\Bungie\Model\Fireteam\FireteamMember[]|null
+     * @return \Bungie\Model\Fireteam\FireteamMember[]|null
      */
     public function getAlternates()
     {
@@ -277,7 +277,7 @@ class FireteamResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets alternates
      *
-     * @param \Bungie\Model\\Bungie\Model\Fireteam\FireteamMember[]|null $alternates alternates
+     * @param \Bungie\Model\Fireteam\FireteamMember[]|null $alternates alternates
      *
      * @return $this
      */

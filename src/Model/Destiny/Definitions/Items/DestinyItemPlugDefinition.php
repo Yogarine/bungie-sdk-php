@@ -58,14 +58,14 @@ class DestinyItemPlugDefinition implements \Bungie\Model\ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'insertionRules' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]',
+        'insertionRules' => '\Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]',
         'plugCategoryIdentifier' => 'string',
         'plugCategoryHash' => 'int',
         'onActionRecreateSelf' => 'bool',
         'insertionMaterialRequirementHash' => 'int',
         'previewItemOverrideHash' => 'int',
         'enabledMaterialRequirementHash' => 'int',
-        'enabledRules' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]',
+        'enabledRules' => '\Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]',
         'uiPlugLabel' => 'string',
         'plugStyle' => '\Bungie\Model\Destiny\PlugUiStyles',
         'isPseudoPlug' => 'bool',
@@ -298,7 +298,7 @@ class DestinyItemPlugDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets insertionRules
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]|null
      */
     public function getInsertionRules()
     {
@@ -308,7 +308,7 @@ class DestinyItemPlugDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets insertionRules
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]|null $insertionRules The rules around when this plug can be inserted into a socket, aside from the socket's individual restrictions.  The live data DestinyItemPlugComponent.insertFailIndexes will be an index into this array, so you can pull out the failure strings appropriate for the user.
+     * @param \Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]|null $insertionRules The rules around when this plug can be inserted into a socket, aside from the socket's individual restrictions.  The live data DestinyItemPlugComponent.insertFailIndexes will be an index into this array, so you can pull out the failure strings appropriate for the user.
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class DestinyItemPlugDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets enabledRules
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]|null
      */
     public function getEnabledRules()
     {
@@ -476,7 +476,7 @@ class DestinyItemPlugDefinition implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets enabledRules
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]|null $enabledRules The rules around whether the plug, once inserted, is enabled and providing its benefits.  The live data DestinyItemPlugComponent.enableFailIndexes will be an index into this array, so you can pull out the failure strings appropriate for the user.
+     * @param \Bungie\Model\Destiny\Definitions\Items\DestinyPlugRuleDefinition[]|null $enabledRules The rules around whether the plug, once inserted, is enabled and providing its benefits.  The live data DestinyItemPlugComponent.enableFailIndexes will be an index into this array, so you can pull out the failure strings appropriate for the user.
      *
      * @return $this
      */

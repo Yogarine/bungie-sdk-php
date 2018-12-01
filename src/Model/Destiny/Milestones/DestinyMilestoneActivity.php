@@ -61,8 +61,8 @@ class DestinyMilestoneActivity implements \Bungie\Model\ModelInterface, ArrayAcc
         'activityHash' => 'int',
         'activityModeHash' => 'int',
         'activityModeType' => 'int',
-        'modifierHashes' => '\Bungie\Model\int[]',
-        'variants' => '\Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityVariant[]'
+        'modifierHashes' => 'int[]',
+        'variants' => '\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityVariant[]'
     ];
 
     /**
@@ -448,7 +448,7 @@ class DestinyMilestoneActivity implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Gets modifierHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getModifierHashes()
     {
@@ -458,7 +458,7 @@ class DestinyMilestoneActivity implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Sets modifierHashes
      *
-     * @param \Bungie\Model\int[]|null $modifierHashes If the activity has modifiers, this will be the list of modifiers that all variants have in common. Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data. Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all *possible* modifiers for the activity, not the active ones. Use only the active ones to match what's really live.
+     * @param int[]|null $modifierHashes If the activity has modifiers, this will be the list of modifiers that all variants have in common. Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data. Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all *possible* modifiers for the activity, not the active ones. Use only the active ones to match what's really live.
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class DestinyMilestoneActivity implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Gets variants
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityVariant[]|null
+     * @return \Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityVariant[]|null
      */
     public function getVariants()
     {
@@ -482,7 +482,7 @@ class DestinyMilestoneActivity implements \Bungie\Model\ModelInterface, ArrayAcc
     /**
      * Sets variants
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityVariant[]|null $variants If you want more than just name/location/etc... you're going to have to dig into and show the variants of the conceptual activity. These will differ in seemingly arbitrary ways, like difficulty level and modifiers applied. Show it in whatever way tickles your fancy.
+     * @param \Bungie\Model\Destiny\Milestones\DestinyMilestoneActivityVariant[]|null $variants If you want more than just name/location/etc... you're going to have to dig into and show the variants of the conceptual activity. These will differ in seemingly arbitrary ways, like difficulty level and modifiers applied. Show it in whatever way tickles your fancy.
      *
      * @return $this
      */

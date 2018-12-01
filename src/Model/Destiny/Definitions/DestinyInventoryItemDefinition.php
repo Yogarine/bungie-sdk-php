@@ -88,23 +88,23 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
         'sockets' => '\Bungie\Model\Destiny\Definitions\DestinyItemSocketBlockDefinition',
         'summary' => '\Bungie\Model\Destiny\Definitions\DestinyItemSummaryBlockDefinition',
         'talentGrid' => '\Bungie\Model\Destiny\Definitions\DestinyItemTalentGridBlockDefinition',
-        'investmentStats' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemInvestmentStatDefinition[]',
-        'perks' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemPerkEntryDefinition[]',
+        'investmentStats' => '\Bungie\Model\Destiny\Definitions\DestinyItemInvestmentStatDefinition[]',
+        'perks' => '\Bungie\Model\Destiny\Definitions\DestinyItemPerkEntryDefinition[]',
         'loreHash' => 'int',
         'summaryItemHash' => 'int',
-        'animations' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Animations\DestinyAnimationReference[]',
+        'animations' => '\Bungie\Model\Destiny\Definitions\Animations\DestinyAnimationReference[]',
         'allowActions' => 'bool',
-        'links' => '\Bungie\Model\\Bungie\Model\Links\HyperlinkReference[]',
+        'links' => '\Bungie\Model\Links\HyperlinkReference[]',
         'doesPostmasterPullHaveSideEffects' => 'bool',
         'nonTransferrable' => 'bool',
-        'itemCategoryHashes' => '\Bungie\Model\int[]',
+        'itemCategoryHashes' => 'int[]',
         'specialItemType' => '\Bungie\Model\Destiny\SpecialItemType',
         'itemType' => '\Bungie\Model\Destiny\DestinyItemType',
         'itemSubType' => '\Bungie\Model\Destiny\DestinyItemSubType',
         'classType' => '\Bungie\Model\Destiny\DestinyClass',
         'equippable' => 'bool',
-        'damageTypeHashes' => '\Bungie\Model\int[]',
-        'damageTypes' => '\Bungie\Model\\Bungie\Model\Destiny\DamageType[]',
+        'damageTypeHashes' => 'int[]',
+        'damageTypes' => '\Bungie\Model\Destiny\DamageType[]',
         'defaultDamageType' => '\Bungie\Model\Destiny\DamageType',
         'defaultDamageTypeHash' => 'int',
         'hash' => 'int',
@@ -1234,7 +1234,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets investmentStats
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemInvestmentStatDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemInvestmentStatDefinition[]|null
      */
     public function getInvestmentStats()
     {
@@ -1244,7 +1244,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets investmentStats
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemInvestmentStatDefinition[]|null $investmentStats If the item has stats, this block will be defined. It has the \"raw\" investment stats for the item. These investment stats don't take into account the ways that the items can spawn, nor do they take into account any Stat Group transformations. I have retained them for debugging purposes, but I do not know how useful people will find them.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemInvestmentStatDefinition[]|null $investmentStats If the item has stats, this block will be defined. It has the \"raw\" investment stats for the item. These investment stats don't take into account the ways that the items can spawn, nor do they take into account any Stat Group transformations. I have retained them for debugging purposes, but I do not know how useful people will find them.
      *
      * @return $this
      */
@@ -1258,7 +1258,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets perks
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemPerkEntryDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemPerkEntryDefinition[]|null
      */
     public function getPerks()
     {
@@ -1268,7 +1268,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets perks
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemPerkEntryDefinition[]|null $perks If the item has any *intrinsic* Perks (Perks that it will provide regardless of Sockets, Talent Grid, and other transitory state), they will be defined here.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemPerkEntryDefinition[]|null $perks If the item has any *intrinsic* Perks (Perks that it will provide regardless of Sockets, Talent Grid, and other transitory state), they will be defined here.
      *
      * @return $this
      */
@@ -1330,7 +1330,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets animations
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Animations\DestinyAnimationReference[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Animations\DestinyAnimationReference[]|null
      */
     public function getAnimations()
     {
@@ -1340,7 +1340,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets animations
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Animations\DestinyAnimationReference[]|null $animations If any animations were extracted from game content for this item, these will be the definitions of those animations.
+     * @param \Bungie\Model\Destiny\Definitions\Animations\DestinyAnimationReference[]|null $animations If any animations were extracted from game content for this item, these will be the definitions of those animations.
      *
      * @return $this
      */
@@ -1378,7 +1378,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets links
      *
-     * @return \Bungie\Model\\Bungie\Model\Links\HyperlinkReference[]|null
+     * @return \Bungie\Model\Links\HyperlinkReference[]|null
      */
     public function getLinks()
     {
@@ -1388,7 +1388,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets links
      *
-     * @param \Bungie\Model\\Bungie\Model\Links\HyperlinkReference[]|null $links If we added any help or informational URLs about this item, these will be those links.
+     * @param \Bungie\Model\Links\HyperlinkReference[]|null $links If we added any help or informational URLs about this item, these will be those links.
      *
      * @return $this
      */
@@ -1450,7 +1450,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets itemCategoryHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getItemCategoryHashes()
     {
@@ -1460,7 +1460,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets itemCategoryHashes
      *
-     * @param \Bungie\Model\int[]|null $itemCategoryHashes BNet attempts to make a more formal definition of item \"Categories\", as defined by DestinyItemCategoryDefinition. This is a list of all Categories that we were able to algorithmically determine that this item is a member of. (for instance, that it's a \"Weapon\", that it's an \"Auto Rifle\", etc...)  The algorithm for these is, unfortunately, volatile. If you believe you see a miscategorized item, please let us know on the Bungie API forums.
+     * @param int[]|null $itemCategoryHashes BNet attempts to make a more formal definition of item \"Categories\", as defined by DestinyItemCategoryDefinition. This is a list of all Categories that we were able to algorithmically determine that this item is a member of. (for instance, that it's a \"Weapon\", that it's an \"Auto Rifle\", etc...)  The algorithm for these is, unfortunately, volatile. If you believe you see a miscategorized item, please let us know on the Bungie API forums.
      *
      * @return $this
      */
@@ -1594,7 +1594,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets damageTypeHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getDamageTypeHashes()
     {
@@ -1604,7 +1604,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets damageTypeHashes
      *
-     * @param \Bungie\Model\int[]|null $damageTypeHashes Theoretically, an item can have many possible damage types. In *practice*, this is not true, but just in case weapons start being made that have multiple (for instance, an item where a socket has reusable plugs for every possible damage type that you can choose from freely), this field will return all of the possible damage types that are available to the weapon by default.
+     * @param int[]|null $damageTypeHashes Theoretically, an item can have many possible damage types. In *practice*, this is not true, but just in case weapons start being made that have multiple (for instance, an item where a socket has reusable plugs for every possible damage type that you can choose from freely), this field will return all of the possible damage types that are available to the weapon by default.
      *
      * @return $this
      */
@@ -1618,7 +1618,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets damageTypes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DamageType[]|null
+     * @return \Bungie\Model\Destiny\DamageType[]|null
      */
     public function getDamageTypes()
     {
@@ -1628,7 +1628,7 @@ class DestinyInventoryItemDefinition implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets damageTypes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DamageType[]|null $damageTypes This is the list of all damage types that we know ahead of time the item can take on. Unfortunately, this does not preclude the possibility of something funky happening to give the item a damage type that cannot be predicted beforehand: for example, if some designer decides to create arbitrary non-reusable plugs that cause damage type to change.  This damage type prediction will only use the following to determine potential damage types:  - Intrinsic perks  - Talent Node perks  - Known, reusable plugs for sockets
+     * @param \Bungie\Model\Destiny\DamageType[]|null $damageTypes This is the list of all damage types that we know ahead of time the item can take on. Unfortunately, this does not preclude the possibility of something funky happening to give the item a damage type that cannot be predicted beforehand: for example, if some designer decides to create arbitrary non-reusable plugs that cause damage type to change.  This damage type prediction will only use the following to determine potential damage types:  - Intrinsic perks  - Talent Node perks  - Known, reusable plugs for sockets
      *
      * @return $this
      */

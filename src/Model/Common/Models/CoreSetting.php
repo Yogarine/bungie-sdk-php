@@ -62,7 +62,7 @@ class CoreSetting implements \Bungie\Model\ModelInterface, ArrayAccess
         'displayName' => 'string',
         'summary' => 'string',
         'imagePath' => 'string',
-        'childSettings' => '\Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]'
+        'childSettings' => '\Bungie\Model\Common\Models\CoreSetting[]'
     ];
 
     /**
@@ -357,7 +357,7 @@ class CoreSetting implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets childSettings
      *
-     * @return \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null
+     * @return \Bungie\Model\Common\Models\CoreSetting[]|null
      */
     public function getChildSettings()
     {
@@ -367,7 +367,7 @@ class CoreSetting implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets childSettings
      *
-     * @param \Bungie\Model\\Bungie\Model\Common\Models\CoreSetting[]|null $childSettings childSettings
+     * @param \Bungie\Model\Common\Models\CoreSetting[]|null $childSettings childSettings
      *
      * @return $this
      */

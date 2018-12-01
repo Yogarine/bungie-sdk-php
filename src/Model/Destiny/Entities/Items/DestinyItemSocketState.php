@@ -61,10 +61,10 @@ class DestinyItemSocketState implements \Bungie\Model\ModelInterface, ArrayAcces
         'plugHash' => 'int',
         'isEnabled' => 'bool',
         'isVisible' => 'bool',
-        'enableFailIndexes' => '\Bungie\Model\int[]',
-        'reusablePlugHashes' => '\Bungie\Model\int[]',
-        'plugObjectives' => '\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]',
-        'reusablePlugs' => '\Bungie\Model\\Bungie\Model\Destiny\Sockets\DestinyItemPlug[]'
+        'enableFailIndexes' => 'int[]',
+        'reusablePlugHashes' => 'int[]',
+        'plugObjectives' => '\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]',
+        'reusablePlugs' => '\Bungie\Model\Destiny\Sockets\DestinyItemPlug[]'
     ];
 
     /**
@@ -316,7 +316,7 @@ class DestinyItemSocketState implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets enableFailIndexes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getEnableFailIndexes()
     {
@@ -326,7 +326,7 @@ class DestinyItemSocketState implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets enableFailIndexes
      *
-     * @param \Bungie\Model\int[]|null $enableFailIndexes If a plug is inserted but not enabled, this will be populated with indexes into the plug item definition's plug.enabledRules property, so that you can show the reasons why it is not enabled.
+     * @param int[]|null $enableFailIndexes If a plug is inserted but not enabled, this will be populated with indexes into the plug item definition's plug.enabledRules property, so that you can show the reasons why it is not enabled.
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class DestinyItemSocketState implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets reusablePlugHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getReusablePlugHashes()
     {
@@ -350,7 +350,7 @@ class DestinyItemSocketState implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets reusablePlugHashes
      *
-     * @param \Bungie\Model\int[]|null $reusablePlugHashes If the item supports reusable plugs, this is the list of plug item hashes that are currently allowed to be used for this socket. See the \"reusablePlugs\" property, which has rendered this obsolete, for more information.
+     * @param int[]|null $reusablePlugHashes If the item supports reusable plugs, this is the list of plug item hashes that are currently allowed to be used for this socket. See the \"reusablePlugs\" property, which has rendered this obsolete, for more information.
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class DestinyItemSocketState implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets plugObjectives
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null
+     * @return \Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null
      */
     public function getPlugObjectives()
     {
@@ -374,7 +374,7 @@ class DestinyItemSocketState implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets plugObjectives
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null $plugObjectives Sometimes, Plugs may have objectives: generally, these are used for flavor and display purposes. For instance, a Plug might be tracking the number of PVP kills you have made. It will use the parent item's data about that tracking status to determine what to show, and will generally show it using the DestinyObjectiveDefinition's progressDescription property. Refer to the plug's itemHash and objective property for more information if you would like to display even more data.
+     * @param \Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null $plugObjectives Sometimes, Plugs may have objectives: generally, these are used for flavor and display purposes. For instance, a Plug might be tracking the number of PVP kills you have made. It will use the parent item's data about that tracking status to determine what to show, and will generally show it using the DestinyObjectiveDefinition's progressDescription property. Refer to the plug's itemHash and objective property for more information if you would like to display even more data.
      *
      * @return $this
      */
@@ -388,7 +388,7 @@ class DestinyItemSocketState implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets reusablePlugs
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Sockets\DestinyItemPlug[]|null
+     * @return \Bungie\Model\Destiny\Sockets\DestinyItemPlug[]|null
      */
     public function getReusablePlugs()
     {
@@ -398,7 +398,7 @@ class DestinyItemSocketState implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets reusablePlugs
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Sockets\DestinyItemPlug[]|null $reusablePlugs If the item supports reusable plugs, this is the list of plugs that are allowed to be used for the socket, and any relevant information about whether they are \"enabled\", whether they are allowed to be inserted, and any other information such as objectives.  A Reusable Plug is a plug that you can always insert into this socket as long as its insertion rules are passed, regardless of whether or not you have the plug in your inventory. An example of it failing an insertion rule would be if it has an Objective that needs to be completed before it can be inserted, and that objective hasn't been completed yet.  In practice, a socket will *either* have reusable plugs *or* it will allow for plugs in your inventory to be inserted. See DestinyInventoryItemDefinition.socket for more info.
+     * @param \Bungie\Model\Destiny\Sockets\DestinyItemPlug[]|null $reusablePlugs If the item supports reusable plugs, this is the list of plugs that are allowed to be used for the socket, and any relevant information about whether they are \"enabled\", whether they are allowed to be inserted, and any other information such as objectives.  A Reusable Plug is a plug that you can always insert into this socket as long as its insertion rules are passed, regardless of whether or not you have the plug in your inventory. An example of it failing an insertion rule would be if it has an Objective that needs to be completed before it can be inserted, and that objective hasn't been completed yet.  In practice, a socket will *either* have reusable plugs *or* it will allow for plugs in your inventory to be inserted. See DestinyInventoryItemDefinition.socket for more info.
      *
      * @return $this
      */

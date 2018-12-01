@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\\Bungie\Model\GroupsV2\GroupV2Card[]**](GroupV2Card.md) |  | [optional] 
+**response** | [**\Bungie\Model\GroupsV2\GroupV2Card[]**](GroupV2Card.md) |  | [optional] 
 **errorCode** | [**\Bungie\Model\Exceptions\PlatformErrorCodes**](PlatformErrorCodes.md) |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

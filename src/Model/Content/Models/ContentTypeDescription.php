@@ -63,10 +63,10 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
         'previewImage' => 'string',
         'priority' => 'int',
         'reminder' => 'string',
-        'properties' => '\Bungie\Model\\Bungie\Model\Content\Models\ContentTypeProperty[]',
-        'tagMetadata' => '\Bungie\Model\\Bungie\Model\Content\Models\TagMetadataDefinition[]',
+        'properties' => '\Bungie\Model\Content\Models\ContentTypeProperty[]',
+        'tagMetadata' => '\Bungie\Model\Content\Models\TagMetadataDefinition[]',
         'tagMetadataItems' => 'map[string,\Bungie\Model\Content\Models\TagMetadataItem]',
-        'usageExamples' => '\Bungie\Model\string[]',
+        'usageExamples' => 'string[]',
         'showInContentEditor' => 'bool',
         'typeOf' => 'string',
         'bindIdentifierToProperty' => 'string',
@@ -75,9 +75,9 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
         'allowComments' => 'bool',
         'autoEnglishPropertyFallback' => 'bool',
         'bulkUploadable' => 'bool',
-        'previews' => '\Bungie\Model\\Bungie\Model\Content\Models\ContentPreview[]',
+        'previews' => '\Bungie\Model\Content\Models\ContentPreview[]',
         'suppressCmsPath' => 'bool',
-        'propertySections' => '\Bungie\Model\\Bungie\Model\Content\Models\ContentTypePropertySection[]'
+        'propertySections' => '\Bungie\Model\Content\Models\ContentTypePropertySection[]'
     ];
 
     /**
@@ -471,7 +471,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets properties
      *
-     * @return \Bungie\Model\\Bungie\Model\Content\Models\ContentTypeProperty[]|null
+     * @return \Bungie\Model\Content\Models\ContentTypeProperty[]|null
      */
     public function getProperties()
     {
@@ -481,7 +481,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets properties
      *
-     * @param \Bungie\Model\\Bungie\Model\Content\Models\ContentTypeProperty[]|null $properties properties
+     * @param \Bungie\Model\Content\Models\ContentTypeProperty[]|null $properties properties
      *
      * @return $this
      */
@@ -495,7 +495,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets tagMetadata
      *
-     * @return \Bungie\Model\\Bungie\Model\Content\Models\TagMetadataDefinition[]|null
+     * @return \Bungie\Model\Content\Models\TagMetadataDefinition[]|null
      */
     public function getTagMetadata()
     {
@@ -505,7 +505,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets tagMetadata
      *
-     * @param \Bungie\Model\\Bungie\Model\Content\Models\TagMetadataDefinition[]|null $tagMetadata tagMetadata
+     * @param \Bungie\Model\Content\Models\TagMetadataDefinition[]|null $tagMetadata tagMetadata
      *
      * @return $this
      */
@@ -543,7 +543,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets usageExamples
      *
-     * @return \Bungie\Model\string[]|null
+     * @return string[]|null
      */
     public function getUsageExamples()
     {
@@ -553,7 +553,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets usageExamples
      *
-     * @param \Bungie\Model\string[]|null $usageExamples usageExamples
+     * @param string[]|null $usageExamples usageExamples
      *
      * @return $this
      */
@@ -759,7 +759,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets previews
      *
-     * @return \Bungie\Model\\Bungie\Model\Content\Models\ContentPreview[]|null
+     * @return \Bungie\Model\Content\Models\ContentPreview[]|null
      */
     public function getPreviews()
     {
@@ -769,7 +769,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets previews
      *
-     * @param \Bungie\Model\\Bungie\Model\Content\Models\ContentPreview[]|null $previews previews
+     * @param \Bungie\Model\Content\Models\ContentPreview[]|null $previews previews
      *
      * @return $this
      */
@@ -807,7 +807,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets propertySections
      *
-     * @return \Bungie\Model\\Bungie\Model\Content\Models\ContentTypePropertySection[]|null
+     * @return \Bungie\Model\Content\Models\ContentTypePropertySection[]|null
      */
     public function getPropertySections()
     {
@@ -817,7 +817,7 @@ class ContentTypeDescription implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets propertySections
      *
-     * @param \Bungie\Model\\Bungie\Model\Content\Models\ContentTypePropertySection[]|null $propertySections propertySections
+     * @param \Bungie\Model\Content\Models\ContentTypePropertySection[]|null $propertySections propertySections
      *
      * @return $this
      */

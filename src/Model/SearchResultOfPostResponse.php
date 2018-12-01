@@ -57,7 +57,7 @@ class SearchResultOfPostResponse implements \Bungie\Model\ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\Bungie\Model\\Bungie\Model\Forum\PostResponse[]',
+        'results' => '\Bungie\Model\Forum\PostResponse[]',
         'totalResults' => 'int',
         'hasMore' => 'bool',
         'query' => '\Bungie\Model\Queries\PagedQuery',
@@ -237,7 +237,7 @@ class SearchResultOfPostResponse implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Gets results
      *
-     * @return \Bungie\Model\\Bungie\Model\Forum\PostResponse[]|null
+     * @return \Bungie\Model\Forum\PostResponse[]|null
      */
     public function getResults()
     {
@@ -247,7 +247,7 @@ class SearchResultOfPostResponse implements \Bungie\Model\ModelInterface, ArrayA
     /**
      * Sets results
      *
-     * @param \Bungie\Model\\Bungie\Model\Forum\PostResponse[]|null $results results
+     * @param \Bungie\Model\Forum\PostResponse[]|null $results results
      *
      * @return $this
      */

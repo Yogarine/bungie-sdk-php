@@ -58,7 +58,7 @@ class DestinyEquipItemResults implements \Bungie\Model\ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $openAPITypes = [
-        'equipResults' => '\Bungie\Model\\Bungie\Model\Destiny\DestinyEquipItemResult[]'
+        'equipResults' => '\Bungie\Model\Destiny\DestinyEquipItemResult[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyEquipItemResults implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets equipResults
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DestinyEquipItemResult[]|null
+     * @return \Bungie\Model\Destiny\DestinyEquipItemResult[]|null
      */
     public function getEquipResults()
     {
@@ -218,7 +218,7 @@ class DestinyEquipItemResults implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets equipResults
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DestinyEquipItemResult[]|null $equipResults equipResults
+     * @param \Bungie\Model\Destiny\DestinyEquipItemResult[]|null $equipResults equipResults
      *
      * @return $this
      */

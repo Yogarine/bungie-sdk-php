@@ -59,8 +59,8 @@ class DestinyHistoricalStatsDefinition implements \Bungie\Model\ModelInterface, 
     protected static $openAPITypes = [
         'statId' => 'string',
         'group' => '\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType',
-        'periodTypes' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType[]',
-        'modes' => '\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]',
+        'periodTypes' => '\Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType[]',
+        'modes' => '\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]',
         'category' => '\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsCategoryType',
         'statName' => 'string',
         'statNameAbbr' => 'string',
@@ -358,7 +358,7 @@ class DestinyHistoricalStatsDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets periodTypes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType[]|null
      */
     public function getPeriodTypes()
     {
@@ -368,7 +368,7 @@ class DestinyHistoricalStatsDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets periodTypes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType[]|null $periodTypes Time periods the statistic covers
+     * @param \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType[]|null $periodTypes Time periods the statistic covers
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class DestinyHistoricalStatsDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets modes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null
+     * @return \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null
      */
     public function getModes()
     {
@@ -392,7 +392,7 @@ class DestinyHistoricalStatsDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets modes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null $modes Game modes where this statistic can be reported.
+     * @param \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]|null $modes Game modes where this statistic can be reported.
      *
      * @return $this
      */

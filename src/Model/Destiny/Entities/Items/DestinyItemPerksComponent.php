@@ -58,7 +58,7 @@ class DestinyItemPerksComponent implements \Bungie\Model\ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'perks' => '\Bungie\Model\\Bungie\Model\Destiny\Perks\DestinyPerkReference[]'
+        'perks' => '\Bungie\Model\Destiny\Perks\DestinyPerkReference[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DestinyItemPerksComponent implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets perks
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Perks\DestinyPerkReference[]|null
+     * @return \Bungie\Model\Destiny\Perks\DestinyPerkReference[]|null
      */
     public function getPerks()
     {
@@ -218,7 +218,7 @@ class DestinyItemPerksComponent implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets perks
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Perks\DestinyPerkReference[]|null $perks The list of perks to display in an item tooltip - and whether or not they have been activated.
+     * @param \Bungie\Model\Destiny\Perks\DestinyPerkReference[]|null $perks The list of perks to display in an item tooltip - and whether or not they have been activated.
      *
      * @return $this
      */

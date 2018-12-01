@@ -70,7 +70,7 @@ class DestinyPresentationNodeDefinition implements \Bungie\Model\ModelInterface,
         'screenStyle' => '\Bungie\Model\Destiny\DestinyPresentationScreenStyle',
         'requirements' => '\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeRequirementsBlock',
         'disableChildSubscreenNavigation' => 'bool',
-        'parentNodeHashes' => '\Bungie\Model\int[]',
+        'parentNodeHashes' => 'int[]',
         'hash' => 'int',
         'index' => 'int',
         'redacted' => 'bool'
@@ -586,7 +586,7 @@ class DestinyPresentationNodeDefinition implements \Bungie\Model\ModelInterface,
     /**
      * Gets parentNodeHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getParentNodeHashes()
     {
@@ -596,7 +596,7 @@ class DestinyPresentationNodeDefinition implements \Bungie\Model\ModelInterface,
     /**
      * Sets parentNodeHashes
      *
-     * @param \Bungie\Model\int[]|null $parentNodeHashes A quick reference to presentation nodes that have this node as a child. (presentation nodes can be parented under multiple parents)
+     * @param int[]|null $parentNodeHashes A quick reference to presentation nodes that have this node as a child. (presentation nodes can be parented under multiple parents)
      *
      * @return $this
      */

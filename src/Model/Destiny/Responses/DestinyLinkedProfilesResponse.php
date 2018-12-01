@@ -58,9 +58,9 @@ class DestinyLinkedProfilesResponse implements \Bungie\Model\ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'profiles' => '\Bungie\Model\\Bungie\Model\Destiny\Responses\DestinyProfileUserInfoCard[]',
+        'profiles' => '\Bungie\Model\Destiny\Responses\DestinyProfileUserInfoCard[]',
         'bnetMembership' => '\Bungie\Model\User\UserInfoCard',
-        'profilesWithErrors' => '\Bungie\Model\\Bungie\Model\Destiny\Responses\DestinyErrorProfile[]'
+        'profilesWithErrors' => '\Bungie\Model\Destiny\Responses\DestinyErrorProfile[]'
     ];
 
     /**
@@ -220,7 +220,7 @@ class DestinyLinkedProfilesResponse implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets profiles
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Responses\DestinyProfileUserInfoCard[]|null
+     * @return \Bungie\Model\Destiny\Responses\DestinyProfileUserInfoCard[]|null
      */
     public function getProfiles()
     {
@@ -230,7 +230,7 @@ class DestinyLinkedProfilesResponse implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets profiles
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Responses\DestinyProfileUserInfoCard[]|null $profiles Any Destiny account for whom we could successfully pull characters will be returned here, as the Platform-level summary of user data. (no character data, no Destiny account data other than the Membership ID and Type so you can make further queries)
+     * @param \Bungie\Model\Destiny\Responses\DestinyProfileUserInfoCard[]|null $profiles Any Destiny account for whom we could successfully pull characters will be returned here, as the Platform-level summary of user data. (no character data, no Destiny account data other than the Membership ID and Type so you can make further queries)
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class DestinyLinkedProfilesResponse implements \Bungie\Model\ModelInterface, Arr
     /**
      * Gets profilesWithErrors
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Responses\DestinyErrorProfile[]|null
+     * @return \Bungie\Model\Destiny\Responses\DestinyErrorProfile[]|null
      */
     public function getProfilesWithErrors()
     {
@@ -278,7 +278,7 @@ class DestinyLinkedProfilesResponse implements \Bungie\Model\ModelInterface, Arr
     /**
      * Sets profilesWithErrors
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Responses\DestinyErrorProfile[]|null $profilesWithErrors This is brief summary info for profiles that we believe have valid Destiny info, but who failed to return data for some other reason and thus we know that subsequent calls for their info will also fail.
+     * @param \Bungie\Model\Destiny\Responses\DestinyErrorProfile[]|null $profilesWithErrors This is brief summary info for profiles that we believe have valid Destiny info, but who failed to return data for some other reason and thus we know that subsequent calls for their info will also fail.
      *
      * @return $this
      */

@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **statId** | **string** | Unique programmer friendly ID for this stat | [optional] 
 **group** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType**](DestinyStatsGroupType.md) | Statistic group | [optional] 
-**periodTypes** | [**\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType[]**](PeriodType.md) | Time periods the statistic covers | [optional] 
-**modes** | [**\Bungie\Model\\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]**](DestinyActivityModeType.md) | Game modes where this statistic can be reported. | [optional] 
+**periodTypes** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType[]**](PeriodType.md) | Time periods the statistic covers | [optional] 
+**modes** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]**](DestinyActivityModeType.md) | Game modes where this statistic can be reported. | [optional] 
 **category** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsCategoryType**](DestinyStatsCategoryType.md) | Category for the stat. | [optional] 
 **statName** | **string** | Display name | [optional] 
 **statNameAbbr** | **string** | Display name abbreviated | [optional] 

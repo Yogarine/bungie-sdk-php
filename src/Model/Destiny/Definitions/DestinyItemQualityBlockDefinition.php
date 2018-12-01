@@ -58,11 +58,11 @@ class DestinyItemQualityBlockDefinition implements \Bungie\Model\ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'itemLevels' => '\Bungie\Model\int[]',
+        'itemLevels' => 'int[]',
         'qualityLevel' => 'int',
         'infusionCategoryName' => 'string',
         'infusionCategoryHash' => 'int',
-        'infusionCategoryHashes' => '\Bungie\Model\int[]',
+        'infusionCategoryHashes' => 'int[]',
         'progressionLevelRequirementHash' => 'int'
     ];
 
@@ -238,7 +238,7 @@ class DestinyItemQualityBlockDefinition implements \Bungie\Model\ModelInterface,
     /**
      * Gets itemLevels
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getItemLevels()
     {
@@ -248,7 +248,7 @@ class DestinyItemQualityBlockDefinition implements \Bungie\Model\ModelInterface,
     /**
      * Sets itemLevels
      *
-     * @param \Bungie\Model\int[]|null $itemLevels The \"base\" defined level of an item. This is a list because, in theory, each Expansion could define its own base level for an item.  In practice, not only was that never done in Destiny 1, but now this isn't even populated at all. When it's not populated, the level at which it spawns has to be inferred by Reward information, of which BNet receives an imperfect view and will only be reliable on instanced data as a result.
+     * @param int[]|null $itemLevels The \"base\" defined level of an item. This is a list because, in theory, each Expansion could define its own base level for an item.  In practice, not only was that never done in Destiny 1, but now this isn't even populated at all. When it's not populated, the level at which it spawns has to be inferred by Reward information, of which BNet receives an imperfect view and will only be reliable on instanced data as a result.
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class DestinyItemQualityBlockDefinition implements \Bungie\Model\ModelInterface,
     /**
      * Gets infusionCategoryHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getInfusionCategoryHashes()
     {
@@ -344,7 +344,7 @@ class DestinyItemQualityBlockDefinition implements \Bungie\Model\ModelInterface,
     /**
      * Sets infusionCategoryHashes
      *
-     * @param \Bungie\Model\int[]|null $infusionCategoryHashes If any one of these hashes matches any value in another item's infusionCategoryHashes, the two can infuse with each other.
+     * @param int[]|null $infusionCategoryHashes If any one of these hashes matches any value in another item's infusionCategoryHashes, the two can infuse with each other.
      *
      * @return $this
      */

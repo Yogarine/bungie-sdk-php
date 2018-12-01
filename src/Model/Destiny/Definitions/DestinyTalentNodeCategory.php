@@ -61,7 +61,7 @@ class DestinyTalentNodeCategory implements \Bungie\Model\ModelInterface, ArrayAc
         'identifier' => 'string',
         'isLoreDriven' => 'bool',
         'displayProperties' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
-        'nodeHashes' => '\Bungie\Model\int[]'
+        'nodeHashes' => 'int[]'
     ];
 
     /**
@@ -298,7 +298,7 @@ class DestinyTalentNodeCategory implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Gets nodeHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getNodeHashes()
     {
@@ -308,7 +308,7 @@ class DestinyTalentNodeCategory implements \Bungie\Model\ModelInterface, ArrayAc
     /**
      * Sets nodeHashes
      *
-     * @param \Bungie\Model\int[]|null $nodeHashes The set of all hash identifiers for Talent Nodes (DestinyTalentNodeDefinition) in this Talent Grid that are part of this Category.
+     * @param int[]|null $nodeHashes The set of all hash identifiers for Talent Nodes (DestinyTalentNodeDefinition) in this Talent Grid that are part of this Category.
      *
      * @return $this
      */

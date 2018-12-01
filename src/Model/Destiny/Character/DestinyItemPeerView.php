@@ -59,7 +59,7 @@ class DestinyItemPeerView implements \Bungie\Model\ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'itemHash' => 'int',
-        'dyes' => '\Bungie\Model\\Bungie\Model\Destiny\DyeReference[]'
+        'dyes' => '\Bungie\Model\Destiny\DyeReference[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyItemPeerView implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets dyes
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\DyeReference[]|null
+     * @return \Bungie\Model\Destiny\DyeReference[]|null
      */
     public function getDyes()
     {
@@ -248,7 +248,7 @@ class DestinyItemPeerView implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets dyes
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\DyeReference[]|null $dyes The list of dyes that have been applied to this item.
+     * @param \Bungie\Model\Destiny\DyeReference[]|null $dyes The list of dyes that have been applied to this item.
      *
      * @return $this
      */

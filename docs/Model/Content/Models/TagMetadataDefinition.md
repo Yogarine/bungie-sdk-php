@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **string** |  | [optional] 
 **order** | **int** |  | [optional] 
-**items** | [**\Bungie\Model\\Bungie\Model\Content\Models\TagMetadataItem[]**](TagMetadataItem.md) |  | [optional] 
+**items** | [**\Bungie\Model\Content\Models\TagMetadataItem[]**](TagMetadataItem.md) |  | [optional] 
 **datatype** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **isRequired** | **bool** |  | [optional] 

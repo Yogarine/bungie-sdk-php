@@ -64,8 +64,8 @@ class DestinyItemActionBlockDefinition implements \Bungie\Model\ModelInterface, 
         'overlayScreenName' => 'string',
         'overlayIcon' => 'string',
         'requiredCooldownSeconds' => 'int',
-        'requiredItems' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemActionRequiredItemDefinition[]',
-        'progressionRewards' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyProgressionRewardDefinition[]',
+        'requiredItems' => '\Bungie\Model\Destiny\Definitions\DestinyItemActionRequiredItemDefinition[]',
+        'progressionRewards' => '\Bungie\Model\Destiny\Definitions\DestinyProgressionRewardDefinition[]',
         'actionTypeLabel' => 'string',
         'requiredLocation' => 'string',
         'requiredCooldownHash' => 'int',
@@ -430,7 +430,7 @@ class DestinyItemActionBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets requiredItems
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemActionRequiredItemDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyItemActionRequiredItemDefinition[]|null
      */
     public function getRequiredItems()
     {
@@ -440,7 +440,7 @@ class DestinyItemActionBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets requiredItems
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyItemActionRequiredItemDefinition[]|null $requiredItems If the action requires other items to exist or be destroyed, this is the list of those items and requirements.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyItemActionRequiredItemDefinition[]|null $requiredItems If the action requires other items to exist or be destroyed, this is the list of those items and requirements.
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class DestinyItemActionBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Gets progressionRewards
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyProgressionRewardDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyProgressionRewardDefinition[]|null
      */
     public function getProgressionRewards()
     {
@@ -464,7 +464,7 @@ class DestinyItemActionBlockDefinition implements \Bungie\Model\ModelInterface, 
     /**
      * Sets progressionRewards
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyProgressionRewardDefinition[]|null $progressionRewards If performing this action earns you Progression, this is the list of progressions and values granted for those progressions by performing this action.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyProgressionRewardDefinition[]|null $progressionRewards If performing this action earns you Progression, this is the list of progressions and values granted for those progressions by performing this action.
      *
      * @return $this
      */

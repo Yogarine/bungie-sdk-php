@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**itemIds** | **\Bungie\Model\int[]** |  | [optional] 
+**itemIds** | **int[]** |  | [optional] 
 **characterId** | **int** |  | [optional] 
 **membershipType** | [**\Bungie\Model\BungieMembershipType**](BungieMembershipType.md) |  | [optional] 
 

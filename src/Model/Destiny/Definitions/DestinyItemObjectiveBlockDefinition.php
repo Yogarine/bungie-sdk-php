@@ -58,15 +58,15 @@ class DestinyItemObjectiveBlockDefinition implements \Bungie\Model\ModelInterfac
       * @var string[]
       */
     protected static $openAPITypes = [
-        'objectiveHashes' => '\Bungie\Model\int[]',
-        'displayActivityHashes' => '\Bungie\Model\int[]',
+        'objectiveHashes' => 'int[]',
+        'displayActivityHashes' => 'int[]',
         'requireFullObjectiveCompletion' => 'bool',
         'questlineItemHash' => 'int',
         'narrative' => 'string',
         'objectiveVerbName' => 'string',
         'questTypeIdentifier' => 'string',
         'questTypeHash' => 'int',
-        'perObjectiveDisplayProperties' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyObjectiveDisplayProperties[]'
+        'perObjectiveDisplayProperties' => '\Bungie\Model\Destiny\Definitions\DestinyObjectiveDisplayProperties[]'
     ];
 
     /**
@@ -256,7 +256,7 @@ class DestinyItemObjectiveBlockDefinition implements \Bungie\Model\ModelInterfac
     /**
      * Gets objectiveHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getObjectiveHashes()
     {
@@ -266,7 +266,7 @@ class DestinyItemObjectiveBlockDefinition implements \Bungie\Model\ModelInterfac
     /**
      * Sets objectiveHashes
      *
-     * @param \Bungie\Model\int[]|null $objectiveHashes The hashes to Objectives (DestinyObjectiveDefinition) that are part of this Quest Step, in the order that they should be rendered.
+     * @param int[]|null $objectiveHashes The hashes to Objectives (DestinyObjectiveDefinition) that are part of this Quest Step, in the order that they should be rendered.
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class DestinyItemObjectiveBlockDefinition implements \Bungie\Model\ModelInterfac
     /**
      * Gets displayActivityHashes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getDisplayActivityHashes()
     {
@@ -290,7 +290,7 @@ class DestinyItemObjectiveBlockDefinition implements \Bungie\Model\ModelInterfac
     /**
      * Sets displayActivityHashes
      *
-     * @param \Bungie\Model\int[]|null $displayActivityHashes For every entry in objectiveHashes, there is a corresponding entry in this array at the same index. If the objective is meant to be associated with a specific DestinyActivityDefinition, there will be a valid hash at that index. Otherwise, it will be invalid (0).  Rendered somewhat obsolete by perObjectiveDisplayProperties, which currently has much the same information but may end up with more info in the future.
+     * @param int[]|null $displayActivityHashes For every entry in objectiveHashes, there is a corresponding entry in this array at the same index. If the objective is meant to be associated with a specific DestinyActivityDefinition, there will be a valid hash at that index. Otherwise, it will be invalid (0).  Rendered somewhat obsolete by perObjectiveDisplayProperties, which currently has much the same information but may end up with more info in the future.
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class DestinyItemObjectiveBlockDefinition implements \Bungie\Model\ModelInterfac
     /**
      * Gets perObjectiveDisplayProperties
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyObjectiveDisplayProperties[]|null
+     * @return \Bungie\Model\Destiny\Definitions\DestinyObjectiveDisplayProperties[]|null
      */
     public function getPerObjectiveDisplayProperties()
     {
@@ -458,7 +458,7 @@ class DestinyItemObjectiveBlockDefinition implements \Bungie\Model\ModelInterfac
     /**
      * Sets perObjectiveDisplayProperties
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\DestinyObjectiveDisplayProperties[]|null $perObjectiveDisplayProperties One entry per Objective on the item, it will have related display information.
+     * @param \Bungie\Model\Destiny\Definitions\DestinyObjectiveDisplayProperties[]|null $perObjectiveDisplayProperties One entry per Objective on the item, it will have related display information.
      *
      * @return $this
      */

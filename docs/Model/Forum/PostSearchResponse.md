@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**relatedPosts** | [**\Bungie\Model\\Bungie\Model\Forum\PostResponse[]**](PostResponse.md) |  | [optional] 
-**authors** | [**\Bungie\Model\\Bungie\Model\User\GeneralUser[]**](GeneralUser.md) |  | [optional] 
-**groups** | [**\Bungie\Model\\Bungie\Model\GroupsV2\GroupResponse[]**](GroupResponse.md) |  | [optional] 
-**searchedTags** | [**\Bungie\Model\\Bungie\Model\Tags\Models\Contracts\TagResponse[]**](TagResponse.md) |  | [optional] 
-**polls** | [**\Bungie\Model\\Bungie\Model\Forum\PollResponse[]**](PollResponse.md) |  | [optional] 
-**recruitmentDetails** | [**\Bungie\Model\\Bungie\Model\Forum\ForumRecruitmentDetail[]**](ForumRecruitmentDetail.md) |  | [optional] 
+**relatedPosts** | [**\Bungie\Model\Forum\PostResponse[]**](PostResponse.md) |  | [optional] 
+**authors** | [**\Bungie\Model\User\GeneralUser[]**](GeneralUser.md) |  | [optional] 
+**groups** | [**\Bungie\Model\GroupsV2\GroupResponse[]**](GroupResponse.md) |  | [optional] 
+**searchedTags** | [**\Bungie\Model\Tags\Models\Contracts\TagResponse[]**](TagResponse.md) |  | [optional] 
+**polls** | [**\Bungie\Model\Forum\PollResponse[]**](PollResponse.md) |  | [optional] 
+**recruitmentDetails** | [**\Bungie\Model\Forum\ForumRecruitmentDetail[]**](ForumRecruitmentDetail.md) |  | [optional] 
 **availablePages** | **int** |  | [optional] 
-**results** | [**\Bungie\Model\\Bungie\Model\Forum\PostResponse[]**](PostResponse.md) |  | [optional] 
+**results** | [**\Bungie\Model\Forum\PostResponse[]**](PostResponse.md) |  | [optional] 
 **totalResults** | **int** |  | [optional] 
 **hasMore** | **bool** |  | [optional] 
 **query** | [**\Bungie\Model\Queries\PagedQuery**](PagedQuery.md) |  | [optional] 

@@ -60,7 +60,7 @@ class DestinyQuestStatus implements \Bungie\Model\ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'questHash' => 'int',
         'stepHash' => 'int',
-        'stepObjectives' => '\Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]',
+        'stepObjectives' => '\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]',
         'tracked' => 'bool',
         'itemInstanceId' => 'int',
         'completed' => 'bool',
@@ -304,7 +304,7 @@ class DestinyQuestStatus implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets stepObjectives
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null
+     * @return \Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null
      */
     public function getStepObjectives()
     {
@@ -314,7 +314,7 @@ class DestinyQuestStatus implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets stepObjectives
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null $stepObjectives A step can have multiple objectives. This will give you the progress for each objective in the current step, in the order in which they are rendered in-game.
+     * @param \Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]|null $stepObjectives A step can have multiple objectives. This will give you the progress for each objective in the current step, in the order in which they are rendered in-game.
      *
      * @return $this
      */

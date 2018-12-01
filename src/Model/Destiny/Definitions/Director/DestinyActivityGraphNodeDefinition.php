@@ -61,9 +61,9 @@ class DestinyActivityGraphNodeDefinition implements \Bungie\Model\ModelInterface
         'nodeId' => 'int',
         'overrideDisplay' => '\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition',
         'position' => '\Bungie\Model\Destiny\Definitions\Common\DestinyPositionDefinition',
-        'featuringStates' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeFeaturingStateDefinition[]',
-        'activities' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeActivityDefinition[]',
-        'states' => '\Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeStateEntry[]'
+        'featuringStates' => '\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeFeaturingStateDefinition[]',
+        'activities' => '\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeActivityDefinition[]',
+        'states' => '\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeStateEntry[]'
     ];
 
     /**
@@ -310,7 +310,7 @@ class DestinyActivityGraphNodeDefinition implements \Bungie\Model\ModelInterface
     /**
      * Gets featuringStates
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeFeaturingStateDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeFeaturingStateDefinition[]|null
      */
     public function getFeaturingStates()
     {
@@ -320,7 +320,7 @@ class DestinyActivityGraphNodeDefinition implements \Bungie\Model\ModelInterface
     /**
      * Sets featuringStates
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeFeaturingStateDefinition[]|null $featuringStates The node may have various visual accents placed on it, or styles applied. These are the list of possible styles that the Node can have. The game iterates through each, looking for the first one that passes a check of the required game/character/account state in order to show that style, and then renders the node in that style.
+     * @param \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeFeaturingStateDefinition[]|null $featuringStates The node may have various visual accents placed on it, or styles applied. These are the list of possible styles that the Node can have. The game iterates through each, looking for the first one that passes a check of the required game/character/account state in order to show that style, and then renders the node in that style.
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class DestinyActivityGraphNodeDefinition implements \Bungie\Model\ModelInterface
     /**
      * Gets activities
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeActivityDefinition[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeActivityDefinition[]|null
      */
     public function getActivities()
     {
@@ -344,7 +344,7 @@ class DestinyActivityGraphNodeDefinition implements \Bungie\Model\ModelInterface
     /**
      * Sets activities
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeActivityDefinition[]|null $activities The node may have various possible activities that could be active for it, however only one may be active at a time. See the DestinyActivityGraphNodeActivityDefinition for details.
+     * @param \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeActivityDefinition[]|null $activities The node may have various possible activities that could be active for it, however only one may be active at a time. See the DestinyActivityGraphNodeActivityDefinition for details.
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class DestinyActivityGraphNodeDefinition implements \Bungie\Model\ModelInterface
     /**
      * Gets states
      *
-     * @return \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeStateEntry[]|null
+     * @return \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeStateEntry[]|null
      */
     public function getStates()
     {
@@ -368,7 +368,7 @@ class DestinyActivityGraphNodeDefinition implements \Bungie\Model\ModelInterface
     /**
      * Sets states
      *
-     * @param \Bungie\Model\\Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeStateEntry[]|null $states Represents possible states that the graph node can be in. These are combined with some checking that happens in the game client and server to determine which state is actually active at any given time.
+     * @param \Bungie\Model\Destiny\Definitions\Director\DestinyActivityGraphNodeStateEntry[]|null $states Represents possible states that the graph node can be in. These are combined with some checking that happens in the game client and server to determine which state is actually active at any given time.
      *
      * @return $this
      */

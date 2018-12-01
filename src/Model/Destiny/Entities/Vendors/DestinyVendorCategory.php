@@ -59,7 +59,7 @@ class DestinyVendorCategory implements \Bungie\Model\ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'displayCategoryIndex' => 'int',
-        'itemIndexes' => '\Bungie\Model\int[]'
+        'itemIndexes' => 'int[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class DestinyVendorCategory implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets itemIndexes
      *
-     * @return \Bungie\Model\int[]|null
+     * @return int[]|null
      */
     public function getItemIndexes()
     {
@@ -248,7 +248,7 @@ class DestinyVendorCategory implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets itemIndexes
      *
-     * @param \Bungie\Model\int[]|null $itemIndexes An ordered list of indexes into items being sold in this category (DestinyVendorDefinition.itemList) which will contain more information about the items being sold themselves. Can also be used to index into DestinyVendorSaleItemComponent data, if you asked for that data to be returned.
+     * @param int[]|null $itemIndexes An ordered list of indexes into items being sold in this category (DestinyVendorDefinition.itemList) which will contain more information about the items being sold themselves. Can also be used to index into DestinyVendorSaleItemComponent data, if you asked for that data to be returned.
      *
      * @return $this
      */
