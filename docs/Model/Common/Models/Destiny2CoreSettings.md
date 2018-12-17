@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **badgesRootNode** | **int** |  | [optional] 
 **recordsRootNode** | **int** |  | [optional] 
 **medalsRootNode** | **int** |  | [optional] 
+**currentRankProgressionHashes** | **int[]** |  | [optional] 
 **undiscoveredCollectibleImage** | **string** |  | [optional] 
 **ammoTypeHeavyIcon** | **string** |  | [optional] 
 **ammoTypeSpecialIcon** | **string** |  | [optional] 
