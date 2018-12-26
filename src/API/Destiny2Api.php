@@ -3242,7 +3242,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', false);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
@@ -4474,14 +4474,14 @@ class Destiny2Api
         }
         // query params
         if (is_array($groups)) {
-            $groups = ObjectSerializer::serializeCollection($groups, 'multi', true);
+            $groups = ObjectSerializer::serializeCollection($groups, 'multi', false);
         }
         if ($groups !== null) {
             $queryParams['groups'] = ObjectSerializer::toQueryValue($groups);
         }
         // query params
         if (is_array($modes)) {
-            $modes = ObjectSerializer::serializeCollection($modes, 'multi', true);
+            $modes = ObjectSerializer::serializeCollection($modes, 'multi', false);
         }
         if ($modes !== null) {
             $queryParams['modes'] = ObjectSerializer::toQueryValue($modes);
@@ -5059,7 +5059,7 @@ class Destiny2Api
 
         // query params
         if (is_array($groups)) {
-            $groups = ObjectSerializer::serializeCollection($groups, 'multi', true);
+            $groups = ObjectSerializer::serializeCollection($groups, 'multi', false);
         }
         if ($groups !== null) {
             $queryParams['groups'] = ObjectSerializer::toQueryValue($groups);
@@ -5378,7 +5378,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', false);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
@@ -6932,7 +6932,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', false);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
@@ -8112,7 +8112,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', false);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
@@ -8447,7 +8447,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', false);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);
