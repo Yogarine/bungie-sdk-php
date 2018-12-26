@@ -2037,7 +2037,7 @@ class Destiny2Api
 
         // query params
         if (is_array($components)) {
-            $components = ObjectSerializer::serializeCollection($components, 'multi', true);
+            $components = ObjectSerializer::serializeCollection($components, 'multi', false);
         }
         if ($components !== null) {
             $queryParams['components'] = ObjectSerializer::toQueryValue($components);

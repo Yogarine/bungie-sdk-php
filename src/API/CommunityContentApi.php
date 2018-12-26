@@ -90,7 +90,7 @@ class CommunityContentApi
     /**
      * Operation getCommunityContent
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
+     * @param  int $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
      * @param  \Bungie\Model\Forum\CommunityContentSortMode $sort The sort mode. (required)
      *
@@ -108,7 +108,7 @@ class CommunityContentApi
     /**
      * Operation getCommunityContentWithHttpInfo
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
+     * @param  int $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
      * @param  \Bungie\Model\Forum\CommunityContentSortMode $sort The sort mode. (required)
      *
@@ -199,7 +199,7 @@ class CommunityContentApi
      *
      * 
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
+     * @param  int $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
      * @param  \Bungie\Model\Forum\CommunityContentSortMode $sort The sort mode. (required)
      *
@@ -221,7 +221,7 @@ class CommunityContentApi
      *
      * 
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
+     * @param  int $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
      * @param  \Bungie\Model\Forum\CommunityContentSortMode $sort The sort mode. (required)
      *
@@ -272,7 +272,7 @@ class CommunityContentApi
     /**
      * Create request for operation 'getCommunityContent'
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $mediaFilter The type of media to get (required)
+     * @param  int $mediaFilter The type of media to get (required)
      * @param  int $page Zero based page (required)
      * @param  \Bungie\Model\Forum\CommunityContentSortMode $sort The sort mode. (required)
      *

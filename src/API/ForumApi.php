@@ -371,7 +371,7 @@ class ForumApi
     /**
      * Operation getCoreTopicsPaged
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
+     * @param  int $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
      * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate The date filter. (required)
      * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
@@ -391,7 +391,7 @@ class ForumApi
     /**
      * Operation getCoreTopicsPagedWithHttpInfo
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
+     * @param  int $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
      * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate The date filter. (required)
      * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
@@ -484,7 +484,7 @@ class ForumApi
      *
      * 
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
+     * @param  int $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
      * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate The date filter. (required)
      * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
@@ -508,7 +508,7 @@ class ForumApi
      *
      * 
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
+     * @param  int $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
      * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate The date filter. (required)
      * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
@@ -561,7 +561,7 @@ class ForumApi
     /**
      * Create request for operation 'getCoreTopicsPaged'
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter The category filter. (required)
+     * @param  int $categoryFilter The category filter. (required)
      * @param  int $page Zero base page (required)
      * @param  \Bungie\Model\Forum\ForumTopicsQuickDateEnum $quickDate The date filter. (required)
      * @param  \Bungie\Model\Forum\ForumTopicsSortEnum $sort The sort mode. (required)
@@ -3160,7 +3160,7 @@ class ForumApi
     /**
      * Operation getTopicsPaged
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
+     * @param  int $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
@@ -3183,7 +3183,7 @@ class ForumApi
     /**
      * Operation getTopicsPagedWithHttpInfo
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
+     * @param  int $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
@@ -3279,7 +3279,7 @@ class ForumApi
      *
      * 
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
+     * @param  int $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
@@ -3306,7 +3306,7 @@ class ForumApi
      *
      * 
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
+     * @param  int $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
@@ -3362,7 +3362,7 @@ class ForumApi
     /**
      * Create request for operation 'getTopicsPaged'
      *
-     * @param  \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum $categoryFilter A category filter (required)
+     * @param  int $categoryFilter A category filter (required)
      * @param  int $group The group, if any. (required)
      * @param  int $page Zero paged page number (required)
      * @param  int $pageSize Unused (required)
