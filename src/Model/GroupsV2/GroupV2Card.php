@@ -67,7 +67,7 @@ class GroupV2Card implements \Bungie\Model\ModelInterface, ArrayAccess
         'memberCount' => 'int',
         'locale' => 'string',
         'membershipOption' => '\Bungie\Model\GroupsV2\MembershipOption',
-        'capabilities' => '\Bungie\Model\GroupsV2\Capabilities',
+        'capabilities' => 'int',
         'clanInfo' => '\Bungie\Model\GroupsV2\GroupV2ClanInfo',
         'avatarPath' => 'string',
         'theme' => 'string'
@@ -88,7 +88,7 @@ class GroupV2Card implements \Bungie\Model\ModelInterface, ArrayAccess
         'memberCount' => 'int32',
         'locale' => null,
         'membershipOption' => null,
-        'capabilities' => null,
+        'capabilities' => 'int32',
         'clanInfo' => null,
         'avatarPath' => null,
         'theme' => null
@@ -496,7 +496,7 @@ class GroupV2Card implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets capabilities
      *
-     * @return \Bungie\Model\GroupsV2\Capabilities|null
+     * @return int|null
      */
     public function getCapabilities()
     {
@@ -506,7 +506,7 @@ class GroupV2Card implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets capabilities
      *
-     * @param \Bungie\Model\GroupsV2\Capabilities|null $capabilities capabilities
+     * @param int|null $capabilities capabilities
      *
      * @return $this
      */

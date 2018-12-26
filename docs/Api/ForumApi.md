@@ -100,7 +100,7 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client(),
     $config
 );
-$categoryFilter = new \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum(); // \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum | The category filter.
+$categoryFilter = 56; // int | The category filter.
 $page = 56; // int | Zero base page
 $quickDate = new \Bungie\Model\Forum\ForumTopicsQuickDateEnum(); // \Bungie\Model\Forum\ForumTopicsQuickDateEnum | The date filter.
 $sort = new \Bungie\Model\Forum\ForumTopicsSortEnum(); // \Bungie\Model\Forum\ForumTopicsSortEnum | The sort mode.
@@ -119,7 +119,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryFilter** | [**\Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum**](../Model/.md)| The category filter. |
+ **categoryFilter** | **int**| The category filter. |
  **page** | **int**| Zero base page |
  **quickDate** | [**\Bungie\Model\Forum\ForumTopicsQuickDateEnum**](../Model/.md)| The date filter. |
  **sort** | [**\Bungie\Model\Forum\ForumTopicsSortEnum**](../Model/.md)| The sort mode. |
@@ -633,7 +633,7 @@ $apiInstance = new Bungie\Api\ForumApi(
     new GuzzleHttp\Client(),
     $config
 );
-$categoryFilter = new \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum(); // \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum | A category filter
+$categoryFilter = 56; // int | A category filter
 $group = 56; // int | The group, if any.
 $page = 56; // int | Zero paged page number
 $pageSize = 56; // int | Unused
@@ -655,7 +655,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryFilter** | [**\Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum**](../Model/.md)| A category filter |
+ **categoryFilter** | **int**| A category filter |
  **group** | **int**| The group, if any. |
  **page** | **int**| Zero paged page number |
  **pageSize** | **int**| Unused |

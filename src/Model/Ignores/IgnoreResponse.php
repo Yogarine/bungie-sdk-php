@@ -58,7 +58,7 @@ class IgnoreResponse implements \Bungie\Model\ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'isIgnored' => 'bool',
-        'ignoreFlags' => '\Bungie\Model\Ignores\IgnoreStatus'
+        'ignoreFlags' => 'int'
     ];
 
     /**
@@ -68,7 +68,7 @@ class IgnoreResponse implements \Bungie\Model\ModelInterface, ArrayAccess
       */
     protected static $openAPIFormats = [
         'isIgnored' => null,
-        'ignoreFlags' => null
+        'ignoreFlags' => 'int32'
     ];
 
     /**
@@ -237,7 +237,7 @@ class IgnoreResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets ignoreFlags
      *
-     * @return \Bungie\Model\Ignores\IgnoreStatus|null
+     * @return int|null
      */
     public function getIgnoreFlags()
     {
@@ -247,7 +247,7 @@ class IgnoreResponse implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets ignoreFlags
      *
-     * @param \Bungie\Model\Ignores\IgnoreStatus|null $ignoreFlags ignoreFlags
+     * @param int|null $ignoreFlags ignoreFlags
      *
      * @return $this
      */

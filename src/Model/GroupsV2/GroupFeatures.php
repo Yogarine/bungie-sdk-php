@@ -59,7 +59,7 @@ class GroupFeatures implements \Bungie\Model\ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'maximumMembers' => 'int',
         'maximumMembershipsOfGroupType' => 'int',
-        'capabilities' => '\Bungie\Model\GroupsV2\Capabilities',
+        'capabilities' => 'int',
         'membershipTypes' => '\Bungie\Model\BungieMembershipType[]',
         'invitePermissionOverride' => 'bool',
         'updateCulturePermissionOverride' => 'bool',
@@ -76,7 +76,7 @@ class GroupFeatures implements \Bungie\Model\ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'maximumMembers' => 'int32',
         'maximumMembershipsOfGroupType' => 'int32',
-        'capabilities' => null,
+        'capabilities' => 'int32',
         'membershipTypes' => null,
         'invitePermissionOverride' => null,
         'updateCulturePermissionOverride' => null,
@@ -303,7 +303,7 @@ class GroupFeatures implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Gets capabilities
      *
-     * @return \Bungie\Model\GroupsV2\Capabilities|null
+     * @return int|null
      */
     public function getCapabilities()
     {
@@ -313,7 +313,7 @@ class GroupFeatures implements \Bungie\Model\ModelInterface, ArrayAccess
     /**
      * Sets capabilities
      *
-     * @param \Bungie\Model\GroupsV2\Capabilities|null $capabilities capabilities
+     * @param int|null $capabilities capabilities
      *
      * @return $this
      */

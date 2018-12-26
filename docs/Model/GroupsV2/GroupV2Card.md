@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **memberCount** | **int** |  | [optional] 
 **locale** | **string** |  | [optional] 
 **membershipOption** | [**\Bungie\Model\GroupsV2\MembershipOption**](MembershipOption.md) |  | [optional] 
-**capabilities** | [**\Bungie\Model\GroupsV2\Capabilities**](Capabilities.md) |  | [optional] 
+**capabilities** | **int** |  | [optional] 
 **clanInfo** | [**\Bungie\Model\GroupsV2\GroupV2ClanInfo**](GroupV2ClanInfo.md) |  | [optional] 
 **avatarPath** | **string** |  | [optional] 
 **theme** | **string** |  | [optional] 

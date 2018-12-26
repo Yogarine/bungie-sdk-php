@@ -62,12 +62,12 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
         'itemHash' => 'int',
         'overrideStyleItemHash' => 'int',
         'quantity' => 'int',
-        'saleStatus' => '\Bungie\Model\Destiny\VendorItemStatus',
+        'saleStatus' => 'int',
         'costs' => '\Bungie\Model\Destiny\DestinyItemQuantity[]',
         'requiredUnlocks' => 'int[]',
         'unlockStatuses' => '\Bungie\Model\Destiny\DestinyUnlockStatus[]',
         'failureIndexes' => 'int[]',
-        'augments' => '\Bungie\Model\Destiny\DestinyVendorItemState',
+        'augments' => 'int',
         'overrideNextRefreshDate' => '\DateTime'
     ];
 
@@ -81,12 +81,12 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
         'itemHash' => 'uint32',
         'overrideStyleItemHash' => 'uint32',
         'quantity' => 'int32',
-        'saleStatus' => null,
+        'saleStatus' => 'int32',
         'costs' => null,
         'requiredUnlocks' => 'uint32',
         'unlockStatuses' => null,
         'failureIndexes' => 'int32',
-        'augments' => null,
+        'augments' => 'int32',
         'overrideNextRefreshDate' => 'date-time'
     ];
 
@@ -364,7 +364,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets saleStatus
      *
-     * @return \Bungie\Model\Destiny\VendorItemStatus|null
+     * @return int|null
      */
     public function getSaleStatus()
     {
@@ -374,7 +374,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets saleStatus
      *
-     * @param \Bungie\Model\Destiny\VendorItemStatus|null $saleStatus A flag indicating whether the requesting character can buy the item, and if not the reasons why the character can't buy it.
+     * @param int|null $saleStatus A flag indicating whether the requesting character can buy the item, and if not the reasons why the character can't buy it.
      *
      * @return $this
      */
@@ -484,7 +484,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Gets augments
      *
-     * @return \Bungie\Model\Destiny\DestinyVendorItemState|null
+     * @return int|null
      */
     public function getAugments()
     {
@@ -494,7 +494,7 @@ class DestinyVendorSaleItemComponent implements \Bungie\Model\ModelInterface, Ar
     /**
      * Sets augments
      *
-     * @param \Bungie\Model\Destiny\DestinyVendorItemState|null $augments A flags enumeration value representing the current state of any \"state modifiers\" on the item being sold. These are meant to correspond with some sort of visual indicator as to the augmentation: for instance, if an item is on sale or if you already own the item in question.  Determining how you want to represent these in your own app (or if you even want to) is an exercise left for the reader.
+     * @param int|null $augments A flags enumeration value representing the current state of any \"state modifiers\" on the item being sold. These are meant to correspond with some sort of visual indicator as to the augmentation: for instance, if an item is on sale or if you already own the item in question.  Determining how you want to represent these in your own app (or if you even want to) is an exercise left for the reader.
      *
      * @return $this
      */

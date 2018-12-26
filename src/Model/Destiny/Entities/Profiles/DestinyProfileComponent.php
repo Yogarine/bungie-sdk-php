@@ -60,7 +60,7 @@ class DestinyProfileComponent implements \Bungie\Model\ModelInterface, ArrayAcce
     protected static $openAPITypes = [
         'userInfo' => '\Bungie\Model\User\UserInfoCard',
         'dateLastPlayed' => '\DateTime',
-        'versionsOwned' => '\Bungie\Model\Destiny\DestinyGameVersions',
+        'versionsOwned' => 'int',
         'characterIds' => 'int[]'
     ];
 
@@ -72,7 +72,7 @@ class DestinyProfileComponent implements \Bungie\Model\ModelInterface, ArrayAcce
     protected static $openAPIFormats = [
         'userInfo' => null,
         'dateLastPlayed' => 'date-time',
-        'versionsOwned' => null,
+        'versionsOwned' => 'int32',
         'characterIds' => 'int64'
     ];
 
@@ -274,7 +274,7 @@ class DestinyProfileComponent implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Gets versionsOwned
      *
-     * @return \Bungie\Model\Destiny\DestinyGameVersions|null
+     * @return int|null
      */
     public function getVersionsOwned()
     {
@@ -284,7 +284,7 @@ class DestinyProfileComponent implements \Bungie\Model\ModelInterface, ArrayAcce
     /**
      * Sets versionsOwned
      *
-     * @param \Bungie\Model\Destiny\DestinyGameVersions|null $versionsOwned If you want to know what expansions they own, this will contain that data.
+     * @param int|null $versionsOwned If you want to know what expansions they own, this will contain that data.
      *
      * @return $this
      */

@@ -57,7 +57,7 @@ class DestinyRecordComponent implements \Bungie\Model\ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'state' => '\Bungie\Model\Destiny\DestinyRecordState',
+        'state' => 'int',
         'objectives' => '\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]'
     ];
 
@@ -67,7 +67,7 @@ class DestinyRecordComponent implements \Bungie\Model\ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'state' => null,
+        'state' => 'int32',
         'objectives' => null
     ];
 
@@ -213,7 +213,7 @@ class DestinyRecordComponent implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Gets state
      *
-     * @return \Bungie\Model\Destiny\DestinyRecordState|null
+     * @return int|null
      */
     public function getState()
     {
@@ -223,7 +223,7 @@ class DestinyRecordComponent implements \Bungie\Model\ModelInterface, ArrayAcces
     /**
      * Sets state
      *
-     * @param \Bungie\Model\Destiny\DestinyRecordState|null $state state
+     * @param int|null $state A Flags enumeration where each bit represents a possible state that a Record/Triumph can be in.
      *
      * @return $this
      */

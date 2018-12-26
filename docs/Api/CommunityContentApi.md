@@ -35,7 +35,7 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     new GuzzleHttp\Client(),
     $config
 );
-$mediaFilter = new \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum(); // \Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum | The type of media to get
+$mediaFilter = 56; // int | The type of media to get
 $page = 56; // int | Zero based page
 $sort = new \Bungie\Model\Forum\CommunityContentSortMode(); // \Bungie\Model\Forum\CommunityContentSortMode | The sort mode.
 
@@ -52,7 +52,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mediaFilter** | [**\Bungie\Model\Forum\ForumTopicsCategoryFiltersEnum**](../Model/.md)| The type of media to get |
+ **mediaFilter** | **int**| The type of media to get |
  **page** | **int**| Zero based page |
  **sort** | [**\Bungie\Model\Forum\CommunityContentSortMode**](../Model/.md)| The sort mode. |
 

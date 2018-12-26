@@ -58,11 +58,11 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'weaponPerformance' => '\Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepWeaponPerformances',
-        'impactEffects' => '\Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepImpactEffects',
-        'guardianAttributes' => '\Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepGuardianAttributes',
-        'lightAbilities' => '\Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepLightAbilities',
-        'damageTypes' => '\Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepDamageTypes'
+        'weaponPerformance' => 'int',
+        'impactEffects' => 'int',
+        'guardianAttributes' => 'int',
+        'lightAbilities' => 'int',
+        'damageTypes' => 'int'
     ];
 
     /**
@@ -71,11 +71,11 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'weaponPerformance' => null,
-        'impactEffects' => null,
-        'guardianAttributes' => null,
-        'lightAbilities' => null,
-        'damageTypes' => null
+        'weaponPerformance' => 'int32',
+        'impactEffects' => 'int32',
+        'guardianAttributes' => 'int32',
+        'lightAbilities' => 'int32',
+        'damageTypes' => 'int32'
     ];
 
     /**
@@ -232,7 +232,7 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets weaponPerformance
      *
-     * @return \Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepWeaponPerformances|null
+     * @return int|null
      */
     public function getWeaponPerformance()
     {
@@ -242,7 +242,7 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets weaponPerformance
      *
-     * @param \Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepWeaponPerformances|null $weaponPerformance weaponPerformance
+     * @param int|null $weaponPerformance weaponPerformance
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets impactEffects
      *
-     * @return \Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepImpactEffects|null
+     * @return int|null
      */
     public function getImpactEffects()
     {
@@ -266,7 +266,7 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets impactEffects
      *
-     * @param \Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepImpactEffects|null $impactEffects impactEffects
+     * @param int|null $impactEffects impactEffects
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets guardianAttributes
      *
-     * @return \Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepGuardianAttributes|null
+     * @return int|null
      */
     public function getGuardianAttributes()
     {
@@ -290,7 +290,7 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets guardianAttributes
      *
-     * @param \Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepGuardianAttributes|null $guardianAttributes guardianAttributes
+     * @param int|null $guardianAttributes guardianAttributes
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets lightAbilities
      *
-     * @return \Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepLightAbilities|null
+     * @return int|null
      */
     public function getLightAbilities()
     {
@@ -314,7 +314,7 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets lightAbilities
      *
-     * @param \Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepLightAbilities|null $lightAbilities lightAbilities
+     * @param int|null $lightAbilities lightAbilities
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
     /**
      * Gets damageTypes
      *
-     * @return \Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepDamageTypes|null
+     * @return int|null
      */
     public function getDamageTypes()
     {
@@ -338,7 +338,7 @@ class DestinyTalentNodeStepGroups implements \Bungie\Model\ModelInterface, Array
     /**
      * Sets damageTypes
      *
-     * @param \Bungie\Model\Destiny\Definitions\DestinyTalentNodeStepDamageTypes|null $damageTypes damageTypes
+     * @param int|null $damageTypes damageTypes
      *
      * @return $this
      */

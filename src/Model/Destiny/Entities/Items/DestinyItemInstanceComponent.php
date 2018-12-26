@@ -67,7 +67,7 @@ class DestinyItemInstanceComponent implements \Bungie\Model\ModelInterface, Arra
         'canEquip' => 'bool',
         'equipRequiredLevel' => 'int',
         'unlockHashesRequiredToEquip' => 'int[]',
-        'cannotEquipReason' => '\Bungie\Model\Destiny\EquipFailureReason'
+        'cannotEquipReason' => 'int'
     ];
 
     /**
@@ -85,7 +85,7 @@ class DestinyItemInstanceComponent implements \Bungie\Model\ModelInterface, Arra
         'canEquip' => null,
         'equipRequiredLevel' => 'int32',
         'unlockHashesRequiredToEquip' => 'uint32',
-        'cannotEquipReason' => null
+        'cannotEquipReason' => 'int32'
     ];
 
     /**
@@ -478,7 +478,7 @@ class DestinyItemInstanceComponent implements \Bungie\Model\ModelInterface, Arra
     /**
      * Gets cannotEquipReason
      *
-     * @return \Bungie\Model\Destiny\EquipFailureReason|null
+     * @return int|null
      */
     public function getCannotEquipReason()
     {
@@ -488,7 +488,7 @@ class DestinyItemInstanceComponent implements \Bungie\Model\ModelInterface, Arra
     /**
      * Sets cannotEquipReason
      *
-     * @param \Bungie\Model\Destiny\EquipFailureReason|null $cannotEquipReason If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn't equip the item. You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel.
+     * @param int|null $cannotEquipReason If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn't equip the item. You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel.
      *
      * @return $this
      */
