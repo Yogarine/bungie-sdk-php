@@ -37,7 +37,7 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
 );
 $mediaFilter = 56; // int | The type of media to get
 $page = 56; // int | Zero based page
-$sort = new \Bungie\Model\Forum\CommunityContentSortMode(); // \Bungie\Model\Forum\CommunityContentSortMode | The sort mode.
+$sort = 56; // int | The sort mode.
 
 try {
     $result = $apiInstance->getCommunityContent($mediaFilter, $page, $sort);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mediaFilter** | **int**| The type of media to get |
  **page** | **int**| Zero based page |
- **sort** | [**\Bungie\Model\Forum\CommunityContentSortMode**](../Model/.md)| The sort mode. |
+ **sort** | **int**| The sort mode. |
 
 ### Return type
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommunityLiveStatuses**
-> \Bungie\Model\InlineResponse20060 getCommunityLiveStatuses($page, $partnershipType, $sort, $modeHash, $streamLocale)
+> \Bungie\Model\InlineResponse20061 getCommunityLiveStatuses($page, $partnershipType, $sort, $modeHash, $streamLocale)
 
 
 
@@ -95,8 +95,8 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     $config
 );
 $page = 56; // int | Zero based page.
-$partnershipType = new \Bungie\Model\Partnerships\PartnershipType(); // \Bungie\Model\Partnerships\PartnershipType | The type of partnership for which the status should be returned.
-$sort = new \Bungie\Model\Community\CommunityStatusSort(); // \Bungie\Model\Community\CommunityStatusSort | The sort mode.
+$partnershipType = 56; // int | The type of partnership for which the status should be returned.
+$sort = 56; // int | The sort mode.
 $modeHash = 56; // int | The hash of the Activity Mode for which streams should be retrieved. Don't pass it in or pass 0 to not filter by mode.
 $streamLocale = 'streamLocale_example'; // string | The locale for streams you'd like to see. Don't pass this to fall back on your BNet locale. Pass 'ALL' to not filter by locale.
 
@@ -114,14 +114,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Zero based page. |
- **partnershipType** | [**\Bungie\Model\Partnerships\PartnershipType**](../Model/.md)| The type of partnership for which the status should be returned. |
- **sort** | [**\Bungie\Model\Community\CommunityStatusSort**](../Model/.md)| The sort mode. |
+ **partnershipType** | **int**| The type of partnership for which the status should be returned. |
+ **sort** | **int**| The sort mode. |
  **modeHash** | **int**| The hash of the Activity Mode for which streams should be retrieved. Don&#39;t pass it in or pass 0 to not filter by mode. | [optional]
  **streamLocale** | **string**| The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. | [optional]
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
+[**\Bungie\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommunityLiveStatusesForClanmates**
-> \Bungie\Model\InlineResponse20060 getCommunityLiveStatusesForClanmates($page, $partnershipType, $sort)
+> \Bungie\Model\InlineResponse20061 getCommunityLiveStatusesForClanmates($page, $partnershipType, $sort)
 
 
 
@@ -158,8 +158,8 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     $config
 );
 $page = 56; // int | Zero based page.
-$partnershipType = new \Bungie\Model\Partnerships\PartnershipType(); // \Bungie\Model\Partnerships\PartnershipType | The type of partnership for which the status should be returned.
-$sort = new \Bungie\Model\Community\CommunityStatusSort(); // \Bungie\Model\Community\CommunityStatusSort | The sort mode.
+$partnershipType = 56; // int | The type of partnership for which the status should be returned.
+$sort = 56; // int | The sort mode.
 
 try {
     $result = $apiInstance->getCommunityLiveStatusesForClanmates($page, $partnershipType, $sort);
@@ -175,12 +175,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Zero based page. |
- **partnershipType** | [**\Bungie\Model\Partnerships\PartnershipType**](../Model/.md)| The type of partnership for which the status should be returned. |
- **sort** | [**\Bungie\Model\Community\CommunityStatusSort**](../Model/.md)| The sort mode. |
+ **partnershipType** | **int**| The type of partnership for which the status should be returned. |
+ **sort** | **int**| The sort mode. |
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
+[**\Bungie\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommunityLiveStatusesForFriends**
-> \Bungie\Model\InlineResponse20060 getCommunityLiveStatusesForFriends($page, $partnershipType, $sort)
+> \Bungie\Model\InlineResponse20061 getCommunityLiveStatusesForFriends($page, $partnershipType, $sort)
 
 
 
@@ -217,8 +217,8 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     $config
 );
 $page = 56; // int | Zero based page.
-$partnershipType = new \Bungie\Model\Partnerships\PartnershipType(); // \Bungie\Model\Partnerships\PartnershipType | The type of partnership for which the status should be returned.
-$sort = new \Bungie\Model\Community\CommunityStatusSort(); // \Bungie\Model\Community\CommunityStatusSort | The sort mode.
+$partnershipType = 56; // int | The type of partnership for which the status should be returned.
+$sort = 56; // int | The sort mode.
 
 try {
     $result = $apiInstance->getCommunityLiveStatusesForFriends($page, $partnershipType, $sort);
@@ -234,12 +234,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Zero based page. |
- **partnershipType** | [**\Bungie\Model\Partnerships\PartnershipType**](../Model/.md)| The type of partnership for which the status should be returned. |
- **sort** | [**\Bungie\Model\Community\CommunityStatusSort**](../Model/.md)| The sort mode. |
+ **partnershipType** | **int**| The type of partnership for which the status should be returned. |
+ **sort** | **int**| The sort mode. |
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
+[**\Bungie\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getFeaturedCommunityLiveStatuses**
-> \Bungie\Model\InlineResponse20060 getFeaturedCommunityLiveStatuses($page, $partnershipType, $sort, $streamLocale)
+> \Bungie\Model\InlineResponse20061 getFeaturedCommunityLiveStatuses($page, $partnershipType, $sort, $streamLocale)
 
 
 
@@ -276,8 +276,8 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     $config
 );
 $page = 56; // int | Zero based page.
-$partnershipType = new \Bungie\Model\Partnerships\PartnershipType(); // \Bungie\Model\Partnerships\PartnershipType | The type of partnership for which the status should be returned.
-$sort = new \Bungie\Model\Community\CommunityStatusSort(); // \Bungie\Model\Community\CommunityStatusSort | The sort mode.
+$partnershipType = 56; // int | The type of partnership for which the status should be returned.
+$sort = 56; // int | The sort mode.
 $streamLocale = 'streamLocale_example'; // string | The locale for streams you'd like to see. Don't pass this to fall back on your BNet locale. Pass 'ALL' to not filter by locale.
 
 try {
@@ -294,13 +294,13 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**| Zero based page. |
- **partnershipType** | [**\Bungie\Model\Partnerships\PartnershipType**](../Model/.md)| The type of partnership for which the status should be returned. |
- **sort** | [**\Bungie\Model\Community\CommunityStatusSort**](../Model/.md)| The sort mode. |
+ **partnershipType** | **int**| The type of partnership for which the status should be returned. |
+ **sort** | **int**| The sort mode. |
  **streamLocale** | **string**| The locale for streams you&#39;d like to see. Don&#39;t pass this to fall back on your BNet locale. Pass &#39;ALL&#39; to not filter by locale. | [optional]
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
+[**\Bungie\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStreamingStatusForMember**
-> \Bungie\Model\InlineResponse20061 getStreamingStatusForMember($membershipId, $membershipType, $partnershipType)
+> \Bungie\Model\InlineResponse20062 getStreamingStatusForMember($membershipId, $membershipType, $partnershipType)
 
 
 
@@ -337,8 +337,8 @@ $apiInstance = new Bungie\Api\CommunityContentApi(
     $config
 );
 $membershipId = 56; // int | The membershipId related to that type.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The type of account for which info will be extracted.
-$partnershipType = new \Bungie\Model\Partnerships\PartnershipType(); // \Bungie\Model\Partnerships\PartnershipType | The type of partnership for which info will be extracted.
+$membershipType = 56; // int | The type of account for which info will be extracted.
+$partnershipType = 56; // int | The type of partnership for which info will be extracted.
 
 try {
     $result = $apiInstance->getStreamingStatusForMember($membershipId, $membershipType, $partnershipType);
@@ -354,12 +354,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **membershipId** | **int**| The membershipId related to that type. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| The type of account for which info will be extracted. |
- **partnershipType** | [**\Bungie\Model\Partnerships\PartnershipType**](../Model/.md)| The type of partnership for which info will be extracted. |
+ **membershipType** | **int**| The type of account for which info will be extracted. |
+ **partnershipType** | **int**| The type of partnership for which info will be extracted. |
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
+[**\Bungie\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
 
 ### Authorization
 

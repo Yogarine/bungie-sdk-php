@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**potentialStatus** | [**\Bungie\Model\GroupsV2\GroupPotentialMemberStatus**](GroupPotentialMemberStatus.md) |  | [optional] 
+**potentialStatus** | **int** |  | [optional] 
 **groupId** | **int** |  | [optional] 
 **destinyUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
 **bungieNetUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 

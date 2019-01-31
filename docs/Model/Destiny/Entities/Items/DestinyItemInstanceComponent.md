@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**damageType** | [**\Bungie\Model\Destiny\DamageType**](DamageType.md) | If the item has a damage type, this is the item&#39;s current damage type. | [optional] 
+**damageType** | **int** | If the item has a damage type, this is the item&#39;s current damage type. | [optional] 
 **damageTypeHash** | **int** | The current damage type&#39;s hash, so you can look up localized info and icons for it. | [optional] 
 **primaryStat** | [**\Bungie\Model\Destiny\DestinyStat**](DestinyStat.md) | The item stat that we consider to be \&quot;primary\&quot; for the item. For instance, this would be \&quot;Attack\&quot; for Weapons or \&quot;Defense\&quot; for armor. | [optional] 
 **itemLevel** | **int** | The Item&#39;s \&quot;Level\&quot; has the most significant bearing on its stats, such as Light and Power. | [optional] 

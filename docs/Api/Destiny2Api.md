@@ -29,6 +29,7 @@ Method | HTTP request | Description
 [**getProfile**](Destiny2Api.md#getProfile) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/ | 
 [**getPublicMilestoneContent**](Destiny2Api.md#getPublicMilestoneContent) | **GET** /Destiny2/Milestones/{milestoneHash}/Content/ | 
 [**getPublicMilestones**](Destiny2Api.md#getPublicMilestones) | **GET** /Destiny2/Milestones/ | 
+[**getPublicVendors**](Destiny2Api.md#getPublicVendors) | **GET** /Destiny2//Vendors/ | 
 [**getUniqueWeaponHistory**](Destiny2Api.md#getUniqueWeaponHistory) | **GET** /Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/ | 
 [**getVendor**](Destiny2Api.md#getVendor) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/{vendorHash}/ | 
 [**getVendors**](Destiny2Api.md#getVendors) | **GET** /Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/ | 
@@ -42,7 +43,7 @@ Method | HTTP request | Description
 
 
 # **awaGetActionToken**
-> \Bungie\Model\InlineResponse20059 awaGetActionToken($correlationId)
+> \Bungie\Model\InlineResponse20060 awaGetActionToken($correlationId)
 
 
 
@@ -85,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
+[**\Bungie\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
 
 ### Authorization
 
@@ -99,7 +100,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **awaInitializeRequest**
-> \Bungie\Model\InlineResponse20058 awaInitializeRequest($awaPermissionRequested)
+> \Bungie\Model\InlineResponse20059 awaInitializeRequest($awaPermissionRequested)
 
 
 
@@ -142,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+[**\Bungie\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
 
 ### Authorization
 
@@ -268,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **equipItems**
-> \Bungie\Model\InlineResponse20044 equipItems($destinyItemSetActionRequest)
+> \Bungie\Model\InlineResponse20045 equipItems($destinyItemSetActionRequest)
 
 
 
@@ -311,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
+[**\Bungie\Model\InlineResponse20045**](../Model/InlineResponse20045.md)
 
 ### Authorization
 
@@ -325,7 +326,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getActivityHistory**
-> \Bungie\Model\InlineResponse20053 getActivityHistory($characterId, $destinyMembershipId, $membershipType, $count, $mode, $page)
+> \Bungie\Model\InlineResponse20054 getActivityHistory($characterId, $destinyMembershipId, $membershipType, $count, $mode, $page)
 
 
 
@@ -349,9 +350,9 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The id of the character to retrieve.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
 $count = 56; // int | Number of rows to return
-$mode = new \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType(); // \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType | A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation.
+$mode = 56; // int | A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation.
 $page = 56; // int | Page number to return, starting with 0.
 
 try {
@@ -369,14 +370,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The id of the character to retrieve. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
  **count** | **int**| Number of rows to return | [optional]
- **mode** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType**](../Model/.md)| A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. | [optional]
+ **mode** | **int**| A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation. | [optional]
  **page** | **int**| Page number to return, starting with 0. | [optional]
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
+[**\Bungie\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
 
 ### Authorization
 
@@ -414,8 +415,8 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | ID of the character.
 $destinyMembershipId = 56; // int | Destiny membership ID.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
+$components = array(56); // int[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
     $result = $apiInstance->getCharacter($characterId, $destinyMembershipId, $membershipType, $components);
@@ -432,8 +433,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| ID of the character. |
  **destinyMembershipId** | **int**| Destiny membership ID. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **components** | [**\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **components** | [**int[]**](../Model/int.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -451,7 +452,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getClanAggregateStats**
-> \Bungie\Model\InlineResponse20049 getClanAggregateStats($groupId, $modes)
+> \Bungie\Model\InlineResponse20050 getClanAggregateStats($groupId, $modes)
 
 
 
@@ -494,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
+[**\Bungie\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
 
 ### Authorization
 
@@ -508,7 +509,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getClanLeaderboards**
-> \Bungie\Model\InlineResponse20048 getClanLeaderboards($groupId, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20049 getClanLeaderboards($groupId, $maxtop, $modes, $statid)
 
 
 
@@ -555,7 +556,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
+[**\Bungie\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
 
 ### Authorization
 
@@ -624,7 +625,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCollectibleNodeDetails**
-> \Bungie\Model\InlineResponse20043 getCollectibleNodeDetails($characterId, $collectiblePresentationNodeHash, $destinyMembershipId, $membershipType, $components)
+> \Bungie\Model\InlineResponse20044 getCollectibleNodeDetails($characterId, $collectiblePresentationNodeHash, $destinyMembershipId, $membershipType, $components)
 
 
 
@@ -649,8 +650,8 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 $characterId = 56; // int | The Destiny Character ID of the character for whom we're getting collectible detail info.
 $collectiblePresentationNodeHash = 56; // int | The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node.
 $destinyMembershipId = 56; // int | Destiny membership ID of another user. You may be denied.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
+$components = array(56); // int[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
     $result = $apiInstance->getCollectibleNodeDetails($characterId, $collectiblePresentationNodeHash, $destinyMembershipId, $membershipType, $components);
@@ -668,12 +669,12 @@ Name | Type | Description  | Notes
  **characterId** | **int**| The Destiny Character ID of the character for whom we&#39;re getting collectible detail info. |
  **collectiblePresentationNodeHash** | **int**| The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. |
  **destinyMembershipId** | **int**| Destiny membership ID of another user. You may be denied. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **components** | [**\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **components** | [**int[]**](../Model/int.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
+[**\Bungie\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
 
 ### Authorization
 
@@ -687,7 +688,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDestinyAggregateActivityStats**
-> \Bungie\Model\InlineResponse20055 getDestinyAggregateActivityStats($characterId, $destinyMembershipId, $membershipType)
+> \Bungie\Model\InlineResponse20056 getDestinyAggregateActivityStats($characterId, $destinyMembershipId, $membershipType)
 
 
 
@@ -711,7 +712,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The specific character whose activities should be returned.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
 
 try {
     $result = $apiInstance->getDestinyAggregateActivityStats($characterId, $destinyMembershipId, $membershipType);
@@ -728,11 +729,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The specific character whose activities should be returned. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
+[**\Bungie\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
 
 ### Authorization
 
@@ -854,7 +855,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getHistoricalStats**
-> \Bungie\Model\InlineResponse20051 getHistoricalStats($characterId, $destinyMembershipId, $membershipType, $dayend, $daystart, $groups, $modes, $periodType)
+> \Bungie\Model\InlineResponse20052 getHistoricalStats($characterId, $destinyMembershipId, $membershipType, $dayend, $daystart, $groups, $modes, $periodType)
 
 
 
@@ -878,12 +879,12 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
 $dayend = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Last day to return when daily stats are requested. Use the format YYYY-MM-DD.
 $daystart = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | First day to return when daily stats are requested. Use the format YYYY-MM-DD
-$groups = array(new \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType()); // \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] | Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals
-$modes = array(new \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType()); // \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[] | Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
-$periodType = new \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType(); // \Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType | Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity
+$groups = array(56); // int[] | Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals
+$modes = array(56); // int[] | Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+$periodType = 56; // int | Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity
 
 try {
     $result = $apiInstance->getHistoricalStats($characterId, $destinyMembershipId, $membershipType, $dayend, $daystart, $groups, $modes, $periodType);
@@ -900,16 +901,16 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
  **dayend** | **\DateTime**| Last day to return when daily stats are requested. Use the format YYYY-MM-DD. | [optional]
  **daystart** | **\DateTime**| First day to return when daily stats are requested. Use the format YYYY-MM-DD | [optional]
- **groups** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[]**](../Model/\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType.md)| Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals | [optional]
- **modes** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType[]**](../Model/\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyActivityModeType.md)| Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
- **periodType** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\PeriodType**](../Model/.md)| Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity | [optional]
+ **groups** | [**int[]**](../Model/int.md)| Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals | [optional]
+ **modes** | [**int[]**](../Model/int.md)| Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
+ **periodType** | **int**| Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity | [optional]
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
+[**\Bungie\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
 
 ### Authorization
 
@@ -923,7 +924,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getHistoricalStatsDefinition**
-> \Bungie\Model\InlineResponse20047 getHistoricalStatsDefinition()
+> \Bungie\Model\InlineResponse20048 getHistoricalStatsDefinition()
 
 
 
@@ -960,7 +961,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
+[**\Bungie\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
 
 ### Authorization
 
@@ -974,7 +975,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getHistoricalStatsForAccount**
-> \Bungie\Model\InlineResponse20052 getHistoricalStatsForAccount($destinyMembershipId, $membershipType, $groups)
+> \Bungie\Model\InlineResponse20053 getHistoricalStatsForAccount($destinyMembershipId, $membershipType, $groups)
 
 
 
@@ -997,8 +998,8 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$groups = array(new \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType()); // \Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[] | Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
+$groups = array(56); // int[] | Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals.
 
 try {
     $result = $apiInstance->getHistoricalStatsForAccount($destinyMembershipId, $membershipType, $groups);
@@ -1014,12 +1015,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **groups** | [**\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType[]**](../Model/\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyStatsGroupType.md)| Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. | [optional]
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **groups** | [**int[]**](../Model/int.md)| Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals. | [optional]
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
+[**\Bungie\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
 
 ### Authorization
 
@@ -1057,8 +1058,8 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $destinyMembershipId = 56; // int | The membership ID of the destiny profile.
 $itemInstanceId = 56; // int | The Instance ID of the destiny item.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
+$components = array(56); // int[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
     $result = $apiInstance->getItem($destinyMembershipId, $itemInstanceId, $membershipType, $components);
@@ -1075,8 +1076,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| The membership ID of the destiny profile. |
  **itemInstanceId** | **int**| The Instance ID of the destiny item. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **components** | [**\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **components** | [**int[]**](../Model/int.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -1094,7 +1095,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLeaderboards**
-> \Bungie\Model\InlineResponse20048 getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20049 getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -1117,7 +1118,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
@@ -1136,14 +1137,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
  **maxtop** | **int**| Maximum number of top players to return. Use a large number to get entire leaderboard. | [optional]
  **modes** | **string**| List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
  **statid** | **string**| ID of stat to return rather than returning all Leaderboard stats. | [optional]
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
+[**\Bungie\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
 
 ### Authorization
 
@@ -1157,7 +1158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLeaderboardsForCharacter**
-> \Bungie\Model\InlineResponse20048 getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20049 getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -1181,7 +1182,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The specific character to build the leaderboard around for the provided Destiny Membership.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
 $maxtop = 56; // int | Maximum number of top players to return. Use a large number to get entire leaderboard.
 $modes = 'modes_example'; // string | List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $statid = 'statid_example'; // string | ID of stat to return rather than returning all Leaderboard stats.
@@ -1201,14 +1202,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The specific character to build the leaderboard around for the provided Destiny Membership. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
  **maxtop** | **int**| Maximum number of top players to return. Use a large number to get entire leaderboard. | [optional]
  **modes** | **string**| List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
  **statid** | **string**| ID of stat to return rather than returning all Leaderboard stats. | [optional]
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
+[**\Bungie\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
 
 ### Authorization
 
@@ -1245,7 +1246,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $membershipId = 56; // int | The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don't pass us a PSN membership ID and the XBox membership type, it's not going to work!
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The type for the membership whose linked Destiny accounts you want returned.
+$membershipType = 56; // int | The type for the membership whose linked Destiny accounts you want returned.
 
 try {
     $result = $apiInstance->getLinkedProfiles($membershipId, $membershipType);
@@ -1261,7 +1262,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **membershipId** | **int**| The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don&#39;t pass us a PSN membership ID and the XBox membership type, it&#39;s not going to work! |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| The type for the membership whose linked Destiny accounts you want returned. |
+ **membershipType** | **int**| The type for the membership whose linked Destiny accounts you want returned. |
 
 ### Return type
 
@@ -1279,7 +1280,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPostGameCarnageReport**
-> \Bungie\Model\InlineResponse20046 getPostGameCarnageReport($activityId)
+> \Bungie\Model\InlineResponse20047 getPostGameCarnageReport($activityId)
 
 
 
@@ -1320,7 +1321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
+[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 
@@ -1357,8 +1358,8 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $destinyMembershipId = 56; // int | Destiny membership ID.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
+$components = array(56); // int[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
     $result = $apiInstance->getProfile($destinyMembershipId, $membershipType, $components);
@@ -1374,8 +1375,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **destinyMembershipId** | **int**| Destiny membership ID. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **components** | [**\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **components** | [**int[]**](../Model/int.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -1393,7 +1394,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPublicMilestoneContent**
-> \Bungie\Model\InlineResponse20056 getPublicMilestoneContent($milestoneHash)
+> \Bungie\Model\InlineResponse20057 getPublicMilestoneContent($milestoneHash)
 
 
 
@@ -1434,7 +1435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
+[**\Bungie\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
 
 ### Authorization
 
@@ -1448,7 +1449,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPublicMilestones**
-> \Bungie\Model\InlineResponse20057 getPublicMilestones()
+> \Bungie\Model\InlineResponse20058 getPublicMilestones()
 
 
 
@@ -1485,7 +1486,62 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
+[**\Bungie\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getPublicVendors**
+> \Bungie\Model\InlineResponse20043 getPublicVendors($components)
+
+
+
+Get items available from vendors where the vendors have items for sale that are common for everyone. If any portion of the Vendor's available inventory is character or account specific, we will be unable to return their data from this endpoint due to the way that available inventory is computed. As I am often guilty of saying: 'It's a long story...'
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+$apiInstance = new Bungie\Api\Destiny2Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$components = array(56); // int[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+
+try {
+    $result = $apiInstance->getPublicVendors($components);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling Destiny2Api->getPublicVendors: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **components** | [**int[]**](../Model/int.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+
+### Return type
+
+[**\Bungie\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
 
 ### Authorization
 
@@ -1499,7 +1555,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUniqueWeaponHistory**
-> \Bungie\Model\InlineResponse20054 getUniqueWeaponHistory($characterId, $destinyMembershipId, $membershipType)
+> \Bungie\Model\InlineResponse20055 getUniqueWeaponHistory($characterId, $destinyMembershipId, $membershipType)
 
 
 
@@ -1523,7 +1579,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The id of the character to retrieve.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
 
 try {
     $result = $apiInstance->getUniqueWeaponHistory($characterId, $destinyMembershipId, $membershipType);
@@ -1540,11 +1596,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The id of the character to retrieve. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
+[**\Bungie\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
 
 ### Authorization
 
@@ -1582,9 +1638,9 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The Destiny Character ID of the character for whom we're getting vendor info.
 $destinyMembershipId = 56; // int | Destiny membership ID of another user. You may be denied.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
 $vendorHash = 56; // int | The Hash identifier of the Vendor to be returned.
-$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$components = array(56); // int[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
     $result = $apiInstance->getVendor($characterId, $destinyMembershipId, $membershipType, $vendorHash, $components);
@@ -1601,9 +1657,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The Destiny Character ID of the character for whom we&#39;re getting vendor info. |
  **destinyMembershipId** | **int**| Destiny membership ID of another user. You may be denied. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
  **vendorHash** | **int**| The Hash identifier of the Vendor to be returned. |
- **components** | [**\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **components** | [**int[]**](../Model/int.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -1645,8 +1701,8 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $characterId = 56; // int | The Destiny Character ID of the character for whom we're getting vendor info.
 $destinyMembershipId = 56; // int | Destiny membership ID of another user. You may be denied.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type.
-$components = array(new \Bungie\Model\Destiny\DestinyComponentType()); // \Bungie\Model\Destiny\DestinyComponentType[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+$membershipType = 56; // int | A valid non-BungieNet membership type.
+$components = array(56); // int[] | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
 
 try {
     $result = $apiInstance->getVendors($characterId, $destinyMembershipId, $membershipType, $components);
@@ -1663,8 +1719,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int**| The Destiny Character ID of the character for whom we&#39;re getting vendor info. |
  **destinyMembershipId** | **int**| Destiny membership ID of another user. You may be denied. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type. |
- **components** | [**\Bungie\Model\Destiny\DestinyComponentType[]**](../Model/\Bungie\Model\Destiny\DestinyComponentType.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
+ **membershipType** | **int**| A valid non-BungieNet membership type. |
+ **components** | [**int[]**](../Model/int.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional]
 
 ### Return type
 
@@ -1682,7 +1738,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **insertSocketPlug**
-> \Bungie\Model\InlineResponse20045 insertSocketPlug($destinyInsertPlugsActionRequest)
+> \Bungie\Model\InlineResponse20046 insertSocketPlug($destinyInsertPlugsActionRequest)
 
 
 
@@ -1725,7 +1781,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20045**](../Model/InlineResponse20045.md)
+[**\Bungie\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
 
 ### Authorization
 
@@ -1855,7 +1911,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchDestinyEntities**
-> \Bungie\Model\InlineResponse20050 searchDestinyEntities($searchTerm, $type, $page)
+> \Bungie\Model\InlineResponse20051 searchDestinyEntities($searchTerm, $type, $page)
 
 
 
@@ -1900,7 +1956,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
+[**\Bungie\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
 
 ### Authorization
 
@@ -1937,7 +1993,7 @@ $apiInstance = new Bungie\Api\Destiny2Api(
     $config
 );
 $displayName = 'displayName_example'; // string | The full gamertag or PSN id of the player. Spaces and case are ignored.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | A valid non-BungieNet membership type, or All.
+$membershipType = 56; // int | A valid non-BungieNet membership type, or All.
 
 try {
     $result = $apiInstance->searchDestinyPlayer($displayName, $membershipType);
@@ -1953,7 +2009,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **displayName** | **string**| The full gamertag or PSN id of the player. Spaces and case are ignored. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| A valid non-BungieNet membership type, or All. |
+ **membershipType** | **int**| A valid non-BungieNet membership type, or All. |
 
 ### Return type
 

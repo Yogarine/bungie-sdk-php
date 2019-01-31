@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **groupId** | **int** |  | [optional] 
 **creationDate** | **\DateTime** |  | [optional] 
-**resolveState** | [**\Bungie\Model\GroupsV2\GroupApplicationResolveState**](GroupApplicationResolveState.md) |  | [optional] 
+**resolveState** | **int** |  | [optional] 
 **resolveDate** | **\DateTime** |  | [optional] 
 **resolvedByMembershipId** | **int** |  | [optional] 
 **requestMessage** | **string** |  | [optional] 

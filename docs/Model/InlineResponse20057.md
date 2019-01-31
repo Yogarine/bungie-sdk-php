@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**map[string,\Bungie\Model\Destiny\Milestones\DestinyPublicMilestone]**](DestinyPublicMilestone.md) |  | [optional] 
-**errorCode** | [**\Bungie\Model\Exceptions\PlatformErrorCodes**](PlatformErrorCodes.md) |  | [optional] 
+**response** | [**\Bungie\Model\Destiny\Milestones\DestinyMilestoneContent**](DestinyMilestoneContent.md) |  | [optional] 
+**errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 
 **message** | **string** |  | [optional] 

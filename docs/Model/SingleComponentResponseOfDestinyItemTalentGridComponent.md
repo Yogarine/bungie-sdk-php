@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**\Bungie\Model\Destiny\Entities\Items\DestinyItemTalentGridComponent**](DestinyItemTalentGridComponent.md) |  | [optional] 
-**privacy** | [**\Bungie\Model\Components\ComponentPrivacySetting**](ComponentPrivacySetting.md) |  | [optional] 
+**privacy** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

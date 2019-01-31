@@ -102,8 +102,8 @@ $apiInstance = new Bungie\Api\ForumApi(
 );
 $categoryFilter = 56; // int | The category filter.
 $page = 56; // int | Zero base page
-$quickDate = new \Bungie\Model\Forum\ForumTopicsQuickDateEnum(); // \Bungie\Model\Forum\ForumTopicsQuickDateEnum | The date filter.
-$sort = new \Bungie\Model\Forum\ForumTopicsSortEnum(); // \Bungie\Model\Forum\ForumTopicsSortEnum | The sort mode.
+$quickDate = 56; // int | The date filter.
+$sort = 56; // int | The sort mode.
 $locales = 'locales_example'; // string | Comma seperated list of locales posts must match to return in the result list. Default 'en'
 
 try {
@@ -121,8 +121,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **categoryFilter** | **int**| The category filter. |
  **page** | **int**| Zero base page |
- **quickDate** | [**\Bungie\Model\Forum\ForumTopicsQuickDateEnum**](../Model/.md)| The date filter. |
- **sort** | [**\Bungie\Model\Forum\ForumTopicsSortEnum**](../Model/.md)| The sort mode. |
+ **quickDate** | **int**| The date filter. |
+ **sort** | **int**| The sort mode. |
  **locales** | **string**| Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; | [optional]
 
 ### Return type
@@ -393,7 +393,7 @@ $pageSize = 56; // int |
 $parentPostId = 56; // int | 
 $replySize = 56; // int | 
 $rootThreadMode = True; // bool | 
-$sortMode = new \Bungie\Model\Forum\ForumPostSortEnum(); // \Bungie\Model\Forum\ForumPostSortEnum | 
+$sortMode = 56; // int | 
 $showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
  **parentPostId** | **int**|  |
  **replySize** | **int**|  |
  **rootThreadMode** | **bool**|  |
- **sortMode** | [**\Bungie\Model\Forum\ForumPostSortEnum**](../Model/.md)|  |
+ **sortMode** | **int**|  |
  **showbanned** | **string**| If this value is not null or empty, banned posts are requested to be returned | [optional]
 
 ### Return type
@@ -461,7 +461,7 @@ $page = 56; // int |
 $pageSize = 56; // int | 
 $replySize = 56; // int | 
 $rootThreadMode = True; // bool | 
-$sortMode = new \Bungie\Model\Forum\ForumPostSortEnum(); // \Bungie\Model\Forum\ForumPostSortEnum | 
+$sortMode = 56; // int | 
 $showbanned = 'showbanned_example'; // string | If this value is not null or empty, banned posts are requested to be returned
 
 try {
@@ -482,7 +482,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  |
  **replySize** | **int**|  |
  **rootThreadMode** | **bool**|  |
- **sortMode** | [**\Bungie\Model\Forum\ForumPostSortEnum**](../Model/.md)|  |
+ **sortMode** | **int**|  |
  **showbanned** | **string**| If this value is not null or empty, banned posts are requested to be returned | [optional]
 
 ### Return type
@@ -637,8 +637,8 @@ $categoryFilter = 56; // int | A category filter
 $group = 56; // int | The group, if any.
 $page = 56; // int | Zero paged page number
 $pageSize = 56; // int | Unused
-$quickDate = new \Bungie\Model\Forum\ForumTopicsQuickDateEnum(); // \Bungie\Model\Forum\ForumTopicsQuickDateEnum | A date filter.
-$sort = new \Bungie\Model\Forum\ForumTopicsSortEnum(); // \Bungie\Model\Forum\ForumTopicsSortEnum | The sort mode.
+$quickDate = 56; // int | A date filter.
+$sort = 56; // int | The sort mode.
 $locales = 'locales_example'; // string | Comma seperated list of locales posts must match to return in the result list. Default 'en'
 $tagstring = 'tagstring_example'; // string | The tags to search, if any.
 
@@ -659,8 +659,8 @@ Name | Type | Description  | Notes
  **group** | **int**| The group, if any. |
  **page** | **int**| Zero paged page number |
  **pageSize** | **int**| Unused |
- **quickDate** | [**\Bungie\Model\Forum\ForumTopicsQuickDateEnum**](../Model/.md)| A date filter. |
- **sort** | [**\Bungie\Model\Forum\ForumTopicsSortEnum**](../Model/.md)| The sort mode. |
+ **quickDate** | **int**| A date filter. |
+ **sort** | **int**| The sort mode. |
  **locales** | **string**| Comma seperated list of locales posts must match to return in the result list. Default &#39;en&#39; | [optional]
  **tagstring** | **string**| The tags to search, if any. | [optional]
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**partnerType** | [**\Bungie\Model\Partnerships\PartnershipType**](PartnershipType.md) |  | [optional] 
+**partnerType** | **int** |  | [optional] 
 **identifier** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **icon** | **string** |  | [optional] 

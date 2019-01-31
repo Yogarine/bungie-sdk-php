@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**memberType** | [**\Bungie\Model\GroupsV2\RuntimeGroupMemberType**](RuntimeGroupMemberType.md) |  | [optional] 
+**memberType** | **int** |  | [optional] 
 **isOnline** | **bool** |  | [optional] 
 **groupId** | **int** |  | [optional] 
 **destinyUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 

@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **topicId** | **int** |  | [optional] 
 **microphoneRequired** | **bool** |  | [optional] 
-**intensity** | [**\Bungie\Model\Forum\ForumRecruitmentIntensityLabel**](ForumRecruitmentIntensityLabel.md) |  | [optional] 
-**tone** | [**\Bungie\Model\Forum\ForumRecruitmentToneLabel**](ForumRecruitmentToneLabel.md) |  | [optional] 
+**intensity** | **int** |  | [optional] 
+**tone** | **int** |  | [optional] 
 **approved** | **bool** |  | [optional] 
 **conversationId** | **int** |  | [optional] 
 **playerSlotsTotal** | **int** |  | [optional] 

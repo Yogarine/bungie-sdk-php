@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getTrendingCategories**
-> \Bungie\Model\InlineResponse20062 getTrendingCategories()
+> \Bungie\Model\InlineResponse20063 getTrendingCategories()
 
 
 
@@ -47,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
+[**\Bungie\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTrendingCategory**
-> \Bungie\Model\InlineResponse20063 getTrendingCategory($categoryId, $pageNumber)
+> \Bungie\Model\InlineResponse20064 getTrendingCategory($categoryId, $pageNumber)
 
 
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
+[**\Bungie\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTrendingEntryDetail**
-> \Bungie\Model\InlineResponse20064 getTrendingEntryDetail($identifier, $trendingEntryType)
+> \Bungie\Model\InlineResponse20065 getTrendingEntryDetail($identifier, $trendingEntryType)
 
 
 
@@ -141,7 +141,7 @@ $apiInstance = new Bungie\Api\TrendingApi(
     $config
 );
 $identifier = 'identifier_example'; // string | The identifier for the entity to be returned.
-$trendingEntryType = new \Bungie\Model\Trending\TrendingEntryType(); // \Bungie\Model\Trending\TrendingEntryType | The type of entity to be returned.
+$trendingEntryType = 56; // int | The type of entity to be returned.
 
 try {
     $result = $apiInstance->getTrendingEntryDetail($identifier, $trendingEntryType);
@@ -157,11 +157,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **string**| The identifier for the entity to be returned. |
- **trendingEntryType** | [**\Bungie\Model\Trending\TrendingEntryType**](../Model/.md)| The type of entity to be returned. |
+ **trendingEntryType** | **int**| The type of entity to be returned. |
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
+[**\Bungie\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
 
 ### Authorization
 

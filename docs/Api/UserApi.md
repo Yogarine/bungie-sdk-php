@@ -142,7 +142,7 @@ $apiInstance = new Bungie\Api\UserApi(
     $config
 );
 $membershipId = 56; // int | The membership ID of the target user.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Type of the supplied membership ID.
+$membershipType = 56; // int | Type of the supplied membership ID.
 
 try {
     $result = $apiInstance->getMembershipDataById($membershipId, $membershipType);
@@ -158,7 +158,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **membershipId** | **int**| The membership ID of the target user. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Type of the supplied membership ID. |
+ **membershipType** | **int**| Type of the supplied membership ID. |
 
 ### Return type
 

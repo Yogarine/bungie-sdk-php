@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **itemInstanceId** | **int** | The instance ID of the item having a plug inserted. Only instanced items can have sockets. | [optional] 
 **plug** | [**\Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsRequestEntry**](DestinyInsertPlugsRequestEntry.md) | The plugs being inserted. | [optional] 
 **characterId** | **int** |  | [optional] 
-**membershipType** | [**\Bungie\Model\BungieMembershipType**](BungieMembershipType.md) |  | [optional] 
+**membershipType** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsByPeriod]**](DestinyHistoricalStatsByPeriod.md) |  | [optional] 
-**errorCode** | [**\Bungie\Model\Exceptions\PlatformErrorCodes**](PlatformErrorCodes.md) |  | [optional] 
+**response** | [**\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResult**](DestinyEntitySearchResult.md) |  | [optional] 
+**errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 
 **message** | **string** |  | [optional] 

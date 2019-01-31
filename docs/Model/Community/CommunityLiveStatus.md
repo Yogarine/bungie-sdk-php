@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **dateStatusUpdated** | **\DateTime** |  | [optional] 
 **url** | **string** |  | [optional] 
 **partnershipIdentifier** | **string** |  | [optional] 
-**partnershipType** | [**\Bungie\Model\Partnerships\PartnershipType**](PartnershipType.md) |  | [optional] 
+**partnershipType** | **int** |  | [optional] 
 **thumbnail** | **string** |  | [optional] 
 **thumbnailSmall** | **string** |  | [optional] 
 **thumbnailLarge** | **string** |  | [optional] 

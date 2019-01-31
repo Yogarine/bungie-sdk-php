@@ -68,7 +68,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $founderIdNew = 56; // int | The new founder for this group. Must already be a group admin.
 $groupId = 56; // int | The target group id.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided founderIdNew.
+$membershipType = 56; // int | Membership type of the provided founderIdNew.
 
 try {
     $result = $apiInstance->abdicateFoundership($founderIdNew, $groupId, $membershipType);
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **founderIdNew** | **int**| The new founder for this group. Must already be a group admin. |
  **groupId** | **int**| The target group id. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provided founderIdNew. |
+ **membershipType** | **int**| Membership type of the provided founderIdNew. |
 
 ### Return type
 
@@ -247,7 +247,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group.
 $membershipId = 56; // int | The membership id being approved.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
+$membershipType = 56; // int | Membership type of the supplied membership ID.
 $groupApplicationRequest = new GroupApplicationRequest(); // \Bungie\Model\GroupsV2\GroupApplicationRequest | 
 
 try {
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
  **membershipId** | **int**| The membership id being approved. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the supplied membership ID. |
+ **membershipType** | **int**| Membership type of the supplied membership ID. |
  **groupApplicationRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationRequest**](../Model/GroupApplicationRequest.md)|  |
 
 ### Return type
@@ -369,7 +369,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | Group ID that has the member to ban.
 $membershipId = 56; // int | Membership ID of the member to ban from the group.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
+$membershipType = 56; // int | Membership type of the provided membership ID.
 $groupBanRequest = new GroupBanRequest(); // \Bungie\Model\GroupsV2\GroupBanRequest | 
 
 try {
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID that has the member to ban. |
  **membershipId** | **int**| Membership ID of the member to ban from the group. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provided membership ID. |
+ **membershipType** | **int**| Membership type of the provided membership ID. |
  **groupBanRequest** | [**\Bungie\Model\GroupsV2\GroupBanRequest**](../Model/GroupBanRequest.md)|  |
 
 ### Return type
@@ -784,8 +784,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group to which the member belongs.
 $membershipId = 56; // int | Membership ID to modify.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provide membership ID.
-$memberType = new \Bungie\Model\GroupsV2\RuntimeGroupMemberType(); // \Bungie\Model\GroupsV2\RuntimeGroupMemberType | New membertype for the specified member.
+$membershipType = 56; // int | Membership type of the provide membership ID.
+$memberType = 56; // int | New membertype for the specified member.
 
 try {
     $result = $apiInstance->editGroupMembership($groupId, $membershipId, $membershipType, $memberType);
@@ -802,8 +802,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group to which the member belongs. |
  **membershipId** | **int**| Membership ID to modify. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provide membership ID. |
- **memberType** | [**\Bungie\Model\GroupsV2\RuntimeGroupMemberType**](../Model/.md)| New membertype for the specified member. |
+ **membershipType** | **int**| Membership type of the provide membership ID. |
+ **memberType** | **int**| New membertype for the specified member. |
 
 ### Return type
 
@@ -1178,7 +1178,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupName = 'groupName_example'; // string | Exact name of the group to find.
-$groupType = new \Bungie\Model\GroupsV2\GroupType(); // \Bungie\Model\GroupsV2\GroupType | Type of group to find.
+$groupType = 56; // int | Type of group to find.
 
 try {
     $result = $apiInstance->getGroupByName($groupName, $groupType);
@@ -1194,7 +1194,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupName** | **string**| Exact name of the group to find. |
- **groupType** | [**\Bungie\Model\GroupsV2\GroupType**](../Model/.md)| Type of group to find. |
+ **groupType** | **int**| Type of group to find. |
 
 ### Return type
 
@@ -1344,10 +1344,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$filter = new \Bungie\Model\GroupsV2\GroupsForMemberFilter(); // \Bungie\Model\GroupsV2\GroupsForMemberFilter | Filter apply to list of joined groups.
-$groupType = new \Bungie\Model\GroupsV2\GroupType(); // \Bungie\Model\GroupsV2\GroupType | Type of group the supplied member founded.
+$filter = 56; // int | Filter apply to list of joined groups.
+$groupType = 56; // int | Type of group the supplied member founded.
 $membershipId = 56; // int | Membership ID to for which to find founded groups.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
+$membershipType = 56; // int | Membership type of the supplied membership ID.
 
 try {
     $result = $apiInstance->getGroupsForMember($filter, $groupType, $membershipId, $membershipType);
@@ -1362,10 +1362,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**\Bungie\Model\GroupsV2\GroupsForMemberFilter**](../Model/.md)| Filter apply to list of joined groups. |
- **groupType** | [**\Bungie\Model\GroupsV2\GroupType**](../Model/.md)| Type of group the supplied member founded. |
+ **filter** | **int**| Filter apply to list of joined groups. |
+ **groupType** | **int**| Type of group the supplied member founded. |
  **membershipId** | **int**| Membership ID to for which to find founded groups. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the supplied membership ID. |
+ **membershipType** | **int**| Membership type of the supplied membership ID. |
 
 ### Return type
 
@@ -1466,7 +1466,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $currentpage = 56; // int | Page number (starting with 1). Each page has a fixed size of 50 items per page.
 $groupId = 56; // int | The ID of the group.
-$memberType = new \Bungie\Model\GroupsV2\RuntimeGroupMemberType(); // \Bungie\Model\GroupsV2\RuntimeGroupMemberType | Filter out other member types. Use None for all members.
+$memberType = 56; // int | Filter out other member types. Use None for all members.
 $nameSearch = 'nameSearch_example'; // string | The name fragment upon which a search should be executed for members with matching display or unique names.
 
 try {
@@ -1484,7 +1484,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **currentpage** | **int**| Page number (starting with 1). Each page has a fixed size of 50 items per page. |
  **groupId** | **int**| The ID of the group. |
- **memberType** | [**\Bungie\Model\GroupsV2\RuntimeGroupMemberType**](../Model/.md)| Filter out other member types. Use None for all members. | [optional]
+ **memberType** | **int**| Filter out other member types. Use None for all members. | [optional]
  **nameSearch** | **string**| The name fragment upon which a search should be executed for members with matching display or unique names. | [optional]
 
 ### Return type
@@ -1584,10 +1584,10 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$filter = new \Bungie\Model\GroupsV2\GroupPotentialMemberStatus(); // \Bungie\Model\GroupsV2\GroupPotentialMemberStatus | Filter apply to list of potential joined groups.
-$groupType = new \Bungie\Model\GroupsV2\GroupType(); // \Bungie\Model\GroupsV2\GroupType | Type of group the supplied member applied.
+$filter = 56; // int | Filter apply to list of potential joined groups.
+$groupType = 56; // int | Type of group the supplied member applied.
 $membershipId = 56; // int | Membership ID to for which to find applied groups.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the supplied membership ID.
+$membershipType = 56; // int | Membership type of the supplied membership ID.
 
 try {
     $result = $apiInstance->getPotentialGroupsForMember($filter, $groupType, $membershipId, $membershipType);
@@ -1602,10 +1602,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**\Bungie\Model\GroupsV2\GroupPotentialMemberStatus**](../Model/.md)| Filter apply to list of potential joined groups. |
- **groupType** | [**\Bungie\Model\GroupsV2\GroupType**](../Model/.md)| Type of group the supplied member applied. |
+ **filter** | **int**| Filter apply to list of potential joined groups. |
+ **groupType** | **int**| Type of group the supplied member applied. |
  **membershipId** | **int**| Membership ID to for which to find applied groups. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the supplied membership ID. |
+ **membershipType** | **int**| Membership type of the supplied membership ID. |
 
 ### Return type
 
@@ -1647,8 +1647,8 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$createDateRange = new \Bungie\Model\GroupsV2\GroupDateRange(); // \Bungie\Model\GroupsV2\GroupDateRange | Requested range in which to pull recommended groups
-$groupType = new \Bungie\Model\GroupsV2\GroupType(); // \Bungie\Model\GroupsV2\GroupType | Type of groups requested
+$createDateRange = 56; // int | Requested range in which to pull recommended groups
+$groupType = 56; // int | Type of groups requested
 
 try {
     $result = $apiInstance->getRecommendedGroups($createDateRange, $groupType);
@@ -1663,8 +1663,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createDateRange** | [**\Bungie\Model\GroupsV2\GroupDateRange**](../Model/.md)| Requested range in which to pull recommended groups |
- **groupType** | [**\Bungie\Model\GroupsV2\GroupType**](../Model/.md)| Type of groups requested |
+ **createDateRange** | **int**| Requested range in which to pull recommended groups |
+ **groupType** | **int**| Type of groups requested |
 
 ### Return type
 
@@ -1706,7 +1706,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     new GuzzleHttp\Client(),
     $config
 );
-$mType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The Destiny membership type of the account we wish to access settings.
+$mType = 56; // int | The Destiny membership type of the account we wish to access settings.
 
 try {
     $result = $apiInstance->getUserClanInviteSetting($mType);
@@ -1721,7 +1721,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| The Destiny membership type of the account we wish to access settings. |
+ **mType** | **int**| The Destiny membership type of the account we wish to access settings. |
 
 ### Return type
 
@@ -1820,7 +1820,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group you would like to join.
 $membershipId = 56; // int | Membership id of the account being invited.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account being invited.
+$membershipType = 56; // int | MembershipType of the account being invited.
 $groupApplicationRequest = new GroupApplicationRequest(); // \Bungie\Model\GroupsV2\GroupApplicationRequest | 
 
 try {
@@ -1838,7 +1838,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group you would like to join. |
  **membershipId** | **int**| Membership id of the account being invited. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| MembershipType of the account being invited. |
+ **membershipType** | **int**| MembershipType of the account being invited. |
  **groupApplicationRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationRequest**](../Model/GroupApplicationRequest.md)|  |
 
 ### Return type
@@ -1883,7 +1883,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | ID of the group you would like to join.
 $membershipId = 56; // int | Membership id of the account being cancelled.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account being cancelled.
+$membershipType = 56; // int | MembershipType of the account being cancelled.
 
 try {
     $result = $apiInstance->individualGroupInviteCancel($groupId, $membershipId, $membershipType);
@@ -1900,7 +1900,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group you would like to join. |
  **membershipId** | **int**| Membership id of the account being cancelled. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| MembershipType of the account being cancelled. |
+ **membershipType** | **int**| MembershipType of the account being cancelled. |
 
 ### Return type
 
@@ -1944,7 +1944,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | Group ID to kick the user from.
 $membershipId = 56; // int | Membership ID to kick.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
+$membershipType = 56; // int | Membership type of the provided membership ID.
 
 try {
     $result = $apiInstance->kickMember($groupId, $membershipId, $membershipType);
@@ -1961,7 +1961,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| Group ID to kick the user from. |
  **membershipId** | **int**| Membership ID to kick. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provided membership ID. |
+ **membershipType** | **int**| Membership type of the provided membership ID. |
 
 ### Return type
 
@@ -2004,7 +2004,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group you would like to join.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account to use when joining.
+$membershipType = 56; // int | MembershipType of the account to use when joining.
 $groupApplicationRequest = new GroupApplicationRequest(); // \Bungie\Model\GroupsV2\GroupApplicationRequest | 
 
 try {
@@ -2021,7 +2021,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group you would like to join. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| MembershipType of the account to use when joining. |
+ **membershipType** | **int**| MembershipType of the account to use when joining. |
  **groupApplicationRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationRequest**](../Model/GroupApplicationRequest.md)|  |
 
 ### Return type
@@ -2065,7 +2065,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $groupId = 56; // int | ID of the group.
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | MembershipType of the account to leave.
+$membershipType = 56; // int | MembershipType of the account to leave.
 
 try {
     $result = $apiInstance->rescindGroupMembership($groupId, $membershipType);
@@ -2081,7 +2081,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**| ID of the group. |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| MembershipType of the account to leave. |
+ **membershipType** | **int**| MembershipType of the account to leave. |
 
 ### Return type
 
@@ -2124,7 +2124,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
     $config
 );
 $allowInvites = True; // bool | True to allow invites of this user to clans, false otherwise.
-$mType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | The Destiny membership type of linked account we are manipulating.
+$mType = 56; // int | The Destiny membership type of linked account we are manipulating.
 
 try {
     $result = $apiInstance->setUserClanInviteSetting($allowInvites, $mType);
@@ -2140,7 +2140,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allowInvites** | **bool**| True to allow invites of this user to clans, false otherwise. |
- **mType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| The Destiny membership type of linked account we are manipulating. |
+ **mType** | **int**| The Destiny membership type of linked account we are manipulating. |
 
 ### Return type
 
@@ -2184,7 +2184,7 @@ $apiInstance = new Bungie\Api\GroupV2Api(
 );
 $groupId = 56; // int | 
 $membershipId = 56; // int | Membership ID of the member to unban from the group
-$membershipType = new \Bungie\Model\BungieMembershipType(); // \Bungie\Model\BungieMembershipType | Membership type of the provided membership ID.
+$membershipType = 56; // int | Membership type of the provided membership ID.
 
 try {
     $result = $apiInstance->unbanMember($groupId, $membershipId, $membershipType);
@@ -2201,7 +2201,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int**|  |
  **membershipId** | **int**| Membership ID of the member to unban from the group |
- **membershipType** | [**\Bungie\Model\BungieMembershipType**](../Model/.md)| Membership type of the provided membership ID. |
+ **membershipType** | **int**| Membership type of the provided membership ID. |
 
 ### Return type
 

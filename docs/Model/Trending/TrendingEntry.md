@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **weight** | **double** | The weighted score of this trending item. | [optional] 
 **isFeatured** | **bool** |  | [optional] 
 **identifier** | **string** | We don&#39;t know whether the identifier will be a string, a uint, or a long... so we&#39;re going to cast it all to a string. But either way, we need any trending item created to have a single unique identifier for its type. | [optional] 
-**entityType** | [**\Bungie\Model\Trending\TrendingEntryType**](TrendingEntryType.md) | An enum - unfortunately - dictating all of the possible kinds of trending items that you might get in your result set, in case you want to do custom rendering or call to get the details of the item. | [optional] 
+**entityType** | **int** | An enum - unfortunately - dictating all of the possible kinds of trending items that you might get in your result set, in case you want to do custom rendering or call to get the details of the item. | [optional] 
 **displayName** | **string** | The localized \&quot;display name/article title/&#39;primary localized identifier&#39;\&quot; of the entity. | [optional] 
 **tagline** | **string** | If the entity has a localized tagline/subtitle/motto/whatever, that is found here. | [optional] 
 **image** | **string** |  | [optional] 

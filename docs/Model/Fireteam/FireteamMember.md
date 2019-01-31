@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **dateJoined** | **\DateTime** |  | [optional] 
 **hasMicrophone** | **bool** |  | [optional] 
 **lastPlatformInviteAttemptDate** | **\DateTime** |  | [optional] 
-**lastPlatformInviteAttemptResult** | [**\Bungie\Model\Fireteam\FireteamPlatformInviteResult**](FireteamPlatformInviteResult.md) |  | [optional] 
+**lastPlatformInviteAttemptResult** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

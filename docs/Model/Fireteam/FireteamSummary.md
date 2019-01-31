@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fireteamId** | **int** |  | [optional] 
 **groupId** | **int** |  | [optional] 
-**platform** | [**\Bungie\Model\Fireteam\FireteamPlatform**](FireteamPlatform.md) |  | [optional] 
-**activityType** | [**\Bungie\Model\Fireteam\FireteamActivityType**](FireteamActivityType.md) |  | [optional] 
+**platform** | **int** |  | [optional] 
+**activityType** | **int** |  | [optional] 
 **isImmediate** | **bool** |  | [optional] 
 **scheduledTime** | **\DateTime** |  | [optional] 
 **ownerMembershipId** | **int** |  | [optional] 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **itemHash** | **int** |  | [optional] 
 **vendorHash** | **int** |  | [optional] 
 **vendorInteractionIndex** | **int** |  | [optional] 
-**scope** | [**\Bungie\Model\Destiny\DestinyScope**](DestinyScope.md) | The scope at which this specific entry can be computed. | [optional] 
+**scope** | **int** | The scope at which this specific entry can be computed. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

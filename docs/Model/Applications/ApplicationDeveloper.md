@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**role** | [**\Bungie\Model\Applications\DeveloperRole**](DeveloperRole.md) |  | [optional] 
+**role** | **int** |  | [optional] 
 **apiEulaVersion** | **int** |  | [optional] 
 **user** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
 

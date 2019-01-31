@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | **map[string,string]** |  | [optional] 
-**errorCode** | [**\Bungie\Model\Exceptions\PlatformErrorCodes**](PlatformErrorCodes.md) |  | [optional] 
+**response** | [**\Bungie\Model\Fireteam\FireteamResponse**](FireteamResponse.md) |  | [optional] 
+**errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 
 **message** | **string** |  | [optional] 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **identifier** | **string** |  | [optional] 
-**entityType** | [**\Bungie\Model\Trending\TrendingEntryType**](TrendingEntryType.md) |  | [optional] 
+**entityType** | **int** |  | [optional] 
 **news** | [**\Bungie\Model\Trending\TrendingEntryNews**](TrendingEntryNews.md) |  | [optional] 
 **support** | [**\Bungie\Model\Trending\TrendingEntrySupportArticle**](TrendingEntrySupportArticle.md) |  | [optional] 
 **destinyItem** | [**\Bungie\Model\Trending\TrendingEntryDestinyItem**](TrendingEntryDestinyItem.md) |  | [optional] 

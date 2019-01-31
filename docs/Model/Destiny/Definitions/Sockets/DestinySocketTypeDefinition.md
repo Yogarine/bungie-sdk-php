@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **insertAction** | [**\Bungie\Model\Destiny\Definitions\Sockets\DestinyInsertPlugActionDefinition**](DestinyInsertPlugActionDefinition.md) | Defines what happens when a plug is inserted into sockets of this type. | [optional] 
 **plugWhitelist** | [**\Bungie\Model\Destiny\Definitions\Sockets\DestinyPlugWhitelistEntryDefinition[]**](DestinyPlugWhitelistEntryDefinition.md) | A list of Plug \&quot;Categories\&quot; that are allowed to be plugged into sockets of this type.  These should be compared against a given plug item&#39;s DestinyInventoryItemDefinition.plug.plugCategoryHash, which indicates the plug item&#39;s category.  If the plug&#39;s category matches any whitelisted plug, or if the whitelist is empty, it is allowed to be inserted. | [optional] 
 **socketCategoryHash** | **int** |  | [optional] 
-**visibility** | [**\Bungie\Model\Destiny\DestinySocketVisibility**](DestinySocketVisibility.md) | Sometimes a socket isn&#39;t visible. These are some of the conditions under which sockets of this type are not visible. Unfortunately, the truth of visibility is much, much more complex. Best to rely on the live data for whether the socket is visible and enabled. | [optional] 
+**visibility** | **int** | Sometimes a socket isn&#39;t visible. These are some of the conditions under which sockets of this type are not visible. Unfortunately, the truth of visibility is much, much more complex. Best to rely on the live data for whether the socket is visible and enabled. | [optional] 
 **alwaysRandomizeSockets** | **bool** |  | [optional] 
 **isPreviewEnabled** | **bool** |  | [optional] 
 **hideDuplicateReusablePlugs** | **bool** |  | [optional] 

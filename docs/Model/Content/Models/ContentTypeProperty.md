@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **rssAttribute** | **string** |  | [optional] 
 **visibleDependency** | **string** |  | [optional] 
 **visibleOn** | **string** |  | [optional] 
-**datatype** | [**\Bungie\Model\Content\Models\ContentPropertyDataTypeEnum**](ContentPropertyDataTypeEnum.md) |  | [optional] 
+**datatype** | **int** |  | [optional] 
 **attributes** | **map[string,string]** |  | [optional] 
 **childProperties** | [**\Bungie\Model\Content\Models\ContentTypeProperty[]**](ContentTypeProperty.md) |  | [optional] 
 **contentTypeAllowed** | **string** |  | [optional] 

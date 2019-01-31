@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **itemReceived** | [**\Bungie\Model\Destiny\DestinyItemQuantity**](DestinyItemQuantity.md) | The item that was received, and its quantity. | [optional] 
 **licenseUnlockHash** | **int** | The unlock flag used to determine whether you still have the purchased item. | [optional] 
 **purchasedByCharacterId** | **int** | The ID of the character who made the purchase. | [optional] 
-**refundPolicy** | [**\Bungie\Model\Destiny\DestinyVendorItemRefundPolicy**](DestinyVendorItemRefundPolicy.md) | Whether you can get a refund, and what happens in order for the refund to be received. See the DestinyVendorItemRefundPolicy enum for details. | [optional] 
+**refundPolicy** | **int** | Whether you can get a refund, and what happens in order for the refund to be received. See the DestinyVendorItemRefundPolicy enum for details. | [optional] 
 **sequenceNumber** | **int** | The identifier of this receipt. | [optional] 
 **timeToExpiration** | **int** | The seconds since epoch at which this receipt is rendered invalid. | [optional] 
 **expiresOn** | **\DateTime** | The date at which this receipt is rendered invalid. | [optional] 

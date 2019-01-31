@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Destiny\DestinyEquipItemResults**](DestinyEquipItemResults.md) |  | [optional] 
-**errorCode** | [**\Bungie\Model\Exceptions\PlatformErrorCodes**](PlatformErrorCodes.md) |  | [optional] 
+**response** | [**\Bungie\Model\Destiny\Responses\DestinyCollectibleNodeDetailResponse**](DestinyCollectibleNodeDetailResponse.md) |  | [optional] 
+**errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 
 **message** | **string** |  | [optional] 

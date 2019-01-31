@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**selection** | [**\Bungie\Model\Destiny\Advanced\AwaUserSelection**](AwaUserSelection.md) | Indication of the selection the user has made (Approving or rejecting the action) | [optional] 
+**selection** | **int** | Indication of the selection the user has made (Approving or rejecting the action) | [optional] 
 **correlationId** | **string** | Correlation ID of the request | [optional] 
 **nonce** | **string[]** | Secret nonce received via the PUSH notification. | [optional] 
 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **membershipId** | **int** | Every Destiny Profile has a membershipId. This is provided on the character as well for convenience. | [optional] 
-**membershipType** | [**\Bungie\Model\BungieMembershipType**](BungieMembershipType.md) | membershipType tells you the platform on which the character plays. Examine the BungieMembershipType enumeration for possible values. | [optional] 
+**membershipType** | **int** | membershipType tells you the platform on which the character plays. Examine the BungieMembershipType enumeration for possible values. | [optional] 
 **characterId** | **int** | The unique identifier for the character. | [optional] 
 **dateLastPlayed** | **\DateTime** | The last date that the user played Destiny. | [optional] 
 **minutesPlayedThisSession** | **int** | If the user is currently playing, this is how long they&#39;ve been playing. | [optional] 
@@ -14,9 +14,9 @@ Name | Type | Description | Notes
 **raceHash** | **int** | Use this hash to look up the character&#39;s DestinyRaceDefinition. | [optional] 
 **genderHash** | **int** | Use this hash to look up the character&#39;s DestinyGenderDefinition. | [optional] 
 **classHash** | **int** | Use this hash to look up the character&#39;s DestinyClassDefinition. | [optional] 
-**raceType** | [**\Bungie\Model\Destiny\DestinyRace**](DestinyRace.md) | Mostly for historical purposes at this point, this is an enumeration for the character&#39;s race.  It&#39;ll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. | [optional] 
-**classType** | [**\Bungie\Model\Destiny\DestinyClass**](DestinyClass.md) | Mostly for historical purposes at this point, this is an enumeration for the character&#39;s class.  It&#39;ll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. | [optional] 
-**genderType** | [**\Bungie\Model\Destiny\DestinyGender**](DestinyGender.md) | Mostly for historical purposes at this point, this is an enumeration for the character&#39;s Gender.  It&#39;ll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. And yeah, it&#39;s an enumeration and not a boolean. Fight me. | [optional] 
+**raceType** | **int** | Mostly for historical purposes at this point, this is an enumeration for the character&#39;s race.  It&#39;ll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. | [optional] 
+**classType** | **int** | Mostly for historical purposes at this point, this is an enumeration for the character&#39;s class.  It&#39;ll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. | [optional] 
+**genderType** | **int** | Mostly for historical purposes at this point, this is an enumeration for the character&#39;s Gender.  It&#39;ll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. And yeah, it&#39;s an enumeration and not a boolean. Fight me. | [optional] 
 **emblemPath** | **string** | A shortcut path to the user&#39;s currently equipped emblem image. If you&#39;re just showing summary info for a user, this is more convenient than examining their equipped emblem and looking up the definition. | [optional] 
 **emblemBackgroundPath** | **string** | A shortcut path to the user&#39;s currently equipped emblem background image. If you&#39;re just showing summary info for a user, this is more convenient than examining their equipped emblem and looking up the definition. | [optional] 
 **emblemHash** | **int** | The hash of the currently equipped emblem for the user. Can be used to look up the DestinyInventoryItemDefinition. | [optional] 

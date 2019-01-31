@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lastReplyTimestamp** | **\DateTime** |  | [optional] 
 **isPinned** | **bool** |  | [optional] 
-**urlMediaType** | [**\Bungie\Model\Forum\ForumMediaType**](ForumMediaType.md) |  | [optional] 
+**urlMediaType** | **int** |  | [optional] 
 **thumbnail** | **string** |  | [optional] 
-**popularity** | [**\Bungie\Model\Forum\ForumPostPopularity**](ForumPostPopularity.md) |  | [optional] 
+**popularity** | **int** |  | [optional] 
 **isActive** | **bool** |  | [optional] 
 **isAnnouncement** | **bool** |  | [optional] 
 **userRating** | **int** |  | [optional] 
