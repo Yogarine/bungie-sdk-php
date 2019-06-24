@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **memberType** | **int** |  | [optional] 
 **isOnline** | **bool** |  | [optional] 
+**lastOnlineStatusChange** | **int** |  | [optional] 
 **groupId** | **int** |  | [optional] 
 **destinyUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
 **bungieNetUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 

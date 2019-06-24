@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\SearchResultOfCommunityLiveStatus**](SearchResultOfCommunityLiveStatus.md) |  | [optional] 
+**response** | [**\Bungie\Model\SearchResultOfTrendingEntry**](SearchResultOfTrendingEntry.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

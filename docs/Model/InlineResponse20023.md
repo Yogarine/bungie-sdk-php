@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\GroupsV2\GroupOptionalConversation[]**](GroupOptionalConversation.md) |  | [optional] 
+**response** | [**\Bungie\Model\GroupsV2\GroupMemberLeaveResult**](GroupMemberLeaveResult.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

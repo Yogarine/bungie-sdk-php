@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getTrendingCategories**
-> \Bungie\Model\InlineResponse20063 getTrendingCategories()
+> \Bungie\Model\InlineResponse20060 getTrendingCategories()
 
 
 
@@ -47,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
+[**\Bungie\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTrendingCategory**
-> \Bungie\Model\InlineResponse20064 getTrendingCategory($categoryId, $pageNumber)
+> \Bungie\Model\InlineResponse20061 getTrendingCategory($categoryId, $pageNumber)
 
 
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
+[**\Bungie\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTrendingEntryDetail**
-> \Bungie\Model\InlineResponse20065 getTrendingEntryDetail($identifier, $trendingEntryType)
+> \Bungie\Model\InlineResponse20062 getTrendingEntryDetail($identifier, $trendingEntryType)
 
 
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
+[**\Bungie\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
 
 ### Authorization
 

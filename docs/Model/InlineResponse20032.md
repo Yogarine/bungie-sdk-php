@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\GroupsV2\GroupPotentialMembershipSearchResponse**](GroupPotentialMembershipSearchResponse.md) |  | [optional] 
+**response** | [**\Bungie\Model\User\UserInfoCard[]**](UserInfoCard.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

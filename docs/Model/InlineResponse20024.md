@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\GroupsV2\GroupCreationResponse**](GroupCreationResponse.md) |  | [optional] 
+**response** | [**\Bungie\Model\SearchResultOfGroupBan**](SearchResultOfGroupBan.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

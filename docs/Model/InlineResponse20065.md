@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Trending\TrendingDetail**](TrendingDetail.md) |  | [optional] 
+**response** | [**\Bungie\Model\Fireteam\FireteamResponse**](FireteamResponse.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

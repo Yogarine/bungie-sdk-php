@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**approvePending**](GroupV2Api.md#approvePending) | **POST** /GroupV2/{groupId}/Members/Approve/{membershipType}/{membershipId}/ | 
 [**approvePendingForList**](GroupV2Api.md#approvePendingForList) | **POST** /GroupV2/{groupId}/Members/ApproveList/ | 
 [**banMember**](GroupV2Api.md#banMember) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Ban/ | 
-[**createGroup**](GroupV2Api.md#createGroup) | **POST** /GroupV2/Create/ | 
 [**denyAllPending**](GroupV2Api.md#denyAllPending) | **POST** /GroupV2/{groupId}/Members/DenyAll/ | 
 [**denyPendingForList**](GroupV2Api.md#denyPendingForList) | **POST** /GroupV2/{groupId}/Members/DenyList/ | 
 [**editClanBanner**](GroupV2Api.md#editClanBanner) | **POST** /GroupV2/{groupId}/EditClanBanner/ | 
@@ -37,14 +36,11 @@ Method | HTTP request | Description
 [**individualGroupInvite**](GroupV2Api.md#individualGroupInvite) | **POST** /GroupV2/{groupId}/Members/IndividualInvite/{membershipType}/{membershipId}/ | 
 [**individualGroupInviteCancel**](GroupV2Api.md#individualGroupInviteCancel) | **POST** /GroupV2/{groupId}/Members/IndividualInviteCancel/{membershipType}/{membershipId}/ | 
 [**kickMember**](GroupV2Api.md#kickMember) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Kick/ | 
-[**requestGroupMembership**](GroupV2Api.md#requestGroupMembership) | **POST** /GroupV2/{groupId}/Members/Apply/{membershipType}/ | 
-[**rescindGroupMembership**](GroupV2Api.md#rescindGroupMembership) | **POST** /GroupV2/{groupId}/Members/Rescind/{membershipType}/ | 
-[**setUserClanInviteSetting**](GroupV2Api.md#setUserClanInviteSetting) | **POST** /GroupV2/SetUserClanInviteSetting/{mType}/{allowInvites}/ | 
 [**unbanMember**](GroupV2Api.md#unbanMember) | **POST** /GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Unban/ | 
 
 
 # **abdicateFoundership**
-> \Bungie\Model\InlineResponse20018 abdicateFoundership($founderIdNew, $groupId, $membershipType)
+> \Bungie\Model\InlineResponse20016 abdicateFoundership($founderIdNew, $groupId, $membershipType)
 
 
 
@@ -89,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
+[**\Bungie\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 
@@ -162,7 +158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **approveAllPending**
-> \Bungie\Model\InlineResponse20030 approveAllPending($groupId, $groupApplicationRequest)
+> \Bungie\Model\InlineResponse20026 approveAllPending($groupId, $groupApplicationRequest)
 
 
 
@@ -207,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\Bungie\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
 
 ### Authorization
 
@@ -221,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **approvePending**
-> \Bungie\Model\InlineResponse20018 approvePending($groupId, $membershipId, $membershipType, $groupApplicationRequest)
+> \Bungie\Model\InlineResponse20016 approvePending($groupId, $membershipId, $membershipType, $groupApplicationRequest)
 
 
 
@@ -270,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
+[**\Bungie\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 
@@ -284,7 +280,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **approvePendingForList**
-> \Bungie\Model\InlineResponse20030 approvePendingForList($groupId, $groupApplicationListRequest)
+> \Bungie\Model\InlineResponse20026 approvePendingForList($groupId, $groupApplicationListRequest)
 
 
 
@@ -329,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\Bungie\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
 
 ### Authorization
 
@@ -343,7 +339,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **banMember**
-> \Bungie\Model\InlineResponse20019 banMember($groupId, $membershipId, $membershipType, $groupBanRequest)
+> \Bungie\Model\InlineResponse20021 banMember($groupId, $membershipId, $membershipType, $groupBanRequest)
 
 
 
@@ -392,64 +388,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
-
-### Authorization
-
-[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **createGroup**
-> \Bungie\Model\InlineResponse20024 createGroup($groupAction)
-
-
-
-Create a new group.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: apiKey
-$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
-// Configure OAuth2 access token for authorization: oauth2
-$config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Bungie\Api\GroupV2Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$groupAction = new GroupAction(); // \Bungie\Model\GroupsV2\GroupAction | 
-
-try {
-    $result = $apiInstance->createGroup($groupAction);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->createGroup: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **groupAction** | [**\Bungie\Model\GroupsV2\GroupAction**](../Model/GroupAction.md)|  |
-
-### Return type
-
-[**\Bungie\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
+[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
 
 ### Authorization
 
@@ -463,7 +402,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **denyAllPending**
-> \Bungie\Model\InlineResponse20030 denyAllPending($groupId, $groupApplicationRequest)
+> \Bungie\Model\InlineResponse20026 denyAllPending($groupId, $groupApplicationRequest)
 
 
 
@@ -508,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\Bungie\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
 
 ### Authorization
 
@@ -522,7 +461,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **denyPendingForList**
-> \Bungie\Model\InlineResponse20030 denyPendingForList($groupId, $groupApplicationListRequest)
+> \Bungie\Model\InlineResponse20026 denyPendingForList($groupId, $groupApplicationListRequest)
 
 
 
@@ -567,7 +506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\Bungie\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
 
 ### Authorization
 
@@ -581,7 +520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **editClanBanner**
-> \Bungie\Model\InlineResponse20019 editClanBanner($groupId, $clanBanner)
+> \Bungie\Model\InlineResponse20021 editClanBanner($groupId, $clanBanner)
 
 
 
@@ -626,7 +565,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
+[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
 
 ### Authorization
 
@@ -640,7 +579,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **editFounderOptions**
-> \Bungie\Model\InlineResponse20019 editFounderOptions($groupId, $groupOptionsEditAction)
+> \Bungie\Model\InlineResponse20021 editFounderOptions($groupId, $groupOptionsEditAction)
 
 
 
@@ -685,7 +624,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
+[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
 
 ### Authorization
 
@@ -699,7 +638,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **editGroup**
-> \Bungie\Model\InlineResponse20019 editGroup($groupId, $groupEditAction)
+> \Bungie\Model\InlineResponse20021 editGroup($groupId, $groupEditAction)
 
 
 
@@ -744,7 +683,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
+[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
 
 ### Authorization
 
@@ -758,7 +697,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **editGroupMembership**
-> \Bungie\Model\InlineResponse20019 editGroupMembership($groupId, $membershipId, $membershipType, $memberType)
+> \Bungie\Model\InlineResponse20021 editGroupMembership($groupId, $membershipId, $membershipType, $memberType)
 
 
 
@@ -807,7 +746,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
+[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
 
 ### Authorization
 
@@ -882,7 +821,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAdminsAndFounderOfGroup**
-> \Bungie\Model\InlineResponse20025 getAdminsAndFounderOfGroup($currentpage, $groupId)
+> \Bungie\Model\InlineResponse20022 getAdminsAndFounderOfGroup($currentpage, $groupId)
 
 
 
@@ -925,7 +864,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
+[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
 
 ### Authorization
 
@@ -939,7 +878,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAvailableAvatars**
-> \Bungie\Model\InlineResponse20016 getAvailableAvatars()
+> \Bungie\Model\InlineResponse20014 getAvailableAvatars()
 
 
 
@@ -976,7 +915,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
+[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -990,7 +929,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAvailableThemes**
-> \Bungie\Model\InlineResponse20017 getAvailableThemes()
+> \Bungie\Model\InlineResponse20015 getAvailableThemes()
 
 
 
@@ -1027,7 +966,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
+[**\Bungie\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
 
 ### Authorization
 
@@ -1041,7 +980,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBannedMembersOfGroup**
-> \Bungie\Model\InlineResponse20027 getBannedMembersOfGroup($currentpage, $groupId)
+> \Bungie\Model\InlineResponse20024 getBannedMembersOfGroup($currentpage, $groupId)
 
 
 
@@ -1086,7 +1025,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20027**](../Model/InlineResponse20027.md)
+[**\Bungie\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
 
 ### Authorization
 
@@ -1100,7 +1039,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGroup**
-> \Bungie\Model\InlineResponse20022 getGroup($groupId)
+> \Bungie\Model\InlineResponse20019 getGroup($groupId)
 
 
 
@@ -1141,7 +1080,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+[**\Bungie\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
 
 ### Authorization
 
@@ -1155,7 +1094,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGroupByName**
-> \Bungie\Model\InlineResponse20022 getGroupByName($groupName, $groupType)
+> \Bungie\Model\InlineResponse20019 getGroupByName($groupName, $groupType)
 
 
 
@@ -1198,7 +1137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+[**\Bungie\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
 
 ### Authorization
 
@@ -1212,7 +1151,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGroupByNameV2**
-> \Bungie\Model\InlineResponse20022 getGroupByNameV2($groupNameSearchRequest)
+> \Bungie\Model\InlineResponse20019 getGroupByNameV2($groupNameSearchRequest)
 
 
 
@@ -1253,7 +1192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+[**\Bungie\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
 
 ### Authorization
 
@@ -1267,7 +1206,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGroupOptionalConversations**
-> \Bungie\Model\InlineResponse20023 getGroupOptionalConversations($groupId)
+> \Bungie\Model\InlineResponse20020 getGroupOptionalConversations($groupId)
 
 
 
@@ -1308,7 +1247,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
+[**\Bungie\Model\InlineResponse20020**](../Model/InlineResponse20020.md)
 
 ### Authorization
 
@@ -1322,7 +1261,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGroupsForMember**
-> \Bungie\Model\InlineResponse20031 getGroupsForMember($filter, $groupType, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20027 getGroupsForMember($filter, $groupType, $membershipId, $membershipType)
 
 
 
@@ -1369,7 +1308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
+[**\Bungie\Model\InlineResponse20027**](../Model/InlineResponse20027.md)
 
 ### Authorization
 
@@ -1383,7 +1322,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInvitedIndividuals**
-> \Bungie\Model\InlineResponse20029 getInvitedIndividuals($currentpage, $groupId)
+> \Bungie\Model\InlineResponse20025 getInvitedIndividuals($currentpage, $groupId)
 
 
 
@@ -1428,7 +1367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
+[**\Bungie\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
 
 ### Authorization
 
@@ -1442,7 +1381,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMembersOfGroup**
-> \Bungie\Model\InlineResponse20025 getMembersOfGroup($currentpage, $groupId, $memberType, $nameSearch)
+> \Bungie\Model\InlineResponse20022 getMembersOfGroup($currentpage, $groupId, $memberType, $nameSearch)
 
 
 
@@ -1489,7 +1428,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
+[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
 
 ### Authorization
 
@@ -1503,7 +1442,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPendingMemberships**
-> \Bungie\Model\InlineResponse20029 getPendingMemberships($currentpage, $groupId)
+> \Bungie\Model\InlineResponse20025 getPendingMemberships($currentpage, $groupId)
 
 
 
@@ -1548,7 +1487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
+[**\Bungie\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
 
 ### Authorization
 
@@ -1562,7 +1501,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPotentialGroupsForMember**
-> \Bungie\Model\InlineResponse20032 getPotentialGroupsForMember($filter, $groupType, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20028 getPotentialGroupsForMember($filter, $groupType, $membershipId, $membershipType)
 
 
 
@@ -1609,7 +1548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20032**](../Model/InlineResponse20032.md)
+[**\Bungie\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
 
 ### Authorization
 
@@ -1623,7 +1562,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendedGroups**
-> \Bungie\Model\InlineResponse20020 getRecommendedGroups($createDateRange, $groupType)
+> \Bungie\Model\InlineResponse20017 getRecommendedGroups($createDateRange, $groupType)
 
 
 
@@ -1668,7 +1607,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20020**](../Model/InlineResponse20020.md)
+[**\Bungie\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
 
 ### Authorization
 
@@ -1682,7 +1621,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserClanInviteSetting**
-> \Bungie\Model\InlineResponse20018 getUserClanInviteSetting($mType)
+> \Bungie\Model\InlineResponse20016 getUserClanInviteSetting($mType)
 
 
 
@@ -1725,7 +1664,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
+[**\Bungie\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 
@@ -1739,7 +1678,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupSearch**
-> \Bungie\Model\InlineResponse20021 groupSearch($groupQuery)
+> \Bungie\Model\InlineResponse20018 groupSearch($groupQuery)
 
 
 
@@ -1780,7 +1719,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+[**\Bungie\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
 
 ### Authorization
 
@@ -1794,7 +1733,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **individualGroupInvite**
-> \Bungie\Model\InlineResponse20028 individualGroupInvite($groupId, $membershipId, $membershipType, $groupApplicationRequest)
+> \Bungie\Model\InlineResponse20029 individualGroupInvite($groupId, $membershipId, $membershipType, $groupApplicationRequest)
 
 
 
@@ -1843,7 +1782,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
+[**\Bungie\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
 
 ### Authorization
 
@@ -1857,7 +1796,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **individualGroupInviteCancel**
-> \Bungie\Model\InlineResponse20028 individualGroupInviteCancel($groupId, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20029 individualGroupInviteCancel($groupId, $membershipId, $membershipType)
 
 
 
@@ -1904,7 +1843,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
+[**\Bungie\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
 
 ### Authorization
 
@@ -1918,7 +1857,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **kickMember**
-> \Bungie\Model\InlineResponse20026 kickMember($groupId, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20023 kickMember($groupId, $membershipId, $membershipType)
 
 
 
@@ -1965,186 +1904,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
-
-### Authorization
-
-[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **requestGroupMembership**
-> \Bungie\Model\InlineResponse20028 requestGroupMembership($groupId, $membershipType, $groupApplicationRequest)
-
-
-
-Request permission to join the given group.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: apiKey
-$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
-// Configure OAuth2 access token for authorization: oauth2
-$config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Bungie\Api\GroupV2Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$groupId = 56; // int | ID of the group you would like to join.
-$membershipType = 56; // int | MembershipType of the account to use when joining.
-$groupApplicationRequest = new GroupApplicationRequest(); // \Bungie\Model\GroupsV2\GroupApplicationRequest | 
-
-try {
-    $result = $apiInstance->requestGroupMembership($groupId, $membershipType, $groupApplicationRequest);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->requestGroupMembership: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **groupId** | **int**| ID of the group you would like to join. |
- **membershipType** | **int**| MembershipType of the account to use when joining. |
- **groupApplicationRequest** | [**\Bungie\Model\GroupsV2\GroupApplicationRequest**](../Model/GroupApplicationRequest.md)|  |
-
-### Return type
-
-[**\Bungie\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
-
-### Authorization
-
-[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **rescindGroupMembership**
-> \Bungie\Model\InlineResponse20026 rescindGroupMembership($groupId, $membershipType)
-
-
-
-Rescind your application to join the given group or leave the group if you are already a member..
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: apiKey
-$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
-// Configure OAuth2 access token for authorization: oauth2
-$config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Bungie\Api\GroupV2Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$groupId = 56; // int | ID of the group.
-$membershipType = 56; // int | MembershipType of the account to leave.
-
-try {
-    $result = $apiInstance->rescindGroupMembership($groupId, $membershipType);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->rescindGroupMembership: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **groupId** | **int**| ID of the group. |
- **membershipType** | **int**| MembershipType of the account to leave. |
-
-### Return type
-
-[**\Bungie\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
-
-### Authorization
-
-[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **setUserClanInviteSetting**
-> \Bungie\Model\InlineResponse20019 setUserClanInviteSetting($allowInvites, $mType)
-
-
-
-Sets the state of the user's clan invite preferences - true if they wish to be invited to clans, false otherwise.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: apiKey
-$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
-// Configure OAuth2 access token for authorization: oauth2
-$config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Bungie\Api\GroupV2Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$allowInvites = True; // bool | True to allow invites of this user to clans, false otherwise.
-$mType = 56; // int | The Destiny membership type of linked account we are manipulating.
-
-try {
-    $result = $apiInstance->setUserClanInviteSetting($allowInvites, $mType);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling GroupV2Api->setUserClanInviteSetting: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **allowInvites** | **bool**| True to allow invites of this user to clans, false otherwise. |
- **mType** | **int**| The Destiny membership type of linked account we are manipulating. |
-
-### Return type
-
-[**\Bungie\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
+[**\Bungie\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
 
 ### Authorization
 
@@ -2158,7 +1918,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **unbanMember**
-> \Bungie\Model\InlineResponse20019 unbanMember($groupId, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20021 unbanMember($groupId, $membershipId, $membershipType)
 
 
 
@@ -2205,7 +1965,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
+[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
 
 ### Authorization
 

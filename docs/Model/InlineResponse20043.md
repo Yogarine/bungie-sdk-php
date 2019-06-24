@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Destiny\Responses\DestinyPublicVendorsResponse**](DestinyPublicVendorsResponse.md) |  | [optional] 
+**response** | [**\Bungie\Model\Destiny\Responses\DestinyItemChangeResponse**](DestinyItemChangeResponse.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

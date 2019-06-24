@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Destiny\Milestones\DestinyMilestone**](DestinyMilestone.md) |  | [optional] 
+**response** | [**\Bungie\Model\Destiny\Responses\DestinyVendorResponse**](DestinyVendorResponse.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

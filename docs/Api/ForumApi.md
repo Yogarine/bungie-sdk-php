@@ -4,7 +4,6 @@ All URIs are relative to *https://www.bungie.net/Platform*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**approveFireteamThread**](ForumApi.md#approveFireteamThread) | **POST** /Forum/Recruit/Approve/{topicId}/ | 
 [**getCoreTopicsPaged**](ForumApi.md#getCoreTopicsPaged) | **GET** /Forum/GetCoreTopicsPaged/{page}/{sort}/{quickDate}/{categoryFilter}/ | 
 [**getForumTagSuggestions**](ForumApi.md#getForumTagSuggestions) | **GET** /Forum/GetForumTagSuggestions/ | 
 [**getPoll**](ForumApi.md#getPoll) | **GET** /Forum/Poll/{topicId}/ | 
@@ -15,67 +14,7 @@ Method | HTTP request | Description
 [**getRecruitmentThreadSummaries**](ForumApi.md#getRecruitmentThreadSummaries) | **POST** /Forum/Recruit/Summaries/ | 
 [**getTopicForContent**](ForumApi.md#getTopicForContent) | **GET** /Forum/GetTopicForContent/{contentId}/ | 
 [**getTopicsPaged**](ForumApi.md#getTopicsPaged) | **GET** /Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/ | 
-[**joinFireteamThread**](ForumApi.md#joinFireteamThread) | **POST** /Forum/Recruit/Join/{topicId}/ | 
-[**kickBanFireteamApplicant**](ForumApi.md#kickBanFireteamApplicant) | **POST** /Forum/Recruit/KickBan/{topicId}/{targetMembershipId}/ | 
-[**leaveFireteamThread**](ForumApi.md#leaveFireteamThread) | **POST** /Forum/Recruit/Leave/{topicId}/ | 
 
-
-# **approveFireteamThread**
-> \Bungie\Model\InlineResponse20014 approveFireteamThread($topicId)
-
-
-
-Allows the owner of a fireteam thread to approve all joined members and start a private message conversation with them.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: apiKey
-$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
-// Configure OAuth2 access token for authorization: oauth2
-$config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Bungie\Api\ForumApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$topicId = 56; // int | The post id of the recruitment topic to approve.
-
-try {
-    $result = $apiInstance->approveFireteamThread($topicId);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ForumApi->approveFireteamThread: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **topicId** | **int**| The post id of the recruitment topic to approve. |
-
-### Return type
-
-[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
-
-### Authorization
-
-[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCoreTopicsPaged**
 > \Bungie\Model\InlineResponse20010 getCoreTopicsPaged($categoryFilter, $page, $quickDate, $sort, $locales)
@@ -501,7 +440,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecruitmentThreadSummaries**
-> \Bungie\Model\InlineResponse20015 getRecruitmentThreadSummaries($requestBody)
+> \Bungie\Model\InlineResponse20013 getRecruitmentThreadSummaries($requestBody)
 
 
 
@@ -542,7 +481,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
+[**\Bungie\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
 
 ### Authorization
 
@@ -671,179 +610,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [apiKey](../../README.md#apiKey)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **joinFireteamThread**
-> \Bungie\Model\InlineResponse20013 joinFireteamThread($topicId)
-
-
-
-Allows a user to slot themselves into a recruitment thread fireteam slot. Returns the new state of the fireteam.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: apiKey
-$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
-// Configure OAuth2 access token for authorization: oauth2
-$config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Bungie\Api\ForumApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$topicId = 56; // int | The post id of the recruitment topic you wish to join.
-
-try {
-    $result = $apiInstance->joinFireteamThread($topicId);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ForumApi->joinFireteamThread: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **topicId** | **int**| The post id of the recruitment topic you wish to join. |
-
-### Return type
-
-[**\Bungie\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
-
-### Authorization
-
-[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **kickBanFireteamApplicant**
-> \Bungie\Model\InlineResponse20013 kickBanFireteamApplicant($targetMembershipId, $topicId)
-
-
-
-Allows a recruitment thread owner to kick a join user from the fireteam. Returns the new state of the fireteam.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: apiKey
-$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
-// Configure OAuth2 access token for authorization: oauth2
-$config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Bungie\Api\ForumApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$targetMembershipId = 56; // int | The id of the user you wish to kick.
-$topicId = 56; // int | The post id of the recruitment topic you wish to join.
-
-try {
-    $result = $apiInstance->kickBanFireteamApplicant($targetMembershipId, $topicId);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ForumApi->kickBanFireteamApplicant: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **targetMembershipId** | **int**| The id of the user you wish to kick. |
- **topicId** | **int**| The post id of the recruitment topic you wish to join. |
-
-### Return type
-
-[**\Bungie\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
-
-### Authorization
-
-[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **leaveFireteamThread**
-> \Bungie\Model\InlineResponse20013 leaveFireteamThread($topicId)
-
-
-
-Allows a user to remove themselves from a recruitment thread fireteam slot. Returns the new state of the fireteam.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: apiKey
-$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
-// Configure OAuth2 access token for authorization: oauth2
-$config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Bungie\Api\ForumApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$topicId = 56; // int | The post id of the recruitment topic you wish to leave.
-
-try {
-    $result = $apiInstance->leaveFireteamThread($topicId);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ForumApi->leaveFireteamThread: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **topicId** | **int**| The post id of the recruitment topic you wish to leave. |
-
-### Return type
-
-[**\Bungie\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
-
-### Authorization
-
-[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
