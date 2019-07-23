@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **getClanAggregateStats**
-> \Bungie\Model\InlineResponse20047 getClanAggregateStats($groupId, $modes)
+> \Bungie\Model\InlineResponse20048 getClanAggregateStats($groupId, $modes)
 
 
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
+[**\Bungie\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getClanLeaderboards**
-> \Bungie\Model\InlineResponse20046 getClanLeaderboards($groupId, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20047 getClanLeaderboards($groupId, $maxtop, $modes, $statid)
 
 
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
+[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLeaderboards**
-> \Bungie\Model\InlineResponse20046 getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20047 getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
+[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLeaderboardsForCharacter**
-> \Bungie\Model\InlineResponse20046 getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20047 getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
+[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPublicVendors**
-> \Bungie\Model\InlineResponse20040 getPublicVendors($components)
+> \Bungie\Model\InlineResponse20041 getPublicVendors($components)
 
 
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
+[**\Bungie\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **insertSocketPlug**
-> \Bungie\Model\InlineResponse20043 insertSocketPlug($destinyInsertPlugsActionRequest)
+> \Bungie\Model\InlineResponse20044 insertSocketPlug($destinyInsertPlugsActionRequest)
 
 
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
+[**\Bungie\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
 
 ### Authorization
 

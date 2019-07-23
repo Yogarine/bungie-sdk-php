@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Forum\ForumRecruitmentDetail[]**](ForumRecruitmentDetail.md) |  | [optional] 
+**response** | [**\Bungie\Model\Tags\Models\Contracts\TagResponse[]**](TagResponse.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

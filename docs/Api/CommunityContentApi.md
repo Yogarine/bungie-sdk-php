@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **getCommunityContent**
-> \Bungie\Model\InlineResponse20010 getCommunityContent($mediaFilter, $page, $sort)
+> \Bungie\Model\InlineResponse20011 getCommunityContent($mediaFilter, $page, $sort)
 
 
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\Bungie\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommunityLiveStatuses**
-> \Bungie\Model\InlineResponse20058 getCommunityLiveStatuses($page, $partnershipType, $sort, $modeHash, $streamLocale)
+> \Bungie\Model\InlineResponse20059 getCommunityLiveStatuses($page, $partnershipType, $sort, $modeHash, $streamLocale)
 
 
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+[**\Bungie\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommunityLiveStatusesForClanmates**
-> \Bungie\Model\InlineResponse20058 getCommunityLiveStatusesForClanmates($page, $partnershipType, $sort)
+> \Bungie\Model\InlineResponse20059 getCommunityLiveStatusesForClanmates($page, $partnershipType, $sort)
 
 
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+[**\Bungie\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommunityLiveStatusesForFriends**
-> \Bungie\Model\InlineResponse20058 getCommunityLiveStatusesForFriends($page, $partnershipType, $sort)
+> \Bungie\Model\InlineResponse20059 getCommunityLiveStatusesForFriends($page, $partnershipType, $sort)
 
 
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+[**\Bungie\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getFeaturedCommunityLiveStatuses**
-> \Bungie\Model\InlineResponse20058 getFeaturedCommunityLiveStatuses($page, $partnershipType, $sort, $streamLocale)
+> \Bungie\Model\InlineResponse20059 getFeaturedCommunityLiveStatuses($page, $partnershipType, $sort, $streamLocale)
 
 
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+[**\Bungie\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStreamingStatusForMember**
-> \Bungie\Model\InlineResponse20059 getStreamingStatusForMember($membershipId, $membershipType, $partnershipType)
+> \Bungie\Model\InlineResponse20060 getStreamingStatusForMember($membershipId, $membershipType, $partnershipType)
 
 
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
+[**\Bungie\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
 
 ### Authorization
 

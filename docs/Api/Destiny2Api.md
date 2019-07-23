@@ -43,7 +43,7 @@ Method | HTTP request | Description
 
 
 # **awaGetActionToken**
-> \Bungie\Model\InlineResponse20057 awaGetActionToken($correlationId)
+> \Bungie\Model\InlineResponse20058 awaGetActionToken($correlationId)
 
 
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
+[**\Bungie\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **awaInitializeRequest**
-> \Bungie\Model\InlineResponse20056 awaInitializeRequest($awaPermissionRequested)
+> \Bungie\Model\InlineResponse20057 awaInitializeRequest($awaPermissionRequested)
 
 
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
+[**\Bungie\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **awaProvideAuthorizationResult**
-> \Bungie\Model\InlineResponse20021 awaProvideAuthorizationResult($awaUserResponse)
+> \Bungie\Model\InlineResponse20022 awaProvideAuthorizationResult($awaUserResponse)
 
 
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **equipItem**
-> \Bungie\Model\InlineResponse20021 equipItem($destinyItemActionRequest)
+> \Bungie\Model\InlineResponse20022 equipItem($destinyItemActionRequest)
 
 
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **equipItems**
-> \Bungie\Model\InlineResponse20042 equipItems($destinyItemSetActionRequest)
+> \Bungie\Model\InlineResponse20043 equipItems($destinyItemSetActionRequest)
 
 
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
+[**\Bungie\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
 
 ### Authorization
 
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getActivityHistory**
-> \Bungie\Model\InlineResponse20051 getActivityHistory($characterId, $destinyMembershipId, $membershipType, $count, $mode, $page)
+> \Bungie\Model\InlineResponse20052 getActivityHistory($characterId, $destinyMembershipId, $membershipType, $count, $mode, $page)
 
 
 
@@ -377,7 +377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
+[**\Bungie\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
 
 ### Authorization
 
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharacter**
-> \Bungie\Model\InlineResponse20035 getCharacter($characterId, $destinyMembershipId, $membershipType, $components)
+> \Bungie\Model\InlineResponse20036 getCharacter($characterId, $destinyMembershipId, $membershipType, $components)
 
 
 
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
+[**\Bungie\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
 
 ### Authorization
 
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getClanAggregateStats**
-> \Bungie\Model\InlineResponse20047 getClanAggregateStats($groupId, $modes)
+> \Bungie\Model\InlineResponse20048 getClanAggregateStats($groupId, $modes)
 
 
 
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
+[**\Bungie\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
 
 ### Authorization
 
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getClanLeaderboards**
-> \Bungie\Model\InlineResponse20046 getClanLeaderboards($groupId, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20047 getClanLeaderboards($groupId, $maxtop, $modes, $statid)
 
 
 
@@ -556,7 +556,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
+[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 
@@ -570,7 +570,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getClanWeeklyRewardState**
-> \Bungie\Model\InlineResponse20036 getClanWeeklyRewardState($groupId)
+> \Bungie\Model\InlineResponse20037 getClanWeeklyRewardState($groupId)
 
 
 
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
+[**\Bungie\Model\InlineResponse20037**](../Model/InlineResponse20037.md)
 
 ### Authorization
 
@@ -625,7 +625,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCollectibleNodeDetails**
-> \Bungie\Model\InlineResponse20041 getCollectibleNodeDetails($characterId, $collectiblePresentationNodeHash, $destinyMembershipId, $membershipType, $components)
+> \Bungie\Model\InlineResponse20042 getCollectibleNodeDetails($characterId, $collectiblePresentationNodeHash, $destinyMembershipId, $membershipType, $components)
 
 
 
@@ -674,7 +674,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
+[**\Bungie\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
 
 ### Authorization
 
@@ -688,7 +688,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDestinyAggregateActivityStats**
-> \Bungie\Model\InlineResponse20053 getDestinyAggregateActivityStats($characterId, $destinyMembershipId, $membershipType)
+> \Bungie\Model\InlineResponse20054 getDestinyAggregateActivityStats($characterId, $destinyMembershipId, $membershipType)
 
 
 
@@ -733,7 +733,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
+[**\Bungie\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
 
 ### Authorization
 
@@ -747,7 +747,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDestinyEntityDefinition**
-> \Bungie\Model\InlineResponse20031 getDestinyEntityDefinition($entityType, $hashIdentifier)
+> \Bungie\Model\InlineResponse20032 getDestinyEntityDefinition($entityType, $hashIdentifier)
 
 
 
@@ -790,7 +790,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
+[**\Bungie\Model\InlineResponse20032**](../Model/InlineResponse20032.md)
 
 ### Authorization
 
@@ -804,7 +804,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDestinyManifest**
-> \Bungie\Model\InlineResponse20030 getDestinyManifest()
+> \Bungie\Model\InlineResponse20031 getDestinyManifest()
 
 
 
@@ -841,7 +841,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\Bungie\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
 
 ### Authorization
 
@@ -855,7 +855,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getHistoricalStats**
-> \Bungie\Model\InlineResponse20049 getHistoricalStats($characterId, $destinyMembershipId, $membershipType, $dayend, $daystart, $groups, $modes, $periodType)
+> \Bungie\Model\InlineResponse20050 getHistoricalStats($characterId, $destinyMembershipId, $membershipType, $dayend, $daystart, $groups, $modes, $periodType)
 
 
 
@@ -880,8 +880,8 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 $characterId = 56; // int | The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters.
 $destinyMembershipId = 56; // int | The Destiny membershipId of the user to retrieve.
 $membershipType = 56; // int | A valid non-BungieNet membership type.
-$dayend = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Last day to return when daily stats are requested. Use the format YYYY-MM-DD.
-$daystart = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | First day to return when daily stats are requested. Use the format YYYY-MM-DD
+$dayend = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Last day to return when daily stats are requested. Use the format YYYY-MM-DD. Currently, we cannot allow more than 31 days of daily data to be requested in a single request.
+$daystart = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | First day to return when daily stats are requested. Use the format YYYY-MM-DD. Currently, we cannot allow more than 31 days of daily data to be requested in a single request.
 $groups = array(56); // int[] | Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals
 $modes = array(56); // int[] | Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
 $periodType = 56; // int | Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity
@@ -902,15 +902,15 @@ Name | Type | Description  | Notes
  **characterId** | **int**| The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters. |
  **destinyMembershipId** | **int**| The Destiny membershipId of the user to retrieve. |
  **membershipType** | **int**| A valid non-BungieNet membership type. |
- **dayend** | **\DateTime**| Last day to return when daily stats are requested. Use the format YYYY-MM-DD. | [optional]
- **daystart** | **\DateTime**| First day to return when daily stats are requested. Use the format YYYY-MM-DD | [optional]
+ **dayend** | **\DateTime**| Last day to return when daily stats are requested. Use the format YYYY-MM-DD. Currently, we cannot allow more than 31 days of daily data to be requested in a single request. | [optional]
+ **daystart** | **\DateTime**| First day to return when daily stats are requested. Use the format YYYY-MM-DD. Currently, we cannot allow more than 31 days of daily data to be requested in a single request. | [optional]
  **groups** | [**int[]**](../Model/int.md)| Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals | [optional]
  **modes** | [**int[]**](../Model/int.md)| Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited. | [optional]
  **periodType** | **int**| Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity | [optional]
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
+[**\Bungie\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
 
 ### Authorization
 
@@ -924,7 +924,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getHistoricalStatsDefinition**
-> \Bungie\Model\InlineResponse20045 getHistoricalStatsDefinition()
+> \Bungie\Model\InlineResponse20046 getHistoricalStatsDefinition()
 
 
 
@@ -961,7 +961,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20045**](../Model/InlineResponse20045.md)
+[**\Bungie\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
 
 ### Authorization
 
@@ -975,7 +975,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getHistoricalStatsForAccount**
-> \Bungie\Model\InlineResponse20050 getHistoricalStatsForAccount($destinyMembershipId, $membershipType, $groups)
+> \Bungie\Model\InlineResponse20051 getHistoricalStatsForAccount($destinyMembershipId, $membershipType, $groups)
 
 
 
@@ -1020,7 +1020,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
+[**\Bungie\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
 
 ### Authorization
 
@@ -1034,7 +1034,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getItem**
-> \Bungie\Model\InlineResponse20037 getItem($destinyMembershipId, $itemInstanceId, $membershipType, $components)
+> \Bungie\Model\InlineResponse20038 getItem($destinyMembershipId, $itemInstanceId, $membershipType, $components)
 
 
 
@@ -1081,7 +1081,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20037**](../Model/InlineResponse20037.md)
+[**\Bungie\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
 
 ### Authorization
 
@@ -1095,7 +1095,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLeaderboards**
-> \Bungie\Model\InlineResponse20046 getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20047 getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -1144,7 +1144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
+[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 
@@ -1158,7 +1158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLeaderboardsForCharacter**
-> \Bungie\Model\InlineResponse20046 getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20047 getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -1209,7 +1209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
+[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 
@@ -1223,7 +1223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLinkedProfiles**
-> \Bungie\Model\InlineResponse20033 getLinkedProfiles($membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20034 getLinkedProfiles($membershipId, $membershipType, $getAllMemberships)
 
 
 
@@ -1247,9 +1247,10 @@ $apiInstance = new Bungie\Api\Destiny2Api(
 );
 $membershipId = 56; // int | The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don't pass us a PSN membership ID and the XBox membership type, it's not going to work!
 $membershipType = 56; // int | The type for the membership whose linked Destiny accounts you want returned.
+$getAllMemberships = True; // bool | (optional) if set to 'true', all memberships regardless of whether they're obscured by overrides will be returned. Normal privacy restrictions on account linking will still apply no matter what.
 
 try {
-    $result = $apiInstance->getLinkedProfiles($membershipId, $membershipType);
+    $result = $apiInstance->getLinkedProfiles($membershipId, $membershipType, $getAllMemberships);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Destiny2Api->getLinkedProfiles: ', $e->getMessage(), PHP_EOL;
@@ -1263,10 +1264,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **membershipId** | **int**| The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don&#39;t pass us a PSN membership ID and the XBox membership type, it&#39;s not going to work! |
  **membershipType** | **int**| The type for the membership whose linked Destiny accounts you want returned. |
+ **getAllMemberships** | **bool**| (optional) if set to &#39;true&#39;, all memberships regardless of whether they&#39;re obscured by overrides will be returned. Normal privacy restrictions on account linking will still apply no matter what. | [optional]
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20033**](../Model/InlineResponse20033.md)
+[**\Bungie\Model\InlineResponse20034**](../Model/InlineResponse20034.md)
 
 ### Authorization
 
@@ -1280,7 +1282,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPostGameCarnageReport**
-> \Bungie\Model\InlineResponse20044 getPostGameCarnageReport($activityId)
+> \Bungie\Model\InlineResponse20045 getPostGameCarnageReport($activityId)
 
 
 
@@ -1321,7 +1323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
+[**\Bungie\Model\InlineResponse20045**](../Model/InlineResponse20045.md)
 
 ### Authorization
 
@@ -1335,7 +1337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProfile**
-> \Bungie\Model\InlineResponse20034 getProfile($destinyMembershipId, $membershipType, $components)
+> \Bungie\Model\InlineResponse20035 getProfile($destinyMembershipId, $membershipType, $components)
 
 
 
@@ -1380,7 +1382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20034**](../Model/InlineResponse20034.md)
+[**\Bungie\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
 
 ### Authorization
 
@@ -1394,7 +1396,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPublicMilestoneContent**
-> \Bungie\Model\InlineResponse20054 getPublicMilestoneContent($milestoneHash)
+> \Bungie\Model\InlineResponse20055 getPublicMilestoneContent($milestoneHash)
 
 
 
@@ -1435,7 +1437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
+[**\Bungie\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
 
 ### Authorization
 
@@ -1449,7 +1451,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPublicMilestones**
-> \Bungie\Model\InlineResponse20055 getPublicMilestones()
+> \Bungie\Model\InlineResponse20056 getPublicMilestones()
 
 
 
@@ -1486,7 +1488,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
+[**\Bungie\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
 
 ### Authorization
 
@@ -1500,7 +1502,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPublicVendors**
-> \Bungie\Model\InlineResponse20040 getPublicVendors($components)
+> \Bungie\Model\InlineResponse20041 getPublicVendors($components)
 
 
 
@@ -1541,7 +1543,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
+[**\Bungie\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
 
 ### Authorization
 
@@ -1555,7 +1557,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUniqueWeaponHistory**
-> \Bungie\Model\InlineResponse20052 getUniqueWeaponHistory($characterId, $destinyMembershipId, $membershipType)
+> \Bungie\Model\InlineResponse20053 getUniqueWeaponHistory($characterId, $destinyMembershipId, $membershipType)
 
 
 
@@ -1600,7 +1602,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
+[**\Bungie\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
 
 ### Authorization
 
@@ -1614,7 +1616,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getVendor**
-> \Bungie\Model\InlineResponse20039 getVendor($characterId, $destinyMembershipId, $membershipType, $vendorHash, $components)
+> \Bungie\Model\InlineResponse20040 getVendor($characterId, $destinyMembershipId, $membershipType, $vendorHash, $components)
 
 
 
@@ -1663,7 +1665,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
+[**\Bungie\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
 
 ### Authorization
 
@@ -1677,7 +1679,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getVendors**
-> \Bungie\Model\InlineResponse20038 getVendors($characterId, $destinyMembershipId, $membershipType, $components)
+> \Bungie\Model\InlineResponse20039 getVendors($characterId, $destinyMembershipId, $membershipType, $components)
 
 
 
@@ -1724,7 +1726,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
+[**\Bungie\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
 
 ### Authorization
 
@@ -1738,7 +1740,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **insertSocketPlug**
-> \Bungie\Model\InlineResponse20043 insertSocketPlug($destinyInsertPlugsActionRequest)
+> \Bungie\Model\InlineResponse20044 insertSocketPlug($destinyInsertPlugsActionRequest)
 
 
 
@@ -1781,7 +1783,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
+[**\Bungie\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
 
 ### Authorization
 
@@ -1795,7 +1797,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **pullFromPostmaster**
-> \Bungie\Model\InlineResponse20021 pullFromPostmaster($destinyPostmasterTransferRequest)
+> \Bungie\Model\InlineResponse20022 pullFromPostmaster($destinyPostmasterTransferRequest)
 
 
 
@@ -1838,7 +1840,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
 
 ### Authorization
 
@@ -1852,7 +1854,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportOffensivePostGameCarnageReportPlayer**
-> \Bungie\Model\InlineResponse20021 reportOffensivePostGameCarnageReportPlayer($activityId, $destinyReportOffensePgcrRequest)
+> \Bungie\Model\InlineResponse20022 reportOffensivePostGameCarnageReportPlayer($activityId, $destinyReportOffensePgcrRequest)
 
 
 
@@ -1897,7 +1899,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
 
 ### Authorization
 
@@ -1911,7 +1913,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchDestinyEntities**
-> \Bungie\Model\InlineResponse20048 searchDestinyEntities($searchTerm, $type, $page)
+> \Bungie\Model\InlineResponse20049 searchDestinyEntities($searchTerm, $type, $page)
 
 
 
@@ -1956,7 +1958,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
+[**\Bungie\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
 
 ### Authorization
 
@@ -1970,7 +1972,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchDestinyPlayer**
-> \Bungie\Model\InlineResponse20032 searchDestinyPlayer($displayName, $membershipType)
+> \Bungie\Model\InlineResponse20033 searchDestinyPlayer($displayName, $membershipType)
 
 
 
@@ -2013,7 +2015,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20032**](../Model/InlineResponse20032.md)
+[**\Bungie\Model\InlineResponse20033**](../Model/InlineResponse20033.md)
 
 ### Authorization
 
@@ -2027,7 +2029,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setItemLockState**
-> \Bungie\Model\InlineResponse20021 setItemLockState($destinyItemStateRequest)
+> \Bungie\Model\InlineResponse20022 setItemLockState($destinyItemStateRequest)
 
 
 
@@ -2070,7 +2072,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
 
 ### Authorization
 
@@ -2084,7 +2086,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **transferItem**
-> \Bungie\Model\InlineResponse20021 transferItem($destinyItemTransferRequest)
+> \Bungie\Model\InlineResponse20022 transferItem($destinyItemTransferRequest)
 
 
 
@@ -2127,7 +2129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
 
 ### Authorization
 

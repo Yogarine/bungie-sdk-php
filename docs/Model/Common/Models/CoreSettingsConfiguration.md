@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**environment** | **string** |  | [optional] 
 **systems** | [**map[string,\Bungie\Model\Common\Models\CoreSystem]**](CoreSystem.md) |  | [optional] 
 **ignoreReasons** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 **forumCategories** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
@@ -21,6 +22,7 @@ Name | Type | Description | Notes
 **clanBannerGonfalonDetailColors** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 **clanBannerStandards** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 **destiny2CoreSettings** | [**\Bungie\Model\Common\Models\Destiny2CoreSettings**](Destiny2CoreSettings.md) |  | [optional] 
+**emailSettings** | [**\Bungie\Model\User\EmailSettings**](EmailSettings.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

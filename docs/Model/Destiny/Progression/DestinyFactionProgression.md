@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **stepIndex** | **int** | Progressions define their levels in \&quot;steps\&quot;. Since the last step may be repeatable, the user may be at a higher level than the actual Step achieved in the progression. Not necessarily useful, but potentially interesting for those cruising the API. Relate this to the \&quot;steps\&quot; property of the DestinyProgression to see which step the user is on, if you care about that. (Note that this is Content Version dependent since it refers to indexes.) | [optional] 
 **progressToNextLevel** | **int** | The amount of progression (i.e. \&quot;Experience\&quot;) needed to reach the next level of this Progression. Jeez, progression is such an overloaded word. | [optional] 
 **nextLevelAt** | **int** | The total amount of progression (i.e. \&quot;Experience\&quot;) needed in order to reach the next level. | [optional] 
+**currentResetCount** | **int** | The number of resets of this progression you&#39;ve executed this season, if applicable to this progression. | [optional] 
+**seasonResets** | [**\Bungie\Model\Destiny\DestinyProgressionResetEntry[]**](DestinyProgressionResetEntry.md) | Information about historical resets of this progression, if there is any data for it. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
