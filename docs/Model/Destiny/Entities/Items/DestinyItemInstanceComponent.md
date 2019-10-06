@@ -13,6 +13,9 @@ Name | Type | Description | Notes
 **equipRequiredLevel** | **int** | If the item cannot be equipped until you reach a certain level, that level will be reflected here. | [optional] 
 **unlockHashesRequiredToEquip** | **int[]** | Sometimes, there are limitations to equipping that are represented by character-level flags called \&quot;unlocks\&quot;.  This is a list of flags that they need in order to equip the item that the character has not met. Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes. | [optional] 
 **cannotEquipReason** | **int** | If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn&#39;t equip the item. You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel. | [optional] 
+**breakerType** | **int** | If populated, this item has a breaker type corresponding to the given value. See DestinyBreakerTypeDefinition for more details. | [optional] 
+**breakerTypeHash** | **int** | If populated, this is the hash identifier for the item&#39;s breaker type. See DestinyBreakerTypeDefinition for more details. | [optional] 
+**energy** | [**\Bungie\Model\Destiny\Entities\Items\DestinyItemInstanceEnergy**](DestinyItemInstanceEnergy.md) | IF populated, this item supports Energy mechanics (i.e. Armor 2.0), and these are the current details of its energy type and available capacity to spend energy points. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

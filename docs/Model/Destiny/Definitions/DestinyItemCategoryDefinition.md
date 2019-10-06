@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **deprecated** | **bool** | If True, this category has been deprecated: it may have no items left, or there may be only legacy items that remain in it which are no longer relevant to the game. | [optional] 
 **shortTitle** | **string** | A shortened version of the title. The reason why we have this is because the Armory in German had titles that were too long to display in our UI, so these were localized abbreviated versions of those categories. The property still exists today, even though the Armory doesn&#39;t exist for D2... yet. | [optional] 
 **itemTypeRegex** | **string** | The janky regular expression we used against the item type to try and discern whether the item belongs to this category. | [optional] 
+**grantDestinyBreakerType** | **int** | If the item in question has this category, it also should have this breaker type. | [optional] 
 **plugCategoryIdentifier** | **string** | If the item is a plug, this is the identifier we expect to find associated with it if it is in this category. | [optional] 
 **itemTypeRegexNot** | **string** | If the item type matches this janky regex, it does *not* belong to this category. | [optional] 
 **originBucketIdentifier** | **string** | If the item belongs to this bucket, it does belong to this category. | [optional] 

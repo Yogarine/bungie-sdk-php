@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**destinyUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
+**destinyUserInfo** | [**\Bungie\Model\Fireteam\FireteamUserInfoCard**](FireteamUserInfoCard.md) |  | [optional] 
 **bungieNetUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
 **characterId** | **int** |  | [optional] 
 **dateJoined** | **\DateTime** |  | [optional] 

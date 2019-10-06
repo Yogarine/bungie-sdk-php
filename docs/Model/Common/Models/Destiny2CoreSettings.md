@@ -12,6 +12,9 @@ Name | Type | Description | Notes
 **ammoTypeHeavyIcon** | **string** |  | [optional] 
 **ammoTypeSpecialIcon** | **string** |  | [optional] 
 **ammoTypePrimaryIcon** | **string** |  | [optional] 
+**currentSeasonalArtifactHash** | **int** |  | [optional] 
+**currentSeasonHash** | **int** |  | [optional] 
+**futureSeasonHashes** | **int[]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

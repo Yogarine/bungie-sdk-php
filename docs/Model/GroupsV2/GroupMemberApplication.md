@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **resolvedByMembershipId** | **int** |  | [optional] 
 **requestMessage** | **string** |  | [optional] 
 **resolveMessage** | **string** |  | [optional] 
-**destinyUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
+**destinyUserInfo** | [**\Bungie\Model\GroupsV2\GroupUserInfoCard**](GroupUserInfoCard.md) |  | [optional] 
 **bungieNetUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

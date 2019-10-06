@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**index** | **int** |  | [optional] 
 **identifier** | **string** | A string identifier for the display category. | [optional] 
 **displayCategoryHash** | **int** |  | [optional] 
 **displayProperties** | [**\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition**](DestinyDisplayPropertiesDefinition.md) |  | [optional] 

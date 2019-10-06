@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **factionHash** | **int** | If the value exists, this is the hash identifier for the Faction that owns this Progression.  This is purely for convenience, if you&#39;re looking at a progression and want to know if and who it&#39;s related to in terms of Faction Reputation. | [optional] 
 **color** | [**\Bungie\Model\Destiny\Misc\DestinyColor**](DestinyColor.md) | The #RGB string value for the color related to this progression, if there is one. | [optional] 
 **rankIcon** | **string** | For progressions that have it, this is the rank icon we use in the Companion, displayed above the progressions&#39; rank value. | [optional] 
+**rewardItems** | [**\Bungie\Model\Destiny\Definitions\DestinyProgressionRewardItemQuantity[]**](DestinyProgressionRewardItemQuantity.md) |  | [optional] 
 **hash** | **int** | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. | [optional] 
 **index** | **int** | The index of the entity as it was found in the investment tables. | [optional] 
 **redacted** | **bool** | If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry! | [optional] 

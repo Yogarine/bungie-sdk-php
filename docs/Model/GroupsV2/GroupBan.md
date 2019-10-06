@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **dateExpires** | **\DateTime** |  | [optional] 
 **comment** | **string** |  | [optional] 
 **bungieNetUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
-**destinyUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
+**destinyUserInfo** | [**\Bungie\Model\GroupsV2\GroupUserInfoCard**](GroupUserInfoCard.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

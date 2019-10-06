@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Common\Models\CoreSettingsConfiguration**](CoreSettingsConfiguration.md) |  | [optional] 
+**response** | [**\Bungie\Model\GlobalAlert[]**](GlobalAlert.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

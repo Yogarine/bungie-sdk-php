@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **isOnline** | **bool** |  | [optional] 
 **lastOnlineStatusChange** | **int** |  | [optional] 
 **groupId** | **int** |  | [optional] 
-**destinyUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
+**destinyUserInfo** | [**\Bungie\Model\GroupsV2\GroupUserInfoCard**](GroupUserInfoCard.md) |  | [optional] 
 **bungieNetUserInfo** | [**\Bungie\Model\User\UserInfoCard**](UserInfoCard.md) |  | [optional] 
 **joinDate** | **\DateTime** |  | [optional] 
 

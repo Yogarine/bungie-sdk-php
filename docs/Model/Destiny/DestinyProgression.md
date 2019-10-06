@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **nextLevelAt** | **int** | The total amount of progression (i.e. \&quot;Experience\&quot;) needed in order to reach the next level. | [optional] 
 **currentResetCount** | **int** | The number of resets of this progression you&#39;ve executed this season, if applicable to this progression. | [optional] 
 **seasonResets** | [**\Bungie\Model\Destiny\DestinyProgressionResetEntry[]**](DestinyProgressionResetEntry.md) | Information about historical resets of this progression, if there is any data for it. | [optional] 
+**rewardItemStates** | **int[]** | Information about historical resets of this progression, if there is any data for it. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1502,7 +1502,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPotentialGroupsForMember**
-> \Bungie\Model\InlineResponse20029 getPotentialGroupsForMember($filter, $groupType, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20030 getPotentialGroupsForMember($filter, $groupType, $membershipId, $membershipType)
 
 
 
@@ -1549,7 +1549,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
+[**\Bungie\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
 
 ### Authorization
 
@@ -1734,7 +1734,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **individualGroupInvite**
-> \Bungie\Model\InlineResponse20030 individualGroupInvite($groupId, $membershipId, $membershipType, $groupApplicationRequest)
+> \Bungie\Model\InlineResponse20031 individualGroupInvite($groupId, $membershipId, $membershipType, $groupApplicationRequest)
 
 
 
@@ -1783,7 +1783,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\Bungie\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
 
 ### Authorization
 
@@ -1797,7 +1797,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **individualGroupInviteCancel**
-> \Bungie\Model\InlineResponse20030 individualGroupInviteCancel($groupId, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20031 individualGroupInviteCancel($groupId, $membershipId, $membershipType)
 
 
 
@@ -1844,7 +1844,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\Bungie\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
 
 ### Authorization
 
@@ -1919,7 +1919,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **recoverGroupForFounder**
-> \Bungie\Model\InlineResponse20028 recoverGroupForFounder($groupType, $membershipId, $membershipType)
+> \Bungie\Model\InlineResponse20029 recoverGroupForFounder($groupType, $membershipId, $membershipType)
 
 
 
@@ -1964,7 +1964,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
+[**\Bungie\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
 
 ### Authorization
 

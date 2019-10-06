@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **categoryIndex** | **int** | The index of the category in the original category definitions for the vendor. | [optional] 
-**categoryId** | **string** | The string identifier of the category. | [optional] 
 **sortValue** | **int** | Used in sorting items in vendors... but there&#39;s a lot more to it. Just go with the order provided in the itemIndexes property on the DestinyVendorCategoryComponent instead, it should be more reliable than trying to recalculate it yourself. | [optional] 
 **categoryHash** | **int** | The hashed identifier for the category. | [optional] 
 **quantityAvailable** | **int** | The amount of items that will be available when this category is shown. | [optional] 
