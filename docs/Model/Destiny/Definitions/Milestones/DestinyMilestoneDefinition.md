@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **displayProperties** | [**\Bungie\Model\Destiny\Definitions\Common\DestinyDisplayPropertiesDefinition**](DestinyDisplayPropertiesDefinition.md) |  | [optional] 
+**displayPreference** | **int** | A hint to the UI to indicate what to show as the display properties for this Milestone when showing \&quot;Live\&quot; milestone data. Feel free to show more than this if desired: this hint is meant to simplify our own UI, but it may prove useful to you as well. | [optional] 
 **image** | **string** | A custom image someone made just for the milestone. Isn&#39;t that special? | [optional] 
 **milestoneType** | **int** | An enumeration listing one of the possible types of milestones. Check out the DestinyMilestoneType enum for more info! | [optional] 
 **recruitable** | **bool** | If True, then the Milestone has been integrated with BNet&#39;s recruiting feature. | [optional] 

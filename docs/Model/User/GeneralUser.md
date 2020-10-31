@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 **profileBanExpire** | **\DateTime** |  | [optional] 
 **blizzardDisplayName** | **string** |  | [optional] 
 **steamDisplayName** | **string** |  | [optional] 
+**stadiaDisplayName** | **string** |  | [optional] 
+**twitchDisplayName** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

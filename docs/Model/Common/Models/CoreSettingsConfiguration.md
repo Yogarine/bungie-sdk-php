@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **clanBannerStandards** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 **destiny2CoreSettings** | [**\Bungie\Model\Common\Models\Destiny2CoreSettings**](Destiny2CoreSettings.md) |  | [optional] 
 **emailSettings** | [**\Bungie\Model\User\EmailSettings**](EmailSettings.md) |  | [optional] 
+**fireteamActivities** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

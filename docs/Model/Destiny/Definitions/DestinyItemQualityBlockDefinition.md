@@ -9,6 +9,9 @@ Name | Type | Description | Notes
 **infusionCategoryHash** | **int** | The hash identifier for the infusion. It does not map to a Definition entity.  DEPRECATED: Items can now have multiple infusion categories. Please use infusionCategoryHashes instead. | [optional] 
 **infusionCategoryHashes** | **int[]** | If any one of these hashes matches any value in another item&#39;s infusionCategoryHashes, the two can infuse with each other. | [optional] 
 **progressionLevelRequirementHash** | **int** | An item can refer to pre-set level requirements. They are defined in DestinyProgressionLevelRequirementDefinition, and you can use this hash to find the appropriate definition. | [optional] 
+**currentVersion** | **int** | The latest version available for this item. | [optional] 
+**versions** | [**\Bungie\Model\Destiny\Definitions\DestinyItemVersionDefinition[]**](DestinyItemVersionDefinition.md) | The list of versions available for this item. | [optional] 
+**displayVersionWatermarkIcons** | **string[]** | Icon overlays to denote the item version and power cap status. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

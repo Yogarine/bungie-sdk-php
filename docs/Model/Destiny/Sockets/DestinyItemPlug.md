@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**plugItemHash** | **int** | The hash identifier of the DestinyInventoryItemDefinition that represents this plug. | [optional] 
 **plugObjectives** | [**\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress[]**](DestinyObjectiveProgress.md) | Sometimes, Plugs may have objectives: these are often used for flavor and display purposes, but they can be used for any arbitrary purpose (both fortunately and unfortunately). Recently (with Season 2) they were expanded in use to be used as the \&quot;gating\&quot; for whether the plug can be inserted at all. For instance, a Plug might be tracking the number of PVP kills you have made. It will use the parent item&#39;s data about that tracking status to determine what to show, and will generally show it using the DestinyObjectiveDefinition&#39;s progressDescription property. Refer to the plug&#39;s itemHash and objective property for more information if you would like to display even more data. | [optional] 
+**plugItemHash** | **int** | The hash identifier of the DestinyInventoryItemDefinition that represents this plug. | [optional] 
 **canInsert** | **bool** | If true, this plug has met all of its insertion requirements. Big if true. | [optional] 
 **enabled** | **bool** | If true, this plug will provide its benefits while inserted. | [optional] 
 **insertFailIndexes** | **int[]** | If the plug cannot be inserted for some reason, this will have the indexes into the plug item definition&#39;s plug.insertionRules property, so you can show the reasons why it can&#39;t be inserted.  This list will be empty if the plug can be inserted. | [optional] 

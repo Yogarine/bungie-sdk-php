@@ -16,6 +16,9 @@ Name | Type | Description | Notes
 **expirationDate** | **\DateTime** | If the item can expire, this is the date at which it will/did expire. | [optional] 
 **isWrapper** | **bool** | If this is true, the object is actually a \&quot;wrapper\&quot; of the object it&#39;s representing. This means that it&#39;s not the actual item itself, but rather an item that must be \&quot;opened\&quot; in game before you have and can use the item.   Wrappers are an evolution of \&quot;bundles\&quot;, which give an easy way to let you preview the contents of what you purchased while still letting you get a refund before you \&quot;open\&quot; it. | [optional] 
 **tooltipNotificationIndexes** | **int[]** | If this is populated, it is a list of indexes into DestinyInventoryItemDefinition.tooltipNotifications for any special tooltip messages that need to be shown for this item. | [optional] 
+**metricHash** | **int** | The identifier for the currently-selected metric definition, to be displayed on the emblem nameplate. | [optional] 
+**metricObjective** | [**\Bungie\Model\Destiny\Quests\DestinyObjectiveProgress**](DestinyObjectiveProgress.md) | The objective progress for the currently-selected metric definition, to be displayed on the emblem nameplate. | [optional] 
+**versionNumber** | **int** | The version of this item, used to index into the versions list in the item definition quality block. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

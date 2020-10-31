@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Community\CommunityLiveStatus**](CommunityLiveStatus.md) |  | [optional] 
+**response** | [**\Bungie\Model\Trending\TrendingCategories**](TrendingCategories.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

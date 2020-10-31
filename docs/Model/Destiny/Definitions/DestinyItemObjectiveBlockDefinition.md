@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **questTypeIdentifier** | **string** | The identifier for the type of quest being performed, if any. Not associated with any fixed definition, yet. | [optional] 
 **questTypeHash** | **int** | A hashed value for the questTypeIdentifier, because apparently I like to be redundant. | [optional] 
 **perObjectiveDisplayProperties** | [**\Bungie\Model\Destiny\Definitions\DestinyObjectiveDisplayProperties[]**](DestinyObjectiveDisplayProperties.md) | One entry per Objective on the item, it will have related display information. | [optional] 
+**displayAsStatTracker** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

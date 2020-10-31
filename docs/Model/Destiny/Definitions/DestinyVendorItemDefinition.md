@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **expirationTooltip** | **string** | If this item can expire, this is the tooltip message to show with its expiration info. | [optional] 
 **redirectToSaleIndexes** | **int[]** | If this is populated, the purchase of this item should redirect to purchasing these other items instead. | [optional] 
 **socketOverrides** | [**\Bungie\Model\Destiny\Definitions\DestinyVendorItemSocketOverride[]**](DestinyVendorItemSocketOverride.md) |  | [optional] 
+**unpurchasable** | **bool** | If true, this item is some sort of dummy sale item that cannot actually be purchased. It may be a display only item, or some fluff left by a content designer for testing purposes, or something that got disabled because it was a terrible idea. You get the picture. We won&#39;t know *why* it can&#39;t be purchased, only that it can&#39;t be. Sorry.  This is also only whether it&#39;s unpurchasable as a static property according to game content. There are other reasons why an item may or may not be purchasable at runtime, so even if this isn&#39;t set to True you should trust the runtime value for this sale item over the static definition if this is unset. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

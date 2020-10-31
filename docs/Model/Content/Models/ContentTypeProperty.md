@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | [optional] 
+**rootPropertyName** | **string** |  | [optional] 
 **readableName** | **string** |  | [optional] 
 **value** | **string** |  | [optional] 
 **propertyDescription** | **string** |  | [optional] 

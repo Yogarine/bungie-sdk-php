@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **destinyActivity** | [**\Bungie\Model\Trending\TrendingEntryDestinyActivity**](TrendingEntryDestinyActivity.md) |  | [optional] 
 **destinyRitual** | [**\Bungie\Model\Trending\TrendingEntryDestinyRitual**](TrendingEntryDestinyRitual.md) |  | [optional] 
 **creation** | [**\Bungie\Model\Trending\TrendingEntryCommunityCreation**](TrendingEntryCommunityCreation.md) |  | [optional] 
-**stream** | [**\Bungie\Model\Trending\TrendingEntryCommunityStream**](TrendingEntryCommunityStream.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

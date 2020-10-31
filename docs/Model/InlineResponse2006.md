@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Partnerships\PublicPartnershipDetail[]**](PublicPartnershipDetail.md) |  | [optional] 
+**response** | [**\Bungie\Model\User\HardLinkedUserMembership**](HardLinkedUserMembership.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

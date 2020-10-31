@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getContentType**](ContentApi.md#getContentType) | **GET** /Content/GetContentType/{type}/ | 
 [**searchContentByTagAndType**](ContentApi.md#searchContentByTagAndType) | **GET** /Content/SearchContentByTagAndType/{tag}/{type}/{locale}/ | 
 [**searchContentWithText**](ContentApi.md#searchContentWithText) | **GET** /Content/Search/{locale}/ | 
-[**searchHelpArticles**](ContentApi.md#searchHelpArticles) | **GET** /Content/SearchHelpArticles/{searchtext}/{size} | 
+[**searchHelpArticles**](ContentApi.md#searchHelpArticles) | **GET** /Content/SearchHelpArticles/{searchtext}/{size}/ | 
 
 
 # **getContentById**

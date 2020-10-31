@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**canPurchase** | **bool** | If True, you can purchase from the Vendor.  Theoretically, Vendors can be restricted from selling items. In practice, none do that (yet?). | [optional] 
+**canPurchase** | **bool** | If True, you can purchase from the Vendor. | [optional] 
 **progression** | [**\Bungie\Model\Destiny\DestinyProgression**](DestinyProgression.md) | If the Vendor has a related Reputation, this is the Progression data that represents the character&#39;s Reputation level with this Vendor. | [optional] 
 **vendorLocationIndex** | **int** | An index into the vendor definition&#39;s \&quot;locations\&quot; property array, indicating which location they are at currently. If -1, then the vendor has no known location (and you may choose not to show them in your UI as a result. I mean, it&#39;s your bag honey) | [optional] 
 **seasonalRank** | **int** | If this vendor has a seasonal rank, this will be the calculated value of that rank. How nice is that? I mean, that&#39;s pretty sweeet. It&#39;s a whole 32 bit integer. | [optional] 

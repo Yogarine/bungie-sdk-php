@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getAvailableLocales**
-> \Bungie\Model\InlineResponse20068 getAvailableLocales()
+> \Bungie\Model\InlineResponse20067 getAvailableLocales()
 
 
 
@@ -47,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
+[**\Bungie\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommonSettings**
-> \Bungie\Model\InlineResponse20069 getCommonSettings()
+> \Bungie\Model\InlineResponse20068 getCommonSettings()
 
 
 
@@ -98,7 +98,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
+[**\Bungie\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGlobalAlerts**
-> \Bungie\Model\InlineResponse20070 getGlobalAlerts($includestreaming)
+> \Bungie\Model\InlineResponse20069 getGlobalAlerts($includestreaming)
 
 
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
+[**\Bungie\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
 
 ### Authorization
 

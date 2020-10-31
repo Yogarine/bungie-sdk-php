@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **renderData** | [**\Bungie\Model\DictionaryComponentResponseOfint32AndDestinyItemRenderComponent**](DictionaryComponentResponseOfint32AndDestinyItemRenderComponent.md) |  | [optional] 
 **stats** | [**\Bungie\Model\DictionaryComponentResponseOfint32AndDestinyItemStatsComponent**](DictionaryComponentResponseOfint32AndDestinyItemStatsComponent.md) |  | [optional] 
 **sockets** | [**\Bungie\Model\DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent**](DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent.md) |  | [optional] 
+**reusablePlugs** | [**\Bungie\Model\DictionaryComponentResponseOfint32AndDestinyItemReusablePlugsComponent**](DictionaryComponentResponseOfint32AndDestinyItemReusablePlugsComponent.md) |  | [optional] 
+**plugObjectives** | [**\Bungie\Model\DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent**](DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent.md) |  | [optional] 
 **talentGrids** | [**\Bungie\Model\DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent**](DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent.md) |  | [optional] 
 **plugStates** | [**\Bungie\Model\DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent**](DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent.md) |  | [optional] 
 **objectives** | [**\Bungie\Model\DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent**](DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent.md) |  | [optional] 

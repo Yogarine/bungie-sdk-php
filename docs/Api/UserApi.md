@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getBungieNetUserById**](UserApi.md#getBungieNetUserById) | **GET** /User/GetBungieNetUserById/{id}/ | 
 [**getMembershipDataById**](UserApi.md#getMembershipDataById) | **GET** /User/GetMembershipsById/{membershipId}/{membershipType}/ | 
 [**getMembershipDataForCurrentUser**](UserApi.md#getMembershipDataForCurrentUser) | **GET** /User/GetMembershipsForCurrentUser/ | 
-[**getPartnerships**](UserApi.md#getPartnerships) | **GET** /User/{membershipId}/Partnerships/ | 
+[**getMembershipFromHardLinkedCredential**](UserApi.md#getMembershipFromHardLinkedCredential) | **GET** /User/GetMembershipFromHardLinkedCredential/{crType}/{credential}/ | 
 [**searchUsers**](UserApi.md#searchUsers) | **GET** /User/SearchUsers/ | 
 
 
@@ -228,12 +228,12 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getPartnerships**
-> \Bungie\Model\InlineResponse2006 getPartnerships($membershipId)
+# **getMembershipFromHardLinkedCredential**
+> \Bungie\Model\InlineResponse2006 getMembershipFromHardLinkedCredential($credential, $crType)
 
 
 
-Returns a user's linked Partnerships.
+Gets any hard linked membership given a credential. Only works for credentials that are public (just SteamID64 right now). Cross Save aware.
 
 ### Example
 ```php
@@ -251,13 +251,14 @@ $apiInstance = new Bungie\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
-$membershipId = 56; // int | The ID of the member for whom partnerships should be returned.
+$credential = 'credential_example'; // string | The credential to look up. Must be a valid SteamID64.
+$crType = 56; // int | The credential type. 'SteamId' is the only valid value at present.
 
 try {
-    $result = $apiInstance->getPartnerships($membershipId);
+    $result = $apiInstance->getMembershipFromHardLinkedCredential($credential, $crType);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->getPartnerships: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->getMembershipFromHardLinkedCredential: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -266,7 +267,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **membershipId** | **int**| The ID of the member for whom partnerships should be returned. |
+ **credential** | **string**| The credential to look up. Must be a valid SteamID64. |
+ **crType** | **int**| The credential type. &#39;SteamId&#39; is the only valid value at present. |
 
 ### Return type
 
