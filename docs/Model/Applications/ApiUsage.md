@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**range** | [**\Bungie\Model\Dates\DateRange**](DateRange.md) | The date range for the data being reported. | [optional] 
 **apiCalls** | [**\Bungie\Model\Applications\Series[]**](Series.md) | Counts for on API calls made for the time range. | [optional] 
 **throttledRequests** | [**\Bungie\Model\Applications\Series[]**](Series.md) | Instances of blocked requests or requests that crossed the warn threshold during the time range. | [optional] 
 

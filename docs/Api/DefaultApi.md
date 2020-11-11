@@ -7,10 +7,11 @@ Method | HTTP request | Description
 [**getAvailableLocales**](DefaultApi.md#getAvailableLocales) | **GET** /GetAvailableLocales/ | 
 [**getCommonSettings**](DefaultApi.md#getCommonSettings) | **GET** /Settings/ | 
 [**getGlobalAlerts**](DefaultApi.md#getGlobalAlerts) | **GET** /GlobalAlerts/ | 
+[**getUserSystemOverrides**](DefaultApi.md#getUserSystemOverrides) | **GET** /UserSystemOverrides/ | 
 
 
 # **getAvailableLocales**
-> \Bungie\Model\InlineResponse20067 getAvailableLocales()
+> \Bungie\Model\InlineResponse20068 getAvailableLocales()
 
 
 
@@ -47,7 +48,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
+[**\Bungie\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
 
 ### Authorization
 
@@ -61,7 +62,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommonSettings**
-> \Bungie\Model\InlineResponse20068 getCommonSettings()
+> \Bungie\Model\InlineResponse20069 getCommonSettings()
 
 
 
@@ -98,7 +99,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
+[**\Bungie\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
 
 ### Authorization
 
@@ -112,7 +113,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGlobalAlerts**
-> \Bungie\Model\InlineResponse20069 getGlobalAlerts($includestreaming)
+> \Bungie\Model\InlineResponse20071 getGlobalAlerts($includestreaming)
 
 
 
@@ -153,7 +154,58 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
+[**\Bungie\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getUserSystemOverrides**
+> \Bungie\Model\InlineResponse20070 getUserSystemOverrides()
+
+
+
+Get the user-specific system overrides that should be respected alongside common systems.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+$apiInstance = new Bungie\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->getUserSystemOverrides();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->getUserSystemOverrides: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Bungie\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
 
 ### Authorization
 

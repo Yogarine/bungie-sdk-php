@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **getContentById**
-> \Bungie\Model\InlineResponse2008 getContentById($id, $locale, $head)
+> \Bungie\Model\InlineResponse2009 getContentById($id, $locale, $head)
 
 
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Bungie\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContentByTagAndType**
-> \Bungie\Model\InlineResponse2008 getContentByTagAndType($locale, $tag, $type, $head)
+> \Bungie\Model\InlineResponse2009 getContentByTagAndType($locale, $tag, $type, $head)
 
 
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Bungie\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContentType**
-> \Bungie\Model\InlineResponse2007 getContentType($type)
+> \Bungie\Model\InlineResponse2008 getContentType($type)
 
 
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
+[**\Bungie\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchContentByTagAndType**
-> \Bungie\Model\InlineResponse2009 searchContentByTagAndType($locale, $tag, $type, $currentpage, $head, $itemsperpage)
+> \Bungie\Model\InlineResponse20010 searchContentByTagAndType($locale, $tag, $type, $currentpage, $head, $itemsperpage)
 
 
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\Bungie\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchContentWithText**
-> \Bungie\Model\InlineResponse2009 searchContentWithText($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag)
+> \Bungie\Model\InlineResponse20010 searchContentWithText($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag)
 
 
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\Bungie\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
 
 ### Authorization
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchHelpArticles**
-> \Bungie\Model\InlineResponse20010 searchHelpArticles($searchtext, $size)
+> \Bungie\Model\InlineResponse20011 searchHelpArticles($searchtext, $size)
 
 
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\Bungie\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **getActivePrivateClanFireteamCount**
-> \Bungie\Model\InlineResponse20022 getActivePrivateClanFireteamCount($groupId)
+> \Bungie\Model\InlineResponse20023 getActivePrivateClanFireteamCount($groupId)
 
 
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+[**\Bungie\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAvailableClanFireteams**
-> \Bungie\Model\InlineResponse20064 getAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter)
+> \Bungie\Model\InlineResponse20065 getAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter)
 
 
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
+[**\Bungie\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getClanFireteam**
-> \Bungie\Model\InlineResponse20066 getClanFireteam($fireteamId, $groupId)
+> \Bungie\Model\InlineResponse20067 getClanFireteam($fireteamId, $groupId)
 
 
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20066**](../Model/InlineResponse20066.md)
+[**\Bungie\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMyClanFireteams**
-> \Bungie\Model\InlineResponse20065 getMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter)
+> \Bungie\Model\InlineResponse20066 getMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter)
 
 
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
+[**\Bungie\Model\InlineResponse20066**](../Model/InlineResponse20066.md)
 
 ### Authorization
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchPublicAvailableClanFireteams**
-> \Bungie\Model\InlineResponse20064 searchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter)
+> \Bungie\Model\InlineResponse20065 searchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter)
 
 
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
+[**\Bungie\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
 
 ### Authorization
 

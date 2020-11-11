@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAvailableThemes**](UserApi.md#getAvailableThemes) | **GET** /User/GetAvailableThemes/ | 
 [**getBungieNetUserById**](UserApi.md#getBungieNetUserById) | **GET** /User/GetBungieNetUserById/{id}/ | 
+[**getCredentialTypesForTargetAccount**](UserApi.md#getCredentialTypesForTargetAccount) | **GET** /User/GetCredentialTypesForTargetAccount/{membershipId}/ | 
 [**getMembershipDataById**](UserApi.md#getMembershipDataById) | **GET** /User/GetMembershipsById/{membershipId}/{membershipType}/ | 
 [**getMembershipDataForCurrentUser**](UserApi.md#getMembershipDataForCurrentUser) | **GET** /User/GetMembershipsForCurrentUser/ | 
 [**getMembershipFromHardLinkedCredential**](UserApi.md#getMembershipFromHardLinkedCredential) | **GET** /User/GetMembershipFromHardLinkedCredential/{crType}/{credential}/ | 
@@ -13,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **getAvailableThemes**
-> \Bungie\Model\InlineResponse2004 getAvailableThemes()
+> \Bungie\Model\InlineResponse2005 getAvailableThemes()
 
 
 
@@ -50,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Bungie\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -118,8 +119,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getCredentialTypesForTargetAccount**
+> \Bungie\Model\InlineResponse2004 getCredentialTypesForTargetAccount($membershipId)
+
+
+
+Returns a list of credential types attached to the requested account
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+$apiInstance = new Bungie\Api\UserApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$membershipId = 56; // int | The user's membership id
+
+try {
+    $result = $apiInstance->getCredentialTypesForTargetAccount($membershipId);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->getCredentialTypesForTargetAccount: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **membershipId** | **int**| The user&#39;s membership id |
+
+### Return type
+
+[**\Bungie\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getMembershipDataById**
-> \Bungie\Model\InlineResponse2005 getMembershipDataById($membershipId, $membershipType)
+> \Bungie\Model\InlineResponse2006 getMembershipDataById($membershipId, $membershipType)
 
 
 
@@ -162,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Bungie\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
 
 ### Authorization
 
@@ -176,7 +232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMembershipDataForCurrentUser**
-> \Bungie\Model\InlineResponse2005 getMembershipDataForCurrentUser()
+> \Bungie\Model\InlineResponse2006 getMembershipDataForCurrentUser()
 
 
 
@@ -215,7 +271,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Bungie\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
 
 ### Authorization
 
@@ -229,7 +285,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMembershipFromHardLinkedCredential**
-> \Bungie\Model\InlineResponse2006 getMembershipFromHardLinkedCredential($credential, $crType)
+> \Bungie\Model\InlineResponse2007 getMembershipFromHardLinkedCredential($credential, $crType)
 
 
 
@@ -272,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\Bungie\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
 
 ### Authorization
 

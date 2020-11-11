@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **setIsFeatured** | **bool** | If true, the UI should treat this quest as \&quot;featured\&quot; | [optional] 
 **setType** | **string** | A string identifier we can use to attempt to identify the category of the Quest. | [optional] 
 **questLineName** | **string** | The name of the quest line that this quest step is a part of. | [optional] 
+**questLineDescription** | **string** | The description of the quest line that this quest step is a part of. | [optional] 
+**questStepSummary** | **string** | An additional summary of this step in the quest line. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **screenStyle** | **int** | A hint for how to display this presentation node when it&#39;s shown in its own detail screen. | [optional] 
 **requirements** | [**\Bungie\Model\Destiny\Definitions\Presentation\DestinyPresentationNodeRequirementsBlock**](DestinyPresentationNodeRequirementsBlock.md) | The requirements for being able to interact with this presentation node and its children. | [optional] 
 **disableChildSubscreenNavigation** | **bool** | If this presentation node has children, but the game doesn&#39;t let you inspect the details of those children, that is indicated here. | [optional] 
+**maxCategoryRecordScore** | **int** |  | [optional] 
 **presentationNodeType** | **int** |  | [optional] 
 **traitIds** | **string[]** |  | [optional] 
 **traitHashes** | **int[]** |  | [optional] 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **applyMissingPartnerOffersWithoutClaim**
-> \Bungie\Model\InlineResponse20017 applyMissingPartnerOffersWithoutClaim($partnerApplicationId, $targetBnetMembershipId)
+> \Bungie\Model\InlineResponse20018 applyMissingPartnerOffersWithoutClaim($partnerApplicationId, $targetBnetMembershipId)
 
 
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
+[**\Bungie\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **claimPartnerOffer**
-> \Bungie\Model\InlineResponse20017 claimPartnerOffer($partnerOfferClaimRequest)
+> \Bungie\Model\InlineResponse20018 claimPartnerOffer($partnerOfferClaimRequest)
 
 
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
+[**\Bungie\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPartnerOfferSkuHistory**
-> \Bungie\Model\InlineResponse20032 getPartnerOfferSkuHistory($partnerApplicationId, $targetBnetMembershipId)
+> \Bungie\Model\InlineResponse20033 getPartnerOfferSkuHistory($partnerApplicationId, $targetBnetMembershipId)
 
 
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20032**](../Model/InlineResponse20032.md)
+[**\Bungie\Model\InlineResponse20033**](../Model/InlineResponse20033.md)
 
 ### Authorization
 

@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**applicationType** | **int** |  | [optional] 
 **applicationId** | **int** | Unique ID assigned to the application | [optional] 
 **name** | **string** | Name of the application | [optional] 
 **redirectUrl** | **string** | URL used to pass the user&#39;s authorization code to the application | [optional] 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Entities\EntityActionResult[]**](EntityActionResult.md) |  | [optional] 
+**response** | [**\Bungie\Model\SearchResultOfGroupMemberApplication**](SearchResultOfGroupMemberApplication.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

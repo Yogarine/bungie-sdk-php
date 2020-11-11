@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\User\HardLinkedUserMembership**](HardLinkedUserMembership.md) |  | [optional] 
+**response** | [**\Bungie\Model\User\UserMembershipData**](UserMembershipData.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

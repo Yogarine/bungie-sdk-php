@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Config\UserTheme[]**](UserTheme.md) |  | [optional] 
+**response** | [**\Bungie\Model\User\Models\GetCredentialTypesForAccountResponse[]**](GetCredentialTypesForAccountResponse.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 
