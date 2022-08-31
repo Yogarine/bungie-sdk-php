@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **displayProperties** | [**\Bungie\Model\Destiny\Definitions\DestinyVendorDisplayPropertiesDefinition**](DestinyVendorDisplayPropertiesDefinition.md) |  | [optional] 
+**vendorProgressionType** | **int** | The type of reward progression that this vendor has. Default - The original rank progression from token redemption. Ritual - Progression from ranks in ritual content. For example: Crucible (Shaxx), Gambit (Drifter), and Battlegrounds (War Table). | [optional] 
 **buyString** | **string** | If the vendor has a custom localized string describing the \&quot;buy\&quot; action, that is returned here. | [optional] 
 **sellString** | **string** | Ditto for selling. Not that you can sell items to a vendor anymore. Will it come back? Who knows. The string&#39;s still there. | [optional] 
 **displayItemHash** | **int** | If the vendor has an item that should be displayed as the \&quot;featured\&quot; item, this is the hash identifier for that DestinyVendorItemDefinition.  Apparently this is usually a related currency, like a reputation token. But it need not be restricted to that. | [optional] 

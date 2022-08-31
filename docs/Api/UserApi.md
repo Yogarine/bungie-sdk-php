@@ -10,7 +10,9 @@ Method | HTTP request | Description
 [**getMembershipDataById**](UserApi.md#getMembershipDataById) | **GET** /User/GetMembershipsById/{membershipId}/{membershipType}/ | 
 [**getMembershipDataForCurrentUser**](UserApi.md#getMembershipDataForCurrentUser) | **GET** /User/GetMembershipsForCurrentUser/ | 
 [**getMembershipFromHardLinkedCredential**](UserApi.md#getMembershipFromHardLinkedCredential) | **GET** /User/GetMembershipFromHardLinkedCredential/{crType}/{credential}/ | 
-[**searchUsers**](UserApi.md#searchUsers) | **GET** /User/SearchUsers/ | 
+[**getSanitizedPlatformDisplayNames**](UserApi.md#getSanitizedPlatformDisplayNames) | **GET** /User/GetSanitizedPlatformDisplayNames/{membershipId}/ | 
+[**searchByGlobalNamePost**](UserApi.md#searchByGlobalNamePost) | **POST** /User/Search/GlobalName/{page}/ | 
+[**searchByGlobalNamePrefix**](UserApi.md#searchByGlobalNamePrefix) | **GET** /User/Search/Prefix/{displayNamePrefix}/{page}/ | 
 
 
 # **getAvailableThemes**
@@ -341,12 +343,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **searchUsers**
-> \Bungie\Model\InlineResponse2003 searchUsers($q)
+# **getSanitizedPlatformDisplayNames**
+> \Bungie\Model\InlineResponse2003 getSanitizedPlatformDisplayNames($membershipId)
 
 
 
-Returns a list of possible users based on the search string
+Gets a list of all display names linked to this membership id but sanitized (profanity filtered). Obeys all visibility rules of calling user and is heavily cached.
 
 ### Example
 ```php
@@ -364,13 +366,13 @@ $apiInstance = new Bungie\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
-$q = 'q_example'; // string | The search string.
+$membershipId = 56; // int | The requested membership id to load.
 
 try {
-    $result = $apiInstance->searchUsers($q);
+    $result = $apiInstance->getSanitizedPlatformDisplayNames($membershipId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->searchUsers: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->getSanitizedPlatformDisplayNames: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -379,11 +381,125 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **string**| The search string. | [optional]
+ **membershipId** | **int**| The requested membership id to load. |
 
 ### Return type
 
 [**\Bungie\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **searchByGlobalNamePost**
+> \Bungie\Model\InlineResponse2008 searchByGlobalNamePost($page, $userSearchPrefixRequest)
+
+
+
+Given the prefix of a global display name, returns all users who share that name.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+$apiInstance = new Bungie\Api\UserApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$page = 56; // int | The zero-based page of results you desire.
+$userSearchPrefixRequest = new UserSearchPrefixRequest(); // \Bungie\Model\User\UserSearchPrefixRequest | 
+
+try {
+    $result = $apiInstance->searchByGlobalNamePost($page, $userSearchPrefixRequest);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->searchByGlobalNamePost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| The zero-based page of results you desire. |
+ **userSearchPrefixRequest** | [**\Bungie\Model\User\UserSearchPrefixRequest**](../Model/UserSearchPrefixRequest.md)|  |
+
+### Return type
+
+[**\Bungie\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **searchByGlobalNamePrefix**
+> \Bungie\Model\InlineResponse2008 searchByGlobalNamePrefix($displayNamePrefix, $page)
+
+
+
+[OBSOLETE] Do not use this to search users, use SearchByGlobalNamePost instead.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+$apiInstance = new Bungie\Api\UserApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$displayNamePrefix = 'displayNamePrefix_example'; // string | The display name prefix you're looking for.
+$page = 56; // int | The zero-based page of results you desire.
+
+try {
+    $result = $apiInstance->searchByGlobalNamePrefix($displayNamePrefix, $page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->searchByGlobalNamePrefix: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **displayNamePrefix** | **string**| The display name prefix you&#39;re looking for. |
+ **page** | **int**| The zero-based page of results you desire. |
+
+### Return type
+
+[**\Bungie\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
 
 ### Authorization
 

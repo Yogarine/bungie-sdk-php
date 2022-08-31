@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **getAvailableLocales**
-> \Bungie\Model\InlineResponse20068 getAvailableLocales()
+> \Bungie\Model\InlineResponse20076 getAvailableLocales()
 
 
 
@@ -48,7 +48,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
+[**\Bungie\Model\InlineResponse20076**](../Model/InlineResponse20076.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommonSettings**
-> \Bungie\Model\InlineResponse20069 getCommonSettings()
+> \Bungie\Model\InlineResponse20077 getCommonSettings()
 
 
 
@@ -99,7 +99,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
+[**\Bungie\Model\InlineResponse20077**](../Model/InlineResponse20077.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGlobalAlerts**
-> \Bungie\Model\InlineResponse20071 getGlobalAlerts($includestreaming)
+> \Bungie\Model\InlineResponse20079 getGlobalAlerts($includestreaming)
 
 
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
+[**\Bungie\Model\InlineResponse20079**](../Model/InlineResponse20079.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserSystemOverrides**
-> \Bungie\Model\InlineResponse20070 getUserSystemOverrides()
+> \Bungie\Model\InlineResponse20078 getUserSystemOverrides()
 
 
 
@@ -205,7 +205,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
+[**\Bungie\Model\InlineResponse20078**](../Model/InlineResponse20078.md)
 
 ### Authorization
 

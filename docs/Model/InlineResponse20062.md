@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Trending\TrendingCategories**](TrendingCategories.md) |  | [optional] 
+**response** | [**\Bungie\Model\Destiny\HistoricalStats\DestinyAggregateActivityResults**](DestinyAggregateActivityResults.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

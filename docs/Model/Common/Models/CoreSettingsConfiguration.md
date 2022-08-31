@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **ignoreReasons** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 **forumCategories** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 **groupAvatars** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
+**defaultGroupTheme** | [**\Bungie\Model\Common\Models\CoreSetting**](CoreSetting.md) |  | [optional] 
 **destinyMembershipTypes** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 **recruitmentPlatformTags** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 
 **recruitmentMiscTags** | [**\Bungie\Model\Common\Models\CoreSetting[]**](CoreSetting.md) |  | [optional] 

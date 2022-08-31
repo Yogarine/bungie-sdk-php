@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\GlobalAlert[]**](GlobalAlert.md) |  | [optional] 
+**response** | [**\Bungie\Model\SearchResultOfFireteamResponse**](SearchResultOfFireteamResponse.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

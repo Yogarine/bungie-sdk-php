@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **statusChanged** | **\DateTime** | Date the application status last changed. | [optional] 
 **firstPublished** | **\DateTime** | Date the first time the application status entered the &#39;Public&#39; status. | [optional] 
 **team** | [**\Bungie\Model\Applications\ApplicationDeveloper[]**](ApplicationDeveloper.md) | List of team members who manage this application on Bungie.net. Will always consist of at least the application owner. | [optional] 
+**overrideAuthorizeViewName** | **string** | An optional override for the Authorize view name. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

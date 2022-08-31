@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **expiredInActivityMessage** | **string** | If the item expires while playing in an activity, we show a different message. | [optional] 
 **expiredInOrbitMessage** | **string** | If the item expires in orbit, we show a... more different message. (\&quot;Consummate V&#39;s, consummate!\&quot;) | [optional] 
 **suppressExpirationWhenObjectivesComplete** | **bool** |  | [optional] 
+**recipeItemHash** | **int** | A reference to the associated crafting &#39;recipe&#39; item definition, if this item can be crafted. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

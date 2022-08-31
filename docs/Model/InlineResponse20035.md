@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Destiny\Definitions\DestinyDefinition**](DestinyDefinition.md) |  | [optional] 
+**response** | [**\Bungie\Model\Tokens\PartnerOfferSkuHistoryResponse[]**](PartnerOfferSkuHistoryResponse.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

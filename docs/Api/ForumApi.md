@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **getCoreTopicsPaged**
-> \Bungie\Model\InlineResponse20012 getCoreTopicsPaged($categoryFilter, $page, $quickDate, $sort, $locales)
+> \Bungie\Model\InlineResponse20014 getCoreTopicsPaged($categoryFilter, $page, $quickDate, $sort, $locales)
 
 
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getForumTagSuggestions**
-> \Bungie\Model\InlineResponse20014 getForumTagSuggestions($partialtag)
+> \Bungie\Model\InlineResponse20016 getForumTagSuggestions($partialtag)
 
 
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
+[**\Bungie\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPoll**
-> \Bungie\Model\InlineResponse20012 getPoll($topicId)
+> \Bungie\Model\InlineResponse20014 getPoll($topicId)
 
 
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPostAndParent**
-> \Bungie\Model\InlineResponse20012 getPostAndParent($childPostId, $showbanned)
+> \Bungie\Model\InlineResponse20014 getPostAndParent($childPostId, $showbanned)
 
 
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPostAndParentAwaitingApproval**
-> \Bungie\Model\InlineResponse20012 getPostAndParentAwaitingApproval($childPostId, $showbanned)
+> \Bungie\Model\InlineResponse20014 getPostAndParentAwaitingApproval($childPostId, $showbanned)
 
 
 
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPostsThreadedPaged**
-> \Bungie\Model\InlineResponse20012 getPostsThreadedPaged($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned)
+> \Bungie\Model\InlineResponse20014 getPostsThreadedPaged($getParentPost, $page, $pageSize, $parentPostId, $replySize, $rootThreadMode, $sortMode, $showbanned)
 
 
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPostsThreadedPagedFromChild**
-> \Bungie\Model\InlineResponse20012 getPostsThreadedPagedFromChild($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned)
+> \Bungie\Model\InlineResponse20014 getPostsThreadedPagedFromChild($childPostId, $page, $pageSize, $replySize, $rootThreadMode, $sortMode, $showbanned)
 
 
 
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecruitmentThreadSummaries**
-> \Bungie\Model\InlineResponse20015 getRecruitmentThreadSummaries($requestBody)
+> \Bungie\Model\InlineResponse20017 getRecruitmentThreadSummaries($requestBody)
 
 
 
@@ -481,7 +481,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
+[**\Bungie\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
 
 ### Authorization
 
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTopicForContent**
-> \Bungie\Model\InlineResponse20013 getTopicForContent($contentId)
+> \Bungie\Model\InlineResponse20015 getTopicForContent($contentId)
 
 
 
@@ -536,7 +536,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
+[**\Bungie\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
 
 ### Authorization
 
@@ -550,7 +550,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTopicsPaged**
-> \Bungie\Model\InlineResponse20012 getTopicsPaged($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring)
+> \Bungie\Model\InlineResponse20014 getTopicsPaged($categoryFilter, $group, $page, $pageSize, $quickDate, $sort, $locales, $tagstring)
 
 
 
@@ -605,7 +605,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 

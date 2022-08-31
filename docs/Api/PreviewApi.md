@@ -10,10 +10,11 @@ Method | HTTP request | Description
 [**getLeaderboardsForCharacter**](PreviewApi.md#getLeaderboardsForCharacter) | **GET** /Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/ | 
 [**getPublicVendors**](PreviewApi.md#getPublicVendors) | **GET** /Destiny2/Vendors/ | 
 [**insertSocketPlug**](PreviewApi.md#insertSocketPlug) | **POST** /Destiny2/Actions/Items/InsertSocketPlug/ | 
+[**insertSocketPlugFree**](PreviewApi.md#insertSocketPlugFree) | **POST** /Destiny2/Actions/Items/InsertSocketPlugFree/ | 
 
 
 # **getClanAggregateStats**
-> \Bungie\Model\InlineResponse20051 getClanAggregateStats($groupId, $modes)
+> \Bungie\Model\InlineResponse20056 getClanAggregateStats($groupId, $modes)
 
 
 
@@ -56,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
+[**\Bungie\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
 
 ### Authorization
 
@@ -70,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getClanLeaderboards**
-> \Bungie\Model\InlineResponse20050 getClanLeaderboards($groupId, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20055 getClanLeaderboards($groupId, $maxtop, $modes, $statid)
 
 
 
@@ -117,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
+[**\Bungie\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
 
 ### Authorization
 
@@ -131,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLeaderboards**
-> \Bungie\Model\InlineResponse20050 getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20055 getLeaderboards($destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -180,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
+[**\Bungie\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
 
 ### Authorization
 
@@ -194,7 +195,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLeaderboardsForCharacter**
-> \Bungie\Model\InlineResponse20050 getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
+> \Bungie\Model\InlineResponse20055 getLeaderboardsForCharacter($characterId, $destinyMembershipId, $membershipType, $maxtop, $modes, $statid)
 
 
 
@@ -245,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
+[**\Bungie\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
 
 ### Authorization
 
@@ -259,7 +260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPublicVendors**
-> \Bungie\Model\InlineResponse20044 getPublicVendors($components)
+> \Bungie\Model\InlineResponse20049 getPublicVendors($components)
 
 
 
@@ -300,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
+[**\Bungie\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
 
 ### Authorization
 
@@ -314,7 +315,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **insertSocketPlug**
-> \Bungie\Model\InlineResponse20047 insertSocketPlug($destinyInsertPlugsActionRequest)
+> \Bungie\Model\InlineResponse20052 insertSocketPlug($destinyInsertPlugsActionRequest)
 
 
 
@@ -357,7 +358,64 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
+[**\Bungie\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **insertSocketPlugFree**
+> \Bungie\Model\InlineResponse20052 insertSocketPlugFree($destinyInsertPlugsFreeActionRequest)
+
+
+
+Insert a 'free' plug into an item's socket. This does not require 'Advanced Write Action' authorization and is available to 3rd-party apps, but will only work on 'free and reversible' socket actions (Perks, Armor Mods, Shaders, Ornaments, etc.). You must have a valid Destiny Account, and the character must either be in a social space, in orbit, or offline.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+// Configure OAuth2 access token for authorization: oauth2
+$config = Bungie\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Bungie\Api\PreviewApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$destinyInsertPlugsFreeActionRequest = new DestinyInsertPlugsFreeActionRequest(); // \Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsFreeActionRequest | 
+
+try {
+    $result = $apiInstance->insertSocketPlugFree($destinyInsertPlugsFreeActionRequest);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PreviewApi->insertSocketPlugFree: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destinyInsertPlugsFreeActionRequest** | [**\Bungie\Model\Destiny\Requests\Actions\DestinyInsertPlugsFreeActionRequest**](../Model/DestinyInsertPlugsFreeActionRequest.md)|  |
+
+### Return type
+
+[**\Bungie\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
 
 ### Authorization
 

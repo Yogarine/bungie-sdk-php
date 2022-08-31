@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **objectives** | [**\Bungie\Model\DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent**](DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent.md) |  | [optional] 
+**perks** | [**\Bungie\Model\DictionaryComponentResponseOfint64AndDestinyItemPerksComponent**](DictionaryComponentResponseOfint64AndDestinyItemPerksComponent.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

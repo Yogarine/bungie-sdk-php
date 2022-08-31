@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Destiny\Milestones\DestinyMilestoneContent**](DestinyMilestoneContent.md) |  | [optional] 
+**response** | [**map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyHistoricalStatsByPeriod]**](DestinyHistoricalStatsByPeriod.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

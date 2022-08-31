@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\SearchResultOfFireteamResponse**](SearchResultOfFireteamResponse.md) |  | [optional] 
+**response** | [**\Bungie\Model\Destiny\Advanced\AwaAuthorizationResult**](AwaAuthorizationResult.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

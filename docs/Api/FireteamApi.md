@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **getActivePrivateClanFireteamCount**
-> \Bungie\Model\InlineResponse20023 getActivePrivateClanFireteamCount($groupId)
+> \Bungie\Model\InlineResponse20025 getActivePrivateClanFireteamCount($groupId)
 
 
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
+[**\Bungie\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAvailableClanFireteams**
-> \Bungie\Model\InlineResponse20065 getAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter)
+> \Bungie\Model\InlineResponse20070 getAvailableClanFireteams($activityType, $dateRange, $groupId, $page, $platform, $publicOnly, $slotFilter, $langFilter)
 
 
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
+[**\Bungie\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
 
 ### Authorization
 
@@ -140,11 +140,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getClanFireteam**
-> \Bungie\Model\InlineResponse20067 getClanFireteam($fireteamId, $groupId)
+> \Bungie\Model\InlineResponse20072 getClanFireteam($fireteamId, $groupId)
 
 
 
-Gets a specific clan fireteam.
+Gets a specific fireteam.
 
 ### Example
 ```php
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
+[**\Bungie\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
 
 ### Authorization
 
@@ -199,11 +199,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMyClanFireteams**
-> \Bungie\Model\InlineResponse20066 getMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter)
+> \Bungie\Model\InlineResponse20071 getMyClanFireteams($groupId, $includeClosed, $page, $platform, $groupFilter, $langFilter)
 
 
 
-Gets a listing of all clan fireteams that caller is an applicant, a member, or an alternate of.
+Gets a listing of all fireteams that caller is an applicant, a member, or an alternate of.
 
 ### Example
 ```php
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20066**](../Model/InlineResponse20066.md)
+[**\Bungie\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
 
 ### Authorization
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchPublicAvailableClanFireteams**
-> \Bungie\Model\InlineResponse20065 searchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter)
+> \Bungie\Model\InlineResponse20070 searchPublicAvailableClanFireteams($activityType, $dateRange, $page, $platform, $slotFilter, $langFilter)
 
 
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
+[**\Bungie\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
 
 ### Authorization
 

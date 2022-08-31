@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\User\UserInfoCard[]**](UserInfoCard.md) |  | [optional] 
+**response** | [**\Bungie\Model\Tokens\PartnerRewardHistoryResponse**](PartnerRewardHistoryResponse.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

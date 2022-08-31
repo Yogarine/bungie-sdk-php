@@ -7,13 +7,14 @@ Method | HTTP request | Description
 [**getContentById**](ContentApi.md#getContentById) | **GET** /Content/GetContentById/{id}/{locale}/ | 
 [**getContentByTagAndType**](ContentApi.md#getContentByTagAndType) | **GET** /Content/GetContentByTagAndType/{tag}/{type}/{locale}/ | 
 [**getContentType**](ContentApi.md#getContentType) | **GET** /Content/GetContentType/{type}/ | 
+[**rssNewsArticles**](ContentApi.md#rssNewsArticles) | **GET** /Content/Rss/NewsArticles/{pageToken}/ | 
 [**searchContentByTagAndType**](ContentApi.md#searchContentByTagAndType) | **GET** /Content/SearchContentByTagAndType/{tag}/{type}/{locale}/ | 
 [**searchContentWithText**](ContentApi.md#searchContentWithText) | **GET** /Content/Search/{locale}/ | 
 [**searchHelpArticles**](ContentApi.md#searchHelpArticles) | **GET** /Content/SearchHelpArticles/{searchtext}/{size}/ | 
 
 
 # **getContentById**
-> \Bungie\Model\InlineResponse2009 getContentById($id, $locale, $head)
+> \Bungie\Model\InlineResponse20010 getContentById($id, $locale, $head)
 
 
 
@@ -58,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\Bungie\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
 
 ### Authorization
 
@@ -72,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContentByTagAndType**
-> \Bungie\Model\InlineResponse2009 getContentByTagAndType($locale, $tag, $type, $head)
+> \Bungie\Model\InlineResponse20010 getContentByTagAndType($locale, $tag, $type, $head)
 
 
 
@@ -119,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\Bungie\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
 
 ### Authorization
 
@@ -133,7 +134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContentType**
-> \Bungie\Model\InlineResponse2008 getContentType($type)
+> \Bungie\Model\InlineResponse2009 getContentType($type)
 
 
 
@@ -174,7 +175,62 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Bungie\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **rssNewsArticles**
+> \Bungie\Model\InlineResponse20013 rssNewsArticles($pageToken)
+
+
+
+Returns a JSON string response that is the RSS feed for news articles.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+$config = Bungie\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+$apiInstance = new Bungie\Api\ContentApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$pageToken = 'pageToken_example'; // string | Zero-based pagination token for paging through result sets.
+
+try {
+    $result = $apiInstance->rssNewsArticles($pageToken);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContentApi->rssNewsArticles: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageToken** | **string**| Zero-based pagination token for paging through result sets. |
+
+### Return type
+
+[**\Bungie\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
 
 ### Authorization
 
@@ -188,7 +244,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchContentByTagAndType**
-> \Bungie\Model\InlineResponse20010 searchContentByTagAndType($locale, $tag, $type, $currentpage, $head, $itemsperpage)
+> \Bungie\Model\InlineResponse20011 searchContentByTagAndType($locale, $tag, $type, $currentpage, $head, $itemsperpage)
 
 
 
@@ -239,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\Bungie\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 
@@ -253,7 +309,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchContentWithText**
-> \Bungie\Model\InlineResponse20010 searchContentWithText($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag)
+> \Bungie\Model\InlineResponse20011 searchContentWithText($locale, $ctype, $currentpage, $head, $searchtext, $source, $tag)
 
 
 
@@ -306,7 +362,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\Bungie\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 
@@ -320,7 +376,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchHelpArticles**
-> \Bungie\Model\InlineResponse20011 searchHelpArticles($searchtext, $size)
+> \Bungie\Model\InlineResponse20012 searchHelpArticles($searchtext, $size)
 
 
 
@@ -363,7 +419,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\Bungie\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 

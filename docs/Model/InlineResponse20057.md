@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\Destiny\HistoricalStats\DestinyAggregateActivityResults**](DestinyAggregateActivityResults.md) |  | [optional] 
+**response** | [**\Bungie\Model\Destiny\Definitions\DestinyEntitySearchResult**](DestinyEntitySearchResult.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **loreHash** | **int** |  | [optional] 
 **objectiveHashes** | **int[]** |  | [optional] 
 **recordValueStyle** | **int** |  | [optional] 
+**forTitleGilding** | **bool** |  | [optional] 
+**shouldShowLargeIcons** | **bool** | A hint to show a large icon for a reward | [optional] 
 **titleInfo** | [**\Bungie\Model\Destiny\Definitions\Records\DestinyRecordTitleBlock**](DestinyRecordTitleBlock.md) |  | [optional] 
 **completionInfo** | [**\Bungie\Model\Destiny\Definitions\Records\DestinyRecordCompletionBlock**](DestinyRecordCompletionBlock.md) |  | [optional] 
 **stateInfo** | [**\Bungie\Model\Destiny\Definitions\Records\SchemaRecordStateBlock**](SchemaRecordStateBlock.md) |  | [optional] 

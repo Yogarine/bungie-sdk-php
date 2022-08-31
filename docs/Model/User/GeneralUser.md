@@ -36,6 +36,9 @@ Name | Type | Description | Notes
 **steamDisplayName** | **string** |  | [optional] 
 **stadiaDisplayName** | **string** |  | [optional] 
 **twitchDisplayName** | **string** |  | [optional] 
+**cachedBungieGlobalDisplayName** | **string** |  | [optional] 
+**cachedBungieGlobalDisplayNameCode** | **int** |  | [optional] 
+**egsDisplayName** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

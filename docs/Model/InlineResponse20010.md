@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\Model\SearchResultOfContentItemPublicContract**](SearchResultOfContentItemPublicContract.md) |  | [optional] 
+**response** | [**\Bungie\Model\Content\ContentItemPublicContract**](ContentItemPublicContract.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

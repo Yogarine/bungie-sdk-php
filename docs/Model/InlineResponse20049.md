@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**map[string,\Bungie\Model\Destiny\HistoricalStats\Definitions\DestinyHistoricalStatsDefinition]**](DestinyHistoricalStatsDefinition.md) |  | [optional] 
+**response** | [**\Bungie\Model\Destiny\Responses\DestinyPublicVendorsResponse**](DestinyPublicVendorsResponse.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

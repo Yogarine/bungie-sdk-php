@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**map[string,map[string,\Bungie\Model\Destiny\HistoricalStats\DestinyLeaderboard]]**](map.md) |  | [optional] 
+**response** | [**\Bungie\Model\Destiny\Responses\DestinyCollectibleNodeDetailResponse**](DestinyCollectibleNodeDetailResponse.md) |  | [optional] 
 **errorCode** | **int** |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getCommunityContent**
-> \Bungie\Model\InlineResponse20012 getCommunityContent($mediaFilter, $page, $sort)
+> \Bungie\Model\InlineResponse20014 getCommunityContent($mediaFilter, $page, $sort)
 
 
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Bungie\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
