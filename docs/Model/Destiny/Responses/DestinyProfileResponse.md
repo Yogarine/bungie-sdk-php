@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**responseMintedTimestamp** | **\DateTime** | Records the timestamp of when most components were last generated from the world server source. Unless the component type is specified in the documentation for secondaryComponentsMintedTimestamp, this value is sufficient to do data freshness. | [optional] 
+**secondaryComponentsMintedTimestamp** | **\DateTime** | Some secondary components are not tracked in the primary response timestamp and have their timestamp tracked here. If your component is any of the following, this field is where you will find your timestamp value:   PresentationNodes, Records, Collectibles, Metrics, StringVariables, Craftables, Transitory   All other component types may use the primary timestamp property. | [optional] 
 **vendorReceipts** | [**\Bungie\Model\SingleComponentResponseOfDestinyVendorReceiptsComponent**](SingleComponentResponseOfDestinyVendorReceiptsComponent.md) | Recent, refundable purchases you have made from vendors. When will you use it? Couldn&#39;t say...  COMPONENT TYPE: VendorReceipts | [optional] 
 **profileInventory** | [**\Bungie\Model\SingleComponentResponseOfDestinyInventoryComponent**](SingleComponentResponseOfDestinyInventoryComponent.md) | The profile-level inventory of the Destiny Profile.  COMPONENT TYPE: ProfileInventories | [optional] 
 **profileCurrencies** | [**\Bungie\Model\SingleComponentResponseOfDestinyInventoryComponent**](SingleComponentResponseOfDestinyInventoryComponent.md) | The profile-level currencies owned by the Destiny Profile.  COMPONENT TYPE: ProfileCurrencies | [optional] 

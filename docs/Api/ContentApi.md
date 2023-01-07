@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **rssNewsArticles**
-> \Bungie\Model\InlineResponse20013 rssNewsArticles($pageToken)
+> \Bungie\Model\InlineResponse20013 rssNewsArticles($pageToken, $categoryfilter, $includebody)
 
 
 
@@ -212,9 +212,11 @@ $apiInstance = new Bungie\Api\ContentApi(
     $config
 );
 $pageToken = 'pageToken_example'; // string | Zero-based pagination token for paging through result sets.
+$categoryfilter = 'categoryfilter_example'; // string | Optionally filter response to only include news items in a certain category.
+$includebody = True; // bool | Optionally include full content body for each news item.
 
 try {
-    $result = $apiInstance->rssNewsArticles($pageToken);
+    $result = $apiInstance->rssNewsArticles($pageToken, $categoryfilter, $includebody);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContentApi->rssNewsArticles: ', $e->getMessage(), PHP_EOL;
@@ -227,6 +229,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageToken** | **string**| Zero-based pagination token for paging through result sets. |
+ **categoryfilter** | **string**| Optionally filter response to only include news items in a certain category. | [optional]
+ **includebody** | **bool**| Optionally include full content body for each news item. | [optional]
 
 ### Return type
 
